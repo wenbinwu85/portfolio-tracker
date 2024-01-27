@@ -1,1 +1,72 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+
+body {
+    margin: 0;
+    font-family: "Fira Code", monospace;
+}
+
+mat-divider {
+    margin: 10px !important;
+}
+
+mat-icon {
+    padding-right: 10px;
+}
+
+mat-chip {
+    border-radius: 5px;
+}
+
+mat-chip span {
+    font-size: 0.75rem;
+}
+
+table {
+    margin-top: 20px;
+}
+
+.mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
+    line-height: 25px;
+}
+
+.mat-mdc-dialog-content {
+    max-height: 90vh !important;
+}
+
+.bottom-sheet-panel {
+    align-self: normal;
+}
+
+.title {
+    display: flex;
+    padding: 20px;
+    font-size: 2rem;
+}
+
+.title span {
+    margin-top: 10px;
+    padding-right: 10px;
+}
+
+.charts-flex {
+    display: flex;
+}
+
+.chart-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 400px;
+    width: 100%;
+    min-width: 50%;
+    max-width: 100%;
+}
+
+.add-border {
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    ;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

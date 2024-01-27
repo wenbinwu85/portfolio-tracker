@@ -1,0 +1,14 @@
+<!-- <tv-tickers-widget /> -->
+
+<nav mat-tab-nav-bar [tabPanel]="tabPanel">
+  <a 
+    mat-tab-link 
+    *ngFor="let link of navLinks; let i = index"
+    (click)="activeLink = link"
+    [active]="activeLink == link"
+    [routerLink]="link.route"
+  >
+    {{ link.label }}
+  </a>
+</nav>
+<mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>

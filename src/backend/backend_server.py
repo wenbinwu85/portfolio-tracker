@@ -13,6 +13,7 @@ app = Quart(__name__)
 setting_options = {'true': True, 'false': False}
 save_to_local = False
 
+
 @app.route('/')
 def index():
     return '<h1>BenStockTracker2 Backend Homepage</h1>'
@@ -37,10 +38,10 @@ def set_save_settings():
 def fetch_stock(symbol):
     data = yq_stock_data(symbol)
     save_param = request.args.get('save')
-    print('save to local:', save_to_local)
-    print('save param', save_param)
     save = setting_options.get(save_param, save_to_local)
-    print('save or not', save)
+    print('save to local:', save_to_local)
+    print('save param:', save_param)
+    print('save or not:', save)
     if (save):
         path = os.path.join(DATA_PATH, f'{symbol.lower()}.json')
         dump_data_to(data[symbol], path)
@@ -50,13 +51,12 @@ def fetch_stock(symbol):
 @app.route('/fetch/stocks/<symbols>')
 def fetch_stocks(symbols):
     symbols = symbols.split(':')
-    print('symbols', symbols)
     symbols_data = yq_stock_data(symbols)
     save_param = request.args.get('save')
-    print('save to local:', save_to_local)
-    print('save param', save_param)
     save = setting_options.get(save_param, save_to_local)
-    print('save or not', save)
+    print('save to local:', save_to_local)
+    print('save param:', save_param)
+    print('save or not:', save)
     if (save):
         for symbol in symbols_data:
             path = os.path.join(DATA_PATH, f'{symbol.lower()}.json')

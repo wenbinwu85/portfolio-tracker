@@ -5,7 +5,7 @@ import {
   HttpParams,
 } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, from, Observable, of, retry } from 'rxjs';
+import { catchError, Observable, of, retry } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
