@@ -16,11 +16,7 @@ export class FooterComponent implements OnInit {
   angularVersion = '';
   pythonVersion = '';
 
-  constructor(private dataService: DataService) {}
+  constructor() {}
 
-  ngOnInit(): void {
-    // this.appInfo = this.dataService.getAppInfo();
-    // this.angularVersion = this.dataService.getAngularVersion();
-    // this.pythonVersion = this.dataService.getPythonVersion();
-  }
+  ngOnInit(): void {}
 }

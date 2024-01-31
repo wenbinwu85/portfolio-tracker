@@ -3,23 +3,23 @@ import {
   HttpErrorResponse,
   HttpHeaders,
   HttpParams,
-} from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { catchError, Observable, of, retry } from 'rxjs';
+} from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { catchError, Observable, of, retry } from "rxjs";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class DataService {
   private httpOptions: any = {
     headers: new HttpHeaders()
-      .set('content-type', 'application/json')
-      .set('Access-Control-Allow-Origin', '*'),
+      .set("content-type", "application/json")
+      .set("Access-Control-Allow-Origin", "*"),
   };
-  private backendDataPath = '../../../backend/data/';
-  private serverUrl = 'http://127.0.0.1:5000';
+  private backendDataPath = "../../../backend/data/";
+  private backendUrl = "http://127.0.0.1:5000";
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   private error(error: HttpErrorResponse): Observable<any> {
     let errorMessage =
@@ -46,7 +46,7 @@ export class DataService {
    * @returns {Observable} Returns portfolio holdings data.
    */
   public getPortfolioHoldings(): Observable<JSON> {
-    const path = `${this.serverUrl}/fetch/holdings`;
+    const path = `${this.backendUrl}/fetch/holdings`;
     return this.wrapHttpCall(path);
   }
 
@@ -54,7 +54,7 @@ export class DataService {
    * @returns {Observable} Returns portfolio symbols.
    */
   public getPortfolioSymbols(): Observable<Array<string>> {
-    const path = `${this.serverUrl}/fetch/portfolio/symbols`;
+    const path = `${this.backendUrl}/fetch/portfolio/symbols`;
     return this.wrapHttpCall(path);
   }
 
@@ -64,10 +64,11 @@ export class DataService {
    * @returns {Observable} Returns a single stock data.
    */
   public getStockData(symbol: string, save: null | boolean): Observable<any> {
-    const path = `${this.serverUrl}/fetch/stock/${symbol}`;
+    const path = `${this.backendUrl}/fetch/stock/${symbol}`;
     if (save !== null) {
-      let params = new HttpParams().set('save', String(save));
-      return this.wrapHttpCall(path, { ...this.httpOptions, params });
+      let params = new HttpParams().set("save", String(save));
+      const options = { ...this.httpOptions, params };
+      return this.wrapHttpCall(path, options);
     }
     return this.wrapHttpCall(path);
   }
@@ -81,10 +82,11 @@ export class DataService {
     symbols: string[],
     save: null | boolean
   ): Observable<JSON> {
-    const path = `${this.serverUrl}/fetch/stocks/` + symbols.join(':');
+    const path = `${this.backendUrl}/fetch/stocks/` + symbols.join(":");
     if (save !== null) {
-      let params = new HttpParams().set('save', String(save));
-      return this.wrapHttpCall(path, { ...this.httpOptions, params });
+      let params = new HttpParams().set("save", String(save));
+      const options = { ...this.httpOptions, params };
+      return this.wrapHttpCall(path, options);
     }
     return this.wrapHttpCall(path);
   }
@@ -95,7 +97,8 @@ export class DataService {
    */
   public loadStockDataFromDataFolder(symbol: string): Observable<JSON> {
     const path = `${this.backendDataPath}${symbol}.json`;
-    return this.wrapHttpCall(path, {...this.httpOptions, responseType: 'json'})
+    const options = { ...this.httpOptions, responseType: "json" };
+    return this.wrapHttpCall(path, options);
   }
 
   /**
@@ -104,7 +107,7 @@ export class DataService {
    * @returns {Observable} Returns a single stock dividend history.
    */
   getDividendHistory(symbol: string, years: number): Observable<JSON> {
-    const path = `${this.serverUrl}/fetch/dividend-history/${symbol}/${years}`;
+    const path = `${this.backendUrl}/fetch/dividend-history/${symbol}/${years}`;
     return this.wrapHttpCall(path);
   }
 
@@ -113,7 +116,7 @@ export class DataService {
    * @returns {Observable} Returns technical insights of a stock.
    */
   getTechnicalInsights(symbol: string): Observable<JSON> {
-    const path = `${this.serverUrl}/fetch/technical-insights/${symbol}`;
+    const path = `${this.backendUrl}/fetch/technical-insights/${symbol}`;
     return this.wrapHttpCall(path);
   }
 
@@ -122,16 +125,16 @@ export class DataService {
    * @returns {Observable} Returns recommendations of a stock.
    */
   getRecommendations(symbol: string): Observable<JSON> {
-    const path = `${this.serverUrl}/fetch/recommendations/${symbol}`;
+    const path = `${this.backendUrl}/fetch/recommendations/${symbol}`;
     return this.wrapHttpCall(path);
   }
 
   /**
    * @param {string} symbol of stock to retrieve
-   * @returns {Observable} Returns corporate events  of a stock.
+   * @returns {Observable} Returns corporate events of a stock.
    */
   getCorporateEvents(symbol: string): Observable<JSON> {
-    const path = `${this.serverUrl}/fetch/events/${symbol}`;
+    const path = `${this.backendUrl}/fetch/events/${symbol}`;
     return this.wrapHttpCall(path);
   }
 }

@@ -32,7 +32,7 @@ export class TradingviewService {
     this.renderer2 = this.rendererFactory.createRenderer(null, null);
   }
 
-  getScript(src: string, params: string) {
+  public getScript(src: string, params: string) {
     let script = this.renderer2.createElement('script');
     script.type = 'text/javascript';
     script.src = src;
@@ -40,7 +40,7 @@ export class TradingviewService {
     return script;
   }
 
-  renderWidget(element: ElementRef, widget: any) {
+  public renderWidget(element: ElementRef, widget: any) {
     element.nativeElement.appendChild(widget);
   }
 
@@ -165,16 +165,16 @@ export class TradingviewService {
 
   technicalAnalysisWidget(symbol: string, height = '450', theme = 'light') {
     const params = `
-    {
-      "symbol": "${symbol}",
-      "interval": "1m",
-      "width": "425",
-      "isTransparent": false,
-      "height": "${height}",
-      "showIntervalTabs": true,
-      "locale": "en",
-      "colorTheme": "${theme}"
-    }
+      {
+        "symbol": "${symbol}",
+        "interval": "1m",
+        "width": "425",
+        "isTransparent": false,
+        "height": "${height}",
+        "showIntervalTabs": true,
+        "locale": "en",
+        "colorTheme": "${theme}"
+      }
     `;
     return this.getScript(SourceScripts.TechnicalAnalysis, params);
   }
