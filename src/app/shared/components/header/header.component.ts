@@ -8,7 +8,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 // import { PortfolioDetailsComponent } from '../../../pages/portfolio-details/portfolio-details.component';
 // import { PortfolioMainComponent } from '../../../pages/portfolio-main/portfolio-main.component';
 // import { ToolboxComponent } from '../../../pages/toolbox/toolbox.component';
-// import { TvTickersWidgetComponent } from '../tradingview/tv-tickers-widget/tv-tickers-widget.component';
+import { TvTickersWidgetComponent } from '../tradingview/tv-tickers-widget/tv-tickers-widget.component';
 
 @Component({
   selector: 'app-header',
@@ -25,7 +25,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
     RouterLink,
     RouterOutlet,
     // ToolboxComponent,
-    // TvTickersWidgetComponent,
+    TvTickersWidgetComponent,
   ],
 })
 export class HeaderComponent {

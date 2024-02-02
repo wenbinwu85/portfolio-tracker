@@ -37,6 +37,7 @@ export class TradingviewService {
     script.type = 'text/javascript';
     script.src = src;
     script.text = params;
+    script['async'] = true;
     return script;
   }
 
