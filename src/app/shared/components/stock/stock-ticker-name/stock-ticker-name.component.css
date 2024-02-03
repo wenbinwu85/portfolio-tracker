@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.symbol-container {
+  padding-left: 10px;
+}
+
+.stock-symbol {
+  display: flex;
+  font-size: 1.25rem;
+  align-items: center;
+}
+
+.stock-price,
+.price-change {
+  margin-left: 5px;
+}
+
+.stock-price {
+  color: forestgreen;
+}
+
+.price-change {
+  font-size: .75rem;
+}
+
+.long-name {
+  float: left;
+}

@@ -1,0 +1,17 @@
+<div>
+  <span class="light-color">Day Range vs 52w Range</span>
+  <div class="line-container">
+    <div
+      [matTooltip]="tooltip"
+      matTooltipPosition="above"
+      class="line"
+      #line
+    ></div>
+    <div *ngIf="showThumbs" class="dot" #startThumb></div>
+    <div *ngIf="showThumbs" class="dot" #endThumb></div>
+  </div>
+  <div class="label-wrapper">
+    <span>${{ min }}</span>
+    <span>${{ max }}</span>
+  </div>
+</div>

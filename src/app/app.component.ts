@@ -16,14 +16,12 @@ export class AppComponent {
   symbols: string[] = [];
 
   constructor(private dataService: DataService) {
-    // dataService.getPortfolioSymbols().subscribe(symbols => {
-    //   this.dataService.getStocksData(symbols, true).subscribe((data: any) => {
-    //     console.log('hello world!')
-    //   })
-    // })
-
     // dataService.loadStockDataFromDataFolder('vz').subscribe((data: any) => {
     //   console.table(data.price)
     // })
+
+    console.log(dataService.portfolioHoldings)
+    console.log(dataService.portfolioSymbols)
+    console.log(dataService.portfolioData)
   }
 }

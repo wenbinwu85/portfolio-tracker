@@ -1,0 +1,78 @@
+<section class="add-border">
+  <div class="title">
+    <span>Financial Data</span>
+  </div>
+  
+  <div class="chart-container">
+    <ngx-charts-bar-vertical
+        [scheme]="'solar'"
+        [results]="barChartData"
+        [xAxisLabel]="xAxisLabel"
+        [animations]="true"
+        [xAxis]="true"
+        [yAxis]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [showDataLabel]="true"
+        [showGridLines]="true"
+        [rotateXAxisTicks]="true"
+    />
+  </div>
+</section>
+
+<table
+  mat-table
+  matSort
+  matSortActive="earningsQuarterlyGrowth"
+  matSortDirection="asc"
+  [dataSource]="dataSource"
+>
+  <ng-container
+    *ngFor="let column of columnDefs; index as cidx"
+    [matColumnDef]="column"
+  >
+    <th *matHeaderCellDef mat-header-cell mat-sort-header (click)="setChartData(cidx)">
+      {{ headers[cidx] }}
+    </th>
+    <td mat-cell *matCellDef="let stock">
+      <div *ngIf="cidx === 0; else elseBlock" class="table-col-0">
+        <stock-ticker-name [stock]="stock" />
+      </div>
+      <ng-template #elseBlock>
+        <span [ngStyle]="{ color: getColor(cidx, stock)}">{{ cells[cidx](stock) }}</span>
+      </ng-template>
+    </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="columnDefs; sticky: true"></tr>
+  <tr mat-row *matRowDef="let row; columns: columnDefs"></tr>
+</table>
+
+<mat-divider />
+
+<table
+  mat-table
+  matSort
+  matSortActive="ytdReturn"
+  matSortDirection="asc"
+  [dataSource]="sortedEtfs"
+>
+  <ng-container
+    *ngFor="let column of etfColumnDefs; index as cidx"
+    [matColumnDef]="column"
+  >
+    <th *matHeaderCellDef mat-header-cell mat-sort-header>
+      {{ etfHeaders[cidx] }}
+    </th>
+    <td mat-cell *matCellDef="let etf">
+      <div *ngIf="cidx === 0; else elseBlock" class="table-col-0">
+        <stock-ticker-name [stock]="etf" />
+      </div>
+      <ng-template #elseBlock>
+        <span *ngIf="cidx < 13">{{ etfCells[cidx](etf) }}</span>
+        <span *ngIf="cidx === 13">{{ etfCells[cidx](etf) | currency }}</span>
+      </ng-template>
+    </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="etfColumnDefs; sticky: true"></tr>
+  <tr mat-row *matRowDef="let row; columns: etfColumnDefs"></tr>
+</table>

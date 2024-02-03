@@ -3,7 +3,7 @@ import ast
 import os
 from datetime import datetime, timedelta
 from quart import Quart, jsonify, request
-from helpers.funcs import dump_data_to
+from helpers.funcs import dump_data_to, load_data_from
 from yq import yq_stock_data, yq_dividend_history, yq_corporate_events, DATA_PATH
 from yq import yq_technical_insights, yq_recommendations, generate_holdings_data
 
@@ -62,6 +62,35 @@ def fetch_stocks(symbols):
             path = os.path.join(DATA_PATH, f'{symbol.lower()}.json')
             dump_data_to(symbols_data[symbol], path)
     return jsonify(symbols_data)
+
+
+@app.route('/fetch/portfolio/data')
+def fetch_portfolio():
+    symbols = list(generate_holdings_data().keys())
+    update_parm = request.args.get('update')
+    should_update = setting_options.get(update_parm, False)
+    print('should update:', should_update)
+    portfolioData = {}
+
+    if should_update:
+        portfolioData = yq_stock_data(symbols)
+        path = os.path.join(DATA_PATH, 'portfolio.json')
+        dump_data_to(portfolioData, path)
+        return jsonify(portfolioData)
+    
+    for symbol in symbols:
+        data = None
+        path = os.path.join(DATA_PATH, f'{symbol.lower()}.json')
+        try:
+            data = load_data_from(path)
+        except Exception:
+            print(f'error loading {symbol} data, fetching new data...')
+            data = yq_stock_data(symbol)[symbol]
+            dump_data_to(data, path)
+        print(symbol, data.keys())
+        if data:
+            portfolioData.update({symbol: data})
+    return jsonify(portfolioData)
 
 
 @app.route('/fetch/dividend-history/<symbol>/<years>')

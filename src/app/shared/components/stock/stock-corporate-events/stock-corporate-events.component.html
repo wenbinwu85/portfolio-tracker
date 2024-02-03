@@ -1,0 +1,5 @@
+<div *ngFor="let event of events" class="event-container">
+  <article class="event-headline" (click)="viewEventDetails(event)">
+    {{ event.headline }}
+  </article>
+</div>

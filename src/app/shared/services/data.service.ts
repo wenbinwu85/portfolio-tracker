@@ -18,8 +18,21 @@ export class DataService {
   };
   private backendDataPath = "../../../backend/data/";
   private backendUrl = "http://127.0.0.1:5000";
+  public portfolioHoldings: any;
+  public portfolioSymbols: any;
+  public portfolioData: any;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.getPortfolioHoldings().subscribe(holdings => {
+      this.portfolioHoldings = holdings
+    })
+    this.getPortfolioSymbols().subscribe(symbols => {
+      this.portfolioSymbols = symbols
+    })
+    this.getPortfolioData(false).subscribe(data => {
+      this.portfolioData = data
+    })
+  }
 
   private error(error: HttpErrorResponse): Observable<any> {
     let errorMessage =
@@ -55,6 +68,20 @@ export class DataService {
    */
   public getPortfolioSymbols(): Observable<Array<string>> {
     const path = `${this.backendUrl}/fetch/portfolio/symbols`;
+    return this.wrapHttpCall(path);
+  }
+
+  /**
+  * @param {null | boolean} update stock data from api call
+  * @returns {Observable} Returns entire portfolio stock data.
+  */
+  public getPortfolioData(update: null | boolean): Observable<any> {
+    const path = `${this.backendUrl}/fetch/portfolio/data`;
+    if (update !== null) {
+      let params = new HttpParams().set("update", String(update));
+      const options = { ...this.httpOptions, params };
+      return this.wrapHttpCall(path, options);
+    }
     return this.wrapHttpCall(path);
   }
 

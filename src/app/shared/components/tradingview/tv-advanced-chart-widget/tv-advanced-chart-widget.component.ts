@@ -33,7 +33,7 @@ export class TvAdvancedChartWidgetComponent implements OnInit {
       } else {
         this.widgetParams = this.getWidgetParams(
           this.symbol,
-          this.dataService.portfolioSymbols,
+          ['AAPL', 'MSFT'], //this.dataService.getPortfolioSymbols,
           this.theme
         );
       }

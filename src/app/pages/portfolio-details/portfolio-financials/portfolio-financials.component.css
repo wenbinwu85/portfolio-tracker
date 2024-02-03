@@ -1,0 +1,21 @@
+.table-col-0 {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+.mat-mdc-row {
+  height: max-content;
+}
+
+td.mat-mdc-cell:first-of-type 
+td.mat-mdc-footer-cell:first-of-type {
+  padding-left: 0px;
+}
+
+.mdc-data-table__header-cell,
+.mdc-data-table__cell {
+  padding: 0;
+}

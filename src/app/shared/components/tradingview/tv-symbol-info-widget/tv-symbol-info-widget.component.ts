@@ -6,7 +6,7 @@ import {
   ViewChild,
 } from '@angular/core';
 
-import { TradingviewService } from 'src/app/shared/services/tradingview.service';
+import { TradingviewService } from '../../../services/tradingview.service';
 
 @Component({
   selector: 'tv-symbol-info-widget',

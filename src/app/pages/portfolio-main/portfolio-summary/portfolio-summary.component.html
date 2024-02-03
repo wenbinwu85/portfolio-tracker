@@ -1,0 +1,229 @@
+<section *ngIf="portfolioData" class="summary-cards">
+  <info-card
+    icon="numbers"
+    [value]="portfolioData.totalPositions"
+    subtitle="Total Positions"
+  />
+  <info-card
+    icon="payments"
+    [value]="portfolioData.totalInvestment.toFixed(2)"
+    valueType="currency"
+    subtitle="Total Investment"
+  />
+  <info-card
+    icon="payments"
+    [value]="portfolioData.portfolioValue.toFixed(2)"
+    valueType="currency"
+    subtitle="Market Value"
+  />
+  <info-card
+    icon="payments"
+    [value]="portfolioData.unrealizedGain.toFixed(2)"
+    subtitle="Unrealized Gain"
+    valueType="currency"
+    [color]="portfolioData.unrealizedGain > 0 ? 'forestgreen' : 'tomato'"
+  />
+  <info-card
+    icon="percentage"
+    [value]="(portfolioData.unrealizedGain / portfolioData.totalInvestment).toFixed(2)"
+    valueType="percentage"
+    subtitle="Unrealized Gain %"
+    color="slateblue"
+  />
+  <info-card
+    icon="payments"
+    [value]="portfolioYtdGain"
+    subtitle="YTD Gain"
+    valueType="currency"
+    [color]="portfolioYtdGain > 0 ? 'forestgreen' : 'tomato'"
+  />
+  <info-card
+    icon="percentage"
+    [value]="(portfolioYtdGain / portfolioData.portfolioValue).toFixed(2)"
+    valueType="percentage"
+    subtitle="YTD Gain %"
+    color="slateblue"
+  />
+  <info-card
+    icon="payments"
+    [value]="portfolioData.dividendIncome.toFixed(2)"
+    valueType="currency"
+    subtitle="Annual Dividend Income"
+  />
+  <info-card
+  icon="payments"
+    [value]="ytdDividendEarned"
+    valueType="currency"
+    subtitle="YTD Dividend Earned"
+    color="forestgreen"
+  />
+  <info-card
+    icon="percentage"
+    [value]="portfolioData.portfolioYield.toFixed(4)"
+    valueType="percentage"
+    subtitle="Portfolio Yield"
+    color="forestgreen"
+  />
+  <info-card
+    icon="percentage"
+    [value]="portfolioData.portfolioYieldOnCost.toFixed(4)"
+    valueType="percentage"
+    subtitle="Portfolio YOC"
+    color="slateblue"
+  />
+</section>
+
+<mat-divider />
+
+<button 
+  *ngIf="showResetButton" 
+  mat-mini-fab 
+  color="accent" 
+  class="reset-button" 
+  (click)="filterBySector({name: 'all'})"
+>
+  <mat-icon>restart_alt</mat-icon>
+</button> 
+
+<section class="add-border">
+  <div class="title">
+    <span>Portfolio Allocation</span>
+  </div>
+
+  <div class="charts-flex">
+    <div class="chart-container">
+      <ngx-charts-pie-grid
+        [scheme]="'picnic'"
+        [animations]="true"
+        [results]="sectorsData"
+        [label]="'Total $'"
+        (select)="filterBySector($event)"
+      />
+    </div>
+    <div class="chart-container">
+      <ngx-charts-bar-vertical
+        [scheme]="'picnic'"
+        [animations]="true"
+        [results]="portfolioPercentBarChartData"
+        [xAxis]="true"
+        [yAxis]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [yAxisLabel]="'Portfolio %'"
+      />
+    </div>
+  </div>
+</section>
+
+<div class="add-border">
+  <section class="goal-container">
+    <h1>
+      <b>Portfolio Value Goal:</b>
+      <span class="goal">{{ portfolioValueGoalPercentage | percent : ".4" }}</span>
+    </h1>
+  
+    <mat-slider
+      [min]="0"
+      [max]="portfolioValueTarget"
+      [step]="1000"
+      [showTickMarks]="true"
+      [color]="'accent'"
+    >
+      <input
+        matSliderThumb
+        [value]="portfolioData.portfolioValue"
+        [matTooltip]="getTooltip('investment')"
+        matTooltipPosition="above"
+      />
+    </mat-slider>
+    <div class="labels">
+      <h1>{{ "0" | currency }}</h1>
+      <h1>{{ portfolioValueTarget | currency }}</h1>
+    </div>
+  </section>
+  
+  <section class="charts-flex">
+    <div class="chart-container">
+      <ngx-charts-bar-vertical-stacked
+        [scheme]="'ocean'"
+        [animations]="true"
+        [results]="marketValueBarChartData"
+        [xAxis]="true"
+        [yAxis]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [yAxisLabel]="'Market Value $'"
+        [yScaleMax]="marketValueYMax"
+      />
+    </div>
+    <div class="chart-container">
+      <ngx-charts-bar-vertical
+        [scheme]="'air'"
+        [animations]="true"
+        [results]="unrealizedGainBarChartData"
+        [xAxis]="true"
+        [yAxis]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [yAxisLabel]="'Open P & L %'"
+      />
+    </div>
+  </section>
+</div>
+
+<div class="add-border">
+  <section class="goal-container">
+    <h1>
+      <b>Annual Passive Income Goal:</b>
+      <span class="goal">{{ passiveIncomeGoalPercentage | percent : ".4" }}</span>
+    </h1>
+  
+    <mat-slider
+      [min]="0"
+      [max]="passiveIncomeTarget"
+      [step]="120"
+      [showTickMarks]="true"
+      [color]="'accent'"
+    >
+      <input
+        matSliderThumb
+        [value]="portfolioData.dividendIncome"
+        [matTooltip]="getTooltip('passive')"
+        matTooltipPosition="above"
+      />
+    </mat-slider>
+    <div class="labels">
+      <h1>{{ "0" | currency }}</h1>
+      <h1>{{ passiveIncomeTarget | currency }}</h1>
+    </div>
+  </section>
+  
+  <section class="charts-flex">
+    <div class="chart-container">
+      <ngx-charts-bar-vertical
+        [scheme]="'natural'"
+        [animations]="true"
+        [results]="dividendBarChartData"
+        [xAxis]="true"
+        [yAxis]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [yAxisLabel]="'Dividend Income $'"
+        [yScaleMax]="dividendYMax"
+      />
+    </div>
+    <div class="chart-container">
+      <ngx-charts-bar-vertical
+        [scheme]="'natural'"
+        [animations]="true"
+        [results]="yocBarChartData"
+        [xAxis]="true"
+        [yAxis]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [yAxisLabel]="'Yield On Cost %'"
+        [yScaleMax]="yocYMax"
+      />
+    </div>
+  </section>
+</div>

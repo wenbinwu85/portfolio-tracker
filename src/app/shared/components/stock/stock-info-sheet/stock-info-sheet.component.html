@@ -1,0 +1,46 @@
+<mat-button-toggle-group class="links">
+  <mat-button-toggle *ngIf="stock.quoteType === 'EQUITY'" value="">
+    <mat-icon>public</mat-icon>
+    <a href="{{ stock.profile.website }}" target="_blank">{{ stock.profile.website }}</a>
+  </mat-button-toggle>
+  <ng-container *ngFor="let link of externalLinks">
+    <mat-button-toggle value="">
+      <mat-icon>public</mat-icon>
+      <a href="{{ link.url }}" target="_blank"> {{ link.label }}</a>
+    </mat-button-toggle>
+  </ng-container>
+
+  <ng-container *ngIf="stock.quoteType === 'ETF'">
+    <ng-container *ngFor="let link of etfLinks">
+      <mat-button-toggle value="">
+        <mat-icon>public</mat-icon>
+        <a href="{{ link.url }}" target="_blank"> {{ link.label }}</a>
+      </mat-button-toggle>
+    </ng-container>
+  </ng-container>
+</mat-button-toggle-group>
+
+<div *ngIf="stock">
+  <tv-symbol-info-widget [symbol]="stock.symbol" />
+  
+  <mat-divider />
+
+  <!-- <wallmine-chart [symbol]="symbol" /> -->
+  <tv-advanced-chart-widget [symbol]="stock.symbol" [showWatchlist]="false" />
+  
+  <tv-financials-widget [symbol]="symbol" height="484" displayMode="compact" />
+
+  <ng-container *ngIf="stock.quoteType === 'EQUITY'">
+    <section class="events-filings-container">
+      <div class="events">
+        <stock-corporate-events [symbol]="stock.symbol" />
+      </div>
+      <mat-divider inset [vertical]="true" />
+      <div class="filings">
+        <stock-sec-filings [symbol]="stock.symbol" />
+      </div>
+    </section>
+    <mat-divider inset />
+    <stock-research-reports *ngIf="stock.quoteType === 'EQUITY'" [symbol]="stock.symbol" />
+  </ng-container>
+</div>

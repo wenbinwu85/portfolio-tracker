@@ -1,0 +1,27 @@
+<div class="title">
+  <mat-icon>stacked_line_chart</mat-icon>
+  <span>Indices</span>
+</div>
+<wallmine-chart [symbol]="'INDEX:GSPC'" [width]="'33.33%'" />
+<wallmine-chart [symbol]="'INDEX:DJI'" [width]="'33.33%'" />
+<wallmine-chart [symbol]="'INDEX:IXIC'" [width]="'33.33%'" />
+
+<mat-divider />
+
+<div class="title">
+  <mat-icon>currency_bitcoin</mat-icon>
+  <span>Cryptos</span>
+</div>
+<wallmine-chart [symbol]="'CRYPTO:BTC'" [width]="'33.33%'" />
+<wallmine-chart [symbol]="'CRYPTO:ETH'" [width]="'33.33%'" />
+<wallmine-chart [symbol]="'CRYPTO:DOGE'" [width]="'33.33%'" />
+
+<mat-divider />
+
+<div class="title">
+  <mat-icon>currency_exchange</mat-icon>
+  <span>Forex</span>
+</div>
+<wallmine-chart [symbol]="'FOREX:USDCNY'" [width]="'33.33%'" />
+<wallmine-chart [symbol]="'FOREX:USDJPY'" [width]="'33.33%'" />
+<wallmine-chart [symbol]="'FOREX:USDEUR'" [width]="'33.33%'" />

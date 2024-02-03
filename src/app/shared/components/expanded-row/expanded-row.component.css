@@ -1,0 +1,14 @@
+.widget-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: space-around;
+}
+
+.chart {
+  flex-grow: 20;
+}
+
+.ta {
+  flex-grow: 1;
+}

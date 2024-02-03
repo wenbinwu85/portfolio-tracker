@@ -1,0 +1,15 @@
+<mat-card>
+    <div class="flex-between">
+        <mat-icon *ngIf="icon">{{ icon }}</mat-icon>
+        <div *ngIf="date" class="date">{{ date | date: 'fullDate' }}</div>
+    </div>
+    <mat-card-title *ngIf="value" [ngStyle]="getStyle()">
+        <ng-container *ngIf="valueType === 'currency'">{{ value | currency }}</ng-container>
+        <ng-container *ngIf="valueType === 'percentage'">{{ value | percent: ".2" }}</ng-container>
+        <ng-container *ngIf="valueType === 'number'">{{ value }}</ng-container>
+    </mat-card-title>
+    <mat-card-footer class="flex-between">
+        <mat-card-subtitle *ngIf="subtitle">{{ subtitle }}</mat-card-subtitle>
+        <mat-card-subtitle *ngIf="additionalInfo">{{ additionalInfo }}</mat-card-subtitle>
+    </mat-card-footer>
+</mat-card>

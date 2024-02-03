@@ -1,0 +1,29 @@
+mat-icon {
+  padding: 10px;
+}
+
+.mat-mdc-card {
+  max-width: 300px;
+  border: 1px solid darkgrey;
+  border-radius: 5px;
+}
+
+.mat-mdc-card-title {
+  padding: 10px 20px 0px 10px;
+}
+
+.mat-mdc-card-subtitle {
+  padding: 10px;
+  color: darkgrey;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date {
+  padding-right: 10px;
+  color: gray;
+}

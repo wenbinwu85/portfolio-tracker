@@ -1,0 +1,60 @@
+<div class="price-info">
+  <stock-ticker-name [stock]="stock" (click)="openInfoSheet()" />
+  
+  <div class="trend-container">
+    <div>
+      <span>50DMA:</span>
+      <mat-icon [ngStyle]="{ color: get50DMAColor(stock) }">{{ get50DMATrendIcon(stock) }}</mat-icon>
+      <span>200DMA:</span>
+      <mat-icon [ngStyle]="{ color: get200DMAColor(stock) }">{{ get200DMATrendIcon(stock) }}</mat-icon>
+    </div>
+    <div *ngIf="technicalInsights$ | async as ti" class="icon-span">
+      <div *ngIf="ti.instrumentInfo.keyTechnicals.support !== undefined">
+        <mat-icon>vertical_align_bottom</mat-icon>
+        <span>{{ ti.instrumentInfo.keyTechnicals.support | currency }}</span>
+      </div>
+      <div *ngIf="ti.instrumentInfo.keyTechnicals.resistance !== undefined">
+        <mat-icon>vertical_align_top</mat-icon>
+        <span>{{ ti.instrumentInfo.keyTechnicals.resistance | currency }}</span>
+      </div>
+      <div>
+        <mat-icon>dangerous</mat-icon>
+        <span>{{ ti.instrumentInfo.keyTechnicals.stopLoss | currency }}</span>
+      </div>
+      <div *ngIf="ti.instrumentInfo.valuation.description !== undefined">
+        <mat-icon>thumbs_up_down</mat-icon>
+        <span [ngStyle]="{ color: getValuationColor(ti.instrumentInfo.valuation.description)}">{{ ti.instrumentInfo.valuation.description }}</span>
+      </div>
+      <div *ngIf="ti.instrumentInfo.valuation.discount !== undefined">
+        <mat-icon>discount</mat-icon>
+        <span [ngStyle]="{ color: getDiscountColor(ti.instrumentInfo.valuation.discount) }">{{ ti.instrumentInfo.valuation.discount }}</span>
+      </div>
+    </div>
+  </div>
+
+  <stock-day-price-range
+    [min]="stock.fiftyTwoWeekLow" 
+    [max]="stock.fiftyTwoWeekHigh"
+    [lowThumbValue]="stock.regularMarketDayLow" 
+    [highThumbValue]="stock.regularMarketDayHigh" 
+    [showThumbs]="false"
+    class="day-price-range"
+  />
+
+  <div class="target-price-range">
+    <ng-container *ngIf="stock.quoteType === 'EQUITY'">
+      <div class="dark-color">Target Price: ${{ stock.targetMeanPrice || 0 }}</div>
+      <mat-slider 
+        thumbSize="10" 
+        [min]="stock.targetLowPrice" 
+        [max]="stock.targetHighPrice"
+        [color]="getTargetPriceRangeColor(stock)">
+        <input matSliderThumb [value]="stock.targetMeanPrice" [matTooltip]="getTooltip()" matTooltipPosition="above" />
+      </mat-slider>
+      <div class="label-wrapper">
+        <span class="dark-color">{{ (stock.targetLowPrice || 0) | currency }}</span>
+        <span class="dark-color">{{ (stock.targetHighPrice || 0) | currency }}</span>
+      </div>
+    </ng-container>
+  </div>
+</div>

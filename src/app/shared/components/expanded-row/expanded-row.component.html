@@ -1,0 +1,17 @@
+<mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Chart & Technical Analysis">
+        <div class="widget-container">
+            <wallmine-chart [symbol]="stock.symbol" class="chart" />
+            <tv-technical-analysis-widget [symbol]="stock.symbol" class="ta" />
+        </div>
+    </mat-tab>
+
+    <mat-tab label="Financials">
+        <tv-financials-widget [symbol]="stock.symbol" width="100%" />
+    </mat-tab>
+
+    <mat-tab label="Overview">
+        <tv-symbol-info-widget [symbol]="stock.symbol" />
+        <tv-profile-widget [symbol]="stock.symbol" width="100%" />
+    </mat-tab>
+</mat-tab-group>

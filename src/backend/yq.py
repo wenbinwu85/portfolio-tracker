@@ -197,7 +197,7 @@ def generate_holdings_data():
         cost_avg = float(cost_avg)
         symbol_data['sharesOwned'] = shares
         symbol_data['costAverage'] = cost_avg
-        symbol_data['totalCost'] = cost_avg * shares
+        symbol_data['totalCost'] = round(cost_avg * shares, 4)
         holdings[symbol] = {
             'position': symbol_data
         }
