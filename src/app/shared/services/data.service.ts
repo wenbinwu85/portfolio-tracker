@@ -41,7 +41,7 @@ export class DataService {
         const price = stock.price?.regularMarketPrice;
         position.marketValue = +(price * position.sharesOwned).toFixed(4);
         position.unrealizedGain = +(position.marketValue - position.totalCost).toFixed(4);
-        position.unrealizedGainPercent = position.unrealizedGain / position.marketValue;
+        position.unrealizedGainPercent = position.unrealizedGain / position.totalCost;
         const isETF = stock.price?.quoteType === 'ETF'
         const dividendAmount = isETF ? stock.summaryDetail?.yield * stock.price?.regularMarketPrice : stock.summaryDetail?.dividendRate;
         position.dividendIncome = dividendAmount * position.sharesOwned || 0;
