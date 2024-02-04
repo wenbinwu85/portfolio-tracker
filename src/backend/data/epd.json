@@ -340,28 +340,28 @@
     "indexTrend": {
         "maxAge": 1,
         "symbol": "SP5",
-        "peRatio": 16.8404,
-        "pegRatio": 1.14364,
+        "peRatio": 16.5677,
+        "pegRatio": 1.05476,
         "estimates": [
             {
                 "period": "0q",
-                "growth": 0.034
+                "growth": 0.051999997
             },
             {
                 "period": "+1q",
-                "growth": 0.076
+                "growth": 0.091000006
             },
             {
                 "period": "0y",
-                "growth": 0.022
+                "growth": 0.03
             },
             {
                 "period": "+1y",
-                "growth": 0.098000005
+                "growth": 0.099
             },
             {
                 "period": "+5y",
-                "growth": 0.095858805
+                "growth": 0.0970399
             },
             {
                 "period": "-5y"
@@ -404,8 +404,8 @@
         "lastSplitDate": "2014-08-21 20:00:00",
         "enterpriseToRevenue": 1.814,
         "enterpriseToEbitda": 10.244,
-        "52WeekChange": 0.038357258,
-        "SandP52WeekChange": 0.18607855,
+        "52WeekChange": 0.03253293,
+        "SandP52WeekChange": 0.20615757,
         "lastDividendValue": 0.515,
         "lastDividendDate": 1706572800
     },
@@ -2367,11 +2367,11 @@
         "beta": 1.006,
         "trailingPE": 10.837399,
         "forwardPE": 9.624549,
-        "volume": 5688479,
-        "regularMarketVolume": 5688479,
-        "averageVolume": 4765286,
-        "averageVolume10days": 5997410,
-        "averageDailyVolume10Day": 5997410,
+        "volume": 5635884,
+        "regularMarketVolume": 5635884,
+        "averageVolume": 4781395,
+        "averageVolume10days": 6052570,
+        "averageDailyVolume10Day": 6052570,
         "bid": 26.64,
         "ask": 26.78,
         "bidSize": 1800,
@@ -2380,8 +2380,8 @@
         "fiftyTwoWeekLow": 24.66,
         "fiftyTwoWeekHigh": 27.95,
         "priceToSalesTrailing12Months": 1.1879104,
-        "fiftyDayAverage": 26.6254,
-        "twoHundredDayAverage": 26.55365,
+        "fiftyDayAverage": 26.6334,
+        "twoHundredDayAverage": 26.5519,
         "trailingAnnualDividendRate": 1.98,
         "trailingAnnualDividendYield": 0.0738806,
         "currency": "USD",
@@ -2691,35 +2691,35 @@
     "price": {
         "maxAge": 1,
         "preMarketSource": "FREE_REALTIME",
-        "postMarketChangePercent": 0.004501157,
-        "postMarketChange": 0.12000084,
-        "postMarketTime": "2024-02-02 19:23:29",
-        "postMarketPrice": 26.78,
-        "postMarketSource": "FREE_REALTIME",
-        "regularMarketChangePercent": -0.00522386,
-        "regularMarketChange": -0.139999,
+        "postMarketChangePercent": -0.00037510236,
+        "postMarketChange": -0.010000229,
+        "postMarketTime": "2024-02-02 19:50:12",
+        "postMarketPrice": 26.65,
+        "postMarketSource": "DELAYED",
+        "regularMarketChangePercent": -0.005223858,
+        "regularMarketChange": -0.13999939,
         "regularMarketTime": "2024-02-02 16:00:02",
         "priceHint": 2,
         "regularMarketPrice": 26.66,
         "regularMarketDayHigh": 26.8,
         "regularMarketDayLow": 26.52,
-        "regularMarketVolume": 5688479,
-        "averageDailyVolume10Day": 5997410,
-        "averageDailyVolume3Month": 4765286,
+        "regularMarketVolume": 5635884,
+        "averageDailyVolume10Day": 6052570,
+        "averageDailyVolume3Month": 4781395,
         "regularMarketPreviousClose": 26.8,
-        "regularMarketSource": "FREE_REALTIME",
+        "regularMarketSource": "DELAYED",
         "regularMarketOpen": 26.7,
         "exchange": "NYQ",
         "exchangeName": "NYSE",
         "exchangeDataDelayedBy": 0,
-        "marketState": "POST",
+        "marketState": "CLOSED",
         "quoteType": "EQUITY",
         "symbol": "EPD",
         "underlyingSymbol": null,
         "shortName": "Enterprise Products Partners L.",
         "longName": "Enterprise Products Partners L.P.",
         "currency": "USD",
-        "quoteSourceName": "Nasdaq Real Time Price",
+        "quoteSourceName": "Delayed Quote",
         "currencySymbol": "$",
         "fromCurrency": null,
         "toCurrency": null,
@@ -2805,7 +2805,7 @@
                     "current": 0.62,
                     "7daysAgo": 0.62,
                     "30daysAgo": 0.61,
-                    "60daysAgo": 0.61,
+                    "60daysAgo": 0.62,
                     "90daysAgo": 0.62
                 },
                 "epsRevisions": {
@@ -2874,8 +2874,8 @@
                 "epsTrend": {
                     "current": 2.77,
                     "7daysAgo": 2.78,
-                    "30daysAgo": 2.76,
-                    "60daysAgo": 2.75,
+                    "30daysAgo": 2.78,
+                    "60daysAgo": 2.76,
                     "90daysAgo": 2.77
                 },
                 "epsRevisions": {

@@ -5,7 +5,7 @@ import {
   HttpParams,
 } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { catchError, Observable, of, retry } from "rxjs";
+import { catchError, forkJoin, Observable, of, retry } from "rxjs";
 
 @Injectable({
   providedIn: "root",
@@ -23,14 +23,40 @@ export class DataService {
   public portfolioData: any;
 
   constructor(private http: HttpClient) {
-    this.getPortfolioHoldings().subscribe(holdings => {
-      this.portfolioHoldings = holdings
-    })
-    this.getPortfolioSymbols().subscribe(symbols => {
-      this.portfolioSymbols = symbols
-    })
-    this.getPortfolioData(false).subscribe(data => {
-      this.portfolioData = data
+    forkJoin([
+      this.getPortfolioHoldings(),
+      this.getPortfolioSymbols(),
+      this.getPortfolioData(false),
+    ]).subscribe(([holdings, symbols, portfolioData]) => {
+      this.portfolioHoldings = holdings;
+      this.portfolioSymbols = symbols;
+      this.portfolioData = portfolioData;
+      this.portfolioHoldings.portfolioPositions = symbols.length;
+      this.portfolioHoldings.portfolioMarketValue = 0;
+      this.portfolioHoldings.portfolioTotalInvestment = 0;
+
+      symbols.forEach(symbol => {
+        const position = this.portfolioHoldings[symbol];
+        const stock = this.portfolioData[symbol]
+        const price = stock.price?.regularMarketPrice;
+        position.marketValue = +(price * position.sharesOwned).toFixed(4);
+        position.unrealizedGain = +(position.marketValue - position.totalCost).toFixed(4);
+        position.unrealizedGainPercent = position.unrealizedGain / position.marketValue;
+        const isETF = stock.price?.quoteType === 'ETF'
+        const dividendAmount = isETF ? stock.summaryDetail?.yield * stock.price?.regularMarketPrice : stock.summaryDetail?.dividendRate;
+        position.dividendIncome = dividendAmount * position.sharesOwned || 0;
+        position.yieldOnCost = position.dividendIncome / position.totalCost;
+
+        this.portfolioHoldings.portfolioMarketValue += position.marketValue;
+        this.portfolioHoldings.portfolioTotalInvestment += position.totalCost;
+        this.portfolioHoldings.portfolioDividendIncome += position.dividendIncome;
+      })
+
+      this.portfolioHoldings.portfolioUnrealizedGain = this.portfolioHoldings.portfolioMarketValue - this.portfolioHoldings.portfolioTotalInvestment;
+      this.portfolioHoldings.portfolioYieldOnCost = this.portfolioHoldings.portfolioDividendIncome / this.portfolioHoldings.portfolioTotalInvestment;
+
+      // this.getStocksData(this.portfolioSymbols, true).subscribe(console.log)
+      console.table(this.portfolioHoldings)
     })
   }
 
@@ -72,9 +98,9 @@ export class DataService {
   }
 
   /**
-  * @param {null | boolean} update stock data from api call
-  * @returns {Observable} Returns entire portfolio stock data.
-  */
+   * @param {null | boolean} update stock data from api call
+   * @returns {Observable} Returns entire portfolio stock data.
+   */
   public getPortfolioData(update: null | boolean): Observable<any> {
     const path = `${this.backendUrl}/fetch/portfolio/data`;
     if (update !== null) {

@@ -1,36 +1,36 @@
-<section *ngIf="portfolioData" class="summary-cards">
+<section *ngIf="portfolioHoldings" class="summary-cards">
   <info-card
     icon="numbers"
-    [value]="portfolioData.totalPositions"
+    [value]="portfolioHoldings.portfolioPositions"
     subtitle="Total Positions"
   />
   <info-card
     icon="payments"
-    [value]="portfolioData.totalInvestment.toFixed(2)"
+    [value]="portfolioHoldings.portfolioTotalInvestment"
     valueType="currency"
     subtitle="Total Investment"
   />
   <info-card
     icon="payments"
-    [value]="portfolioData.portfolioValue.toFixed(2)"
+    [value]="portfolioHoldings.portfolioMarketValue"
     valueType="currency"
     subtitle="Market Value"
   />
   <info-card
     icon="payments"
-    [value]="portfolioData.unrealizedGain.toFixed(2)"
+    [value]="portfolioHoldings.portfolioUnrealizedGain"
     subtitle="Unrealized Gain"
     valueType="currency"
-    [color]="portfolioData.unrealizedGain > 0 ? 'forestgreen' : 'tomato'"
+    [color]="portfolioHoldings.portfolioUnrealizedGain > 0 ? 'forestgreen' : 'tomato'"
   />
   <info-card
     icon="percentage"
-    [value]="(portfolioData.unrealizedGain / portfolioData.totalInvestment).toFixed(2)"
+    [value]="(portfolioHoldings.portfolioUnrealizedGain / portfolioHoldings.portfolioTotalInvestment).toFixed(2)"
     valueType="percentage"
     subtitle="Unrealized Gain %"
     color="slateblue"
   />
-  <info-card
+  <!-- <info-card
     icon="payments"
     [value]="portfolioYtdGain"
     subtitle="YTD Gain"
@@ -43,14 +43,14 @@
     valueType="percentage"
     subtitle="YTD Gain %"
     color="slateblue"
-  />
+  /> -->
   <info-card
     icon="payments"
-    [value]="portfolioData.dividendIncome.toFixed(2)"
+    [value]="portfolioHoldings.portfolioDividendIncome.toFixed(2)"
     valueType="currency"
     subtitle="Annual Dividend Income"
   />
-  <info-card
+  <!-- <info-card
   icon="payments"
     [value]="ytdDividendEarned"
     valueType="currency"
@@ -63,10 +63,10 @@
     valueType="percentage"
     subtitle="Portfolio Yield"
     color="forestgreen"
-  />
+  /> -->
   <info-card
     icon="percentage"
-    [value]="portfolioData.portfolioYieldOnCost.toFixed(4)"
+    [value]="portfolioHoldings.portfolioYieldOnCost.toFixed(4)"
     valueType="percentage"
     subtitle="Portfolio YOC"
     color="slateblue"
@@ -131,7 +131,7 @@
     >
       <input
         matSliderThumb
-        [value]="portfolioData.portfolioValue"
+        [value]="portfolioHoldings.portfolioMarketValue"
         [matTooltip]="getTooltip('investment')"
         matTooltipPosition="above"
       />
@@ -187,7 +187,7 @@
     >
       <input
         matSliderThumb
-        [value]="portfolioData.dividendIncome"
+        [value]="portfolioHoldings.portfolioDividendIncome"
         [matTooltip]="getTooltip('passive')"
         matTooltipPosition="above"
       />

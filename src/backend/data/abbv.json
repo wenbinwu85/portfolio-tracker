@@ -14,7 +14,6 @@
         "sectorKey": "healthcare",
         "sectorDisp": "Healthcare",
         "longBusinessSummary": "AbbVie Inc. discovers, develops, manufactures, and sells pharmaceuticals worldwide. The company offers Humira, a therapy administered as an injection for autoimmune, intestinal Beh\u00e7et's diseases, and pyoderma gangrenosum; Skyrizi to treat moderate to severe plaque psoriasis, psoriatic disease, and Crohn's disease; Rinvoq, a JAK inhibitor to treat rheumatoid and psoriatic arthritis, ankylosing spondylitis, atopic dermatitis, axial spondyloarthropathy, and ulcerative colitis; Imbruvica for the treatment of adult patients with blood cancers; and Venclexta/Venclyxto to treat hematological malignancies. It also provides facial injectables, plastics and regenerative medicine, body contouring, and skincare products; Vraylar for depressive disorder; Duopa and Duodopa to treat advanced Parkinson's disease; and Ubrelvy for the acute treatment of migraine with or without aura in adults; Qulipta for episodic migraine. In addition, the company offers Lumigan/Ganfort and Alphagan/Combigan for the reduction of elevated intraocular pressure(IOP) in patients with open angle glaucoma (OAG) or ocular hypertension; Restasis, a calcineurin inhibitor immunosuppressant indicated to increase tear production; and eye care products. Further, it provides Mavyret/Maviret to treat chronic hepatitis C virus (HCV) genotype 1-6 infection and HCV genotype 1 infection; Creon, a pancreatic enzyme therapy; Lupron to treat advanced prostate cancer, endometriosis and central precocious puberty, and patients with anemia caused by uterine fibroids; Linzess/Constella to treat irritable bowel syndrome with constipation and chronic idiopathic constipation; and Synthroid for hypothyroidism. It has collaborations with Calico Life Sciences LLC; REGENXBIO Inc.; I-Mab Biopharma; Genmab A/S; Janssen Biotech, Inc.; Genentech, Inc.; California Institute for Biomedical Research (Calibr), and BigHat Biosciences, Inc. The company was incorporated in 2012 and is headquartered in North Chicago, Illinois.",
-        "fullTimeEmployees": 50000,
         "companyOfficers": [
             {
                 "maxAge": 1,
@@ -167,6 +166,11 @@
         "cashflowStatements": [
             {
                 "maxAge": 1,
+                "endDate": "2023-12-31",
+                "netIncome": 4863000000
+            },
+            {
+                "maxAge": 1,
                 "endDate": "2022-12-31",
                 "netIncome": 11836000000
             },
@@ -179,11 +183,6 @@
                 "maxAge": 1,
                 "endDate": "2020-12-31",
                 "netIncome": 4616000000
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2019-12-31",
-                "netIncome": 7882000000
             }
         ],
         "maxAge": 86400
@@ -286,12 +285,16 @@
     "majorHoldersBreakdown": {
         "maxAge": 1,
         "insidersPercentHeld": 0.0013400001,
-        "institutionsPercentHeld": 0.71669996,
-        "institutionsFloatPercentHeld": 0.71766,
-        "institutionsCount": 3899
+        "institutionsPercentHeld": 0.71641,
+        "institutionsFloatPercentHeld": 0.71737,
+        "institutionsCount": 3903
     },
     "balanceSheetHistoryQuarterly": {
         "balanceSheetStatements": [
+            {
+                "maxAge": 1,
+                "endDate": "2023-12-31"
+            },
             {
                 "maxAge": 1,
                 "endDate": "2023-09-30"
@@ -303,10 +306,6 @@
             {
                 "maxAge": 1,
                 "endDate": "2023-03-31"
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2022-12-31"
             }
         ],
         "maxAge": 86400
@@ -355,28 +354,28 @@
     "indexTrend": {
         "maxAge": 1,
         "symbol": "SP5",
-        "peRatio": 16.8404,
-        "pegRatio": 1.14364,
+        "peRatio": 16.5677,
+        "pegRatio": 1.05476,
         "estimates": [
             {
                 "period": "0q",
-                "growth": 0.034
+                "growth": 0.051999997
             },
             {
                 "period": "+1q",
-                "growth": 0.076
+                "growth": 0.091000006
             },
             {
                 "period": "0y",
-                "growth": 0.022
+                "growth": 0.03
             },
             {
                 "period": "+1y",
-                "growth": 0.098000005
+                "growth": 0.099
             },
             {
                 "period": "+5y",
-                "growth": 0.095858805
+                "growth": 0.0970399
             },
             {
                 "period": "-5y"
@@ -386,10 +385,10 @@
     "defaultKeyStatistics": {
         "maxAge": 1,
         "priceHint": 2,
-        "enterpriseValue": 343813423104,
-        "forwardPE": 16.21827,
-        "profitMargins": 0.118140005,
-        "floatShares": 1762430075,
+        "enterpriseValue": 345720193024,
+        "forwardPE": 15.0062275,
+        "profitMargins": 0.08953,
+        "floatShares": 1761653239,
         "sharesOutstanding": 1765539968,
         "sharesShort": 13561430,
         "sharesShortPriorMonth": 13688990,
@@ -397,7 +396,7 @@
         "dateShortInterest": "2024-01-11 19:00:00",
         "sharesPercentSharesOut": 0.0077,
         "heldPercentInsiders": 0.0013400001,
-        "heldPercentInstitutions": 0.71669996,
+        "heldPercentInstitutions": 0.71641,
         "shortRatio": 2.38,
         "shortPercentOfFloat": 0.0077,
         "beta": 0.47,
@@ -407,19 +406,19 @@
         "priceToBook": 24.623358,
         "fundFamily": null,
         "legalType": null,
-        "lastFiscalYearEnd": "2022-12-30 19:00:00",
-        "nextFiscalYearEnd": "2023-12-30 19:00:00",
-        "mostRecentQuarter": "2023-09-29 20:00:00",
-        "earningsQuarterlyGrowth": -0.55,
-        "netIncomeToCommon": 6471000064,
-        "trailingEps": 3.65,
-        "forwardEps": 10.4,
-        "pegRatio": -4.66,
+        "lastFiscalYearEnd": "2023-12-30 19:00:00",
+        "nextFiscalYearEnd": "2024-12-30 19:00:00",
+        "mostRecentQuarter": "2023-12-30 19:00:00",
+        "earningsQuarterlyGrowth": -0.668,
+        "netIncomeToCommon": 4863000064,
+        "trailingEps": 2.72,
+        "forwardEps": 11.24,
+        "pegRatio": -4.0,
         "lastSplitFactor": null,
-        "enterpriseToRevenue": 6.236,
-        "enterpriseToEbitda": 12.282,
-        "52WeekChange": 0.15420115,
-        "SandP52WeekChange": 0.18607855,
+        "enterpriseToRevenue": 6.365,
+        "enterpriseToEbitda": 13.168,
+        "52WeekChange": 0.16308093,
+        "SandP52WeekChange": 0.20615757,
         "lastDividendValue": 1.55,
         "lastDividendDate": 1705017600
     },
@@ -2231,6 +2230,32 @@
         "incomeStatementHistory": [
             {
                 "maxAge": 1,
+                "endDate": "2023-12-31",
+                "totalRevenue": 54318000000,
+                "costOfRevenue": 0,
+                "grossProfit": 0,
+                "researchDevelopment": {},
+                "sellingGeneralAdministrative": {},
+                "nonRecurring": {},
+                "otherOperatingExpenses": {},
+                "totalOperatingExpenses": 0,
+                "operatingIncome": {},
+                "totalOtherIncomeExpenseNet": {},
+                "ebit": 0,
+                "interestExpense": {},
+                "incomeBeforeTax": {},
+                "incomeTaxExpense": 0,
+                "minorityInterest": {},
+                "netIncomeFromContinuingOps": {},
+                "discontinuedOperations": {},
+                "extraordinaryItems": {},
+                "effectOfAccountingCharges": {},
+                "otherItems": {},
+                "netIncome": 4863000000,
+                "netIncomeApplicableToCommonShares": {}
+            },
+            {
+                "maxAge": 1,
                 "endDate": "2022-12-31",
                 "totalRevenue": 58054000000,
                 "costOfRevenue": 0,
@@ -2305,32 +2330,6 @@
                 "effectOfAccountingCharges": {},
                 "otherItems": {},
                 "netIncome": 4616000000,
-                "netIncomeApplicableToCommonShares": {}
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2019-12-31",
-                "totalRevenue": 33266000000,
-                "costOfRevenue": 0,
-                "grossProfit": 0,
-                "researchDevelopment": {},
-                "sellingGeneralAdministrative": {},
-                "nonRecurring": {},
-                "otherOperatingExpenses": {},
-                "totalOperatingExpenses": 0,
-                "operatingIncome": {},
-                "totalOtherIncomeExpenseNet": {},
-                "ebit": 0,
-                "interestExpense": {},
-                "incomeBeforeTax": {},
-                "incomeTaxExpense": 0,
-                "minorityInterest": {},
-                "netIncomeFromContinuingOps": {},
-                "discontinuedOperations": {},
-                "extraordinaryItems": {},
-                "effectOfAccountingCharges": {},
-                "otherItems": {},
-                "netIncome": 7882000000,
                 "netIncomeApplicableToCommonShares": {}
             }
         ],
@@ -2436,37 +2435,37 @@
         "priceHint": 2,
         "previousClose": 167.59,
         "open": 169.42,
-        "dayLow": 165.24,
+        "dayLow": 165.23,
         "dayHigh": 172.85,
         "regularMarketPreviousClose": 167.59,
         "regularMarketOpen": 169.42,
-        "regularMarketDayLow": 165.24,
+        "regularMarketDayLow": 165.23,
         "regularMarketDayHigh": 172.85,
         "dividendRate": 6.2,
-        "dividendYield": 0.037,
+        "dividendYield": 0.0368,
         "exDividendDate": "2024-01-14 19:00:00",
-        "payoutRatio": 1.6027,
+        "payoutRatio": 2.1764998,
         "fiveYearAvgDividendYield": 4.47,
         "beta": 0.47,
-        "trailingPE": 46.210957,
-        "forwardPE": 16.21827,
-        "volume": 7866115,
-        "regularMarketVolume": 7866115,
-        "averageVolume": 5435488,
-        "averageVolume10days": 5015060,
-        "averageDailyVolume10Day": 5015060,
+        "trailingPE": 62.01103,
+        "forwardPE": 15.0062275,
+        "volume": 7477541,
+        "regularMarketVolume": 7477541,
+        "averageVolume": 5475837,
+        "averageVolume10days": 5216340,
+        "averageDailyVolume10Day": 5216340,
         "bid": 169.5,
-        "ask": 169.3,
+        "ask": 169.4,
         "bidSize": 800,
         "askSize": 1200,
         "marketCap": 297793617920,
         "fiftyTwoWeekLow": 130.96,
         "fiftyTwoWeekHigh": 172.85,
-        "priceToSalesTrailing12Months": 5.400878,
-        "fiftyDayAverage": 154.778,
-        "twoHundredDayAverage": 147.54955,
-        "trailingAnnualDividendRate": 5.92,
-        "trailingAnnualDividendYield": 0.035324305,
+        "priceToSalesTrailing12Months": 5.4824114,
+        "fiftyDayAverage": 155.3852,
+        "twoHundredDayAverage": 147.59496,
+        "trailingAnnualDividendRate": 5.99,
+        "trailingAnnualDividendYield": 0.03574199,
         "currency": "USD",
         "fromCurrency": null,
         "toCurrency": null,
@@ -2477,6 +2476,32 @@
     },
     "incomeStatementHistoryQuarterly": {
         "incomeStatementHistory": [
+            {
+                "maxAge": 1,
+                "endDate": "2023-12-31",
+                "totalRevenue": 14301000000,
+                "costOfRevenue": 0,
+                "grossProfit": 0,
+                "researchDevelopment": {},
+                "sellingGeneralAdministrative": {},
+                "nonRecurring": {},
+                "otherOperatingExpenses": {},
+                "totalOperatingExpenses": 0,
+                "operatingIncome": {},
+                "totalOtherIncomeExpenseNet": {},
+                "ebit": 0,
+                "interestExpense": {},
+                "incomeBeforeTax": {},
+                "incomeTaxExpense": 0,
+                "minorityInterest": {},
+                "netIncomeFromContinuingOps": {},
+                "discontinuedOperations": {},
+                "extraordinaryItems": {},
+                "effectOfAccountingCharges": {},
+                "otherItems": {},
+                "netIncome": 822000000,
+                "netIncomeApplicableToCommonShares": {}
+            },
             {
                 "maxAge": 1,
                 "endDate": "2023-09-30",
@@ -2554,38 +2579,17 @@
                 "otherItems": {},
                 "netIncome": 239000000,
                 "netIncomeApplicableToCommonShares": {}
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2022-12-31",
-                "totalRevenue": 15121000000,
-                "costOfRevenue": 0,
-                "grossProfit": 0,
-                "researchDevelopment": {},
-                "sellingGeneralAdministrative": {},
-                "nonRecurring": {},
-                "otherOperatingExpenses": {},
-                "totalOperatingExpenses": 0,
-                "operatingIncome": {},
-                "totalOtherIncomeExpenseNet": {},
-                "ebit": 0,
-                "interestExpense": {},
-                "incomeBeforeTax": {},
-                "incomeTaxExpense": 0,
-                "minorityInterest": {},
-                "netIncomeFromContinuingOps": {},
-                "discontinuedOperations": {},
-                "extraordinaryItems": {},
-                "effectOfAccountingCharges": {},
-                "otherItems": {},
-                "netIncome": 2473000000,
-                "netIncomeApplicableToCommonShares": {}
             }
         ],
         "maxAge": 86400
     },
     "cashflowStatementHistoryQuarterly": {
         "cashflowStatements": [
+            {
+                "maxAge": 1,
+                "endDate": "2023-12-31",
+                "netIncome": 822000000
+            },
             {
                 "maxAge": 1,
                 "endDate": "2023-09-30",
@@ -2600,11 +2604,6 @@
                 "maxAge": 1,
                 "endDate": "2023-03-31",
                 "netIncome": 239000000
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2022-12-31",
-                "netIncome": 2473000000
             }
         ],
         "maxAge": 86400
@@ -2739,20 +2738,16 @@
                     "estimate": 2.86
                 }
             ],
-            "currentQuarterEstimate": 2.56,
+            "currentQuarterEstimate": 2.77,
             "currentQuarterEstimateDate": "4Q",
             "currentQuarterEstimateYear": 2023,
             "earningsDate": [
-                "2024-02-02 07:36:S"
+                "2024-04-25 08:30:S",
+                "2024-04-29 08:30:S"
             ]
         },
         "financialsChart": {
             "yearly": [
-                {
-                    "date": 2019,
-                    "revenue": 33266000000,
-                    "earnings": 7882000000
-                },
                 {
                     "date": 2020,
                     "revenue": 45804000000,
@@ -2767,14 +2762,14 @@
                     "date": 2022,
                     "revenue": 58054000000,
                     "earnings": 11836000000
+                },
+                {
+                    "date": 2023,
+                    "revenue": 54318000000,
+                    "earnings": 4863000000
                 }
             ],
             "quarterly": [
-                {
-                    "date": "4Q2022",
-                    "revenue": 15121000000,
-                    "earnings": 2473000000
-                },
                 {
                     "date": "1Q2023",
                     "revenue": 12225000000,
@@ -2789,6 +2784,11 @@
                     "date": "3Q2023",
                     "revenue": 13927000000,
                     "earnings": 1778000000
+                },
+                {
+                    "date": "4Q2023",
+                    "revenue": 14301000000,
+                    "earnings": 822000000
                 }
             ]
         },
@@ -2798,14 +2798,15 @@
         "maxAge": 1,
         "earnings": {
             "earningsDate": [
-                "2024-02-02 07:36:S"
+                "2024-04-25 08:30:S",
+                "2024-04-29 08:30:S"
             ],
-            "earningsAverage": 2.56,
-            "earningsLow": 2.51,
-            "earningsHigh": 2.72,
-            "revenueAverage": 12977400000,
-            "revenueLow": 12799900000,
-            "revenueHigh": 13466400000
+            "earningsAverage": 2.77,
+            "earningsLow": 2.71,
+            "earningsHigh": 2.94,
+            "revenueAverage": 14020700000,
+            "revenueLow": 13828900000,
+            "revenueHigh": 14549000000
         },
         "exDividendDate": "2024-01-14 19:00:00",
         "dividendDate": "2024-02-14 19:00:00"
@@ -2813,35 +2814,35 @@
     "price": {
         "maxAge": 1,
         "preMarketSource": "FREE_REALTIME",
-        "postMarketChangePercent": 0.0002372,
-        "postMarketChange": 0.0400085,
-        "postMarketTime": "2024-02-02 19:21:53",
-        "postMarketPrice": 168.71,
-        "postMarketSource": "FREE_REALTIME",
+        "postMarketChangePercent": 0.0043279524,
+        "postMarketChange": 0.7299957,
+        "postMarketTime": "2024-02-02 19:58:19",
+        "postMarketPrice": 169.4,
+        "postMarketSource": "DELAYED",
         "regularMarketChangePercent": 0.00644431,
-        "regularMarketChange": 1.08,
+        "regularMarketChange": 1.0800018,
         "regularMarketTime": "2024-02-02 16:00:02",
         "priceHint": 2,
         "regularMarketPrice": 168.67,
         "regularMarketDayHigh": 172.85,
-        "regularMarketDayLow": 165.24,
-        "regularMarketVolume": 7866115,
-        "averageDailyVolume10Day": 5015060,
-        "averageDailyVolume3Month": 5435488,
+        "regularMarketDayLow": 165.23,
+        "regularMarketVolume": 7477541,
+        "averageDailyVolume10Day": 5216340,
+        "averageDailyVolume3Month": 5475837,
         "regularMarketPreviousClose": 167.59,
-        "regularMarketSource": "FREE_REALTIME",
+        "regularMarketSource": "DELAYED",
         "regularMarketOpen": 169.42,
         "exchange": "NYQ",
         "exchangeName": "NYSE",
         "exchangeDataDelayedBy": 0,
-        "marketState": "POST",
+        "marketState": "CLOSED",
         "quoteType": "EQUITY",
         "symbol": "ABBV",
         "underlyingSymbol": null,
         "shortName": "AbbVie Inc.",
         "longName": "AbbVie Inc.",
         "currency": "USD",
-        "quoteSourceName": "Nasdaq Real Time Price",
+        "quoteSourceName": "Delayed Quote",
         "currencySymbol": "$",
         "fromCurrency": null,
         "toCurrency": null,
@@ -2850,6 +2851,10 @@
     },
     "balanceSheetHistory": {
         "balanceSheetStatements": [
+            {
+                "maxAge": 1,
+                "endDate": "2023-12-31"
+            },
             {
                 "maxAge": 1,
                 "endDate": "2022-12-31"
@@ -2861,10 +2866,6 @@
             {
                 "maxAge": 1,
                 "endDate": "2020-12-31"
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2019-12-31"
             }
         ],
         "maxAge": 86400
@@ -2875,29 +2876,29 @@
                 "maxAge": 1,
                 "period": "0q",
                 "endDate": "2023-12-31",
-                "growth": -0.289,
+                "growth": -0.231,
                 "earningsEstimate": {
-                    "avg": 2.56,
-                    "low": 2.51,
-                    "high": 2.72,
+                    "avg": 2.77,
+                    "low": 2.71,
+                    "high": 2.94,
                     "yearAgoEps": 3.6,
                     "numberOfAnalysts": 17,
-                    "growth": -0.289
+                    "growth": -0.231
                 },
                 "revenueEstimate": {
-                    "avg": 12977400000,
-                    "low": 12799900000,
-                    "high": 13466400000,
+                    "avg": 14020700000,
+                    "low": 13828900000,
+                    "high": 14549000000,
                     "numberOfAnalysts": 19,
                     "yearAgoRevenue": 15121000000,
-                    "growth": -0.142
+                    "growth": -0.073
                 },
                 "epsTrend": {
-                    "current": 2.56,
-                    "7daysAgo": 2.84,
-                    "30daysAgo": 2.63,
+                    "current": 2.77,
+                    "7daysAgo": 2.61,
+                    "30daysAgo": 2.9,
                     "60daysAgo": 2.9,
-                    "90daysAgo": 2.9
+                    "90daysAgo": 2.7
                 },
                 "epsRevisions": {
                     "upLast7days": 0,
@@ -2910,29 +2911,29 @@
                 "maxAge": 1,
                 "period": "+1q",
                 "endDate": "2024-03-31",
-                "growth": -0.061,
+                "growth": 0.016,
                 "earningsEstimate": {
-                    "avg": 2.31,
-                    "low": 2.08,
-                    "high": 2.67,
+                    "avg": 2.5,
+                    "low": 2.25,
+                    "high": 2.88,
                     "yearAgoEps": 2.46,
                     "numberOfAnalysts": 13,
-                    "growth": -0.061
+                    "growth": 0.016
                 },
                 "revenueEstimate": {
-                    "avg": 11373900000,
-                    "low": 11055200000,
-                    "high": 12208500000,
+                    "avg": 12288300000,
+                    "low": 11944000000,
+                    "high": 13190000000,
                     "numberOfAnalysts": 12,
                     "yearAgoRevenue": 12225000000,
-                    "growth": -0.07
+                    "growth": 0.005
                 },
                 "epsTrend": {
-                    "current": 2.31,
-                    "7daysAgo": 2.47,
-                    "30daysAgo": 2.21,
+                    "current": 2.5,
+                    "7daysAgo": 2.27,
+                    "30daysAgo": 2.44,
                     "60daysAgo": 2.43,
-                    "90daysAgo": 2.41
+                    "90daysAgo": 2.24
                 },
                 "epsRevisions": {
                     "upLast7days": 1,
@@ -2945,29 +2946,29 @@
                 "maxAge": 1,
                 "period": "0y",
                 "endDate": "2023-12-31",
-                "growth": -0.254,
+                "growth": -0.195,
                 "earningsEstimate": {
-                    "avg": 10.27,
-                    "low": 10.23,
-                    "high": 10.42,
+                    "avg": 11.09,
+                    "low": 11.05,
+                    "high": 11.26,
                     "yearAgoEps": 13.77,
                     "numberOfAnalysts": 18,
-                    "growth": -0.254
+                    "growth": -0.195
                 },
                 "revenueEstimate": {
-                    "avg": 50031400000,
-                    "low": 49839200000,
-                    "high": 50505700000,
+                    "avg": 54053500000,
+                    "low": 53845900000,
+                    "high": 54566000000,
                     "numberOfAnalysts": 26,
                     "yearAgoRevenue": 58054000000,
-                    "growth": -0.138
+                    "growth": -0.069
                 },
                 "epsTrend": {
-                    "current": 10.27,
-                    "7daysAgo": 11.18,
-                    "30daysAgo": 10.17,
+                    "current": 11.09,
+                    "7daysAgo": 10.27,
+                    "30daysAgo": 11.22,
                     "60daysAgo": 11.22,
-                    "90daysAgo": 11.2
+                    "90daysAgo": 10.43
                 },
                 "epsRevisions": {
                     "upLast7days": 0,
@@ -2980,29 +2981,29 @@
                 "maxAge": 1,
                 "period": "+1y",
                 "endDate": "2024-12-31",
-                "growth": 0.012999999,
+                "growth": 0.0139999995,
                 "earningsEstimate": {
-                    "avg": 10.4,
-                    "low": 9.94,
-                    "high": 10.96,
-                    "yearAgoEps": 10.27,
+                    "avg": 11.24,
+                    "low": 10.74,
+                    "high": 11.84,
+                    "yearAgoEps": 11.09,
                     "numberOfAnalysts": 27,
-                    "growth": 0.012999999
+                    "growth": 0.0139999995
                 },
                 "revenueEstimate": {
-                    "avg": 49936200000,
-                    "low": 48050100000,
-                    "high": 52202400000,
+                    "avg": 53950700000,
+                    "low": 51913000000,
+                    "high": 56399000000,
                     "numberOfAnalysts": 26,
-                    "yearAgoRevenue": 50031400000,
+                    "yearAgoRevenue": 54053500000,
                     "growth": -0.002
                 },
                 "epsTrend": {
-                    "current": 10.4,
-                    "7daysAgo": 11.23,
-                    "30daysAgo": 10.11,
+                    "current": 11.24,
+                    "7daysAgo": 10.32,
+                    "30daysAgo": 11.17,
                     "60daysAgo": 11.15,
-                    "90daysAgo": 11.1
+                    "90daysAgo": 10.34
                 },
                 "epsRevisions": {
                     "upLast7days": 4,
@@ -3015,7 +3016,7 @@
                 "maxAge": 1,
                 "period": "+5y",
                 "endDate": null,
-                "growth": -0.035,
+                "growth": -0.0378,
                 "earningsEstimate": {
                     "avg": {},
                     "low": {},
@@ -3087,32 +3088,27 @@
     "financialData": {
         "maxAge": 86400,
         "currentPrice": 168.67,
-        "targetHighPrice": 189.75,
-        "targetLowPrice": 124.95,
-        "targetMeanPrice": 159.7,
-        "targetMedianPrice": 160.13,
+        "targetHighPrice": 205.0,
+        "targetLowPrice": 135.0,
+        "targetMeanPrice": 172.54,
+        "targetMedianPrice": 173.0,
         "recommendationMean": 2.3,
         "recommendationKey": "buy",
         "numberOfAnalystOpinions": 24,
         "totalCash": 13290000384,
         "totalCashPerShare": 7.527,
-        "ebitda": 27992999936,
+        "ebitda": 26254331904,
         "totalDebt": 61182001152,
-        "quickRatio": 0.71,
-        "currentRatio": 0.955,
-        "totalRevenue": 55138000896,
+        "totalRevenue": 54317998080,
         "debtToEquity": 504.427,
-        "revenuePerShare": 31.173,
-        "returnOnAssets": 0.086540006,
-        "returnOnEquity": 0.46321,
-        "freeCashflow": 24065499136,
-        "operatingCashflow": 25514000384,
-        "earningsGrowth": -0.548,
-        "revenueGrowth": -0.06,
-        "grossMargins": 0.69921,
-        "ebitdaMargins": 0.50769,
-        "operatingMargins": 0.17757,
-        "profitMargins": 0.118140005,
+        "revenuePerShare": 30.636,
+        "returnOnEquity": 0.33132,
+        "earningsGrowth": -0.668,
+        "revenueGrowth": -0.054,
+        "grossMargins": 0.69207,
+        "ebitdaMargins": 0.48334,
+        "operatingMargins": 0.31459,
+        "profitMargins": 0.08953,
         "financialCurrency": "USD"
     }
 }

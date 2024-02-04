@@ -87,7 +87,6 @@ def fetch_portfolio():
             print(f'error loading {symbol} data, fetching new data...')
             data = yq_stock_data(symbol)[symbol]
             dump_data_to(data, path)
-        print(symbol, data.keys())
         if data:
             portfolioData.update({symbol: data})
     return jsonify(portfolioData)

@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { MatDividerModule } from '@angular/material/divider';
-import { Router } from '@angular/router';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
-import { DataService } from '../../../services/data.service';
-import { TvMiniChartWidgetComponent } from '../../../components/tradingview/tv-market-quotes-widget/tv-mini-chart-widget/tv-mini-chart-widget.component';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatDividerModule } from '@angular/material/divider';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import {
+  TvMiniChartWidgetComponent,
+} from '../../../components/tradingview/tv-market-quotes-widget/tv-mini-chart-widget/tv-mini-chart-widget.component';
+import { DataService } from '../../../services/data.service';
 
 @Component({
   selector: 'price-movement-charts',
@@ -19,65 +20,66 @@ import { MatChipsModule } from '@angular/material/chips';
   ],
   templateUrl: './price-movement-charts.component.html',
   styleUrls: ['./price-movement-charts.component.css'],
-  
+
 })
 export class PriceMovementChartsComponent {
-  portfolioData: any = [];
+  portfolioHoldings: any;
+  portfolioData: any;
   priceChangeChartData: any = [];
   priceChange = 0;
   priceRangeChartData: any = [];
   betaChartData: any = [];
   selectedChart = 1;
 
-  constructor(private router: Router, private dataService: DataService) {}
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.portfolioHoldings = this.dataService.portfolioHoldings;
     this.portfolioData = this.dataService.portfolioData;
 
-    let stocks = Object.values(this.portfolioData).filter(
-      (value: any) => value.position !== undefined
-    );
 
-    stocks.forEach((stock: any) => {
-      if (stock.preMarketChange) {
-        this.priceChange += stock.preMarketChange * stock.position.sharesOwned;
+    this.dataService.portfolioSymbols.forEach((symbol: any) => {
+      const position = this.portfolioHoldings[symbol];
+      const stock = this.portfolioData[symbol];
+      if (stock.price.preMarketChange) {
+        this.priceChange += stock.price.preMarketChange * position.sharesOwned;
         this.priceChangeChartData.push({
-          name: stock.symbol,
-          value: stock.preMarketChangePercent * 100 || 0,
+          name: stock.price.symbol,
+          value: stock.price.preMarketChangePercent * 100 || 0,
         });
-      } else if (stock.postMarketChange) {
-        this.priceChange += stock.postMarketChange * stock.position.sharesOwned;
+      } else if (stock.price.postMarketChange) {
+        this.priceChange += stock.price.postMarketChange * position.sharesOwned;
         this.priceChangeChartData.push({
-          name: stock.symbol,
-          value: stock.postMarketChangePercent * 100 || 0,
+          name: stock.price.symbol,
+          value: stock.price.postMarketChangePercent * 100 || 0,
         });
       } else {
         this.priceChange +=
-          stock.regularMarketChange * stock.position.sharesOwned;
+          stock.price.regularMarketChange * position.sharesOwned;
         this.priceChangeChartData.push({
-          name: stock.symbol,
-          value: stock.regularMarketChangePercent * 100 || 0,
+          name: stock.price.symbol,
+          value: stock.price.regularMarketChangePercent * 100 || 0,
         });
       }
 
       this.priceRangeChartData.push({
-        name: stock.symbol,
+        name: stock.price.symbol,
         series: [
           {
             name: `Low Range`,
-            value: stock.regularMarketPrice - stock.regularMarketDayLow,
+            value: stock.price.regularMarketPrice - stock.price.regularMarketDayLow,
           },
           {
             name: `High Range`,
-            value: stock.regularMarketDayHigh - stock.regularMarketPrice,
+            value: stock.price.regularMarketDayHigh - stock.price.regularMarketPrice,
           },
         ],
       });
 
-      if (stock.quoteType === 'EQUITY') {
+      if (stock.price.quoteType === 'EQUITY') {
         this.betaChartData.push({
-          name: stock.symbol,
-          value: stock.beta || 0,
+          name: stock.price.symbol,
+          value: stock.defaultKeyStatistics.beta || 0,
         });
       }
     });

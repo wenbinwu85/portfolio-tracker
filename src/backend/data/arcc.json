@@ -285,9 +285,9 @@
     "majorHoldersBreakdown": {
         "maxAge": 1,
         "insidersPercentHeld": 0.00605,
-        "institutionsPercentHeld": 0.30152,
-        "institutionsFloatPercentHeld": 0.30336002,
-        "institutionsCount": 742
+        "institutionsPercentHeld": 0.30154,
+        "institutionsFloatPercentHeld": 0.30337,
+        "institutionsCount": 746
     },
     "balanceSheetHistoryQuarterly": {
         "balanceSheetStatements": [
@@ -354,28 +354,28 @@
     "indexTrend": {
         "maxAge": 1,
         "symbol": "SP5",
-        "peRatio": 16.8404,
-        "pegRatio": 1.14364,
+        "peRatio": 16.5677,
+        "pegRatio": 1.05476,
         "estimates": [
             {
                 "period": "0q",
-                "growth": 0.034
+                "growth": 0.051999997
             },
             {
                 "period": "+1q",
-                "growth": 0.076
+                "growth": 0.091000006
             },
             {
                 "period": "0y",
-                "growth": 0.022
+                "growth": 0.03
             },
             {
                 "period": "+1y",
-                "growth": 0.098000005
+                "growth": 0.099
             },
             {
                 "period": "+5y",
-                "growth": 0.095858805
+                "growth": 0.0970399
             },
             {
                 "period": "-5y"
@@ -385,7 +385,7 @@
     "defaultKeyStatistics": {
         "maxAge": 1,
         "priceHint": 2,
-        "enterpriseValue": 22508288000,
+        "enterpriseValue": 22559537152,
         "forwardPE": 8.656652,
         "profitMargins": 0.50373,
         "sharesOutstanding": 569436992,
@@ -395,7 +395,7 @@
         "dateShortInterest": "2024-01-11 19:00:00",
         "sharesPercentSharesOut": 0.0388,
         "heldPercentInsiders": 0.00605,
-        "heldPercentInstitutions": 0.30152,
+        "heldPercentInstitutions": 0.30154,
         "shortRatio": 5.12,
         "shortPercentOfFloat": 0.039,
         "beta": 1.036,
@@ -414,9 +414,9 @@
         "forwardEps": 2.33,
         "pegRatio": -9.46,
         "lastSplitFactor": null,
-        "enterpriseToRevenue": 8.837,
-        "52WeekChange": 0.019806981,
-        "SandP52WeekChange": 0.18607855,
+        "enterpriseToRevenue": 8.857,
+        "52WeekChange": 0.029081583,
+        "SandP52WeekChange": 0.20615757,
         "lastDividendValue": 0.48,
         "lastDividendDate": 1702512000
     },
@@ -2441,7 +2441,7 @@
         "regularMarketDayLow": 20.0,
         "regularMarketDayHigh": 20.215,
         "dividendRate": 1.92,
-        "dividendYield": 0.095699996,
+        "dividendYield": 0.0952,
         "exDividendDate": "2023-12-13 19:00:00",
         "payoutRatio": 0.8312,
         "fiveYearAvgDividendYield": 9.21,
@@ -2450,9 +2450,9 @@
         "forwardPE": 8.656652,
         "volume": 2949220,
         "regularMarketVolume": 2949220,
-        "averageVolume": 3552416,
-        "averageVolume10days": 3391370,
-        "averageDailyVolume10Day": 3391370,
+        "averageVolume": 3548140,
+        "averageVolume10days": 3415490,
+        "averageDailyVolume10Day": 3415490,
         "bid": 20.15,
         "ask": 20.23,
         "bidSize": 3000,
@@ -2461,8 +2461,8 @@
         "fiftyTwoWeekLow": 16.95,
         "fiftyTwoWeekHigh": 20.65,
         "priceToSalesTrailing12Months": 4.5094404,
-        "fiftyDayAverage": 20.0654,
-        "twoHundredDayAverage": 19.3031,
+        "fiftyDayAverage": 20.0742,
+        "twoHundredDayAverage": 19.31265,
         "trailingAnnualDividendRate": 1.92,
         "trailingAnnualDividendYield": 0.095617525,
         "currency": "USD",
@@ -2813,9 +2813,9 @@
         "preMarketSource": "FREE_REALTIME",
         "postMarketChangePercent": 0.0014873914,
         "postMarketChange": 0.030000687,
-        "postMarketTime": "2024-02-02 19:26:23",
+        "postMarketTime": "2024-02-02 20:00:00",
         "postMarketPrice": 20.2,
-        "postMarketSource": "FREE_REALTIME",
+        "postMarketSource": "DELAYED",
         "regularMarketChangePercent": 0.0044820793,
         "regularMarketChange": 0.09000015,
         "regularMarketTime": "2024-02-02 16:00:01",
@@ -2824,22 +2824,22 @@
         "regularMarketDayHigh": 20.215,
         "regularMarketDayLow": 20.0,
         "regularMarketVolume": 2949220,
-        "averageDailyVolume10Day": 3391370,
-        "averageDailyVolume3Month": 3552416,
+        "averageDailyVolume10Day": 3415490,
+        "averageDailyVolume3Month": 3548140,
         "regularMarketPreviousClose": 20.08,
         "regularMarketSource": "FREE_REALTIME",
         "regularMarketOpen": 20.03,
         "exchange": "NMS",
         "exchangeName": "NasdaqGS",
         "exchangeDataDelayedBy": 0,
-        "marketState": "POST",
+        "marketState": "CLOSED",
         "quoteType": "EQUITY",
         "symbol": "ARCC",
         "underlyingSymbol": null,
         "shortName": "Ares Capital Corporation",
         "longName": "Ares Capital Corporation",
         "currency": "USD",
-        "quoteSourceName": "Nasdaq Real Time Price",
+        "quoteSourceName": "Delayed Quote",
         "currencySymbol": "$",
         "fromCurrency": null,
         "toCurrency": null,

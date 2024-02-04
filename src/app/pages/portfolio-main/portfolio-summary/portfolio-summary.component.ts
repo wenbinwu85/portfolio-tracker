@@ -27,15 +27,15 @@ import { InfoCardComponent } from '../../../shared/components/info-card/info-car
     NgxChartsModule,
     PercentPipe,
   ],
-  
 })
 export class PortfolioSummaryComponent implements OnInit {
-  portfolioData: any = null;
+  portfolioHoldings: any;
+  portfolioData: any;
   portfolioYtdGain = 12345 // this.dataService.getPortfolioYtdGain();
   ytdDividendEarned = 12345 // this.dataService.getPortfolioYtdDividend();
   portfolioValueTarget = 0;
   portfolioValueGoalPercentage = 0;
-  passiveIncomeTarget = 0;
+  passiveIncomeTarget = 12000;
   passiveIncomeGoalPercentage = 0;
   sectorsData: any = [];
   portfolioPercentBarChartData: any = [];
@@ -54,29 +54,27 @@ export class PortfolioSummaryComponent implements OnInit {
   yocYMax = 0;
   showResetButton = false;
 
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.portfolioHoldings = this.dataService.portfolioHoldings
     this.portfolioData = this.dataService.portfolioData;
-    this.passiveIncomeTarget = this.portfolioData.dividendIncomeGoal;
     this.passiveIncomeGoalPercentage =
-      this.portfolioData.dividendIncome / this.passiveIncomeTarget;
+      this.portfolioHoldings.portfolioDividendIncome / this.passiveIncomeTarget;
     this.portfolioValueTarget =
-      this.passiveIncomeTarget / this.portfolioData.portfolioYieldOnCost;
+      this.passiveIncomeTarget / this.portfolioHoldings.portfolioYieldOnCost;
     this.portfolioValueGoalPercentage =
-      this.portfolioData.portfolioValue / this.portfolioValueTarget;
-
-    let stocks = Object
-      .values(this.portfolioData)
-      .filter((value: any) => value.position !== undefined);
+      this.portfolioHoldings.portfolioMarketValue / this.portfolioValueTarget;
 
     // sectors
     let market_sectors: any = {};
-    stocks.forEach((stock: any) => {
-      if (market_sectors[stock.profile.sector]) {
-        market_sectors[stock.profile.sector] += stock.position.marketValue;
+    this.dataService.portfolioSymbols.forEach((symbol: any) => {
+      const position = this.portfolioHoldings[symbol]
+      const stock = this.portfolioData[symbol]
+      if (market_sectors[stock.assetProfile.sector]) {
+        market_sectors[stock.assetProfile.sector] += position.marketValue;
       } else {
-        market_sectors[stock.profile.sector] = stock.position.marketValue;
+        market_sectors[stock.assetProfile.sector] = position.marketValue;
       }
     });
     market_sectors['ETF'] = market_sectors['undefined'];
@@ -90,73 +88,76 @@ export class PortfolioSummaryComponent implements OnInit {
     this.sectorsData.sort((a: any, b: any) => a.value - b.value);
 
     // market values
-    stocks
-      .sort((a: any, b: any) => a.position.marketValue - b.position.marketValue)
-      .forEach((stock: any) => {
+    this.dataService.portfolioSymbols
+      .sort((a: any, b: any) => this.portfolioHoldings[a].marketValue - this.portfolioHoldings[b].marketValue)
+      .forEach((symbol: any) => {
+        const position = this.portfolioHoldings[symbol]
+        const stock = this.portfolioData[symbol]
         this.allMarketValueData.push({
-          name: stock.symbol,
+          name: stock.price.symbol,
           series: [
             {
               name: 'Cost Basis',
-              value: stock.position.totalCost,
+              value: position.totalCost,
             },
             {
               name: 'Unrealized Gain',
-              value: stock.position.unrealizedGain,
+              value: position.unrealizedGain,
             },
           ],
-          sector: stock.profile?.sector || 'ETF',
+          sector: stock.assetProfile?.sector || 'ETF',
         });
 
         this.allPortfolioPercentData.push({
-          name: stock.symbol,
-          value:
-            (stock.position?.marketValue / this.portfolioData.portfolioValue) *
-            100,
-          sector: stock.profile?.sector || 'ETF',
+          name: stock.price.symbol,
+          value: position.marketValue / this.portfolioHoldings.portfolioMarketValue * 100,
+          sector: stock.assetProfile?.sector || 'ETF',
         });
       });
     this.marketValueBarChartData = this.allMarketValueData;
     this.portfolioPercentBarChartData = this.allPortfolioPercentData;
 
     // unrealized gain
-    stocks
+    this.dataService.portfolioSymbols
       .sort(
         (a: any, b: any) =>
-          a.position.unrealizedGainPercent - b.position.unrealizedGainPercent
+          this.portfolioHoldings[a].unrealizedGainPercent - this.portfolioHoldings[b].unrealizedGainPercent
       )
-      .forEach((stock: any) =>
+      .forEach((symbol: any) => {
+        const stock = this.portfolioData[symbol]
         this.allUnrealizedGainData.push({
-          name: stock.symbol,
-          value: stock.position.unrealizedGainPercent.toFixed(2) || 0,
-          sector: stock.profile?.sector || 'ETF',
+          name: stock.price?.symbol,
+          value: this.portfolioHoldings[symbol].unrealizedGainPercent * 100 || 0,
+          sector: stock.assetProfile?.sector || 'ETF',
         })
-      );
+      })
     this.unrealizedGainBarChartData = this.allUnrealizedGainData;
 
     // dividend income
-    stocks
+    this.dataService.portfolioSymbols
       .sort(
         (a: any, b: any) =>
-          a.position.dividendIncome - b.position.dividendIncome
+          this.portfolioHoldings[a].dividendIncome - this.portfolioHoldings[b].dividendIncome
       )
-      .forEach((stock: any) =>
+      .forEach((symbol: any) => {
+        const stock = this.portfolioData[symbol]
         this.allDividendData.push({
-          name: stock.symbol,
-          value: stock.position.dividendIncome,
-          sector: stock.profile?.sector || 'ETF',
+          name: stock.price.symbol,
+          value: this.portfolioHoldings[symbol].dividendIncome,
+          sector: stock.assetProfile?.sector || 'ETF',
         })
-      );
+      });
     this.dividendBarChartData = this.allDividendData;
 
     // yield on cost
-    stocks
-      .sort((a: any, b: any) => a.position.yieldOnCost - b.position.yieldOnCost)
-      .forEach((stock: any) => {
+    this.dataService.portfolioSymbols
+      .sort((a: any, b: any) => this.portfolioHoldings[a].yieldOnCost - this.portfolioHoldings[b].yieldOnCost)
+      .forEach((symbol: any) => {
+        const stock = this.portfolioData[symbol]
         this.allYocData.push({
-          name: stock.symbol,
-          value: stock.position.yieldOnCost,
-          sector: stock.profile?.sector || 'ETF',
+          name: stock.price.symbol,
+          value: this.portfolioHoldings[symbol].yieldOnCost,
+          sector: stock.assetProfile?.sector || 'ETF',
         });
       });
     this.yocBarChartData = this.allYocData;
