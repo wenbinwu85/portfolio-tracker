@@ -1,4 +1,3 @@
-
 import ast
 import os
 from datetime import datetime, timedelta
@@ -70,26 +69,36 @@ def fetch_portfolio():
     update_parm = request.args.get('update')
     should_update = setting_options.get(update_parm, False)
     print('should update:', should_update)
-    portfolioData = {}
+    portfolio_data = {}
+    portfolio_data_path = os.path.join(DATA_PATH, 'portfolio.json')
 
+    # update by fetching new data
     if should_update:
-        portfolioData = yq_stock_data(symbols)
-        path = os.path.join(DATA_PATH, 'portfolio.json')
-        dump_data_to(portfolioData, path)
-        return jsonify(portfolioData)
+        portfolio_data = yq_stock_data(symbols)
+        dump_data_to(portfolio_data, portfolio_data_path)
+        for symbol in portfolio_data:
+            path = os.path.join(DATA_PATH, f'{symbol.lower()}.json')
+            dump_data_to(portfolio_data[symbol], path)
+        return jsonify(portfolio_data)
     
-    for symbol in symbols:
-        data = None
-        path = os.path.join(DATA_PATH, f'{symbol.lower()}.json')
-        try:
-            data = load_data_from(path)
-        except Exception:
-            print(f'error loading {symbol} data, fetching new data...')
-            data = yq_stock_data(symbol)[symbol]
-            dump_data_to(data, path)
-        if data:
-            portfolioData.update({symbol: data})
-    return jsonify(portfolioData)
+    # no update, load from local
+    try:
+        portfolio_data = load_data_from(portfolio_data_path)
+    except Exception:
+        for symbol in symbols:
+            data = None
+            path = os.path.join(DATA_PATH, f'{symbol.lower()}.json')
+            try:
+                data = load_data_from(path)
+            except Exception:
+                # failed to load from local, fetch new data
+                print(f'error loading {symbol} data, fetching new data...')
+                data = yq_stock_data(symbol)[symbol]
+                dump_data_to(data, path)
+            if data:
+                portfolio_data.update({symbol: data})
+        dump_data_to(portfolio_data, portfolio_data_path)
+    return jsonify(portfolio_data)
 
 
 @app.route('/fetch/dividend-history/<symbol>/<years>')

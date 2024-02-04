@@ -1,5 +1,5 @@
 {
-    "assetProfile": {
+    "profile": {
         "address1": "200, Fifth Avenue Place",
         "address2": "425 - 1st Street S.W.",
         "city": "Calgary",
@@ -25,7 +25,7 @@
                 "title": "President, CEO & Director",
                 "yearBorn": 1964,
                 "fiscalYear": 2022,
-                "totalPay": 277178,
+                "totalPay": 275280,
                 "exercisedValue": 0,
                 "unexercisedValue": 0
             },
@@ -36,7 +36,7 @@
                 "title": "Executive VP & President of Liquids Pipelines",
                 "yearBorn": 1970,
                 "fiscalYear": 2022,
-                "totalPay": 1268927,
+                "totalPay": 1260239,
                 "exercisedValue": 0,
                 "unexercisedValue": 0
             },
@@ -47,7 +47,7 @@
                 "title": "Executive VP and President of Gas Transmission & Midstream",
                 "yearBorn": 1965,
                 "fiscalYear": 2022,
-                "totalPay": 1464694,
+                "totalPay": 1454667,
                 "exercisedValue": 0,
                 "unexercisedValue": 0
             },
@@ -127,192 +127,173 @@
         "compensationAsOfEpochDate": "2022-12-30 19:00:00",
         "maxAge": 86400
     },
-    "recommendationTrend": {
-        "trend": [
-            {
-                "period": "0m",
-                "strongBuy": 1,
-                "buy": 5,
-                "hold": 6,
-                "sell": 0,
-                "strongSell": 0
-            },
-            {
-                "period": "-1m",
-                "strongBuy": 1,
-                "buy": 7,
-                "hold": 5,
-                "sell": 1,
-                "strongSell": 1
-            },
-            {
-                "period": "-2m",
-                "strongBuy": 1,
-                "buy": 8,
-                "hold": 5,
-                "sell": 1,
-                "strongSell": 1
-            },
-            {
-                "period": "-3m",
-                "strongBuy": 1,
-                "buy": 6,
-                "hold": 6,
-                "sell": 0,
-                "strongSell": 0
-            }
-        ],
-        "maxAge": 86400
-    },
-    "cashflowStatementHistory": {
-        "cashflowStatements": [
-            {
-                "maxAge": 1,
-                "endDate": "2022-12-31",
-                "netIncome": 3003000000
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2021-12-31",
-                "netIncome": 6189000000
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2020-12-31",
-                "netIncome": 3363000000
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2019-12-31",
-                "netIncome": 5705000000
-            }
-        ],
-        "maxAge": 86400
-    },
-    "institutionOwnership": {
+    "postMarketChangePercent": 0.00283293,
+    "postMarketChange": 0.100002,
+    "postMarketPrice": 35.4,
+    "regularMarketChangePercent": -0.0156163005,
+    "regularMarketChange": -0.560001,
+    "regularMarketPrice": 35.3,
+    "regularMarketDayHigh": 35.72,
+    "regularMarketDayLow": 35.0201,
+    "regularMarketVolume": 5092229,
+    "averageDailyVolume10Day": 5809390,
+    "averageDailyVolume3Month": 5289711,
+    "regularMarketPreviousClose": 35.86,
+    "regularMarketOpen": 35.67,
+    "exchange": "NYQ",
+    "exchangeName": "NYSE",
+    "quoteType": "EQUITY",
+    "symbol": "ENB",
+    "shortName": "Enbridge Inc",
+    "longName": "Enbridge Inc.",
+    "marketCap": 75448803328,
+    "previousClose": 35.86,
+    "open": 35.67,
+    "dayLow": 35.0201,
+    "dayHigh": 35.72,
+    "dividendRate": 2.69,
+    "dividendYield": 0.0762,
+    "exDividendDate": "2024-02-13 19:00:00",
+    "payoutRatio": 2.3483,
+    "fiveYearAvgDividendYield": 6.74,
+    "beta": 0.92,
+    "trailingPE": 31.517857,
+    "forwardPE": 17.135923,
+    "volume": 5092229,
+    "averageVolume": 5289711,
+    "averageVolume10days": 5809390,
+    "fiftyTwoWeekLow": 31.03,
+    "fiftyTwoWeekHigh": 40.98,
+    "priceToSalesTrailing12Months": 1.6482536,
+    "fiftyDayAverage": 35.6206,
+    "twoHundredDayAverage": 35.60655,
+    "trailingAnnualDividendRate": 3.523,
+    "trailingAnnualDividendYield": 0.09824317,
+    "enterpriseValue": 159775801344,
+    "profitMargins": 0.07406,
+    "floatShares": 2122811000,
+    "sharesOutstanding": 2125570048,
+    "sharesShort": 23603382,
+    "sharesShortPriorMonth": 31873658,
+    "sharesShortPreviousMonthDate": "2023-12-14 19:00:00",
+    "dateShortInterest": "2024-01-11 19:00:00",
+    "sharesPercentSharesOut": 0.0111,
+    "heldPercentInsiders": 0.00148,
+    "heldPercentInstitutions": 0.54882,
+    "shortRatio": 5.48,
+    "shortPercentOfFloat": 0.0111,
+    "impliedSharesOutstanding": 2137360000,
+    "bookValue": 27.41,
+    "priceToBook": 1.2878511,
+    "lastFiscalYearEnd": "2022-12-30 19:00:00",
+    "nextFiscalYearEnd": "2023-12-30 19:00:00",
+    "mostRecentQuarter": "2023-09-29 20:00:00",
+    "earningsQuarterlyGrowth": -0.544,
+    "netIncomeToCommon": 3046000128,
+    "trailingEps": 1.12,
+    "forwardEps": 2.06,
+    "pegRatio": 62.35,
+    "enterpriseToRevenue": 3.49,
+    "enterpriseToEbitda": 11.408,
+    "52WeekChange": -0.12817979,
+    "SandP52WeekChange": 0.20615757,
+    "lastDividendValue": 0.643,
+    "lastDividendDate": 1699920000,
+    "calendarEvents": {
         "maxAge": 1,
-        "ownershipList": [
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Royal Bank of Canada",
-                "pctHeld": 0.0716,
-                "position": 152143121,
-                "value": 5370652055,
-                "pctChange": 0.0128
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Vanguard Group Inc",
-                "pctHeld": 0.0383,
-                "position": 81491857,
-                "value": 2876662489,
-                "pctChange": 0.0571
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Bank of Montreal/Can/",
-                "pctHeld": 0.0327,
-                "position": 69557729,
-                "value": 2455387780,
-                "pctChange": 0.0766
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Deutsche Bank Aktiengesellschaft",
-                "pctHeld": 0.0164,
-                "position": 34811225,
-                "value": 1228836215,
-                "pctChange": -0.1005
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "1832 Asset Management L.P.",
-                "pctHeld": 0.0162,
-                "position": 34442344,
-                "value": 1215814716,
-                "pctChange": 0.14
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Wellington Management Group, LLP",
-                "pctHeld": 0.0153,
-                "position": 32531108,
-                "value": 1148348087,
-                "pctChange": 6.3026
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "TD Asset Management, Inc",
-                "pctHeld": 0.014199999,
-                "position": 30213082,
-                "value": 1066521771,
-                "pctChange": 0.0225
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Cibc World Markets, Inc.",
-                "pctHeld": 0.0134000005,
-                "position": 28488996,
-                "value": 1005661537,
-                "pctChange": 0.22719999
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Bank Of Nova Scotia /",
-                "pctHeld": 0.013200001,
-                "position": 28085040,
-                "value": 991401890,
-                "pctChange": 0.0506
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-12-31",
-                "organization": "Mackenzie Financial Corporation",
-                "pctHeld": 0.0104,
-                "position": 22019998,
-                "value": 777305912,
-                "pctChange": -0.0223
-            }
-        ]
+        "earnings": {
+            "earningsDate": [
+                "2024-02-09 08:30:S"
+            ],
+            "earningsAverage": 0.5,
+            "earningsLow": 0.47,
+            "earningsHigh": 0.55,
+            "revenueAverage": 9874600000,
+            "revenueLow": 9874600000,
+            "revenueHigh": 9874600000
+        },
+        "exDividendDate": "2024-02-13 19:00:00",
+        "dividendDate": "2024-02-29 19:00:00"
     },
-    "majorHoldersBreakdown": {
+    "earnings": {
         "maxAge": 1,
-        "insidersPercentHeld": 0.00148,
-        "institutionsPercentHeld": 0.54882,
-        "institutionsFloatPercentHeld": 0.54963,
-        "institutionsCount": 1527
-    },
-    "balanceSheetHistoryQuarterly": {
-        "balanceSheetStatements": [
-            {
-                "maxAge": 1,
-                "endDate": "2023-09-30"
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2023-06-30"
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2023-03-31"
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2022-12-31"
-            }
-        ],
-        "maxAge": 86400
-    },
-    "earningsHistory": {
+        "earningsChart": {
+            "quarterly": [
+                {
+                    "date": "4Q2022",
+                    "actual": 0.47,
+                    "estimate": 0.54
+                },
+                {
+                    "date": "1Q2023",
+                    "actual": 0.64,
+                    "estimate": 0.64
+                },
+                {
+                    "date": "2Q2023",
+                    "actual": 0.5,
+                    "estimate": 0.5
+                },
+                {
+                    "date": "3Q2023",
+                    "actual": 0.46,
+                    "estimate": 0.45
+                }
+            ],
+            "currentQuarterEstimate": 0.5,
+            "currentQuarterEstimateDate": "4Q",
+            "currentQuarterEstimateYear": 2023,
+            "earningsDate": [
+                "2024-02-09 08:30:S"
+            ]
+        },
+        "financialsChart": {
+            "yearly": [
+                {
+                    "date": 2019,
+                    "revenue": 50069000000,
+                    "earnings": 5705000000
+                },
+                {
+                    "date": 2020,
+                    "revenue": 39087000000,
+                    "earnings": 3363000000
+                },
+                {
+                    "date": 2021,
+                    "revenue": 47071000000,
+                    "earnings": 6189000000
+                },
+                {
+                    "date": 2022,
+                    "revenue": 53309000000,
+                    "earnings": 3003000000
+                }
+            ],
+            "quarterly": [
+                {
+                    "date": "4Q2022",
+                    "revenue": 13424000000,
+                    "earnings": -983000000
+                },
+                {
+                    "date": "1Q2023",
+                    "revenue": 12075000000,
+                    "earnings": 1817000000
+                },
+                {
+                    "date": "2Q2023",
+                    "revenue": 10432000000,
+                    "earnings": 1935000000
+                },
+                {
+                    "date": "3Q2023",
+                    "revenue": 9844000000,
+                    "earnings": 621000000
+                }
+            ]
+        },
+        "financialCurrency": "CAD",
         "history": [
             {
                 "maxAge": 1,
@@ -351,1268 +332,305 @@
                 "period": "-1q"
             }
         ],
-        "maxAge": 86400
-    },
-    "indexTrend": {
-        "maxAge": 1,
-        "symbol": "SP5",
-        "peRatio": 16.5677,
-        "pegRatio": 1.05476,
-        "estimates": [
+        "trend": [
             {
+                "maxAge": 1,
                 "period": "0q",
-                "growth": 0.051999997
+                "endDate": "2023-12-31",
+                "growth": 0.064,
+                "earningsEstimate": {
+                    "avg": 0.5,
+                    "low": 0.47,
+                    "high": 0.55,
+                    "yearAgoEps": 0.47,
+                    "numberOfAnalysts": 8,
+                    "growth": 0.064
+                },
+                "revenueEstimate": {
+                    "avg": 9874600000,
+                    "low": 9874600000,
+                    "high": 9874600000,
+                    "numberOfAnalysts": 1,
+                    "yearAgoRevenue": 10042000000,
+                    "growth": -0.017
+                },
+                "epsTrend": {
+                    "current": 0.5,
+                    "7daysAgo": 0.5,
+                    "30daysAgo": 0.5,
+                    "60daysAgo": 0.5,
+                    "90daysAgo": 0.53
+                },
+                "epsRevisions": {
+                    "upLast7days": 0,
+                    "upLast30days": 2,
+                    "downLast30days": 0,
+                    "downLast90days": {}
+                }
             },
             {
+                "maxAge": 1,
                 "period": "+1q",
-                "growth": 0.091000006
+                "endDate": "2024-03-31",
+                "growth": -0.031,
+                "earningsEstimate": {
+                    "avg": 0.62,
+                    "low": 0.59,
+                    "high": 0.68,
+                    "yearAgoEps": 0.64,
+                    "numberOfAnalysts": 4,
+                    "growth": -0.031
+                },
+                "revenueEstimate": {
+                    "avg": 9786670000,
+                    "low": 8784600000,
+                    "high": 10788800000,
+                    "numberOfAnalysts": 2,
+                    "yearAgoRevenue": 12069400000,
+                    "growth": -0.189
+                },
+                "epsTrend": {
+                    "current": 0.62,
+                    "7daysAgo": 0.63,
+                    "30daysAgo": 0.64,
+                    "60daysAgo": 0.61,
+                    "90daysAgo": 0.59
+                },
+                "epsRevisions": {
+                    "upLast7days": 1,
+                    "upLast30days": 1,
+                    "downLast30days": 0,
+                    "downLast90days": {}
+                }
             },
             {
+                "maxAge": 1,
                 "period": "0y",
-                "growth": 0.03
+                "endDate": "2023-12-31",
+                "growth": -0.01,
+                "earningsEstimate": {
+                    "avg": 2.08,
+                    "low": 2.01,
+                    "high": 2.13,
+                    "yearAgoEps": 2.1,
+                    "numberOfAnalysts": 10,
+                    "growth": -0.01
+                },
+                "revenueEstimate": {
+                    "avg": 33157700000,
+                    "low": 32116900000,
+                    "high": 34118900000,
+                    "numberOfAnalysts": 7,
+                    "yearAgoRevenue": 39878300000,
+                    "growth": -0.169
+                },
+                "epsTrend": {
+                    "current": 2.08,
+                    "7daysAgo": 2.08,
+                    "30daysAgo": 2.1,
+                    "60daysAgo": 2.07,
+                    "90daysAgo": 2.08
+                },
+                "epsRevisions": {
+                    "upLast7days": 1,
+                    "upLast30days": 3,
+                    "downLast30days": 1,
+                    "downLast90days": {}
+                }
             },
             {
+                "maxAge": 1,
                 "period": "+1y",
-                "growth": 0.099
+                "endDate": "2024-12-31",
+                "growth": -0.01,
+                "earningsEstimate": {
+                    "avg": 2.06,
+                    "low": 1.94,
+                    "high": 2.23,
+                    "yearAgoEps": 2.08,
+                    "numberOfAnalysts": 11,
+                    "growth": -0.01
+                },
+                "revenueEstimate": {
+                    "avg": 33757400000,
+                    "low": 31458000000,
+                    "high": 35205900000,
+                    "numberOfAnalysts": 6,
+                    "yearAgoRevenue": 33157700000,
+                    "growth": 0.018
+                },
+                "epsTrend": {
+                    "current": 2.06,
+                    "7daysAgo": 2.03,
+                    "30daysAgo": 2.05,
+                    "60daysAgo": 2.03,
+                    "90daysAgo": 2.0
+                },
+                "epsRevisions": {
+                    "upLast7days": 2,
+                    "upLast30days": 3,
+                    "downLast30days": 0,
+                    "downLast90days": {}
+                }
             },
             {
+                "maxAge": 1,
                 "period": "+5y",
-                "growth": 0.0970399
+                "endDate": null,
+                "growth": 0.0037,
+                "earningsEstimate": {
+                    "avg": {},
+                    "low": {},
+                    "high": {},
+                    "yearAgoEps": {},
+                    "numberOfAnalysts": {},
+                    "growth": {}
+                },
+                "revenueEstimate": {
+                    "avg": {},
+                    "low": {},
+                    "high": {},
+                    "numberOfAnalysts": {},
+                    "yearAgoRevenue": {},
+                    "growth": {}
+                },
+                "epsTrend": {
+                    "current": {},
+                    "7daysAgo": {},
+                    "30daysAgo": {},
+                    "60daysAgo": {},
+                    "90daysAgo": {}
+                },
+                "epsRevisions": {
+                    "upLast7days": {},
+                    "upLast30days": {},
+                    "downLast30days": {},
+                    "downLast90days": {}
+                }
             },
             {
-                "period": "-5y"
+                "maxAge": 1,
+                "period": "-5y",
+                "endDate": null,
+                "growth": 0.02034,
+                "earningsEstimate": {
+                    "avg": {},
+                    "low": {},
+                    "high": {},
+                    "yearAgoEps": {},
+                    "numberOfAnalysts": {},
+                    "growth": {}
+                },
+                "revenueEstimate": {
+                    "avg": {},
+                    "low": {},
+                    "high": {},
+                    "numberOfAnalysts": {},
+                    "yearAgoRevenue": {},
+                    "growth": {}
+                },
+                "epsTrend": {
+                    "current": {},
+                    "7daysAgo": {},
+                    "30daysAgo": {},
+                    "60daysAgo": {},
+                    "90daysAgo": {}
+                },
+                "epsRevisions": {
+                    "upLast7days": {},
+                    "upLast30days": {},
+                    "downLast30days": {},
+                    "downLast90days": {}
+                }
             }
         ]
     },
-    "defaultKeyStatistics": {
-        "maxAge": 1,
-        "priceHint": 2,
-        "enterpriseValue": 159775801344,
-        "forwardPE": 16.971153,
-        "profitMargins": 0.07406,
-        "floatShares": 2122811000,
-        "sharesOutstanding": 2125570048,
-        "sharesShort": 23603382,
-        "sharesShortPriorMonth": 31873658,
-        "sharesShortPreviousMonthDate": "2023-12-14 19:00:00",
-        "dateShortInterest": "2024-01-11 19:00:00",
-        "sharesPercentSharesOut": 0.0111,
-        "heldPercentInsiders": 0.00148,
-        "heldPercentInstitutions": 0.54882,
-        "shortRatio": 5.48,
-        "shortPercentOfFloat": 0.0111,
-        "beta": 0.92,
-        "impliedSharesOutstanding": 2137360000,
-        "category": null,
-        "bookValue": 27.41,
-        "priceToBook": 1.2878511,
-        "fundFamily": null,
-        "legalType": null,
-        "lastFiscalYearEnd": "2022-12-30 19:00:00",
-        "nextFiscalYearEnd": "2023-12-30 19:00:00",
-        "mostRecentQuarter": "2023-09-29 20:00:00",
-        "earningsQuarterlyGrowth": -0.544,
-        "netIncomeToCommon": 3046000128,
-        "trailingEps": 1.12,
-        "forwardEps": 2.08,
-        "pegRatio": 62.05,
-        "lastSplitFactor": "2:1",
-        "lastSplitDate": "2011-05-31 20:00:00",
-        "enterpriseToRevenue": 3.49,
-        "enterpriseToEbitda": 11.408,
-        "52WeekChange": -0.12817979,
-        "SandP52WeekChange": 0.20615757,
-        "lastDividendValue": 0.643,
-        "lastDividendDate": 1699920000
-    },
-    "insiderTransactions": {
-        "transactions": [
+    "cashflowHistory": {
+        "annual": [
             {
                 "maxAge": 1,
-                "shares": 258,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "CUNNINGHAM SUSAN MARGARET",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2019-06-14",
-                "ownership": "D"
+                "endDate": "2022-12-31",
+                "netIncome": 3003000000
             },
             {
                 "maxAge": 1,
-                "shares": 1229,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "ENGLAND JAMES HERBERT",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2019-06-14",
-                "ownership": "D"
+                "endDate": "2021-12-31",
+                "netIncome": 6189000000
             },
             {
                 "maxAge": 1,
-                "shares": 690,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "WILLIAMS CATHERINE LYNNE",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2019-06-14",
-                "ownership": "D"
+                "endDate": "2020-12-31",
+                "netIncome": 3363000000
             },
             {
                 "maxAge": 1,
-                "shares": 7848,
-                "value": 291267,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 37.11 per share.",
-                "filerName": "MONACO ALBERT",
-                "filerRelation": "Chief Executive Officer",
-                "moneyText": "",
-                "startDate": "2019-06-05",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 14900,
-                "value": 550965,
-                "filerUrl": "",
-                "transactionText": "Sale at price 36.98 per share.",
-                "filerName": "YARDLEY WILLIAM TURNER",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2019-03-26",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 146,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "CUNNINGHAM SUSAN MARGARET",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2019-03-22",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1295,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "ENGLAND JAMES HERBERT",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2019-03-22",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 727,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "WILLIAMS CATHERINE LYNNE",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2019-03-22",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 169400,
-                "value": 4959033,
-                "filerUrl": "",
-                "transactionText": "Conversion of Exercise of derivative security at price 29.27 per share.",
-                "filerName": "JARVIS, DONALD GUY",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2019-03-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 7806,
-                "value": 289422,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 37.08 per share.",
-                "filerName": "MONACO ALBERT",
-                "filerRelation": "Chief Executive Officer",
-                "moneyText": "",
-                "startDate": "2019-03-05",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1790,
-                "value": 63273,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 33.45 - 37.25 per share.",
-                "filerName": "HANSEN CYNTHIA L.",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2019-03-01",
-                "ownership": "D/I"
-            },
-            {
-                "maxAge": 1,
-                "shares": 6514,
-                "value": 241148,
-                "filerUrl": "",
-                "transactionText": "Sale at price 37.02 per share.",
-                "filerName": "CAPPS ALLEN CARTER",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2019-02-22",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1058800,
-                "value": 31592792,
-                "filerUrl": "",
-                "transactionText": "Conversion of Exercise of derivative security at price 29.84 per share.",
-                "filerName": "MONACO ALBERT",
-                "filerRelation": "Chief Executive Officer",
-                "moneyText": "",
-                "startDate": "2019-02-21",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 4132,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "CAPPS ALLEN CARTER",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2019-02-15",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 8118,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "YARDLEY WILLIAM TURNER",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2019-02-15",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 11201,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "WHELEN JOHN KENDALL",
-                "filerRelation": "Chief Financial Officer",
-                "moneyText": "",
-                "startDate": "2019-02-12",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 67929,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "MONACO ALBERT",
-                "filerRelation": "Chief Executive Officer",
-                "moneyText": "",
-                "startDate": "2019-02-12",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 8849,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "YU VERNON D",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2019-02-12",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 8849,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "NEILES BYRON C",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2019-02-12",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 14100,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "JARVIS, DONALD GUY",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2019-02-12",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 4769,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "HANSEN CYNTHIA L.",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2019-02-12",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 120025,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Gift at price 0.00 per share.",
-                "filerName": "CAZALOT CLARENCE PETER JR.",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2018-12-31",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 70200,
-                "value": 1024218,
-                "filerUrl": "",
-                "transactionText": "Conversion of Exercise of derivative security at price 14.59 per share.",
-                "filerName": "YU VERNON D",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2018-12-31",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 8856,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "CAPPS ALLEN CARTER",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2018-12-31",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 19975,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "YARDLEY WILLIAM TURNER",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2018-12-31",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 90000,
-                "value": 1310292,
-                "filerUrl": "",
-                "transactionText": "Conversion of Exercise of derivative security at price 14.56 per share.",
-                "filerName": "WHELEN JOHN KENDALL",
-                "filerRelation": "Chief Financial Officer",
-                "moneyText": "",
-                "startDate": "2018-12-24",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 20000,
-                "value": 396100,
-                "filerUrl": "",
-                "transactionText": "Conversion of Exercise of derivative security at price 19.80 per share.",
-                "filerName": "MONACO ALBERT",
-                "filerRelation": "Chief Executive Officer",
-                "moneyText": "",
-                "startDate": "2018-12-21",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 335,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "EBEL GREGORY L",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2018-12-20",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 37716,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "TUTCHER DANIEL C",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2018-12-20",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 37368,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "CAZALOT CLARENCE PETER JR.",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2018-12-20",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 4620,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "YU VERNON D",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2018-12-20",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 2890,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "ENGLAND JAMES HERBERT",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2018-12-20",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 50000,
-                "value": 990250,
-                "filerUrl": "",
-                "transactionText": "Conversion of Exercise of derivative security at price 19.80 per share.",
-                "filerName": "HANSEN CYNTHIA L.",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2018-12-20",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 24770,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "EBEL GREGORY L",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2018-12-17",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 82658,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "CAZALOT CLARENCE PETER JR.",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2018-12-17",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1462,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "CARTER PAMELA LYNN",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2018-12-17",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 760,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "YARDLEY WILLIAM TURNER",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2018-12-17",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1510,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "ENGLAND JAMES HERBERT",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2018-12-14",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 910,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "WILLIAMS CATHERINE LYNNE",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2018-12-14",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 64000,
-                "value": 2046720,
-                "filerUrl": "",
-                "transactionText": "Sale at price 31.98 per share.",
-                "filerName": "NEILES BYRON C",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2018-12-14",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 64000,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "NEILES BYRON C",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2018-12-14",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 261,
-                "value": 8684,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 33.27 per share.",
-                "filerName": "ROONEY ROBERT R",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2018-12-04",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 7569,
-                "value": 251239,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 33.19 per share.",
-                "filerName": "MONACO ALBERT",
-                "filerRelation": "Chief Executive Officer",
-                "moneyText": "",
-                "startDate": "2018-12-04",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 12000,
-                "value": 401400,
-                "filerUrl": "",
-                "transactionText": "Sale at price 33.45 per share.",
-                "filerName": "HANSEN CYNTHIA L.",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2018-12-03",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 12000,
-                "value": 237660,
-                "filerUrl": "",
-                "transactionText": "Conversion of Exercise of derivative security at price 19.80 per share.",
-                "filerName": "HANSEN CYNTHIA L.",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2018-12-03",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 15803,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "WHELEN JOHN KENDALL",
-                "filerRelation": "Chief Financial Officer",
-                "moneyText": "",
-                "startDate": "2018-11-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 6248,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "ROONEY ROBERT R",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2018-11-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 5990,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "MONACO ALBERT",
-                "filerRelation": "Chief Executive Officer",
-                "moneyText": "",
-                "startDate": "2018-11-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 20651,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "YU VERNON D",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2018-11-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1569,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "HANSEN CYNTHIA L.",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2018-11-08",
-                "ownership": "D/I"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1569,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "HANSEN CYNTHIA L.",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2018-11-08",
-                "ownership": "I"
-            },
-            {
-                "maxAge": 1,
-                "shares": 19919,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "FISCHER CHARLES WAYNE",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2018-11-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1411,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "ENGLAND JAMES HERBERT",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2018-09-21",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 850,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "WILLIAMS CATHERINE LYNNE",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2018-09-21",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 936,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "WILLIAMS CATHERINE LYNNE",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2018-06-19",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 475,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "CARTER PAMELA LYNN",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2018-06-15",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1577,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "ENGLAND JAMES HERBERT",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2018-06-15",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 950,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "WILLIAMS CATHERINE LYNNE",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2018-06-15",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 468,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "CARTER PAMELA LYNN",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2018-03-23",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 80000,
-                "value": 1228016,
-                "filerUrl": "",
-                "transactionText": "Conversion of Exercise of derivative security at price 15.35 per share.",
-                "filerName": "MONACO ALBERT",
-                "filerRelation": "Chief Executive Officer",
-                "moneyText": "",
-                "startDate": "2018-03-23",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1553,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "ENGLAND JAMES HERBERT",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2018-03-23",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 936,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "WILLIAMS CATHERINE LYNNE",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2018-03-23",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 6100,
-                "value": 192197,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 31.51 per share.",
-                "filerName": "ROONEY ROBERT R",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2018-03-15",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 15274,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "WHELEN JOHN KENDALL",
-                "filerRelation": "Chief Financial Officer",
-                "moneyText": "",
-                "startDate": "2018-03-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 56611,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "MONACO ALBERT",
-                "filerRelation": "Chief Executive Officer",
-                "moneyText": "",
-                "startDate": "2018-03-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 4653,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "YU VERNON D",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2018-03-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 4993,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "NEILES BYRON C",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2018-03-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 9477,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "JARVIS, DONALD GUY",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2018-03-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 4585,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "HANSEN CYNTHIA L.",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2018-03-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 18054,
-                "value": 613840,
-                "filerUrl": "",
-                "transactionText": "Sale at price 34.00 - 34.01 per share.",
-                "filerName": "PHELPS MICHAEL E J",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2018-02-22",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 2607,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "CAPPS ALLEN CARTER",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2018-02-16",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 7822,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "YARDLEY WILLIAM TURNER",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2018-02-16",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 5200,
-                "value": 253500,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 48.75 per share.",
-                "filerName": "DANIEL PATRICK D",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "1998-06-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 8000,
-                "value": 372400,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 46.55 per share.",
-                "filerName": "PHILLIPS BENNY J",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "1998-06-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 7700,
-                "value": 358435,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 46.55 per share.",
-                "filerName": "TRUSWELL DEREK P",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "1998-06-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 37790,
-                "value": 1029022,
-                "filerUrl": "",
-                "transactionText": "Conversion of Exercise of derivative security at price 27.23 per share.",
-                "filerName": "HASKAYNE RICHARD FRANCIS",
-                "filerRelation": "Shareholder",
-                "moneyText": "",
-                "startDate": "1998-06-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 8200,
-                "value": 400078,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 48.79 per share.",
-                "filerName": "MACNEILL BRIAN F",
-                "filerRelation": "President",
-                "moneyText": "",
-                "startDate": "1998-06-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 3400,
-                "value": 99960,
-                "filerUrl": "",
-                "transactionText": "Conversion of Exercise of derivative security at price 29.40 per share.",
-                "filerName": "PERRIN ROBERT M",
-                "filerRelation": "Shareholder",
-                "moneyText": "",
-                "startDate": "1998-06-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 6000,
-                "value": 285780,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 47.63 per share.",
-                "filerName": "MACDERMOTT DONALD B",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "1998-06-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 4200,
-                "value": 190596,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 45.38 per share.",
-                "filerName": "SANGSTER RICHARD H",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "1998-06-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 7700,
-                "value": 358435,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 46.55 per share.",
-                "filerName": "SAVARD D",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "1998-06-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 3000,
-                "value": 63750,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 21.25 per share.",
-                "filerName": "MACNEILL HUGH G",
-                "filerRelation": "Chairman of the Board",
-                "moneyText": "",
-                "startDate": "1994-06-09",
-                "ownership": ""
-            },
-            {
-                "maxAge": 1,
-                "shares": 3400,
-                "value": 99960,
-                "filerUrl": "",
-                "transactionText": "Conversion of Exercise of derivative security at price 29.40 per share.",
-                "filerName": "PERRIN ROBERT M",
-                "filerRelation": "Shareholder",
-                "moneyText": "",
-                "startDate": "1991-05-01",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 2550000,
-                "value": 161746500,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 63.43 per share.",
-                "filerName": "GWU CAPITAL CORP",
-                "filerRelation": "Beneficial Owner of more than 10% of a Class of Security",
-                "moneyText": "",
-                "startDate": "1991-04-30",
-                "ownership": ""
-            },
-            {
-                "maxAge": 1,
-                "shares": 100,
-                "value": 6266,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 62.66 per share.",
-                "filerName": "LORNE BRAITHWAITE",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "1991-01-14",
-                "ownership": ""
-            },
-            {
-                "maxAge": 1,
-                "shares": 2000,
-                "value": 125494,
-                "filerUrl": "",
-                "transactionText": "Sale at price 62.66 - 63.24 per share.",
-                "filerName": "LORNE BRAITHWAITE",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "1990-12-12",
-                "ownership": ""
-            },
-            {
-                "maxAge": 1,
-                "shares": 300,
-                "value": 19842,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 66.14 per share.",
-                "filerName": "RACKLEY CLIFFORD W",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "1990-07-12",
-                "ownership": ""
-            },
-            {
-                "maxAge": 1,
-                "shares": 2000,
-                "value": 131120,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 65.56 per share.",
-                "filerName": "SANGSTER RICHARD H",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "1989-08-03",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 100,
-                "value": 5879,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 58.79 per share.",
-                "filerName": "INNES WILLIAM R",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "1989-02-17",
-                "ownership": ""
-            },
-            {
-                "maxAge": 1,
-                "shares": 58300,
-                "value": 3427457,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 58.79 per share.",
-                "filerName": "IMPERIAL OIL LTD",
-                "filerRelation": "Beneficial Owner of more than 10% of a Class of Security",
-                "moneyText": "",
-                "startDate": "1988-09-06",
-                "ownership": ""
-            },
-            {
-                "maxAge": 1,
-                "shares": 44900,
-                "value": 2657182,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 59.18 per share.",
-                "filerName": "IMPERIAL OIL LTD",
-                "filerRelation": "Beneficial Owner of more than 10% of a Class of Security",
-                "moneyText": "",
-                "startDate": "1988-08-16",
-                "ownership": ""
-            },
-            {
-                "maxAge": 1,
-                "shares": 1000,
-                "value": 48880,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 48.88 per share.",
-                "filerName": "SANGSTER RICHARD H",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "1988-06-03",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 24000,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 0.00 per share.",
-                "filerName": "IMPERIAL OIL LTD",
-                "filerRelation": "Beneficial Owner of more than 10% of a Class of Security",
-                "moneyText": "",
-                "startDate": "1988-03-28",
-                "ownership": ""
-            },
-            {
-                "maxAge": 1,
-                "shares": 310000,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 0.00 per share.",
-                "filerName": "IMPERIAL OIL LTD",
-                "filerRelation": "Beneficial Owner of more than 10% of a Class of Security",
-                "moneyText": "",
-                "startDate": "1988-02-16",
-                "ownership": ""
-            },
-            {
-                "maxAge": 1,
-                "shares": 185300,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 0.00 per share.",
-                "filerName": "OLYMPIA & YORK",
-                "filerRelation": "Beneficial Owner of more than 10% of a Class of Security",
-                "moneyText": "",
-                "startDate": "1988-01-18",
-                "ownership": ""
-            },
-            {
-                "maxAge": 1,
-                "shares": 2000,
-                "value": 102120,
-                "filerUrl": "",
-                "transactionText": "Sale at price 51.06 per share.",
-                "filerName": "KIRKWOOD GEORGE W",
-                "filerRelation": "Vice President",
-                "moneyText": "",
-                "startDate": "1987-12-22",
-                "ownership": ""
-            },
-            {
-                "maxAge": 1,
-                "shares": 50,
-                "value": 2553,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 51.06 per share.",
-                "filerName": "BENNETT GILBERT S",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "1987-02-25",
-                "ownership": ""
-            },
-            {
-                "maxAge": 1,
-                "shares": 1900,
-                "value": 82308,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 43.32 per share.",
-                "filerName": "HASKAYNE RICHARD FRANCIS",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "1986-12-24",
-                "ownership": ""
-            },
-            {
-                "maxAge": 1,
-                "shares": 100,
-                "value": 3925,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 39.25 per share.",
-                "filerName": "MCWALTER STUART K",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "1986-11-05",
-                "ownership": ""
-            },
-            {
-                "maxAge": 1,
-                "shares": 500,
-                "value": 21660,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 43.32 per share.",
-                "filerName": "YOUNG WILLIAM J",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "1986-08-26",
-                "ownership": ""
+                "endDate": "2019-12-31",
+                "netIncome": 5705000000
             }
         ],
-        "maxAge": 1
+        "quarterly": [
+            {
+                "maxAge": 1,
+                "endDate": "2023-09-30",
+                "netIncome": 621000000
+            },
+            {
+                "maxAge": 1,
+                "endDate": "2023-06-30",
+                "netIncome": 1935000000
+            },
+            {
+                "maxAge": 1,
+                "endDate": "2023-03-31",
+                "netIncome": 1817000000
+            },
+            {
+                "maxAge": 1,
+                "endDate": "2022-12-31",
+                "netIncome": -983000000
+            }
+        ]
+    },
+    "balanceSheetHistory": {
+        "annual": [
+            {
+                "maxAge": 1,
+                "endDate": "2022-12-31"
+            },
+            {
+                "maxAge": 1,
+                "endDate": "2021-12-31"
+            },
+            {
+                "maxAge": 1,
+                "endDate": "2020-12-31"
+            },
+            {
+                "maxAge": 1,
+                "endDate": "2019-12-31"
+            }
+        ],
+        "quarterly": [
+            {
+                "maxAge": 1,
+                "endDate": "2023-09-30"
+            },
+            {
+                "maxAge": 1,
+                "endDate": "2023-06-30"
+            },
+            {
+                "maxAge": 1,
+                "endDate": "2023-03-31"
+            },
+            {
+                "maxAge": 1,
+                "endDate": "2022-12-31"
+            }
+        ]
     },
     "incomeStatementHistory": {
-        "incomeStatementHistory": [
+        "annual": [
             {
                 "maxAge": 1,
                 "endDate": "2022-12-31",
@@ -1718,149 +736,7 @@
                 "netIncomeApplicableToCommonShares": {}
             }
         ],
-        "maxAge": 86400
-    },
-    "fundOwnership": {
-        "maxAge": 1,
-        "ownershipList": [
-            {
-                "maxAge": 1,
-                "reportDate": "2023-10-31",
-                "organization": "Vanguard International Stock Index-Total Intl Stock Indx",
-                "pctHeld": 0.0135,
-                "position": 28672099,
-                "value": 1012125072,
-                "pctChange": 0.060700003
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Vanguard Tax Managed Fund-Vanguard Developed Markets Index Fund",
-                "pctHeld": 0.008,
-                "position": 16956633,
-                "value": 598569131,
-                "pctChange": 0.0572
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Vanguard Fenway Funds-Equity Income Fund",
-                "pctHeld": 0.0045,
-                "position": 9569168,
-                "value": 337791623,
-                "pctChange": 1.0
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-10-31",
-                "organization": "JP Morgan ETF Tr-BetaBuilders Canada ETF",
-                "pctHeld": 0.0034,
-                "position": 7251475,
-                "value": 255977061,
-                "pctChange": 0.094
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-12-31",
-                "organization": "Federated Hermes Strategic Value Dividend Fund",
-                "pctHeld": 0.0033000002,
-                "position": 6917025,
-                "value": 244170977,
-                "pctChange": -0.032899998
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Legg Mason Clearbridge Dividend Strategy Fd",
-                "pctHeld": 0.0028,
-                "position": 5936733,
-                "value": 209566670,
-                "pctChange": 0.17790002
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Vanguard/Wellesley Income Fund",
-                "pctHeld": 0.0026,
-                "position": 5427964,
-                "value": 191607125,
-                "pctChange": 1.0
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-10-31",
-                "organization": "Income Fund of America Inc",
-                "pctHeld": 0.0023999999,
-                "position": 5000000,
-                "value": 176499996,
-                "pctChange": 0.0
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-10-31",
-                "organization": "Vanguard/Windsor Fund Inc.",
-                "pctHeld": 0.0022,
-                "position": 4661632,
-                "value": 164555606,
-                "pctChange": 1.0
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-11-30",
-                "organization": "iShares Global Infrastructure ETF",
-                "pctHeld": 0.0022,
-                "position": 4748176,
-                "value": 167610609,
-                "pctChange": 0.013200001
-            }
-        ]
-    },
-    "summaryDetail": {
-        "maxAge": 1,
-        "priceHint": 2,
-        "previousClose": 35.86,
-        "open": 35.67,
-        "dayLow": 35.02,
-        "dayHigh": 35.72,
-        "regularMarketPreviousClose": 35.86,
-        "regularMarketOpen": 35.67,
-        "regularMarketDayLow": 35.02,
-        "regularMarketDayHigh": 35.72,
-        "dividendRate": 2.69,
-        "dividendYield": 0.0762,
-        "exDividendDate": "2024-02-13 19:00:00",
-        "payoutRatio": 2.3483,
-        "fiveYearAvgDividendYield": 6.74,
-        "beta": 0.92,
-        "trailingPE": 31.517857,
-        "forwardPE": 16.971153,
-        "volume": 4681768,
-        "regularMarketVolume": 4681768,
-        "averageVolume": 5289711,
-        "averageVolume10days": 5809390,
-        "averageDailyVolume10Day": 5809390,
-        "bid": 35.33,
-        "ask": 35.32,
-        "bidSize": 3000,
-        "askSize": 1300,
-        "marketCap": 75448803328,
-        "fiftyTwoWeekLow": 31.03,
-        "fiftyTwoWeekHigh": 40.98,
-        "priceToSalesTrailing12Months": 1.6482536,
-        "fiftyDayAverage": 35.6206,
-        "twoHundredDayAverage": 35.60655,
-        "trailingAnnualDividendRate": 3.523,
-        "trailingAnnualDividendYield": 0.09824317,
-        "currency": "USD",
-        "fromCurrency": null,
-        "toCurrency": null,
-        "lastMarket": null,
-        "coinMarketCapLink": null,
-        "algorithm": null,
-        "tradeable": false
-    },
-    "incomeStatementHistoryQuarterly": {
-        "incomeStatementHistory": [
+        "quarterly": [
             {
                 "maxAge": 1,
                 "endDate": "2023-09-30",
@@ -1965,537 +841,1592 @@
                 "netIncome": -983000000,
                 "netIncomeApplicableToCommonShares": {}
             }
-        ],
-        "maxAge": 86400
+        ]
     },
-    "cashflowStatementHistoryQuarterly": {
-        "cashflowStatements": [
-            {
-                "maxAge": 1,
-                "endDate": "2023-09-30",
-                "netIncome": 621000000
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2023-06-30",
-                "netIncome": 1935000000
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2023-03-31",
-                "netIncome": 1817000000
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2022-12-31",
-                "netIncome": -983000000
-            }
-        ],
-        "maxAge": 86400
-    },
-    "insiderHolders": {
-        "holders": [
-            {
-                "maxAge": 1,
-                "name": "CAPPS ALLEN CARTER",
-                "relation": "Officer",
-                "url": "",
-                "transactionDescription": "Sale",
-                "latestTransDate": "2019-02-22",
-                "positionDirect": 17823,
-                "positionDirectDate": "2019-02-22"
-            },
-            {
-                "maxAge": 1,
-                "name": "CUNNINGHAM SUSAN MARGARET",
-                "relation": "Director",
-                "url": "",
-                "transactionDescription": "Stock Award(Grant)",
-                "latestTransDate": "2019-06-14",
-                "positionDirect": 404,
-                "positionDirectDate": "2019-06-14"
-            },
-            {
-                "maxAge": 1,
-                "name": "ENGLAND JAMES HERBERT",
-                "relation": "Director",
-                "url": "",
-                "transactionDescription": "Stock Award(Grant)",
-                "latestTransDate": "2019-06-14",
-                "positionDirect": 29447,
-                "positionDirectDate": "2019-06-14"
-            },
-            {
-                "maxAge": 1,
-                "name": "HANSEN CYNTHIA L.",
-                "relation": "Officer",
-                "url": "",
-                "transactionDescription": "Purchase",
-                "latestTransDate": "2019-03-01",
-                "positionSummaryDate": 1551398400
-            },
-            {
-                "maxAge": 1,
-                "name": "JARVIS, DONALD GUY",
-                "relation": "Officer",
-                "url": "",
-                "transactionDescription": "Conversion of Exercise of derivative security",
-                "latestTransDate": "2019-03-08",
-                "positionDirect": 71635,
-                "positionDirectDate": "2019-03-08"
-            },
-            {
-                "maxAge": 1,
-                "name": "MONACO ALBERT",
-                "relation": "Chief Executive Officer",
-                "url": "",
-                "transactionDescription": "Purchase",
-                "latestTransDate": "2019-06-05",
-                "positionDirect": 824530,
-                "positionDirectDate": "2019-06-05"
-            },
-            {
-                "maxAge": 1,
-                "name": "WHELEN JOHN KENDALL",
-                "relation": "Chief Financial Officer",
-                "url": "",
-                "transactionDescription": "Conversion of Exercise of derivative security",
-                "latestTransDate": "2019-02-12",
-                "positionDirect": 214165,
-                "positionDirectDate": "2019-02-12"
-            },
-            {
-                "maxAge": 1,
-                "name": "WILLIAMS CATHERINE LYNNE",
-                "relation": "Director",
-                "url": "",
-                "transactionDescription": "Stock Award(Grant)",
-                "latestTransDate": "2019-06-14",
-                "positionDirect": 53521,
-                "positionDirectDate": "2019-06-14"
-            },
-            {
-                "maxAge": 1,
-                "name": "YARDLEY WILLIAM TURNER",
-                "relation": "Officer",
-                "url": "",
-                "transactionDescription": "Sale",
-                "latestTransDate": "2019-03-26",
-                "positionDirect": 110198,
-                "positionDirectDate": "2019-03-26"
-            },
-            {
-                "maxAge": 1,
-                "name": "YU VERNON D",
-                "relation": "Officer",
-                "url": "",
-                "transactionDescription": "Conversion of Exercise of derivative security",
-                "latestTransDate": "2019-02-12",
-                "positionDirect": 102978,
-                "positionDirectDate": "2019-02-12"
-            }
-        ],
-        "maxAge": 1
-    },
-    "earnings": {
-        "maxAge": 86400,
-        "earningsChart": {
-            "quarterly": [
-                {
-                    "date": "4Q2022",
-                    "actual": 0.47,
-                    "estimate": 0.54
-                },
-                {
-                    "date": "1Q2023",
-                    "actual": 0.64,
-                    "estimate": 0.64
-                },
-                {
-                    "date": "2Q2023",
-                    "actual": 0.5,
-                    "estimate": 0.5
-                },
-                {
-                    "date": "3Q2023",
-                    "actual": 0.46,
-                    "estimate": 0.45
-                }
-            ],
-            "currentQuarterEstimate": 0.5,
-            "currentQuarterEstimateDate": "4Q",
-            "currentQuarterEstimateYear": 2023,
-            "earningsDate": [
-                "2024-02-09 08:30:S"
-            ]
-        },
-        "financialsChart": {
-            "yearly": [
-                {
-                    "date": 2019,
-                    "revenue": 50069000000,
-                    "earnings": 5705000000
-                },
-                {
-                    "date": 2020,
-                    "revenue": 39087000000,
-                    "earnings": 3363000000
-                },
-                {
-                    "date": 2021,
-                    "revenue": 47071000000,
-                    "earnings": 6189000000
-                },
-                {
-                    "date": 2022,
-                    "revenue": 53309000000,
-                    "earnings": 3003000000
-                }
-            ],
-            "quarterly": [
-                {
-                    "date": "4Q2022",
-                    "revenue": 13424000000,
-                    "earnings": -983000000
-                },
-                {
-                    "date": "1Q2023",
-                    "revenue": 12075000000,
-                    "earnings": 1817000000
-                },
-                {
-                    "date": "2Q2023",
-                    "revenue": 10432000000,
-                    "earnings": 1935000000
-                },
-                {
-                    "date": "3Q2023",
-                    "revenue": 9844000000,
-                    "earnings": 621000000
-                }
-            ]
-        },
-        "financialCurrency": "CAD"
-    },
-    "calendarEvents": {
-        "maxAge": 1,
-        "earnings": {
-            "earningsDate": [
-                "2024-02-09 08:30:S"
-            ],
-            "earningsAverage": 0.5,
-            "earningsLow": 0.47,
-            "earningsHigh": 0.55,
-            "revenueAverage": 9942670000,
-            "revenueLow": 9942670000,
-            "revenueHigh": 9942670000
-        },
-        "exDividendDate": "2024-02-13 19:00:00",
-        "dividendDate": "2024-02-29 19:00:00"
-    },
-    "price": {
-        "maxAge": 1,
-        "preMarketSource": "FREE_REALTIME",
-        "postMarketChangePercent": 0.00283293,
-        "postMarketChange": 0.100002,
-        "postMarketTime": "2024-02-02 19:54:52",
-        "postMarketPrice": 35.4,
-        "postMarketSource": "FREE_REALTIME",
-        "regularMarketChangePercent": -0.015616324,
-        "regularMarketChange": -0.5600014,
-        "regularMarketTime": "2024-02-02 16:00:02",
-        "priceHint": 2,
-        "regularMarketPrice": 35.3,
-        "regularMarketDayHigh": 35.72,
-        "regularMarketDayLow": 35.02,
-        "regularMarketVolume": 4681768,
-        "averageDailyVolume10Day": 5809390,
-        "averageDailyVolume3Month": 5289711,
-        "regularMarketPreviousClose": 35.86,
-        "regularMarketSource": "DELAYED",
-        "regularMarketOpen": 35.67,
-        "exchange": "NYQ",
-        "exchangeName": "NYSE",
-        "exchangeDataDelayedBy": 0,
-        "marketState": "CLOSED",
-        "quoteType": "EQUITY",
-        "symbol": "ENB",
-        "underlyingSymbol": null,
-        "shortName": "Enbridge Inc",
-        "longName": "Enbridge Inc.",
-        "currency": "USD",
-        "quoteSourceName": "Nasdaq Real Time Price",
-        "currencySymbol": "$",
-        "fromCurrency": null,
-        "toCurrency": null,
-        "lastMarket": null,
-        "marketCap": 75448803328
-    },
-    "balanceSheetHistory": {
-        "balanceSheetStatements": [
-            {
-                "maxAge": 1,
-                "endDate": "2022-12-31"
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2021-12-31"
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2020-12-31"
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2019-12-31"
-            }
-        ],
-        "maxAge": 86400
-    },
-    "earningsTrend": {
+    "currentPrice": 35.3,
+    "targetHighPrice": 43.04,
+    "targetLowPrice": 34.89,
+    "targetMeanPrice": 39.67,
+    "targetMedianPrice": 39.47,
+    "recommendationMean": 2.6,
+    "recommendationKey": "hold",
+    "numberOfAnalystOpinions": 9,
+    "totalCash": 2992000000,
+    "totalCashPerShare": 1.407,
+    "ebitda": 14005000192,
+    "totalDebt": 77520003072,
+    "quickRatio": 0.428,
+    "currentRatio": 0.666,
+    "totalRevenue": 45774999552,
+    "debtToEquity": 113.211,
+    "revenuePerShare": 22.546,
+    "returnOnAssets": 0.03275,
+    "returnOnEquity": 0.04976,
+    "freeCashflow": 3443000064,
+    "operatingCashflow": 14001999872,
+    "earningsGrowth": -0.588,
+    "revenueGrowth": -0.149,
+    "grossMargins": 0.48546,
+    "ebitdaMargins": 0.30595,
+    "operatingMargins": 0.1857,
+    "financialCurrency": "CAD",
+    "recommendationTrend": {
         "trend": [
             {
-                "maxAge": 1,
-                "period": "0q",
-                "endDate": "2023-12-31",
-                "growth": 0.064,
-                "earningsEstimate": {
-                    "avg": 0.5,
-                    "low": 0.47,
-                    "high": 0.55,
-                    "yearAgoEps": 0.47,
-                    "numberOfAnalysts": 8,
-                    "growth": 0.064
-                },
-                "revenueEstimate": {
-                    "avg": 9942670000,
-                    "low": 9942670000,
-                    "high": 9942670000,
-                    "numberOfAnalysts": 1,
-                    "yearAgoRevenue": 10042000000,
-                    "growth": -0.01
-                },
-                "epsTrend": {
-                    "current": 0.5,
-                    "7daysAgo": 0.5,
-                    "30daysAgo": 0.51,
-                    "60daysAgo": 0.5,
-                    "90daysAgo": 0.53
-                },
-                "epsRevisions": {
-                    "upLast7days": 0,
-                    "upLast30days": 2,
-                    "downLast30days": 0,
-                    "downLast90days": {}
-                }
+                "period": "0m",
+                "strongBuy": 1,
+                "buy": 5,
+                "hold": 6,
+                "sell": 0,
+                "strongSell": 0
             },
             {
-                "maxAge": 1,
-                "period": "+1q",
-                "endDate": "2024-03-31",
-                "growth": -0.016,
-                "earningsEstimate": {
-                    "avg": 0.63,
-                    "low": 0.6,
-                    "high": 0.69,
-                    "yearAgoEps": 0.64,
-                    "numberOfAnalysts": 4,
-                    "growth": -0.016
-                },
-                "revenueEstimate": {
-                    "avg": 9854140000,
-                    "low": 8845150000,
-                    "high": 10863100000,
-                    "numberOfAnalysts": 2,
-                    "yearAgoRevenue": 12069400000,
-                    "growth": -0.184
-                },
-                "epsTrend": {
-                    "current": 0.63,
-                    "7daysAgo": 0.63,
-                    "30daysAgo": 0.65,
-                    "60daysAgo": 0.61,
-                    "90daysAgo": 0.57
-                },
-                "epsRevisions": {
-                    "upLast7days": 1,
-                    "upLast30days": 1,
-                    "downLast30days": 0,
-                    "downLast90days": {}
-                }
+                "period": "-1m",
+                "strongBuy": 1,
+                "buy": 7,
+                "hold": 5,
+                "sell": 1,
+                "strongSell": 1
             },
             {
-                "maxAge": 1,
-                "period": "0y",
-                "endDate": "2023-12-31",
-                "growth": -0.005,
-                "earningsEstimate": {
-                    "avg": 2.09,
-                    "low": 2.02,
-                    "high": 2.14,
-                    "yearAgoEps": 2.1,
-                    "numberOfAnalysts": 10,
-                    "growth": -0.005
-                },
-                "revenueEstimate": {
-                    "avg": 33386200000,
-                    "low": 32338300000,
-                    "high": 34354100000,
-                    "numberOfAnalysts": 7,
-                    "yearAgoRevenue": 39878300000,
-                    "growth": -0.16299999
-                },
-                "epsTrend": {
-                    "current": 2.09,
-                    "7daysAgo": 2.07,
-                    "30daysAgo": 2.1,
-                    "60daysAgo": 2.07,
-                    "90daysAgo": 2.08
-                },
-                "epsRevisions": {
-                    "upLast7days": 1,
-                    "upLast30days": 3,
-                    "downLast30days": 1,
-                    "downLast90days": {}
-                }
+                "period": "-2m",
+                "strongBuy": 1,
+                "buy": 8,
+                "hold": 5,
+                "sell": 1,
+                "strongSell": 1
             },
             {
-                "maxAge": 1,
-                "period": "+1y",
-                "endDate": "2024-12-31",
-                "growth": -0.005,
-                "earningsEstimate": {
-                    "avg": 2.08,
-                    "low": 1.95,
-                    "high": 2.24,
-                    "yearAgoEps": 2.09,
-                    "numberOfAnalysts": 11,
-                    "growth": -0.005
-                },
-                "revenueEstimate": {
-                    "avg": 33990100000,
-                    "low": 31674900000,
-                    "high": 35448600000,
-                    "numberOfAnalysts": 6,
-                    "yearAgoRevenue": 33386200000,
-                    "growth": 0.018
-                },
-                "epsTrend": {
-                    "current": 2.08,
-                    "7daysAgo": 2.02,
-                    "30daysAgo": 2.05,
-                    "60daysAgo": 2.04,
-                    "90daysAgo": 2.0
-                },
-                "epsRevisions": {
-                    "upLast7days": 2,
-                    "upLast30days": 3,
-                    "downLast30days": 0,
-                    "downLast90days": {}
-                }
-            },
-            {
-                "maxAge": 1,
-                "period": "+5y",
-                "endDate": null,
-                "growth": 0.0037,
-                "earningsEstimate": {
-                    "avg": {},
-                    "low": {},
-                    "high": {},
-                    "yearAgoEps": {},
-                    "numberOfAnalysts": {},
-                    "growth": {}
-                },
-                "revenueEstimate": {
-                    "avg": {},
-                    "low": {},
-                    "high": {},
-                    "numberOfAnalysts": {},
-                    "yearAgoRevenue": {},
-                    "growth": {}
-                },
-                "epsTrend": {
-                    "current": {},
-                    "7daysAgo": {},
-                    "30daysAgo": {},
-                    "60daysAgo": {},
-                    "90daysAgo": {}
-                },
-                "epsRevisions": {
-                    "upLast7days": {},
-                    "upLast30days": {},
-                    "downLast30days": {},
-                    "downLast90days": {}
-                }
-            },
-            {
-                "maxAge": 1,
-                "period": "-5y",
-                "endDate": null,
-                "growth": 0.02034,
-                "earningsEstimate": {
-                    "avg": {},
-                    "low": {},
-                    "high": {},
-                    "yearAgoEps": {},
-                    "numberOfAnalysts": {},
-                    "growth": {}
-                },
-                "revenueEstimate": {
-                    "avg": {},
-                    "low": {},
-                    "high": {},
-                    "numberOfAnalysts": {},
-                    "yearAgoRevenue": {},
-                    "growth": {}
-                },
-                "epsTrend": {
-                    "current": {},
-                    "7daysAgo": {},
-                    "30daysAgo": {},
-                    "60daysAgo": {},
-                    "90daysAgo": {}
-                },
-                "epsRevisions": {
-                    "upLast7days": {},
-                    "upLast30days": {},
-                    "downLast30days": {},
-                    "downLast90days": {}
-                }
+                "period": "-3m",
+                "strongBuy": 1,
+                "buy": 6,
+                "hold": 6,
+                "sell": 0,
+                "strongSell": 0
             }
         ],
-        "maxAge": 1
+        "maxAge": 86400
     },
-    "financialData": {
-        "maxAge": 86400,
-        "currentPrice": 35.3,
-        "targetHighPrice": 43.33,
-        "targetLowPrice": 35.13,
-        "targetMeanPrice": 39.95,
-        "targetMedianPrice": 39.75,
-        "recommendationMean": 2.6,
-        "recommendationKey": "hold",
-        "numberOfAnalystOpinions": 9,
-        "totalCash": 2992000000,
-        "totalCashPerShare": 1.407,
-        "ebitda": 14005000192,
-        "totalDebt": 77520003072,
-        "quickRatio": 0.428,
-        "currentRatio": 0.666,
-        "totalRevenue": 45774999552,
-        "debtToEquity": 113.211,
-        "revenuePerShare": 22.546,
-        "returnOnAssets": 0.03275,
-        "returnOnEquity": 0.04976,
-        "freeCashflow": 3443000064,
-        "operatingCashflow": 14001999872,
-        "earningsGrowth": -0.588,
-        "revenueGrowth": -0.149,
-        "grossMargins": 0.48546,
-        "ebitdaMargins": 0.30595,
-        "operatingMargins": 0.1857,
-        "profitMargins": 0.07406,
-        "financialCurrency": "CAD"
-    }
+    "indexTrend": {
+        "maxAge": 1,
+        "symbol": "SP5",
+        "peRatio": 16.5677,
+        "pegRatio": 1.05476,
+        "estimates": [
+            {
+                "period": "0q",
+                "growth": 0.051999997
+            },
+            {
+                "period": "+1q",
+                "growth": 0.091000006
+            },
+            {
+                "period": "0y",
+                "growth": 0.03
+            },
+            {
+                "period": "+1y",
+                "growth": 0.099
+            },
+            {
+                "period": "+5y",
+                "growth": 0.0970399
+            },
+            {
+                "period": "-5y"
+            }
+        ]
+    },
+    "shareholders": {
+        "institutionOwnership": {
+            "maxAge": 1,
+            "ownershipList": [
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Royal Bank of Canada",
+                    "pctHeld": 0.0716,
+                    "position": 152143121,
+                    "value": 5370652055,
+                    "pctChange": 0.0128
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Vanguard Group Inc",
+                    "pctHeld": 0.0383,
+                    "position": 81491857,
+                    "value": 2876662489,
+                    "pctChange": 0.0571
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Bank of Montreal/Can/",
+                    "pctHeld": 0.0327,
+                    "position": 69557729,
+                    "value": 2455387780,
+                    "pctChange": 0.0766
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Deutsche Bank Aktiengesellschaft",
+                    "pctHeld": 0.0164,
+                    "position": 34811225,
+                    "value": 1228836215,
+                    "pctChange": -0.1005
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "1832 Asset Management L.P.",
+                    "pctHeld": 0.0162,
+                    "position": 34442344,
+                    "value": 1215814716,
+                    "pctChange": 0.14
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Wellington Management Group, LLP",
+                    "pctHeld": 0.0153,
+                    "position": 32531108,
+                    "value": 1148348087,
+                    "pctChange": 6.3026
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "TD Asset Management, Inc",
+                    "pctHeld": 0.014199999,
+                    "position": 30213082,
+                    "value": 1066521771,
+                    "pctChange": 0.0225
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Cibc World Markets, Inc.",
+                    "pctHeld": 0.0134000005,
+                    "position": 28488996,
+                    "value": 1005661537,
+                    "pctChange": 0.22719999
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Bank Of Nova Scotia /",
+                    "pctHeld": 0.013200001,
+                    "position": 28085040,
+                    "value": 991401890,
+                    "pctChange": 0.0506
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-12-31",
+                    "organization": "Mackenzie Financial Corporation",
+                    "pctHeld": 0.0104,
+                    "position": 22019998,
+                    "value": 777305912,
+                    "pctChange": -0.0223
+                }
+            ]
+        },
+        "majorHolders": {
+            "maxAge": 1,
+            "insidersPercentHeld": 0.00148,
+            "institutionsPercentHeld": 0.54882,
+            "institutionsFloatPercentHeld": 0.54963,
+            "institutionsCount": 1527
+        },
+        "insiderTransactions": {
+            "transactions": [
+                {
+                    "maxAge": 1,
+                    "shares": 258,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "CUNNINGHAM SUSAN MARGARET",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2019-06-14",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1229,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "ENGLAND JAMES HERBERT",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2019-06-14",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 690,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "WILLIAMS CATHERINE LYNNE",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2019-06-14",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 7848,
+                    "value": 291267,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 37.11 per share.",
+                    "filerName": "MONACO ALBERT",
+                    "filerRelation": "Chief Executive Officer",
+                    "moneyText": "",
+                    "startDate": "2019-06-05",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 14900,
+                    "value": 550965,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 36.98 per share.",
+                    "filerName": "YARDLEY WILLIAM TURNER",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2019-03-26",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 146,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "CUNNINGHAM SUSAN MARGARET",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2019-03-22",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1295,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "ENGLAND JAMES HERBERT",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2019-03-22",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 727,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "WILLIAMS CATHERINE LYNNE",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2019-03-22",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 169400,
+                    "value": 4959033,
+                    "filerUrl": "",
+                    "transactionText": "Conversion of Exercise of derivative security at price 29.27 per share.",
+                    "filerName": "JARVIS, DONALD GUY",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2019-03-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 7806,
+                    "value": 289422,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 37.08 per share.",
+                    "filerName": "MONACO ALBERT",
+                    "filerRelation": "Chief Executive Officer",
+                    "moneyText": "",
+                    "startDate": "2019-03-05",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1790,
+                    "value": 63273,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 33.45 - 37.25 per share.",
+                    "filerName": "HANSEN CYNTHIA L.",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2019-03-01",
+                    "ownership": "D/I"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 6514,
+                    "value": 241148,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 37.02 per share.",
+                    "filerName": "CAPPS ALLEN CARTER",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2019-02-22",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1058800,
+                    "value": 31592792,
+                    "filerUrl": "",
+                    "transactionText": "Conversion of Exercise of derivative security at price 29.84 per share.",
+                    "filerName": "MONACO ALBERT",
+                    "filerRelation": "Chief Executive Officer",
+                    "moneyText": "",
+                    "startDate": "2019-02-21",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 4132,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "CAPPS ALLEN CARTER",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2019-02-15",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 8118,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "YARDLEY WILLIAM TURNER",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2019-02-15",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 11201,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "WHELEN JOHN KENDALL",
+                    "filerRelation": "Chief Financial Officer",
+                    "moneyText": "",
+                    "startDate": "2019-02-12",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 67929,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "MONACO ALBERT",
+                    "filerRelation": "Chief Executive Officer",
+                    "moneyText": "",
+                    "startDate": "2019-02-12",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 8849,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "YU VERNON D",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2019-02-12",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 8849,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "NEILES BYRON C",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2019-02-12",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 14100,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "JARVIS, DONALD GUY",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2019-02-12",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 4769,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "HANSEN CYNTHIA L.",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2019-02-12",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 120025,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Gift at price 0.00 per share.",
+                    "filerName": "CAZALOT CLARENCE PETER JR.",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2018-12-31",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 70200,
+                    "value": 1024218,
+                    "filerUrl": "",
+                    "transactionText": "Conversion of Exercise of derivative security at price 14.59 per share.",
+                    "filerName": "YU VERNON D",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2018-12-31",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 8856,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "CAPPS ALLEN CARTER",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2018-12-31",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 19975,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "YARDLEY WILLIAM TURNER",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2018-12-31",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 90000,
+                    "value": 1310292,
+                    "filerUrl": "",
+                    "transactionText": "Conversion of Exercise of derivative security at price 14.56 per share.",
+                    "filerName": "WHELEN JOHN KENDALL",
+                    "filerRelation": "Chief Financial Officer",
+                    "moneyText": "",
+                    "startDate": "2018-12-24",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 20000,
+                    "value": 396100,
+                    "filerUrl": "",
+                    "transactionText": "Conversion of Exercise of derivative security at price 19.80 per share.",
+                    "filerName": "MONACO ALBERT",
+                    "filerRelation": "Chief Executive Officer",
+                    "moneyText": "",
+                    "startDate": "2018-12-21",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 335,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "EBEL GREGORY L",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2018-12-20",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 37716,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "TUTCHER DANIEL C",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2018-12-20",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 37368,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "CAZALOT CLARENCE PETER JR.",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2018-12-20",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 4620,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "YU VERNON D",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2018-12-20",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 2890,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "ENGLAND JAMES HERBERT",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2018-12-20",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 50000,
+                    "value": 990250,
+                    "filerUrl": "",
+                    "transactionText": "Conversion of Exercise of derivative security at price 19.80 per share.",
+                    "filerName": "HANSEN CYNTHIA L.",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2018-12-20",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 24770,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "EBEL GREGORY L",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2018-12-17",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 82658,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "CAZALOT CLARENCE PETER JR.",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2018-12-17",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1462,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "CARTER PAMELA LYNN",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2018-12-17",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 760,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "YARDLEY WILLIAM TURNER",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2018-12-17",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1510,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "ENGLAND JAMES HERBERT",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2018-12-14",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 910,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "WILLIAMS CATHERINE LYNNE",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2018-12-14",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 64000,
+                    "value": 2046720,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 31.98 per share.",
+                    "filerName": "NEILES BYRON C",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2018-12-14",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 64000,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "NEILES BYRON C",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2018-12-14",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 261,
+                    "value": 8684,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 33.27 per share.",
+                    "filerName": "ROONEY ROBERT R",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2018-12-04",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 7569,
+                    "value": 251239,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 33.19 per share.",
+                    "filerName": "MONACO ALBERT",
+                    "filerRelation": "Chief Executive Officer",
+                    "moneyText": "",
+                    "startDate": "2018-12-04",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 12000,
+                    "value": 401400,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 33.45 per share.",
+                    "filerName": "HANSEN CYNTHIA L.",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2018-12-03",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 12000,
+                    "value": 237660,
+                    "filerUrl": "",
+                    "transactionText": "Conversion of Exercise of derivative security at price 19.80 per share.",
+                    "filerName": "HANSEN CYNTHIA L.",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2018-12-03",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 15803,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "WHELEN JOHN KENDALL",
+                    "filerRelation": "Chief Financial Officer",
+                    "moneyText": "",
+                    "startDate": "2018-11-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 6248,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "ROONEY ROBERT R",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2018-11-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 5990,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "MONACO ALBERT",
+                    "filerRelation": "Chief Executive Officer",
+                    "moneyText": "",
+                    "startDate": "2018-11-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 20651,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "YU VERNON D",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2018-11-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1569,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "HANSEN CYNTHIA L.",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2018-11-08",
+                    "ownership": "D/I"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1569,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "HANSEN CYNTHIA L.",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2018-11-08",
+                    "ownership": "I"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 19919,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "FISCHER CHARLES WAYNE",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2018-11-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1411,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "ENGLAND JAMES HERBERT",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2018-09-21",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 850,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "WILLIAMS CATHERINE LYNNE",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2018-09-21",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 936,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "WILLIAMS CATHERINE LYNNE",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2018-06-19",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 475,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "CARTER PAMELA LYNN",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2018-06-15",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1577,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "ENGLAND JAMES HERBERT",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2018-06-15",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 950,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "WILLIAMS CATHERINE LYNNE",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2018-06-15",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 468,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "CARTER PAMELA LYNN",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2018-03-23",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 80000,
+                    "value": 1228016,
+                    "filerUrl": "",
+                    "transactionText": "Conversion of Exercise of derivative security at price 15.35 per share.",
+                    "filerName": "MONACO ALBERT",
+                    "filerRelation": "Chief Executive Officer",
+                    "moneyText": "",
+                    "startDate": "2018-03-23",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1553,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "ENGLAND JAMES HERBERT",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2018-03-23",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 936,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "WILLIAMS CATHERINE LYNNE",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2018-03-23",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 6100,
+                    "value": 192197,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 31.51 per share.",
+                    "filerName": "ROONEY ROBERT R",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2018-03-15",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 15274,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "WHELEN JOHN KENDALL",
+                    "filerRelation": "Chief Financial Officer",
+                    "moneyText": "",
+                    "startDate": "2018-03-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 56611,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "MONACO ALBERT",
+                    "filerRelation": "Chief Executive Officer",
+                    "moneyText": "",
+                    "startDate": "2018-03-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 4653,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "YU VERNON D",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2018-03-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 4993,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "NEILES BYRON C",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2018-03-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 9477,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "JARVIS, DONALD GUY",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2018-03-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 4585,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "HANSEN CYNTHIA L.",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2018-03-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 18054,
+                    "value": 613840,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 34.00 - 34.01 per share.",
+                    "filerName": "PHELPS MICHAEL E J",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2018-02-22",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 2607,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "CAPPS ALLEN CARTER",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2018-02-16",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 7822,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "YARDLEY WILLIAM TURNER",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2018-02-16",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 5200,
+                    "value": 253500,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 48.75 per share.",
+                    "filerName": "DANIEL PATRICK D",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "1998-06-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 8000,
+                    "value": 372400,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 46.55 per share.",
+                    "filerName": "PHILLIPS BENNY J",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "1998-06-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 7700,
+                    "value": 358435,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 46.55 per share.",
+                    "filerName": "TRUSWELL DEREK P",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "1998-06-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 37790,
+                    "value": 1029022,
+                    "filerUrl": "",
+                    "transactionText": "Conversion of Exercise of derivative security at price 27.23 per share.",
+                    "filerName": "HASKAYNE RICHARD FRANCIS",
+                    "filerRelation": "Shareholder",
+                    "moneyText": "",
+                    "startDate": "1998-06-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 8200,
+                    "value": 400078,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 48.79 per share.",
+                    "filerName": "MACNEILL BRIAN F",
+                    "filerRelation": "President",
+                    "moneyText": "",
+                    "startDate": "1998-06-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 3400,
+                    "value": 99960,
+                    "filerUrl": "",
+                    "transactionText": "Conversion of Exercise of derivative security at price 29.40 per share.",
+                    "filerName": "PERRIN ROBERT M",
+                    "filerRelation": "Shareholder",
+                    "moneyText": "",
+                    "startDate": "1998-06-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 6000,
+                    "value": 285780,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 47.63 per share.",
+                    "filerName": "MACDERMOTT DONALD B",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "1998-06-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 4200,
+                    "value": 190596,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 45.38 per share.",
+                    "filerName": "SANGSTER RICHARD H",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "1998-06-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 7700,
+                    "value": 358435,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 46.55 per share.",
+                    "filerName": "SAVARD D",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "1998-06-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 3000,
+                    "value": 63750,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 21.25 per share.",
+                    "filerName": "MACNEILL HUGH G",
+                    "filerRelation": "Chairman of the Board",
+                    "moneyText": "",
+                    "startDate": "1994-06-09",
+                    "ownership": ""
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 3400,
+                    "value": 99960,
+                    "filerUrl": "",
+                    "transactionText": "Conversion of Exercise of derivative security at price 29.40 per share.",
+                    "filerName": "PERRIN ROBERT M",
+                    "filerRelation": "Shareholder",
+                    "moneyText": "",
+                    "startDate": "1991-05-01",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 2550000,
+                    "value": 161746500,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 63.43 per share.",
+                    "filerName": "GWU CAPITAL CORP",
+                    "filerRelation": "Beneficial Owner of more than 10% of a Class of Security",
+                    "moneyText": "",
+                    "startDate": "1991-04-30",
+                    "ownership": ""
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 100,
+                    "value": 6266,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 62.66 per share.",
+                    "filerName": "LORNE BRAITHWAITE",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "1991-01-14",
+                    "ownership": ""
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 2000,
+                    "value": 125494,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 62.66 - 63.24 per share.",
+                    "filerName": "LORNE BRAITHWAITE",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "1990-12-12",
+                    "ownership": ""
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 300,
+                    "value": 19842,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 66.14 per share.",
+                    "filerName": "RACKLEY CLIFFORD W",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "1990-07-12",
+                    "ownership": ""
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 2000,
+                    "value": 131120,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 65.56 per share.",
+                    "filerName": "SANGSTER RICHARD H",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "1989-08-03",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 100,
+                    "value": 5879,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 58.79 per share.",
+                    "filerName": "INNES WILLIAM R",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "1989-02-17",
+                    "ownership": ""
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 58300,
+                    "value": 3427457,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 58.79 per share.",
+                    "filerName": "IMPERIAL OIL LTD",
+                    "filerRelation": "Beneficial Owner of more than 10% of a Class of Security",
+                    "moneyText": "",
+                    "startDate": "1988-09-06",
+                    "ownership": ""
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 44900,
+                    "value": 2657182,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 59.18 per share.",
+                    "filerName": "IMPERIAL OIL LTD",
+                    "filerRelation": "Beneficial Owner of more than 10% of a Class of Security",
+                    "moneyText": "",
+                    "startDate": "1988-08-16",
+                    "ownership": ""
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1000,
+                    "value": 48880,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 48.88 per share.",
+                    "filerName": "SANGSTER RICHARD H",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "1988-06-03",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 24000,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 0.00 per share.",
+                    "filerName": "IMPERIAL OIL LTD",
+                    "filerRelation": "Beneficial Owner of more than 10% of a Class of Security",
+                    "moneyText": "",
+                    "startDate": "1988-03-28",
+                    "ownership": ""
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 310000,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 0.00 per share.",
+                    "filerName": "IMPERIAL OIL LTD",
+                    "filerRelation": "Beneficial Owner of more than 10% of a Class of Security",
+                    "moneyText": "",
+                    "startDate": "1988-02-16",
+                    "ownership": ""
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 185300,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 0.00 per share.",
+                    "filerName": "OLYMPIA & YORK",
+                    "filerRelation": "Beneficial Owner of more than 10% of a Class of Security",
+                    "moneyText": "",
+                    "startDate": "1988-01-18",
+                    "ownership": ""
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 2000,
+                    "value": 102120,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 51.06 per share.",
+                    "filerName": "KIRKWOOD GEORGE W",
+                    "filerRelation": "Vice President",
+                    "moneyText": "",
+                    "startDate": "1987-12-22",
+                    "ownership": ""
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 50,
+                    "value": 2553,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 51.06 per share.",
+                    "filerName": "BENNETT GILBERT S",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "1987-02-25",
+                    "ownership": ""
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1900,
+                    "value": 82308,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 43.32 per share.",
+                    "filerName": "HASKAYNE RICHARD FRANCIS",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "1986-12-24",
+                    "ownership": ""
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 100,
+                    "value": 3925,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 39.25 per share.",
+                    "filerName": "MCWALTER STUART K",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "1986-11-05",
+                    "ownership": ""
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 500,
+                    "value": 21660,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 43.32 per share.",
+                    "filerName": "YOUNG WILLIAM J",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "1986-08-26",
+                    "ownership": ""
+                }
+            ],
+            "maxAge": 1
+        },
+        "insiderHolders": {
+            "holders": [
+                {
+                    "maxAge": 1,
+                    "name": "CAPPS ALLEN CARTER",
+                    "relation": "Officer",
+                    "url": "",
+                    "transactionDescription": "Sale",
+                    "latestTransDate": "2019-02-22",
+                    "positionDirect": 17823,
+                    "positionDirectDate": "2019-02-22"
+                },
+                {
+                    "maxAge": 1,
+                    "name": "CUNNINGHAM SUSAN MARGARET",
+                    "relation": "Director",
+                    "url": "",
+                    "transactionDescription": "Stock Award(Grant)",
+                    "latestTransDate": "2019-06-14",
+                    "positionDirect": 404,
+                    "positionDirectDate": "2019-06-14"
+                },
+                {
+                    "maxAge": 1,
+                    "name": "ENGLAND JAMES HERBERT",
+                    "relation": "Director",
+                    "url": "",
+                    "transactionDescription": "Stock Award(Grant)",
+                    "latestTransDate": "2019-06-14",
+                    "positionDirect": 29447,
+                    "positionDirectDate": "2019-06-14"
+                },
+                {
+                    "maxAge": 1,
+                    "name": "HANSEN CYNTHIA L.",
+                    "relation": "Officer",
+                    "url": "",
+                    "transactionDescription": "Purchase",
+                    "latestTransDate": "2019-03-01",
+                    "positionSummaryDate": 1551398400
+                },
+                {
+                    "maxAge": 1,
+                    "name": "JARVIS, DONALD GUY",
+                    "relation": "Officer",
+                    "url": "",
+                    "transactionDescription": "Conversion of Exercise of derivative security",
+                    "latestTransDate": "2019-03-08",
+                    "positionDirect": 71635,
+                    "positionDirectDate": "2019-03-08"
+                },
+                {
+                    "maxAge": 1,
+                    "name": "MONACO ALBERT",
+                    "relation": "Chief Executive Officer",
+                    "url": "",
+                    "transactionDescription": "Purchase",
+                    "latestTransDate": "2019-06-05",
+                    "positionDirect": 824530,
+                    "positionDirectDate": "2019-06-05"
+                },
+                {
+                    "maxAge": 1,
+                    "name": "WHELEN JOHN KENDALL",
+                    "relation": "Chief Financial Officer",
+                    "url": "",
+                    "transactionDescription": "Conversion of Exercise of derivative security",
+                    "latestTransDate": "2019-02-12",
+                    "positionDirect": 214165,
+                    "positionDirectDate": "2019-02-12"
+                },
+                {
+                    "maxAge": 1,
+                    "name": "WILLIAMS CATHERINE LYNNE",
+                    "relation": "Director",
+                    "url": "",
+                    "transactionDescription": "Stock Award(Grant)",
+                    "latestTransDate": "2019-06-14",
+                    "positionDirect": 53521,
+                    "positionDirectDate": "2019-06-14"
+                },
+                {
+                    "maxAge": 1,
+                    "name": "YARDLEY WILLIAM TURNER",
+                    "relation": "Officer",
+                    "url": "",
+                    "transactionDescription": "Sale",
+                    "latestTransDate": "2019-03-26",
+                    "positionDirect": 110198,
+                    "positionDirectDate": "2019-03-26"
+                },
+                {
+                    "maxAge": 1,
+                    "name": "YU VERNON D",
+                    "relation": "Officer",
+                    "url": "",
+                    "transactionDescription": "Conversion of Exercise of derivative security",
+                    "latestTransDate": "2019-02-12",
+                    "positionDirect": 102978,
+                    "positionDirectDate": "2019-02-12"
+                }
+            ],
+            "maxAge": 1
+        },
+        "fundOwnership": {
+            "maxAge": 1,
+            "ownershipList": [
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-10-31",
+                    "organization": "Vanguard International Stock Index-Total Intl Stock Indx",
+                    "pctHeld": 0.0135,
+                    "position": 28672099,
+                    "value": 1012125072,
+                    "pctChange": 0.060700003
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Vanguard Tax Managed Fund-Vanguard Developed Markets Index Fund",
+                    "pctHeld": 0.008,
+                    "position": 16956633,
+                    "value": 598569131,
+                    "pctChange": 0.0572
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Vanguard Fenway Funds-Equity Income Fund",
+                    "pctHeld": 0.0045,
+                    "position": 9569168,
+                    "value": 337791623,
+                    "pctChange": 1.0
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-10-31",
+                    "organization": "JP Morgan ETF Tr-BetaBuilders Canada ETF",
+                    "pctHeld": 0.0034,
+                    "position": 7251475,
+                    "value": 255977061,
+                    "pctChange": 0.094
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-12-31",
+                    "organization": "Federated Hermes Strategic Value Dividend Fund",
+                    "pctHeld": 0.0033000002,
+                    "position": 6917025,
+                    "value": 244170977,
+                    "pctChange": -0.032899998
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Legg Mason Clearbridge Dividend Strategy Fd",
+                    "pctHeld": 0.0028,
+                    "position": 5936733,
+                    "value": 209566670,
+                    "pctChange": 0.17790002
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Vanguard/Wellesley Income Fund",
+                    "pctHeld": 0.0026,
+                    "position": 5427964,
+                    "value": 191607125,
+                    "pctChange": 1.0
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-10-31",
+                    "organization": "Income Fund of America Inc",
+                    "pctHeld": 0.0023999999,
+                    "position": 5000000,
+                    "value": 176499996,
+                    "pctChange": 0.0
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-10-31",
+                    "organization": "Vanguard/Windsor Fund Inc.",
+                    "pctHeld": 0.0022,
+                    "position": 4661632,
+                    "value": 164555606,
+                    "pctChange": 1.0
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-11-30",
+                    "organization": "iShares Global Infrastructure ETF",
+                    "pctHeld": 0.0022,
+                    "position": 4748176,
+                    "value": 167610609,
+                    "pctChange": 0.013200001
+                }
+            ]
+        }
+    },
+    "fcfPerShare": 1.6198007999028785,
+    "fcfYield": 0.04563359406818132
 }

@@ -38,14 +38,12 @@ export class DataService {
       symbols.forEach(symbol => {
         const position = this.portfolioHoldings[symbol];
         const stock = this.portfolioData[symbol]
-        const price = stock.price?.regularMarketPrice;
+        const price = stock?.regularMarketPrice;
         position.marketValue = +(price * position.sharesOwned).toFixed(4);
         position.unrealizedGain = +(position.marketValue - position.totalCost).toFixed(4);
-        position.unrealizedGainPercent = position.unrealizedGain / position.totalCost;
-        const isETF = stock.price?.quoteType === 'ETF'
-        const dividendAmount = isETF ? stock.summaryDetail?.yield * stock.price?.regularMarketPrice : stock.summaryDetail?.dividendRate;
-        position.dividendIncome = dividendAmount * position.sharesOwned || 0;
-        position.yieldOnCost = position.dividendIncome / position.totalCost;
+        position.unrealizedGainPercent = +(position.unrealizedGain / position.totalCost).toFixed(4);
+        position.dividendIncome = +(stock.dividendRate * position.sharesOwned).toFixed(4) || 0;
+        position.yieldOnCost = +(position.dividendIncome / position.totalCost).toFixed(4);
 
         this.portfolioHoldings.portfolioMarketValue += position.marketValue;
         this.portfolioHoldings.portfolioTotalInvestment += position.totalCost;
@@ -53,7 +51,7 @@ export class DataService {
       })
 
       this.portfolioHoldings.portfolioUnrealizedGain = this.portfolioHoldings.portfolioMarketValue - this.portfolioHoldings.portfolioTotalInvestment;
-      this.portfolioHoldings.portfolioYieldOnCost = this.portfolioHoldings.portfolioDividendIncome / this.portfolioHoldings.portfolioTotalInvestment;
+      this.portfolioHoldings.portfolioYieldOnCost = +(this.portfolioHoldings.portfolioDividendIncome / this.portfolioHoldings.portfolioTotalInvestment).toFixed(4);
 
       // this.getStocksData(this.portfolioSymbols, true).subscribe(console.log)
       console.table(this.portfolioHoldings)

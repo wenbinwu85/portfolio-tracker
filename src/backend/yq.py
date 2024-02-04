@@ -131,7 +131,9 @@ def clean(data):
 
 def yq_stock_data(symbols):
     ticker = Ticker(symbols, asynchronous=True, progress=True)
-    return ticker.get_modules(yq_selected_modules)
+    ticker_data = ticker.get_modules(yq_selected_modules)
+    mapped_data = map_stock_data(ticker_data)
+    return mapped_data
 
 
 def yq_dividend_history(symbol, start_date):
@@ -140,35 +142,35 @@ def yq_dividend_history(symbol, start_date):
 
 
 # TODO: there is alL_financials module I should use instead of this
-def yq_financials(symbol):
-    try:
-        ticker = Ticker(symbol, asynchronous=True, progress=True)
+# def yq_financials(symbol):
+#     try:
+#         ticker = Ticker(symbol, asynchronous=True, progress=True)
 
-        path = os.path.join(STOCK_DATA_PATH, f'{symbol}-balance-sheet.json')
-        balance_sheet = ticker.balance_sheet(frequency='q', trailing=True)
-        balance_sheet.to_json(path, orient='records', indent=2)
+#         path = os.path.join(STOCK_DATA_PATH, f'{symbol}-balance-sheet.json')
+#         balance_sheet = ticker.balance_sheet(frequency='q', trailing=True)
+#         balance_sheet.to_json(path, orient='records', indent=2)
 
-        path = os.path.join(STOCK_DATA_PATH, f'{symbol}-cash-flow.json')
-        cash_flow = ticker.cash_flow(frequency='q', trailing=True)
-        cash_flow.to_json(path, orient='records', indent=2)
+#         path = os.path.join(STOCK_DATA_PATH, f'{symbol}-cash-flow.json')
+#         cash_flow = ticker.cash_flow(frequency='q', trailing=True)
+#         cash_flow.to_json(path, orient='records', indent=2)
 
-        path = os.path.join(STOCK_DATA_PATH, f'{symbol}-income-statement.json')
-        income_statement = ticker.income_statement(frequency='q', trailing=True)
-        income_statement.to_json(path, orient='records', indent=2)
+#         path = os.path.join(STOCK_DATA_PATH, f'{symbol}-income-statement.json')
+#         income_statement = ticker.income_statement(frequency='q', trailing=True)
+#         income_statement.to_json(path, orient='records', indent=2)
 
-        path = os.path.join(STOCK_DATA_PATH, f'{symbol}-valuation-measures.json')
-        valuation_measures = ticker.valuation_measures
-        valuation_measures.to_json(path, orient='records', indent=2)
-    except Exception as e:
-        print(symbol, 'failed to fetch financials:', e)
+#         path = os.path.join(STOCK_DATA_PATH, f'{symbol}-valuation-measures.json')
+#         valuation_measures = ticker.valuation_measures
+#         valuation_measures.to_json(path, orient='records', indent=2)
+#     except Exception as e:
+#         print(symbol, 'failed to fetch financials:', e)
 
 
 # TODO: is this userful?
-def yq_sec_filings(symbol):
-    ticker = Ticker(symbol, asynchronous=True, progress=True)
-    path = os.path.join(STOCK_DATA_PATH, f'{symbol}-sec-filings.json')
-    sec_filings = ticker.sec_filings.head()
-    sec_filings.to_json(path, orient='records', indent=2)
+# def yq_sec_filings(symbol):
+#     ticker = Ticker(symbol, asynchronous=True, progress=True)
+#     path = os.path.join(STOCK_DATA_PATH, f'{symbol}-sec-filings.json')
+#     sec_filings = ticker.sec_filings.head()
+#     sec_filings.to_json(path, orient='records', indent=2)
 
 
 def yq_corporate_events(symbol):
@@ -198,11 +200,12 @@ def generate_holdings_data():
         symbol_data['sharesOwned'] = shares
         symbol_data['costAverage'] = cost_avg
         symbol_data['totalCost'] = round(cost_avg * shares, 4)
+        symbol_data['symbol'] = symbol
         holdings[symbol] = symbol_data
     return holdings
 
 
-def map_symbol_data(holdings, yqdata):
+def old_map_stock_data(holdings, yqdata):
     total_investment = sum([data['position']['totalCost'] for data in holdings.values()])
     annual_dividend_income = 0
     total_gain = 0
@@ -293,3 +296,54 @@ def map_symbol_data(holdings, yqdata):
         keys.sort()
         holdings[k] = {i: v[i] for i in keys}
     return holdings
+
+
+def map_stock_data(yqdata):
+    mapped_data = {}
+    for symbol, data in yqdata.items():
+        mapped_data[symbol] = {}
+        mapped_data[symbol]['profile'] = data['assetProfile']
+        mapped_data[symbol].update(data['price'])
+        mapped_data[symbol].update(data['summaryDetail'])
+        mapped_data[symbol].update(data['defaultKeyStatistics'])
+
+        is_equity = data['price']['quoteType'] == 'EQUITY'
+        if is_equity:
+            mapped_data[symbol]['calendarEvents'] = data['calendarEvents']
+            mapped_data[symbol]['earnings'] = data['earnings']
+            mapped_data[symbol]['earnings'].update(data['earningsHistory'])
+            mapped_data[symbol]['earnings'].update(data['earningsTrend'])
+            mapped_data[symbol]['cashflowHistory'] = {}
+            mapped_data[symbol]['cashflowHistory']['annual'] = data['cashflowStatementHistory']['cashflowStatements'] 
+            mapped_data[symbol]['cashflowHistory']['quarterly'] = data['cashflowStatementHistoryQuarterly']['cashflowStatements']
+            mapped_data[symbol]['balanceSheetHistory'] = {}
+            mapped_data[symbol]['balanceSheetHistory']['annual'] = data['balanceSheetHistory']['balanceSheetStatements']
+            mapped_data[symbol]['balanceSheetHistory']['quarterly'] = data['balanceSheetHistoryQuarterly']['balanceSheetStatements']
+            mapped_data[symbol]['incomeStatementHistory'] = {}
+            mapped_data[symbol]['incomeStatementHistory']['annual'] = data['incomeStatementHistory']['incomeStatementHistory']
+            mapped_data[symbol]['incomeStatementHistory']['quarterly'] = data['incomeStatementHistoryQuarterly']['incomeStatementHistory']
+            mapped_data[symbol].update(data['financialData'])
+            mapped_data[symbol]['recommendationTrend'] = data['recommendationTrend']
+            mapped_data[symbol]['indexTrend'] = data['indexTrend']
+            mapped_data[symbol]['shareholders'] = {}
+            mapped_data[symbol]['shareholders']['institutionOwnership'] = data.get('institutionOwnership', {})
+            mapped_data[symbol]['shareholders']['majorHolders'] = data.get('majorHoldersBreakdown', {})
+            mapped_data[symbol]['shareholders']['insiderTransactions'] = data.get('insiderTransactions', {})
+            mapped_data[symbol]['shareholders']['insiderHolders'] = data.get('insiderHolders', {})
+            mapped_data[symbol]['shareholders']['fundOwnership'] = data.get('fundOwnership', {})
+            try:
+                mapped_data[symbol]['fcfPerShare'] = mapped_data[symbol]['freeCashflow'] / mapped_data[symbol]['sharesOutstanding']
+                mapped_data[symbol]['fcfYield'] = mapped_data[symbol]['freeCashflow'] / mapped_data[symbol]['marketCap']
+            except KeyError:
+                print('!!!', symbol, 'free cash flow:', data['financialData'].get('freeCashflow', 0))
+                mapped_data[symbol]['fcfPerShare'] = 0
+                mapped_data[symbol]['fcfYield'] = 0
+        else:
+            mapped_data[symbol]['dividendRate'] = data['summaryDetail']['yield'] * data['price']['regularMarketPrice']
+            mapped_data[symbol]['dividendYield'] = data['summaryDetail']['yield']
+            mapped_data[symbol]['topHoldings'] = data['topHoldings']
+            mapped_data[symbol]['profile'].update(data['fundProfile'])
+            mapped_data[symbol]['fundPerformance'] = data['fundPerformance']
+    for _, v in mapped_data.items():
+        clean(v)
+    return mapped_data

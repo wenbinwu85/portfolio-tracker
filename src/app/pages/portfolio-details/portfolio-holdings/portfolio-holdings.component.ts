@@ -59,6 +59,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
   @ViewChild(MatTable) table!: MatTable<any>;
   @ViewChild(MatSort) sort!: MatSort;
   displayTradingviewWidgets = false;
+  portfolioHoldings: any = {};
   portfolioData: any = {};
   totalCostChartData: any = [];
   allTotalCostChartData: any = [];
@@ -76,7 +77,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
   ];
   headers = [
     'Symbol',
-    'Cost Average',
+    'Cost Average x shares Owned',
     'Market Value',
     'Portfolio %',
     'Unrealized Gain',
@@ -88,6 +89,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
+    this.portfolioHoldings = this.dataService.portfolioHoldings;
     this.portfolioData = this.dataService.portfolioData;
     this.dataSource.data = Object.values(this.portfolioData)
       .filter((a) => typeof a !== 'number')
@@ -127,7 +129,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
       if (stock.position) {
         this.allTotalCostChartData.push({
           name: stock.symbol,
-          value: stock.position.totalCost,
+          value: this.portfolioHoldings[stock.symbol].totalCost,
           sector: stock.profile.sector || 'ETF',
           shortName: stock.shortName,
           longName: stock.longName,
@@ -145,21 +147,21 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
   cells: Function[] = [
     (stock: any) => '',
     (stock: any) => '',
-    (stock: any) => `$${stock.marketValue.toFixed(2)}`,
-    (stock: any) => `${(stock.portfolioPercent * 100).toFixed(2)}%`,
+    (stock: any) => `$${this.portfolioHoldings[stock.symbol].marketValue.toFixed(2)}`,
+    (stock: any) => `${(this.portfolioHoldings[stock.symbol].marketValue / this.portfolioHoldings.portfolioMarketValue * 100).toFixed(2)}%`,
     (stock: any) => '',
-    (stock: any) => `$${stock.dividendIncome.toFixed(2)}`,
-    (stock: any) => stock.yieldOnCost.toFixed(2) + '%',
+    (stock: any) => `${this.portfolioHoldings[stock.symbol].dividendIncome.toFixed(2)}`,
+    (stock: any) => this.portfolioHoldings[stock.symbol].yieldOnCost.toFixed(2) * 100 + '%',
     (stock: any) => stock.sector || 'ETF',
   ];
 
   footerRow: Function[] = [
     () => '',
-    () => `$${this.portfolioData?.totalInvestment?.toFixed(2)}`,
-    () => `$${this.portfolioData?.portfolioValue?.toFixed(2)}`,
+    () => `$${this.portfolioData?.portfolioTotalInvestment?.toFixed(2)}`,
+    () => `$${this.portfolioData?.portfolioMarketValue?.toFixed(2)}`,
     () => '',
-    () => `$${this.portfolioData?.unrealizedGain?.toFixed(2)}`,
-    () => `$${this.portfolioData?.dividendIncome?.toFixed(2)}`,
+    () => `$${this.portfolioData?.portfolioUnrealizedGain?.toFixed(2)}`,
+    () => `$${this.portfolioData?.portfolioDividendIncome?.toFixed(2)}`,
     () => `${(this.portfolioData?.portfolioYieldOnCost * 100)?.toFixed(2)}%`,
     () => '',
     () => '',
@@ -189,7 +191,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
   getColColor(stock: any, index: number) {
     switch (index) {
       case 1:
-        return stock.costAverage > stock.fiftyTwoWeekLow
+        return this.portfolioHoldings[stock.symbol].costAverage > stock.fiftyTwoWeekLow
           ? 'tomato'
           : 'forestgreen';
       case 4:

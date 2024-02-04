@@ -41,45 +41,45 @@ export class PriceMovementChartsComponent {
     this.dataService.portfolioSymbols.forEach((symbol: any) => {
       const position = this.portfolioHoldings[symbol];
       const stock = this.portfolioData[symbol];
-      if (stock.price.preMarketChange) {
-        this.priceChange += stock.price.preMarketChange * position.sharesOwned;
+      if (stock.preMarketChange) {
+        this.priceChange += stock.preMarketChange * position.sharesOwned;
         this.priceChangeChartData.push({
-          name: stock.price.symbol,
-          value: stock.price.preMarketChangePercent * 100 || 0,
+          name: stock.symbol,
+          value: stock.preMarketChangePercent * 100 || 0,
         });
-      } else if (stock.price.postMarketChange) {
-        this.priceChange += stock.price.postMarketChange * position.sharesOwned;
+      } else if (stock.postMarketChange) {
+        this.priceChange += stock.postMarketChange * position.sharesOwned;
         this.priceChangeChartData.push({
-          name: stock.price.symbol,
-          value: stock.price.postMarketChangePercent * 100 || 0,
+          name: stock.symbol,
+          value: stock.postMarketChangePercent * 100 || 0,
         });
       } else {
         this.priceChange +=
-          stock.price.regularMarketChange * position.sharesOwned;
+          stock.regularMarketChange * position.sharesOwned;
         this.priceChangeChartData.push({
-          name: stock.price.symbol,
-          value: stock.price.regularMarketChangePercent * 100 || 0,
+          name: stock.symbol,
+          value: stock.regularMarketChangePercent * 100 || 0,
         });
       }
 
       this.priceRangeChartData.push({
-        name: stock.price.symbol,
+        name: stock.symbol,
         series: [
           {
             name: `Low Range`,
-            value: stock.price.regularMarketPrice - stock.price.regularMarketDayLow,
+            value: stock.regularMarketPrice - stock.regularMarketDayLow,
           },
           {
             name: `High Range`,
-            value: stock.price.regularMarketDayHigh - stock.price.regularMarketPrice,
+            value: stock.regularMarketDayHigh - stock.regularMarketPrice,
           },
         ],
       });
 
-      if (stock.price.quoteType === 'EQUITY') {
+      if (stock.quoteType === 'EQUITY') {
         this.betaChartData.push({
-          name: stock.price.symbol,
-          value: stock.defaultKeyStatistics.beta || 0,
+          name: stock.symbol,
+          value: stock.beta || 0,
         });
       }
     });

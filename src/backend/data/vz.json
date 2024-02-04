@@ -1,5 +1,5 @@
 {
-    "assetProfile": {
+    "profile": {
         "address1": "1095 Avenue of the Americas",
         "city": "New York",
         "state": "NY",
@@ -126,192 +126,172 @@
         "compensationAsOfEpochDate": "2022-12-30 19:00:00",
         "maxAge": 86400
     },
-    "recommendationTrend": {
-        "trend": [
-            {
-                "period": "0m",
-                "strongBuy": 2,
-                "buy": 6,
-                "hold": 24,
-                "sell": 0,
-                "strongSell": 0
-            },
-            {
-                "period": "-1m",
-                "strongBuy": 3,
-                "buy": 7,
-                "hold": 14,
-                "sell": 2,
-                "strongSell": 1
-            },
-            {
-                "period": "-2m",
-                "strongBuy": 3,
-                "buy": 6,
-                "hold": 15,
-                "sell": 2,
-                "strongSell": 1
-            },
-            {
-                "period": "-3m",
-                "strongBuy": 2,
-                "buy": 5,
-                "hold": 19,
-                "sell": 2,
-                "strongSell": 1
-            }
-        ],
-        "maxAge": 86400
-    },
-    "cashflowStatementHistory": {
-        "cashflowStatements": [
-            {
-                "maxAge": 1,
-                "endDate": "2023-12-31",
-                "netIncome": 11614000000
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2022-12-31",
-                "netIncome": 21256000000
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2021-12-31",
-                "netIncome": 22065000000
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2020-12-31",
-                "netIncome": 17801000000
-            }
-        ],
-        "maxAge": 86400
-    },
-    "institutionOwnership": {
+    "postMarketChangePercent": -0.0021362484,
+    "postMarketChange": -0.09000015,
+    "postMarketPrice": 42.04,
+    "regularMarketChangePercent": -0.0084726,
+    "regularMarketChange": -0.360001,
+    "regularMarketPrice": 42.13,
+    "regularMarketDayHigh": 42.465,
+    "regularMarketDayLow": 41.825,
+    "regularMarketVolume": 21548643,
+    "averageDailyVolume10Day": 25711930,
+    "averageDailyVolume3Month": 21388580,
+    "regularMarketPreviousClose": 42.49,
+    "regularMarketOpen": 42.2,
+    "exchange": "NYQ",
+    "exchangeName": "NYSE",
+    "quoteType": "EQUITY",
+    "symbol": "VZ",
+    "shortName": "Verizon Communications Inc.",
+    "longName": "Verizon Communications Inc.",
+    "marketCap": 177118740480,
+    "previousClose": 42.49,
+    "open": 42.2,
+    "dayLow": 41.825,
+    "dayHigh": 42.465,
+    "dividendRate": 2.66,
+    "dividendYield": 0.0631,
+    "exDividendDate": "2024-01-08 19:00:00",
+    "payoutRatio": 0.9582,
+    "fiveYearAvgDividendYield": 5.19,
+    "beta": 0.383,
+    "trailingPE": 15.320001,
+    "forwardPE": 8.982943,
+    "volume": 21548643,
+    "averageVolume": 21388580,
+    "averageVolume10days": 25711930,
+    "fiftyTwoWeekLow": 30.14,
+    "fiftyTwoWeekHigh": 43.21,
+    "priceToSalesTrailing12Months": 1.3220382,
+    "fiftyDayAverage": 38.9198,
+    "twoHundredDayAverage": 35.7356,
+    "trailingAnnualDividendRate": 2.635,
+    "trailingAnnualDividendYield": 0.062014587,
+    "enterpriseValue": 351360516096,
+    "profitMargins": 0.086689994,
+    "floatShares": 4198702960,
+    "sharesOutstanding": 4204100096,
+    "sharesShort": 45621516,
+    "sharesShortPriorMonth": 46136375,
+    "sharesShortPreviousMonthDate": "2023-12-14 19:00:00",
+    "dateShortInterest": "2024-01-11 19:00:00",
+    "sharesPercentSharesOut": 0.0109,
+    "heldPercentInsiders": 0.00029999999,
+    "heldPercentInstitutions": 0.62226003,
+    "shortRatio": 2.04,
+    "shortPercentOfFloat": 0.0109,
+    "impliedSharesOutstanding": 4204100096,
+    "bookValue": 21.986,
+    "priceToBook": 1.9162195,
+    "lastFiscalYearEnd": "2023-12-30 19:00:00",
+    "nextFiscalYearEnd": "2024-12-30 19:00:00",
+    "mostRecentQuarter": "2023-12-30 19:00:00",
+    "netIncomeToCommon": 11614000128,
+    "trailingEps": 2.75,
+    "forwardEps": 4.69,
+    "pegRatio": 6.31,
+    "enterpriseToRevenue": 2.623,
+    "enterpriseToEbitda": 7.582,
+    "52WeekChange": 0.02059114,
+    "SandP52WeekChange": 0.20615757,
+    "lastDividendValue": 0.665,
+    "lastDividendDate": 1704758400,
+    "calendarEvents": {
         "maxAge": 1,
-        "ownershipList": [
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Vanguard Group Inc",
-                "pctHeld": 0.0836,
-                "position": 351625025,
-                "value": 14813962678,
-                "pctChange": 0.0027
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Blackrock Inc.",
-                "pctHeld": 0.080699995,
-                "position": 339131883,
-                "value": 14287626593,
-                "pctChange": 0.0004
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "State Street Corporation",
-                "pctHeld": 0.0414,
-                "position": 174071068,
-                "value": 7333614280,
-                "pctChange": -0.0055
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Charles Schwab Investment Management, Inc.",
-                "pctHeld": 0.0233,
-                "position": 98027542,
-                "value": 4129900449,
-                "pctChange": 0.0484
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Geode Capital Management, LLC",
-                "pctHeld": 0.0201,
-                "position": 84478131,
-                "value": 3559063749,
-                "pctChange": 0.0256
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Morgan Stanley",
-                "pctHeld": 0.0178,
-                "position": 74851554,
-                "value": 3153496049,
-                "pctChange": -0.0418
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2022-12-31",
-                "organization": "Norges Bank Investment Management",
-                "pctHeld": 0.011,
-                "position": 46438445,
-                "value": 1956451737,
-                "pctChange": 1.0
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Northern Trust Corporation",
-                "pctHeld": 0.0106,
-                "position": 44621839,
-                "value": 1879918124,
-                "pctChange": 0.0473
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Bank of America Corporation",
-                "pctHeld": 0.0092,
-                "position": 38467738,
-                "value": 1620645843,
-                "pctChange": -0.4175
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Dimensional Fund Advisors LP",
-                "pctHeld": 0.009,
-                "position": 37768184,
-                "value": 1591173632,
-                "pctChange": -0.0423
-            }
-        ]
+        "earnings": {
+            "earningsDate": [
+                "2024-04-22 08:30:S"
+            ],
+            "earningsAverage": 1.12,
+            "earningsLow": 1.07,
+            "earningsHigh": 1.16,
+            "revenueAverage": 33414000000,
+            "revenueLow": 33049000000,
+            "revenueHigh": 33606000000
+        },
+        "exDividendDate": "2024-01-08 19:00:00",
+        "dividendDate": "2024-01-31 19:00:00"
     },
-    "majorHoldersBreakdown": {
+    "earnings": {
         "maxAge": 1,
-        "insidersPercentHeld": 0.00029999999,
-        "institutionsPercentHeld": 0.62226003,
-        "institutionsFloatPercentHeld": 0.62245,
-        "institutionsCount": 3323
-    },
-    "balanceSheetHistoryQuarterly": {
-        "balanceSheetStatements": [
-            {
-                "maxAge": 1,
-                "endDate": "2023-12-31"
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2023-09-30"
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2023-06-30"
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2023-03-31"
-            }
-        ],
-        "maxAge": 86400
-    },
-    "earningsHistory": {
+        "earningsChart": {
+            "quarterly": [
+                {
+                    "date": "1Q2023",
+                    "actual": 1.2,
+                    "estimate": 1.2
+                },
+                {
+                    "date": "2Q2023",
+                    "actual": 1.21,
+                    "estimate": 1.16
+                },
+                {
+                    "date": "3Q2023",
+                    "actual": 1.11,
+                    "estimate": 1.07
+                },
+                {
+                    "date": "4Q2023",
+                    "actual": 1.08,
+                    "estimate": 1.07
+                }
+            ],
+            "currentQuarterEstimate": 1.12,
+            "currentQuarterEstimateDate": "1Q",
+            "currentQuarterEstimateYear": 2024,
+            "earningsDate": [
+                "2024-04-22 08:30:S"
+            ]
+        },
+        "financialsChart": {
+            "yearly": [
+                {
+                    "date": 2020,
+                    "revenue": 128292000000,
+                    "earnings": 17801000000
+                },
+                {
+                    "date": 2021,
+                    "revenue": 133613000000,
+                    "earnings": 22065000000
+                },
+                {
+                    "date": 2022,
+                    "revenue": 136835000000,
+                    "earnings": 21256000000
+                },
+                {
+                    "date": 2023,
+                    "revenue": 133974000000,
+                    "earnings": 11614000000
+                }
+            ],
+            "quarterly": [
+                {
+                    "date": "1Q2023",
+                    "revenue": 32912000000,
+                    "earnings": 4909000000
+                },
+                {
+                    "date": "2Q2023",
+                    "revenue": 32596000000,
+                    "earnings": 4648000000
+                },
+                {
+                    "date": "3Q2023",
+                    "revenue": 33336000000,
+                    "earnings": 4762000000
+                },
+                {
+                    "date": "4Q2023",
+                    "revenue": 35130000000,
+                    "earnings": -2705000000
+                }
+            ]
+        },
+        "financialCurrency": "USD",
         "history": [
             {
                 "maxAge": 1,
@@ -350,1779 +330,305 @@
                 "period": "-1q"
             }
         ],
-        "maxAge": 86400
-    },
-    "indexTrend": {
-        "maxAge": 1,
-        "symbol": "SP5",
-        "peRatio": 16.5677,
-        "pegRatio": 1.05476,
-        "estimates": [
+        "trend": [
             {
+                "maxAge": 1,
                 "period": "0q",
-                "growth": 0.051999997
+                "endDate": "2024-03-31",
+                "growth": -0.067,
+                "earningsEstimate": {
+                    "avg": 1.12,
+                    "low": 1.07,
+                    "high": 1.16,
+                    "yearAgoEps": 1.2,
+                    "numberOfAnalysts": 15,
+                    "growth": -0.067
+                },
+                "revenueEstimate": {
+                    "avg": 33414000000,
+                    "low": 33049000000,
+                    "high": 33606000000,
+                    "numberOfAnalysts": 13,
+                    "yearAgoRevenue": 32912000000,
+                    "growth": 0.015
+                },
+                "epsTrend": {
+                    "current": 1.12,
+                    "7daysAgo": 1.03,
+                    "30daysAgo": 1.13,
+                    "60daysAgo": 1.13,
+                    "90daysAgo": 1.13
+                },
+                "epsRevisions": {
+                    "upLast7days": 2,
+                    "upLast30days": 7,
+                    "downLast30days": 1,
+                    "downLast90days": {}
+                }
             },
             {
+                "maxAge": 1,
                 "period": "+1q",
-                "growth": 0.091000006
+                "endDate": "2024-06-30",
+                "growth": -0.058000002,
+                "earningsEstimate": {
+                    "avg": 1.14,
+                    "low": 1.09,
+                    "high": 1.18,
+                    "yearAgoEps": 1.21,
+                    "numberOfAnalysts": 15,
+                    "growth": -0.058000002
+                },
+                "revenueEstimate": {
+                    "avg": 33149200000,
+                    "low": 32617800000,
+                    "high": 33696600000,
+                    "numberOfAnalysts": 12,
+                    "yearAgoRevenue": 32596000000,
+                    "growth": 0.017
+                },
+                "epsTrend": {
+                    "current": 1.14,
+                    "7daysAgo": 1.05,
+                    "30daysAgo": 1.15,
+                    "60daysAgo": 1.16,
+                    "90daysAgo": 1.16
+                },
+                "epsRevisions": {
+                    "upLast7days": 0,
+                    "upLast30days": 3,
+                    "downLast30days": 3,
+                    "downLast90days": {}
+                }
             },
             {
+                "maxAge": 1,
                 "period": "0y",
-                "growth": 0.03
+                "endDate": "2024-12-31",
+                "growth": -0.027999999,
+                "earningsEstimate": {
+                    "avg": 4.58,
+                    "low": 4.48,
+                    "high": 4.7,
+                    "yearAgoEps": 4.71,
+                    "numberOfAnalysts": 18,
+                    "growth": -0.027999999
+                },
+                "revenueEstimate": {
+                    "avg": 135992000000,
+                    "low": 134339000000,
+                    "high": 137845000000,
+                    "numberOfAnalysts": 20,
+                    "yearAgoRevenue": 133974000000,
+                    "growth": 0.015
+                },
+                "epsTrend": {
+                    "current": 4.58,
+                    "7daysAgo": 4.21,
+                    "30daysAgo": 4.62,
+                    "60daysAgo": 4.63,
+                    "90daysAgo": 4.63
+                },
+                "epsRevisions": {
+                    "upLast7days": 3,
+                    "upLast30days": 9,
+                    "downLast30days": 1,
+                    "downLast90days": {}
+                }
             },
             {
+                "maxAge": 1,
                 "period": "+1y",
-                "growth": 0.099
+                "endDate": "2025-12-31",
+                "growth": 0.024,
+                "earningsEstimate": {
+                    "avg": 4.69,
+                    "low": 4.49,
+                    "high": 4.87,
+                    "yearAgoEps": 4.58,
+                    "numberOfAnalysts": 17,
+                    "growth": 0.024
+                },
+                "revenueEstimate": {
+                    "avg": 137841000000,
+                    "low": 135153000000,
+                    "high": 141870000000,
+                    "numberOfAnalysts": 19,
+                    "yearAgoRevenue": 135992000000,
+                    "growth": 0.0139999995
+                },
+                "epsTrend": {
+                    "current": 4.69,
+                    "7daysAgo": 4.33,
+                    "30daysAgo": 4.71,
+                    "60daysAgo": 4.69,
+                    "90daysAgo": 4.66
+                },
+                "epsRevisions": {
+                    "upLast7days": 2,
+                    "upLast30days": 11,
+                    "downLast30days": 1,
+                    "downLast90days": {}
+                }
             },
             {
+                "maxAge": 1,
                 "period": "+5y",
-                "growth": 0.0970399
+                "endDate": null,
+                "growth": 0.0147,
+                "earningsEstimate": {
+                    "avg": {},
+                    "low": {},
+                    "high": {},
+                    "yearAgoEps": {},
+                    "numberOfAnalysts": {},
+                    "growth": {}
+                },
+                "revenueEstimate": {
+                    "avg": {},
+                    "low": {},
+                    "high": {},
+                    "numberOfAnalysts": {},
+                    "yearAgoRevenue": {},
+                    "growth": {}
+                },
+                "epsTrend": {
+                    "current": {},
+                    "7daysAgo": {},
+                    "30daysAgo": {},
+                    "60daysAgo": {},
+                    "90daysAgo": {}
+                },
+                "epsRevisions": {
+                    "upLast7days": {},
+                    "upLast30days": {},
+                    "downLast30days": {},
+                    "downLast90days": {}
+                }
             },
             {
-                "period": "-5y"
+                "maxAge": 1,
+                "period": "-5y",
+                "endDate": null,
+                "growth": 0.00413,
+                "earningsEstimate": {
+                    "avg": {},
+                    "low": {},
+                    "high": {},
+                    "yearAgoEps": {},
+                    "numberOfAnalysts": {},
+                    "growth": {}
+                },
+                "revenueEstimate": {
+                    "avg": {},
+                    "low": {},
+                    "high": {},
+                    "numberOfAnalysts": {},
+                    "yearAgoRevenue": {},
+                    "growth": {}
+                },
+                "epsTrend": {
+                    "current": {},
+                    "7daysAgo": {},
+                    "30daysAgo": {},
+                    "60daysAgo": {},
+                    "90daysAgo": {}
+                },
+                "epsRevisions": {
+                    "upLast7days": {},
+                    "upLast30days": {},
+                    "downLast30days": {},
+                    "downLast90days": {}
+                }
             }
         ]
     },
-    "defaultKeyStatistics": {
-        "maxAge": 1,
-        "priceHint": 2,
-        "enterpriseValue": 351360516096,
-        "forwardPE": 8.982943,
-        "profitMargins": 0.086689994,
-        "floatShares": 4198702960,
-        "sharesOutstanding": 4204100096,
-        "sharesShort": 45621516,
-        "sharesShortPriorMonth": 46136375,
-        "sharesShortPreviousMonthDate": "2023-12-14 19:00:00",
-        "dateShortInterest": "2024-01-11 19:00:00",
-        "sharesPercentSharesOut": 0.0109,
-        "heldPercentInsiders": 0.00029999999,
-        "heldPercentInstitutions": 0.62226003,
-        "shortRatio": 2.04,
-        "shortPercentOfFloat": 0.0109,
-        "beta": 0.383,
-        "impliedSharesOutstanding": 4204100096,
-        "category": null,
-        "bookValue": 21.986,
-        "priceToBook": 1.9162195,
-        "fundFamily": null,
-        "legalType": null,
-        "lastFiscalYearEnd": "2023-12-30 19:00:00",
-        "nextFiscalYearEnd": "2024-12-30 19:00:00",
-        "mostRecentQuarter": "2023-12-30 19:00:00",
-        "netIncomeToCommon": 11614000128,
-        "trailingEps": 2.75,
-        "forwardEps": 4.69,
-        "pegRatio": 6.31,
-        "lastSplitFactor": "1000000:937889",
-        "lastSplitDate": "2010-07-01 20:00:00",
-        "enterpriseToRevenue": 2.623,
-        "enterpriseToEbitda": 7.582,
-        "52WeekChange": 0.02059114,
-        "SandP52WeekChange": 0.20615757,
-        "lastDividendValue": 0.665,
-        "lastDividendDate": 1704758400
-    },
-    "insiderTransactions": {
-        "transactions": [
+    "cashflowHistory": {
+        "annual": [
             {
                 "maxAge": 1,
-                "shares": 4711,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "HAMMOCK SAMANTHA",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2024-01-04",
-                "ownership": "D"
+                "endDate": "2023-12-31",
+                "netIncome": 11614000000
             },
             {
                 "maxAge": 1,
-                "shares": 3340,
-                "value": 127889,
-                "filerUrl": "",
-                "transactionText": "Sale at price 38.29 per share.",
-                "filerName": "SILLIMAN CRAIG L",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-12-11",
-                "ownership": "D"
+                "endDate": "2022-12-31",
+                "netIncome": 21256000000
             },
             {
                 "maxAge": 1,
-                "shares": 5941,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "RUSSO JOSEPH J.",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-12-01",
-                "ownership": "D"
+                "endDate": "2021-12-31",
+                "netIncome": 22065000000
             },
             {
                 "maxAge": 1,
-                "shares": 23380,
-                "value": 888440,
-                "filerUrl": "",
-                "transactionText": "Sale at price 38.00 per share.",
-                "filerName": "SILLIMAN CRAIG L",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-11-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 24426,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SKIADAS ANTHONY T",
-                "filerRelation": "Chief Financial Officer",
-                "moneyText": "",
-                "startDate": "2023-11-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 11892,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "STILLWELL MARY-LEE",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-11-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 14999,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "HAMMOCK SAMANTHA",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-11-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 28497,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SAMPATH SOWMYANARAYAN",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-11-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 16499,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "VENKATESH VANDANA",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-11-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 15374,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "RUSSO JOSEPH J.",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-11-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 248186,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "VESTBERG HANS ERIK",
-                "filerRelation": "Chief Executive Officer",
-                "moneyText": "",
-                "startDate": "2023-09-29",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 2392,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "STILLWELL MARY-LEE",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-09-01",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 12557,
-                "value": 418023,
-                "filerUrl": "",
-                "transactionText": "Sale at price 33.29 per share.",
-                "filerName": "HAMMOCK SAMANTHA",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-08-11",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 7585,
-                "value": 275336,
-                "filerUrl": "",
-                "transactionText": "Sale at price 36.30 per share.",
-                "filerName": "RUSSO JOSEPH J.",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-05-23",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 3340,
-                "value": 130961,
-                "filerUrl": "",
-                "transactionText": "Sale at price 39.21 per share.",
-                "filerName": "SILLIMAN CRAIG L",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-04-10",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 3342,
-                "value": 126996,
-                "filerUrl": "",
-                "transactionText": "Sale at price 38.00 per share.",
-                "filerName": "SILLIMAN CRAIG L",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-03-27",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 6226,
-                "value": 228432,
-                "filerUrl": "",
-                "transactionText": "Sale at price 36.69 per share.",
-                "filerName": "MALADY KYLE",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-03-15",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 14745,
-                "value": 540004,
-                "filerUrl": "",
-                "transactionText": "Sale at price 36.50 - 36.74 per share.",
-                "filerName": "MALADY KYLE",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-03-14",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 12163,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "QURESHI RIMA",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-03-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 5392,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SKIADAS ANTHONY T",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-03-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 12838,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SILLIMAN CRAIG L",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-03-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 16892,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "ELLIS MATTHEW D.",
-                "filerRelation": "Chief Financial Officer",
-                "moneyText": "",
-                "startDate": "2023-03-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 35946,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "VESTBERG HANS ERIK",
-                "filerRelation": "Chief Executive Officer",
-                "moneyText": "",
-                "startDate": "2023-03-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 12163,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "MALADY KYLE",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-03-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 6149,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SAMPATH SOWMYANARAYAN",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-03-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 2161,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "VENKATESH VANDANA",
-                "filerRelation": "General Counsel",
-                "moneyText": "",
-                "startDate": "2023-03-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1851,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "RUSSO JOSEPH J.",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-03-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 26132,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "QURESHI RIMA",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-03-01",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 11436,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SKIADAS ANTHONY T",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-03-01",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 27923,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SILLIMAN CRAIG L",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-03-01",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 35970,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "ELLIS MATTHEW D.",
-                "filerRelation": "Chief Financial Officer",
-                "moneyText": "",
-                "startDate": "2023-03-01",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 77145,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "VESTBERG HANS ERIK",
-                "filerRelation": "Chief Executive Officer",
-                "moneyText": "",
-                "startDate": "2023-03-01",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 31235,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "MALADY KYLE",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-03-01",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 10353,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "HAMMOCK SAMANTHA",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-03-01",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 26246,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SAMPATH SOWMYANARAYAN",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-03-01",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 6402,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "VENKATESH VANDANA",
-                "filerRelation": "General Counsel",
-                "moneyText": "",
-                "startDate": "2023-03-01",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 44878,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "QURESHI RIMA",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-02-15",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 19895,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "SKIADAS ANTHONY T",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-02-15",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 47371,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "SILLIMAN CRAIG L",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-02-15",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 62331,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "ELLIS MATTHEW D.",
-                "filerRelation": "Chief Financial Officer",
-                "moneyText": "",
-                "startDate": "2023-02-15",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 132638,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "VESTBERG HANS ERIK",
-                "filerRelation": "Chief Executive Officer",
-                "moneyText": "",
-                "startDate": "2023-02-15",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 44878,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "MALADY KYLE",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-02-15",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 22688,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "SAMPATH SOWMYANARAYAN",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-02-15",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 7973,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "VENKATESH VANDANA",
-                "filerRelation": "General Counsel",
-                "moneyText": "",
-                "startDate": "2023-02-15",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 19288,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SAMPATH SOWMYANARAYAN",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-02-10",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 4392,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "HAMMOCK SAMANTHA",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-01-04",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 23968,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SAMPATH SOWMYANARAYAN",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2022-09-16",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 37762,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "BROUILLETTE MANON",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2022-08-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1558,
-                "value": 80112,
-                "filerUrl": "",
-                "transactionText": "Sale at price 51.42 per share.",
-                "filerName": "SILLIMAN CRAIG L",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2022-07-05",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1558,
-                "value": 79365,
-                "filerUrl": "",
-                "transactionText": "Sale at price 50.94 per share.",
-                "filerName": "SILLIMAN CRAIG L",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2022-06-03",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1558,
-                "value": 77900,
-                "filerUrl": "",
-                "transactionText": "Sale at price 50.00 per share.",
-                "filerName": "SILLIMAN CRAIG L",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2022-05-23",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 23647,
-                "value": 1176911,
-                "filerUrl": "",
-                "transactionText": "Sale at price 49.77 per share.",
-                "filerName": "ERWIN TAMI A",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2022-04-26",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1558,
-                "value": 81016,
-                "filerUrl": "",
-                "transactionText": "Sale at price 52.00 per share.",
-                "filerName": "SILLIMAN CRAIG L",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2022-04-04",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 10949,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "QURESHI RIMA",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2022-03-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 4440,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SKIADAS ANTHONY T",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2022-03-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 10949,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SILLIMAN CRAIG L",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2022-03-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 15339,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "ELLIS MATTHEW D.",
-                "filerRelation": "Chief Financial Officer",
-                "moneyText": "",
-                "startDate": "2022-03-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 32292,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "VESTBERG HANS ERIK",
-                "filerRelation": "Chief Executive Officer",
-                "moneyText": "",
-                "startDate": "2022-03-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 9419,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "MALADY KYLE",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2022-03-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 13725,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "ERWIN TAMI A",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2022-03-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1558,
-                "value": 84880,
-                "filerUrl": "",
-                "transactionText": "Sale at price 54.48 per share.",
-                "filerName": "SILLIMAN CRAIG L",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2022-03-03",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 11450,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "QURESHI RIMA",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2022-03-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 5077,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SKIADAS ANTHONY T",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2022-03-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 12086,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SILLIMAN CRAIG L",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2022-03-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 15902,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "ELLIS MATTHEW D.",
-                "filerRelation": "Chief Financial Officer",
-                "moneyText": "",
-                "startDate": "2022-03-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 33841,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "VESTBERG HANS ERIK",
-                "filerRelation": "Chief Executive Officer",
-                "moneyText": "",
-                "startDate": "2022-03-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 11450,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "MALADY KYLE",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2022-03-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 14630,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "ERWIN TAMI A",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2022-03-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 12167,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "QURESHI RIMA",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2022-03-01",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 5296,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SKIADAS ANTHONY T",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2022-03-01",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 12608,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SILLIMAN CRAIG L",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2022-03-01",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 16454,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "ELLIS MATTHEW D.",
-                "filerRelation": "Chief Financial Officer",
-                "moneyText": "",
-                "startDate": "2022-03-01",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 36565,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "VESTBERG HANS ERIK",
-                "filerRelation": "Chief Executive Officer",
-                "moneyText": "",
-                "startDate": "2022-03-01",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 13238,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "MALADY KYLE",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2022-03-01",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 16454,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "ERWIN TAMI A",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2022-03-01",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 2284,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "HAMMOCK SAMANTHA",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2022-03-01",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 19000,
-                "value": 998450,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 52.55 per share.",
-                "filerName": "VESTBERG HANS ERIK",
-                "filerRelation": "Chief Executive Officer",
-                "moneyText": "",
-                "startDate": "2022-01-26",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 4149,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "HAMMOCK SAMANTHA",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2022-01-04",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1554,
-                "value": 80808,
-                "filerUrl": "",
-                "transactionText": "Sale at price 52.00 per share.",
-                "filerName": "SILLIMAN CRAIG L",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-12-16",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1554,
-                "value": 82222,
-                "filerUrl": "",
-                "transactionText": "Sale at price 52.91 per share.",
-                "filerName": "SILLIMAN CRAIG L",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-11-04",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1554,
-                "value": 84615,
-                "filerUrl": "",
-                "transactionText": "Sale at price 54.45 per share.",
-                "filerName": "SILLIMAN CRAIG L",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-10-04",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1554,
-                "value": 86061,
-                "filerUrl": "",
-                "transactionText": "Sale at price 55.38 per share.",
-                "filerName": "SILLIMAN CRAIG L",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-09-07",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 14077,
-                "value": 782118,
-                "filerUrl": "",
-                "transactionText": "Sale at price 55.56 per share.",
-                "filerName": "GOWRAPPAN KUMARA GURU",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-08-11",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1554,
-                "value": 86356,
-                "filerUrl": "",
-                "transactionText": "Sale at price 55.57 per share.",
-                "filerName": "SILLIMAN CRAIG L",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-08-04",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 33261,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "PAMBIANCHI CHRISTINE MICHAEL",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-07-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1555,
-                "value": 87780,
-                "filerUrl": "",
-                "transactionText": "Sale at price 56.45 per share.",
-                "filerName": "SILLIMAN CRAIG L",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-07-06",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1555,
-                "value": 88480,
-                "filerUrl": "",
-                "transactionText": "Sale at price 56.90 per share.",
-                "filerName": "SILLIMAN CRAIG L",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-06-04",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 43238,
-                "value": 2569202,
-                "filerUrl": "",
-                "transactionText": "Sale at price 59.42 per share.",
-                "filerName": "GOWRAPPAN KUMARA GURU",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-05-10",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1555,
-                "value": 90159,
-                "filerUrl": "",
-                "transactionText": "Sale at price 57.98 per share.",
-                "filerName": "SILLIMAN CRAIG L",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-05-04",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 35000,
-                "value": 2039100,
-                "filerUrl": "",
-                "transactionText": "Sale at price 58.26 per share.",
-                "filerName": "ERWIN TAMI A",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-05-03",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 114182,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "GOWRAPPAN KUMARA GURU",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-04-09",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1555,
-                "value": 91014,
-                "filerUrl": "",
-                "transactionText": "Sale at price 58.53 per share.",
-                "filerName": "SILLIMAN CRAIG L",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-04-05",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 10458,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "QURESHI RIMA",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-03-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 4241,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SKIADAS ANTHONY T",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-03-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 10458,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SILLIMAN CRAIG L",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-03-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 14650,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "ELLIS MATTHEW D.",
-                "filerRelation": "Chief Financial Officer",
-                "moneyText": "",
-                "startDate": "2021-03-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 30842,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "VESTBERG HANS ERIK",
-                "filerRelation": "Chief Executive Officer",
-                "moneyText": "",
-                "startDate": "2021-03-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 15421,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "DUNNE RONAN",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-03-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 13108,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "GOWRAPPAN KUMARA GURU",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-03-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 8995,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "MALADY KYLE",
-                "filerRelation": "Chief Technology Officer",
-                "moneyText": "",
-                "startDate": "2021-03-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 13108,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "ERWIN TAMI A",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-03-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 11659,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "QURESHI RIMA",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-03-05",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 4025,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SKIADAS ANTHONY T",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-03-05",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 11659,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SILLIMAN CRAIG L",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-03-05",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 14922,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "ELLIS MATTHEW D.",
-                "filerRelation": "Chief Financial Officer",
-                "moneyText": "",
-                "startDate": "2021-03-05",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 20518,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "VESTBERG HANS ERIK",
-                "filerRelation": "Chief Executive Officer",
-                "moneyText": "",
-                "startDate": "2021-03-05",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 13212,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "DUNNE RONAN",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-03-05",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 4663,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "MALADY KYLE",
-                "filerRelation": "Chief Technology Officer",
-                "moneyText": "",
-                "startDate": "2021-03-05",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 10493,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "ERWIN TAMI A",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-03-05",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1555,
-                "value": 86458,
-                "filerUrl": "",
-                "transactionText": "Sale at price 55.60 per share.",
-                "filerName": "SILLIMAN CRAIG L",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-03-04",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 10935,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "QURESHI RIMA",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-03-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 4847,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SKIADAS ANTHONY T",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-03-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 9964,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "PAMBIANCHI CHRISTINE MICHAEL",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-03-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 11543,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SILLIMAN CRAIG L",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-03-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 15188,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "ELLIS MATTHEW D.",
-                "filerRelation": "Chief Financial Officer",
-                "moneyText": "",
-                "startDate": "2021-03-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 32321,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "VESTBERG HANS ERIK",
-                "filerRelation": "Chief Executive Officer",
-                "moneyText": "",
-                "startDate": "2021-03-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 16403,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "DUNNE RONAN",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-03-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 13973,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "GOWRAPPAN KUMARA GURU",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-03-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 10935,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "MALADY KYLE",
-                "filerRelation": "Chief Technology Officer",
-                "moneyText": "",
-                "startDate": "2021-03-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 13973,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "ERWIN TAMI A",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-03-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 45706,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "DUNNE RONAN",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-02-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 45706,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "ERWIN TAMI A",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-02-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 29189,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "QURESHI RIMA",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2020-11-06",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 10411,
-                "value": 601027,
-                "filerUrl": "",
-                "transactionText": "Sale at price 57.73 per share.",
-                "filerName": "SILLIMAN CRAIG L",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2020-11-02",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 31835,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "PAMBIANCHI CHRISTINE MICHAEL",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2020-07-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 74669,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "VESTBERG HANS ERIK",
-                "filerRelation": "Chief Executive Officer",
-                "moneyText": "",
-                "startDate": "2020-05-04",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 10744,
-                "value": 613429,
-                "filerUrl": "",
-                "transactionText": "Sale at price 57.02 - 57.64 per share.",
-                "filerName": "SKIADAS ANTHONY T",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2020-05-01",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 39531,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "GOWRAPPAN KUMARA GURU",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2020-04-09",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 13957,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "VESTBERG HANS ERIK",
-                "filerRelation": "Chief Executive Officer",
-                "moneyText": "",
-                "startDate": "2020-04-03",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 21168,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "QURESHI RIMA",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2020-03-06",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 7912,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SKIADAS ANTHONY T",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2020-03-06",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 13,
-                "value": 736,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 56.64 per share.",
-                "filerName": "PAMBIANCHI CHRISTINE MICHAEL",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2020-03-06",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 21168,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SILLIMAN CRAIG L",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2020-03-06",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 28305,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "ELLIS MATTHEW D.",
-                "filerRelation": "Chief Financial Officer",
-                "moneyText": "",
-                "startDate": "2020-03-06",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 49160,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "VESTBERG HANS ERIK",
-                "filerRelation": "Chief Executive Officer",
-                "moneyText": "",
-                "startDate": "2020-03-06",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 27408,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "DUNNE RONAN",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2020-03-06",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 12547,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "GOWRAPPAN KUMARA GURU",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2020-03-06",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 13074,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "MALADY KYLE",
-                "filerRelation": "Chief Technology Officer",
-                "moneyText": "",
-                "startDate": "2020-03-06",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 22590,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "ERWIN TAMI A",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2020-03-06",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 4249,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SKIADAS ANTHONY T",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2020-03-03",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 10658,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SILLIMAN CRAIG L",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2020-03-03",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 9707,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "ELLIS MATTHEW D.",
-                "filerRelation": "Chief Financial Officer",
-                "moneyText": "",
-                "startDate": "2020-03-03",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 9421,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "DUNNE RONAN",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2020-03-03",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 2376,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "MALADY KYLE",
-                "filerRelation": "Chief Technology Officer",
-                "moneyText": "",
-                "startDate": "2020-03-03",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 8754,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "ERWIN TAMI A",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2020-03-03",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 18839,
-                "value": 1007321,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 53.47 per share.",
-                "filerName": "DUNNE RONAN",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2020-02-28",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 10775,
-                "value": 621195,
-                "filerUrl": "",
-                "transactionText": "Sale at price 57.32 - 58.10 per share.",
-                "filerName": "SKIADAS ANTHONY T",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2020-02-25",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 44115,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SKIADAS ANTHONY T",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2019-12-31",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1346,
-                "value": 80154,
-                "filerUrl": "",
-                "transactionText": "Sale at price 59.55 per share.",
-                "filerName": "SILLIMAN CRAIG L",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2019-11-26",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 27965,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "QURESHI RIMA",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2019-11-06",
-                "ownership": "D"
+                "endDate": "2020-12-31",
+                "netIncome": 17801000000
             }
         ],
-        "maxAge": 1
+        "quarterly": [
+            {
+                "maxAge": 1,
+                "endDate": "2023-12-31",
+                "netIncome": -2705000000
+            },
+            {
+                "maxAge": 1,
+                "endDate": "2023-09-30",
+                "netIncome": 4762000000
+            },
+            {
+                "maxAge": 1,
+                "endDate": "2023-06-30",
+                "netIncome": 4648000000
+            },
+            {
+                "maxAge": 1,
+                "endDate": "2023-03-31",
+                "netIncome": 4909000000
+            }
+        ]
+    },
+    "balanceSheetHistory": {
+        "annual": [
+            {
+                "maxAge": 1,
+                "endDate": "2023-12-31"
+            },
+            {
+                "maxAge": 1,
+                "endDate": "2022-12-31"
+            },
+            {
+                "maxAge": 1,
+                "endDate": "2021-12-31"
+            },
+            {
+                "maxAge": 1,
+                "endDate": "2020-12-31"
+            }
+        ],
+        "quarterly": [
+            {
+                "maxAge": 1,
+                "endDate": "2023-12-31"
+            },
+            {
+                "maxAge": 1,
+                "endDate": "2023-09-30"
+            },
+            {
+                "maxAge": 1,
+                "endDate": "2023-06-30"
+            },
+            {
+                "maxAge": 1,
+                "endDate": "2023-03-31"
+            }
+        ]
     },
     "incomeStatementHistory": {
-        "incomeStatementHistory": [
+        "annual": [
             {
                 "maxAge": 1,
                 "endDate": "2023-12-31",
@@ -2228,149 +734,7 @@
                 "netIncomeApplicableToCommonShares": {}
             }
         ],
-        "maxAge": 86400
-    },
-    "fundOwnership": {
-        "maxAge": 1,
-        "ownershipList": [
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Vanguard Total Stock Market Index Fund",
-                "pctHeld": 0.027999999,
-                "position": 117777121,
-                "value": 4961950233,
-                "pctChange": -0.0022
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Vanguard 500 Index Fund",
-                "pctHeld": 0.024,
-                "position": 101020024,
-                "value": 4255973719,
-                "pctChange": 0.0092
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-11-30",
-                "organization": "Schwab Strategic Tr-Schwab U.S. Dividend Equity ETF",
-                "pctHeld": 0.0138,
-                "position": 57874702,
-                "value": 2438261257,
-                "pctChange": 0.0727
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-12-31",
-                "organization": "Fidelity 500 Index Fund",
-                "pctHeld": 0.0117999995,
-                "position": 49403468,
-                "value": 2081368159,
-                "pctChange": 0.0085
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-11-30",
-                "organization": "SPDR S&P 500 ETF Trust",
-                "pctHeld": 0.0113,
-                "position": 47682207,
-                "value": 2008851431,
-                "pctChange": 0.013099999
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-11-30",
-                "organization": "iShares Core S&P 500 ETF",
-                "pctHeld": 0.0099,
-                "position": 41432234,
-                "value": 1745540062,
-                "pctChange": 0.0174
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Vanguard Index-Value Index Fund",
-                "pctHeld": 0.0077,
-                "position": 32446772,
-                "value": 1366982539,
-                "pctChange": -0.0128999995
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Vanguard Institutional Index Fund-Institutional Index Fund",
-                "pctHeld": 0.0067000003,
-                "position": 28209280,
-                "value": 1188456996,
-                "pctChange": -0.017
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-11-30",
-                "organization": "SPDR (R) Idx Shares-SPDR Communication Services Select Sector ETF",
-                "pctHeld": 0.0047999998,
-                "position": 20015545,
-                "value": 843254932,
-                "pctChange": 0.0452
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-10-31",
-                "organization": "Vanguard Whitehall Funds-High Dividend Yield Index Fund",
-                "pctHeld": 0.0045,
-                "position": 18987918,
-                "value": 799961005,
-                "pctChange": 0.0018000001
-            }
-        ]
-    },
-    "summaryDetail": {
-        "maxAge": 1,
-        "priceHint": 2,
-        "previousClose": 42.49,
-        "open": 42.2,
-        "dayLow": 41.825,
-        "dayHigh": 42.465,
-        "regularMarketPreviousClose": 42.49,
-        "regularMarketOpen": 42.2,
-        "regularMarketDayLow": 41.825,
-        "regularMarketDayHigh": 42.465,
-        "dividendRate": 2.66,
-        "dividendYield": 0.0631,
-        "exDividendDate": "2024-01-08 19:00:00",
-        "payoutRatio": 0.9582,
-        "fiveYearAvgDividendYield": 5.19,
-        "beta": 0.383,
-        "trailingPE": 15.320001,
-        "forwardPE": 8.982943,
-        "volume": 21487032,
-        "regularMarketVolume": 21487032,
-        "averageVolume": 21388580,
-        "averageVolume10days": 25711930,
-        "averageDailyVolume10Day": 25711930,
-        "bid": 42.05,
-        "ask": 42.1,
-        "bidSize": 3000,
-        "askSize": 1400,
-        "marketCap": 177118740480,
-        "fiftyTwoWeekLow": 30.14,
-        "fiftyTwoWeekHigh": 43.21,
-        "priceToSalesTrailing12Months": 1.3220382,
-        "fiftyDayAverage": 38.9198,
-        "twoHundredDayAverage": 35.7356,
-        "trailingAnnualDividendRate": 2.635,
-        "trailingAnnualDividendYield": 0.062014587,
-        "currency": "USD",
-        "fromCurrency": null,
-        "toCurrency": null,
-        "lastMarket": null,
-        "coinMarketCapLink": null,
-        "algorithm": null,
-        "tradeable": false
-    },
-    "incomeStatementHistoryQuarterly": {
-        "incomeStatementHistory": [
+        "quarterly": [
             {
                 "maxAge": 1,
                 "endDate": "2023-12-31",
@@ -2475,537 +839,2104 @@
                 "netIncome": 4909000000,
                 "netIncomeApplicableToCommonShares": {}
             }
-        ],
-        "maxAge": 86400
+        ]
     },
-    "cashflowStatementHistoryQuarterly": {
-        "cashflowStatements": [
-            {
-                "maxAge": 1,
-                "endDate": "2023-12-31",
-                "netIncome": -2705000000
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2023-09-30",
-                "netIncome": 4762000000
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2023-06-30",
-                "netIncome": 4648000000
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2023-03-31",
-                "netIncome": 4909000000
-            }
-        ],
-        "maxAge": 86400
-    },
-    "insiderHolders": {
-        "holders": [
-            {
-                "maxAge": 1,
-                "name": "HAMMOCK SAMANTHA",
-                "relation": "Officer",
-                "url": "",
-                "transactionDescription": "Conversion of Exercise of derivative security",
-                "latestTransDate": "2024-01-04",
-                "positionDirect": 2975,
-                "positionDirectDate": "2024-01-04"
-            },
-            {
-                "maxAge": 1,
-                "name": "MALADY KYLE",
-                "relation": "Officer",
-                "url": "",
-                "transactionDescription": "Sale",
-                "latestTransDate": "2023-03-15",
-                "positionDirect": 84053,
-                "positionDirectDate": "2023-03-15"
-            },
-            {
-                "maxAge": 1,
-                "name": "QURESHI RIMA",
-                "relation": "Officer",
-                "url": "",
-                "transactionDescription": "Conversion of Exercise of derivative security",
-                "latestTransDate": "2023-03-02",
-                "positionDirect": 92797,
-                "positionDirectDate": "2023-03-02"
-            },
-            {
-                "maxAge": 1,
-                "name": "RUSSO JOSEPH J.",
-                "relation": "Officer",
-                "url": "",
-                "transactionDescription": "Conversion of Exercise of derivative security",
-                "latestTransDate": "2023-12-01",
-                "positionDirect": 17038,
-                "positionDirectDate": "2023-12-01"
-            },
-            {
-                "maxAge": 1,
-                "name": "SAMPATH SOWMYANARAYAN",
-                "relation": "Officer",
-                "url": "",
-                "transactionDescription": "Conversion of Exercise of derivative security",
-                "latestTransDate": "2023-11-02",
-                "positionDirect": 63524,
-                "positionDirectDate": "2023-11-02"
-            },
-            {
-                "maxAge": 1,
-                "name": "SILLIMAN CRAIG L",
-                "relation": "Officer",
-                "url": "",
-                "transactionDescription": "Sale",
-                "latestTransDate": "2023-12-11",
-                "positionDirect": 51373,
-                "positionDirectDate": "2023-12-11"
-            },
-            {
-                "maxAge": 1,
-                "name": "SKIADAS ANTHONY T",
-                "relation": "Chief Financial Officer",
-                "url": "",
-                "transactionDescription": "Conversion of Exercise of derivative security",
-                "latestTransDate": "2023-11-02",
-                "positionDirect": 62844,
-                "positionDirectDate": "2023-11-02"
-            },
-            {
-                "maxAge": 1,
-                "name": "STILLWELL MARY-LEE",
-                "relation": "Officer",
-                "url": "",
-                "transactionDescription": "Conversion of Exercise of derivative security",
-                "latestTransDate": "2023-11-02",
-                "positionDirect": 7167,
-                "positionDirectDate": "2023-11-02"
-            },
-            {
-                "maxAge": 1,
-                "name": "VENKATESH VANDANA",
-                "relation": "Officer",
-                "url": "",
-                "transactionDescription": "Conversion of Exercise of derivative security",
-                "latestTransDate": "2023-11-02",
-                "positionDirect": 20096,
-                "positionDirectDate": "2023-11-02"
-            },
-            {
-                "maxAge": 1,
-                "name": "VESTBERG HANS ERIK",
-                "relation": "Chief Executive Officer",
-                "url": "",
-                "transactionDescription": "Stock Award(Grant)",
-                "latestTransDate": "2023-09-29",
-                "positionDirect": 419767,
-                "positionDirectDate": "2023-09-29"
-            }
-        ],
-        "maxAge": 1
-    },
-    "earnings": {
-        "maxAge": 86400,
-        "earningsChart": {
-            "quarterly": [
-                {
-                    "date": "1Q2023",
-                    "actual": 1.2,
-                    "estimate": 1.2
-                },
-                {
-                    "date": "2Q2023",
-                    "actual": 1.21,
-                    "estimate": 1.16
-                },
-                {
-                    "date": "3Q2023",
-                    "actual": 1.11,
-                    "estimate": 1.07
-                },
-                {
-                    "date": "4Q2023",
-                    "actual": 1.08,
-                    "estimate": 1.07
-                }
-            ],
-            "currentQuarterEstimate": 1.12,
-            "currentQuarterEstimateDate": "1Q",
-            "currentQuarterEstimateYear": 2024,
-            "earningsDate": [
-                "2024-04-22 08:30:S"
-            ]
-        },
-        "financialsChart": {
-            "yearly": [
-                {
-                    "date": 2020,
-                    "revenue": 128292000000,
-                    "earnings": 17801000000
-                },
-                {
-                    "date": 2021,
-                    "revenue": 133613000000,
-                    "earnings": 22065000000
-                },
-                {
-                    "date": 2022,
-                    "revenue": 136835000000,
-                    "earnings": 21256000000
-                },
-                {
-                    "date": 2023,
-                    "revenue": 133974000000,
-                    "earnings": 11614000000
-                }
-            ],
-            "quarterly": [
-                {
-                    "date": "1Q2023",
-                    "revenue": 32912000000,
-                    "earnings": 4909000000
-                },
-                {
-                    "date": "2Q2023",
-                    "revenue": 32596000000,
-                    "earnings": 4648000000
-                },
-                {
-                    "date": "3Q2023",
-                    "revenue": 33336000000,
-                    "earnings": 4762000000
-                },
-                {
-                    "date": "4Q2023",
-                    "revenue": 35130000000,
-                    "earnings": -2705000000
-                }
-            ]
-        },
-        "financialCurrency": "USD"
-    },
-    "calendarEvents": {
-        "maxAge": 1,
-        "earnings": {
-            "earningsDate": [
-                "2024-04-22 08:30:S"
-            ],
-            "earningsAverage": 1.12,
-            "earningsLow": 1.07,
-            "earningsHigh": 1.16,
-            "revenueAverage": 33414000000,
-            "revenueLow": 33049000000,
-            "revenueHigh": 33606000000
-        },
-        "exDividendDate": "2024-01-08 19:00:00",
-        "dividendDate": "2024-01-31 19:00:00"
-    },
-    "price": {
-        "maxAge": 1,
-        "preMarketSource": "FREE_REALTIME",
-        "postMarketChangePercent": -0.0021362484,
-        "postMarketChange": -0.09000015,
-        "postMarketTime": "2024-02-02 20:00:00",
-        "postMarketPrice": 42.04,
-        "postMarketSource": "DELAYED",
-        "regularMarketChangePercent": -0.008472595,
-        "regularMarketChange": -0.3600006,
-        "regularMarketTime": "2024-02-02 16:00:01",
-        "priceHint": 2,
-        "regularMarketPrice": 42.13,
-        "regularMarketDayHigh": 42.465,
-        "regularMarketDayLow": 41.825,
-        "regularMarketVolume": 21487032,
-        "averageDailyVolume10Day": 25711930,
-        "averageDailyVolume3Month": 21388580,
-        "regularMarketPreviousClose": 42.49,
-        "regularMarketSource": "DELAYED",
-        "regularMarketOpen": 42.2,
-        "exchange": "NYQ",
-        "exchangeName": "NYSE",
-        "exchangeDataDelayedBy": 0,
-        "marketState": "CLOSED",
-        "quoteType": "EQUITY",
-        "symbol": "VZ",
-        "underlyingSymbol": null,
-        "shortName": "Verizon Communications Inc.",
-        "longName": "Verizon Communications Inc.",
-        "currency": "USD",
-        "quoteSourceName": "Delayed Quote",
-        "currencySymbol": "$",
-        "fromCurrency": null,
-        "toCurrency": null,
-        "lastMarket": null,
-        "marketCap": 177118740480
-    },
-    "balanceSheetHistory": {
-        "balanceSheetStatements": [
-            {
-                "maxAge": 1,
-                "endDate": "2023-12-31"
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2022-12-31"
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2021-12-31"
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2020-12-31"
-            }
-        ],
-        "maxAge": 86400
-    },
-    "earningsTrend": {
+    "currentPrice": 42.13,
+    "targetHighPrice": 50.0,
+    "targetLowPrice": 32.15,
+    "targetMeanPrice": 44.03,
+    "targetMedianPrice": 44.75,
+    "recommendationMean": 2.5,
+    "recommendationKey": "buy",
+    "numberOfAnalystOpinions": 24,
+    "totalCash": 2064999936,
+    "totalCashPerShare": 0.491,
+    "ebitda": 46342000640,
+    "totalDebt": 174941995008,
+    "quickRatio": 0.51,
+    "currentRatio": 0.692,
+    "totalRevenue": 133973999616,
+    "debtToEquity": 186.507,
+    "revenuePerShare": 31.815,
+    "returnOnAssets": 0.04724,
+    "returnOnEquity": 0.12987,
+    "freeCashflow": 8664250368,
+    "operatingCashflow": 37475000320,
+    "revenueGrowth": -0.003,
+    "grossMargins": 0.59032,
+    "ebitdaMargins": 0.3459,
+    "operatingMargins": 0.18335,
+    "financialCurrency": "USD",
+    "recommendationTrend": {
         "trend": [
             {
-                "maxAge": 1,
-                "period": "0q",
-                "endDate": "2024-03-31",
-                "growth": -0.067,
-                "earningsEstimate": {
-                    "avg": 1.12,
-                    "low": 1.07,
-                    "high": 1.16,
-                    "yearAgoEps": 1.2,
-                    "numberOfAnalysts": 15,
-                    "growth": -0.067
-                },
-                "revenueEstimate": {
-                    "avg": 33414000000,
-                    "low": 33049000000,
-                    "high": 33606000000,
-                    "numberOfAnalysts": 13,
-                    "yearAgoRevenue": 32912000000,
-                    "growth": 0.015
-                },
-                "epsTrend": {
-                    "current": 1.12,
-                    "7daysAgo": 1.03,
-                    "30daysAgo": 1.13,
-                    "60daysAgo": 1.13,
-                    "90daysAgo": 1.06
-                },
-                "epsRevisions": {
-                    "upLast7days": 2,
-                    "upLast30days": 7,
-                    "downLast30days": 1,
-                    "downLast90days": {}
-                }
+                "period": "0m",
+                "strongBuy": 2,
+                "buy": 6,
+                "hold": 24,
+                "sell": 0,
+                "strongSell": 0
             },
             {
-                "maxAge": 1,
-                "period": "+1q",
-                "endDate": "2024-06-30",
-                "growth": -0.058000002,
-                "earningsEstimate": {
-                    "avg": 1.14,
-                    "low": 1.09,
-                    "high": 1.18,
-                    "yearAgoEps": 1.21,
-                    "numberOfAnalysts": 15,
-                    "growth": -0.058000002
-                },
-                "revenueEstimate": {
-                    "avg": 33149200000,
-                    "low": 32617800000,
-                    "high": 33696600000,
-                    "numberOfAnalysts": 12,
-                    "yearAgoRevenue": 32596000000,
-                    "growth": 0.017
-                },
-                "epsTrend": {
-                    "current": 1.14,
-                    "7daysAgo": 1.05,
-                    "30daysAgo": 1.15,
-                    "60daysAgo": 1.16,
-                    "90daysAgo": 1.08
-                },
-                "epsRevisions": {
-                    "upLast7days": 0,
-                    "upLast30days": 3,
-                    "downLast30days": 3,
-                    "downLast90days": {}
-                }
+                "period": "-1m",
+                "strongBuy": 3,
+                "buy": 7,
+                "hold": 14,
+                "sell": 2,
+                "strongSell": 1
             },
             {
-                "maxAge": 1,
-                "period": "0y",
-                "endDate": "2024-12-31",
-                "growth": -0.027999999,
-                "earningsEstimate": {
-                    "avg": 4.58,
-                    "low": 4.48,
-                    "high": 4.7,
-                    "yearAgoEps": 4.71,
-                    "numberOfAnalysts": 18,
-                    "growth": -0.027999999
-                },
-                "revenueEstimate": {
-                    "avg": 135992000000,
-                    "low": 134339000000,
-                    "high": 137845000000,
-                    "numberOfAnalysts": 20,
-                    "yearAgoRevenue": 133974000000,
-                    "growth": 0.015
-                },
-                "epsTrend": {
-                    "current": 4.58,
-                    "7daysAgo": 4.2,
-                    "30daysAgo": 4.63,
-                    "60daysAgo": 4.63,
-                    "90daysAgo": 4.31
-                },
-                "epsRevisions": {
-                    "upLast7days": 3,
-                    "upLast30days": 9,
-                    "downLast30days": 1,
-                    "downLast90days": {}
-                }
+                "period": "-2m",
+                "strongBuy": 3,
+                "buy": 6,
+                "hold": 15,
+                "sell": 2,
+                "strongSell": 1
             },
             {
-                "maxAge": 1,
-                "period": "+1y",
-                "endDate": "2025-12-31",
-                "growth": 0.024,
-                "earningsEstimate": {
-                    "avg": 4.69,
-                    "low": 4.49,
-                    "high": 4.87,
-                    "yearAgoEps": 4.58,
-                    "numberOfAnalysts": 17,
-                    "growth": 0.024
-                },
-                "revenueEstimate": {
-                    "avg": 137841000000,
-                    "low": 135153000000,
-                    "high": 141870000000,
-                    "numberOfAnalysts": 19,
-                    "yearAgoRevenue": 135992000000,
-                    "growth": 0.0139999995
-                },
-                "epsTrend": {
-                    "current": 4.69,
-                    "7daysAgo": 4.32,
-                    "30daysAgo": 4.71,
-                    "60daysAgo": 4.69,
-                    "90daysAgo": 4.34
-                },
-                "epsRevisions": {
-                    "upLast7days": 2,
-                    "upLast30days": 11,
-                    "downLast30days": 1,
-                    "downLast90days": {}
-                }
-            },
-            {
-                "maxAge": 1,
-                "period": "+5y",
-                "endDate": null,
-                "growth": 0.0147,
-                "earningsEstimate": {
-                    "avg": {},
-                    "low": {},
-                    "high": {},
-                    "yearAgoEps": {},
-                    "numberOfAnalysts": {},
-                    "growth": {}
-                },
-                "revenueEstimate": {
-                    "avg": {},
-                    "low": {},
-                    "high": {},
-                    "numberOfAnalysts": {},
-                    "yearAgoRevenue": {},
-                    "growth": {}
-                },
-                "epsTrend": {
-                    "current": {},
-                    "7daysAgo": {},
-                    "30daysAgo": {},
-                    "60daysAgo": {},
-                    "90daysAgo": {}
-                },
-                "epsRevisions": {
-                    "upLast7days": {},
-                    "upLast30days": {},
-                    "downLast30days": {},
-                    "downLast90days": {}
-                }
-            },
-            {
-                "maxAge": 1,
-                "period": "-5y",
-                "endDate": null,
-                "growth": 0.00413,
-                "earningsEstimate": {
-                    "avg": {},
-                    "low": {},
-                    "high": {},
-                    "yearAgoEps": {},
-                    "numberOfAnalysts": {},
-                    "growth": {}
-                },
-                "revenueEstimate": {
-                    "avg": {},
-                    "low": {},
-                    "high": {},
-                    "numberOfAnalysts": {},
-                    "yearAgoRevenue": {},
-                    "growth": {}
-                },
-                "epsTrend": {
-                    "current": {},
-                    "7daysAgo": {},
-                    "30daysAgo": {},
-                    "60daysAgo": {},
-                    "90daysAgo": {}
-                },
-                "epsRevisions": {
-                    "upLast7days": {},
-                    "upLast30days": {},
-                    "downLast30days": {},
-                    "downLast90days": {}
-                }
+                "period": "-3m",
+                "strongBuy": 2,
+                "buy": 5,
+                "hold": 19,
+                "sell": 2,
+                "strongSell": 1
             }
         ],
-        "maxAge": 1
+        "maxAge": 86400
     },
-    "financialData": {
-        "maxAge": 86400,
-        "currentPrice": 42.13,
-        "targetHighPrice": 50.0,
-        "targetLowPrice": 32.15,
-        "targetMeanPrice": 44.03,
-        "targetMedianPrice": 44.75,
-        "recommendationMean": 2.5,
-        "recommendationKey": "buy",
-        "numberOfAnalystOpinions": 24,
-        "totalCash": 2064999936,
-        "totalCashPerShare": 0.491,
-        "ebitda": 46342000640,
-        "totalDebt": 174941995008,
-        "quickRatio": 0.51,
-        "currentRatio": 0.692,
-        "totalRevenue": 133973999616,
-        "debtToEquity": 186.507,
-        "revenuePerShare": 31.815,
-        "returnOnAssets": 0.04724,
-        "returnOnEquity": 0.12987,
-        "freeCashflow": 8664250368,
-        "operatingCashflow": 37475000320,
-        "revenueGrowth": -0.003,
-        "grossMargins": 0.59032,
-        "ebitdaMargins": 0.3459,
-        "operatingMargins": 0.18335,
-        "profitMargins": 0.086689994,
-        "financialCurrency": "USD"
-    }
+    "indexTrend": {
+        "maxAge": 1,
+        "symbol": "SP5",
+        "peRatio": 16.5677,
+        "pegRatio": 1.05476,
+        "estimates": [
+            {
+                "period": "0q",
+                "growth": 0.051999997
+            },
+            {
+                "period": "+1q",
+                "growth": 0.091000006
+            },
+            {
+                "period": "0y",
+                "growth": 0.03
+            },
+            {
+                "period": "+1y",
+                "growth": 0.099
+            },
+            {
+                "period": "+5y",
+                "growth": 0.0970399
+            },
+            {
+                "period": "-5y"
+            }
+        ]
+    },
+    "shareholders": {
+        "institutionOwnership": {
+            "maxAge": 1,
+            "ownershipList": [
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Vanguard Group Inc",
+                    "pctHeld": 0.0836,
+                    "position": 351625025,
+                    "value": 14813962678,
+                    "pctChange": 0.0027
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Blackrock Inc.",
+                    "pctHeld": 0.080699995,
+                    "position": 339131883,
+                    "value": 14287626593,
+                    "pctChange": 0.0004
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "State Street Corporation",
+                    "pctHeld": 0.0414,
+                    "position": 174071068,
+                    "value": 7333614280,
+                    "pctChange": -0.0055
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Charles Schwab Investment Management, Inc.",
+                    "pctHeld": 0.0233,
+                    "position": 98027542,
+                    "value": 4129900449,
+                    "pctChange": 0.0484
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Geode Capital Management, LLC",
+                    "pctHeld": 0.0201,
+                    "position": 84478131,
+                    "value": 3559063749,
+                    "pctChange": 0.0256
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Morgan Stanley",
+                    "pctHeld": 0.0178,
+                    "position": 74851554,
+                    "value": 3153496049,
+                    "pctChange": -0.0418
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2022-12-31",
+                    "organization": "Norges Bank Investment Management",
+                    "pctHeld": 0.011,
+                    "position": 46438445,
+                    "value": 1956451737,
+                    "pctChange": 1.0
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Northern Trust Corporation",
+                    "pctHeld": 0.0106,
+                    "position": 44621839,
+                    "value": 1879918124,
+                    "pctChange": 0.0473
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Bank of America Corporation",
+                    "pctHeld": 0.0092,
+                    "position": 38467738,
+                    "value": 1620645843,
+                    "pctChange": -0.4175
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Dimensional Fund Advisors LP",
+                    "pctHeld": 0.009,
+                    "position": 37768184,
+                    "value": 1591173632,
+                    "pctChange": -0.0423
+                }
+            ]
+        },
+        "majorHolders": {
+            "maxAge": 1,
+            "insidersPercentHeld": 0.00029999999,
+            "institutionsPercentHeld": 0.62226003,
+            "institutionsFloatPercentHeld": 0.62245,
+            "institutionsCount": 3323
+        },
+        "insiderTransactions": {
+            "transactions": [
+                {
+                    "maxAge": 1,
+                    "shares": 4711,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "HAMMOCK SAMANTHA",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2024-01-04",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 3340,
+                    "value": 127889,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 38.29 per share.",
+                    "filerName": "SILLIMAN CRAIG L",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-12-11",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 5941,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "RUSSO JOSEPH J.",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-12-01",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 23380,
+                    "value": 888440,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 38.00 per share.",
+                    "filerName": "SILLIMAN CRAIG L",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-11-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 24426,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SKIADAS ANTHONY T",
+                    "filerRelation": "Chief Financial Officer",
+                    "moneyText": "",
+                    "startDate": "2023-11-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 11892,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "STILLWELL MARY-LEE",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-11-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 14999,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "HAMMOCK SAMANTHA",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-11-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 28497,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SAMPATH SOWMYANARAYAN",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-11-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 16499,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "VENKATESH VANDANA",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-11-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 15374,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "RUSSO JOSEPH J.",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-11-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 248186,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "VESTBERG HANS ERIK",
+                    "filerRelation": "Chief Executive Officer",
+                    "moneyText": "",
+                    "startDate": "2023-09-29",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 2392,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "STILLWELL MARY-LEE",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-09-01",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 12557,
+                    "value": 418023,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 33.29 per share.",
+                    "filerName": "HAMMOCK SAMANTHA",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-08-11",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 7585,
+                    "value": 275336,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 36.30 per share.",
+                    "filerName": "RUSSO JOSEPH J.",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-05-23",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 3340,
+                    "value": 130961,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 39.21 per share.",
+                    "filerName": "SILLIMAN CRAIG L",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-04-10",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 3342,
+                    "value": 126996,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 38.00 per share.",
+                    "filerName": "SILLIMAN CRAIG L",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-03-27",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 6226,
+                    "value": 228432,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 36.69 per share.",
+                    "filerName": "MALADY KYLE",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-03-15",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 14745,
+                    "value": 540004,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 36.50 - 36.74 per share.",
+                    "filerName": "MALADY KYLE",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-03-14",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 12163,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "QURESHI RIMA",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-03-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 5392,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SKIADAS ANTHONY T",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-03-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 12838,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SILLIMAN CRAIG L",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-03-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 16892,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "ELLIS MATTHEW D.",
+                    "filerRelation": "Chief Financial Officer",
+                    "moneyText": "",
+                    "startDate": "2023-03-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 35946,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "VESTBERG HANS ERIK",
+                    "filerRelation": "Chief Executive Officer",
+                    "moneyText": "",
+                    "startDate": "2023-03-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 12163,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "MALADY KYLE",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-03-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 6149,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SAMPATH SOWMYANARAYAN",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-03-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 2161,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "VENKATESH VANDANA",
+                    "filerRelation": "General Counsel",
+                    "moneyText": "",
+                    "startDate": "2023-03-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1851,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "RUSSO JOSEPH J.",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-03-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 26132,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "QURESHI RIMA",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-03-01",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 11436,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SKIADAS ANTHONY T",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-03-01",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 27923,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SILLIMAN CRAIG L",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-03-01",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 35970,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "ELLIS MATTHEW D.",
+                    "filerRelation": "Chief Financial Officer",
+                    "moneyText": "",
+                    "startDate": "2023-03-01",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 77145,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "VESTBERG HANS ERIK",
+                    "filerRelation": "Chief Executive Officer",
+                    "moneyText": "",
+                    "startDate": "2023-03-01",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 31235,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "MALADY KYLE",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-03-01",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 10353,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "HAMMOCK SAMANTHA",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-03-01",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 26246,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SAMPATH SOWMYANARAYAN",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-03-01",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 6402,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "VENKATESH VANDANA",
+                    "filerRelation": "General Counsel",
+                    "moneyText": "",
+                    "startDate": "2023-03-01",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 44878,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "QURESHI RIMA",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-02-15",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 19895,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "SKIADAS ANTHONY T",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-02-15",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 47371,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "SILLIMAN CRAIG L",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-02-15",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 62331,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "ELLIS MATTHEW D.",
+                    "filerRelation": "Chief Financial Officer",
+                    "moneyText": "",
+                    "startDate": "2023-02-15",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 132638,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "VESTBERG HANS ERIK",
+                    "filerRelation": "Chief Executive Officer",
+                    "moneyText": "",
+                    "startDate": "2023-02-15",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 44878,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "MALADY KYLE",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-02-15",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 22688,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "SAMPATH SOWMYANARAYAN",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-02-15",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 7973,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "VENKATESH VANDANA",
+                    "filerRelation": "General Counsel",
+                    "moneyText": "",
+                    "startDate": "2023-02-15",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 19288,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SAMPATH SOWMYANARAYAN",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-02-10",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 4392,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "HAMMOCK SAMANTHA",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-01-04",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 23968,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SAMPATH SOWMYANARAYAN",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2022-09-16",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 37762,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "BROUILLETTE MANON",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2022-08-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1558,
+                    "value": 80112,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 51.42 per share.",
+                    "filerName": "SILLIMAN CRAIG L",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2022-07-05",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1558,
+                    "value": 79365,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 50.94 per share.",
+                    "filerName": "SILLIMAN CRAIG L",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2022-06-03",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1558,
+                    "value": 77900,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 50.00 per share.",
+                    "filerName": "SILLIMAN CRAIG L",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2022-05-23",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 23647,
+                    "value": 1176911,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 49.77 per share.",
+                    "filerName": "ERWIN TAMI A",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2022-04-26",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1558,
+                    "value": 81016,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 52.00 per share.",
+                    "filerName": "SILLIMAN CRAIG L",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2022-04-04",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 10949,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "QURESHI RIMA",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2022-03-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 4440,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SKIADAS ANTHONY T",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2022-03-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 10949,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SILLIMAN CRAIG L",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2022-03-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 15339,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "ELLIS MATTHEW D.",
+                    "filerRelation": "Chief Financial Officer",
+                    "moneyText": "",
+                    "startDate": "2022-03-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 32292,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "VESTBERG HANS ERIK",
+                    "filerRelation": "Chief Executive Officer",
+                    "moneyText": "",
+                    "startDate": "2022-03-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 9419,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "MALADY KYLE",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2022-03-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 13725,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "ERWIN TAMI A",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2022-03-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1558,
+                    "value": 84880,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 54.48 per share.",
+                    "filerName": "SILLIMAN CRAIG L",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2022-03-03",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 11450,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "QURESHI RIMA",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2022-03-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 5077,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SKIADAS ANTHONY T",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2022-03-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 12086,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SILLIMAN CRAIG L",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2022-03-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 15902,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "ELLIS MATTHEW D.",
+                    "filerRelation": "Chief Financial Officer",
+                    "moneyText": "",
+                    "startDate": "2022-03-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 33841,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "VESTBERG HANS ERIK",
+                    "filerRelation": "Chief Executive Officer",
+                    "moneyText": "",
+                    "startDate": "2022-03-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 11450,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "MALADY KYLE",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2022-03-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 14630,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "ERWIN TAMI A",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2022-03-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 12167,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "QURESHI RIMA",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2022-03-01",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 5296,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SKIADAS ANTHONY T",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2022-03-01",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 12608,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SILLIMAN CRAIG L",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2022-03-01",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 16454,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "ELLIS MATTHEW D.",
+                    "filerRelation": "Chief Financial Officer",
+                    "moneyText": "",
+                    "startDate": "2022-03-01",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 36565,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "VESTBERG HANS ERIK",
+                    "filerRelation": "Chief Executive Officer",
+                    "moneyText": "",
+                    "startDate": "2022-03-01",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 13238,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "MALADY KYLE",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2022-03-01",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 16454,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "ERWIN TAMI A",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2022-03-01",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 2284,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "HAMMOCK SAMANTHA",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2022-03-01",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 19000,
+                    "value": 998450,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 52.55 per share.",
+                    "filerName": "VESTBERG HANS ERIK",
+                    "filerRelation": "Chief Executive Officer",
+                    "moneyText": "",
+                    "startDate": "2022-01-26",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 4149,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "HAMMOCK SAMANTHA",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2022-01-04",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1554,
+                    "value": 80808,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 52.00 per share.",
+                    "filerName": "SILLIMAN CRAIG L",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-12-16",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1554,
+                    "value": 82222,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 52.91 per share.",
+                    "filerName": "SILLIMAN CRAIG L",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-11-04",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1554,
+                    "value": 84615,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 54.45 per share.",
+                    "filerName": "SILLIMAN CRAIG L",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-10-04",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1554,
+                    "value": 86061,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 55.38 per share.",
+                    "filerName": "SILLIMAN CRAIG L",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-09-07",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 14077,
+                    "value": 782118,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 55.56 per share.",
+                    "filerName": "GOWRAPPAN KUMARA GURU",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-08-11",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1554,
+                    "value": 86356,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 55.57 per share.",
+                    "filerName": "SILLIMAN CRAIG L",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-08-04",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 33261,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "PAMBIANCHI CHRISTINE MICHAEL",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-07-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1555,
+                    "value": 87780,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 56.45 per share.",
+                    "filerName": "SILLIMAN CRAIG L",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-07-06",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1555,
+                    "value": 88480,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 56.90 per share.",
+                    "filerName": "SILLIMAN CRAIG L",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-06-04",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 43238,
+                    "value": 2569202,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 59.42 per share.",
+                    "filerName": "GOWRAPPAN KUMARA GURU",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-05-10",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1555,
+                    "value": 90159,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 57.98 per share.",
+                    "filerName": "SILLIMAN CRAIG L",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-05-04",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 35000,
+                    "value": 2039100,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 58.26 per share.",
+                    "filerName": "ERWIN TAMI A",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-05-03",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 114182,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "GOWRAPPAN KUMARA GURU",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-04-09",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1555,
+                    "value": 91014,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 58.53 per share.",
+                    "filerName": "SILLIMAN CRAIG L",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-04-05",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 10458,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "QURESHI RIMA",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-03-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 4241,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SKIADAS ANTHONY T",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-03-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 10458,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SILLIMAN CRAIG L",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-03-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 14650,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "ELLIS MATTHEW D.",
+                    "filerRelation": "Chief Financial Officer",
+                    "moneyText": "",
+                    "startDate": "2021-03-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 30842,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "VESTBERG HANS ERIK",
+                    "filerRelation": "Chief Executive Officer",
+                    "moneyText": "",
+                    "startDate": "2021-03-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 15421,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "DUNNE RONAN",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-03-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 13108,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "GOWRAPPAN KUMARA GURU",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-03-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 8995,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "MALADY KYLE",
+                    "filerRelation": "Chief Technology Officer",
+                    "moneyText": "",
+                    "startDate": "2021-03-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 13108,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "ERWIN TAMI A",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-03-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 11659,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "QURESHI RIMA",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-03-05",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 4025,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SKIADAS ANTHONY T",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-03-05",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 11659,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SILLIMAN CRAIG L",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-03-05",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 14922,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "ELLIS MATTHEW D.",
+                    "filerRelation": "Chief Financial Officer",
+                    "moneyText": "",
+                    "startDate": "2021-03-05",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 20518,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "VESTBERG HANS ERIK",
+                    "filerRelation": "Chief Executive Officer",
+                    "moneyText": "",
+                    "startDate": "2021-03-05",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 13212,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "DUNNE RONAN",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-03-05",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 4663,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "MALADY KYLE",
+                    "filerRelation": "Chief Technology Officer",
+                    "moneyText": "",
+                    "startDate": "2021-03-05",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 10493,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "ERWIN TAMI A",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-03-05",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1555,
+                    "value": 86458,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 55.60 per share.",
+                    "filerName": "SILLIMAN CRAIG L",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-03-04",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 10935,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "QURESHI RIMA",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-03-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 4847,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SKIADAS ANTHONY T",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-03-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 9964,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "PAMBIANCHI CHRISTINE MICHAEL",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-03-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 11543,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SILLIMAN CRAIG L",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-03-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 15188,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "ELLIS MATTHEW D.",
+                    "filerRelation": "Chief Financial Officer",
+                    "moneyText": "",
+                    "startDate": "2021-03-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 32321,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "VESTBERG HANS ERIK",
+                    "filerRelation": "Chief Executive Officer",
+                    "moneyText": "",
+                    "startDate": "2021-03-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 16403,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "DUNNE RONAN",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-03-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 13973,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "GOWRAPPAN KUMARA GURU",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-03-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 10935,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "MALADY KYLE",
+                    "filerRelation": "Chief Technology Officer",
+                    "moneyText": "",
+                    "startDate": "2021-03-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 13973,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "ERWIN TAMI A",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-03-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 45706,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "DUNNE RONAN",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-02-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 45706,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "ERWIN TAMI A",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-02-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 29189,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "QURESHI RIMA",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2020-11-06",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 10411,
+                    "value": 601027,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 57.73 per share.",
+                    "filerName": "SILLIMAN CRAIG L",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2020-11-02",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 31835,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "PAMBIANCHI CHRISTINE MICHAEL",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2020-07-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 74669,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "VESTBERG HANS ERIK",
+                    "filerRelation": "Chief Executive Officer",
+                    "moneyText": "",
+                    "startDate": "2020-05-04",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 10744,
+                    "value": 613429,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 57.02 - 57.64 per share.",
+                    "filerName": "SKIADAS ANTHONY T",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2020-05-01",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 39531,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "GOWRAPPAN KUMARA GURU",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2020-04-09",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 13957,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "VESTBERG HANS ERIK",
+                    "filerRelation": "Chief Executive Officer",
+                    "moneyText": "",
+                    "startDate": "2020-04-03",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 21168,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "QURESHI RIMA",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2020-03-06",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 7912,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SKIADAS ANTHONY T",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2020-03-06",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 13,
+                    "value": 736,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 56.64 per share.",
+                    "filerName": "PAMBIANCHI CHRISTINE MICHAEL",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2020-03-06",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 21168,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SILLIMAN CRAIG L",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2020-03-06",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 28305,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "ELLIS MATTHEW D.",
+                    "filerRelation": "Chief Financial Officer",
+                    "moneyText": "",
+                    "startDate": "2020-03-06",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 49160,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "VESTBERG HANS ERIK",
+                    "filerRelation": "Chief Executive Officer",
+                    "moneyText": "",
+                    "startDate": "2020-03-06",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 27408,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "DUNNE RONAN",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2020-03-06",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 12547,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "GOWRAPPAN KUMARA GURU",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2020-03-06",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 13074,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "MALADY KYLE",
+                    "filerRelation": "Chief Technology Officer",
+                    "moneyText": "",
+                    "startDate": "2020-03-06",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 22590,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "ERWIN TAMI A",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2020-03-06",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 4249,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SKIADAS ANTHONY T",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2020-03-03",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 10658,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SILLIMAN CRAIG L",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2020-03-03",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 9707,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "ELLIS MATTHEW D.",
+                    "filerRelation": "Chief Financial Officer",
+                    "moneyText": "",
+                    "startDate": "2020-03-03",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 9421,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "DUNNE RONAN",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2020-03-03",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 2376,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "MALADY KYLE",
+                    "filerRelation": "Chief Technology Officer",
+                    "moneyText": "",
+                    "startDate": "2020-03-03",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 8754,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "ERWIN TAMI A",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2020-03-03",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 18839,
+                    "value": 1007321,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 53.47 per share.",
+                    "filerName": "DUNNE RONAN",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2020-02-28",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 10775,
+                    "value": 621195,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 57.32 - 58.10 per share.",
+                    "filerName": "SKIADAS ANTHONY T",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2020-02-25",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 44115,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SKIADAS ANTHONY T",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2019-12-31",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1346,
+                    "value": 80154,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 59.55 per share.",
+                    "filerName": "SILLIMAN CRAIG L",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2019-11-26",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 27965,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "QURESHI RIMA",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2019-11-06",
+                    "ownership": "D"
+                }
+            ],
+            "maxAge": 1
+        },
+        "insiderHolders": {
+            "holders": [
+                {
+                    "maxAge": 1,
+                    "name": "HAMMOCK SAMANTHA",
+                    "relation": "Officer",
+                    "url": "",
+                    "transactionDescription": "Conversion of Exercise of derivative security",
+                    "latestTransDate": "2024-01-04",
+                    "positionDirect": 2975,
+                    "positionDirectDate": "2024-01-04"
+                },
+                {
+                    "maxAge": 1,
+                    "name": "MALADY KYLE",
+                    "relation": "Officer",
+                    "url": "",
+                    "transactionDescription": "Sale",
+                    "latestTransDate": "2023-03-15",
+                    "positionDirect": 84053,
+                    "positionDirectDate": "2023-03-15"
+                },
+                {
+                    "maxAge": 1,
+                    "name": "QURESHI RIMA",
+                    "relation": "Officer",
+                    "url": "",
+                    "transactionDescription": "Conversion of Exercise of derivative security",
+                    "latestTransDate": "2023-03-02",
+                    "positionDirect": 92797,
+                    "positionDirectDate": "2023-03-02"
+                },
+                {
+                    "maxAge": 1,
+                    "name": "RUSSO JOSEPH J.",
+                    "relation": "Officer",
+                    "url": "",
+                    "transactionDescription": "Conversion of Exercise of derivative security",
+                    "latestTransDate": "2023-12-01",
+                    "positionDirect": 17038,
+                    "positionDirectDate": "2023-12-01"
+                },
+                {
+                    "maxAge": 1,
+                    "name": "SAMPATH SOWMYANARAYAN",
+                    "relation": "Officer",
+                    "url": "",
+                    "transactionDescription": "Conversion of Exercise of derivative security",
+                    "latestTransDate": "2023-11-02",
+                    "positionDirect": 63524,
+                    "positionDirectDate": "2023-11-02"
+                },
+                {
+                    "maxAge": 1,
+                    "name": "SILLIMAN CRAIG L",
+                    "relation": "Officer",
+                    "url": "",
+                    "transactionDescription": "Sale",
+                    "latestTransDate": "2023-12-11",
+                    "positionDirect": 51373,
+                    "positionDirectDate": "2023-12-11"
+                },
+                {
+                    "maxAge": 1,
+                    "name": "SKIADAS ANTHONY T",
+                    "relation": "Chief Financial Officer",
+                    "url": "",
+                    "transactionDescription": "Conversion of Exercise of derivative security",
+                    "latestTransDate": "2023-11-02",
+                    "positionDirect": 62844,
+                    "positionDirectDate": "2023-11-02"
+                },
+                {
+                    "maxAge": 1,
+                    "name": "STILLWELL MARY-LEE",
+                    "relation": "Officer",
+                    "url": "",
+                    "transactionDescription": "Conversion of Exercise of derivative security",
+                    "latestTransDate": "2023-11-02",
+                    "positionDirect": 7167,
+                    "positionDirectDate": "2023-11-02"
+                },
+                {
+                    "maxAge": 1,
+                    "name": "VENKATESH VANDANA",
+                    "relation": "Officer",
+                    "url": "",
+                    "transactionDescription": "Conversion of Exercise of derivative security",
+                    "latestTransDate": "2023-11-02",
+                    "positionDirect": 20096,
+                    "positionDirectDate": "2023-11-02"
+                },
+                {
+                    "maxAge": 1,
+                    "name": "VESTBERG HANS ERIK",
+                    "relation": "Chief Executive Officer",
+                    "url": "",
+                    "transactionDescription": "Stock Award(Grant)",
+                    "latestTransDate": "2023-09-29",
+                    "positionDirect": 419767,
+                    "positionDirectDate": "2023-09-29"
+                }
+            ],
+            "maxAge": 1
+        },
+        "fundOwnership": {
+            "maxAge": 1,
+            "ownershipList": [
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Vanguard Total Stock Market Index Fund",
+                    "pctHeld": 0.027999999,
+                    "position": 117777121,
+                    "value": 4961950233,
+                    "pctChange": -0.0022
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Vanguard 500 Index Fund",
+                    "pctHeld": 0.024,
+                    "position": 101020024,
+                    "value": 4255973719,
+                    "pctChange": 0.0092
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-11-30",
+                    "organization": "Schwab Strategic Tr-Schwab U.S. Dividend Equity ETF",
+                    "pctHeld": 0.0138,
+                    "position": 57874702,
+                    "value": 2438261257,
+                    "pctChange": 0.0727
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-12-31",
+                    "organization": "Fidelity 500 Index Fund",
+                    "pctHeld": 0.0117999995,
+                    "position": 49403468,
+                    "value": 2081368159,
+                    "pctChange": 0.0085
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-11-30",
+                    "organization": "SPDR S&P 500 ETF Trust",
+                    "pctHeld": 0.0113,
+                    "position": 47682207,
+                    "value": 2008851431,
+                    "pctChange": 0.013099999
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-11-30",
+                    "organization": "iShares Core S&P 500 ETF",
+                    "pctHeld": 0.0099,
+                    "position": 41432234,
+                    "value": 1745540062,
+                    "pctChange": 0.0174
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Vanguard Index-Value Index Fund",
+                    "pctHeld": 0.0077,
+                    "position": 32446772,
+                    "value": 1366982539,
+                    "pctChange": -0.0128999995
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Vanguard Institutional Index Fund-Institutional Index Fund",
+                    "pctHeld": 0.0067000003,
+                    "position": 28209280,
+                    "value": 1188456996,
+                    "pctChange": -0.017
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-11-30",
+                    "organization": "SPDR (R) Idx Shares-SPDR Communication Services Select Sector ETF",
+                    "pctHeld": 0.0047999998,
+                    "position": 20015545,
+                    "value": 843254932,
+                    "pctChange": 0.0452
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-10-31",
+                    "organization": "Vanguard Whitehall Funds-High Dividend Yield Index Fund",
+                    "pctHeld": 0.0045,
+                    "position": 18987918,
+                    "value": 799961005,
+                    "pctChange": 0.0018000001
+                }
+            ]
+        }
+    },
+    "fcfPerShare": 2.060904871471452,
+    "fcfYield": 0.04891775056958671
 }

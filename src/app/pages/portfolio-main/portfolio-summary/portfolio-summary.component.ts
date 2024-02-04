@@ -71,10 +71,10 @@ export class PortfolioSummaryComponent implements OnInit {
     this.dataService.portfolioSymbols.forEach((symbol: any) => {
       const position = this.portfolioHoldings[symbol]
       const stock = this.portfolioData[symbol]
-      if (market_sectors[stock.assetProfile.sector]) {
-        market_sectors[stock.assetProfile.sector] += position.marketValue;
+      if (market_sectors[stock.profile.sector]) {
+        market_sectors[stock.profile.sector] += position.marketValue;
       } else {
-        market_sectors[stock.assetProfile.sector] = position.marketValue;
+        market_sectors[stock.profile.sector] = position.marketValue;
       }
     });
     market_sectors['ETF'] = market_sectors['undefined'];
@@ -94,7 +94,7 @@ export class PortfolioSummaryComponent implements OnInit {
         const position = this.portfolioHoldings[symbol]
         const stock = this.portfolioData[symbol]
         this.allMarketValueData.push({
-          name: stock.price.symbol,
+          name: stock.symbol,
           series: [
             {
               name: 'Cost Basis',
@@ -105,13 +105,13 @@ export class PortfolioSummaryComponent implements OnInit {
               value: position.unrealizedGain,
             },
           ],
-          sector: stock.assetProfile?.sector || 'ETF',
+          sector: stock.profile?.sector || 'ETF',
         });
 
         this.allPortfolioPercentData.push({
-          name: stock.price.symbol,
+          name: stock.symbol,
           value: position.marketValue / this.portfolioHoldings.portfolioMarketValue * 100,
-          sector: stock.assetProfile?.sector || 'ETF',
+          sector: stock.profile?.sector || 'ETF',
         });
       });
     this.marketValueBarChartData = this.allMarketValueData;
@@ -126,9 +126,9 @@ export class PortfolioSummaryComponent implements OnInit {
       .forEach((symbol: any) => {
         const stock = this.portfolioData[symbol]
         this.allUnrealizedGainData.push({
-          name: stock.price?.symbol,
+          name: stock.symbol,
           value: this.portfolioHoldings[symbol].unrealizedGainPercent * 100 || 0,
-          sector: stock.assetProfile?.sector || 'ETF',
+          sector: stock.profile?.sector || 'ETF',
         })
       })
     this.unrealizedGainBarChartData = this.allUnrealizedGainData;
@@ -142,9 +142,9 @@ export class PortfolioSummaryComponent implements OnInit {
       .forEach((symbol: any) => {
         const stock = this.portfolioData[symbol]
         this.allDividendData.push({
-          name: stock.price.symbol,
+          name: stock.symbol,
           value: this.portfolioHoldings[symbol].dividendIncome,
-          sector: stock.assetProfile?.sector || 'ETF',
+          sector: stock.profile?.sector || 'ETF',
         })
       });
     this.dividendBarChartData = this.allDividendData;
@@ -155,9 +155,9 @@ export class PortfolioSummaryComponent implements OnInit {
       .forEach((symbol: any) => {
         const stock = this.portfolioData[symbol]
         this.allYocData.push({
-          name: stock.price.symbol,
+          name: stock.symbol,
           value: this.portfolioHoldings[symbol].yieldOnCost,
-          sector: stock.assetProfile?.sector || 'ETF',
+          sector: stock.profile?.sector || 'ETF',
         });
       });
     this.yocBarChartData = this.allYocData;

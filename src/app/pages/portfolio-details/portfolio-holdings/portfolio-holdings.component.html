@@ -57,28 +57,27 @@
             value="costAverage"
             [ngStyle]="{ color: getColColor(stock, cidx) }"
           >
-            ${{ stock.costAverage.toFixed(2) }}
+            ${{ portfolioHoldings[stock.symbol].costAverage.toFixed(2) }}
           </span>
           <span
             disabled
             value="shares"
-            [ngStyle]="{ color: 'darkgray' }"
+            [ngStyle]="{ color: 'slateblue' }"
           >
-            x{{ stock.sharesOwned }} =
+            x{{ portfolioHoldings[stock.symbol].sharesOwned }} =
           </span>
           <span
             disabled
             value="matketValue"
-            [ngStyle]="{ color: 'darkgray' }"
           >
-            ${{ stock.totalCost.toFixed(2) }}
+            ${{ portfolioHoldings[stock.symbol].totalCost.toFixed(2) }}
           </span>
         </div>
       </div>
 
       <div *ngIf="cidx === 4; else elseBlock" (click)="expandRow(stock)">
         <div [ngStyle]="{ color: getColColor(stock, cidx) }">
-          {{ stock.unrealizedGain | currency }}
+          {{ portfolioHoldings[stock.symbol].unrealizedGain | currency }}
         </div>
       </div>
 

@@ -1,5 +1,5 @@
 {
-    "assetProfile": {
+    "profile": {
         "address1": "225 West Washington Street",
         "city": "Indianapolis",
         "state": "IN",
@@ -127,192 +127,175 @@
         "compensationAsOfEpochDate": "2022-12-30 19:00:00",
         "maxAge": 86400
     },
-    "recommendationTrend": {
-        "trend": [
-            {
-                "period": "0m",
-                "strongBuy": 7,
-                "buy": 10,
-                "hold": 5,
-                "sell": 0,
-                "strongSell": 0
-            },
-            {
-                "period": "-1m",
-                "strongBuy": 4,
-                "buy": 3,
-                "hold": 11,
-                "sell": 0,
-                "strongSell": 0
-            },
-            {
-                "period": "-2m",
-                "strongBuy": 4,
-                "buy": 3,
-                "hold": 11,
-                "sell": 0,
-                "strongSell": 0
-            },
-            {
-                "period": "-3m",
-                "strongBuy": 4,
-                "buy": 5,
-                "hold": 10,
-                "sell": 0,
-                "strongSell": 0
-            }
-        ],
-        "maxAge": 86400
-    },
-    "cashflowStatementHistory": {
-        "cashflowStatements": [
-            {
-                "maxAge": 1,
-                "endDate": "2022-12-31",
-                "netIncome": 2139535000
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2021-12-31",
-                "netIncome": 2249631000
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2020-12-31",
-                "netIncome": 1112564000
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2019-12-31",
-                "netIncome": 2101584000
-            }
-        ],
-        "maxAge": 86400
-    },
-    "institutionOwnership": {
+    "postMarketChangePercent": 0.000434954,
+    "postMarketChange": 0.05999756,
+    "postMarketPrice": 138.0,
+    "regularMarketChangePercent": -0.0104734,
+    "regularMarketChange": -1.45999,
+    "regularMarketPrice": 137.94,
+    "regularMarketDayHigh": 138.98,
+    "regularMarketDayLow": 135.665,
+    "regularMarketVolume": 2028662,
+    "averageDailyVolume10Day": 1626440,
+    "averageDailyVolume3Month": 1497790,
+    "regularMarketPreviousClose": 139.4,
+    "regularMarketOpen": 137.38,
+    "exchange": "NYQ",
+    "exchangeName": "NYSE",
+    "quoteType": "EQUITY",
+    "symbol": "SPG",
+    "shortName": "Simon Property Group, Inc.",
+    "longName": "Simon Property Group, Inc.",
+    "marketCap": 51752329216,
+    "previousClose": 139.4,
+    "open": 137.38,
+    "dayLow": 135.665,
+    "dayHigh": 138.98,
+    "dividendRate": 7.6,
+    "dividendYield": 0.0551,
+    "exDividendDate": "2023-12-06 19:00:00",
+    "payoutRatio": 1.0905,
+    "fiveYearAvgDividendYield": 6.26,
+    "beta": 1.666,
+    "trailingPE": 20.435556,
+    "forwardPE": 21.860538,
+    "volume": 2028662,
+    "averageVolume": 1497790,
+    "averageVolume10days": 1626440,
+    "fiftyTwoWeekLow": 100.17,
+    "fiftyTwoWeekHigh": 146.91,
+    "priceToSalesTrailing12Months": 9.3562765,
+    "fiftyDayAverage": 137.9152,
+    "twoHundredDayAverage": 118.99125,
+    "trailingAnnualDividendRate": 7.35,
+    "trailingAnnualDividendYield": 0.05272597,
+    "enterpriseValue": 70342451200,
+    "profitMargins": 0.39944,
+    "floatShares": 322714154,
+    "sharesOutstanding": 326239008,
+    "sharesShort": 4351432,
+    "sharesShortPriorMonth": 5444910,
+    "sharesShortPreviousMonthDate": "2023-12-14 19:00:00",
+    "dateShortInterest": "2024-01-11 19:00:00",
+    "sharesPercentSharesOut": 0.013300001,
+    "heldPercentInsiders": 0.0093,
+    "heldPercentInstitutions": 0.91634005,
+    "shortRatio": 2.87,
+    "shortPercentOfFloat": 0.018099999,
+    "impliedSharesOutstanding": 8000,
+    "bookValue": 8.924,
+    "priceToBook": 15.457194,
+    "lastFiscalYearEnd": "2022-12-30 19:00:00",
+    "nextFiscalYearEnd": "2023-12-30 19:00:00",
+    "mostRecentQuarter": "2023-09-29 20:00:00",
+    "earningsQuarterlyGrowth": 0.102,
+    "netIncomeToCommon": 2206095104,
+    "trailingEps": 6.75,
+    "forwardEps": 6.31,
+    "pegRatio": 2.57,
+    "enterpriseToRevenue": 12.717,
+    "enterpriseToEbitda": 17.627,
+    "52WeekChange": 0.07229483,
+    "SandP52WeekChange": 0.20615757,
+    "lastDividendValue": 1.9,
+    "lastDividendDate": 1701907200,
+    "calendarEvents": {
         "maxAge": 1,
-        "ownershipList": [
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Vanguard Group Inc",
-                "pctHeld": 0.14140001,
-                "position": 46115129,
-                "value": 6361121006,
-                "pctChange": -0.003
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Blackrock Inc.",
-                "pctHeld": 0.1027,
-                "position": 33515566,
-                "value": 4623137255,
-                "pctChange": -0.0145000005
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Cohen & Steers Inc.",
-                "pctHeld": 0.0719,
-                "position": 23452689,
-                "value": 3235063977,
-                "pctChange": -0.0401
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "State Street Corporation",
-                "pctHeld": 0.0682,
-                "position": 22240369,
-                "value": 3067836554,
-                "pctChange": -0.0159
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Geode Capital Management, LLC",
-                "pctHeld": 0.026199998,
-                "position": 8538503,
-                "value": 1177801124,
-                "pctChange": 0.1171
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2022-12-31",
-                "organization": "Norges Bank Investment Management",
-                "pctHeld": 0.0211,
-                "position": 6876806,
-                "value": 948586636,
-                "pctChange": 1.0
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "FMR, LLC",
-                "pctHeld": 0.0182,
-                "position": 5931151,
-                "value": 818142983,
-                "pctChange": -0.0861
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Morgan Stanley",
-                "pctHeld": 0.0179,
-                "position": 5840541,
-                "value": 805644239,
-                "pctChange": 0.0021
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-12-31",
-                "organization": "Daiwa Securities Group Inc.",
-                "pctHeld": 0.0150999995,
-                "position": 4917587,
-                "value": 678331962,
-                "pctChange": -0.0493
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Price (T.Rowe) Associates Inc",
-                "pctHeld": 0.0149,
-                "position": 4860988,
-                "value": 670524696,
-                "pctChange": 0.21209998
-            }
-        ]
+        "earnings": {
+            "earningsDate": [
+                "2024-02-05 05:59:S",
+                "2024-02-09 07:00:S"
+            ],
+            "earningsAverage": 1.86,
+            "earningsLow": 1.74,
+            "earningsHigh": 2.07,
+            "revenueAverage": 1358820000,
+            "revenueLow": 1313030000,
+            "revenueHigh": 1389300000
+        },
+        "exDividendDate": "2023-12-06 19:00:00",
+        "dividendDate": "2023-12-28 19:00:00"
     },
-    "majorHoldersBreakdown": {
+    "earnings": {
         "maxAge": 1,
-        "insidersPercentHeld": 0.0093,
-        "institutionsPercentHeld": 0.91634005,
-        "institutionsFloatPercentHeld": 0.92494005,
-        "institutionsCount": 1404
-    },
-    "balanceSheetHistoryQuarterly": {
-        "balanceSheetStatements": [
-            {
-                "maxAge": 1,
-                "endDate": "2023-09-30"
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2023-06-30"
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2023-03-31"
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2022-12-31"
-            }
-        ],
-        "maxAge": 86400
-    },
-    "earningsHistory": {
+        "earningsChart": {
+            "quarterly": [
+                {
+                    "date": "4Q2022",
+                    "actual": 2.06,
+                    "estimate": 1.7
+                },
+                {
+                    "date": "1Q2023",
+                    "actual": 1.38,
+                    "estimate": 1.39
+                },
+                {
+                    "date": "2Q2023",
+                    "actual": 1.49,
+                    "estimate": 1.54
+                },
+                {
+                    "date": "3Q2023",
+                    "actual": 1.82,
+                    "estimate": 1.55
+                }
+            ],
+            "currentQuarterEstimate": 1.86,
+            "currentQuarterEstimateDate": "4Q",
+            "currentQuarterEstimateYear": 2023,
+            "earningsDate": [
+                "2024-02-05 05:59:S",
+                "2024-02-09 07:00:S"
+            ]
+        },
+        "financialsChart": {
+            "yearly": [
+                {
+                    "date": 2019,
+                    "revenue": 5660489000,
+                    "earnings": 2101584000
+                },
+                {
+                    "date": 2020,
+                    "revenue": 4604042000,
+                    "earnings": 1112564000
+                },
+                {
+                    "date": 2021,
+                    "revenue": 5114689000,
+                    "earnings": 2249631000
+                },
+                {
+                    "date": 2022,
+                    "revenue": 5291447000,
+                    "earnings": 2139535000
+                }
+            ],
+            "quarterly": [
+                {
+                    "date": "4Q2022",
+                    "revenue": 1399897000,
+                    "earnings": 674620000
+                },
+                {
+                    "date": "1Q2023",
+                    "revenue": 1350849000,
+                    "earnings": 452661000
+                },
+                {
+                    "date": "2Q2023",
+                    "revenue": 1369601000,
+                    "earnings": 487177000
+                },
+                {
+                    "date": "3Q2023",
+                    "revenue": 1410948000,
+                    "earnings": 594973000
+                }
+            ]
+        },
+        "financialCurrency": "USD",
         "history": [
             {
                 "maxAge": 1,
@@ -351,1863 +334,305 @@
                 "period": "-1q"
             }
         ],
-        "maxAge": 86400
-    },
-    "indexTrend": {
-        "maxAge": 1,
-        "symbol": "SP5",
-        "peRatio": 16.5677,
-        "pegRatio": 1.05476,
-        "estimates": [
+        "trend": [
             {
+                "maxAge": 1,
                 "period": "0q",
-                "growth": 0.051999997
+                "endDate": "2023-12-31",
+                "growth": -0.096999995,
+                "earningsEstimate": {
+                    "avg": 1.86,
+                    "low": 1.74,
+                    "high": 2.07,
+                    "yearAgoEps": 2.06,
+                    "numberOfAnalysts": 4,
+                    "growth": -0.096999995
+                },
+                "revenueEstimate": {
+                    "avg": 1358820000,
+                    "low": 1313030000,
+                    "high": 1389300000,
+                    "numberOfAnalysts": 9,
+                    "yearAgoRevenue": 1287140000,
+                    "growth": 0.055999998
+                },
+                "epsTrend": {
+                    "current": 1.86,
+                    "7daysAgo": 1.86,
+                    "30daysAgo": 1.86,
+                    "60daysAgo": 1.9,
+                    "90daysAgo": 2.07
+                },
+                "epsRevisions": {
+                    "upLast7days": 0,
+                    "upLast30days": 0,
+                    "downLast30days": 0,
+                    "downLast90days": {}
+                }
             },
             {
+                "maxAge": 1,
                 "period": "+1q",
-                "growth": 0.091000006
+                "endDate": "2024-03-31",
+                "growth": 0.029000001,
+                "earningsEstimate": {
+                    "avg": 1.42,
+                    "low": 1.27,
+                    "high": 1.58,
+                    "yearAgoEps": 1.38,
+                    "numberOfAnalysts": 3,
+                    "growth": 0.029000001
+                },
+                "revenueEstimate": {
+                    "avg": 1280810000,
+                    "low": 1218540000,
+                    "high": 1315800000,
+                    "numberOfAnalysts": 7,
+                    "yearAgoRevenue": 1239040000,
+                    "growth": 0.034
+                },
+                "epsTrend": {
+                    "current": 1.42,
+                    "7daysAgo": 1.42,
+                    "30daysAgo": 1.42,
+                    "60daysAgo": 1.33,
+                    "90daysAgo": 1.4
+                },
+                "epsRevisions": {
+                    "upLast7days": 0,
+                    "upLast30days": 0,
+                    "downLast30days": 1,
+                    "downLast90days": {}
+                }
             },
             {
+                "maxAge": 1,
                 "period": "0y",
-                "growth": 0.03
+                "endDate": "2023-12-31",
+                "growth": -0.032,
+                "earningsEstimate": {
+                    "avg": 6.31,
+                    "low": 5.47,
+                    "high": 6.76,
+                    "yearAgoEps": 6.52,
+                    "numberOfAnalysts": 4,
+                    "growth": -0.032
+                },
+                "revenueEstimate": {
+                    "avg": 5140110000,
+                    "low": 4906230000,
+                    "high": 5205100000,
+                    "numberOfAnalysts": 11,
+                    "yearAgoRevenue": 4905170000,
+                    "growth": 0.048
+                },
+                "epsTrend": {
+                    "current": 6.31,
+                    "7daysAgo": 6.31,
+                    "30daysAgo": 6.31,
+                    "60daysAgo": 6.11,
+                    "90daysAgo": 6.11
+                },
+                "epsRevisions": {
+                    "upLast7days": 0,
+                    "upLast30days": 0,
+                    "downLast30days": 0,
+                    "downLast90days": {}
+                }
             },
             {
+                "maxAge": 1,
                 "period": "+1y",
-                "growth": 0.099
+                "endDate": "2024-12-31",
+                "growth": 0.0,
+                "earningsEstimate": {
+                    "avg": 6.31,
+                    "low": 5.84,
+                    "high": 6.77,
+                    "yearAgoEps": 6.31,
+                    "numberOfAnalysts": 5,
+                    "growth": 0.0
+                },
+                "revenueEstimate": {
+                    "avg": 5315570000,
+                    "low": 5114330000,
+                    "high": 5548380000,
+                    "numberOfAnalysts": 11,
+                    "yearAgoRevenue": 5140110000,
+                    "growth": 0.034
+                },
+                "epsTrend": {
+                    "current": 6.31,
+                    "7daysAgo": 6.31,
+                    "30daysAgo": 6.31,
+                    "60daysAgo": 6.17,
+                    "90daysAgo": 6.3
+                },
+                "epsRevisions": {
+                    "upLast7days": 0,
+                    "upLast30days": 0,
+                    "downLast30days": 1,
+                    "downLast90days": {}
+                }
             },
             {
+                "maxAge": 1,
                 "period": "+5y",
-                "growth": 0.0970399
+                "endDate": null,
+                "growth": 0.086,
+                "earningsEstimate": {
+                    "avg": {},
+                    "low": {},
+                    "high": {},
+                    "yearAgoEps": {},
+                    "numberOfAnalysts": {},
+                    "growth": {}
+                },
+                "revenueEstimate": {
+                    "avg": {},
+                    "low": {},
+                    "high": {},
+                    "numberOfAnalysts": {},
+                    "yearAgoRevenue": {},
+                    "growth": {}
+                },
+                "epsTrend": {
+                    "current": {},
+                    "7daysAgo": {},
+                    "30daysAgo": {},
+                    "60daysAgo": {},
+                    "90daysAgo": {}
+                },
+                "epsRevisions": {
+                    "upLast7days": {},
+                    "upLast30days": {},
+                    "downLast30days": {},
+                    "downLast90days": {}
+                }
             },
             {
-                "period": "-5y"
+                "maxAge": 1,
+                "period": "-5y",
+                "endDate": null,
+                "growth": -0.013660001,
+                "earningsEstimate": {
+                    "avg": {},
+                    "low": {},
+                    "high": {},
+                    "yearAgoEps": {},
+                    "numberOfAnalysts": {},
+                    "growth": {}
+                },
+                "revenueEstimate": {
+                    "avg": {},
+                    "low": {},
+                    "high": {},
+                    "numberOfAnalysts": {},
+                    "yearAgoRevenue": {},
+                    "growth": {}
+                },
+                "epsTrend": {
+                    "current": {},
+                    "7daysAgo": {},
+                    "30daysAgo": {},
+                    "60daysAgo": {},
+                    "90daysAgo": {}
+                },
+                "epsRevisions": {
+                    "upLast7days": {},
+                    "upLast30days": {},
+                    "downLast30days": {},
+                    "downLast90days": {}
+                }
             }
         ]
     },
-    "defaultKeyStatistics": {
-        "maxAge": 1,
-        "priceHint": 2,
-        "enterpriseValue": 70342451200,
-        "forwardPE": 21.860538,
-        "profitMargins": 0.39944,
-        "floatShares": 322714154,
-        "sharesOutstanding": 326239008,
-        "sharesShort": 4351432,
-        "sharesShortPriorMonth": 5444910,
-        "sharesShortPreviousMonthDate": "2023-12-14 19:00:00",
-        "dateShortInterest": "2024-01-11 19:00:00",
-        "sharesPercentSharesOut": 0.013300001,
-        "heldPercentInsiders": 0.0093,
-        "heldPercentInstitutions": 0.91634005,
-        "shortRatio": 2.87,
-        "shortPercentOfFloat": 0.018099999,
-        "beta": 1.666,
-        "impliedSharesOutstanding": 8000,
-        "category": null,
-        "bookValue": 8.924,
-        "priceToBook": 15.457194,
-        "fundFamily": null,
-        "legalType": null,
-        "lastFiscalYearEnd": "2022-12-30 19:00:00",
-        "nextFiscalYearEnd": "2023-12-30 19:00:00",
-        "mostRecentQuarter": "2023-09-29 20:00:00",
-        "earningsQuarterlyGrowth": 0.102,
-        "netIncomeToCommon": 2206095104,
-        "trailingEps": 6.75,
-        "forwardEps": 6.31,
-        "pegRatio": 2.57,
-        "lastSplitFactor": "1063:1000",
-        "lastSplitDate": "2014-05-28 20:00:00",
-        "enterpriseToRevenue": 12.717,
-        "enterpriseToEbitda": 17.627,
-        "52WeekChange": 0.07229483,
-        "SandP52WeekChange": 0.20615757,
-        "lastDividendValue": 1.9,
-        "lastDividendDate": 1701907200
-    },
-    "insiderTransactions": {
-        "transactions": [
+    "cashflowHistory": {
+        "annual": [
             {
                 "maxAge": 1,
-                "shares": 396,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "JONES NINA P.",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2024-01-11",
-                "ownership": "D"
+                "endDate": "2022-12-31",
+                "netIncome": 2139535000
             },
             {
                 "maxAge": 1,
-                "shares": 23172,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SIMON DAVID E",
-                "filerRelation": "Chief Executive Officer",
-                "moneyText": "",
-                "startDate": "2023-12-29",
-                "ownership": "D"
+                "endDate": "2021-12-31",
+                "netIncome": 2249631000
             },
             {
                 "maxAge": 1,
-                "shares": 5793,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "FIVEL STEVEN E",
-                "filerRelation": "General Counsel",
-                "moneyText": "",
-                "startDate": "2023-12-29",
-                "ownership": "D"
+                "endDate": "2020-12-31",
+                "netIncome": 1112564000
             },
             {
                 "maxAge": 1,
-                "shares": 5793,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "RULLI JOHN",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-12-29",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 5793,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "MCDADE BRIAN J",
-                "filerRelation": "Chief Financial Officer",
-                "moneyText": "",
-                "startDate": "2023-12-29",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 2896,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "REUILLE ADAM J.",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-12-29",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 3862,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SIMON ELI",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-12-29",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1545,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "KELLY KEVIN M",
-                "filerRelation": "General Counsel",
-                "moneyText": "",
-                "startDate": "2023-12-29",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 2896,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "FREY DONALD G",
-                "filerRelation": "Officer and Treasurer",
-                "moneyText": "",
-                "startDate": "2023-12-29",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1242,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Gift at price 0.00 per share.",
-                "filerName": "SOKOLOV RICHARD S",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2023-12-15",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 359,
-                "value": 39199,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 109.19 per share.",
-                "filerName": "MCDADE BRIAN J",
-                "filerRelation": "Chief Financial Officer",
-                "moneyText": "",
-                "startDate": "2023-09-29",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 231,
-                "value": 26833,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 116.16 per share.",
-                "filerName": "RODKIN GARY M",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2023-06-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 526,
-                "value": 61100,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 116.16 per share.",
-                "filerName": "LEIBOWITZ REUBEN S",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2023-06-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 387,
-                "value": 44954,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 116.16 per share.",
-                "filerName": "GLASSCOCK LARRY C",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2023-06-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 429,
-                "value": 49833,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 116.16 per share.",
-                "filerName": "HUBBARD ALLAN B",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2023-06-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 28,
-                "value": 3252,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 116.16 per share.",
-                "filerName": "LEWIS RANDALL J",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2023-06-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 373,
-                "value": 43328,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 116.16 per share.",
-                "filerName": "SMITH DANIEL C.",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2023-06-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 217,
-                "value": 25207,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 116.16 per share.",
-                "filerName": "AEPPEL GLYN F",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2023-06-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 188,
-                "value": 21838,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 116.16 per share.",
-                "filerName": "STEWART MARTA R",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2023-06-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 200,
-                "value": 23232,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 116.16 per share.",
-                "filerName": "SELIG STEFAN M",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2023-06-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 57,
-                "value": 6621,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 116.16 per share.",
-                "filerName": "ROE PEGGY FANG",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2023-06-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1632,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "RODKIN GARY M",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2023-05-04",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1813,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "LEIBOWITZ REUBEN S",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2023-05-04",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1927,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "GLASSCOCK LARRY C",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2023-05-04",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1700,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "HUBBARD ALLAN B",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2023-05-04",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1655,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "LEWIS RANDALL J",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2023-05-04",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1655,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "SMITH DANIEL C.",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2023-05-04",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1700,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "AEPPEL GLYN F",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2023-05-04",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1745,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "STEWART MARTA R",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2023-05-04",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1723,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "SELIG STEFAN M",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2023-05-04",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1632,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "ROE PEGGY FANG",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2023-05-04",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 4718,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "FIVEL STEVEN E",
-                "filerRelation": "General Counsel",
-                "moneyText": "",
-                "startDate": "2023-03-31",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 4718,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "RULLI JOHN",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-03-31",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 4718,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "MCDADE BRIAN J",
-                "filerRelation": "Chief Financial Officer",
-                "moneyText": "",
-                "startDate": "2023-03-31",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 4718,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "SNYDER ALEXANDER L. W.",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-03-31",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 2359,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "REUILLE ADAM J.",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-03-31",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 4718,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "SIMON ELI",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-03-31",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1887,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "KELLY KEVIN M",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-03-31",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 4718,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "FREY DONALD G",
-                "filerRelation": "Officer and Treasurer",
-                "moneyText": "",
-                "startDate": "2023-03-31",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1887,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "JACKSON MATTHEW A",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-03-31",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 6,
-                "value": 630,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 91.93 - 116.92 per share.",
-                "filerName": "JACKSON MATTHEW A",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2023-03-29",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 165,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "LEWIS RANDALL J",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2023-03-28",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 23172,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SIMON DAVID E",
-                "filerRelation": "Chief Executive Officer",
-                "moneyText": "",
-                "startDate": "2022-12-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 5793,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "FIVEL STEVEN E",
-                "filerRelation": "General Counsel",
-                "moneyText": "",
-                "startDate": "2022-12-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 8130,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Gift at price 0.00 per share.",
-                "filerName": "RULLI JOHN",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2022-12-30",
-                "ownership": "I"
-            },
-            {
-                "maxAge": 1,
-                "shares": 5793,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "RULLI JOHN",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2022-12-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 5793,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "MCDADE BRIAN J",
-                "filerRelation": "Chief Financial Officer",
-                "moneyText": "",
-                "startDate": "2022-12-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1931,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SNYDER ALEXANDER L. W.",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2022-12-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 2897,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "REUILLE ADAM J.",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2022-12-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 3862,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SIMON ELI",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2022-12-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1545,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "KELLY KEVIN M",
-                "filerRelation": "Other Executive",
-                "moneyText": "",
-                "startDate": "2022-12-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 2897,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "FREY DONALD G",
-                "filerRelation": "Officer and Treasurer",
-                "moneyText": "",
-                "startDate": "2022-12-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 2025,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Gift at price 0.00 per share.",
-                "filerName": "SOKOLOV RICHARD S",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2022-12-06",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 576,
-                "value": 54047,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 93.83 per share.",
-                "filerName": "HORN KAREN N",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2022-06-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 219,
-                "value": 20549,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 93.83 per share.",
-                "filerName": "RODKIN GARY M",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2022-06-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 528,
-                "value": 49543,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 93.83 per share.",
-                "filerName": "LEIBOWITZ REUBEN S",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2022-06-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 379,
-                "value": 35562,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 93.83 per share.",
-                "filerName": "GLASSCOCK LARRY C",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2022-06-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 427,
-                "value": 40066,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 93.83 per share.",
-                "filerName": "HUBBARD ALLAN B",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2022-06-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 721,
-                "value": 67653,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 93.83 per share.",
-                "filerName": "SMITH J ALBERT JR",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2022-06-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 369,
-                "value": 34624,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 93.83 per share.",
-                "filerName": "SMITH DANIEL C.",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2022-06-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 202,
-                "value": 18954,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 93.83 per share.",
-                "filerName": "AEPPEL GLYN F",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2022-06-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 170,
-                "value": 15951,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 93.83 per share.",
-                "filerName": "STEWART MARTA R",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2022-06-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 184,
-                "value": 17265,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 93.83 per share.",
-                "filerName": "SELIG STEFAN M",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2022-06-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 34,
-                "value": 3190,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 93.83 per share.",
-                "filerName": "ROE PEGGY FANG",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2022-06-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1507,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "HORN KAREN N",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2022-05-11",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1447,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "RODKIN GARY M",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2022-05-11",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1608,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "LEIBOWITZ REUBEN S",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2022-05-11",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1708,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "GLASSCOCK LARRY C",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2022-05-11",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1507,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "HUBBARD ALLAN B",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2022-05-11",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1608,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "SMITH J ALBERT JR",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2022-05-11",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1467,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "SMITH DANIEL C.",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2022-05-11",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1447,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "AEPPEL GLYN F",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2022-05-11",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1467,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "STEWART MARTA R",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2022-05-11",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1528,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "SELIG STEFAN M",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2022-05-11",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1447,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "ROE PEGGY FANG",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2022-05-11",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1896,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "REUILLE ADAM J.",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2022-04-01",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 3791,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "SIMON ELI",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2022-04-01",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 335,
-                "value": 44924,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 134.10 per share.",
-                "filerName": "LEIBOWITZ REUBEN S",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2022-03-31",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 118,
-                "value": 15824,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 134.10 per share.",
-                "filerName": "AEPPEL GLYN F",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2022-03-31",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 107,
-                "value": 17149,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 160.28 per share.",
-                "filerName": "RODKIN GARY M",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2021-12-31",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 23173,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SIMON DAVID E",
-                "filerRelation": "Chief Executive Officer",
-                "moneyText": "",
-                "startDate": "2021-12-31",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 277,
-                "value": 44396,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 160.28 per share.",
-                "filerName": "LEIBOWITZ REUBEN S",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2021-12-31",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 5794,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "FIVEL STEVEN E",
-                "filerRelation": "General Counsel",
-                "moneyText": "",
-                "startDate": "2021-12-31",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 192,
-                "value": 30773,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 160.28 per share.",
-                "filerName": "GLASSCOCK LARRY C",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2021-12-31",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 221,
-                "value": 35421,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 160.28 per share.",
-                "filerName": "HUBBARD ALLAN B",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2021-12-31",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 384,
-                "value": 61546,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 160.28 per share.",
-                "filerName": "SMITH J ALBERT JR",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2021-12-31",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 189,
-                "value": 30292,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 160.28 per share.",
-                "filerName": "SMITH DANIEL C.",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2021-12-31",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 5794,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "RULLI JOHN",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-12-31",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 97,
-                "value": 15547,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 160.28 per share.",
-                "filerName": "AEPPEL GLYN F",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2021-12-31",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 5794,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "MCDADE BRIAN J",
-                "filerRelation": "Chief Financial Officer",
-                "moneyText": "",
-                "startDate": "2021-12-31",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1932,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SNYDER ALEXANDER L. W.",
-                "filerRelation": "General Counsel",
-                "moneyText": "",
-                "startDate": "2021-12-31",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 2897,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "REUILLE ADAM J.",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-12-31",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 3863,
-                "filerUrl": "",
-                "transactionText": "",
-                "filerName": "SIMON ELI",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-12-31",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 462,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "ROE PEGGY FANG",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2021-12-15",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 15650,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Gift at price 0.00 per share.",
-                "filerName": "SOKOLOV RICHARD S",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2021-11-09",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 209,
-                "value": 27724,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 132.65 per share.",
-                "filerName": "GLASSCOCK LARRY C",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2021-09-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 240,
-                "value": 31836,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 132.65 per share.",
-                "filerName": "HUBBARD ALLAN B",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2021-09-30",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 105,
-                "value": 13006,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 123.87 per share.",
-                "filerName": "AEPPEL GLYN F",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2021-07-23",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 8130,
-                "value": 996332,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 122.55 per share.",
-                "filerName": "RULLI JOHN",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2021-05-21",
-                "ownership": "I"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1563,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "HORN KAREN N",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2021-05-12",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1501,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "RODKIN GARY M",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2021-05-12",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1667,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "LEIBOWITZ REUBEN S",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2021-05-12",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1771,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "GLASSCOCK LARRY C",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2021-05-12",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1563,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "HUBBARD ALLAN B",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2021-05-12",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1667,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "SMITH J ALBERT JR",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2021-05-12",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1521,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "SMITH DANIEL C.",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2021-05-12",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1501,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "AEPPEL GLYN F",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2021-05-12",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1521,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "STEWART MARTA R",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2021-05-12",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1584,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "SELIG STEFAN M",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2021-05-12",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 302,
-                "value": 35143,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 116.37 per share.",
-                "filerName": "HORN KAREN N",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2021-04-23",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1011,
-                "value": 76862,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 60.22 - 177.76 per share.",
-                "filerName": "SMITH DANIEL C.",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2021-01-25",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 451,
-                "value": 32417,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 61.66 - 92.44 per share.",
-                "filerName": "RODKIN GARY M",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2021-01-22",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1282,
-                "value": 92172,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 61.66 - 92.44 per share.",
-                "filerName": "LEIBOWITZ REUBEN S",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2021-01-22",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 344,
-                "value": 24733,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 61.66 - 92.44 per share.",
-                "filerName": "SELIG STEFAN M",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2021-01-22",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 12230,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Gift at price 0.00 per share.",
-                "filerName": "SOKOLOV RICHARD S",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2020-12-29",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1000,
-                "value": 50500,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 50.50 per share.",
-                "filerName": "AEPPEL GLYN F",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2020-05-15",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 3202,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "HORN KAREN N",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2020-05-12",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 3074,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "RODKIN GARY M",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2020-05-12",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 3415,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "LEIBOWITZ REUBEN S",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2020-05-12",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 3629,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "GLASSCOCK LARRY C",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2020-05-12",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 3202,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "HUBBARD ALLAN B",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2020-05-12",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 3415,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "SMITH J ALBERT JR",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2020-05-12",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 3116,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "SMITH DANIEL C.",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2020-05-12",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 3074,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "AEPPEL GLYN F",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2020-05-12",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 3116,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "STEWART MARTA R",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2020-05-12",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 3244,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "SELIG STEFAN M",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2020-05-12",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 4225,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "MCDADE BRIAN J",
-                "filerRelation": "Chief Financial Officer",
-                "moneyText": "",
-                "startDate": "2020-04-01",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 4225,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "SNYDER ALEXANDER L. W.",
-                "filerRelation": "General Counsel",
-                "moneyText": "",
-                "startDate": "2020-04-01",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 2113,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "REUILLE ADAM J.",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2020-04-01",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 10000,
-                "value": 449200,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 44.92 per share.",
-                "filerName": "GLASSCOCK LARRY C",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2020-03-19",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 188572,
-                "value": 9933030,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 52.67 - 52.68 per share.",
-                "filerName": "SIMON HERBERT",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2020-03-18",
-                "ownership": "I"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1000,
-                "value": 50145,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 50.11 - 50.18 per share.",
-                "filerName": "LEIBOWITZ REUBEN S",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2020-03-18",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 3615,
-                "value": 198138,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 54.81 per share.",
-                "filerName": "HUBBARD ALLAN B",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2020-03-18",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1750,
-                "value": 91052,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 52.03 per share.",
-                "filerName": "SMITH J ALBERT JR",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2020-03-18",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 921,
-                "value": 48946,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 53.14 per share.",
-                "filerName": "SMITH DANIEL C.",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2020-03-18",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 15000,
-                "value": 882900,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 58.86 per share.",
-                "filerName": "SELIG STEFAN M",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2020-03-18",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 150000,
-                "value": 9124050,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 60.83 per share.",
-                "filerName": "SIMON DAVID E",
-                "filerRelation": "Chief Executive Officer",
-                "moneyText": "",
-                "startDate": "2020-03-17",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1500,
-                "value": 97325,
-                "filerUrl": "",
-                "transactionText": "Purchase at price 64.25 - 66.15 per share.",
-                "filerName": "LEIBOWITZ REUBEN S",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2020-03-17",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1000,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Gift at price 0.00 per share.",
-                "filerName": "LEIBOWITZ REUBEN S",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2019-12-30",
-                "ownership": "I"
-            },
-            {
-                "maxAge": 1,
-                "shares": 7450,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Gift at price 0.00 per share.",
-                "filerName": "SOKOLOV RICHARD S",
-                "filerRelation": "Officer and Director",
-                "moneyText": "",
-                "startDate": "2019-12-10",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 9160,
-                "value": 1613717,
-                "filerUrl": "",
-                "transactionText": "Sale at price 176.17 per share.",
-                "filerName": "RULLI JOHN",
-                "filerRelation": "Officer",
-                "moneyText": "",
-                "startDate": "2019-05-16",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1049,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "HORN KAREN N",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2019-05-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1007,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "RODKIN GARY M",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2019-05-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1119,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "LEIBOWITZ REUBEN S",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2019-05-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1189,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "GLASSCOCK LARRY C",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2019-05-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1049,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "HUBBARD ALLAN B",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2019-05-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1119,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "SMITH J ALBERT JR",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2019-05-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1021,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "SMITH DANIEL C.",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2019-05-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1007,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "AEPPEL GLYN F",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2019-05-08",
-                "ownership": "D"
-            },
-            {
-                "maxAge": 1,
-                "shares": 1021,
-                "value": 0,
-                "filerUrl": "",
-                "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-                "filerName": "STEWART MARTA R",
-                "filerRelation": "Director",
-                "moneyText": "",
-                "startDate": "2019-05-08",
-                "ownership": "D"
+                "endDate": "2019-12-31",
+                "netIncome": 2101584000
             }
         ],
-        "maxAge": 1
+        "quarterly": [
+            {
+                "maxAge": 1,
+                "endDate": "2023-09-30",
+                "netIncome": 594973000
+            },
+            {
+                "maxAge": 1,
+                "endDate": "2023-06-30",
+                "netIncome": 487177000
+            },
+            {
+                "maxAge": 1,
+                "endDate": "2023-03-31",
+                "netIncome": 452661000
+            },
+            {
+                "maxAge": 1,
+                "endDate": "2022-12-31",
+                "netIncome": 674620000
+            }
+        ]
+    },
+    "balanceSheetHistory": {
+        "annual": [
+            {
+                "maxAge": 1,
+                "endDate": "2022-12-31"
+            },
+            {
+                "maxAge": 1,
+                "endDate": "2021-12-31"
+            },
+            {
+                "maxAge": 1,
+                "endDate": "2020-12-31"
+            },
+            {
+                "maxAge": 1,
+                "endDate": "2019-12-31"
+            }
+        ],
+        "quarterly": [
+            {
+                "maxAge": 1,
+                "endDate": "2023-09-30"
+            },
+            {
+                "maxAge": 1,
+                "endDate": "2023-06-30"
+            },
+            {
+                "maxAge": 1,
+                "endDate": "2023-03-31"
+            },
+            {
+                "maxAge": 1,
+                "endDate": "2022-12-31"
+            }
+        ]
     },
     "incomeStatementHistory": {
-        "incomeStatementHistory": [
+        "annual": [
             {
                 "maxAge": 1,
                 "endDate": "2022-12-31",
@@ -2313,149 +738,7 @@
                 "netIncomeApplicableToCommonShares": {}
             }
         ],
-        "maxAge": 86400
-    },
-    "fundOwnership": {
-        "maxAge": 1,
-        "ownershipList": [
-            {
-                "maxAge": 1,
-                "reportDate": "2023-10-31",
-                "organization": "Vanguard Specialized-Real Estate Index Fund",
-                "pctHeld": 0.0401,
-                "position": 13082296,
-                "value": 1804571942,
-                "pctChange": -0.021300001
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Vanguard Total Stock Market Index Fund",
-                "pctHeld": 0.0296,
-                "position": 9670998,
-                "value": 1334017487,
-                "pctChange": -0.0017
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Vanguard 500 Index Fund",
-                "pctHeld": 0.0241,
-                "position": 7862106,
-                "value": 1084498920,
-                "pctChange": 0.0099
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-12-31",
-                "organization": "Fidelity 500 Index Fund",
-                "pctHeld": 0.0117999995,
-                "position": 3833718,
-                "value": 528823070,
-                "pctChange": 0.0055
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-11-30",
-                "organization": "SPDR S&P 500 ETF Trust",
-                "pctHeld": 0.0114,
-                "position": 3710901,
-                "value": 511881692,
-                "pctChange": 0.0116
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Cohen & Steers Real Estate Securities Fund",
-                "pctHeld": 0.0111,
-                "position": 3636737,
-                "value": 501651510,
-                "pctChange": -0.0616
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Vanguard Mid-Cap Index Fund",
-                "pctHeld": 0.0108,
-                "position": 3519380,
-                "value": 485463285,
-                "pctChange": -0.0225
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-11-30",
-                "organization": "iShares Core S&P 500 ETF",
-                "pctHeld": 0.0099,
-                "position": 3224492,
-                "value": 444786434,
-                "pctChange": 0.0173
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Cohen & Steers Institutional Realty Shares Incorporated",
-                "pctHeld": 0.0095,
-                "position": 3095663,
-                "value": 427015761,
-                "pctChange": -0.038399998
-            },
-            {
-                "maxAge": 1,
-                "reportDate": "2023-09-30",
-                "organization": "Cohen & Steers Realty Shares Incorporated",
-                "pctHeld": 0.0085,
-                "position": 2763985,
-                "value": 381264097,
-                "pctChange": -0.041100003
-            }
-        ]
-    },
-    "summaryDetail": {
-        "maxAge": 1,
-        "priceHint": 2,
-        "previousClose": 139.4,
-        "open": 137.38,
-        "dayLow": 135.48,
-        "dayHigh": 138.99,
-        "regularMarketPreviousClose": 139.4,
-        "regularMarketOpen": 137.38,
-        "regularMarketDayLow": 135.48,
-        "regularMarketDayHigh": 138.99,
-        "dividendRate": 7.6,
-        "dividendYield": 0.0551,
-        "exDividendDate": "2023-12-06 19:00:00",
-        "payoutRatio": 1.0905,
-        "fiveYearAvgDividendYield": 6.26,
-        "beta": 1.666,
-        "trailingPE": 20.435556,
-        "forwardPE": 21.860538,
-        "volume": 2011103,
-        "regularMarketVolume": 2011103,
-        "averageVolume": 1497790,
-        "averageVolume10days": 1626440,
-        "averageDailyVolume10Day": 1626440,
-        "bid": 137.21,
-        "ask": 138.75,
-        "bidSize": 1100,
-        "askSize": 800,
-        "marketCap": 51752329216,
-        "fiftyTwoWeekLow": 100.17,
-        "fiftyTwoWeekHigh": 146.91,
-        "priceToSalesTrailing12Months": 9.3562765,
-        "fiftyDayAverage": 137.9152,
-        "twoHundredDayAverage": 118.99125,
-        "trailingAnnualDividendRate": 7.35,
-        "trailingAnnualDividendYield": 0.05272597,
-        "currency": "USD",
-        "fromCurrency": null,
-        "toCurrency": null,
-        "lastMarket": null,
-        "coinMarketCapLink": null,
-        "algorithm": null,
-        "tradeable": false
-    },
-    "incomeStatementHistoryQuarterly": {
-        "incomeStatementHistory": [
+        "quarterly": [
             {
                 "maxAge": 1,
                 "endDate": "2023-09-30",
@@ -2560,540 +843,2188 @@
                 "netIncome": 674620000,
                 "netIncomeApplicableToCommonShares": {}
             }
-        ],
-        "maxAge": 86400
+        ]
     },
-    "cashflowStatementHistoryQuarterly": {
-        "cashflowStatements": [
-            {
-                "maxAge": 1,
-                "endDate": "2023-09-30",
-                "netIncome": 594973000
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2023-06-30",
-                "netIncome": 487177000
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2023-03-31",
-                "netIncome": 452661000
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2022-12-31",
-                "netIncome": 674620000
-            }
-        ],
-        "maxAge": 86400
-    },
-    "insiderHolders": {
-        "holders": [
-            {
-                "maxAge": 1,
-                "name": "FIVEL STEVEN E",
-                "relation": "General Counsel",
-                "url": "",
-                "transactionDescription": "Conversion of Exercise of derivative security",
-                "latestTransDate": "2023-12-29",
-                "positionDirect": 34087,
-                "positionDirectDate": "2023-12-29"
-            },
-            {
-                "maxAge": 1,
-                "name": "FREY DONALD G",
-                "relation": "Officer and Treasurer",
-                "url": "",
-                "transactionDescription": "Conversion of Exercise of derivative security",
-                "latestTransDate": "2023-12-29",
-                "positionDirect": 15700,
-                "positionDirectDate": "2023-12-29"
-            },
-            {
-                "maxAge": 1,
-                "name": "JONES NINA P.",
-                "relation": "Director",
-                "url": "",
-                "transactionDescription": "Stock Award(Grant)",
-                "latestTransDate": "2024-01-11",
-                "positionDirect": 396,
-                "positionDirectDate": "2024-01-11"
-            },
-            {
-                "maxAge": 1,
-                "name": "KELLY KEVIN M",
-                "relation": "General Counsel",
-                "url": "",
-                "transactionDescription": "Conversion of Exercise of derivative security",
-                "latestTransDate": "2023-12-29",
-                "positionDirect": 6483,
-                "positionDirectDate": "2023-12-29"
-            },
-            {
-                "maxAge": 1,
-                "name": "MCDADE BRIAN J",
-                "relation": "Chief Financial Officer",
-                "url": "",
-                "transactionDescription": "Conversion of Exercise of derivative security",
-                "latestTransDate": "2023-12-29",
-                "positionDirect": 31905,
-                "positionDirectDate": "2023-12-29"
-            },
-            {
-                "maxAge": 1,
-                "name": "REUILLE ADAM J.",
-                "relation": "Officer",
-                "url": "",
-                "transactionDescription": "Conversion of Exercise of derivative security",
-                "latestTransDate": "2023-12-29",
-                "positionDirect": 15377,
-                "positionDirectDate": "2023-12-29"
-            },
-            {
-                "maxAge": 1,
-                "name": "RULLI JOHN",
-                "relation": "Officer",
-                "url": "",
-                "transactionDescription": "Conversion of Exercise of derivative security",
-                "latestTransDate": "2023-12-29",
-                "positionDirect": 48414,
-                "positionDirectDate": "2023-12-29"
-            },
-            {
-                "maxAge": 1,
-                "name": "SIMON DAVID E",
-                "relation": "Chief Executive Officer",
-                "url": "",
-                "transactionDescription": "Conversion of Exercise of derivative security",
-                "latestTransDate": "2023-12-29",
-                "positionDirect": 1023440,
-                "positionDirectDate": "2023-12-29"
-            },
-            {
-                "maxAge": 1,
-                "name": "SIMON ELI",
-                "relation": "Officer",
-                "url": "",
-                "transactionDescription": "Conversion of Exercise of derivative security",
-                "latestTransDate": "2023-12-29",
-                "positionDirect": 15662,
-                "positionDirectDate": "2023-12-29"
-            },
-            {
-                "maxAge": 1,
-                "name": "SOKOLOV RICHARD S",
-                "relation": "Director",
-                "url": "",
-                "transactionDescription": "Stock Gift",
-                "latestTransDate": "2023-12-15",
-                "positionDirect": 290104,
-                "positionDirectDate": "2023-12-15"
-            }
-        ],
-        "maxAge": 1
-    },
-    "earnings": {
-        "maxAge": 86400,
-        "earningsChart": {
-            "quarterly": [
-                {
-                    "date": "4Q2022",
-                    "actual": 2.06,
-                    "estimate": 1.7
-                },
-                {
-                    "date": "1Q2023",
-                    "actual": 1.38,
-                    "estimate": 1.39
-                },
-                {
-                    "date": "2Q2023",
-                    "actual": 1.49,
-                    "estimate": 1.54
-                },
-                {
-                    "date": "3Q2023",
-                    "actual": 1.82,
-                    "estimate": 1.55
-                }
-            ],
-            "currentQuarterEstimate": 1.86,
-            "currentQuarterEstimateDate": "4Q",
-            "currentQuarterEstimateYear": 2023,
-            "earningsDate": [
-                "2024-02-05 05:59:S",
-                "2024-02-09 07:00:S"
-            ]
-        },
-        "financialsChart": {
-            "yearly": [
-                {
-                    "date": 2019,
-                    "revenue": 5660489000,
-                    "earnings": 2101584000
-                },
-                {
-                    "date": 2020,
-                    "revenue": 4604042000,
-                    "earnings": 1112564000
-                },
-                {
-                    "date": 2021,
-                    "revenue": 5114689000,
-                    "earnings": 2249631000
-                },
-                {
-                    "date": 2022,
-                    "revenue": 5291447000,
-                    "earnings": 2139535000
-                }
-            ],
-            "quarterly": [
-                {
-                    "date": "4Q2022",
-                    "revenue": 1399897000,
-                    "earnings": 674620000
-                },
-                {
-                    "date": "1Q2023",
-                    "revenue": 1350849000,
-                    "earnings": 452661000
-                },
-                {
-                    "date": "2Q2023",
-                    "revenue": 1369601000,
-                    "earnings": 487177000
-                },
-                {
-                    "date": "3Q2023",
-                    "revenue": 1410948000,
-                    "earnings": 594973000
-                }
-            ]
-        },
-        "financialCurrency": "USD"
-    },
-    "calendarEvents": {
-        "maxAge": 1,
-        "earnings": {
-            "earningsDate": [
-                "2024-02-05 05:59:S",
-                "2024-02-09 07:00:S"
-            ],
-            "earningsAverage": 1.86,
-            "earningsLow": 1.74,
-            "earningsHigh": 2.07,
-            "revenueAverage": 1358820000,
-            "revenueLow": 1313030000,
-            "revenueHigh": 1389300000
-        },
-        "exDividendDate": "2023-12-06 19:00:00",
-        "dividendDate": "2023-12-28 19:00:00"
-    },
-    "price": {
-        "maxAge": 1,
-        "preMarketSource": "FREE_REALTIME",
-        "postMarketChangePercent": 0.000434954,
-        "postMarketChange": 0.05999756,
-        "postMarketTime": "2024-02-02 20:00:00",
-        "postMarketPrice": 138.0,
-        "postMarketSource": "DELAYED",
-        "regularMarketChangePercent": -0.010473397,
-        "regularMarketChange": -1.4599915,
-        "regularMarketTime": "2024-02-02 16:00:02",
-        "priceHint": 2,
-        "regularMarketPrice": 137.94,
-        "regularMarketDayHigh": 138.99,
-        "regularMarketDayLow": 135.48,
-        "regularMarketVolume": 2011103,
-        "averageDailyVolume10Day": 1626440,
-        "averageDailyVolume3Month": 1497790,
-        "regularMarketPreviousClose": 139.4,
-        "regularMarketSource": "DELAYED",
-        "regularMarketOpen": 137.38,
-        "exchange": "NYQ",
-        "exchangeName": "NYSE",
-        "exchangeDataDelayedBy": 0,
-        "marketState": "CLOSED",
-        "quoteType": "EQUITY",
-        "symbol": "SPG",
-        "underlyingSymbol": null,
-        "shortName": "Simon Property Group, Inc.",
-        "longName": "Simon Property Group, Inc.",
-        "currency": "USD",
-        "quoteSourceName": "Delayed Quote",
-        "currencySymbol": "$",
-        "fromCurrency": null,
-        "toCurrency": null,
-        "lastMarket": null,
-        "marketCap": 51752329216
-    },
-    "balanceSheetHistory": {
-        "balanceSheetStatements": [
-            {
-                "maxAge": 1,
-                "endDate": "2022-12-31"
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2021-12-31"
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2020-12-31"
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2019-12-31"
-            }
-        ],
-        "maxAge": 86400
-    },
-    "earningsTrend": {
+    "currentPrice": 137.94,
+    "targetHighPrice": 180.0,
+    "targetLowPrice": 129.0,
+    "targetMeanPrice": 150.44,
+    "targetMedianPrice": 144.0,
+    "recommendationMean": 2.3,
+    "recommendationKey": "buy",
+    "numberOfAnalystOpinions": 16,
+    "totalCash": 769030976,
+    "totalCashPerShare": 2.357,
+    "ebitda": 3990633984,
+    "totalDebt": 25407584256,
+    "quickRatio": 0.431,
+    "currentRatio": 0.433,
+    "totalRevenue": 5531295232,
+    "debtToEquity": 703.252,
+    "revenuePerShare": 16.912,
+    "returnOnAssets": 0.05131,
+    "returnOnEquity": 0.66156,
+    "freeCashflow": 2164859392,
+    "operatingCashflow": 3826181120,
+    "earningsGrowth": 0.103,
+    "revenueGrowth": 0.072,
+    "grossMargins": 0.81211,
+    "ebitdaMargins": 0.72146004,
+    "operatingMargins": 0.49203,
+    "financialCurrency": "USD",
+    "recommendationTrend": {
         "trend": [
             {
-                "maxAge": 1,
-                "period": "0q",
-                "endDate": "2023-12-31",
-                "growth": -0.096999995,
-                "earningsEstimate": {
-                    "avg": 1.86,
-                    "low": 1.74,
-                    "high": 2.07,
-                    "yearAgoEps": 2.06,
-                    "numberOfAnalysts": 4,
-                    "growth": -0.096999995
-                },
-                "revenueEstimate": {
-                    "avg": 1358820000,
-                    "low": 1313030000,
-                    "high": 1389300000,
-                    "numberOfAnalysts": 9,
-                    "yearAgoRevenue": 1287140000,
-                    "growth": 0.055999998
-                },
-                "epsTrend": {
-                    "current": 1.86,
-                    "7daysAgo": 1.86,
-                    "30daysAgo": 1.87,
-                    "60daysAgo": 1.9,
-                    "90daysAgo": 1.85
-                },
-                "epsRevisions": {
-                    "upLast7days": 0,
-                    "upLast30days": 0,
-                    "downLast30days": 0,
-                    "downLast90days": {}
-                }
+                "period": "0m",
+                "strongBuy": 7,
+                "buy": 10,
+                "hold": 5,
+                "sell": 0,
+                "strongSell": 0
             },
             {
-                "maxAge": 1,
-                "period": "+1q",
-                "endDate": "2024-03-31",
-                "growth": 0.029000001,
-                "earningsEstimate": {
-                    "avg": 1.42,
-                    "low": 1.27,
-                    "high": 1.58,
-                    "yearAgoEps": 1.38,
-                    "numberOfAnalysts": 3,
-                    "growth": 0.029000001
-                },
-                "revenueEstimate": {
-                    "avg": 1280810000,
-                    "low": 1218540000,
-                    "high": 1315800000,
-                    "numberOfAnalysts": 7,
-                    "yearAgoRevenue": 1239040000,
-                    "growth": 0.034
-                },
-                "epsTrend": {
-                    "current": 1.42,
-                    "7daysAgo": 1.42,
-                    "30daysAgo": 1.42,
-                    "60daysAgo": 1.33,
-                    "90daysAgo": 1.45
-                },
-                "epsRevisions": {
-                    "upLast7days": 0,
-                    "upLast30days": 0,
-                    "downLast30days": 1,
-                    "downLast90days": {}
-                }
+                "period": "-1m",
+                "strongBuy": 4,
+                "buy": 3,
+                "hold": 11,
+                "sell": 0,
+                "strongSell": 0
             },
             {
-                "maxAge": 1,
-                "period": "0y",
-                "endDate": "2023-12-31",
-                "growth": -0.032,
-                "earningsEstimate": {
-                    "avg": 6.31,
-                    "low": 5.47,
-                    "high": 6.76,
-                    "yearAgoEps": 6.52,
-                    "numberOfAnalysts": 4,
-                    "growth": -0.032
-                },
-                "revenueEstimate": {
-                    "avg": 5140110000,
-                    "low": 4906230000,
-                    "high": 5205100000,
-                    "numberOfAnalysts": 11,
-                    "yearAgoRevenue": 4905170000,
-                    "growth": 0.048
-                },
-                "epsTrend": {
-                    "current": 6.31,
-                    "7daysAgo": 6.31,
-                    "30daysAgo": 6.23,
-                    "60daysAgo": 6.11,
-                    "90daysAgo": 6.13
-                },
-                "epsRevisions": {
-                    "upLast7days": 0,
-                    "upLast30days": 0,
-                    "downLast30days": 0,
-                    "downLast90days": {}
-                }
+                "period": "-2m",
+                "strongBuy": 4,
+                "buy": 3,
+                "hold": 11,
+                "sell": 0,
+                "strongSell": 0
             },
             {
-                "maxAge": 1,
-                "period": "+1y",
-                "endDate": "2024-12-31",
-                "growth": 0.0,
-                "earningsEstimate": {
-                    "avg": 6.31,
-                    "low": 5.84,
-                    "high": 6.77,
-                    "yearAgoEps": 6.31,
-                    "numberOfAnalysts": 5,
-                    "growth": 0.0
-                },
-                "revenueEstimate": {
-                    "avg": 5315570000,
-                    "low": 5114330000,
-                    "high": 5548380000,
-                    "numberOfAnalysts": 11,
-                    "yearAgoRevenue": 5140110000,
-                    "growth": 0.034
-                },
-                "epsTrend": {
-                    "current": 6.31,
-                    "7daysAgo": 6.31,
-                    "30daysAgo": 6.23,
-                    "60daysAgo": 6.17,
-                    "90daysAgo": 6.33
-                },
-                "epsRevisions": {
-                    "upLast7days": 0,
-                    "upLast30days": 0,
-                    "downLast30days": 1,
-                    "downLast90days": {}
-                }
-            },
-            {
-                "maxAge": 1,
-                "period": "+5y",
-                "endDate": null,
-                "growth": 0.086,
-                "earningsEstimate": {
-                    "avg": {},
-                    "low": {},
-                    "high": {},
-                    "yearAgoEps": {},
-                    "numberOfAnalysts": {},
-                    "growth": {}
-                },
-                "revenueEstimate": {
-                    "avg": {},
-                    "low": {},
-                    "high": {},
-                    "numberOfAnalysts": {},
-                    "yearAgoRevenue": {},
-                    "growth": {}
-                },
-                "epsTrend": {
-                    "current": {},
-                    "7daysAgo": {},
-                    "30daysAgo": {},
-                    "60daysAgo": {},
-                    "90daysAgo": {}
-                },
-                "epsRevisions": {
-                    "upLast7days": {},
-                    "upLast30days": {},
-                    "downLast30days": {},
-                    "downLast90days": {}
-                }
-            },
-            {
-                "maxAge": 1,
-                "period": "-5y",
-                "endDate": null,
-                "growth": -0.013660001,
-                "earningsEstimate": {
-                    "avg": {},
-                    "low": {},
-                    "high": {},
-                    "yearAgoEps": {},
-                    "numberOfAnalysts": {},
-                    "growth": {}
-                },
-                "revenueEstimate": {
-                    "avg": {},
-                    "low": {},
-                    "high": {},
-                    "numberOfAnalysts": {},
-                    "yearAgoRevenue": {},
-                    "growth": {}
-                },
-                "epsTrend": {
-                    "current": {},
-                    "7daysAgo": {},
-                    "30daysAgo": {},
-                    "60daysAgo": {},
-                    "90daysAgo": {}
-                },
-                "epsRevisions": {
-                    "upLast7days": {},
-                    "upLast30days": {},
-                    "downLast30days": {},
-                    "downLast90days": {}
-                }
+                "period": "-3m",
+                "strongBuy": 4,
+                "buy": 5,
+                "hold": 10,
+                "sell": 0,
+                "strongSell": 0
             }
         ],
-        "maxAge": 1
+        "maxAge": 86400
     },
-    "financialData": {
-        "maxAge": 86400,
-        "currentPrice": 137.94,
-        "targetHighPrice": 180.0,
-        "targetLowPrice": 129.0,
-        "targetMeanPrice": 150.44,
-        "targetMedianPrice": 144.0,
-        "recommendationMean": 2.3,
-        "recommendationKey": "buy",
-        "numberOfAnalystOpinions": 16,
-        "totalCash": 769030976,
-        "totalCashPerShare": 2.357,
-        "ebitda": 3990633984,
-        "totalDebt": 25407584256,
-        "quickRatio": 0.431,
-        "currentRatio": 0.433,
-        "totalRevenue": 5531295232,
-        "debtToEquity": 703.252,
-        "revenuePerShare": 16.912,
-        "returnOnAssets": 0.05131,
-        "returnOnEquity": 0.66156,
-        "freeCashflow": 2164859392,
-        "operatingCashflow": 3826181120,
-        "earningsGrowth": 0.103,
-        "revenueGrowth": 0.072,
-        "grossMargins": 0.81211,
-        "ebitdaMargins": 0.72146004,
-        "operatingMargins": 0.49203,
-        "profitMargins": 0.39944,
-        "financialCurrency": "USD"
-    }
+    "indexTrend": {
+        "maxAge": 1,
+        "symbol": "SP5",
+        "peRatio": 16.5677,
+        "pegRatio": 1.05476,
+        "estimates": [
+            {
+                "period": "0q",
+                "growth": 0.051999997
+            },
+            {
+                "period": "+1q",
+                "growth": 0.091000006
+            },
+            {
+                "period": "0y",
+                "growth": 0.03
+            },
+            {
+                "period": "+1y",
+                "growth": 0.099
+            },
+            {
+                "period": "+5y",
+                "growth": 0.0970399
+            },
+            {
+                "period": "-5y"
+            }
+        ]
+    },
+    "shareholders": {
+        "institutionOwnership": {
+            "maxAge": 1,
+            "ownershipList": [
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Vanguard Group Inc",
+                    "pctHeld": 0.14140001,
+                    "position": 46115129,
+                    "value": 6361121006,
+                    "pctChange": -0.003
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Blackrock Inc.",
+                    "pctHeld": 0.1027,
+                    "position": 33515566,
+                    "value": 4623137255,
+                    "pctChange": -0.0145000005
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Cohen & Steers Inc.",
+                    "pctHeld": 0.0719,
+                    "position": 23452689,
+                    "value": 3235063977,
+                    "pctChange": -0.0401
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "State Street Corporation",
+                    "pctHeld": 0.0682,
+                    "position": 22240369,
+                    "value": 3067836554,
+                    "pctChange": -0.0159
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Geode Capital Management, LLC",
+                    "pctHeld": 0.026199998,
+                    "position": 8538503,
+                    "value": 1177801124,
+                    "pctChange": 0.1171
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2022-12-31",
+                    "organization": "Norges Bank Investment Management",
+                    "pctHeld": 0.0211,
+                    "position": 6876806,
+                    "value": 948586636,
+                    "pctChange": 1.0
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "FMR, LLC",
+                    "pctHeld": 0.0182,
+                    "position": 5931151,
+                    "value": 818142983,
+                    "pctChange": -0.0861
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Morgan Stanley",
+                    "pctHeld": 0.0179,
+                    "position": 5840541,
+                    "value": 805644239,
+                    "pctChange": 0.0021
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-12-31",
+                    "organization": "Daiwa Securities Group Inc.",
+                    "pctHeld": 0.0150999995,
+                    "position": 4917587,
+                    "value": 678331962,
+                    "pctChange": -0.0493
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Price (T.Rowe) Associates Inc",
+                    "pctHeld": 0.0149,
+                    "position": 4860988,
+                    "value": 670524696,
+                    "pctChange": 0.21209998
+                }
+            ]
+        },
+        "majorHolders": {
+            "maxAge": 1,
+            "insidersPercentHeld": 0.0093,
+            "institutionsPercentHeld": 0.91634005,
+            "institutionsFloatPercentHeld": 0.92494005,
+            "institutionsCount": 1404
+        },
+        "insiderTransactions": {
+            "transactions": [
+                {
+                    "maxAge": 1,
+                    "shares": 396,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "JONES NINA P.",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2024-01-11",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 23172,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SIMON DAVID E",
+                    "filerRelation": "Chief Executive Officer",
+                    "moneyText": "",
+                    "startDate": "2023-12-29",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 5793,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "FIVEL STEVEN E",
+                    "filerRelation": "General Counsel",
+                    "moneyText": "",
+                    "startDate": "2023-12-29",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 5793,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "RULLI JOHN",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-12-29",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 5793,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "MCDADE BRIAN J",
+                    "filerRelation": "Chief Financial Officer",
+                    "moneyText": "",
+                    "startDate": "2023-12-29",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 2896,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "REUILLE ADAM J.",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-12-29",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 3862,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SIMON ELI",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-12-29",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1545,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "KELLY KEVIN M",
+                    "filerRelation": "General Counsel",
+                    "moneyText": "",
+                    "startDate": "2023-12-29",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 2896,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "FREY DONALD G",
+                    "filerRelation": "Officer and Treasurer",
+                    "moneyText": "",
+                    "startDate": "2023-12-29",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1242,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Gift at price 0.00 per share.",
+                    "filerName": "SOKOLOV RICHARD S",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2023-12-15",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 359,
+                    "value": 39199,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 109.19 per share.",
+                    "filerName": "MCDADE BRIAN J",
+                    "filerRelation": "Chief Financial Officer",
+                    "moneyText": "",
+                    "startDate": "2023-09-29",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 231,
+                    "value": 26833,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 116.16 per share.",
+                    "filerName": "RODKIN GARY M",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2023-06-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 526,
+                    "value": 61100,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 116.16 per share.",
+                    "filerName": "LEIBOWITZ REUBEN S",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2023-06-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 387,
+                    "value": 44954,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 116.16 per share.",
+                    "filerName": "GLASSCOCK LARRY C",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2023-06-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 429,
+                    "value": 49833,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 116.16 per share.",
+                    "filerName": "HUBBARD ALLAN B",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2023-06-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 28,
+                    "value": 3252,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 116.16 per share.",
+                    "filerName": "LEWIS RANDALL J",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2023-06-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 373,
+                    "value": 43328,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 116.16 per share.",
+                    "filerName": "SMITH DANIEL C.",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2023-06-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 217,
+                    "value": 25207,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 116.16 per share.",
+                    "filerName": "AEPPEL GLYN F",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2023-06-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 188,
+                    "value": 21838,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 116.16 per share.",
+                    "filerName": "STEWART MARTA R",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2023-06-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 200,
+                    "value": 23232,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 116.16 per share.",
+                    "filerName": "SELIG STEFAN M",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2023-06-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 57,
+                    "value": 6621,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 116.16 per share.",
+                    "filerName": "ROE PEGGY FANG",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2023-06-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1632,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "RODKIN GARY M",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2023-05-04",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1813,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "LEIBOWITZ REUBEN S",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2023-05-04",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1927,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "GLASSCOCK LARRY C",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2023-05-04",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1700,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "HUBBARD ALLAN B",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2023-05-04",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1655,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "LEWIS RANDALL J",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2023-05-04",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1655,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "SMITH DANIEL C.",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2023-05-04",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1700,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "AEPPEL GLYN F",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2023-05-04",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1745,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "STEWART MARTA R",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2023-05-04",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1723,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "SELIG STEFAN M",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2023-05-04",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1632,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "ROE PEGGY FANG",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2023-05-04",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 4718,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "FIVEL STEVEN E",
+                    "filerRelation": "General Counsel",
+                    "moneyText": "",
+                    "startDate": "2023-03-31",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 4718,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "RULLI JOHN",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-03-31",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 4718,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "MCDADE BRIAN J",
+                    "filerRelation": "Chief Financial Officer",
+                    "moneyText": "",
+                    "startDate": "2023-03-31",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 4718,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "SNYDER ALEXANDER L. W.",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-03-31",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 2359,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "REUILLE ADAM J.",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-03-31",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 4718,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "SIMON ELI",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-03-31",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1887,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "KELLY KEVIN M",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-03-31",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 4718,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "FREY DONALD G",
+                    "filerRelation": "Officer and Treasurer",
+                    "moneyText": "",
+                    "startDate": "2023-03-31",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1887,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "JACKSON MATTHEW A",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-03-31",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 6,
+                    "value": 630,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 91.93 - 116.92 per share.",
+                    "filerName": "JACKSON MATTHEW A",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2023-03-29",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 165,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "LEWIS RANDALL J",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2023-03-28",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 23172,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SIMON DAVID E",
+                    "filerRelation": "Chief Executive Officer",
+                    "moneyText": "",
+                    "startDate": "2022-12-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 5793,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "FIVEL STEVEN E",
+                    "filerRelation": "General Counsel",
+                    "moneyText": "",
+                    "startDate": "2022-12-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 8130,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Gift at price 0.00 per share.",
+                    "filerName": "RULLI JOHN",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2022-12-30",
+                    "ownership": "I"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 5793,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "RULLI JOHN",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2022-12-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 5793,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "MCDADE BRIAN J",
+                    "filerRelation": "Chief Financial Officer",
+                    "moneyText": "",
+                    "startDate": "2022-12-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1931,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SNYDER ALEXANDER L. W.",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2022-12-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 2897,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "REUILLE ADAM J.",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2022-12-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 3862,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SIMON ELI",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2022-12-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1545,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "KELLY KEVIN M",
+                    "filerRelation": "Other Executive",
+                    "moneyText": "",
+                    "startDate": "2022-12-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 2897,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "FREY DONALD G",
+                    "filerRelation": "Officer and Treasurer",
+                    "moneyText": "",
+                    "startDate": "2022-12-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 2025,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Gift at price 0.00 per share.",
+                    "filerName": "SOKOLOV RICHARD S",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2022-12-06",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 576,
+                    "value": 54047,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 93.83 per share.",
+                    "filerName": "HORN KAREN N",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2022-06-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 219,
+                    "value": 20549,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 93.83 per share.",
+                    "filerName": "RODKIN GARY M",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2022-06-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 528,
+                    "value": 49543,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 93.83 per share.",
+                    "filerName": "LEIBOWITZ REUBEN S",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2022-06-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 379,
+                    "value": 35562,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 93.83 per share.",
+                    "filerName": "GLASSCOCK LARRY C",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2022-06-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 427,
+                    "value": 40066,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 93.83 per share.",
+                    "filerName": "HUBBARD ALLAN B",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2022-06-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 721,
+                    "value": 67653,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 93.83 per share.",
+                    "filerName": "SMITH J ALBERT JR",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2022-06-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 369,
+                    "value": 34624,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 93.83 per share.",
+                    "filerName": "SMITH DANIEL C.",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2022-06-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 202,
+                    "value": 18954,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 93.83 per share.",
+                    "filerName": "AEPPEL GLYN F",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2022-06-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 170,
+                    "value": 15951,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 93.83 per share.",
+                    "filerName": "STEWART MARTA R",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2022-06-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 184,
+                    "value": 17265,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 93.83 per share.",
+                    "filerName": "SELIG STEFAN M",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2022-06-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 34,
+                    "value": 3190,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 93.83 per share.",
+                    "filerName": "ROE PEGGY FANG",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2022-06-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1507,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "HORN KAREN N",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2022-05-11",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1447,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "RODKIN GARY M",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2022-05-11",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1608,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "LEIBOWITZ REUBEN S",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2022-05-11",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1708,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "GLASSCOCK LARRY C",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2022-05-11",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1507,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "HUBBARD ALLAN B",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2022-05-11",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1608,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "SMITH J ALBERT JR",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2022-05-11",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1467,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "SMITH DANIEL C.",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2022-05-11",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1447,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "AEPPEL GLYN F",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2022-05-11",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1467,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "STEWART MARTA R",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2022-05-11",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1528,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "SELIG STEFAN M",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2022-05-11",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1447,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "ROE PEGGY FANG",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2022-05-11",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1896,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "REUILLE ADAM J.",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2022-04-01",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 3791,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "SIMON ELI",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2022-04-01",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 335,
+                    "value": 44924,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 134.10 per share.",
+                    "filerName": "LEIBOWITZ REUBEN S",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2022-03-31",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 118,
+                    "value": 15824,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 134.10 per share.",
+                    "filerName": "AEPPEL GLYN F",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2022-03-31",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 107,
+                    "value": 17149,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 160.28 per share.",
+                    "filerName": "RODKIN GARY M",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2021-12-31",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 23173,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SIMON DAVID E",
+                    "filerRelation": "Chief Executive Officer",
+                    "moneyText": "",
+                    "startDate": "2021-12-31",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 277,
+                    "value": 44396,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 160.28 per share.",
+                    "filerName": "LEIBOWITZ REUBEN S",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2021-12-31",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 5794,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "FIVEL STEVEN E",
+                    "filerRelation": "General Counsel",
+                    "moneyText": "",
+                    "startDate": "2021-12-31",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 192,
+                    "value": 30773,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 160.28 per share.",
+                    "filerName": "GLASSCOCK LARRY C",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2021-12-31",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 221,
+                    "value": 35421,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 160.28 per share.",
+                    "filerName": "HUBBARD ALLAN B",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2021-12-31",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 384,
+                    "value": 61546,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 160.28 per share.",
+                    "filerName": "SMITH J ALBERT JR",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2021-12-31",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 189,
+                    "value": 30292,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 160.28 per share.",
+                    "filerName": "SMITH DANIEL C.",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2021-12-31",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 5794,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "RULLI JOHN",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-12-31",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 97,
+                    "value": 15547,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 160.28 per share.",
+                    "filerName": "AEPPEL GLYN F",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2021-12-31",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 5794,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "MCDADE BRIAN J",
+                    "filerRelation": "Chief Financial Officer",
+                    "moneyText": "",
+                    "startDate": "2021-12-31",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1932,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SNYDER ALEXANDER L. W.",
+                    "filerRelation": "General Counsel",
+                    "moneyText": "",
+                    "startDate": "2021-12-31",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 2897,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "REUILLE ADAM J.",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-12-31",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 3863,
+                    "filerUrl": "",
+                    "transactionText": "",
+                    "filerName": "SIMON ELI",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-12-31",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 462,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "ROE PEGGY FANG",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2021-12-15",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 15650,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Gift at price 0.00 per share.",
+                    "filerName": "SOKOLOV RICHARD S",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2021-11-09",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 209,
+                    "value": 27724,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 132.65 per share.",
+                    "filerName": "GLASSCOCK LARRY C",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2021-09-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 240,
+                    "value": 31836,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 132.65 per share.",
+                    "filerName": "HUBBARD ALLAN B",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2021-09-30",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 105,
+                    "value": 13006,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 123.87 per share.",
+                    "filerName": "AEPPEL GLYN F",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2021-07-23",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 8130,
+                    "value": 996332,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 122.55 per share.",
+                    "filerName": "RULLI JOHN",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2021-05-21",
+                    "ownership": "I"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1563,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "HORN KAREN N",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2021-05-12",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1501,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "RODKIN GARY M",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2021-05-12",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1667,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "LEIBOWITZ REUBEN S",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2021-05-12",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1771,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "GLASSCOCK LARRY C",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2021-05-12",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1563,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "HUBBARD ALLAN B",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2021-05-12",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1667,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "SMITH J ALBERT JR",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2021-05-12",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1521,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "SMITH DANIEL C.",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2021-05-12",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1501,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "AEPPEL GLYN F",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2021-05-12",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1521,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "STEWART MARTA R",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2021-05-12",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1584,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "SELIG STEFAN M",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2021-05-12",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 302,
+                    "value": 35143,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 116.37 per share.",
+                    "filerName": "HORN KAREN N",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2021-04-23",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1011,
+                    "value": 76862,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 60.22 - 177.76 per share.",
+                    "filerName": "SMITH DANIEL C.",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2021-01-25",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 451,
+                    "value": 32417,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 61.66 - 92.44 per share.",
+                    "filerName": "RODKIN GARY M",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2021-01-22",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1282,
+                    "value": 92172,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 61.66 - 92.44 per share.",
+                    "filerName": "LEIBOWITZ REUBEN S",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2021-01-22",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 344,
+                    "value": 24733,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 61.66 - 92.44 per share.",
+                    "filerName": "SELIG STEFAN M",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2021-01-22",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 12230,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Gift at price 0.00 per share.",
+                    "filerName": "SOKOLOV RICHARD S",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2020-12-29",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1000,
+                    "value": 50500,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 50.50 per share.",
+                    "filerName": "AEPPEL GLYN F",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2020-05-15",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 3202,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "HORN KAREN N",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2020-05-12",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 3074,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "RODKIN GARY M",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2020-05-12",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 3415,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "LEIBOWITZ REUBEN S",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2020-05-12",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 3629,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "GLASSCOCK LARRY C",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2020-05-12",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 3202,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "HUBBARD ALLAN B",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2020-05-12",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 3415,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "SMITH J ALBERT JR",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2020-05-12",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 3116,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "SMITH DANIEL C.",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2020-05-12",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 3074,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "AEPPEL GLYN F",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2020-05-12",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 3116,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "STEWART MARTA R",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2020-05-12",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 3244,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "SELIG STEFAN M",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2020-05-12",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 4225,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "MCDADE BRIAN J",
+                    "filerRelation": "Chief Financial Officer",
+                    "moneyText": "",
+                    "startDate": "2020-04-01",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 4225,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "SNYDER ALEXANDER L. W.",
+                    "filerRelation": "General Counsel",
+                    "moneyText": "",
+                    "startDate": "2020-04-01",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 2113,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "REUILLE ADAM J.",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2020-04-01",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 10000,
+                    "value": 449200,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 44.92 per share.",
+                    "filerName": "GLASSCOCK LARRY C",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2020-03-19",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 188572,
+                    "value": 9933030,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 52.67 - 52.68 per share.",
+                    "filerName": "SIMON HERBERT",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2020-03-18",
+                    "ownership": "I"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1000,
+                    "value": 50145,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 50.11 - 50.18 per share.",
+                    "filerName": "LEIBOWITZ REUBEN S",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2020-03-18",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 3615,
+                    "value": 198138,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 54.81 per share.",
+                    "filerName": "HUBBARD ALLAN B",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2020-03-18",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1750,
+                    "value": 91052,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 52.03 per share.",
+                    "filerName": "SMITH J ALBERT JR",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2020-03-18",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 921,
+                    "value": 48946,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 53.14 per share.",
+                    "filerName": "SMITH DANIEL C.",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2020-03-18",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 15000,
+                    "value": 882900,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 58.86 per share.",
+                    "filerName": "SELIG STEFAN M",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2020-03-18",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 150000,
+                    "value": 9124050,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 60.83 per share.",
+                    "filerName": "SIMON DAVID E",
+                    "filerRelation": "Chief Executive Officer",
+                    "moneyText": "",
+                    "startDate": "2020-03-17",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1500,
+                    "value": 97325,
+                    "filerUrl": "",
+                    "transactionText": "Purchase at price 64.25 - 66.15 per share.",
+                    "filerName": "LEIBOWITZ REUBEN S",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2020-03-17",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1000,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Gift at price 0.00 per share.",
+                    "filerName": "LEIBOWITZ REUBEN S",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2019-12-30",
+                    "ownership": "I"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 7450,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Gift at price 0.00 per share.",
+                    "filerName": "SOKOLOV RICHARD S",
+                    "filerRelation": "Officer and Director",
+                    "moneyText": "",
+                    "startDate": "2019-12-10",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 9160,
+                    "value": 1613717,
+                    "filerUrl": "",
+                    "transactionText": "Sale at price 176.17 per share.",
+                    "filerName": "RULLI JOHN",
+                    "filerRelation": "Officer",
+                    "moneyText": "",
+                    "startDate": "2019-05-16",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1049,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "HORN KAREN N",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2019-05-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1007,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "RODKIN GARY M",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2019-05-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1119,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "LEIBOWITZ REUBEN S",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2019-05-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1189,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "GLASSCOCK LARRY C",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2019-05-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1049,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "HUBBARD ALLAN B",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2019-05-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1119,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "SMITH J ALBERT JR",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2019-05-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1021,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "SMITH DANIEL C.",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2019-05-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1007,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "AEPPEL GLYN F",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2019-05-08",
+                    "ownership": "D"
+                },
+                {
+                    "maxAge": 1,
+                    "shares": 1021,
+                    "value": 0,
+                    "filerUrl": "",
+                    "transactionText": "Stock Award(Grant) at price 0.00 per share.",
+                    "filerName": "STEWART MARTA R",
+                    "filerRelation": "Director",
+                    "moneyText": "",
+                    "startDate": "2019-05-08",
+                    "ownership": "D"
+                }
+            ],
+            "maxAge": 1
+        },
+        "insiderHolders": {
+            "holders": [
+                {
+                    "maxAge": 1,
+                    "name": "FIVEL STEVEN E",
+                    "relation": "General Counsel",
+                    "url": "",
+                    "transactionDescription": "Conversion of Exercise of derivative security",
+                    "latestTransDate": "2023-12-29",
+                    "positionDirect": 34087,
+                    "positionDirectDate": "2023-12-29"
+                },
+                {
+                    "maxAge": 1,
+                    "name": "FREY DONALD G",
+                    "relation": "Officer and Treasurer",
+                    "url": "",
+                    "transactionDescription": "Conversion of Exercise of derivative security",
+                    "latestTransDate": "2023-12-29",
+                    "positionDirect": 15700,
+                    "positionDirectDate": "2023-12-29"
+                },
+                {
+                    "maxAge": 1,
+                    "name": "JONES NINA P.",
+                    "relation": "Director",
+                    "url": "",
+                    "transactionDescription": "Stock Award(Grant)",
+                    "latestTransDate": "2024-01-11",
+                    "positionDirect": 396,
+                    "positionDirectDate": "2024-01-11"
+                },
+                {
+                    "maxAge": 1,
+                    "name": "KELLY KEVIN M",
+                    "relation": "General Counsel",
+                    "url": "",
+                    "transactionDescription": "Conversion of Exercise of derivative security",
+                    "latestTransDate": "2023-12-29",
+                    "positionDirect": 6483,
+                    "positionDirectDate": "2023-12-29"
+                },
+                {
+                    "maxAge": 1,
+                    "name": "MCDADE BRIAN J",
+                    "relation": "Chief Financial Officer",
+                    "url": "",
+                    "transactionDescription": "Conversion of Exercise of derivative security",
+                    "latestTransDate": "2023-12-29",
+                    "positionDirect": 31905,
+                    "positionDirectDate": "2023-12-29"
+                },
+                {
+                    "maxAge": 1,
+                    "name": "REUILLE ADAM J.",
+                    "relation": "Officer",
+                    "url": "",
+                    "transactionDescription": "Conversion of Exercise of derivative security",
+                    "latestTransDate": "2023-12-29",
+                    "positionDirect": 15377,
+                    "positionDirectDate": "2023-12-29"
+                },
+                {
+                    "maxAge": 1,
+                    "name": "RULLI JOHN",
+                    "relation": "Officer",
+                    "url": "",
+                    "transactionDescription": "Conversion of Exercise of derivative security",
+                    "latestTransDate": "2023-12-29",
+                    "positionDirect": 48414,
+                    "positionDirectDate": "2023-12-29"
+                },
+                {
+                    "maxAge": 1,
+                    "name": "SIMON DAVID E",
+                    "relation": "Chief Executive Officer",
+                    "url": "",
+                    "transactionDescription": "Conversion of Exercise of derivative security",
+                    "latestTransDate": "2023-12-29",
+                    "positionDirect": 1023440,
+                    "positionDirectDate": "2023-12-29"
+                },
+                {
+                    "maxAge": 1,
+                    "name": "SIMON ELI",
+                    "relation": "Officer",
+                    "url": "",
+                    "transactionDescription": "Conversion of Exercise of derivative security",
+                    "latestTransDate": "2023-12-29",
+                    "positionDirect": 15662,
+                    "positionDirectDate": "2023-12-29"
+                },
+                {
+                    "maxAge": 1,
+                    "name": "SOKOLOV RICHARD S",
+                    "relation": "Director",
+                    "url": "",
+                    "transactionDescription": "Stock Gift",
+                    "latestTransDate": "2023-12-15",
+                    "positionDirect": 290104,
+                    "positionDirectDate": "2023-12-15"
+                }
+            ],
+            "maxAge": 1
+        },
+        "fundOwnership": {
+            "maxAge": 1,
+            "ownershipList": [
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-10-31",
+                    "organization": "Vanguard Specialized-Real Estate Index Fund",
+                    "pctHeld": 0.0401,
+                    "position": 13082296,
+                    "value": 1804571942,
+                    "pctChange": -0.021300001
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Vanguard Total Stock Market Index Fund",
+                    "pctHeld": 0.0296,
+                    "position": 9670998,
+                    "value": 1334017487,
+                    "pctChange": -0.0017
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Vanguard 500 Index Fund",
+                    "pctHeld": 0.0241,
+                    "position": 7862106,
+                    "value": 1084498920,
+                    "pctChange": 0.0099
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-12-31",
+                    "organization": "Fidelity 500 Index Fund",
+                    "pctHeld": 0.0117999995,
+                    "position": 3833718,
+                    "value": 528823070,
+                    "pctChange": 0.0055
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-11-30",
+                    "organization": "SPDR S&P 500 ETF Trust",
+                    "pctHeld": 0.0114,
+                    "position": 3710901,
+                    "value": 511881692,
+                    "pctChange": 0.0116
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Cohen & Steers Real Estate Securities Fund",
+                    "pctHeld": 0.0111,
+                    "position": 3636737,
+                    "value": 501651510,
+                    "pctChange": -0.0616
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Vanguard Mid-Cap Index Fund",
+                    "pctHeld": 0.0108,
+                    "position": 3519380,
+                    "value": 485463285,
+                    "pctChange": -0.0225
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-11-30",
+                    "organization": "iShares Core S&P 500 ETF",
+                    "pctHeld": 0.0099,
+                    "position": 3224492,
+                    "value": 444786434,
+                    "pctChange": 0.0173
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Cohen & Steers Institutional Realty Shares Incorporated",
+                    "pctHeld": 0.0095,
+                    "position": 3095663,
+                    "value": 427015761,
+                    "pctChange": -0.038399998
+                },
+                {
+                    "maxAge": 1,
+                    "reportDate": "2023-09-30",
+                    "organization": "Cohen & Steers Realty Shares Incorporated",
+                    "pctHeld": 0.0085,
+                    "position": 2763985,
+                    "value": 381264097,
+                    "pctChange": -0.041100003
+                }
+            ]
+        }
+    },
+    "fcfPerShare": 6.6358079166302515,
+    "fcfYield": 0.04183114895108338
 }
