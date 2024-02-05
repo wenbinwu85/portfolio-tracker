@@ -25,48 +25,27 @@
   />
   <info-card
     icon="percentage"
-    [value]="(portfolioHoldings.portfolioUnrealizedGain / portfolioHoldings.portfolioTotalInvestment).toFixed(2)"
+    [value]="portfolioHoldings.portfolioUnrealizedGainPercent"
     valueType="percentage"
     subtitle="Unrealized Gain %"
     color="slateblue"
   />
-  <!-- <info-card
-    icon="payments"
-    [value]="portfolioYtdGain"
-    subtitle="YTD Gain"
-    valueType="currency"
-    [color]="portfolioYtdGain > 0 ? 'forestgreen' : 'tomato'"
-  />
-  <info-card
-    icon="percentage"
-    [value]="(portfolioYtdGain / portfolioData.portfolioValue).toFixed(2)"
-    valueType="percentage"
-    subtitle="YTD Gain %"
-    color="slateblue"
-  /> -->
   <info-card
     icon="payments"
-    [value]="portfolioHoldings.portfolioDividendIncome.toFixed(2)"
+    [value]="portfolioHoldings.portfolioDividendIncome"
     valueType="currency"
     subtitle="Annual Dividend Income"
   />
-  <!-- <info-card
-  icon="payments"
-    [value]="ytdDividendEarned"
-    valueType="currency"
-    subtitle="YTD Dividend Earned"
+  <info-card
+    icon="percentage"
+    [value]="portfolioHoldings.portfolioYield"
+    valueType="percentage"
+    subtitle="Portfolio Yield"
     color="forestgreen"
   />
   <info-card
     icon="percentage"
-    [value]="portfolioData.portfolioYield.toFixed(4)"
-    valueType="percentage"
-    subtitle="Portfolio Yield"
-    color="forestgreen"
-  /> -->
-  <info-card
-    icon="percentage"
-    [value]="portfolioHoldings.portfolioYieldOnCost.toFixed(4)"
+    [value]="portfolioHoldings.portfolioYieldOnCost"
     valueType="percentage"
     subtitle="Portfolio YOC"
     color="slateblue"

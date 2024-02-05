@@ -50,7 +50,14 @@ export class DataService {
         this.portfolioHoldings.portfolioDividendIncome += position.dividendIncome;
       })
 
+      symbols.forEach((symbol: string) => { 
+        const position = this.portfolioHoldings[symbol]
+        position.portfolioPercent = +(position.marketValue / this.portfolioHoldings.portfolioMarketValue).toFixed(4);
+      })
+
       this.portfolioHoldings.portfolioUnrealizedGain = this.portfolioHoldings.portfolioMarketValue - this.portfolioHoldings.portfolioTotalInvestment;
+      this.portfolioHoldings.portfolioUnrealizedGainPercent = +(this.portfolioHoldings.portfolioUnrealizedGain / this.portfolioHoldings.portfolioTotalInvestment).toFixed(4);
+      this.portfolioHoldings.portfolioYield = +(this.portfolioHoldings.portfolioDividendIncome / this.portfolioHoldings.portfolioMarketValue).toFixed(4);
       this.portfolioHoldings.portfolioYieldOnCost = +(this.portfolioHoldings.portfolioDividendIncome / this.portfolioHoldings.portfolioTotalInvestment).toFixed(4);
 
       // this.getStocksData(this.portfolioSymbols, true).subscribe(console.log)

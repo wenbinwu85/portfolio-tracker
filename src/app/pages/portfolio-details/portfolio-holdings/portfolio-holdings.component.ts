@@ -68,20 +68,24 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
   columnDefs = [
     'symbol',
     'costAverage',
+    'totalCost',
     'marketValue',
     'portfolioPercent',
     'unrealizedGain',
+    'unrealizedGainPercent',
     'dividendIncome',
     'yieldOnCost',
     'sector',
   ];
   headers = [
     'Symbol',
-    'Cost Average x shares Owned',
+    'Cost Average x shares',
+    'Total Invested',
     'Market Value',
     'Portfolio %',
     'Unrealized Gain',
-    'Annual Income',
+    'Unrealized Gain %',
+    'Dividend Income',
     'Yield on Cost',
     'Sector',
   ];
@@ -91,11 +95,9 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     this.portfolioHoldings = this.dataService.portfolioHoldings;
     this.portfolioData = this.dataService.portfolioData;
-    this.dataSource.data = Object.values(this.portfolioData)
-      .filter((a) => typeof a !== 'number')
-      .map((data: any) => {
+    this.dataSource.data = Object.values(this.portfolioData).map((data: any) => {
         return {
-          ...data.position,
+          ...this.portfolioHoldings[data.symbol],
           symbol: data.symbol,
           sector: data.profile.sector,
           rating: data.averageAnalystRating,
@@ -126,15 +128,13 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
       return false;
     };
     Object.values(this.portfolioData).forEach((stock: any) => {
-      if (stock.position) {
-        this.allTotalCostChartData.push({
-          name: stock.symbol,
-          value: this.portfolioHoldings[stock.symbol].totalCost,
-          sector: stock.profile.sector || 'ETF',
-          shortName: stock.shortName,
-          longName: stock.longName,
-        });
-      }
+      this.allTotalCostChartData.push({
+        name: stock.symbol,
+        value: this.portfolioHoldings[stock.symbol].totalCost,
+        sector: stock.profile?.sector || 'ETF',
+        shortName: stock.shortName,
+        longName: stock.longName,
+      });
     });
     this.allTotalCostChartData.sort((a: any, b: any) => a.value - b.value);
     this.totalCostChartData = this.allTotalCostChartData;
@@ -147,24 +147,26 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
   cells: Function[] = [
     (stock: any) => '',
     (stock: any) => '',
+    (stock: any) => `$${this.portfolioHoldings[stock.symbol].totalCost}`,
     (stock: any) => `$${this.portfolioHoldings[stock.symbol].marketValue.toFixed(2)}`,
-    (stock: any) => `${(this.portfolioHoldings[stock.symbol].marketValue / this.portfolioHoldings.portfolioMarketValue * 100).toFixed(2)}%`,
-    (stock: any) => '',
-    (stock: any) => `${this.portfolioHoldings[stock.symbol].dividendIncome.toFixed(2)}`,
-    (stock: any) => this.portfolioHoldings[stock.symbol].yieldOnCost.toFixed(2) * 100 + '%',
+    (stock: any) => `${(this.portfolioHoldings[stock.symbol].portfolioPercent * 100).toFixed(2)}%`,
+    (stock: any) => `$${this.portfolioHoldings[stock.symbol].unrealizedGain}`,
+    (stock: any) => `${(this.portfolioHoldings[stock.symbol].unrealizedGainPercent * 100).toFixed(2)}%`,
+    (stock: any) => `$${this.portfolioHoldings[stock.symbol].dividendIncome.toFixed(2)}`,
+    (stock: any) => (this.portfolioHoldings[stock.symbol].yieldOnCost * 100).toFixed(2) + '%',
     (stock: any) => stock.sector || 'ETF',
   ];
 
   footerRow: Function[] = [
     () => '',
-    () => `$${this.portfolioData?.portfolioTotalInvestment?.toFixed(2)}`,
-    () => `$${this.portfolioData?.portfolioMarketValue?.toFixed(2)}`,
     () => '',
-    () => `$${this.portfolioData?.portfolioUnrealizedGain?.toFixed(2)}`,
-    () => `$${this.portfolioData?.portfolioDividendIncome?.toFixed(2)}`,
-    () => `${(this.portfolioData?.portfolioYieldOnCost * 100)?.toFixed(2)}%`,
+    () => `$${this.portfolioHoldings.portfolioTotalInvestment.toFixed(2)}`,
+    () => `$${this.portfolioHoldings.portfolioMarketValue.toFixed(2)}`,
     () => '',
+    () => `$${this.portfolioHoldings.portfolioUnrealizedGain.toFixed(2)}`,
     () => '',
+    () => `$${this.portfolioHoldings.portfolioDividendIncome.toFixed(2)}`,
+    () => `${(this.portfolioHoldings.portfolioYieldOnCost * 100).toFixed(2)}%`,
     () => '',
   ];
 
@@ -194,8 +196,11 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
         return this.portfolioHoldings[stock.symbol].costAverage > stock.fiftyTwoWeekLow
           ? 'tomato'
           : 'forestgreen';
-      case 4:
-        return stock.unrealizedGain < 0 ? 'tomato' : 'forestgreen';
+      case 5:
+      case 6:
+        return this.portfolioHoldings[stock.symbol].unrealizedGain > 0 ? 'forestgreen' : 'tomato';
+      case 7:
+        return this.portfolioHoldings[stock.symbol].dividendIncome > 0 ? 'forestgreen' : 'tomato';
       default:
         return 'black';
     }
