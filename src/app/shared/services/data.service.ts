@@ -50,7 +50,7 @@ export class DataService {
         this.portfolioHoldings.portfolioDividendIncome += position.dividendIncome;
       })
 
-      symbols.forEach((symbol: string) => { 
+      symbols.forEach((symbol: string) => {
         const position = this.portfolioHoldings[symbol]
         position.portfolioPercent = +(position.marketValue / this.portfolioHoldings.portfolioMarketValue).toFixed(4);
       })
@@ -161,11 +161,19 @@ export class DataService {
 
   /**
    * @param {string} symbol of stock to retrieve
-   * @param {number} years of history to retrieve
+   * @param {null | number} years of history to retrieve
+   * @param {null | boolean} update stock data from api call
    * @returns {Observable} Returns a single stock dividend history.
    */
-  getDividendHistory(symbol: string, years: number): Observable<JSON> {
-    const path = `${this.backendUrl}/fetch/dividend-history/${symbol}/${years}`;
+  getDividendHistory(symbol: string, years = 5, update = false): Observable<JSON> {
+    const path = `${this.backendUrl}/fetch/dividend-history/${symbol}`;
+    if (update !== null) {
+      let params = new HttpParams()
+      params = params.set('update', String(update));
+      params = params.set('years', years)
+      const options = { ...this.httpOptions, params };
+      return this.wrapHttpCall(path, options);
+    }
     return this.wrapHttpCall(path);
   }
 

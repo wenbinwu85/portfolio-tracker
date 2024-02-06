@@ -12,7 +12,7 @@ import {
   MatTableDataSource,
   MatTableModule,
 } from '@angular/material/table';
-import { Subscription, forkJoin, retry } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { EChartsOption } from 'echarts';
 
@@ -37,12 +37,10 @@ import { DataService } from '../../../shared/services/data.service';
     StockTickerNameComponent,
   ],
 })
-export class PortfolioDividendComponent
-  implements OnInit, AfterViewInit, OnDestroy {
+export class PortfolioDividendComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild(MatTable) table!: MatTable<any>;
   @ViewChild(MatSort) sort!: MatSort;
-  symbols: string[] = [];
-  stockData:{[k: string]: any} = {};
+  portfolioData: { [k: string]: any } = {};
   browser = '';
   dividendIncome = 0;
   portfolioYieldOnCost = 0;
@@ -114,22 +112,15 @@ export class PortfolioDividendComponent
 
   ngOnInit() {
     this.browser = this.getBrowserName();
-    this.dataService.getPortfolioSymbols().pipe(retry(1)).subscribe(symbols => {
-      this.symbols = symbols;
-    }),
-
-    this.symbols.forEach(symbol => {
-      this.dataService.loadStockDataFromDataFolder(symbol).pipe(retry(1)).subscribe(data => { 
-        this.stockData[symbol] = data;
-      })
-    })
-    this.dataSource.data = Object.values(this.stockData).filter(
+    this.portfolioData = this.dataService.portfolioData;
+    this.dataSource.data = Object.values(this.portfolioData).filter(
       (a: any) => a.dividendYield
     );
-    this.dividendIncome = 0;
-    this.portfolioYieldOnCost = 0;
+    this.dividendIncome = this.dataService.portfolioHoldings.portfolioDividendIncome;
+    this.portfolioYieldOnCost = this.dataService.portfolioHoldings.portfolioYieldOnCost;
     this.setInfoCards();
-    this.updateChart('SCHD');
+    this.dataService.getDividendHistory('MSFT').subscribe(console.log)
+    // this.updateChart('MSFT');
   }
 
   ngAfterViewInit() {
@@ -137,7 +128,7 @@ export class PortfolioDividendComponent
   }
 
   getBrowserName(): string {
-    const agent = window.navigator.userAgent.toLowerCase();
+    const agent = window?.navigator.userAgent.toLowerCase();
     const browser =
       agent.indexOf('edge') > -1
         ? 'Microsoft Edge'
@@ -213,9 +204,9 @@ export class PortfolioDividendComponent
 
   updateChart(symbol: string) {
     this.dividendSubscription$ = this.dataService
-      .getDividendHistory(symbol, 3)
-      .subscribe((data: any) => {
-        console.log(data);
+      .getDividendHistory(symbol)
+      .subscribe((divHis: any) => {
+        console.log(divHis)
         let options: any = {
           title: {
             text: 'Dividend History',
@@ -258,10 +249,10 @@ export class PortfolioDividendComponent
           series: [],
         };
 
-        data
-          .split('\n')
-          .slice(1, -1)
-          .forEach((item: any) => {
+        console.log('wtf')
+        console.log(divHis)
+
+        Object.entries(divHis).forEach((item: any) => {
             let line = item.split(',');
             divData.series.push({
               name: new Date(line[1].split('-').join(' ')),

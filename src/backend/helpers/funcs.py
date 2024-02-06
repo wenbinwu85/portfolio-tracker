@@ -1,15 +1,11 @@
-import logging
 from .cjs import CJS
 
-logger = logging.getLogger('ahben')
-logger.setLevel('DEBUG')
 
-
-def load_data_from(file):
+def load_data_from(path):
     """"""
-    return CJS().load(file)
+    return CJS().load(path)
 
 
-def dump_data_to(data, file):
+def dump_data_to(data, path):
     """"""
-    CJS().dump(data, file)
+    CJS().dump(data, path)

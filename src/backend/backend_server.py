@@ -66,8 +66,8 @@ def fetch_stocks(symbols):
 @app.route('/fetch/portfolio/data')
 def fetch_portfolio():
     symbols = list(generate_holdings_data().keys())
-    update_parm = request.args.get('update')
-    should_update = setting_options.get(update_parm, False)
+    update_param = request.args.get('update')
+    should_update = setting_options.get(update_param, False)
     print('should update:', should_update)
     portfolio_data = {}
     portfolio_data_path = os.path.join(DATA_PATH, 'portfolio.json')
@@ -101,14 +101,37 @@ def fetch_portfolio():
     return jsonify(portfolio_data)
 
 
-@app.route('/fetch/dividend-history/<symbol>/<years>')
-def fetch_dividend(symbol, years):
-    start_date = datetime.now() - timedelta(days=365 * int(years))
-    data = yq_dividend_history(symbol, start_date).to_csv()
+@app.route('/fetch/dividend-history/<symbol>')
+def fetch_dividend(symbol):
+    years_param = request.args.get('years')
+    try:
+        years_param = int(years_param)
+    except ValueError:
+        years_param = 5
+    update_param = request.args.get('update')
+    should_update = setting_options.get(update_param, False)
+    path = os.path.join(DATA_PATH, f'{symbol.lower()}-dividend.csv')
     div_his = {}
-    for line in data.split()[1:]:
-        _, div_date, div_rate = line.split(',')
-        div_his[div_date] = div_rate
+    data = []
+    if should_update:
+        start_date = datetime.now() - timedelta(days=365 * years_param)
+        data = yq_dividend_history(symbol, start_date)
+        data.to_csv(path)
+    else:
+        try:
+            data = load_data_from(path)
+        except Exception:
+            start_date = datetime.now() - timedelta(days=365 * years_param)
+            data = yq_dividend_history(symbol, start_date).to_csv(path)
+            data.to_csv(path)
+    if not isinstance(data, list):
+        for line in data.to_csv().split()[1:]:
+            _, div_date, div_rate = line.split(',')
+            div_his[div_date] = div_rate
+    else:
+        for line in data[1:]:
+            _, div_date, div_rate = line
+            div_his[div_date] = div_rate
     return jsonify(div_his)
 
 
