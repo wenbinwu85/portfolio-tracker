@@ -15,7 +15,8 @@
 
     <div *ngIf="selectedChart === 1" class="chart-container">
         <ngx-charts-bar-vertical 
-            [scheme]="'solar'" 
+            [scheme]="'air'"
+            [schemeType]="scaleType.Linear"
             [animations]="true" 
             [results]="priceChangeChartData"
             [xAxis]="true"
@@ -49,7 +50,8 @@
     </div>
     <div *ngIf="selectedChart === 3" class="chart-container">
         <ngx-charts-bar-vertical
-            [scheme]="'forest'"
+            [scheme]="'solar'"
+            [schemeType]="scaleType.Linear"
             [animations]="true" 
             [results]="betaChartData"
             [xAxis]="true"

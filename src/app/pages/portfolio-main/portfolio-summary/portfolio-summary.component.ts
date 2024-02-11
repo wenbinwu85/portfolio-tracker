@@ -5,8 +5,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
-
+import { NgxChartsModule, ScaleType } from '@swimlane/ngx-charts';
 import { DataService } from '../../../shared/services/data.service';
 import { InfoCardComponent } from '../../../shared/components/info-card/info-card.component';
 
@@ -53,6 +52,7 @@ export class PortfolioSummaryComponent implements OnInit {
   allYocData: any[] = [];
   yocYMax = 0;
   showResetButton = false;
+  scaleType = ScaleType;
 
   constructor(private dataService: DataService) { }
 

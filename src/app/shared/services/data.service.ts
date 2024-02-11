@@ -172,6 +172,7 @@ export class DataService {
       params = params.set('update', String(update));
       params = params.set('years', years)
       const options = { ...this.httpOptions, params };
+      console.log('wtf', symbol, options)
       return this.wrapHttpCall(path, options);
     }
     return this.wrapHttpCall(path);

@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatDividerModule } from '@angular/material/divider';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { NgxChartsModule, ScaleType } from '@swimlane/ngx-charts';
 import {
   TvMiniChartWidgetComponent,
 } from '../../../components/tradingview/tv-market-quotes-widget/tv-mini-chart-widget/tv-mini-chart-widget.component';
@@ -30,6 +30,7 @@ export class PriceMovementChartsComponent {
   priceRangeChartData: any = [];
   betaChartData: any = [];
   selectedChart = 1;
+  scaleType = ScaleType;
 
   constructor(private dataService: DataService) { }
 

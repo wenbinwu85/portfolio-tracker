@@ -65,7 +65,8 @@ def fetch_stocks(symbols):
 
 @app.route('/fetch/portfolio/data')
 def fetch_portfolio():
-    symbols = list(generate_holdings_data().keys())
+    holdings = generate_holdings_data()
+    symbols = list(holdings.keys())
     update_param = request.args.get('update')
     should_update = setting_options.get(update_param, False)
     print('should update:', should_update)
@@ -104,6 +105,7 @@ def fetch_portfolio():
 @app.route('/fetch/dividend-history/<symbol>')
 def fetch_dividend(symbol):
     years_param = request.args.get('years')
+    print('args:', symbol, request.args)
     try:
         years_param = int(years_param)
     except ValueError:

@@ -15,6 +15,7 @@
         <div *ngIf="selectedChart === 1" class="chart-container">
             <ngx-charts-bar-vertical
                 [scheme]="'air'"
+                [schemeType]="scaleType.Linear"
                 [animations]="true"
                 [results]="fiftyDayMAChartData"
                 [xAxis]="true"
@@ -24,21 +25,21 @@
                 [legend]="false"
                 [yAxisLabel]="'Price vs 50 Day MA %'"
                 [rotateXAxisTicks]="true"
-                [yScaleMax]="6"
-                [yScaleMin]="-6"
+                [yScaleMin]="fiftyDayMAChartData[0].value - 5"
             >
-                <ng-template #tooltipTemplate let-model="model" class="dark">
+                <!-- <ng-template #tooltipTemplate let-model="model" class="dark">
                     <stock-price-info-card [stock]="getTooltipData(model.name)" />
                     <mat-divider style="margin: none;"/>
                     <span>{{ model.name }}: </span>
                     <span>{{ model.value.toFixed(2) }}%</span>
-                </ng-template>
+                </ng-template> -->
             </ngx-charts-bar-vertical>
 
         </div> 
         <div *ngIf="selectedChart === 1" class="chart-container">
             <ngx-charts-bar-vertical
                 [scheme]="'air'"
+                [schemeType]="scaleType.Linear"
                 [animations]="true"
                 [results]="twoHundredDayMAChartData"
                 [xAxis]="true"
@@ -48,22 +49,22 @@
                 [legend]="false"
                 [yAxisLabel]="'Price vs 200 Day MA %'"
                 [rotateXAxisTicks]="true"
-                [yScaleMax]="6"
-                [yScaleMin]="-6"
+                [yScaleMin]="twoHundredDayMAChartData[0].value - 5"
             >
-                <ng-template #tooltipTemplate let-model="model" class="dark">
+                <!-- <ng-template #tooltipTemplate let-model="model" class="dark">
                     <stock-price-info-card [stock]="getTooltipData(model.name)" />
                     <mat-divider style="margin: none;"/>
                     <span>{{ model.name }}: </span>
                     <span>{{ model.value.toFixed(2) }}%</span>
-                </ng-template>
+                </ng-template> -->
             </ngx-charts-bar-vertical>
         </div> 
     </div>
 
     <div *ngIf="selectedChart === 2" class="chart-container">
         <ngx-charts-bar-vertical
-            [scheme]="'aqua'"
+            [scheme]="'air'"
+            [schemeType]="scaleType.Linear"
             [animations]="true"
             [results]="fiftyTwoWeekChangeChartData"
             [xAxis]="true"
@@ -76,18 +77,19 @@
             [activeEntries]="active"
             [customColors]="customColor"
         >
-            <ng-template #tooltipTemplate let-model="model" class="dark">
+            <!-- <ng-template #tooltipTemplate let-model="model" class="dark">
                 <stock-price-info-card *ngIf="model.name !== 'S&P 500'" [stock]="getTooltipData(model.name)" />
                 <mat-divider *ngIf="model.name !== 'S&P 500'" style="margin: none;" />
                 <span>{{ model.name }}: </span>
                 <span>{{ model.value.toFixed(2) }}%</span>
-            </ng-template>
+            </ng-template> -->
         </ngx-charts-bar-vertical>
     </div>
 
     <div *ngIf="selectedChart === 3" class="chart-container">
         <ngx-charts-bar-vertical-2d
-            [scheme]="'aqua'"
+            [scheme]="'air'"
+            [schemeType]="scaleType.Linear"
             [animations]="true"
             [results]="etfPerformanceChartData"
             [xAxis]="true"
@@ -99,9 +101,9 @@
             [showDataLabel]="true"
             [rotateXAxisTicks]="true"
         >
-            <ng-template #tooltipTemplate let-model="model" class="dark">
+            <!-- <ng-template #tooltipTemplate let-model="model" class="dark">
                 <stock-price-info-card [stock]="getTooltipData(model.name)" />
-            </ng-template>
+            </ng-template> -->
         </ngx-charts-bar-vertical-2d>
     </div>
 </section>
@@ -124,14 +126,13 @@
                 [legend]="false"
                 [yAxisLabel]="'Distance above 52Week Low %'"
                 [rotateXAxisTicks]="true"
-                [yScaleMin]="-5"
             >
-                <ng-template #tooltipTemplate let-model="model" class="dark">
+                <!-- <ng-template #tooltipTemplate let-model="model" class="dark">
                     <stock-price-info-card [stock]="getTooltipData(model.name)" />
                     <mat-divider style="margin: none;"/>
                     <span>{{ model.name }}: </span>
                     <span>{{ model.value.toFixed(2) }}%</span>
-                </ng-template>
+                </ng-template> -->
             </ngx-charts-bar-vertical>
         </div> 
         <div class="chart-container">
@@ -148,12 +149,12 @@
                 [rotateXAxisTicks]="true"
                 [yScaleMin]="-5"
             >
-                <ng-template #tooltipTemplate let-model="model" class="dark">
+                <!-- <ng-template #tooltipTemplate let-model="model" class="dark">
                     <stock-price-info-card [stock]="getTooltipData(model.name)" />
                     <mat-divider style="margin: none;"/>
                     <span>{{ model.name }}: </span>
                     <span>{{ model.value.toFixed(2) }}%</span>
-                </ng-template>
+                </ng-template> -->
             </ngx-charts-bar-vertical>
         </div> 
     </div>

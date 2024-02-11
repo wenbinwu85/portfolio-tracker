@@ -1,30 +1,29 @@
-import { NgFor, NgIf } from '@angular/common';
+import { NgFor, NgIf } from "@angular/common";
 import {
   AfterViewInit,
   Component,
   OnDestroy,
   OnInit,
   ViewChild,
-} from '@angular/core';
-import { MatSort, MatSortModule } from '@angular/material/sort';
+} from "@angular/core";
+import { MatSort, MatSortModule } from "@angular/material/sort";
 import {
   MatTable,
   MatTableDataSource,
   MatTableModule,
-} from '@angular/material/table';
-import { Subscription } from 'rxjs';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
-import { EChartsOption } from 'echarts';
-
-import { EchartComponent } from '../../../shared/components/charts/echart/echart.component';
-import { InfoCardComponent } from '../../../shared/components/info-card/info-card.component';
-import { StockTickerNameComponent } from '../../../shared/components/stock/stock-ticker-name/stock-ticker-name.component';
-import { DataService } from '../../../shared/services/data.service';
+} from "@angular/material/table";
+import { Subscription } from "rxjs";
+import { NgxChartsModule } from "@swimlane/ngx-charts";
+import { EChartsOption } from "echarts";
+import { EchartComponent } from "../../../shared/components/charts/echart/echart.component";
+import { InfoCardComponent } from "../../../shared/components/info-card/info-card.component";
+import { StockTickerNameComponent } from "../../../shared/components/stock/stock-ticker-name/stock-ticker-name.component";
+import { DataService } from "../../../shared/services/data.service";
 
 @Component({
-  selector: 'portfolio-dividend',
-  templateUrl: './portfolio-dividend.component.html',
-  styleUrls: ['./portfolio-dividend.component.css'],
+  selector: "portfolio-dividend",
+  templateUrl: "./portfolio-dividend.component.html",
+  styleUrls: ["./portfolio-dividend.component.css"],
   standalone: true,
   imports: [
     EchartComponent,
@@ -41,11 +40,11 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit, OnDest
   @ViewChild(MatTable) table!: MatTable<any>;
   @ViewChild(MatSort) sort!: MatSort;
   portfolioData: { [k: string]: any } = {};
-  browser = '';
+  browser = "";
   dividendIncome = 0;
   portfolioYieldOnCost = 0;
   dividendLineChartData: any[] = [];
-  selectedSymbol = '';
+  selectedSymbol = "";
   ytdDividendEarned = 0;
   dividendSubscription$!: Subscription;
 
@@ -60,34 +59,34 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit, OnDest
 
   dataSource = new MatTableDataSource<any>();
   columnDefs = [
-    'symbol',
-    'dividendRate',
-    'trailingAnnualDividendRate',
-    'dividendYield',
-    'trailingAnnualDividendYield',
-    'fiveYearAvgDividendYield',
-    'payoutRatio',
-    'fcfPayoutRatio',
-    'lastDividendValue',
-    'exDividendDate',
-    'dividendDate',
+    "symbol",
+    "dividendRate",
+    "trailingAnnualDividendRate",
+    "dividendYield",
+    "trailingAnnualDividendYield",
+    "fiveYearAvgDividendYield",
+    "payoutRatio",
+    "fcfPayoutRatio",
+    "lastDividendValue",
+    "exDividendDate",
+    "dividendDate",
   ];
   headers = [
-    'Symbol',
-    'Dividend Rate',
-    'Dividend Rate (TTM)',
-    'Yield',
-    'Yield (TTM)',
-    '5Y Avg. Yield',
-    'Payout Ratio',
-    'Free Cash Flow Payout Ratio',
-    'Last Dividend Paid',
-    'Ex-dividend Date',
-    'Dividend Date',
+    "Symbol",
+    "Dividend Rate",
+    "Dividend Rate (TTM)",
+    "Yield",
+    "Yield (TTM)",
+    "5Y Avg. Yield",
+    "Payout Ratio",
+    "Free Cash Flow Payout Ratio",
+    "Last Dividend Paid",
+    "Ex-dividend Date",
+    "Dividend Date",
   ];
 
   cells: Function[] = [
-    (stock: any) => '',
+    (stock: any) => "",
     (stock: any) => `$${stock.dividendRate?.toFixed(2)}`,
     (stock: any) => `$${stock.trailingAnnualDividendRate?.toFixed(2) || 0}`,
     (stock: any) => `${(stock.dividendYield * 100 || 0).toFixed(2)}%`,
@@ -101,11 +100,11 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit, OnDest
     (stock: any) =>
       stock.exDividendDate
         ? new Date(stock.exDividendDate.slice(0, 10)).toDateString()
-        : 'N/A',
+        : "N/A",
     (stock: any) =>
       stock.dividendDate
         ? new Date(stock.dividendDate * 1000).toDateString()
-        : 'N/A',
+        : "N/A",
   ];
 
   constructor(private dataService: DataService) { }
@@ -116,11 +115,13 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit, OnDest
     this.dataSource.data = Object.values(this.portfolioData).filter(
       (a: any) => a.dividendYield
     );
-    this.dividendIncome = this.dataService.portfolioHoldings.portfolioDividendIncome;
-    this.portfolioYieldOnCost = this.dataService.portfolioHoldings.portfolioYieldOnCost;
+    this.dividendIncome =
+      this.dataService.portfolioHoldings.portfolioDividendIncome;
+    this.portfolioYieldOnCost =
+      this.dataService.portfolioHoldings.portfolioYieldOnCost;
     this.setInfoCards();
-    this.dataService.getDividendHistory('MSFT').subscribe(console.log)
-    // this.updateChart('MSFT');
+    this.dataService.getDividendHistory("MSFT").subscribe(console.log);
+    this.updateChart("MSFT");
   }
 
   ngAfterViewInit() {
@@ -130,74 +131,74 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit, OnDest
   getBrowserName(): string {
     const agent = window?.navigator.userAgent.toLowerCase();
     const browser =
-      agent.indexOf('edge') > -1
-        ? 'Microsoft Edge'
-        : agent.indexOf('edg') > -1
-          ? 'Chromium-based Edge'
-          : agent.indexOf('opr') > -1
-            ? 'Opera'
-            : agent.indexOf('chrome') > -1
-              ? 'Chrome'
-              : agent.indexOf('trident') > -1
-                ? 'Internet Explorer'
-                : agent.indexOf('firefox') > -1
-                  ? 'Firefox'
-                  : agent.indexOf('safari') > -1
-                    ? 'Safari'
-                    : 'other';
+      agent.indexOf("edge") > -1
+        ? "Microsoft Edge"
+        : agent.indexOf("edg") > -1
+          ? "Chromium-based Edge"
+          : agent.indexOf("opr") > -1
+            ? "Opera"
+            : agent.indexOf("chrome") > -1
+              ? "Chrome"
+              : agent.indexOf("trident") > -1
+                ? "Internet Explorer"
+                : agent.indexOf("firefox") > -1
+                  ? "Firefox"
+                  : agent.indexOf("safari") > -1
+                    ? "Safari"
+                    : "other";
     return browser;
   }
 
   setInfoCards() {
     this.infoCards = [
       {
-        icon: 'payments',
+        icon: "payments",
         value: this.dividendIncome.toFixed(2),
-        valueType: 'currency',
-        subtitle: 'Projected Annual Div. Income',
+        valueType: "currency",
+        subtitle: "Projected Annual Div. Income",
         color: null,
       },
       {
-        icon: 'payments',
+        icon: "payments",
         value: (this.dividendIncome / 4).toFixed(2),
-        valueType: 'currency',
-        subtitle: 'Quarterly  Income',
+        valueType: "currency",
+        subtitle: "Quarterly  Income",
         color: null,
       },
       {
-        icon: 'payments',
+        icon: "payments",
         value: (this.dividendIncome / 12).toFixed(2),
-        valueType: 'currency',
-        subtitle: 'Monthly Income',
+        valueType: "currency",
+        subtitle: "Monthly Income",
         color: null,
       },
       {
-        icon: 'payments',
+        icon: "payments",
         value: (this.dividendIncome / 365).toFixed(2),
-        valueType: 'currency',
-        subtitle: 'Daily Income',
+        valueType: "currency",
+        subtitle: "Daily Income",
         color: null,
       },
       {
-        icon: 'payments',
+        icon: "payments",
         value: (this.dividendIncome / 8760).toFixed(2),
-        valueType: 'currency',
-        subtitle: 'Hourly Income',
+        valueType: "currency",
+        subtitle: "Hourly Income",
         color: null,
       },
       {
-        icon: 'percent',
+        icon: "percent",
         value: this.portfolioYieldOnCost.toFixed(4),
-        valueType: 'percentage',
-        subtitle: 'Portfolio YOC',
-        color: 'slateblue',
+        valueType: "percentage",
+        subtitle: "Portfolio YOC",
+        color: "slateblue",
       },
       {
-        icon: 'payments',
+        icon: "payments",
         value: this.ytdDividendEarned,
-        valueType: 'currency',
-        subtitle: 'YTD Dividend Earned',
-        color: 'forestgreen',
+        valueType: "currency",
+        subtitle: "YTD Dividend Earned",
+        color: "forestgreen",
       },
     ];
   }
@@ -206,13 +207,13 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit, OnDest
     this.dividendSubscription$ = this.dataService
       .getDividendHistory(symbol)
       .subscribe((divHis: any) => {
-        console.log(divHis)
+        console.log(divHis);
         let options: any = {
           title: {
-            text: 'Dividend History',
+            text: "Dividend History",
           },
           legend: {
-            data: ['Dividend $'],
+            data: ["Dividend $"],
           },
           tooltip: {},
           xAxis: {
@@ -224,18 +225,18 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit, OnDest
           yAxis: {},
           series: [
             {
-              name: 'Dividend $',
-              type: 'bar',
+              name: "Dividend $",
+              type: "bar",
               data: [],
               emphasis: {
-                focus: 'series',
+                focus: "series",
               },
               animationDelay: function (idx: any) {
                 return idx * 10;
               },
             },
           ],
-          animationEasing: 'elasticOut',
+          animationEasing: "elasticOut",
           animationDelayUpdate: function (idx: any) {
             return idx * 5;
           },
@@ -249,30 +250,30 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit, OnDest
           series: [],
         };
 
-        console.log('wtf')
-        console.log(divHis)
+        console.log("wtf");
+        console.log(divHis);
 
         Object.entries(divHis).forEach((item: any) => {
-            let line = item.split(',');
-            divData.series.push({
-              name: new Date(line[1].split('-').join(' ')),
-              value: +line[2],
-            });
-
-            options.xAxis.data.push(line[1].split('-').join(' '));
-            options.series[0].data.push(+line[2]);
+          let line = item.split(",");
+          divData.series.push({
+            name: new Date(line[1].split("-").join(" ")),
+            value: +line[2],
           });
+
+          options.xAxis.data.push(line[1].split("-").join(" "));
+          options.series[0].data.push(+line[2]);
+        });
 
         this.echartOptions = options;
         this.dividendLineChartData = [divData];
-        this.selectedSymbol = `${stock.symbol} | ${stock.longName} | ${stock.profile?.sector || 'ETF'
+        this.selectedSymbol = `${stock.symbol} | ${stock.longName} | ${stock.profile?.sector || "ETF"
           }`;
       });
 
     window.scroll({
       top: 100,
       left: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   }
 

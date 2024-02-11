@@ -7,7 +7,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatIconModule } from "@angular/material/icon";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { MatTabsModule } from "@angular/material/tabs";
-import { NgxChartsModule } from "@swimlane/ngx-charts";
+import { NgxChartsModule, ScaleType} from "@swimlane/ngx-charts";
 
 import { PriceMovementChartsComponent } from "../../../shared/components/charts/price-movement-charts/price-movement-charts.component";
 import { StockPriceInfoCardComponent } from "../../../shared/components/stock/stock-price-info-card/stock-price-info-card.component";
@@ -59,6 +59,7 @@ export class PortfolioPriceTrendsComponent implements OnInit {
   active = [{ name: this.sp500 }];
   customColor = [{ name: this.sp500, value: "tomato" }];
   selectedChart = 1;
+  scaleType = ScaleType;
 
   constructor(private dataService: DataService) {}
 
@@ -138,9 +139,6 @@ export class PortfolioPriceTrendsComponent implements OnInit {
             value: etf.fundPerformance.trailingReturns[key] * 100,
           });
         });
-        console.log('!!!!')
-        console.log('key', key)
-        console.log(keyData)
         this.etfPerformanceChartData.push(keyData);
       };
     })

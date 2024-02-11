@@ -30,11 +30,6 @@ export const routes: Routes = [
         ),
     },
     {
-      path: 'about',
-      loadComponent: () =>
-        import('./pages/about/about.component').then((c) => c.AboutComponent),
-    },
-    {
       path: 'stock/:symbol',
       loadComponent: () =>
         import(
