@@ -257,10 +257,7 @@ def map_stock_data(yqdata):
     for i in symbols:
         position = holdings[i]
         stock_data = mapped_data[i]
-        try:
-            price = stock_data.get('regularMarketPrice', 0)
-        except Exception:
-            price = stock_data('postMarketPrice', 0)
+        price = stock_data.get('regularMarketPrice', 0)
         total_cost = position['totalCost']
         position['marketValue'] = price * position['sharesOwned']
         position['unrealizedGain'] = position['marketValue'] - total_cost

@@ -60,11 +60,11 @@ export class PortfolioSummaryComponent implements OnInit {
     this.portfolioHoldings = this.dataService.portfolioHoldings
     this.portfolioData = this.dataService.portfolioData;
     this.passiveIncomeGoalPercentage =
-      this.portfolioHoldings.portfolioDividendIncome / this.passiveIncomeTarget;
+      this.portfolioData.portfolioDividendIncome / this.passiveIncomeTarget;
     this.portfolioValueTarget =
-      this.passiveIncomeTarget / this.portfolioHoldings.portfolioYieldOnCost;
+      this.passiveIncomeTarget / this.portfolioData.portfolioYieldOnCost;
     this.portfolioValueGoalPercentage =
-      this.portfolioHoldings.portfolioMarketValue / this.portfolioValueTarget;
+      this.portfolioData.portfolioMarketValue / this.portfolioValueTarget;
 
     // sectors
     let market_sectors: any = {};
@@ -110,7 +110,7 @@ export class PortfolioSummaryComponent implements OnInit {
 
         this.allPortfolioPercentData.push({
           name: stock.symbol,
-          value: position.marketValue / this.portfolioHoldings.portfolioMarketValue * 100,
+          value: position.marketValue / this.portfolioData.portfolioMarketValue * 100,
           sector: stock.profile?.sector || 'ETF',
         });
       });

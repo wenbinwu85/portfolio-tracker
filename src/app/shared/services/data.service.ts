@@ -31,37 +31,8 @@ export class DataService {
       this.portfolioHoldings = holdings;
       this.portfolioSymbols = symbols;
       this.portfolioData = portfolioData;
-      this.portfolioHoldings.portfolioPositions = symbols.length;
-      this.portfolioHoldings.portfolioMarketValue = 0;
-      this.portfolioHoldings.portfolioTotalInvestment = 0;
-
-      symbols.forEach(symbol => {
-        const position = this.portfolioHoldings[symbol];
-        const stock = this.portfolioData[symbol]
-        const price = stock?.regularMarketPrice;
-        position.marketValue = +(price * position.sharesOwned).toFixed(4);
-        position.unrealizedGain = +(position.marketValue - position.totalCost).toFixed(4);
-        position.unrealizedGainPercent = +(position.unrealizedGain / position.totalCost).toFixed(4);
-        position.dividendIncome = +(stock.dividendRate * position.sharesOwned).toFixed(4) || 0;
-        position.yieldOnCost = +(position.dividendIncome / position.totalCost).toFixed(4);
-
-        this.portfolioHoldings.portfolioMarketValue += position.marketValue;
-        this.portfolioHoldings.portfolioTotalInvestment += position.totalCost;
-        this.portfolioHoldings.portfolioDividendIncome += position.dividendIncome;
-      })
-
-      symbols.forEach((symbol: string) => {
-        const position = this.portfolioHoldings[symbol]
-        position.portfolioPercent = +(position.marketValue / this.portfolioHoldings.portfolioMarketValue).toFixed(4);
-      })
-
-      this.portfolioHoldings.portfolioUnrealizedGain = this.portfolioHoldings.portfolioMarketValue - this.portfolioHoldings.portfolioTotalInvestment;
-      this.portfolioHoldings.portfolioUnrealizedGainPercent = +(this.portfolioHoldings.portfolioUnrealizedGain / this.portfolioHoldings.portfolioTotalInvestment).toFixed(4);
-      this.portfolioHoldings.portfolioYield = +(this.portfolioHoldings.portfolioDividendIncome / this.portfolioHoldings.portfolioMarketValue).toFixed(4);
-      this.portfolioHoldings.portfolioYieldOnCost = +(this.portfolioHoldings.portfolioDividendIncome / this.portfolioHoldings.portfolioTotalInvestment).toFixed(4);
-
-      // this.getStocksData(this.portfolioSymbols, true).subscribe(console.log)
-      console.table(this.portfolioHoldings)
+      console.table(this.portfolioHoldings);
+      console.table(Object.keys(this.portfolioData));
     })
   }
 
@@ -90,7 +61,7 @@ export class DataService {
    * @returns {Observable} Returns portfolio holdings data.
    */
   public getPortfolioHoldings(): Observable<JSON> {
-    const path = `${this.backendUrl}/fetch/holdings`;
+    const path = `${this.backendUrl}/fetch/portfolio/holdings`;
     return this.wrapHttpCall(path);
   }
 

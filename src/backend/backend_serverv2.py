@@ -3,7 +3,7 @@ import os
 from datetime import datetime, timedelta
 from quart import Quart, jsonify, request
 from helpers.funcs import dump_data_to, load_data_from
-from yq import yq_stock_data, yq_dividend_history, yq_corporate_events, DATA_PATH
+from yq import DATA_PATH, yq_stock_data, yq_dividend_history, yq_corporate_events
 from yq import yq_technical_insights, yq_recommendations, generate_holdings_data
 
 
