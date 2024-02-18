@@ -31,9 +31,12 @@ export class DataService {
       this.portfolioHoldings = holdings;
       this.portfolioSymbols = symbols;
       this.portfolioData = portfolioData;
-      console.table(this.portfolioHoldings);
-      console.table(Object.keys(this.portfolioData));
-    })
+    });
+
+    console.log("!!!!!");
+    console.table(this.portfolioHoldings);
+    console.table(this.portfolioSymbols);
+    console.table(Object.keys(this.portfolioData));
   }
 
   private error(error: HttpErrorResponse): Observable<any> {
@@ -136,14 +139,18 @@ export class DataService {
    * @param {null | boolean} update stock data from api call
    * @returns {Observable} Returns a single stock dividend history.
    */
-  getDividendHistory(symbol: string, years = 5, update = false): Observable<JSON> {
+  getDividendHistory(
+    symbol: string,
+    years = 5,
+    update = false
+  ): Observable<JSON> {
     const path = `${this.backendUrl}/fetch/dividend-history/${symbol}`;
     if (update !== null) {
-      let params = new HttpParams()
-      params = params.set('update', String(update));
-      params = params.set('years', years)
+      let params = new HttpParams();
+      params = params.set("update", String(update));
+      params = params.set("years", years);
       const options = { ...this.httpOptions, params };
-      console.log('wtf', symbol, options)
+      console.log("wtf", symbol, options);
       return this.wrapHttpCall(path, options);
     }
     return this.wrapHttpCall(path);

@@ -110,7 +110,7 @@ export class PortfolioSummaryComponent implements OnInit {
 
         this.allPortfolioPercentData.push({
           name: stock.symbol,
-          value: position.marketValue / this.portfolioData.portfolioMarketValue * 100,
+          value: position.marketValue / this.portfolioHoldings.portfolioMarketValue * 100,
           sector: stock.profile?.sector || 'ETF',
         });
       });

@@ -26,12 +26,12 @@
             [yAxisLabel]="'Price Change %'"
             [rotateXAxisTicks]="true"
         >
-            <ng-template #tooltipTemplate let-model="model">
+            <!-- <ng-template #tooltipTemplate let-model="model">
                 <tv-mini-chart-widget [symbol]="model.name" [theme]="'dark'"/>
                 <mat-divider style="margin: none; border-top-color: darkgray"/>
                 <span>Pre/Post: {{ model.name }} </span>
                 <span>{{ model.value.toFixed(2) }}%</span>
-            </ng-template>
+            </ng-template> -->
         </ngx-charts-bar-vertical>
     </div>
     <div *ngIf="selectedChart === 2" class="chart-container">

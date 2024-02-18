@@ -3,7 +3,7 @@ import queue
 from concurrent.futures import ThreadPoolExecutor
 from multiprocessing import Pool, Process, cpu_count
 from yahooquery import Ticker
-from helpers.funcs import load_data_from
+from helpers.funcs import load_data_from, dump_data_to
 
 BACKEND_PATH = os.path.abspath(os.path.dirname(__file__))
 DATA_PATH = os.path.join(BACKEND_PATH, 'data')
@@ -129,81 +129,53 @@ def clean(data):
             continue
 
 
-def yq_stock_data(symbols=None):
-    if symbols is None:
-        symbols = list(generate_holdings_data().keys())
-    ticker = Ticker(symbols, asynchronous=True, progress=True)
-    ticker_data = ticker.get_modules(yq_selected_modules)
-    mapped_data = map_stock_data(ticker_data)
-    return mapped_data
-
-
-def yq_dividend_history(symbol, start_date):
-    ticker = Ticker(symbol, asynchronous=True, progress=True)
-    return ticker.dividend_history(start=start_date)
-
-
-# TODO: there is alL_financials module I should use instead of this
-# def yq_financials(symbol):
-#     try:
-#         ticker = Ticker(symbol, asynchronous=True, progress=True)
-
-#         path = os.path.join(STOCK_DATA_PATH, f'{symbol}-balance-sheet.json')
-#         balance_sheet = ticker.balance_sheet(frequency='q', trailing=True)
-#         balance_sheet.to_json(path, orient='records', indent=2)
-
-#         path = os.path.join(STOCK_DATA_PATH, f'{symbol}-cash-flow.json')
-#         cash_flow = ticker.cash_flow(frequency='q', trailing=True)
-#         cash_flow.to_json(path, orient='records', indent=2)
-
-#         path = os.path.join(STOCK_DATA_PATH, f'{symbol}-income-statement.json')
-#         income_statement = ticker.income_statement(frequency='q', trailing=True)
-#         income_statement.to_json(path, orient='records', indent=2)
-
-#         path = os.path.join(STOCK_DATA_PATH, f'{symbol}-valuation-measures.json')
-#         valuation_measures = ticker.valuation_measures
-#         valuation_measures.to_json(path, orient='records', indent=2)
-#     except Exception as e:
-#         print(symbol, 'failed to fetch financials:', e)
-
-
-def yq_corporate_events(symbol):
-    try:
-        ticker = Ticker(symbol, asynchronous=True, progress=True)
-        return ticker.corporate_events
-    except Exception as e:
-        print(symbol, 'failed to fetch corporate events:', e)
-
-
-def yq_technical_insights(symbol):
-    ticker = Ticker(symbol, asynchronous=True, progress=True)
-    return ticker.technical_insights
-
-
-def yq_recommendations(symbol):
-    ticker = Ticker(symbol, asynchronous=True, progress=True)
-    return ticker.recommendations
-
-
 def generate_holdings_data():
+    holdings_json_path = os.path.join(DATA_PATH, 'holdings.json')
     holdings = {}
+    holdings.update({'portfolioPositions': 0})
+    holdings.update({'portfolioMarketValue': 0})
+    holdings.update({'portfolioTotalInvestment': 0})
+    holdings.update({'portfolioDividendIncome': 0})
+    holdings.update({'portfolioUnrealizedGain': 0})
+    holdings.update({'portfolioUnrealizedGainPercent': 0})
+
     for symbol, shares, cost_avg, _ in list(load_data_from(HOLDINGS_DATA_PATH)):
-        symbol_data = holdings[symbol]['position'] if holdings.get(symbol) else {}
+        holding_data = holdings.get(symbol, {})
+        stock_data_path = os.path.join(DATA_PATH, f'{symbol}.json')
+        stock_data = load_data_from(stock_data_path)
         shares = float(shares)
         cost_avg = float(cost_avg)
-        symbol_data['sharesOwned'] = shares
-        symbol_data['costAverage'] = cost_avg
-        symbol_data['totalCost'] = round(cost_avg * shares, 4)
-        symbol_data['symbol'] = symbol
-        holdings[symbol] = symbol_data
+        holding_data['sharesOwned'] = shares
+        holding_data['costAverage'] = cost_avg
+        holding_data['totalCost'] = round(cost_avg * shares, 4)
+        holding_data['symbol'] = symbol
+        holding_data['marketPrice'] = stock_data.get('regularMarketPrice', 0)
+        holding_data['marketValue'] = holding_data['marketPrice'] * holding_data['sharesOwned']
+        total_cost = holding_data['totalCost']
+        holding_data['unrealizedGain'] = holding_data['marketValue'] - total_cost
+        holding_data['unrealizedGainPercent'] = holding_data['unrealizedGain'] / total_cost
+        holding_data['dividendIncome'] = stock_data.get('dividendRate', 0) * holding_data['sharesOwned']
+        holding_data['yieldOnCost'] = holding_data['dividendIncome'] / total_cost
+        holdings['portfolioMarketValue'] += holding_data['marketValue']
+        holdings['portfolioTotalInvestment'] += holding_data['totalCost']
+        holdings['portfolioDividendIncome'] += holding_data['dividendIncome']
+        holdings['portfolioUnrealizedGain'] += holding_data['unrealizedGain']
+        holdings[symbol] = holding_data
+
+    for position in [v for v in holdings.values() if isinstance(v, dict)]:
+        position['portfolioPercent'] = position['marketValue'] / holdings['portfolioMarketValue']
+        holdings[position['symbol']] = position
+        holdings['portfolioPositions'] += 1
+        holdings['portfolioUnrealizedGainPercent'] = holdings['portfolioUnrealizedGain'] / holdings['portfolioTotalInvestment']
+        holdings['portfolioYieldOnCost'] = holdings['portfolioDividendIncome'] / holdings['portfolioTotalInvestment']
+        holdings['portfolioYield'] = holdings['portfolioDividendIncome'] / holdings['portfolioMarketValue']
+
+    dump_data_to(holdings, holdings_json_path)
     return holdings
 
 
 def map_stock_data(yqdata):
-    holdings = generate_holdings_data()
-    symbols = list(holdings.keys())
     mapped_data = {}
-
     for symbol, data in yqdata.items():
         mapped_data[symbol] = {}
         mapped_data[symbol]['profile'] = data['assetProfile']
@@ -249,32 +221,61 @@ def map_stock_data(yqdata):
             mapped_data[symbol]['fundPerformance'] = data['fundPerformance']
     for _, v in mapped_data.items():
         clean(v)
-
-    mapped_data.update({'portfolioPositions': len(symbols)})
-    mapped_data.update({'portfolioMarketValue': 0})
-    mapped_data.update({'portfolioTotalInvestment': 0})
-    mapped_data.update({'portfolioDividendIncome': 0})
-    for i in symbols:
-        position = holdings[i]
-        stock_data = mapped_data[i]
-        price = stock_data.get('regularMarketPrice', 0)
-        total_cost = position['totalCost']
-        position['marketValue'] = price * position['sharesOwned']
-        position['unrealizedGain'] = position['marketValue'] - total_cost
-        position['unrealizedGainPercent'] = position['unrealizedGain'] / total_cost
-        position['dividendIncome'] = stock_data.get('dividendRate', 0) * position['sharesOwned']
-        position['yieldOnCost'] = position['dividendIncome'] / total_cost
-        mapped_data['portfolioMarketValue'] += position['marketValue']
-        mapped_data['portfolioTotalInvestment'] += total_cost
-        mapped_data['portfolioDividendIncome'] += position['dividendIncome']
-
-    for i in symbols:
-        position = holdings[i]
-        position['portfolioPercent'] = position['marketValue'] / mapped_data['portfolioMarketValue']
-
-    mapped_data['portfolioUnrealizedGain'] = mapped_data['portfolioMarketValue'] - mapped_data['portfolioTotalInvestment']
-    mapped_data['portfolioUnrealizedGainPercent'] = mapped_data['portfolioUnrealizedGain'] / mapped_data['portfolioTotalInvestment']
-    mapped_data['portfolioYield'] = mapped_data['portfolioDividendIncome'] / mapped_data['portfolioMarketValue']
-    mapped_data['portfolioYieldOnCost'] = mapped_data['portfolioDividendIncome'] / mapped_data['portfolioTotalInvestment']
-
     return mapped_data
+
+
+def yq_stock_data(symbols=None):
+    if symbols is None:
+        holdings = generate_holdings_data()
+        symbols = [k for k, v in holdings.items() if isinstance(v, dict)]
+    ticker = Ticker(symbols, asynchronous=True, progress=True)
+    ticker_data = ticker.get_modules(yq_selected_modules)
+    mapped_data = map_stock_data(ticker_data)
+    return mapped_data
+
+
+def yq_dividend_history(symbol, start_date):
+    ticker = Ticker(symbol, asynchronous=True, progress=True)
+    return ticker.dividend_history(start=start_date)
+
+
+def yq_corporate_events(symbol):
+    try:
+        ticker = Ticker(symbol, asynchronous=True, progress=True)
+        return ticker.corporate_events
+    except Exception as e:
+        print(symbol, 'failed to fetch corporate events:', e)
+
+
+def yq_technical_insights(symbol):
+    ticker = Ticker(symbol, asynchronous=True, progress=True)
+    return ticker.technical_insights
+
+
+def yq_recommendations(symbol):
+    ticker = Ticker(symbol, asynchronous=True, progress=True)
+    return ticker.recommendations
+
+
+# TODO: there is alL_financials module I should use instead of this
+# def yq_financials(symbol):
+#     try:
+#         ticker = Ticker(symbol, asynchronous=True, progress=True)
+
+#         path = os.path.join(STOCK_DATA_PATH, f'{symbol}-balance-sheet.json')
+#         balance_sheet = ticker.balance_sheet(frequency='q', trailing=True)
+#         balance_sheet.to_json(path, orient='records', indent=2)
+
+#         path = os.path.join(STOCK_DATA_PATH, f'{symbol}-cash-flow.json')
+#         cash_flow = ticker.cash_flow(frequency='q', trailing=True)
+#         cash_flow.to_json(path, orient='records', indent=2)
+
+#         path = os.path.join(STOCK_DATA_PATH, f'{symbol}-income-statement.json')
+#         income_statement = ticker.income_statement(frequency='q', trailing=True)
+#         income_statement.to_json(path, orient='records', indent=2)
+
+#         path = os.path.join(STOCK_DATA_PATH, f'{symbol}-valuation-measures.json')
+#         valuation_measures = ticker.valuation_measures
+#         valuation_measures.to_json(path, orient='records', indent=2)
+#     except Exception as e:
+#         print(symbol, 'failed to fetch financials:', e)

@@ -38,7 +38,6 @@ export class PriceMovementChartsComponent {
     this.portfolioHoldings = this.dataService.portfolioHoldings;
     this.portfolioData = this.dataService.portfolioData;
 
-
     this.dataService.portfolioSymbols.forEach((symbol: any) => {
       const position = this.portfolioHoldings[symbol];
       const stock = this.portfolioData[symbol];

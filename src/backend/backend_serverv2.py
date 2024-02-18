@@ -128,7 +128,8 @@ def get_portfolio_holdings():
 @app.route('/fetch/portfolio/symbols')
 def get_portfolio_symbols():
     data = generate_holdings_data()
-    return jsonify(list(data.keys()))
+    keys = [k for k, v in data.items() if isinstance(v, dict)]
+    return jsonify(keys)
 
 
 @app.route('/fetch/portfolio/data')
@@ -136,6 +137,7 @@ def fetch_portfolio_data():
     update_param = request.args.get('update')
     should_update = setting_options.get(update_param, False)
     portfolio_data_path = os.path.join(DATA_PATH, 'portfolio.json')
+    portfolio_data = {}
     print('should update:', should_update)
 
     # update by fetching new data
