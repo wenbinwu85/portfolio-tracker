@@ -34,8 +34,8 @@ def set_save_settings():
 
 
 @app.route('/fetch/stock/<symbol>')
-def fetch_stock(symbol):
-    data = yq_stock_data(symbol)
+def fetch_stock_data(symbol):
+    symbol_data = yq_stock_data(symbol)
     save_param = request.args.get('save')
     save = setting_options.get(save_param, save_to_local)
     print('save to local:', save_to_local)
@@ -43,12 +43,12 @@ def fetch_stock(symbol):
     print('save or not:', save)
     if (save):
         path = os.path.join(DATA_PATH, f'{symbol.lower()}.json')
-        dump_data_to(data[symbol], path)
-    return jsonify(data)
+        dump_data_to(symbol_data[symbol], path)
+    return jsonify(symbol_data)
 
 
 @app.route('/fetch/stocks/<symbols>')
-def fetch_stocks(symbols):
+def fetch_stocks_data(symbols):
     symbols = symbols.split(':')
     symbols_data = yq_stock_data(symbols)
     save_param = request.args.get('save')
@@ -63,55 +63,16 @@ def fetch_stocks(symbols):
     return jsonify(symbols_data)
 
 
-@app.route('/fetch/portfolio/data')
-def fetch_portfolio():
-    holdings = generate_holdings_data()
-    symbols = list(holdings.keys())
-    update_param = request.args.get('update')
-    should_update = setting_options.get(update_param, False)
-    print('should update:', should_update)
-    portfolio_data = {}
-    portfolio_data_path = os.path.join(DATA_PATH, 'portfolio.json')
-
-    # update by fetching new data
-    if should_update:
-        portfolio_data = yq_stock_data(symbols)
-        dump_data_to(portfolio_data, portfolio_data_path)
-        for symbol in portfolio_data:
-            path = os.path.join(DATA_PATH, f'{symbol.lower()}.json')
-            dump_data_to(portfolio_data[symbol], path)
-        return jsonify(portfolio_data)
-    
-    # no update, load from local
-    try:
-        portfolio_data = load_data_from(portfolio_data_path)
-    except Exception:
-        for symbol in symbols:
-            data = None
-            path = os.path.join(DATA_PATH, f'{symbol.lower()}.json')
-            try:
-                data = load_data_from(path)
-            except Exception:
-                # failed to load from local, fetch new data
-                print(f'error loading {symbol} data, fetching new data...')
-                data = yq_stock_data(symbol)[symbol]
-                dump_data_to(data, path)
-            if data:
-                portfolio_data.update({symbol: data})
-        dump_data_to(portfolio_data, portfolio_data_path)
-    return jsonify(portfolio_data)
-
-
 @app.route('/fetch/dividend-history/<symbol>')
-def fetch_dividend(symbol):
-    years_param = request.args.get('years')
+def fetch_dividend_history(symbol):
+    years_param = request.args.get('years') or 10
     print('args:', symbol, request.args)
     try:
         years_param = int(years_param)
     except ValueError:
-        years_param = 5
+        years_param = 10
     update_param = request.args.get('update')
-    should_update = setting_options.get(update_param, False)
+    should_update = setting_options.get(update_param, True)
     path = os.path.join(DATA_PATH, f'{symbol.lower()}-dividend.csv')
     div_his = {}
     data = []
@@ -158,16 +119,63 @@ def fetch_recommendations(symbol):
     return jsonify(data)
 
 
-@app.route('/fetch/holdings')
-def fetch_holdings():
+@app.route('/fetch/portfolio/holdings')
+def get_portfolio_holdings():
     data = generate_holdings_data()
     return jsonify(data)
 
 
 @app.route('/fetch/portfolio/symbols')
-def fetch_portfolio_symbols():
+def get_portfolio_symbols():
     data = generate_holdings_data()
     return jsonify(list(data.keys()))
+
+
+@app.route('/fetch/portfolio/data')
+def fetch_portfolio_data():
+    update_param = request.args.get('update')
+    should_update = setting_options.get(update_param, False)
+    portfolio_data_path = os.path.join(DATA_PATH, 'portfolio.json')
+    print('should update:', should_update)
+
+    # update by fetching new data
+    if should_update:
+        portfolio_data = yq_stock_data()
+        dump_data_to(portfolio_data, portfolio_data_path)
+        for symbol in portfolio_data:
+            if symbol.startswith('portfolio'):
+                continue
+            path = os.path.join(DATA_PATH, f'{symbol.lower()}.json')
+            dump_data_to(portfolio_data[symbol], path)
+    else:
+        # no update, load from local
+        try:
+            portfolio_data = load_data_from(portfolio_data_path)
+        except Exception:
+            for symbol in list(generate_holdings_data().keys()):
+                data = None
+                path = os.path.join(DATA_PATH, f'{symbol.lower()}.json')
+                try:
+                    data = load_data_from(path)
+                except Exception:
+                    # failed to load from local, fetch new data
+                    print(f'error loading {symbol} data, fetching new data...')
+                    data = yq_stock_data(symbol)[symbol]
+                    dump_data_to(data, path)
+                if data:
+                    portfolio_data.update({symbol: data})
+    dump_data_to(portfolio_data, portfolio_data_path)
+    return jsonify(portfolio_data)
+
+
+@app.route('/fetch/portfolio/dividend-history')
+def fetch_portfolio_dividend_history():
+    response = get_portfolio_symbols()
+    symbols_string = response.response.data.decode('utf-8')
+    symbols = ast.literal_eval(symbols_string)
+    for i in symbols:
+        fetch_dividend_history(i)
+    return "<h1>fetching dividend data...</h1>"
 
 
 if __name__ == '__main__':

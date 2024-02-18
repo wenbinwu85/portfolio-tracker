@@ -129,7 +129,9 @@ def clean(data):
             continue
 
 
-def yq_stock_data(symbols):
+def yq_stock_data(symbols=None):
+    if symbols is None:
+        symbols = list(generate_holdings_data().keys())
     ticker = Ticker(symbols, asynchronous=True, progress=True)
     ticker_data = ticker.get_modules(yq_selected_modules)
     mapped_data = map_stock_data(ticker_data)
@@ -165,14 +167,6 @@ def yq_dividend_history(symbol, start_date):
 #         print(symbol, 'failed to fetch financials:', e)
 
 
-# TODO: is this userful?
-# def yq_sec_filings(symbol):
-#     ticker = Ticker(symbol, asynchronous=True, progress=True)
-#     path = os.path.join(STOCK_DATA_PATH, f'{symbol}-sec-filings.json')
-#     sec_filings = ticker.sec_filings.head()
-#     sec_filings.to_json(path, orient='records', indent=2)
-
-
 def yq_corporate_events(symbol):
     try:
         ticker = Ticker(symbol, asynchronous=True, progress=True)
@@ -205,101 +199,11 @@ def generate_holdings_data():
     return holdings
 
 
-def old_map_stock_data(holdings, yqdata):
-    total_investment = sum([data['position']['totalCost'] for data in holdings.values()])
-    annual_dividend_income = 0
-    total_gain = 0
-
-    for symbol, data in yqdata.items():
-        is_equity = data['price']['quoteType'] == 'EQUITY'
-
-        position = holdings[symbol]['position']
-        position['marketValue'] = position['sharesOwned'] * data['price']['regularMarketPrice']
-        position['unrealizedGain'] = position['marketValue'] - position['totalCost']
-        position['unrealizedGainPercent'] = position['unrealizedGain'] / position['totalCost'] * 100
-        position['totalReturn'] = position['unrealizedGain']  # TODO: add dividend gained amount
-
-        try:
-            key = 'dividendRate' if is_equity else 'yield'
-            dividendRate = data['summaryDetail'][key] if is_equity else data['summaryDetail'][key] * data['price']['regularMarketPrice']
-            dividend_income = position['sharesOwned'] * dividendRate
-            annual_dividend_income += dividend_income
-
-            position['dividendIncome'] = dividend_income
-            position['yieldOnCost'] = dividendRate / position['costAverage'] * 100
-        except Exception:
-            position['dividendIncome'] = 0
-            position['yieldOnCost'] = 0
-
-        total_gain += position['unrealizedGain']
-        holdings[symbol]['position'] = position
-        holdings[symbol]['profile'] = data['assetProfile']
-
-        if is_equity:
-            holdings[symbol]['calendarEvents'] = data['calendarEvents']
-            holdings[symbol]['earnings'] = data['earnings']
-            holdings[symbol]['earnings'].update(data['earningsHistory'])
-            holdings[symbol]['earnings'].update(data['earningsTrend'])
-            holdings[symbol]['cashflowHistory'] = {}
-            holdings[symbol]['balanceSheetHistory'] = {}
-            holdings[symbol]['incomeStatement'] = {}
-            holdings[symbol]['cashflowHistory']['annual'] = data['cashflowStatementHistory']['cashflowStatements'] 
-            holdings[symbol]['cashflowHistory']['quarterly'] = data['cashflowStatementHistoryQuarterly']['cashflowStatements']
-            holdings[symbol]['balanceSheetHistory']['annual'] = data['balanceSheetHistory']['balanceSheetStatements']
-            holdings[symbol]['balanceSheetHistory']['quarterly'] = data['balanceSheetHistoryQuarterly']['balanceSheetStatements']
-            holdings[symbol]['incomeStatement']['annual'] = data['incomeStatementHistory']['incomeStatementHistory']
-            holdings[symbol]['incomeStatement']['quarterly'] = data['incomeStatementHistoryQuarterly']['incomeStatementHistory']
-            holdings[symbol].update(data['financialData'])
-        else:
-            holdings[symbol]['dividendRate'] = data['summaryDetail']['yield'] * data['price']['regularMarketPrice']
-            holdings[symbol]['dividendYield'] = data['summaryDetail']['yield']
-            holdings[symbol]['topHoldings'] = data['topHoldings']
-            holdings[symbol]['profile'].update(data['fundProfile'])
-            holdings[symbol]['fundPerformance'] = data['fundPerformance']
-
-        holdings[symbol].update(data['price'])
-        holdings[symbol].update(data['summaryDetail'])
-        holdings[symbol].update(data['defaultKeyStatistics'])
-
-        holding = holdings[symbol]
-        clean(holding)
-
-    holdings['totalPositions'] = len(holdings)
-    holdings['totalInvestment'] = total_investment
-    holdings['unrealizedGain'] = total_gain
-    holdings['portfolioValue'] = total_investment + total_gain
-    holdings['dividendIncome'] = annual_dividend_income
-    holdings['dividendIncomeGoal'] = 12000
-    holdings['portfolioYield'] = annual_dividend_income / holdings['portfolioValue']
-    holdings['portfolioYieldOnCost'] = annual_dividend_income / total_investment
-
-    table = []
-    for k, v in holdings.items():
-        try:
-            position = v['position']
-        except TypeError:
-            continue
-        try:
-            v['fcfPerShare'] = v['freeCashflow'] / v['sharesOutstanding']
-            v['fcfYield'] = v['freeCashflow'] / v['marketCap']
-        except KeyError:
-            v['fcfPerShare'] = 0
-            v['fcfYield'] = 0
-        table.append([
-            k, 
-            position['sharesOwned'], 
-            round_string_value(position['costAverage']), 
-            round_string_value(position['dividendIncome'])
-        ])
-        position['portfolioPercent'] = position['marketValue'] / holdings['portfolioValue']
-        keys = list(v.keys())
-        keys.sort()
-        holdings[k] = {i: v[i] for i in keys}
-    return holdings
-
-
 def map_stock_data(yqdata):
+    holdings = generate_holdings_data()
+    symbols = list(holdings.keys())
     mapped_data = {}
+
     for symbol, data in yqdata.items():
         mapped_data[symbol] = {}
         mapped_data[symbol]['profile'] = data['assetProfile']
@@ -335,7 +239,6 @@ def map_stock_data(yqdata):
                 mapped_data[symbol]['fcfPerShare'] = mapped_data[symbol]['freeCashflow'] / mapped_data[symbol]['sharesOutstanding']
                 mapped_data[symbol]['fcfYield'] = mapped_data[symbol]['freeCashflow'] / mapped_data[symbol]['marketCap']
             except KeyError:
-                print('!!!', symbol, 'free cash flow:', data['financialData'].get('freeCashflow', 0))
                 mapped_data[symbol]['fcfPerShare'] = 0
                 mapped_data[symbol]['fcfYield'] = 0
         else:
@@ -346,4 +249,35 @@ def map_stock_data(yqdata):
             mapped_data[symbol]['fundPerformance'] = data['fundPerformance']
     for _, v in mapped_data.items():
         clean(v)
+
+    mapped_data.update({'portfolioPositions': len(symbols)})
+    mapped_data.update({'portfolioMarketValue': 0})
+    mapped_data.update({'portfolioTotalInvestment': 0})
+    mapped_data.update({'portfolioDividendIncome': 0})
+    for i in symbols:
+        position = holdings[i]
+        stock_data = mapped_data[i]
+        try:
+            price = stock_data.get('regularMarketPrice', 0)
+        except Exception:
+            price = stock_data('postMarketPrice', 0)
+        total_cost = position['totalCost']
+        position['marketValue'] = price * position['sharesOwned']
+        position['unrealizedGain'] = position['marketValue'] - total_cost
+        position['unrealizedGainPercent'] = position['unrealizedGain'] / total_cost
+        position['dividendIncome'] = stock_data.get('dividendRate', 0) * position['sharesOwned']
+        position['yieldOnCost'] = position['dividendIncome'] / total_cost
+        mapped_data['portfolioMarketValue'] += position['marketValue']
+        mapped_data['portfolioTotalInvestment'] += total_cost
+        mapped_data['portfolioDividendIncome'] += position['dividendIncome']
+
+    for i in symbols:
+        position = holdings[i]
+        position['portfolioPercent'] = position['marketValue'] / mapped_data['portfolioMarketValue']
+
+    mapped_data['portfolioUnrealizedGain'] = mapped_data['portfolioMarketValue'] - mapped_data['portfolioTotalInvestment']
+    mapped_data['portfolioUnrealizedGainPercent'] = mapped_data['portfolioUnrealizedGain'] / mapped_data['portfolioTotalInvestment']
+    mapped_data['portfolioYield'] = mapped_data['portfolioDividendIncome'] / mapped_data['portfolioMarketValue']
+    mapped_data['portfolioYieldOnCost'] = mapped_data['portfolioDividendIncome'] / mapped_data['portfolioTotalInvestment']
+
     return mapped_data

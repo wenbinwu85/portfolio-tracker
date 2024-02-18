@@ -6,7 +6,7 @@
         "maxAge": 1,
         "styleBoxUrl": "https://s.yimg.com/lq/i/fi/3_0stylelargeeq2.gif",
         "family": "JPMorgan",
-        "categoryName": null,
+        "categoryName": "Derivative Income",
         "legalType": "Exchange Traded Fund",
         "managementInfo": {
             "managerName": null,
@@ -19,50 +19,52 @@
             "projectionValues": {}
         },
         "feesExpensesInvestmentCat": {
+            "annualReportExpenseRatio": 0.0095368,
+            "annualHoldingsTurnover": 0.5006,
             "totalNetAssets": 131812.38,
             "projectionValuesCat": {}
         },
         "brokerages": []
     },
-    "postMarketChangePercent": -0.000178132,
-    "postMarketChange": -0.0100021,
-    "postMarketPrice": 56.14,
-    "regularMarketChangePercent": 0.00035632384,
-    "regularMarketChange": 0.020000458,
-    "regularMarketPrice": 56.15,
-    "regularMarketDayHigh": 56.22,
-    "regularMarketDayLow": 56.08,
-    "regularMarketVolume": 3405611,
-    "averageDailyVolume10Day": 3694880,
-    "averageDailyVolume3Month": 3615421,
-    "regularMarketPreviousClose": 56.13,
-    "regularMarketOpen": 56.22,
+    "postMarketChangePercent": 0.0,
+    "postMarketChange": 0.0,
+    "postMarketPrice": 56.23,
+    "regularMarketChangePercent": -0.0021295287,
+    "regularMarketChange": -0.11999893,
+    "regularMarketPrice": 56.23,
+    "regularMarketDayHigh": 56.41,
+    "regularMarketDayLow": 56.2,
+    "regularMarketVolume": 3703599,
+    "averageDailyVolume10Day": 3588370,
+    "averageDailyVolume3Month": 3666709,
+    "regularMarketPreviousClose": 56.35,
+    "regularMarketOpen": 56.32,
     "exchange": "PCX",
     "exchangeName": "NYSEArca",
     "quoteType": "ETF",
     "symbol": "JEPI",
     "shortName": "JPMorgan Equity Premium Income ",
     "longName": "JPMorgan Equity Premium Income ETF",
-    "previousClose": 56.13,
-    "open": 56.22,
-    "dayLow": 56.08,
-    "dayHigh": 56.22,
-    "trailingPE": 24.486248,
-    "volume": 3405611,
-    "averageVolume": 3615421,
-    "averageVolume10days": 3694880,
+    "previousClose": 56.35,
+    "open": 56.32,
+    "dayLow": 56.2,
+    "dayHigh": 56.41,
+    "trailingPE": 24.521133,
+    "volume": 3703599,
+    "averageVolume": 3666709,
+    "averageVolume10days": 3588370,
     "yield": 0.082600005,
     "totalAssets": 31623256064,
     "fiftyTwoWeekLow": 51.38,
-    "fiftyTwoWeekHigh": 56.35,
-    "fiftyDayAverage": 55.2604,
-    "twoHundredDayAverage": 54.6771,
-    "navPrice": 56.1705,
-    "ytdReturn": 0.0267384,
+    "fiftyTwoWeekHigh": 56.41,
+    "fiftyDayAverage": 55.4204,
+    "twoHundredDayAverage": 54.7087,
+    "navPrice": 56.2495,
+    "ytdReturn": 0.0282012,
     "beta3Year": 0.61,
     "fundInceptionDate": "2020-05-19 20:00:00",
-    "threeYearAverageReturn": 0.093403794,
-    "dividendRate": 4.63799028075,
+    "threeYearAverageReturn": 0.0950953,
+    "dividendRate": 4.64459828115,
     "dividendYield": 0.082600005,
     "topHoldings": {
         "maxAge": 1,
@@ -169,16 +171,22 @@
     },
     "fundPerformance": {
         "maxAge": 1,
+        "fundCategoryName": "Derivative Income",
         "performanceOverview": {
-            "asOfDate": "2024-02-08 19:00:00",
-            "ytdReturnPct": 0.0267384,
+            "asOfDate": "2024-02-15 19:00:00",
+            "ytdReturnPct": 0.0282012,
             "fiveYrAvgReturnPct": 0.0,
-            "oneYearTotalReturn": 0.1197017,
-            "threeYearTotalReturn": 0.093403794
+            "oneYearTotalReturn": 0.1137262,
+            "threeYearTotalReturn": 0.0950953
         },
-        "performanceOverviewCat": {},
+        "performanceOverviewCat": {
+            "ytdReturnPct": 0.0045092,
+            "fiveYrAvgReturnPct": 0.0787216,
+            "oneYearTotalReturn": 0.1051445,
+            "threeYearTotalReturn": 0.0751438
+        },
         "trailingReturns": {
-            "asOfDate": "2024-02-08 19:00:00",
+            "asOfDate": "2024-02-15 19:00:00",
             "ytd": 0.0173879,
             "oneMonth": 0.0173879,
             "threeMonth": 0.086593196,
@@ -199,13 +207,13 @@
             "tenYear": 0.0
         },
         "trailingReturnsCat": {
-            "ytd": 0.0,
-            "oneMonth": 0.0,
-            "threeMonth": 0.0,
-            "oneYear": 0.0,
-            "threeYear": 0.0,
-            "fiveYear": 0.0,
-            "tenYear": 0.0,
+            "ytd": 0.0045092,
+            "oneMonth": 0.0045092,
+            "threeMonth": 0.1205883,
+            "oneYear": 0.1051445,
+            "threeYear": 0.0751438,
+            "fiveYear": 0.0787216,
+            "tenYear": 0.0615309,
             "lastBullMkt": 0.0,
             "lastBearMkt": 0.0
         },
@@ -224,7 +232,108 @@
                     "annualValue": 0.2150415
                 }
             ],
-            "returnsCat": []
+            "returnsCat": [
+                {
+                    "year": "2023",
+                    "annualValue": 0.1497203
+                },
+                {
+                    "year": "2022",
+                    "annualValue": -0.1023349
+                },
+                {
+                    "year": "2021",
+                    "annualValue": 0.18207198
+                },
+                {
+                    "year": "2020",
+                    "annualValue": 0.0424089
+                },
+                {
+                    "year": "2019",
+                    "annualValue": 0.1881494
+                },
+                {
+                    "year": "2018",
+                    "annualValue": -0.0581187
+                },
+                {
+                    "year": "2017",
+                    "annualValue": 0.1345729
+                },
+                {
+                    "year": "2016",
+                    "annualValue": 0.072527796
+                },
+                {
+                    "year": "2015",
+                    "annualValue": -0.0036591
+                },
+                {
+                    "year": "2014",
+                    "annualValue": 0.080099896
+                },
+                {
+                    "year": "2013",
+                    "annualValue": 0.1657929
+                },
+                {
+                    "year": "2012",
+                    "annualValue": 0.0795434
+                },
+                {
+                    "year": "2011",
+                    "annualValue": -0.0051468
+                },
+                {
+                    "year": "2010",
+                    "annualValue": 0.1262902
+                },
+                {
+                    "year": "2009",
+                    "annualValue": 0.3003046
+                },
+                {
+                    "year": "2008",
+                    "annualValue": -0.3252501
+                },
+                {
+                    "year": "2007",
+                    "annualValue": 0.2058482
+                },
+                {
+                    "year": "2006",
+                    "annualValue": 0.18012659
+                },
+                {
+                    "year": "2005",
+                    "annualValue": 0.13953769
+                },
+                {
+                    "year": "2004",
+                    "annualValue": 0.1763611
+                },
+                {
+                    "year": "2003",
+                    "annualValue": 0.4687561
+                },
+                {
+                    "year": "2002",
+                    "annualValue": -0.3913379
+                },
+                {
+                    "year": "2001",
+                    "annualValue": -0.1450187
+                },
+                {
+                    "year": "2000",
+                    "annualValue": -0.0835332
+                },
+                {
+                    "year": "1999",
+                    "annualValue": 2.195395
+                }
+            ]
         },
         "pastQuarterlyReturns": {
             "returns": []
@@ -264,7 +373,35 @@
             ]
         },
         "riskOverviewStatisticsCat": {
-            "riskStatisticsCat": []
+            "riskStatisticsCat": [
+                {
+                    "year": "5y",
+                    "alpha": -3.06,
+                    "beta": 0.75,
+                    "meanAnnualReturn": 0.73,
+                    "rSquared": 83.51,
+                    "sharpeRatio": 0.44,
+                    "treynorRatio": 7.72
+                },
+                {
+                    "year": "3y",
+                    "alpha": -0.85,
+                    "beta": 0.69,
+                    "meanAnnualReturn": 0.68,
+                    "rSquared": 79.62,
+                    "sharpeRatio": 0.43,
+                    "treynorRatio": 7.6
+                },
+                {
+                    "year": "10y",
+                    "alpha": -3.12,
+                    "beta": 0.72,
+                    "meanAnnualReturn": 0.56,
+                    "rSquared": 81.38,
+                    "sharpeRatio": 0.44,
+                    "treynorRatio": 6.61
+                }
+            ]
         }
     }
 }
