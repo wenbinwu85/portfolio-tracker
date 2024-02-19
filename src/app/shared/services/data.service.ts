@@ -141,7 +141,7 @@ export class DataService {
    */
   getDividendHistory(
     symbol: string,
-    years = 5,
+    years = 10,
     update = false
   ): Observable<JSON> {
     const path = `${this.backendUrl}/fetch/dividend-history/${symbol}`;
@@ -150,7 +150,6 @@ export class DataService {
       params = params.set("update", String(update));
       params = params.set("years", years);
       const options = { ...this.httpOptions, params };
-      console.log("wtf", symbol, options);
       return this.wrapHttpCall(path, options);
     }
     return this.wrapHttpCall(path);

@@ -10,11 +10,11 @@
   </ng-container>
 </section>
 
-<section class="add-border">
+<section  *ngIf="browser === 'Safari'" class="add-border">
   <app-echart [options]="echartOptions" />
 </section>
 
-<!-- <section *ngIf="browser !== 'Safari'" class="add-border">
+<section *ngIf="browser !== 'Safari'" class="add-border">
   <div class="title">
     <span>Dividend History</span>
   </div>
@@ -34,7 +34,7 @@
       >
     </ngx-charts-area-chart>
   </div>
-</section> -->
+</section>
 
 <table
   mat-table

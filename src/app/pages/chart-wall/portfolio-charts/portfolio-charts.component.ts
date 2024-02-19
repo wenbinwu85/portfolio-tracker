@@ -15,8 +15,6 @@ export class PortfolioChartsComponent {
   symbols: string[] = [];
 
   constructor(private dataService: DataService) {
-    this.dataService.getPortfolioSymbols().subscribe((symbols: string[]) => { 
-      this.symbols = symbols;
-    })
+    this.symbols = this.dataService.portfolioSymbols;
   }
 }

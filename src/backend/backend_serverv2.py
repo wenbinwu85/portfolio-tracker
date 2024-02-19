@@ -2,12 +2,14 @@ import ast
 import os
 from datetime import datetime, timedelta
 from quart import Quart, jsonify, request
+from quart_cors import cors
 from helpers.funcs import dump_data_to, load_data_from
 from yq import DATA_PATH, yq_stock_data, yq_dividend_history, yq_corporate_events
 from yq import yq_technical_insights, yq_recommendations, generate_holdings_data
 
 
 app = Quart(__name__)
+app = cors(app)
 
 setting_options = {'true': True, 'false': False}
 save_to_local = False

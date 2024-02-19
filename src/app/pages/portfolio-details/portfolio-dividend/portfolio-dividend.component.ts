@@ -58,19 +58,6 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit, OnDest
   };
 
   dataSource = new MatTableDataSource<any>();
-  columnDefs = [
-    "symbol",
-    "dividendRate",
-    "trailingAnnualDividendRate",
-    "dividendYield",
-    "trailingAnnualDividendYield",
-    "fiveYearAvgDividendYield",
-    "payoutRatio",
-    "fcfPayoutRatio",
-    "lastDividendValue",
-    "exDividendDate",
-    "dividendDate",
-  ];
   headers = [
     "Symbol",
     "Dividend Rate",
@@ -83,6 +70,19 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit, OnDest
     "Last Dividend Paid",
     "Ex-dividend Date",
     "Dividend Date",
+  ];
+  columnDefs = [
+    "symbol",
+    "dividendRate",
+    "trailingAnnualDividendRate",
+    "dividendYield",
+    "trailingAnnualDividendYield",
+    "fiveYearAvgDividendYield",
+    "payoutRatio",
+    "fcfPayoutRatio",
+    "lastDividendValue",
+    "exDividendDate",
+    "dividendDate",
   ];
 
   cells: Function[] = [
@@ -98,13 +98,13 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit, OnDest
       `${((stock.dividendRate / stock.fcfPerShare) * 100 || 0).toFixed(2)}%`,
     (stock: any) => `$${stock.lastDividendValue?.toFixed(2) || 0}`,
     (stock: any) =>
-      stock.exDividendDate
-        ? new Date(stock.exDividendDate.slice(0, 10)).toDateString()
+      stock.calendarEvents?.exDividendDate
+        ? new Date(stock.calendarEvents.exDividendDate).toDateString()
         : "N/A",
     (stock: any) =>
-      stock.dividendDate
-        ? new Date(stock.dividendDate * 1000).toDateString()
-        : "N/A",
+      stock.calendarEvents?.dividendDate
+        ? new Date(stock.calendarEvents.dividendDate).toDateString()
+        : 'N/A'
   ];
 
   constructor(private dataService: DataService) { }
@@ -120,8 +120,7 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit, OnDest
     this.portfolioYieldOnCost =
       this.dataService.portfolioHoldings.portfolioYieldOnCost;
     this.setInfoCards();
-    this.dataService.getDividendHistory("MSFT").subscribe(console.log);
-    this.updateChart("MSFT");
+    this.updateChart("SCHD");
   }
 
   ngAfterViewInit() {
@@ -193,13 +192,6 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit, OnDest
         subtitle: "Portfolio YOC",
         color: "slateblue",
       },
-      {
-        icon: "payments",
-        value: this.ytdDividendEarned,
-        valueType: "currency",
-        subtitle: "YTD Dividend Earned",
-        color: "forestgreen",
-      },
     ];
   }
 
@@ -207,7 +199,6 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit, OnDest
     this.dividendSubscription$ = this.dataService
       .getDividendHistory(symbol)
       .subscribe((divHis: any) => {
-        console.log(divHis);
         let options: any = {
           title: {
             text: "Dividend History",
@@ -250,18 +241,14 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit, OnDest
           series: [],
         };
 
-        console.log("wtf");
-        console.log(divHis);
-
         Object.entries(divHis).forEach((item: any) => {
-          let line = item.split(",");
           divData.series.push({
-            name: new Date(line[1].split("-").join(" ")),
-            value: +line[2],
+            name: new Date(item[0].split("-").join(" ")),
+            value: +item[1],
           });
 
-          options.xAxis.data.push(line[1].split("-").join(" "));
-          options.series[0].data.push(+line[2]);
+          options.xAxis.data.push(item[0].split("-").join(" "));
+          options.series[0].data.push(+item[1]);
         });
 
         this.echartOptions = options;
