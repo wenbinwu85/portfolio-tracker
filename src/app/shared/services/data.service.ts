@@ -31,12 +31,10 @@ export class DataService {
       this.portfolioHoldings = holdings;
       this.portfolioSymbols = symbols;
       this.portfolioData = portfolioData;
-    });
 
-    console.log("!!!!!");
-    console.table(this.portfolioHoldings);
-    console.table(this.portfolioSymbols);
-    console.table(Object.keys(this.portfolioData));
+      console.log('sanity check')
+      console.table(Object.entries(this.portfolioHoldings));
+    });
   }
 
   private error(error: HttpErrorResponse): Observable<any> {

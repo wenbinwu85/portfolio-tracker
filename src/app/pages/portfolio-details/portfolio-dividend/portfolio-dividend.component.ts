@@ -39,24 +39,19 @@ import { DataService } from "../../../shared/services/data.service";
 export class PortfolioDividendComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild(MatTable) table!: MatTable<any>;
   @ViewChild(MatSort) sort!: MatSort;
-  portfolioData: { [k: string]: any } = {};
   browser = "";
   dividendIncome = 0;
   portfolioYieldOnCost = 0;
-  dividendLineChartData: any[] = [];
   selectedSymbol = "";
-  ytdDividendEarned = 0;
-  dividendSubscription$!: Subscription;
-
   infoCards: any[] = [];
-
+  dividendSubscription$!: Subscription;
+  dividendLineChartData: any = [];
   echartOptions!: EChartsOption;
   echartUpdateOptions: any = {
     yAxis: {},
     xAxis: { data: [] },
     series: [{ data: [] }],
   };
-
   dataSource = new MatTableDataSource<any>();
   headers = [
     "Symbol",
@@ -84,7 +79,6 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit, OnDest
     "exDividendDate",
     "dividendDate",
   ];
-
   cells: Function[] = [
     (stock: any) => "",
     (stock: any) => `$${stock.dividendRate?.toFixed(2)}`,
@@ -95,7 +89,9 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit, OnDest
     (stock: any) => `${(stock.fiveYearAvgDividendYield || 0).toFixed(2)}%`,
     (stock: any) => `${(stock.payoutRatio * 100 || 0).toFixed(2)}%`,
     (stock: any) =>
-      `${((stock.dividendRate / stock.fcfPerShare) * 100 || 0).toFixed(2)}%`,
+      (stock.quoteType === 'EQUITY' && stock.fcfPayoutRatio !== 0)
+        ? `${(stock.fcfPayoutRatio * 100).toFixed(2)}%`
+        : 'N/A',
     (stock: any) => `$${stock.lastDividendValue?.toFixed(2) || 0}`,
     (stock: any) =>
       stock.calendarEvents?.exDividendDate
@@ -104,21 +100,18 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit, OnDest
     (stock: any) =>
       stock.calendarEvents?.dividendDate
         ? new Date(stock.calendarEvents.dividendDate).toDateString()
-        : 'N/A'
+        : "N/A",
   ];
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService) {}
 
   ngOnInit() {
     this.browser = this.getBrowserName();
-    this.portfolioData = this.dataService.portfolioData;
-    this.dataSource.data = Object.values(this.portfolioData).filter(
+    this.dataSource.data = Object.values(this.dataService.portfolioData).filter(
       (a: any) => a.dividendYield
     );
-    this.dividendIncome =
-      this.dataService.portfolioHoldings.portfolioDividendIncome;
-    this.portfolioYieldOnCost =
-      this.dataService.portfolioHoldings.portfolioYieldOnCost;
+    this.dividendIncome = this.dataService.portfolioHoldings?.portfolioDividendIncome;
+    this.portfolioYieldOnCost = this.dataService.portfolioHoldings?.portfolioYieldOnCost;
     this.setInfoCards();
     this.updateChart("SCHD");
   }
@@ -127,24 +120,28 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit, OnDest
     this.dataSource.sort = this.sort;
   }
 
+  ngOnDestroy() {
+    this.dividendSubscription$.unsubscribe();
+  }
+
   getBrowserName(): string {
     const agent = window?.navigator.userAgent.toLowerCase();
     const browser =
       agent.indexOf("edge") > -1
         ? "Microsoft Edge"
         : agent.indexOf("edg") > -1
-          ? "Chromium-based Edge"
-          : agent.indexOf("opr") > -1
-            ? "Opera"
-            : agent.indexOf("chrome") > -1
-              ? "Chrome"
-              : agent.indexOf("trident") > -1
-                ? "Internet Explorer"
-                : agent.indexOf("firefox") > -1
-                  ? "Firefox"
-                  : agent.indexOf("safari") > -1
-                    ? "Safari"
-                    : "other";
+        ? "Chromium-based Edge"
+        : agent.indexOf("opr") > -1
+        ? "Opera"
+        : agent.indexOf("chrome") > -1
+        ? "Chrome"
+        : agent.indexOf("trident") > -1
+        ? "Internet Explorer"
+        : agent.indexOf("firefox") > -1
+        ? "Firefox"
+        : agent.indexOf("safari") > -1
+        ? "Safari"
+        : "other";
     return browser;
   }
 
@@ -233,9 +230,7 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit, OnDest
           },
         };
 
-        const stock = this.dataSource.data.filter(
-          (stock: any) => stock.symbol === symbol
-        )[0];
+        const stock = this.dataSource.data.filter((stock: any) => stock.symbol === symbol)[0];
         let divData: any = {
           name: stock.longName,
           series: [],
@@ -253,8 +248,7 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit, OnDest
 
         this.echartOptions = options;
         this.dividendLineChartData = [divData];
-        this.selectedSymbol = `${stock.symbol} | ${stock.longName} | ${stock.profile?.sector || "ETF"
-          }`;
+        this.selectedSymbol = `${stock.symbol} | ${stock.longName} | ${stock.profile?.sector || "ETF"}`;
       });
 
     window.scroll({
@@ -262,9 +256,5 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit, OnDest
       left: 0,
       behavior: "smooth",
     });
-  }
-
-  ngOnDestroy() {
-    this.dividendSubscription$.unsubscribe();
   }
 }

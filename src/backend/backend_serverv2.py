@@ -67,14 +67,14 @@ def fetch_stocks_data(symbols):
 
 @app.route('/fetch/dividend-history/<symbol>')
 def fetch_dividend_history(symbol):
-    years_param = request.args.get('years') or 10
-    print('args:', symbol, request.args)
+    years_param = request.args.get('years', 10)
     try:
         years_param = int(years_param)
     except ValueError:
         years_param = 10
-    update_param = request.args.get('update')
+    update_param = request.args.get('update', 'true')
     should_update = setting_options.get(update_param, True)
+    should_update = True
     path = os.path.join(DATA_PATH, f'{symbol.lower()}-dividend.csv')
     div_his = {}
     data = []
@@ -172,12 +172,15 @@ def fetch_portfolio_data():
     return jsonify(portfolio_data)
 
 
+# wtf? not working ???
 @app.route('/fetch/portfolio/dividend-history')
 def fetch_portfolio_dividend_history():
     response = get_portfolio_symbols()
     symbols_string = response.response.data.decode('utf-8')
     symbols = ast.literal_eval(symbols_string)
-    for i in symbols:
+    print(symbols)
+    for i in symbols[:1]:
+        print('symbol:', i)
         fetch_dividend_history(i)
     return "<h1>fetching dividend data...</h1>"
 

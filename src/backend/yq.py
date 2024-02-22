@@ -177,48 +177,50 @@ def generate_holdings_data():
 def map_stock_data(yqdata):
     mapped_data = {}
     for symbol, data in yqdata.items():
-        mapped_data[symbol] = {}
-        mapped_data[symbol]['profile'] = data['assetProfile']
-        mapped_data[symbol].update(data['price'])
-        mapped_data[symbol].update(data['summaryDetail'])
-        mapped_data[symbol].update(data['defaultKeyStatistics'])
-
-        is_equity = data['price']['quoteType'] == 'EQUITY'
-        if is_equity:
-            mapped_data[symbol]['calendarEvents'] = data['calendarEvents']
-            mapped_data[symbol]['earnings'] = data['earnings']
-            mapped_data[symbol]['earnings'].update(data['earningsHistory'])
-            mapped_data[symbol]['earnings'].update(data['earningsTrend'])
-            mapped_data[symbol]['cashflowHistory'] = {}
-            mapped_data[symbol]['cashflowHistory']['annual'] = data['cashflowStatementHistory']['cashflowStatements'] 
-            mapped_data[symbol]['cashflowHistory']['quarterly'] = data['cashflowStatementHistoryQuarterly']['cashflowStatements']
-            mapped_data[symbol]['balanceSheetHistory'] = {}
-            mapped_data[symbol]['balanceSheetHistory']['annual'] = data['balanceSheetHistory']['balanceSheetStatements']
-            mapped_data[symbol]['balanceSheetHistory']['quarterly'] = data['balanceSheetHistoryQuarterly']['balanceSheetStatements']
-            mapped_data[symbol]['incomeStatementHistory'] = {}
-            mapped_data[symbol]['incomeStatementHistory']['annual'] = data['incomeStatementHistory']['incomeStatementHistory']
-            mapped_data[symbol]['incomeStatementHistory']['quarterly'] = data['incomeStatementHistoryQuarterly']['incomeStatementHistory']
-            mapped_data[symbol].update(data['financialData'])
-            mapped_data[symbol]['recommendationTrend'] = data['recommendationTrend']
-            mapped_data[symbol]['indexTrend'] = data['indexTrend']
-            mapped_data[symbol]['shareholders'] = {}
-            mapped_data[symbol]['shareholders']['institutionOwnership'] = data.get('institutionOwnership', {})
-            mapped_data[symbol]['shareholders']['majorHolders'] = data.get('majorHoldersBreakdown', {})
-            mapped_data[symbol]['shareholders']['insiderTransactions'] = data.get('insiderTransactions', {})
-            mapped_data[symbol]['shareholders']['insiderHolders'] = data.get('insiderHolders', {})
-            mapped_data[symbol]['shareholders']['fundOwnership'] = data.get('fundOwnership', {})
+        mapped_stock_data = {} 
+        mapped_stock_data['profile'] = data['assetProfile']
+        mapped_stock_data.update(data['price'])
+        mapped_stock_data.update(data['summaryDetail'])
+        mapped_stock_data.update(data['defaultKeyStatistics'])
+        if data['price']['quoteType'] == 'EQUITY':
+            mapped_stock_data['calendarEvents'] = data['calendarEvents']
+            mapped_stock_data['earnings'] = data['earnings']
+            mapped_stock_data['earnings'].update(data['earningsHistory'])
+            mapped_stock_data['earnings'].update(data['earningsTrend'])
+            mapped_stock_data['cashflowHistory'] = {}
+            mapped_stock_data['cashflowHistory']['annual'] = data['cashflowStatementHistory']['cashflowStatements'] 
+            mapped_stock_data['cashflowHistory']['quarterly'] = data['cashflowStatementHistoryQuarterly']['cashflowStatements']
+            mapped_stock_data['balanceSheetHistory'] = {}
+            mapped_stock_data['balanceSheetHistory']['annual'] = data['balanceSheetHistory']['balanceSheetStatements']
+            mapped_stock_data['balanceSheetHistory']['quarterly'] = data['balanceSheetHistoryQuarterly']['balanceSheetStatements']
+            mapped_stock_data['incomeStatementHistory'] = {}
+            mapped_stock_data['incomeStatementHistory']['annual'] = data['incomeStatementHistory']['incomeStatementHistory']
+            mapped_stock_data['incomeStatementHistory']['quarterly'] = data['incomeStatementHistoryQuarterly']['incomeStatementHistory']
+            mapped_stock_data.update(data['financialData'])
+            mapped_stock_data['recommendationTrend'] = data['recommendationTrend']
+            mapped_stock_data['indexTrend'] = data['indexTrend']
+            mapped_stock_data['shareholders'] = {}
+            mapped_stock_data['shareholders']['institutionOwnership'] = data.get('institutionOwnership', {})
+            mapped_stock_data['shareholders']['majorHolders'] = data.get('majorHoldersBreakdown', {})
+            mapped_stock_data['shareholders']['insiderTransactions'] = data.get('insiderTransactions', {})
+            mapped_stock_data['shareholders']['insiderHolders'] = data.get('insiderHolders', {})
+            mapped_stock_data['shareholders']['fundOwnership'] = data.get('fundOwnership', {})
             try:
-                mapped_data[symbol]['fcfPerShare'] = mapped_data[symbol]['freeCashflow'] / mapped_data[symbol]['sharesOutstanding']
-                mapped_data[symbol]['fcfYield'] = mapped_data[symbol]['freeCashflow'] / mapped_data[symbol]['marketCap']
+                mapped_stock_data['fcfPerShare'] = mapped_stock_data['freeCashflow'] / mapped_stock_data['sharesOutstanding']
+                mapped_stock_data['fcfYield'] = mapped_stock_data['freeCashflow'] / mapped_stock_data['marketCap']
+                mapped_stock_data['fcfPayoutRatio'] = mapped_stock_data['dividendRate'] / mapped_stock_data['fcfPerShare'] if mapped_stock_data['fcfPerShare'] != 0 else 0
             except KeyError:
-                mapped_data[symbol]['fcfPerShare'] = 0
-                mapped_data[symbol]['fcfYield'] = 0
+                mapped_stock_data['fcfPerShare'] = 0
+                mapped_stock_data['fcfYield'] = 0
+                mapped_stock_data['fcfPayoutRatio'] = 0
         else:
-            mapped_data[symbol]['dividendRate'] = data['summaryDetail']['yield'] * data['price']['regularMarketPrice']
-            mapped_data[symbol]['dividendYield'] = data['summaryDetail']['yield']
-            mapped_data[symbol]['topHoldings'] = data['topHoldings']
-            mapped_data[symbol]['profile'].update(data['fundProfile'])
-            mapped_data[symbol]['fundPerformance'] = data['fundPerformance']
+            mapped_stock_data['dividendRate'] = data['summaryDetail']['yield'] * data['price']['regularMarketPrice']
+            mapped_stock_data['dividendYield'] = data['summaryDetail']['yield']
+            mapped_stock_data['topHoldings'] = data['topHoldings']
+            mapped_stock_data['profile'].update(data['fundProfile'])
+            mapped_stock_data['fundPerformance'] = data['fundPerformance']
+        mapped_data[symbol] = mapped_stock_data
+
     for _, v in mapped_data.items():
         clean(v)
     return mapped_data

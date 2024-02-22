@@ -94,7 +94,7 @@
   </div>
 </section>
 
-<div class="add-border">
+<div *ngIf="portfolioHoldings" class="add-border">
   <section class="goal-container">
     <h1>
       <b>Portfolio Value Goal:</b>
@@ -150,7 +150,7 @@
   </section>
 </div>
 
-<div class="add-border">
+<div *ngIf="portfolioHoldings" class="add-border">
   <section class="goal-container">
     <h1>
       <b>Annual Passive Income Goal:</b>

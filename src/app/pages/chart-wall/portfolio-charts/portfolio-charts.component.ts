@@ -1,13 +1,12 @@
-import { NgFor } from '@angular/common';
-import { Component } from '@angular/core';
-
-import { DataService } from '../../../shared/services/data.service';
-import { WallmineChartComponent } from '../../../shared/components/charts/wallmine-chart/wallmine-chart.component';
+import { NgFor } from "@angular/common";
+import { Component } from "@angular/core";
+import { WallmineChartComponent } from "../../../shared/components/charts/wallmine-chart/wallmine-chart.component";
+import { DataService } from "../../../shared/services/data.service";
 
 @Component({
-  selector: 'portfolio-charts',
-  templateUrl: './portfolio-charts.component.html',
-  styleUrls: ['./portfolio-charts.component.css'],
+  selector: "portfolio-charts",
+  templateUrl: "./portfolio-charts.component.html",
+  styleUrls: ["./portfolio-charts.component.css"],
   standalone: true,
   imports: [NgFor, WallmineChartComponent],
 })

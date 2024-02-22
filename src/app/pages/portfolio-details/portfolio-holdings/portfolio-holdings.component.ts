@@ -17,7 +17,6 @@ import {
   MatTableModule,
 } from '@angular/material/table';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-
 import { ExpandedRowComponent } from '../../../shared/components/expanded-row/expanded-row.component';
 import { StockTickerNameComponent } from '../../../shared/components/stock/stock-ticker-name/stock-ticker-name.component';
 import { TvSingleQuoteWidgetComponent } from '../../../shared/components/tradingview/tv-single-quote-widget/tv-single-quote-widget.component';
@@ -150,7 +149,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     (stock: any) => `$${this.portfolioHoldings[stock.symbol].totalCost}`,
     (stock: any) => `$${this.portfolioHoldings[stock.symbol].marketValue.toFixed(2)}`,
     (stock: any) => `${(this.portfolioHoldings[stock.symbol].portfolioPercent * 100).toFixed(2)}%`,
-    (stock: any) => `$${this.portfolioHoldings[stock.symbol].unrealizedGain}`,
+    (stock: any) => `$${this.portfolioHoldings[stock.symbol].unrealizedGain.toFixed(2)}`,
     (stock: any) => `${(this.portfolioHoldings[stock.symbol].unrealizedGainPercent * 100).toFixed(2)}%`,
     (stock: any) => `$${this.portfolioHoldings[stock.symbol].dividendIncome.toFixed(2)}`,
     (stock: any) => (this.portfolioHoldings[stock.symbol].yieldOnCost * 100).toFixed(2) + '%',

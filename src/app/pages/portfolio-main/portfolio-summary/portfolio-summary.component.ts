@@ -30,6 +30,7 @@ import { InfoCardComponent } from '../../../shared/components/info-card/info-car
 export class PortfolioSummaryComponent implements OnInit {
   portfolioHoldings: any;
   portfolioData: any;
+  portfolioSymbols: any;
   portfolioYtdGain = 12345 // this.dataService.getPortfolioYtdGain();
   ytdDividendEarned = 12345 // this.dataService.getPortfolioYtdDividend();
   portfolioValueTarget = 0;
@@ -57,18 +58,19 @@ export class PortfolioSummaryComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    this.portfolioHoldings = this.dataService.portfolioHoldings
+    this.portfolioHoldings = this.dataService.portfolioHoldings;
     this.portfolioData = this.dataService.portfolioData;
+    this.portfolioSymbols = this.dataService.portfolioSymbols;
     this.passiveIncomeGoalPercentage =
-      this.portfolioData.portfolioDividendIncome / this.passiveIncomeTarget;
+      this.portfolioData?.portfolioDividendIncome / this.passiveIncomeTarget;
     this.portfolioValueTarget =
-      this.passiveIncomeTarget / this.portfolioData.portfolioYieldOnCost;
+      this.passiveIncomeTarget / this.portfolioData?.portfolioYieldOnCost;
     this.portfolioValueGoalPercentage =
-      this.portfolioData.portfolioMarketValue / this.portfolioValueTarget;
+      this.portfolioData?.portfolioMarketValue / this.portfolioValueTarget;
 
     // sectors
     let market_sectors: any = {};
-    this.dataService.portfolioSymbols.forEach((symbol: any) => {
+    this.portfolioSymbols?.forEach((symbol: any) => {
       const position = this.portfolioHoldings[symbol]
       const stock = this.portfolioData[symbol]
       if (market_sectors[stock.profile.sector]) {
@@ -88,7 +90,7 @@ export class PortfolioSummaryComponent implements OnInit {
     this.sectorsData.sort((a: any, b: any) => a.value - b.value);
 
     // market values
-    this.dataService.portfolioSymbols
+    this.portfolioSymbols
       .sort((a: any, b: any) => this.portfolioHoldings[a].marketValue - this.portfolioHoldings[b].marketValue)
       .forEach((symbol: any) => {
         const position = this.portfolioHoldings[symbol]
@@ -118,7 +120,7 @@ export class PortfolioSummaryComponent implements OnInit {
     this.portfolioPercentBarChartData = this.allPortfolioPercentData;
 
     // unrealized gain
-    this.dataService.portfolioSymbols
+    this.portfolioSymbols
       .sort(
         (a: any, b: any) =>
           this.portfolioHoldings[a].unrealizedGainPercent - this.portfolioHoldings[b].unrealizedGainPercent
@@ -134,7 +136,7 @@ export class PortfolioSummaryComponent implements OnInit {
     this.unrealizedGainBarChartData = this.allUnrealizedGainData;
 
     // dividend income
-    this.dataService.portfolioSymbols
+    this.portfolioSymbols
       .sort(
         (a: any, b: any) =>
           this.portfolioHoldings[a].dividendIncome - this.portfolioHoldings[b].dividendIncome

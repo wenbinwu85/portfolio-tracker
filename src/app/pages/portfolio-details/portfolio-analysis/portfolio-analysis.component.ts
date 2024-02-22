@@ -16,6 +16,4 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
   templateUrl: './portfolio-analysis.component.html',
   styleUrls: ['./portfolio-analysis.component.css']
 })
-export class PortfolioAnalysisComponent {
-
-}
+export class PortfolioAnalysisComponent {}
