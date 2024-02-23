@@ -1,4 +1,4 @@
-import { CurrencyPipe, NgFor, NgIf } from "@angular/common";
+import { CurrencyPipe, NgFor, NgIf, NgStyle } from "@angular/common";
 import {
   AfterViewInit,
   Component,
@@ -13,11 +13,10 @@ import {
   MatTableDataSource,
   MatTableModule,
 } from "@angular/material/table";
-import { NgxChartsModule } from "@swimlane/ngx-charts";
 import { EChartsOption } from "echarts";
+import { EchartComponent } from "../../../shared/components/charts/echart/echart.component";
 import { StockTickerNameComponent } from "../../../shared/components/stock/stock-ticker-name/stock-ticker-name.component";
 import { DataService } from "../../../shared/services/data.service";
-import { EchartComponent } from "../../../shared/components/charts/echart/echart.component";
 
 @Component({
   selector: "portfolio-financials",
@@ -26,14 +25,14 @@ import { EchartComponent } from "../../../shared/components/charts/echart/echart
   standalone: true,
   imports: [
     CurrencyPipe,
+    EchartComponent,
     MatDividerModule,
     MatSortModule,
     MatTableModule,
     NgFor,
     NgIf,
-    NgxChartsModule,
+    NgStyle,
     StockTickerNameComponent,
-    EchartComponent
   ],
 })
 export class PortfolioFinancialsComponent implements OnInit, AfterViewInit {
@@ -46,8 +45,6 @@ export class PortfolioFinancialsComponent implements OnInit, AfterViewInit {
     xAxis: { data: [] },
     series: [{ data: [] }],
   };
-  barChartData: any = [];
-  allBarChartData: any = [];
   xAxisLabel: any = "";
   dataSource = new MatTableDataSource<any>();
   sortedEtfs: any[] = [];
@@ -148,9 +145,7 @@ export class PortfolioFinancialsComponent implements OnInit, AfterViewInit {
   etfCells: Function[] = [
     (etf: any) => "",
     (etf: any) =>
-      (
-        etf.profile.feesExpensesInvestment.annualReportExpenseRatio * 100
-      ).toFixed(2) + "%",
+      (etf.profile.feesExpensesInvestment.annualReportExpenseRatio * 100).toFixed(2) + "%",
     (etf: any) => `$${etf.navPrice.toFixed(2)}`,
     (etf: any) => etf.trailingPE.toFixed(2),
     (etf: any) => etf.epsTrailingTwelveMonths?.toFixed(2) || "N/A",
@@ -201,7 +196,7 @@ export class PortfolioFinancialsComponent implements OnInit, AfterViewInit {
   setChartData(index: number) {
     let options: any = {
       title: {
-        text: "Financial Data",
+        text: "",
       },
       legend: {
         data: [this.headers[index]],
@@ -210,7 +205,7 @@ export class PortfolioFinancialsComponent implements OnInit, AfterViewInit {
       xAxis: {
         data: [],
         splitLine: {
-          show: false,
+          show: true,
         },
       },
       yAxis: {},
@@ -232,8 +227,6 @@ export class PortfolioFinancialsComponent implements OnInit, AfterViewInit {
         return idx * 5;
       },
     };
-
-    this.allBarChartData = [];
     this.xAxisLabel = this.headers[index];
     const dataPoint = this.columnDefs[index];
     this.dataSource.data
@@ -241,15 +234,8 @@ export class PortfolioFinancialsComponent implements OnInit, AfterViewInit {
       .forEach((stock: any) => {
         options.xAxis.data.push(stock.symbol);
         options.series[0].data.push(stock[dataPoint] || 0);
-        this.allBarChartData.push({
-          name: stock.symbol,
-          value: stock[dataPoint] || 0,
-        });
       });
-
-    console.log(this.allBarChartData)
     this.echartOptions = options;
-    this.barChartData = this.allBarChartData;
   }
 
   getColor(index: number, stock: any) {

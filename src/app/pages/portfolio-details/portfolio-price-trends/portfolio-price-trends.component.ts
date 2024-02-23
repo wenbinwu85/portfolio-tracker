@@ -1,14 +1,14 @@
 import { CommonModule } from "@angular/common";
 import { Component, OnInit } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
+import { MatChipsModule } from "@angular/material/chips";
 import { MatDividerModule } from "@angular/material/divider";
 import { MatExpansionModule } from "@angular/material/expansion";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatIconModule } from "@angular/material/icon";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { MatTabsModule } from "@angular/material/tabs";
-import { NgxChartsModule, ScaleType} from "@swimlane/ngx-charts";
-
+import { NgxChartsModule, ScaleType } from "@swimlane/ngx-charts";
 import { PriceMovementChartsComponent } from "../../../shared/components/charts/price-movement-charts/price-movement-charts.component";
 import { StockPriceInfoCardComponent } from "../../../shared/components/stock/stock-price-info-card/stock-price-info-card.component";
 import { DataService } from "../../../shared/services/data.service";
@@ -17,7 +17,6 @@ import { PortfolioDividendComponent } from "../portfolio-dividend/portfolio-divi
 import { PortfolioEventsComponent } from "../portfolio-events/portfolio-events.component";
 import { PortfolioFinancialsComponent } from "../portfolio-financials/portfolio-financials.component";
 import { PortfolioHoldingsComponent } from "../portfolio-holdings/portfolio-holdings.component";
-import { MatChipsModule } from "@angular/material/chips";
 
 @Component({
   selector: "portfolio-price-trends",
@@ -69,7 +68,7 @@ export class PortfolioPriceTrendsComponent implements OnInit {
       .sort((a: any, b: any) => a["52WeekChange"] - b["52WeekChange"]);
     this.sortedEtfs = Object.values(this.dataService.portfolioData)
       .filter((a: any) => a.quoteType === "ETF")
-      .sort((a: any, b: any) => a['ytdReturn'] - b['ytdReturn']);
+      .sort((a: any, b: any) => a["ytdReturn"] - b["ytdReturn"]);
     this.sp500FiftyTwoWeekChange = this.sortedStocks[0].SandP52WeekChange;
 
     this.sortedStocks.forEach((stock: any) => {
@@ -128,7 +127,7 @@ export class PortfolioPriceTrendsComponent implements OnInit {
       tenYear: "Ten Year",
     };
     Object.keys(keyLabelMapping).forEach((key: any) => {
-      if (keyLabelMapping[key]) { 
+      if (keyLabelMapping[key]) {
         let keyData: any = {
           name: keyLabelMapping[key],
           series: [],
@@ -140,8 +139,8 @@ export class PortfolioPriceTrendsComponent implements OnInit {
           });
         });
         this.etfPerformanceChartData.push(keyData);
-      };
-    })
+      }
+    });
   }
 
   getSP500ChangeColor(stock: any) {

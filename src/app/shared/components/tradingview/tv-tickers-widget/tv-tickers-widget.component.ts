@@ -64,6 +64,10 @@ export class TvTickersWidgetComponent implements AfterViewInit {
       this.theme,
       this.tape
     );
-    this.tradingviewService.renderWidget(this.tickersWidget, tickers);
+    this.tickersWidget.nativeElement.appendChild(tickers);
+
+    // why the fuck is this doubled?
+    const node = this.tickersWidget.nativeElement.children[1];
+    this.tickersWidget.nativeElement.removeChild(node);
   }
 }

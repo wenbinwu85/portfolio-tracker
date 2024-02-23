@@ -3,14 +3,8 @@
     <div class="event-date">{{ calendarDay[0].date | date: 'MMMM d, EEEE' }}</div>
     <div class="event-container">
       <ng-container *ngFor="let event of calendarDay">
-        <info-card 
-          [icon]="event.icon" 
-          [value]="event.name" 
-          [subtitle]="event.symbol" 
-          [additionalInfo]="event.event"
-          [fontSize]="'1rem'" 
-          [color]="event.color" 
-        />
+        <info-card [icon]="event.icon" [value]="event.name" [subtitle]="event.symbol" [additionalInfo]="event.event"
+          [fontSize]="'1rem'" [color]="event.color" />
       </ng-container>
     </div>
   </div>
@@ -21,14 +15,8 @@
     <div class="event-date">{{ calendarDay[0].date | date: 'MMMM d, EEEE' }}</div>
     <div class="event-container">
       <ng-container *ngFor="let event of calendarDay">
-        <info-card 
-          [icon]="event.icon"
-          [value]="event.name"
-          [subtitle]="event.symbol"
-          [additionalInfo]="event.event"
-          [fontSize]="'1rem'"
-          [color]="event.color"
-        />
+        <info-card [icon]="event.icon" [value]="event.name" [subtitle]="event.symbol" [additionalInfo]="event.event"
+          [fontSize]="'1rem'" [color]="event.color" />
       </ng-container>
     </div>
   </div>

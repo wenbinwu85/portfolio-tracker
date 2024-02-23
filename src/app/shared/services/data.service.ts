@@ -137,7 +137,7 @@ export class DataService {
    * @param {null | boolean} update stock data from api call
    * @returns {Observable} Returns a single stock dividend history.
    */
-  getDividendHistory(
+  public getDividendHistory(
     symbol: string,
     years = 10,
     update = false

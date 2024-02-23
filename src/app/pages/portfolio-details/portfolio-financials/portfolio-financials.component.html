@@ -2,36 +2,11 @@
   <div class="title">
     <span>Financial Data</span>
   </div>
-  
-  <div class="chart-container">
-    <ngx-charts-bar-vertical
-        [scheme]="'air'"
-        [results]="barChartData"
-        [xAxisLabel]="xAxisLabel"
-        [animations]="true"
-        [xAxis]="true"
-        [yAxis]="true"
-        [showXAxisLabel]="true"
-        [showYAxisLabel]="true"
-        [showDataLabel]="true"
-        [showGridLines]="true"
-        [rotateXAxisTicks]="true"
-    />
-    <!-- <app-echart [options]="echartOptions" /> -->
-  </div>
+  <app-echart [options]="echartOptions" />
 </section>
 
-<table
-  mat-table
-  matSort
-  matSortActive="earningsQuarterlyGrowth"
-  matSortDirection="asc"
-  [dataSource]="dataSource"
->
-  <ng-container
-    *ngFor="let column of columnDefs; index as cidx"
-    [matColumnDef]="column"
-  >
+<table mat-table matSort matSortActive="earningsQuarterlyGrowth" matSortDirection="asc" [dataSource]="dataSource">
+  <ng-container *ngFor="let column of columnDefs; index as cidx" [matColumnDef]="column">
     <th *matHeaderCellDef mat-header-cell mat-sort-header (click)="setChartData(cidx)">
       {{ headers[cidx] }}
     </th>
@@ -50,17 +25,8 @@
 
 <mat-divider />
 
-<table
-  mat-table
-  matSort
-  matSortActive="ytdReturn"
-  matSortDirection="asc"
-  [dataSource]="sortedEtfs"
->
-  <ng-container
-    *ngFor="let column of etfColumnDefs; index as cidx"
-    [matColumnDef]="column"
-  >
+<table mat-table matSort matSortActive="ytdReturn" matSortDirection="asc" [dataSource]="sortedEtfs">
+  <ng-container *ngFor="let column of etfColumnDefs; index as cidx" [matColumnDef]="column">
     <th *matHeaderCellDef mat-header-cell mat-sort-header>
       {{ etfHeaders[cidx] }}
     </th>

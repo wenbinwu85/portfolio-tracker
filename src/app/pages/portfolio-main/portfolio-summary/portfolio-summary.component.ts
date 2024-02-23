@@ -1,18 +1,18 @@
-import { CurrencyPipe, NgIf, PercentPipe } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatIconModule } from '@angular/material/icon';
-import { MatSliderModule } from '@angular/material/slider';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import { NgxChartsModule, ScaleType } from '@swimlane/ngx-charts';
-import { DataService } from '../../../shared/services/data.service';
-import { InfoCardComponent } from '../../../shared/components/info-card/info-card.component';
+import { CurrencyPipe, NgIf, PercentPipe } from "@angular/common";
+import { Component, OnInit } from "@angular/core";
+import { MatButtonModule } from "@angular/material/button";
+import { MatDividerModule } from "@angular/material/divider";
+import { MatIconModule } from "@angular/material/icon";
+import { MatSliderModule } from "@angular/material/slider";
+import { MatTooltipModule } from "@angular/material/tooltip";
+import { NgxChartsModule, ScaleType } from "@swimlane/ngx-charts";
+import { InfoCardComponent } from "../../../shared/components/info-card/info-card.component";
+import { DataService } from "../../../shared/services/data.service";
 
 @Component({
-  selector: 'portfolio-summary',
-  templateUrl: './portfolio-summary.component.html',
-  styleUrls: ['./portfolio-summary.component.css'],
+  selector: "portfolio-summary",
+  templateUrl: "./portfolio-summary.component.html",
+  styleUrls: ["./portfolio-summary.component.css"],
   standalone: true,
   imports: [
     CurrencyPipe,
@@ -31,8 +31,8 @@ export class PortfolioSummaryComponent implements OnInit {
   portfolioHoldings: any;
   portfolioData: any;
   portfolioSymbols: any;
-  portfolioYtdGain = 12345 // this.dataService.getPortfolioYtdGain();
-  ytdDividendEarned = 12345 // this.dataService.getPortfolioYtdDividend();
+  portfolioYtdGain = 12345; // this.dataService.getPortfolioYtdGain();
+  ytdDividendEarned = 12345; // this.dataService.getPortfolioYtdDividend();
   portfolioValueTarget = 0;
   portfolioValueGoalPercentage = 0;
   passiveIncomeTarget = 12000;
@@ -55,7 +55,7 @@ export class PortfolioSummaryComponent implements OnInit {
   showResetButton = false;
   scaleType = ScaleType;
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService) {}
 
   ngOnInit() {
     this.portfolioHoldings = this.dataService.portfolioHoldings;
@@ -71,16 +71,16 @@ export class PortfolioSummaryComponent implements OnInit {
     // sectors
     let market_sectors: any = {};
     this.portfolioSymbols?.forEach((symbol: any) => {
-      const position = this.portfolioHoldings[symbol]
-      const stock = this.portfolioData[symbol]
+      const position = this.portfolioHoldings[symbol];
+      const stock = this.portfolioData[symbol];
       if (market_sectors[stock.profile.sector]) {
         market_sectors[stock.profile.sector] += position.marketValue;
       } else {
         market_sectors[stock.profile.sector] = position.marketValue;
       }
     });
-    market_sectors['ETF'] = market_sectors['undefined'];
-    delete market_sectors['undefined'];
+    market_sectors["ETF"] = market_sectors["undefined"];
+    delete market_sectors["undefined"];
     Object.keys(market_sectors).forEach((sector: string) => {
       this.sectorsData.push({
         name: sector,
@@ -91,29 +91,36 @@ export class PortfolioSummaryComponent implements OnInit {
 
     // market values
     this.portfolioSymbols
-      .sort((a: any, b: any) => this.portfolioHoldings[a].marketValue - this.portfolioHoldings[b].marketValue)
+      .sort(
+        (a: any, b: any) =>
+          this.portfolioHoldings[a].marketValue -
+          this.portfolioHoldings[b].marketValue
+      )
       .forEach((symbol: any) => {
-        const position = this.portfolioHoldings[symbol]
-        const stock = this.portfolioData[symbol]
+        const position = this.portfolioHoldings[symbol];
+        const stock = this.portfolioData[symbol];
         this.allMarketValueData.push({
           name: stock.symbol,
           series: [
             {
-              name: 'Cost Basis',
+              name: "Cost Basis",
               value: position.totalCost,
             },
             {
-              name: 'Unrealized Gain',
+              name: "Unrealized Gain",
               value: position.unrealizedGain,
             },
           ],
-          sector: stock.profile?.sector || 'ETF',
+          sector: stock.profile?.sector || "ETF",
         });
 
         this.allPortfolioPercentData.push({
           name: stock.symbol,
-          value: position.marketValue / this.portfolioHoldings.portfolioMarketValue * 100,
-          sector: stock.profile?.sector || 'ETF',
+          value:
+            (position.marketValue /
+              this.portfolioHoldings.portfolioMarketValue) *
+            100,
+          sector: stock.profile?.sector || "ETF",
         });
       });
     this.marketValueBarChartData = this.allMarketValueData;
@@ -123,50 +130,57 @@ export class PortfolioSummaryComponent implements OnInit {
     this.portfolioSymbols
       .sort(
         (a: any, b: any) =>
-          this.portfolioHoldings[a].unrealizedGainPercent - this.portfolioHoldings[b].unrealizedGainPercent
+          this.portfolioHoldings[a].unrealizedGainPercent -
+          this.portfolioHoldings[b].unrealizedGainPercent
       )
       .forEach((symbol: any) => {
-        const stock = this.portfolioData[symbol]
+        const stock = this.portfolioData[symbol];
         this.allUnrealizedGainData.push({
           name: stock.symbol,
-          value: this.portfolioHoldings[symbol].unrealizedGainPercent * 100 || 0,
-          sector: stock.profile?.sector || 'ETF',
-        })
-      })
+          value:
+            this.portfolioHoldings[symbol].unrealizedGainPercent * 100 || 0,
+          sector: stock.profile?.sector || "ETF",
+        });
+      });
     this.unrealizedGainBarChartData = this.allUnrealizedGainData;
 
     // dividend income
     this.portfolioSymbols
       .sort(
         (a: any, b: any) =>
-          this.portfolioHoldings[a].dividendIncome - this.portfolioHoldings[b].dividendIncome
+          this.portfolioHoldings[a].dividendIncome -
+          this.portfolioHoldings[b].dividendIncome
       )
       .forEach((symbol: any) => {
-        const stock = this.portfolioData[symbol]
+        const stock = this.portfolioData[symbol];
         this.allDividendData.push({
           name: stock.symbol,
           value: this.portfolioHoldings[symbol].dividendIncome,
-          sector: stock.profile?.sector || 'ETF',
-        })
+          sector: stock.profile?.sector || "ETF",
+        });
       });
     this.dividendBarChartData = this.allDividendData;
 
     // yield on cost
     this.dataService.portfolioSymbols
-      .sort((a: any, b: any) => this.portfolioHoldings[a].yieldOnCost - this.portfolioHoldings[b].yieldOnCost)
+      .sort(
+        (a: any, b: any) =>
+          this.portfolioHoldings[a].yieldOnCost -
+          this.portfolioHoldings[b].yieldOnCost
+      )
       .forEach((symbol: any) => {
-        const stock = this.portfolioData[symbol]
+        const stock = this.portfolioData[symbol];
         this.allYocData.push({
           name: stock.symbol,
           value: this.portfolioHoldings[symbol].yieldOnCost,
-          sector: stock.profile?.sector || 'ETF',
+          sector: stock.profile?.sector || "ETF",
         });
       });
     this.yocBarChartData = this.allYocData;
   }
 
   filterBySector(event: any) {
-    if (event.name === 'all') {
+    if (event.name === "all") {
       this.portfolioPercentBarChartData = this.allPortfolioPercentData;
       this.marketValueBarChartData = this.allMarketValueData;
       this.unrealizedGainBarChartData = this.allUnrealizedGainData;
@@ -195,12 +209,16 @@ export class PortfolioSummaryComponent implements OnInit {
   }
 
   getTooltip(kind: string) {
-    if (kind === 'passive') {
-      return `Progress: ${(this.passiveIncomeGoalPercentage * 100).toFixed(4)}%`;
-    } else if (kind === 'investment') {
-      return `Progress: ${(this.portfolioValueGoalPercentage * 100).toFixed(4)}%`;
+    if (kind === "passive") {
+      return `Progress: ${(this.passiveIncomeGoalPercentage * 100).toFixed(
+        4
+      )}%`;
+    } else if (kind === "investment") {
+      return `Progress: ${(this.portfolioValueGoalPercentage * 100).toFixed(
+        4
+      )}%`;
     } else {
-      return '';
+      return "";
     }
   }
 }

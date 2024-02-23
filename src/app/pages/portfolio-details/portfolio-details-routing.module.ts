@@ -1,58 +1,58 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { PortfolioDetailsComponent } from './portfolio-details.component';
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
+import { PortfolioDetailsComponent } from "./portfolio-details.component";
 
 const routes: Routes = [
   {
-    path: '',
+    path: "",
     // redirectTo: '/portfolio/price-trends',
     // pathMatch: 'full',
     component: PortfolioDetailsComponent,
     children: [
       {
-        path: 'price-trends',
+        path: "price-trends",
         loadComponent: () =>
-          import('./portfolio-price-trends/portfolio-price-trends.component').then(
-            (c) => c.PortfolioPriceTrendsComponent
-          ),
+          import(
+            "./portfolio-price-trends/portfolio-price-trends.component"
+          ).then((c) => c.PortfolioPriceTrendsComponent),
       },
       {
-        path: 'holdings',
+        path: "holdings",
         loadComponent: () =>
-          import('./portfolio-holdings/portfolio-holdings.component').then(
+          import("./portfolio-holdings/portfolio-holdings.component").then(
             (c) => c.PortfolioHoldingsComponent
           ),
       },
       {
-        path: 'dividend',
+        path: "dividend",
         loadComponent: () =>
-          import('./portfolio-dividend/portfolio-dividend.component').then(
+          import("./portfolio-dividend/portfolio-dividend.component").then(
             (c) => c.PortfolioDividendComponent
           ),
       },
       {
-        path: 'financials',
+        path: "financials",
         loadComponent: () =>
-          import('./portfolio-financials/portfolio-financials.component').then(
+          import("./portfolio-financials/portfolio-financials.component").then(
             (c) => c.PortfolioFinancialsComponent
           ),
       },
       {
-        path: 'analysis',
+        path: "analysis",
         loadComponent: () =>
-          import('./portfolio-analysis/portfolio-analysis.component').then(
-            c => c.PortfolioAnalysisComponent
+          import("./portfolio-analysis/portfolio-analysis.component").then(
+            (c) => c.PortfolioAnalysisComponent
           ),
       },
-      // {
-      //   path: 'events',
-      //   loadComponent: () =>
-      //     import('./portfolio-events/portfolio-events.component').then(
-      //       (c) => c.PortfolioEventsComponent
-      //     ),
-      // },
+      {
+        path: "events",
+        loadComponent: () =>
+          import("./portfolio-events/portfolio-events.component").then(
+            (c) => c.PortfolioEventsComponent
+          ),
+      },
     ],
-  }
+  },
 ];
 
 @NgModule({
