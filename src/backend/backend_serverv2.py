@@ -147,8 +147,6 @@ def fetch_portfolio_data():
         portfolio_data = yq_stock_data()
         dump_data_to(portfolio_data, portfolio_data_path)
         for symbol in portfolio_data:
-            if symbol.startswith('portfolio'):
-                continue
             path = os.path.join(DATA_PATH, f'{symbol.lower()}.json')
             dump_data_to(portfolio_data[symbol], path)
     else:
