@@ -27,7 +27,7 @@ import { ToolboxComponent } from '../../../pages/toolbox/toolbox.component';
 export class HeaderComponent {
   navLinks = [
     {
-      label: "Ben's Portfolio",
+      label: "Portfolio Summary",
       route: '',
     },
     {

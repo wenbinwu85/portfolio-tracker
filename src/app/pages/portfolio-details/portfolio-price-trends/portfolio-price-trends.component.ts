@@ -48,6 +48,7 @@ export class PortfolioPriceTrendsComponent implements OnInit {
   sortedEtfs: any[] = [];
   fiftyTwoWeekChangeChartData: any = [];
   fiftyTwoWeekLowChartData: any = [];
+  fiftyTwoWeekHighChartData: any = [];
   fiftyDayMAChartData: any = [];
   twoHundredDayMAChartData: any = [];
   discountChartData: any = [];
@@ -55,9 +56,10 @@ export class PortfolioPriceTrendsComponent implements OnInit {
   sp500FiftyTwoWeekChange = 0;
   etfPerformanceChartData: any = [];
   sp500 = "S&P 500";
-  active = [{ name: this.sp500 }];
+  activeSymbol = [{ name: this.sp500 }];
   customColor = [{ name: this.sp500, value: "tomato" }];
-  selectedChart = 1;
+  selectedPerformanceChart = 1;
+  selectedVSChart = 1;
   scaleType = ScaleType;
 
   constructor(private dataService: DataService) {}
@@ -83,23 +85,21 @@ export class PortfolioPriceTrendsComponent implements OnInit {
             stock.fiftyTwoWeekLow) *
           100,
       });
+      this.fiftyTwoWeekHighChartData.push({
+        name: stock.symbol,
+        value: (stock.regularMarketPrice - stock.fiftyTwoWeekHigh) / stock.fiftyTwoWeekHigh * 100
+      });
       this.discountChartData.push({
         name: stock.symbol,
         value: (stock.regularMarketPrice - stock.targetMeanPrice) / stock.targetMeanPrice * 100
       });
       this.fiftyDayMAChartData.push({
         name: stock.symbol,
-        value:
-          ((stock.regularMarketPrice - stock.fiftyDayAverage) /
-            stock.fiftyDayAverage) *
-          100,
+        value: (stock.regularMarketPrice - stock.fiftyDayAverage) / stock.fiftyDayAverage * 100
       });
       this.twoHundredDayMAChartData.push({
         name: stock.symbol,
-        value:
-          ((stock.regularMarketPrice - stock.twoHundredDayAverage) /
-            stock.twoHundredDayAverage) *
-          100,
+        value: (stock.regularMarketPrice - stock.twoHundredDayAverage) / stock.twoHundredDayAverage * 100,
       });
     });
     this.fiftyTwoWeekChangeChartData.push({
@@ -112,6 +112,7 @@ export class PortfolioPriceTrendsComponent implements OnInit {
     this.fiftyDayMAChartData.sort((a: any, b: any) => a.value - b.value);
     this.twoHundredDayMAChartData.sort((a: any, b: any) => a.value - b.value);
     this.fiftyTwoWeekLowChartData.sort((a: any, b: any) => a.value - b.value);
+    this.fiftyTwoWeekHighChartData.sort((a: any, b: any) => a.value - b.value);
     this.discountChartData.sort((a: any, b: any) => a.value - b.value);
 
     const keyLabelMapping: any = {
@@ -150,7 +151,11 @@ export class PortfolioPriceTrendsComponent implements OnInit {
     )[0];
   }
 
-  displayChart(chartID: number) {
-    this.selectedChart = chartID;
+  changePerformanceChart(chartID: number) {
+    this.selectedPerformanceChart = chartID;
+  }
+
+  changeVSCharts(chartId: number) { 
+    this.selectedVSChart = chartId;
   }
 }
