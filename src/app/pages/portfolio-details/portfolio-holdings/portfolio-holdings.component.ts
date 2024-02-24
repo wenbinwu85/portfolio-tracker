@@ -63,6 +63,18 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
   allTotalCostChartData: any = [];
   dataSource = new MatTableDataSource<any>();
   expandedRow!: any;
+  headers = [
+    "Symbol",
+    "Average Cost x shares",
+    "Total Invested",
+    "Market Value",
+    "Portfolio %",
+    "Unrealized Gain",
+    "Unrealized Gain %",
+    "Dividend Income",
+    "Yield on Cost",
+    "Sector",
+  ];
   columnDefs = [
     "symbol",
     "costAverage",
@@ -74,18 +86,6 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     "dividendIncome",
     "yieldOnCost",
     "sector",
-  ];
-  headers = [
-    "Symbol",
-    "Cost Average x shares",
-    "Total Invested",
-    "Market Value",
-    "Portfolio %",
-    "Unrealized Gain",
-    "Unrealized Gain %",
-    "Dividend Income",
-    "Yield on Cost",
-    "Sector",
   ];
 
   constructor(private dataService: DataService) {}

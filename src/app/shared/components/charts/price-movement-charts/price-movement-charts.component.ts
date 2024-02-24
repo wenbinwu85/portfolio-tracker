@@ -47,7 +47,8 @@ export class PriceMovementChartsComponent {
           name: stock.symbol,
           value: stock.preMarketChangePercent * 100 || 0,
         });
-      } else if (stock.postMarketChange) {
+      }
+      if (stock.postMarketChange) {
         this.priceChange += stock.postMarketChange * position.sharesOwned;
         this.priceChangeChartData.push({
           name: stock.symbol,
@@ -85,10 +86,7 @@ export class PriceMovementChartsComponent {
     });
     this.priceChangeChartData.sort((a: any, b: any) => a.value - b.value);
     this.priceRangeChartData.sort(
-      (a: any, b: any) =>
-        a.series[0].value +
-        a.series[1].value -
-        (b.series[0].value + b.series[1].value)
+      (a: any, b: any) => a.series[0].value + a.series[1].value - (b.series[0].value + b.series[1].value)
     );
     this.betaChartData.sort((a: any, b: any) => a.value - b.value);
   }

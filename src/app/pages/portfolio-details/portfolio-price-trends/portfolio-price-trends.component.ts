@@ -85,10 +85,7 @@ export class PortfolioPriceTrendsComponent implements OnInit {
       });
       this.discountChartData.push({
         name: stock.symbol,
-        value:
-          ((stock.targetMeanPrice - stock.regularMarketPrice) /
-            stock.targetMeanPrice) *
-          100,
+        value: (stock.regularMarketPrice - stock.targetMeanPrice) / stock.targetMeanPrice * 100
       });
       this.fiftyDayMAChartData.push({
         name: stock.symbol,
@@ -115,7 +112,7 @@ export class PortfolioPriceTrendsComponent implements OnInit {
     this.fiftyDayMAChartData.sort((a: any, b: any) => a.value - b.value);
     this.twoHundredDayMAChartData.sort((a: any, b: any) => a.value - b.value);
     this.fiftyTwoWeekLowChartData.sort((a: any, b: any) => a.value - b.value);
-    this.discountChartData.sort((a: any, b: any) => b.value - a.value);
+    this.discountChartData.sort((a: any, b: any) => a.value - b.value);
 
     const keyLabelMapping: any = {
       ytd: "Year to Date",

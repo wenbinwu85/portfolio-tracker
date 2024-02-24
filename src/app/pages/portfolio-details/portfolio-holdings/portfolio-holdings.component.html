@@ -1,6 +1,6 @@
 <section class="add-border">
   <div class="title">
-    <span>Cost Basis</span>
+    <span>Allocations & Cost Basis</span>
   </div>
 
   <div class="charts-flex">
@@ -20,7 +20,7 @@
   </mat-form-field>
 </div>
 
-<table mat-table matSort matSortActive="averageAnalystRating" matSortDirection="asc" multiTemplateDataRows
+<table mat-table matSort matSortActive="unrealizedGainPercent" matSortDirection="desc" multiTemplateDataRows
   [dataSource]="dataSource">
   <ng-container *ngFor="let column of columnDefs; index as cidx" [matColumnDef]="column" [sticky]="cidx === 0">
     <th mat-header-cell *matHeaderCellDef mat-sort-header>

@@ -111,7 +111,7 @@
 <!-- move to analysis page -->
 <section class="add-border">
     <div class="title">
-        <span>Distance above 52 Week Low</span>
+        <span>Current Price vs 52 Week Low & Target Price</span>
     </div>
     <div class="charts-flex">
         <div class="chart-container">
@@ -124,7 +124,7 @@
                 [showXAxisLabel]="true"
                 [showYAxisLabel]="true"
                 [legend]="false"
-                [yAxisLabel]="'Distance above 52Week Low %'"
+                [yAxisLabel]="'Current price vs 52 week low %'"
                 [rotateXAxisTicks]="true"
             >
                 <!-- <ng-template #tooltipTemplate let-model="model" class="dark">
@@ -145,7 +145,7 @@
                 [showXAxisLabel]="true"
                 [showYAxisLabel]="true"
                 [legend]="false"
-                [yAxisLabel]="'Discount from target price %'"
+                [yAxisLabel]="'Current price vs target price %'"
                 [rotateXAxisTicks]="true"
                 [yScaleMin]="-5"
             >

@@ -61,12 +61,9 @@ export class PortfolioSummaryComponent implements OnInit {
     this.portfolioHoldings = this.dataService.portfolioHoldings;
     this.portfolioData = this.dataService.portfolioData;
     this.portfolioSymbols = this.dataService.portfolioSymbols;
-    this.passiveIncomeGoalPercentage =
-      this.portfolioData?.portfolioDividendIncome / this.passiveIncomeTarget;
-    this.portfolioValueTarget =
-      this.passiveIncomeTarget / this.portfolioData?.portfolioYieldOnCost;
-    this.portfolioValueGoalPercentage =
-      this.portfolioData?.portfolioMarketValue / this.portfolioValueTarget;
+    this.passiveIncomeGoalPercentage = this.portfolioHoldings?.portfolioDividendIncome / this.passiveIncomeTarget;
+    this.portfolioValueTarget = this.passiveIncomeTarget / this.portfolioHoldings?.portfolioYieldOnCost;
+    this.portfolioValueGoalPercentage = this.portfolioHoldings?.portfolioMarketValue / this.portfolioValueTarget;
 
     // sectors
     let market_sectors: any = {};

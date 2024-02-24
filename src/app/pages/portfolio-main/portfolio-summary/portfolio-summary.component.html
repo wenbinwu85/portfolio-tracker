@@ -28,27 +28,26 @@
     [value]="portfolioHoldings.portfolioUnrealizedGainPercent"
     valueType="percentage"
     subtitle="Unrealized Gain %"
-    color="slateblue"
+    [color]="portfolioHoldings.portfolioUnrealizedGainPercent > 0 ? 'forestgreen' : 'tomato'"
   />
   <info-card
     icon="payments"
     [value]="portfolioHoldings.portfolioDividendIncome"
     valueType="currency"
-    subtitle="Annual Dividend Income"
+    subtitle="Projected Annual Income"
   />
   <info-card
     icon="percentage"
     [value]="portfolioHoldings.portfolioYield"
     valueType="percentage"
     subtitle="Portfolio Yield"
-    color="forestgreen"
   />
   <info-card
     icon="percentage"
     [value]="portfolioHoldings.portfolioYieldOnCost"
     valueType="percentage"
     subtitle="Portfolio YOC"
-    color="slateblue"
+    color="forestgreen"
   />
 </section>
 
@@ -98,7 +97,7 @@
   <section class="goal-container">
     <h1>
       <b>Portfolio Value Goal:</b>
-      <span class="goal">{{ portfolioValueGoalPercentage | percent : ".4" }}</span>
+      <span class="goal">{{ portfolioValueGoalPercentage | percent : ".2" }}</span>
     </h1>
   
     <mat-slider
@@ -153,8 +152,8 @@
 <div *ngIf="portfolioHoldings" class="add-border">
   <section class="goal-container">
     <h1>
-      <b>Annual Passive Income Goal:</b>
-      <span class="goal">{{ passiveIncomeGoalPercentage | percent : ".4" }}</span>
+      <b>Passive Income Goal:</b>
+      <span class="goal">{{ passiveIncomeGoalPercentage | percent : ".2" }}</span>
     </h1>
   
     <mat-slider
