@@ -1,34 +1,106 @@
-<mat-button-toggle-group class="links">
-  <mat-button-toggle *ngIf="stock.quoteType === 'EQUITY'" value="">
-    <mat-icon>public</mat-icon>
-    <a href="{{ stock.profile.website }}" target="_blank">{{ stock.profile.website }}</a>
-  </mat-button-toggle>
-  <ng-container *ngFor="let link of externalLinks">
-    <mat-button-toggle value="">
-      <mat-icon>public</mat-icon>
-      <a href="{{ link.url }}" target="_blank"> {{ link.label }}</a>
-    </mat-button-toggle>
-  </ng-container>
+<div class="position">
+  <info-card
+    icon="payments"
+    [value]="position.costAverage"
+    valueType="currency"
+    subtitle="Cost Average"
+  />
+  <info-card
+    icon="numbers"
+    [value]="position.sharesOwned"
+    subtitle="Shares Owned"
+  />
+  <info-card
+    icon="payments"
+    [value]="position.totalCost"
+    valueType="currency"
+    subtitle="Total Invested"
+  />
+  <info-card
+    icon="payments"
+    [value]="position.marketValue"
+    valueType="currency"
+    subtitle="Market value"
+  />
+  <info-card
+    icon="percentage"
+    [value]="position.portfolioPercent"
+    valueType="percentage"
+    subtitle="Portfolio %"
+  />
+  <info-card
+    icon="payments"
+    [value]="position.unrealizedGain"
+    valueType="currency"
+    subtitle="Unrealized Gain "
+    [color]="position.unrealizedGain > 0 ? 'forestgreen' : 'tomato'"
+    [accentColor]="position.unrealizedGain > 0 ? 'forestgreen' : 'tomato'"
+  />
+  <info-card
+    icon="percentage"
+    [value]="position.unrealizedGainPercent"
+    valueType="percentage"
+    subtitle="Unrealized Gain %"
+    [color]="position.unrealizedGain > 0 ? 'forestgreen' : 'tomato'"
+    [accentColor]="position.unrealizedGain > 0 ? 'forestgreen' : 'tomato'"
+  />
+  <info-card
+    icon="payments"
+    [value]="position.dividendIncome"
+    valueType="currency"
+    subtitle="Dividend Income"
+  />
+  <info-card
+    icon="percentage"
+    [value]="position.yieldOnCost"
+    valueType="percentage"
+    subtitle="Yield On Cost"
+  />
+</div>
 
-  <ng-container *ngIf="stock.quoteType === 'ETF'">
-    <ng-container *ngFor="let link of etfLinks">
+<mat-divider />
+
+<div class="heading">
+  <mat-button-toggle-group class="links">
+    <mat-button-toggle *ngIf="stock.quoteType === 'EQUITY'" value="">
+      <mat-icon>public</mat-icon>
+      <a href="{{ stock.profile.website }}" target="_blank">{{ stock.profile.website }}</a>
+    </mat-button-toggle>
+    <ng-container *ngFor="let link of externalLinks">
       <mat-button-toggle value="">
         <mat-icon>public</mat-icon>
         <a href="{{ link.url }}" target="_blank"> {{ link.label }}</a>
       </mat-button-toggle>
     </ng-container>
-  </ng-container>
-</mat-button-toggle-group>
+
+    <ng-container *ngIf="stock.quoteType === 'ETF'">
+      <ng-container *ngFor="let link of etfLinks">
+        <mat-button-toggle value="">
+          <mat-icon>public</mat-icon>
+          <a href="{{ link.url }}" target="_blank"> {{ link.label }}</a>
+        </mat-button-toggle>
+      </ng-container>
+    </ng-container>
+  </mat-button-toggle-group>
+
+  <mat-chip-listbox>
+    <mat-chip-option selected (click)="selectChart(1)">Simple Chart</mat-chip-option>
+    <mat-chip-option (click)="selectChart(2)">Advanced Chart</mat-chip-option>
+  </mat-chip-listbox>
+</div>
 
 <div *ngIf="stock">
-  <tv-symbol-info-widget [symbol]="stock.symbol" />
-  
-  <mat-divider />
-
-  <!-- <wallmine-chart [symbol]="symbol" /> -->
-  <tv-advanced-chart-widget [symbol]="stock.symbol" [showWatchlist]="false" />
-  
-  <tv-financials-widget [symbol]="symbol" height="484" displayMode="compact" />
+  <wallmine-chart *ngIf="selectedChart === 1" [symbol]="stock.symbol" />
+  <tv-advanced-chart-widget
+    *ngIf="selectedChart === 2"
+    [symbol]="stock.symbol"
+    [showWatchlist]="false"
+  />
+  <tv-financials-widget
+    [symbol]="stock.symbol"
+    height="484"
+    displayMode="compact"
+  />
 
   <ng-container *ngIf="stock.quoteType === 'EQUITY'">
     <section class="events-filings-container">
@@ -41,6 +113,9 @@
       </div>
     </section>
     <mat-divider inset />
-    <stock-research-reports *ngIf="stock.quoteType === 'EQUITY'" [symbol]="stock.symbol" />
+    <stock-research-reports
+      *ngIf="stock.quoteType === 'EQUITY'"
+      [symbol]="stock.symbol"
+    />
   </ng-container>
 </div>

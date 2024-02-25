@@ -1,4 +1,4 @@
-<mat-card>
+<mat-card [ngStyle]="{'border': borderStyle, 'border-left': borderLeftStyle}">
     <div class="flex-between">
         <mat-icon *ngIf="icon">{{ icon }}</mat-icon>
         <div *ngIf="date" class="date">{{ date | date: 'fullDate' }}</div>

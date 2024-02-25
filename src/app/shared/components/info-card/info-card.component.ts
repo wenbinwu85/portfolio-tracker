@@ -5,7 +5,7 @@ import {
   NgStyle,
   PercentPipe,
 } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 
@@ -24,7 +24,7 @@ import { MatIconModule } from '@angular/material/icon';
     PercentPipe,
   ],
 })
-export class InfoCardComponent {
+export class InfoCardComponent implements OnInit {
   @Input({ required: true }) icon: string = '';
   @Input({ required: true }) value: number | string = 0;
   @Input({ required: true }) subtitle: string = '';
@@ -32,7 +32,14 @@ export class InfoCardComponent {
   @Input() additionalInfo?: string | number;
   @Input() valueType?: string = 'number';
   @Input() color?: string = 'black';
+  @Input() accentColor?: string;
   @Input() fontSize?: string = '2rem';
+  borderStyle = ''
+  borderLeftStyle = '';
+
+  ngOnInit(): void {
+    this.borderLeftStyle = '6px solid ' + (this.accentColor ? this.accentColor : 'slateblue');
+  }
 
   getStyle() {
     return {

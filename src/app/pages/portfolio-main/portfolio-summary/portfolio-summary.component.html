@@ -22,6 +22,7 @@
     subtitle="Unrealized Gain"
     valueType="currency"
     [color]="portfolioHoldings.portfolioUnrealizedGain > 0 ? 'forestgreen' : 'tomato'"
+    [accentColor]="portfolioHoldings.portfolioUnrealizedGain > 0 ? 'forestgreen' : 'tomato'"
   />
   <info-card
     icon="percentage"
@@ -29,6 +30,7 @@
     valueType="percentage"
     subtitle="Unrealized Gain %"
     [color]="portfolioHoldings.portfolioUnrealizedGainPercent > 0 ? 'forestgreen' : 'tomato'"
+    [accentColor]="portfolioHoldings.portfolioUnrealizedGain > 0 ? 'forestgreen' : 'tomato'"
   />
   <info-card
     icon="payments"
@@ -48,6 +50,7 @@
     valueType="percentage"
     subtitle="Portfolio YOC"
     color="forestgreen"
+    accentColor="forestgreen"
   />
 </section>
 
@@ -119,34 +122,43 @@
       <h1>{{ portfolioValueTarget | currency }}</h1>
     </div>
   </section>
-  
-  <section class="charts-flex">
-    <div class="chart-container">
-      <ngx-charts-bar-vertical-stacked
-        [scheme]="'ocean'"
-        [animations]="true"
-        [results]="marketValueBarChartData"
-        [xAxis]="true"
-        [yAxis]="true"
-        [showXAxisLabel]="true"
-        [showYAxisLabel]="true"
-        [yAxisLabel]="'Market Value $'"
-        [yScaleMax]="marketValueYMax"
-      />
-    </div>
-    <div class="chart-container">
-      <ngx-charts-bar-vertical
-        [scheme]="'air'"
-        [animations]="true"
-        [results]="unrealizedGainBarChartData"
-        [xAxis]="true"
-        [yAxis]="true"
-        [showXAxisLabel]="true"
-        [showYAxisLabel]="true"
-        [yAxisLabel]="'Open P & L %'"
-      />
-    </div>
-  </section>
+
+  <mat-expansion-panel [expanded]="false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <mat-icon class="add-margin">payment</mat-icon>
+        <span>Portfolio Value</span>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <section class="charts-flex">
+      <div class="chart-container">
+        <ngx-charts-bar-vertical-stacked
+          [scheme]="'ocean'"
+          [animations]="true"
+          [results]="marketValueBarChartData"
+          [xAxis]="true"
+          [yAxis]="true"
+          [showXAxisLabel]="true"
+          [showYAxisLabel]="true"
+          [yAxisLabel]="'Market Value $'"
+          [yScaleMax]="marketValueYMax"
+        />
+      </div>
+      <div class="chart-container">
+        <ngx-charts-bar-vertical
+          [scheme]="'air'"
+          [animations]="true"
+          [results]="unrealizedGainBarChartData"
+          [xAxis]="true"
+          [yAxis]="true"
+          [showXAxisLabel]="true"
+          [showYAxisLabel]="true"
+          [yAxisLabel]="'Open P & L %'"
+        />
+      </div>
+    </section>
+  </mat-expansion-panel>
 </div>
 
 <div *ngIf="portfolioHoldings" class="add-border">
@@ -175,33 +187,42 @@
       <h1>{{ passiveIncomeTarget | currency }}</h1>
     </div>
   </section>
-  
-  <section class="charts-flex">
-    <div class="chart-container">
-      <ngx-charts-bar-vertical
-        [scheme]="'natural'"
-        [animations]="true"
-        [results]="dividendBarChartData"
-        [xAxis]="true"
-        [yAxis]="true"
-        [showXAxisLabel]="true"
-        [showYAxisLabel]="true"
-        [yAxisLabel]="'Dividend Income $'"
-        [yScaleMax]="dividendYMax"
-      />
-    </div>
-    <div class="chart-container">
-      <ngx-charts-bar-vertical
-        [scheme]="'natural'"
-        [animations]="true"
-        [results]="yocBarChartData"
-        [xAxis]="true"
-        [yAxis]="true"
-        [showXAxisLabel]="true"
-        [showYAxisLabel]="true"
-        [yAxisLabel]="'Yield On Cost %'"
-        [yScaleMax]="yocYMax"
-      />
-    </div>
-  </section>
+
+  <mat-expansion-panel [expanded]="false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <mat-icon class="add-margin">local_fire_department</mat-icon>
+        <span>Passive Income</span>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <section class="charts-flex">
+      <div class="chart-container">
+        <ngx-charts-bar-vertical
+          [scheme]="'natural'"
+          [animations]="true"
+          [results]="dividendBarChartData"
+          [xAxis]="true"
+          [yAxis]="true"
+          [showXAxisLabel]="true"
+          [showYAxisLabel]="true"
+          [yAxisLabel]="'Dividend Income $'"
+          [yScaleMax]="dividendYMax"
+        />
+      </div>
+      <div class="chart-container">
+        <ngx-charts-bar-vertical
+          [scheme]="'natural'"
+          [animations]="true"
+          [results]="yocBarChartData"
+          [xAxis]="true"
+          [yAxis]="true"
+          [showXAxisLabel]="true"
+          [showYAxisLabel]="true"
+          [yAxisLabel]="'Yield On Cost %'"
+          [yScaleMax]="yocYMax"
+        />
+      </div>
+    </section>
+  </mat-expansion-panel>
 </div>

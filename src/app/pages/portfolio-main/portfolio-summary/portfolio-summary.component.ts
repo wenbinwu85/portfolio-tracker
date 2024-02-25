@@ -2,6 +2,7 @@ import { CurrencyPipe, NgIf, PercentPipe } from "@angular/common";
 import { Component, OnInit } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
 import { MatDividerModule } from "@angular/material/divider";
+import { MatExpansionModule } from "@angular/material/expansion";
 import { MatIconModule } from "@angular/material/icon";
 import { MatSliderModule } from "@angular/material/slider";
 import { MatTooltipModule } from "@angular/material/tooltip";
@@ -19,6 +20,7 @@ import { DataService } from "../../../shared/services/data.service";
     InfoCardComponent,
     MatButtonModule,
     MatDividerModule,
+    MatExpansionModule,
     MatIconModule,
     MatSliderModule,
     MatTooltipModule,
@@ -61,9 +63,13 @@ export class PortfolioSummaryComponent implements OnInit {
     this.portfolioHoldings = this.dataService.portfolioHoldings;
     this.portfolioData = this.dataService.portfolioData;
     this.portfolioSymbols = this.dataService.portfolioSymbols;
-    this.passiveIncomeGoalPercentage = this.portfolioHoldings?.portfolioDividendIncome / this.passiveIncomeTarget;
-    this.portfolioValueTarget = this.passiveIncomeTarget / this.portfolioHoldings?.portfolioYieldOnCost;
-    this.portfolioValueGoalPercentage = this.portfolioHoldings?.portfolioMarketValue / this.portfolioValueTarget;
+    this.passiveIncomeGoalPercentage =
+      this.portfolioHoldings?.portfolioDividendIncome /
+      this.passiveIncomeTarget;
+    this.portfolioValueTarget =
+      this.passiveIncomeTarget / this.portfolioHoldings?.portfolioYieldOnCost;
+    this.portfolioValueGoalPercentage =
+      this.portfolioHoldings?.portfolioMarketValue / this.portfolioValueTarget;
 
     // sectors
     let market_sectors: any = {};

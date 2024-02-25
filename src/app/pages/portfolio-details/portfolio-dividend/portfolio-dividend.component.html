@@ -1,7 +1,13 @@
 <section *ngIf="infoCards" class="info-cards">
   <ng-container *ngFor="let card of infoCards">
-    <info-card [icon]="card.icon" [value]="card.value" [valueType]="card.valueType" [subtitle]="card.subtitle"
-      [color]="card.color" />
+    <info-card 
+      [icon]="card.icon"
+      [value]="card.value"
+      [valueType]="card.valueType"
+      [subtitle]="card.subtitle"
+      [color]="card.color"
+      [accentColor]="card.color"
+    />
   </ng-container>
 </section>
 
