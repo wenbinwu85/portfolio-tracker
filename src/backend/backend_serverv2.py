@@ -149,6 +149,7 @@ def fetch_portfolio_data():
         for symbol in portfolio_data:
             path = os.path.join(DATA_PATH, f'{symbol.lower()}.json')
             dump_data_to(portfolio_data[symbol], path)
+        return jsonify(portfolio_data)
     else:
         # no update, load from local
         try:
@@ -166,8 +167,8 @@ def fetch_portfolio_data():
                     dump_data_to(data, path)
                 if data:
                     portfolio_data.update({symbol: data})
-    dump_data_to(portfolio_data, portfolio_data_path)
-    return jsonify(portfolio_data)
+        dump_data_to(portfolio_data, portfolio_data_path)
+        return jsonify(portfolio_data)
 
 
 # wtf? not working ???

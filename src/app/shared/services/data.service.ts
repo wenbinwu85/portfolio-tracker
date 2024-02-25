@@ -5,7 +5,7 @@ import {
   HttpParams,
 } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { catchError, forkJoin, Observable, of, retry } from "rxjs";
+import { BehaviorSubject, catchError, forkJoin, Observable, of, retry } from "rxjs";
 
 @Injectable({
   providedIn: "root",
@@ -21,20 +21,23 @@ export class DataService {
   public portfolioHoldings: any;
   public portfolioSymbols: any;
   public portfolioData: any;
+  isLoadingData = new BehaviorSubject(false);
 
   constructor(private http: HttpClient) {
     this.updatePortfolioData(false);
   }
 
   updatePortfolioData(shouldUpdate: boolean) { 
+    this.isLoadingData.next(true);
     forkJoin([
       this.getPortfolioData(shouldUpdate),
       this.getPortfolioHoldings(),
-      this.getPortfolioSymbols(),
-    ]).subscribe(([data, holdings, symbols]) => {
+    ]).subscribe(([data, holdings]) => {
       this.portfolioData = data;
       this.portfolioHoldings = holdings;
-      this.portfolioSymbols = symbols;
+      this.portfolioSymbols = Object.keys(this.portfolioData);
+      this.isLoadingData.next(false);
+
       console.log('sanity check')
       console.table(Object.entries(this.portfolioHoldings));
     });
