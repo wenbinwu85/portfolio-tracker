@@ -43,6 +43,12 @@
         </div>
       </div>
 
+      <div *ngIf="cidx === 11">
+        <span [ngStyle]="{ color: getColColor(stock, cidx) }" (click)="expandRow(stock)">
+          {{ stock.rating | titlecase }}
+        </span>
+      </div>
+
       <ng-template #elseBlock>
         <span [ngStyle]="{ color: getColColor(stock, cidx) }" (click)="expandRow(stock)">
           {{ cells[cidx](stock) }}

@@ -5,7 +5,7 @@ import {
   transition,
   trigger,
 } from "@angular/animations";
-import { CurrencyPipe, NgFor, NgIf, NgStyle } from "@angular/common";
+import { CurrencyPipe, NgFor, NgIf, NgStyle, TitleCasePipe } from "@angular/common";
 import { AfterViewInit, Component, OnInit, ViewChild } from "@angular/core";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
@@ -50,6 +50,7 @@ import { DataService } from "../../../shared/services/data.service";
     NgStyle,
     NgxChartsModule,
     StockTickerNameComponent,
+    TitleCasePipe,
     TvSingleQuoteWidgetComponent,
   ],
 })
@@ -74,6 +75,8 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     "Dividend Income",
     "Yield on Cost",
     "Sector",
+    "Exchange",
+    "Recommendation",
   ];
   columnDefs = [
     "symbol",
@@ -86,6 +89,8 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     "dividendIncome",
     "yieldOnCost",
     "sector",
+    "exchangeName",
+    "rating",
   ];
 
   constructor(private dataService: DataService) {}
@@ -99,7 +104,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
           ...this.portfolioHoldings[data.symbol],
           symbol: data.symbol,
           sector: data.profile.sector,
-          rating: data.averageAnalystRating,
+          rating: data.recommendationKey,
           longName: data.longName,
           shortName: data.shortName,
           quoteType: data.quoteType,
@@ -109,6 +114,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
           regularMarketChangePercent: data.regularMarketChangePercent,
           preMarketPrice: data.preMarketPrice,
           postMarketPrice: data.postMarketPrice,
+          exchangeName: data.exchangeName,
         };
       }
     );
@@ -165,6 +171,8 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     (stock: any) =>
       (this.portfolioHoldings[stock.symbol].yieldOnCost * 100).toFixed(2) + "%",
     (stock: any) => stock.sector || "ETF",
+    (stock: any) => stock.exchangeName,
+    (stock: any) => "",
   ];
 
   footerRow: Function[] = [
@@ -177,6 +185,8 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     () => "",
     () => `$${this.portfolioHoldings.portfolioDividendIncome.toFixed(2)}`,
     () => `${(this.portfolioHoldings.portfolioYieldOnCost * 100).toFixed(2)}%`,
+    () => "",
+    () => "",
     () => "",
   ];
 
@@ -218,6 +228,8 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
         return this.portfolioHoldings[stock.symbol].dividendIncome > 0
           ? "forestgreen"
           : "tomato";
+      case 11:
+        return stock.rating === 'buy' ? "forestgreen" : "black";
       default:
         return "black";
     }

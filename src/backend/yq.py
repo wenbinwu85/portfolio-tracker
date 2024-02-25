@@ -214,9 +214,9 @@ def map_stock_data(yqdata):
             mapped_stock_data["incomeStatementHistory"]["annual"] = data["incomeStatementHistory"]["incomeStatementHistory"]
             mapped_stock_data["incomeStatementHistory"]["quarterly"] = data["incomeStatementHistoryQuarterly"]["incomeStatementHistory"]
             mapped_stock_data["indexTrend"] = data["indexTrend"]
-            mapped_stock_data["insiderTransactions"] = data.get("insiderTransactions", {})
-            mapped_stock_data["recommendationTrend"] = data["recommendationTrend"]
-            mapped_stock_data["secFilings"] = data.get("secFilings", {})
+            mapped_stock_data["insiderTransactions"] = data.get("insiderTransactions", {}).get('transactions', {})
+            mapped_stock_data["recommendationTrend"] = data["recommendationTrend"]['trend']
+            mapped_stock_data["secFilings"] = data.get("secFilings", {}).get('filings', {})
             mapped_stock_data["sharePurchaseActivity"] = data["netSharePurchaseActivity"]
             mapped_stock_data["shareholders"] = {}
             mapped_stock_data["shareholders"]["fundOwnership"] = data.get("fundOwnership", {})
