@@ -23,15 +23,18 @@ export class DataService {
   public portfolioData: any;
 
   constructor(private http: HttpClient) {
+    this.updatePortfolioData(false);
+  }
+
+  updatePortfolioData(shouldUpdate: boolean) { 
     forkJoin([
+      this.getPortfolioData(shouldUpdate),
       this.getPortfolioHoldings(),
       this.getPortfolioSymbols(),
-      this.getPortfolioData(false),
-    ]).subscribe(([holdings, symbols, portfolioData]) => {
+    ]).subscribe(([data, holdings, symbols]) => {
+      this.portfolioData = data;
       this.portfolioHoldings = holdings;
       this.portfolioSymbols = symbols;
-      this.portfolioData = portfolioData;
-
       console.log('sanity check')
       console.table(Object.entries(this.portfolioHoldings));
     });
