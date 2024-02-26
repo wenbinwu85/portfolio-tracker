@@ -102,22 +102,28 @@ def fetch_dividend_history(symbol):
 
 @app.route('/fetch/events/<symbol>')
 def fetch_corporate_events(symbol):
+    path = os.path.join(DATA_PATH, f'{symbol.lower()}-events.json')
     data = yq_corporate_events(symbol).to_json(orient='records', indent=2)
     events = {}
-    for event in ast.literal_eval(data)[-10:]:
+    for event in ast.literal_eval(data)[-20:]:
         events[event['id']] = event
+    dump_data_to(events, path)
     return jsonify(events)
 
 
 @app.route('/fetch/technical-insights/<symbol>')
 def fetch_technical_insights(symbol):
     data = yq_technical_insights(symbol)
+    path = os.path.join(DATA_PATH, f'{symbol}-technical-insights.json')
+    dump_data_to(data, path)
     return jsonify(data)
 
 
 @app.route('/fetch/recommendations/<symbol>')
 def fetch_recommendations(symbol):
     data = yq_recommendations(symbol)
+    path = os.path.joins(DATA_PATH, f'{symbol}-recommendations.json')
+    dump_data_to(data, path)
     return jsonify(data)
 
 

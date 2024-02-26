@@ -123,12 +123,12 @@
     "postMarketChangePercent": -2.8941e-05,
     "postMarketChange": -0.000801086,
     "postMarketPrice": 27.6792,
-    "regularMarketChangePercent": 0.0036258302,
-    "regularMarketChange": 0.1,
+    "regularMarketChangePercent": 0.0036258297,
+    "regularMarketChange": 0.10000038,
     "regularMarketPrice": 27.68,
-    "regularMarketDayHigh": 27.805,
-    "regularMarketDayLow": 27.515,
-    "regularMarketVolume": 2889534,
+    "regularMarketDayHigh": 27.81,
+    "regularMarketDayLow": 27.51,
+    "regularMarketVolume": 3041537,
     "averageDailyVolume10Day": 5099260,
     "averageDailyVolume3Month": 4982227,
     "regularMarketPreviousClose": 27.58,
@@ -142,8 +142,8 @@
     "marketCap": 60117639168,
     "previousClose": 27.58,
     "open": 27.55,
-    "dayLow": 27.515,
-    "dayHigh": 27.805,
+    "dayLow": 27.51,
+    "dayHigh": 27.81,
     "dividendRate": 2.01,
     "dividendYield": 0.072399996,
     "exDividendDate": "2024-01-29 19:00:00",
@@ -152,7 +152,7 @@
     "beta": 0.984,
     "trailingPE": 10.984127,
     "forwardPE": 9.780919,
-    "volume": 2889534,
+    "volume": 3041537,
     "averageVolume": 4982227,
     "averageVolume10days": 5099260,
     "fiftyTwoWeekLow": 24.66,
@@ -214,44 +214,6 @@
     "ebitdaMargins": 0.1774,
     "operatingMargins": 0.12372,
     "financialCurrency": "USD",
-    "balanceSheetHistory": {
-        "annual": [
-            {
-                "maxAge": 1,
-                "endDate": "2023-12-31"
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2022-12-31"
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2021-12-31"
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2020-12-31"
-            }
-        ],
-        "quarterly": [
-            {
-                "maxAge": 1,
-                "endDate": "2023-12-31"
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2023-09-30"
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2023-06-30"
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2023-03-31"
-            }
-        ]
-    },
     "calendarEvents": {
         "maxAge": 1,
         "earnings": {
@@ -268,52 +230,6 @@
         },
         "exDividendDate": "2024-01-29 19:00:00",
         "dividendDate": "2024-02-13 19:00:00"
-    },
-    "cashflowHistory": {
-        "annual": [
-            {
-                "maxAge": 1,
-                "endDate": "2023-12-31",
-                "netIncome": 5532000000
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2022-12-31",
-                "netIncome": 5490000000
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2021-12-31",
-                "netIncome": 4637700000
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2020-12-31",
-                "netIncome": 3775600000
-            }
-        ],
-        "quarterly": [
-            {
-                "maxAge": 1,
-                "endDate": "2023-12-31",
-                "netIncome": 1568000000
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2023-09-30",
-                "netIncome": 1319000000
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2023-06-30",
-                "netIncome": 1254000000
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2023-03-31",
-                "netIncome": 1391000000
-            }
-        ]
     },
     "earnings": {
         "maxAge": 1,
@@ -646,245 +562,31 @@
             }
         ]
     },
-    "incomeStatementHistory": {
-        "annual": [
-            {
-                "maxAge": 1,
-                "endDate": "2023-12-31",
-                "totalRevenue": 49715000000,
-                "costOfRevenue": 0,
-                "grossProfit": 0,
-                "researchDevelopment": {},
-                "sellingGeneralAdministrative": {},
-                "nonRecurring": {},
-                "otherOperatingExpenses": {},
-                "totalOperatingExpenses": 0,
-                "operatingIncome": {},
-                "totalOtherIncomeExpenseNet": {},
-                "ebit": 0,
-                "interestExpense": {},
-                "incomeBeforeTax": {},
-                "incomeTaxExpense": 0,
-                "minorityInterest": {},
-                "netIncomeFromContinuingOps": {},
-                "discontinuedOperations": {},
-                "extraordinaryItems": {},
-                "effectOfAccountingCharges": {},
-                "otherItems": {},
-                "netIncome": 5532000000,
-                "netIncomeApplicableToCommonShares": {}
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2022-12-31",
-                "totalRevenue": 58186000000,
-                "costOfRevenue": 0,
-                "grossProfit": 0,
-                "researchDevelopment": {},
-                "sellingGeneralAdministrative": {},
-                "nonRecurring": {},
-                "otherOperatingExpenses": {},
-                "totalOperatingExpenses": 0,
-                "operatingIncome": {},
-                "totalOtherIncomeExpenseNet": {},
-                "ebit": 0,
-                "interestExpense": {},
-                "incomeBeforeTax": {},
-                "incomeTaxExpense": 0,
-                "minorityInterest": {},
-                "netIncomeFromContinuingOps": {},
-                "discontinuedOperations": {},
-                "extraordinaryItems": {},
-                "effectOfAccountingCharges": {},
-                "otherItems": {},
-                "netIncome": 5490000000,
-                "netIncomeApplicableToCommonShares": {}
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2021-12-31",
-                "totalRevenue": 40806900000,
-                "costOfRevenue": 0,
-                "grossProfit": 0,
-                "researchDevelopment": {},
-                "sellingGeneralAdministrative": {},
-                "nonRecurring": {},
-                "otherOperatingExpenses": {},
-                "totalOperatingExpenses": 0,
-                "operatingIncome": {},
-                "totalOtherIncomeExpenseNet": {},
-                "ebit": 0,
-                "interestExpense": {},
-                "incomeBeforeTax": {},
-                "incomeTaxExpense": 0,
-                "minorityInterest": {},
-                "netIncomeFromContinuingOps": {},
-                "discontinuedOperations": {},
-                "extraordinaryItems": {},
-                "effectOfAccountingCharges": {},
-                "otherItems": {},
-                "netIncome": 4637700000,
-                "netIncomeApplicableToCommonShares": {}
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2020-12-31",
-                "totalRevenue": 27199700000,
-                "costOfRevenue": 0,
-                "grossProfit": 0,
-                "researchDevelopment": {},
-                "sellingGeneralAdministrative": {},
-                "nonRecurring": {},
-                "otherOperatingExpenses": {},
-                "totalOperatingExpenses": 0,
-                "operatingIncome": {},
-                "totalOtherIncomeExpenseNet": {},
-                "ebit": 0,
-                "interestExpense": {},
-                "incomeBeforeTax": {},
-                "incomeTaxExpense": 0,
-                "minorityInterest": {},
-                "netIncomeFromContinuingOps": {},
-                "discontinuedOperations": {},
-                "extraordinaryItems": {},
-                "effectOfAccountingCharges": {},
-                "otherItems": {},
-                "netIncome": 3775600000,
-                "netIncomeApplicableToCommonShares": {}
-            }
-        ],
-        "quarterly": [
-            {
-                "maxAge": 1,
-                "endDate": "2023-12-31",
-                "totalRevenue": 14622000000,
-                "costOfRevenue": 0,
-                "grossProfit": 0,
-                "researchDevelopment": {},
-                "sellingGeneralAdministrative": {},
-                "nonRecurring": {},
-                "otherOperatingExpenses": {},
-                "totalOperatingExpenses": 0,
-                "operatingIncome": {},
-                "totalOtherIncomeExpenseNet": {},
-                "ebit": 0,
-                "interestExpense": {},
-                "incomeBeforeTax": {},
-                "incomeTaxExpense": 0,
-                "minorityInterest": {},
-                "netIncomeFromContinuingOps": {},
-                "discontinuedOperations": {},
-                "extraordinaryItems": {},
-                "effectOfAccountingCharges": {},
-                "otherItems": {},
-                "netIncome": 1568000000,
-                "netIncomeApplicableToCommonShares": {}
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2023-09-30",
-                "totalRevenue": 11998000000,
-                "costOfRevenue": 0,
-                "grossProfit": 0,
-                "researchDevelopment": {},
-                "sellingGeneralAdministrative": {},
-                "nonRecurring": {},
-                "otherOperatingExpenses": {},
-                "totalOperatingExpenses": 0,
-                "operatingIncome": {},
-                "totalOtherIncomeExpenseNet": {},
-                "ebit": 0,
-                "interestExpense": {},
-                "incomeBeforeTax": {},
-                "incomeTaxExpense": 0,
-                "minorityInterest": {},
-                "netIncomeFromContinuingOps": {},
-                "discontinuedOperations": {},
-                "extraordinaryItems": {},
-                "effectOfAccountingCharges": {},
-                "otherItems": {},
-                "netIncome": 1319000000,
-                "netIncomeApplicableToCommonShares": {}
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2023-06-30",
-                "totalRevenue": 10651000000,
-                "costOfRevenue": 0,
-                "grossProfit": 0,
-                "researchDevelopment": {},
-                "sellingGeneralAdministrative": {},
-                "nonRecurring": {},
-                "otherOperatingExpenses": {},
-                "totalOperatingExpenses": 0,
-                "operatingIncome": {},
-                "totalOtherIncomeExpenseNet": {},
-                "ebit": 0,
-                "interestExpense": {},
-                "incomeBeforeTax": {},
-                "incomeTaxExpense": 0,
-                "minorityInterest": {},
-                "netIncomeFromContinuingOps": {},
-                "discontinuedOperations": {},
-                "extraordinaryItems": {},
-                "effectOfAccountingCharges": {},
-                "otherItems": {},
-                "netIncome": 1254000000,
-                "netIncomeApplicableToCommonShares": {}
-            },
-            {
-                "maxAge": 1,
-                "endDate": "2023-03-31",
-                "totalRevenue": 12444000000,
-                "costOfRevenue": 0,
-                "grossProfit": 0,
-                "researchDevelopment": {},
-                "sellingGeneralAdministrative": {},
-                "nonRecurring": {},
-                "otherOperatingExpenses": {},
-                "totalOperatingExpenses": 0,
-                "operatingIncome": {},
-                "totalOtherIncomeExpenseNet": {},
-                "ebit": 0,
-                "interestExpense": {},
-                "incomeBeforeTax": {},
-                "incomeTaxExpense": 0,
-                "minorityInterest": {},
-                "netIncomeFromContinuingOps": {},
-                "discontinuedOperations": {},
-                "extraordinaryItems": {},
-                "effectOfAccountingCharges": {},
-                "otherItems": {},
-                "netIncome": 1391000000,
-                "netIncomeApplicableToCommonShares": {}
-            }
-        ]
-    },
     "indexTrend": {
         "maxAge": 1,
         "symbol": "SP5",
-        "peRatio": 15.5687,
-        "pegRatio": 1.8065,
+        "peRatio": 15.3355,
+        "pegRatio": 1.72861,
         "estimates": [
             {
                 "period": "0q",
-                "growth": 0.009
+                "growth": 0.025
             },
             {
                 "period": "+1q",
-                "growth": 0.077
+                "growth": 0.094
             },
             {
                 "period": "0y",
-                "growth": 0.031
+                "growth": 0.037
             },
             {
                 "period": "+1y",
-                "growth": 0.118999995
+                "growth": 0.12
             },
             {
                 "period": "+5y",
-                "growth": 0.101959
+                "growth": 0.103075
             },
             {
                 "period": "-5y"
@@ -2730,6 +2432,10 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/EPD/0001193125-24-006408_1061219",
             "exhibits": [
                 {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000119312524006408/d674876d8k.htm"
+                },
+                {
                     "type": "EX-4.4",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000119312524006408/d674876dex44.htm"
                 },
@@ -2741,10 +2447,6 @@
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001061219/000119312524006408/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001061219/000119312524006408/Financial_Report.xlsx"
-                },
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000119312524006408/d674876d8k.htm"
                 }
             ],
             "maxAge": 1
@@ -2851,37 +2553,6 @@
             "maxAge": 1
         },
         {
-            "date": "2023-09-15",
-            "epochDate": "2023-09-14 20:00:00",
-            "type": "8-K",
-            "title": "Corporate Changes & Voting Matters",
-            "edgarUrl": "https://finance.yahoo.com/sec-filing/EPD/0001193125-23-235759_1061219",
-            "exhibits": [
-                {
-                    "type": "EX-1.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000119312523235759/d486021dex11.htm"
-                },
-                {
-                    "type": "EX-5.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000119312523235759/d486021dex51.htm"
-                },
-                {
-                    "type": "EX-8.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000119312523235759/d486021dex81.htm"
-                },
-                {
-                    "type": "EXCEL",
-                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001061219/000119312523235759/Financial_Report.xlsx",
-                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001061219/000119312523235759/Financial_Report.xlsx"
-                },
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000119312523235759/d486021d8k.htm"
-                }
-            ],
-            "maxAge": 1
-        },
-        {
             "date": "2023-08-09",
             "epochDate": "2023-08-08 20:00:00",
             "type": "10-Q",
@@ -2928,6 +2599,10 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/EPD/0001140361-23-037141_1061219",
             "exhibits": [
                 {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000114036123037141/epdform8k_08012023.htm"
+                },
+                {
                     "type": "EX-99.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000114036123037141/exhibit99_1.htm"
                 },
@@ -2935,10 +2610,6 @@
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001061219/000114036123037141/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001061219/000114036123037141/Financial_Report.xlsx"
-                },
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000114036123037141/epdform8k_08012023.htm"
                 }
             ],
             "maxAge": 1
@@ -2950,6 +2621,10 @@
             "title": "Periodic Financial Reports",
             "edgarUrl": "https://finance.yahoo.com/sec-filing/EPD/0001061219-23-000012_1061219",
             "exhibits": [
+                {
+                    "type": "10-Q",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000106121923000012/form10q.htm"
+                },
                 {
                     "type": "EX-22.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000106121923000012/exhibit22_1.htm"
@@ -2974,10 +2649,6 @@
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001061219/000106121923000012/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001061219/000106121923000012/Financial_Report.xlsx"
-                },
-                {
-                    "type": "10-Q",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000106121923000012/form10q.htm"
                 }
             ],
             "maxAge": 1
@@ -3133,6 +2804,10 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/EPD/0001140361-23-003663_1061219",
             "exhibits": [
                 {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000114036123003663/epdform8k_02012023.htm"
+                },
+                {
                     "type": "EX-99.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000114036123003663/exhibit99_1.htm"
                 },
@@ -3140,10 +2815,6 @@
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001061219/000114036123003663/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001061219/000114036123003663/Financial_Report.xlsx"
-                },
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000114036123003663/epdform8k_02012023.htm"
                 }
             ],
             "maxAge": 1
@@ -3214,10 +2885,6 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/EPD/0001193125-22-314156_1061219",
             "exhibits": [
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000119312522314156/d633249d8k.htm"
-                },
-                {
                     "type": "EX-99.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000119312522314156/d633249dex991.htm"
                 },
@@ -3225,6 +2892,10 @@
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001061219/000119312522314156/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001061219/000119312522314156/Financial_Report.xlsx"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000119312522314156/d633249d8k.htm"
                 }
             ],
             "maxAge": 1
@@ -3237,13 +2908,13 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/EPD/0001193125-22-291099_1061219",
             "exhibits": [
                 {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000119312522291099/d390284d8k.htm"
+                },
+                {
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001061219/000119312522291099/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001061219/000119312522291099/Financial_Report.xlsx"
-                },
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000119312522291099/d390284d8k.htm"
                 }
             ],
             "maxAge": 1
@@ -3256,13 +2927,13 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/EPD/0001061219-22-000029_1061219",
             "exhibits": [
                 {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000106121922000029/epdform8k_11112022.htm"
+                },
+                {
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001061219/000106121922000029/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001061219/000106121922000029/Financial_Report.xlsx"
-                },
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000106121922000029/epdform8k_11112022.htm"
                 }
             ],
             "maxAge": 1
@@ -3274,10 +2945,6 @@
             "title": "Periodic Financial Reports",
             "edgarUrl": "https://finance.yahoo.com/sec-filing/EPD/0001061219-22-000027_1061219",
             "exhibits": [
-                {
-                    "type": "10-Q",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000106121922000027/form10q.htm"
-                },
                 {
                     "type": "EX-22.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000106121922000027/exhibit22_1.htm"
@@ -3302,6 +2969,10 @@
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001061219/000106121922000027/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001061219/000106121922000027/Financial_Report.xlsx"
+                },
+                {
+                    "type": "10-Q",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000106121922000027/form10q.htm"
                 }
             ],
             "maxAge": 1
@@ -3337,6 +3008,10 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/EPD/0001193125-22-238868_1061219",
             "exhibits": [
                 {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000119312522238868/d397802d8k.htm"
+                },
+                {
                     "type": "EX-10.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000119312522238868/d397802dex101.htm"
                 },
@@ -3348,10 +3023,6 @@
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001061219/000119312522238868/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001061219/000119312522238868/Financial_Report.xlsx"
-                },
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000119312522238868/d397802d8k.htm"
                 }
             ],
             "maxAge": 1
@@ -3407,6 +3078,10 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/EPD/0001140361-22-027890_1061219",
             "exhibits": [
                 {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000114036122027890/epdform8k_08032022.htm"
+                },
+                {
                     "type": "EX-99.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000114036122027890/exhibit99_1.htm"
                 },
@@ -3414,10 +3089,6 @@
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001061219/000114036122027890/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001061219/000114036122027890/Financial_Report.xlsx"
-                },
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000114036122027890/epdform8k_08032022.htm"
                 }
             ],
             "maxAge": 1
@@ -3449,14 +3120,6 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/EPD/0001193125-22-163972_1061219",
             "exhibits": [
                 {
-                    "type": "SC 13D/A",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000119312522163972/d348491dsc13da.htm"
-                },
-                {
-                    "type": "SC 13D/A",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001246514/000119312522163972/d348491dsc13da.htm"
-                },
-                {
                     "type": "EX-99.3",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000119312522163972/d348491dex993.htm"
                 },
@@ -3471,6 +3134,14 @@
                 {
                     "type": "EX-99.4",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001246514/000119312522163972/d348491dex994.htm"
+                },
+                {
+                    "type": "SC 13D/A",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000119312522163972/d348491dsc13da.htm"
+                },
+                {
+                    "type": "SC 13D/A",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001246514/000119312522163972/d348491dsc13da.htm"
                 }
             ],
             "maxAge": 1
@@ -3482,10 +3153,6 @@
             "title": "Periodic Financial Reports",
             "edgarUrl": "https://finance.yahoo.com/sec-filing/EPD/0001061219-22-000016_1061219",
             "exhibits": [
-                {
-                    "type": "10-Q",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000106121922000016/form10q.htm"
-                },
                 {
                     "type": "EX-22.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000106121922000016/exhibit22_1.htm"
@@ -3510,6 +3177,10 @@
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001061219/000106121922000016/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001061219/000106121922000016/Financial_Report.xlsx"
+                },
+                {
+                    "type": "10-Q",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000106121922000016/form10q.htm"
                 }
             ],
             "maxAge": 1
@@ -3536,6 +3207,10 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/EPD/0001140361-22-017072_1061219",
             "exhibits": [
                 {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000114036122017072/epdform8k_05022022.htm"
+                },
+                {
                     "type": "EX-99.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000114036122017072/exhibit99_1.htm"
                 },
@@ -3543,10 +3218,6 @@
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001061219/000114036122017072/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001061219/000114036122017072/Financial_Report.xlsx"
-                },
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000114036122017072/epdform8k_05022022.htm"
                 }
             ],
             "maxAge": 1
@@ -3633,14 +3304,6 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/EPD/0001140361-22-003420_1061219",
             "exhibits": [
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000114036122003420/epdform8k_02012022.htm"
-                },
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/1061219/000114036122003420/epdform8k_02012022.htm"
-                },
-                {
                     "type": "EX-99.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000114036122003420/exhibit99_1.htm"
                 },
@@ -3652,6 +3315,14 @@
                 {
                     "type": "EX-99.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/1061219/000114036122003420/exhibit99_1.htm"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001061219/000114036122003420/epdform8k_02012022.htm"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/1061219/000114036122003420/epdform8k_02012022.htm"
                 }
             ],
             "maxAge": 1

@@ -16,11 +16,7 @@ parallel_method = "thread"
 
 yq_modules = [
     "assetProfile",  # Information related to the company's location, operations, and officers.
-    "balanceSheetHistory",
-    "balanceSheetHistoryQuarterly",
     "calendarEvents",  # Earnings and Revenue expectations for upcoming earnings date, ex-dividend date, dividend date
-    "cashflowStatementHistory",
-    "cashflowStatementHistoryQuarterly",
     "defaultKeyStatistics",  # KPIs for given symbol(s) (PE, enterprise value, EPS, EBITA, and more
     "earnings",  # Historical earnings data
     "earningsHistory",  # Data related to historical earnings (actual vs. estimate)
@@ -29,8 +25,6 @@ yq_modules = [
     "fundOwnership",  # Top 10 owners of a given symbol(s)
     "fundPerformance",  # Historical return data for a given symbol(s) and symbol(s) specific category
     "fundProfile",  # Summary level information for a given symbol(s)
-    "incomeStatementHistory",
-    "incomeStatementHistoryQuarterly",
     "indexTrend",  # Trend data related given symbol(s) index, specificially PE and PEG ratios
     "insiderHolders",  # Data related to stock holdings of a given symbol(s) insiders
     "insiderTransactions",  # Transactions by insiders
@@ -41,8 +35,7 @@ yq_modules = [
     "recommendationTrend",  # Data related to historical recommendations (buy, hold, sell)
     "secFilings",
     "summaryDetail",  # Contains information available via the Summary tab
-    "topHoldings",
-    "upgradeDowngradeHistory",
+    "topHoldings"
 ]
 
 
@@ -200,19 +193,10 @@ def map_stock_data(yqdata):
 
         if data["price"]["quoteType"] == "EQUITY":
             mapped_stock_data.update(data["financialData"])
-            mapped_stock_data["balanceSheetHistory"] = {}
-            mapped_stock_data["balanceSheetHistory"]["annual"] = data["balanceSheetHistory"]["balanceSheetStatements"]
-            mapped_stock_data["balanceSheetHistory"]["quarterly"] = data["balanceSheetHistoryQuarterly"]["balanceSheetStatements"]
             mapped_stock_data["calendarEvents"] = data["calendarEvents"]
-            mapped_stock_data["cashflowHistory"] = {}
-            mapped_stock_data["cashflowHistory"]["annual"] = data["cashflowStatementHistory"]["cashflowStatements"]
-            mapped_stock_data["cashflowHistory"]["quarterly"] = data["cashflowStatementHistoryQuarterly"]["cashflowStatements"]
             mapped_stock_data["earnings"] = data["earnings"]
             mapped_stock_data["earnings"].update(data["earningsHistory"])
             mapped_stock_data["earnings"].update(data["earningsTrend"])
-            mapped_stock_data["incomeStatementHistory"] = {}
-            mapped_stock_data["incomeStatementHistory"]["annual"] = data["incomeStatementHistory"]["incomeStatementHistory"]
-            mapped_stock_data["incomeStatementHistory"]["quarterly"] = data["incomeStatementHistoryQuarterly"]["incomeStatementHistory"]
             mapped_stock_data["indexTrend"] = data["indexTrend"]
             mapped_stock_data["insiderTransactions"] = data.get("insiderTransactions", {}).get('transactions', {})
             mapped_stock_data["recommendationTrend"] = data["recommendationTrend"]['trend']
