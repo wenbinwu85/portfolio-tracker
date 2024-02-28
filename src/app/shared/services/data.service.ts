@@ -29,6 +29,7 @@ export class DataService {
 
   updatePortfolioData(shouldUpdate: boolean) { 
     this.isLoadingData.next(true);
+    console.log('loading true...')
     forkJoin([
       this.getPortfolioData(shouldUpdate),
       this.getPortfolioHoldings(),
@@ -37,7 +38,9 @@ export class DataService {
       this.portfolioHoldings = holdings;
       this.portfolioSymbols = Object.keys(this.portfolioData);
       this.isLoadingData.next(false);
-
+      if (shouldUpdate) { 
+        location.reload();
+      }
       console.log('sanity check')
       console.table(Object.entries(this.portfolioHoldings));
     });
@@ -149,14 +152,11 @@ export class DataService {
     update = false
   ): Observable<JSON> {
     const path = `${this.backendUrl}/fetch/dividend-history/${symbol}`;
-    if (update !== null) {
-      let params = new HttpParams();
-      params = params.set("update", String(update));
-      params = params.set("years", years);
-      const options = { ...this.httpOptions, params };
-      return this.wrapHttpCall(path, options);
-    }
-    return this.wrapHttpCall(path);
+    let params = new HttpParams();
+    params = params.set("update", String(update));
+    params = params.set("years", years);
+    const options = { ...this.httpOptions, params };
+    return this.wrapHttpCall(path, options);
   }
 
   /**

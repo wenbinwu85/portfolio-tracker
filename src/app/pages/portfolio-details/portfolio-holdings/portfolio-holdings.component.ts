@@ -5,7 +5,13 @@ import {
   transition,
   trigger,
 } from "@angular/animations";
-import { CurrencyPipe, NgFor, NgIf, NgStyle, TitleCasePipe } from "@angular/common";
+import {
+  CurrencyPipe,
+  NgFor,
+  NgIf,
+  NgStyle,
+  TitleCasePipe,
+} from "@angular/common";
 import { AfterViewInit, Component, OnInit, ViewChild } from "@angular/core";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
@@ -229,7 +235,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
           ? "forestgreen"
           : "tomato";
       case 11:
-        return stock.rating === 'buy' ? "forestgreen" : "black";
+        return stock.rating === "buy" ? "forestgreen" : "black";
       default:
         return "black";
     }

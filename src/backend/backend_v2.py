@@ -74,7 +74,6 @@ def fetch_dividend_history(symbol):
         years_param = 10
     update_param = request.args.get('update', 'true')
     should_update = setting_options.get(update_param, True)
-    should_update = True
     path = os.path.join(DATA_PATH, f'{symbol.lower()}-dividend.csv')
     div_his = {}
     data = []
