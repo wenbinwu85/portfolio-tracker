@@ -24,10 +24,19 @@
     </button>
   </div>
   <div *ngIf="dividendLineChartData" class="chart-container">
-    <ngx-charts-area-chart [results]="dividendLineChartData" [scheme]="'forest'" [xAxisLabel]="selectedSymbolLabel"
-      [yAxisLabel]="'Dividend Rate'" [showXAxisLabel]="true" [showYAxisLabel]="true" [xAxis]="true" [yAxis]="true"
-      [autoScale]="true" [animations]="true" [gradient]="true">
-    </ngx-charts-area-chart>
+    <ngx-charts-area-chart
+      [scheme]="'forest'"
+      [results]="dividendLineChartData"
+      [xAxisLabel]="selectedSymbolLabel"
+      [yAxisLabel]="'Dividend Rate'"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [xAxis]="true"
+      [yAxis]="true"
+      [autoScale]="true"
+      [animations]="true"
+      [gradient]="true"
+    />
   </div>
 </section>
 

@@ -8,7 +8,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatIconModule } from "@angular/material/icon";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { MatTabsModule } from "@angular/material/tabs";
-import { NgxChartsModule, ScaleType } from "@swimlane/ngx-charts";
+import { Color, NgxChartsModule, ScaleType } from "@swimlane/ngx-charts";
 import { PriceMovementChartsComponent } from "../../../shared/components/charts/price-movement-charts/price-movement-charts.component";
 import { StockPriceInfoCardComponent } from "../../../shared/components/stock/stock-price-info-card/stock-price-info-card.component";
 import { DataService } from "../../../shared/services/data.service";
@@ -61,6 +61,18 @@ export class PortfolioPriceTrendsComponent implements OnInit {
   selectedPerformanceChart = 1;
   selectedVSChart = 1;
   scaleType = ScaleType;
+
+  performanceChartColorScheme = {
+    domain: ['steelblue']
+  } as Color
+
+  fiftyTwoWeekChartColorScheme = {
+    domain: ['darkseagreen']
+  } as Color
+
+  targetPriceChartColorScheme = {
+    domain: ['darkseagreen']
+  } as Color
 
   constructor(private dataService: DataService) {}
 

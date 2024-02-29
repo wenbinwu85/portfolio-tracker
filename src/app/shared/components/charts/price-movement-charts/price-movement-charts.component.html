@@ -2,7 +2,7 @@
     <div class="chart-header">
         <div *ngIf="priceChangeChartData" class="title">
             <span>Portfolio Day Change: </span>
-            <span [ngStyle]="{ color: getPriceChangeColor() }">
+            <span [ngStyle]="{ color: getDayPriceChangeColor() }">
                 {{ priceChange | currency }}
             </span>
         </div>    
@@ -14,9 +14,7 @@
     </div>
 
     <div *ngIf="selectedChart === 1" class="chart-container">
-        <ngx-charts-bar-vertical 
-            [scheme]="'air'"
-            [schemeType]="scaleType.Linear"
+        <ngx-charts-bar-vertical
             [animations]="true" 
             [results]="priceChangeChartData"
             [xAxis]="true"
@@ -25,6 +23,7 @@
             [showYAxisLabel]="true"
             [yAxisLabel]="'Price Change %'"
             [rotateXAxisTicks]="true"
+            [customColors]="getPriceChangeChartColor"
         >
             <!-- <ng-template #tooltipTemplate let-model="model">
                 <tv-mini-chart-widget [symbol]="model.name" [theme]="'dark'"/>
@@ -36,7 +35,7 @@
     </div>
     <div *ngIf="selectedChart === 2" class="chart-container">
         <ngx-charts-bar-vertical-stacked
-            [scheme]="'forest'"
+            [scheme]="priceRangeColorScheme"
             [animations]="true" 
             [results]="priceRangeChartData"
             [xAxis]="true"

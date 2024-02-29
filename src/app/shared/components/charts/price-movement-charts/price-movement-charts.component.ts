@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatDividerModule } from '@angular/material/divider';
-import { NgxChartsModule, ScaleType } from '@swimlane/ngx-charts';
+import { NgxChartsModule, ScaleType, Color } from '@swimlane/ngx-charts';
 import {
   TvMiniChartWidgetComponent,
 } from '../../../components/tradingview/tv-market-quotes-widget/tv-mini-chart-widget/tv-mini-chart-widget.component';
@@ -31,6 +31,8 @@ export class PriceMovementChartsComponent {
   betaChartData: any = [];
   selectedChart = 1;
   scaleType = ScaleType;
+
+  priceRangeColorScheme = { domain: ['salmon', 'lightgreen'] } as Color
 
   constructor(private dataService: DataService) { }
 
@@ -91,9 +93,17 @@ export class PriceMovementChartsComponent {
     this.betaChartData.sort((a: any, b: any) => a.value - b.value);
   }
 
-  getPriceChangeColor() {
+  getDayPriceChangeColor() {
     return this.priceChange > 0 ? 'forestgreen' : 'tomato';
   }
+
+  getPriceChangeChartColor = (symbol: any) => {
+    const stock = this.portfolioData[symbol]
+    const price = stock.postMarketChangePercent
+      || stock.regularMarketChangePercent
+      || stock.preMarketChangePercent
+    return price > 0 ? 'lightgreen' : 'salmon'
+  };
 
   displayChart(chartID: number) {
     this.selectedChart = chartID;

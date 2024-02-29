@@ -14,8 +14,7 @@
     <div class="charts-flex">
         <div *ngIf="selectedPerformanceChart === 1" class="chart-container">
             <ngx-charts-bar-vertical
-                [scheme]="'air'"
-                [schemeType]="scaleType.Linear"
+                [scheme]="performanceChartColorScheme"
                 [animations]="true"
                 [results]="fiftyDayMAChartData"
                 [xAxis]="true"
@@ -39,7 +38,7 @@
         <div *ngIf="selectedPerformanceChart === 1" class="chart-container">
             <ngx-charts-bar-vertical
                 [scheme]="'air'"
-                [schemeType]="scaleType.Linear"
+                [scheme]="performanceChartColorScheme"
                 [animations]="true"
                 [results]="twoHundredDayMAChartData"
                 [xAxis]="true"
@@ -63,8 +62,7 @@
 
     <div *ngIf="selectedPerformanceChart === 2" class="chart-container">
         <ngx-charts-bar-vertical
-            [scheme]="'air'"
-            [schemeType]="scaleType.Linear"
+            [scheme]="performanceChartColorScheme"
             [animations]="true"
             [results]="fiftyTwoWeekChangeChartData"
             [xAxis]="true"
@@ -88,8 +86,6 @@
 
     <div *ngIf="selectedPerformanceChart === 3" class="chart-container">
         <ngx-charts-bar-vertical-2d
-            [scheme]="'air'"
-            [schemeType]="scaleType.Linear"
             [animations]="true"
             [results]="etfPerformanceChartData"
             [xAxis]="true"
@@ -100,6 +96,7 @@
             [yAxisLabel]="'ETF Performance %'"
             [showDataLabel]="true"
             [rotateXAxisTicks]="true"
+            [customColors]="[{name: 'SCHD', value: 'deepskyblue'}, {name: 'VYM', value: 'maroon'}, {name: 'JEPI', value: 'dodgerblue'}]"
         >
             <!-- <ng-template #tooltipTemplate let-model="model" class="dark">
                 <stock-price-info-card [stock]="getTooltipData(model.name)" />
@@ -122,7 +119,7 @@
     <div class="charts-flex">
         <div *ngIf="selectedVSChart === 1" class="chart-container">
             <ngx-charts-bar-vertical
-                [scheme]="'picnic'"
+                [scheme]="fiftyTwoWeekChartColorScheme"
                 [animations]="true"
                 [results]="fiftyTwoWeekLowChartData"
                 [xAxis]="true"
@@ -143,7 +140,7 @@
         </div> 
         <div *ngIf="selectedVSChart === 1" class="chart-container">
             <ngx-charts-bar-vertical
-                [scheme]="'picnic'"
+                [scheme]="fiftyTwoWeekChartColorScheme"
                 [animations]="true"
                 [results]="fiftyTwoWeekHighChartData"
                 [xAxis]="true"
@@ -166,7 +163,7 @@
 
     <div *ngIf="selectedVSChart === 2" class="chart-container">
         <ngx-charts-bar-vertical
-            [scheme]="'picnic'"
+            [scheme]="targetPriceChartColorScheme"
             [animations]="true"
             [results]="discountChartData"
             [xAxis]="true"
