@@ -5,7 +5,6 @@ import {
   Input,
   ViewChild,
 } from '@angular/core';
-
 import { TradingviewService } from '../../../services/tradingview.service';
 
 @Component({
@@ -154,6 +153,6 @@ export class TvMarketQuotesWidgetComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     const script = this.tradingviewService.marketQuotesWidget(this.params);
-    this.tradingviewService.renderWidget(this.marketQuotesWidget, script);
+    this.marketQuotesWidget.nativeElement.append(script);
   }
 }

@@ -5,7 +5,6 @@ import {
   Input,
   ViewChild,
 } from '@angular/core';
-
 import { TradingviewService } from '../../../services/tradingview.service';
 
 @Component({
@@ -16,12 +15,13 @@ import { TradingviewService } from '../../../services/tradingview.service';
 })
 export class TvSymbolInfoWidgetComponent implements AfterViewInit {
   @Input({ required: true }) symbol!: string;
+  @Input() width = '100%';
   @ViewChild('symbolInfoWidget') symbolInfoWidget!: ElementRef;
 
   constructor(private tradingviewService: TradingviewService) {}
 
   ngAfterViewInit(): void {
-    const symbolInfo = this.tradingviewService.symbolInfoWidget(this.symbol);
-    this.tradingviewService.renderWidget(this.symbolInfoWidget, symbolInfo);
+    const symbolInfo = this.tradingviewService.symbolInfoWidget(this.symbol, this.width);
+    this.symbolInfoWidget.nativeElement.appendChild(symbolInfo);
   }
 }

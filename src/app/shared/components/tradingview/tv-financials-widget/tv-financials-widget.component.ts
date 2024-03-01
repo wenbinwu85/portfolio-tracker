@@ -5,7 +5,6 @@ import {
   Input,
   ViewChild,
 } from '@angular/core';
-
 import { TradingviewService } from '../../../services/tradingview.service';
 
 @Component({
@@ -28,12 +27,8 @@ export class TvFinancialsWidgetComponent implements AfterViewInit {
       this.symbol,
       this.width,
       this.height,
-      'light',
       this.displayMode
     );
-    this.tradingviewService.renderWidget(
-      this.symbolFinancialsWidget,
-      financials
-    );
+    this.symbolFinancialsWidget.nativeElement.appendChild(financials);
   }
 }

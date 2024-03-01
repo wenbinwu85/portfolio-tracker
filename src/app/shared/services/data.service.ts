@@ -21,12 +21,35 @@ export class DataService {
   public portfolioHoldings: any;
   public portfolioSymbols: any;
   public portfolioData: any;
-  isLoadingData = new BehaviorSubject(false);
+  public isLoadingData = new BehaviorSubject(false);
 
   constructor(private http: HttpClient) {
     this.updatePortfolioData(false);
   }
 
+  private error(error: HttpErrorResponse): Observable<any> {
+    let errorMessage =
+      error.error instanceof ErrorEvent
+        ? error.error.message
+        : `Error Code: ${error.status} Message: ${error.message}`;
+    return of({ data: [], message: errorMessage, status: 500 });
+  }
+
+  /**
+   * @param {string} path of api call
+   * @param {null | boolean} options for http call
+   * @returns {Observable} Returns http call response
+   */
+  private wrapHttpCall(path: string, options = this.httpOptions): Observable<any> {
+    const call = this.http.get<any>(path, options);
+    return call.pipe(retry<any>(2), catchError(this.error));
+  }
+
+  /**
+   * @description fetch stock data and update data, holdings, and symbols
+   * @param {boolean} should update stock data from api call or not
+   * @returns {null} 
+   */
   updatePortfolioData(shouldUpdate: boolean) { 
     this.isLoadingData.next(true);
     console.log('loading true...')
@@ -44,27 +67,6 @@ export class DataService {
       console.log('sanity check')
       console.table(Object.entries(this.portfolioHoldings));
     });
-  }
-
-  private error(error: HttpErrorResponse): Observable<any> {
-    let errorMessage =
-      error.error instanceof ErrorEvent
-        ? error.error.message
-        : `Error Code: ${error.status} Message: ${error.message}`;
-    return of({ data: [], message: errorMessage, status: 500 });
-  }
-
-  /**
-   * @param {string} path of api call
-   * @param {null | boolean} options for http call
-   * @returns {Observable} Returns http call response
-   */
-  private wrapHttpCall(
-    path: string,
-    options = this.httpOptions
-  ): Observable<any> {
-    const call = this.http.get<any>(path, options);
-    return call.pipe(retry<any>(2), catchError(this.error));
   }
 
   /**
@@ -163,7 +165,7 @@ export class DataService {
    * @param {string} symbol of stock to retrieve
    * @returns {Observable} Returns technical insights of a stock.
    */
-  getTechnicalInsights(symbol: string): Observable<JSON> {
+  public getTechnicalInsights(symbol: string): Observable<JSON> {
     const path = `${this.backendUrl}/fetch/technical-insights/${symbol}`;
     return this.wrapHttpCall(path);
   }
@@ -172,7 +174,7 @@ export class DataService {
    * @param {string} symbol of stock to retrieve
    * @returns {Observable} Returns recommendations of a stock.
    */
-  getRecommendations(symbol: string): Observable<JSON> {
+  public getRecommendations(symbol: string): Observable<JSON> {
     const path = `${this.backendUrl}/fetch/recommendations/${symbol}`;
     return this.wrapHttpCall(path);
   }
@@ -181,7 +183,7 @@ export class DataService {
    * @param {string} symbol of stock to retrieve
    * @returns {Observable} Returns corporate events of a stock.
    */
-  getCorporateEvents(symbol: string): Observable<JSON> {
+  public getCorporateEvents(symbol: string): Observable<JSON> {
     const path = `${this.backendUrl}/fetch/events/${symbol}`;
     return this.wrapHttpCall(path);
   }

@@ -5,7 +5,6 @@ import {
   Input,
   ViewChild,
 } from '@angular/core';
-
 import { TradingviewService } from '../../../services/tradingview.service';
 
 @Component({
@@ -28,6 +27,6 @@ export class TvProfileWidgetComponent implements AfterViewInit {
       this.width,
       this.height
     );
-    this.tradingviewService.renderWidget(this.profileWidget, profile);
+    this.profileWidget.nativeElement.appendChild(profile);
   }
 }

@@ -176,7 +176,6 @@ def fetch_portfolio_data():
         return jsonify(portfolio_data)
 
 
-# wtf? not working ???
 @app.route('/fetch/portfolio/dividend-history')
 def fetch_portfolio_dividend_history():
     response = get_portfolio_symbols()

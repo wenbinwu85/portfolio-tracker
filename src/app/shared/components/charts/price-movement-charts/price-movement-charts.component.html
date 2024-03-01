@@ -7,8 +7,8 @@
             </span>
         </div>    
         <mat-chip-listbox [ngStyle]="{padding: '20px'}">
-            <mat-chip-option selected (click)="displayChart(1)">Price Change</mat-chip-option>
-            <mat-chip-option (click)="displayChart(2)">Day Range</mat-chip-option>
+            <mat-chip-option selected (click)="displayChart(1)">Day Price Change</mat-chip-option>
+            <mat-chip-option (click)="displayChart(2)">Day Price Range</mat-chip-option>
             <mat-chip-option (click)="displayChart(3)">Beta</mat-chip-option>
         </mat-chip-listbox>
     </div>
@@ -61,5 +61,14 @@
             [yAxisLabel]="'Beta'"
             [rotateXAxisTicks]="true"
         />
+    </div>
+
+    <mat-divider />
+
+    <div *ngIf="showTickers">
+        <span class="title">Top Winners</span>
+        <tv-tickers-widget [symbols]="winners" [tape]="false"/>
+        <span class="title">Top Losers</span>
+        <tv-tickers-widget [symbols]="losers" [tape]="false"/>
     </div>
 </section>

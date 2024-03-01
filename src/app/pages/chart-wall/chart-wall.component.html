@@ -17,3 +17,13 @@
     </mat-expansion-panel-header>
     <portfolio-charts />
 </mat-expansion-panel>
+
+<mat-expansion-panel [expanded]="false">
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            <mat-icon class="add-margin">widgets</mat-icon>
+            <span>Portfolio Widgets</span>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <portfolio-charts [tradingview]="true" />
+</mat-expansion-panel>

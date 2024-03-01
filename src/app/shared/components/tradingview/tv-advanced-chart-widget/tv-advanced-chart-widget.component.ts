@@ -1,100 +1,89 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { DataService } from '../../../services/data.service';
+import { Component, Input, OnInit } from "@angular/core";
+import { DataService } from "../../../services/data.service";
 
 declare const TradingView: any;
 
 @Component({
-  selector: 'tv-advanced-chart-widget',
-  template: `
-    <div class="tradingview-widget-container" #advancedChartWidget>
-      <div id="tradingview_ecabe"></div>
-    </div>`,
-  styleUrls: ['./tv-advanced-chart-widget.component.css'],
+  selector: "tv-advanced-chart-widget",
+  template: ` <div class="tradingview-widget-container" #advancedChartWidget>
+    <div id="tradingview_ecabe"></div>
+  </div>`,
+  styleUrls: ["./tv-advanced-chart-widget.component.css"],
   standalone: true,
-  
 })
 export class TvAdvancedChartWidgetComponent implements OnInit {
   @Input({ required: true }) symbol!: string;
-  @Input() showWatchlist?: boolean = true;
+  @Input() showWatchlist?: boolean = false;
   @Input() watchlist?: string[];
   @Input() theme!: string;
-  private widgetParams: any;
+  private widgetParams = {
+    symbol: "SPY",
+    height: "800",
+    width: "auto",
+    autosize: false,
+    timezone: "America/New_York",
+    style: "1",
+    range: "YTD",
+    theme: "light",
+    locale: "en",
+    details: true,
+    toolbar_bg: "#f1f3f6",
+    withdateranges: true,
+    hide_side_toolbar: false,
+    allow_symbol_change: false,
+    watchlist: [],
+    studies: ["STD;Bollinger_Bands", "STD;MACD", "STD;RSI"],
+    show_popup_button: true,
+    popup_width: "1000",
+    popup_height: "800",
+    container_id: "tradingview_ecabe",
+  };
 
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
+    let params = {};
     if (this.showWatchlist) {
       if (this.watchlist) {
-        this.widgetParams = this.getWidgetParams(
-          this.symbol,
-          this.watchlist,
-          this.theme
-        );
+        params = this.getWidgetParams(this.symbol, this.watchlist);
       } else {
-        this.widgetParams = this.getWidgetParams(
+        params = this.getWidgetParams(
           this.symbol,
-          ['AAPL', 'MSFT'], //this.dataService.getPortfolioSymbols,
-          this.theme
+          [
+            "AAPL",
+            "AMZN",
+            "GOOG",
+            "META",
+            "MSFT",
+            "NFLX",
+            "NVDA",
+            "TSLA",
+          ]
         );
       }
-      new TradingView.widget(this.widgetParams);
     } else {
-      const widgetParams = {
-        symbol: this.symbol || 'SPY',
-        height: '800',
-        width: 'auto',
-        autosize: false,
-        timezone: 'Etc/UTC',
-        theme: `${this.theme}`,
-        style: '1',
-        locale: 'en',
-        toolbar_bg: '#f1f3f6',
-        withdateranges: true,
-        range: 'YTD',
-        hide_side_toolbar: false,
-        allow_symbol_change: false,
-        details: true,
-        studies: [
-          'STD;Bollinger_Bands',
-          'STD;MACD',
-          'STD;RSI',
-        ],
-        show_popup_button: true,
-        popup_width: '1000',
-        popup_height: '800',
-        container_id: 'tradingview_ecabe',
-      };
-
-      new TradingView.widget(widgetParams);
+      params = this.getWidgetParams(
+        this.symbol,
+        [
+          "AAPL",
+          "AMZN",
+          "GOOG",
+          "META",
+          "MSFT",
+          "NFLX",
+          "NVDA",
+          "TSLA",
+        ]
+      );
     }
+    new TradingView.widget(params);
   }
 
-  getWidgetParams(symbol: string, watchlist: any, theme: string) {
-    return {
-      symbol: symbol,
-      watchlist: watchlist,
-      height: '800',
-      width: 'auto',
-      autosize: false,
-      timezone: 'Etc/UTC',
-      theme: `${theme}`,
-      style: '1',
-      locale: 'en',
-      toolbar_bg: '#f1f3f6',
-      withdateranges: true,
-      range: 'YTD',
-      hide_side_toolbar: false,
-      allow_symbol_change: true,
-      details: true,
-      studies: [
-        'STD;Bollinger_Bands',
-        'STD;MACD',
-        'STD;RSI',
-      ],
-      show_popup_button: true,
-      popup_width: '1000',
-      popup_height: '800',
-      container_id: 'tradingview_ecabe',
-    };
+  getWidgetParams(symbol: string, watchlist: any, theme = "light") {
+    let params = { ...this.widgetParams };
+    params.symbol = symbol;
+    params.watchlist = watchlist;
+    params.theme = theme;
+    return params;
   }
 }

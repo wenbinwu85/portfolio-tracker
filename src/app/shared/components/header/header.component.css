@@ -2,6 +2,12 @@
     align-items: center;
 }
 
+nav {
+    border-top: 1px solid darkgrey;;
+    border-bottom: 1px solid darkgrey;
+    margin-top: 1rem;
+}
+
 .refresh-button {
     margin-right: 20px;
 }
@@ -20,5 +26,5 @@
 
 mat-progress-bar {
     margin: 1rem;
-    max-width: 95vw;
+    max-width: 90vw;
 }
