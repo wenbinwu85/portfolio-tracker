@@ -1,7 +1,7 @@
 <section *ngIf="priceChangeChartData.length > 0" class="add-border">
     <div class="chart-header">
         <div *ngIf="priceChangeChartData" class="title">
-            <span>Portfolio Day Change: </span>
+            <span>Portfolio Day Gain: </span>
             <span [ngStyle]="{ color: getDayPriceChangeColor() }">
                 {{ priceChange | currency }}
             </span>

@@ -88,24 +88,24 @@ export class PriceMovementChartsComponent {
     this.betaChartData.sort((a: any, b: any) => a.value - b.value);
 
     let winnerStocks: any = [];
-    [...this.priceChangeChartData].slice(0, 5).forEach((s: any) => {
-      winnerStocks.push({
-        title: this.portfolioData[s.name].shortName,
-        proName: s.name,
-      });
-    });
-    this.winners = JSON.stringify(winnerStocks);
-
-    let loserStocks: any = [];
     [...this.priceChangeChartData]
       .reverse()
       .slice(0, 5)
       .forEach((s: any) => {
-        loserStocks.push({
+        winnerStocks.push({
           title: this.portfolioData[s.name].shortName,
           proName: s.name,
         });
       });
+    this.winners = JSON.stringify(winnerStocks);
+
+    let loserStocks: any = [];
+    [...this.priceChangeChartData].slice(0, 5).forEach((s: any) => {
+      loserStocks.push({
+        title: this.portfolioData[s.name].shortName,
+        proName: s.name,
+      });
+    });
     this.losers = JSON.stringify(loserStocks);
   }
 

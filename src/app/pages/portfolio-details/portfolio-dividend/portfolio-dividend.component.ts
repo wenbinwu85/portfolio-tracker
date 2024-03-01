@@ -2,7 +2,6 @@ import { NgFor, NgIf } from "@angular/common";
 import {
   AfterViewInit,
   Component,
-  OnDestroy,
   OnInit,
   ViewChild,
 } from "@angular/core";
@@ -14,7 +13,6 @@ import {
   MatTableDataSource,
   MatTableModule,
 } from "@angular/material/table";
-import { Subscription } from "rxjs";
 import { NgxChartsModule } from "@swimlane/ngx-charts";
 import { EChartsOption } from "echarts";
 import { EchartComponent } from "../../../shared/components/charts/echart/echart.component";

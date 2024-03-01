@@ -1,12 +1,18 @@
 import { Injectable } from "@angular/core";
+import { DataService } from "./data.service";
+import { StockPriceColorsEnum } from "../model/colors.model";
 
 @Injectable({
   providedIn: "root",
 })
 export class HelperService {
-  constructor() {}
+  private portfolioData;
+  
+  constructor(private dataService: DataService) { 
+    this.portfolioData = this.dataService.portfolioData;
+  }
 
-  getPriceKeyPrefix() {
+  public getPriceKeyPrefix() {
     const preMarketStart = new Date().setHours(4, 0, 0);
     const regularMarketStart = new Date().setHours(9, 30, 0);
     const regularMarketClose = new Date().setHours(16, 0, 0);
@@ -31,5 +37,11 @@ export class HelperService {
       console.log("currently in ghost hours")
       return "postMarket"
     }
+  }
+
+  public getStockPriceColor(symbol: string): string { 
+    const priceKeyPrefix = this.getPriceKeyPrefix();
+    const price = this.portfolioData[symbol][priceKeyPrefix + "Price"];
+    return price > 0 ? StockPriceColorsEnum.Gain : StockPriceColorsEnum.Lost;
   }
 }

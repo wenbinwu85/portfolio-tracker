@@ -26,12 +26,12 @@
                 [rotateXAxisTicks]="true"
                 [yScaleMin]="fiftyDayMAChartData[0].value - 5"
             >
-                <!-- <ng-template #tooltipTemplate let-model="model" class="dark">
+                <ng-template #tooltipTemplate let-model="model">
                     <stock-price-info-card [stock]="getTooltipData(model.name)" />
                     <mat-divider style="margin: none;"/>
                     <span>{{ model.name }}: </span>
                     <span>{{ model.value.toFixed(2) }}%</span>
-                </ng-template> -->
+                </ng-template>
             </ngx-charts-bar-vertical>
 
         </div> 

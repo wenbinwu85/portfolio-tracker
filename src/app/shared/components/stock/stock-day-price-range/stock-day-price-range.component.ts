@@ -18,10 +18,10 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   imports: [CommonModule, MatTooltipModule, NgIf],
 })
 export class StockDayPriceRangeComponent implements OnInit, AfterViewInit {
-  @Input({ required: true }) min = 100;
-  @Input({ required: true }) max = 200;
-  @Input({ required: true }) lowThumbValue = 0;
-  @Input({ required: true }) highThumbValue = 0;
+  @Input({ required: true }) min!: number;
+  @Input({ required: true }) max!: number;
+  @Input({ required: true }) lowThumbValue!: number;
+  @Input({ required: true }) highThumbValue!: number;
   @Input() showThumbs = true;
   @ViewChild('startThumb', { read: ElementRef, static: false })
   startThumb!: ElementRef<HTMLElement>;
@@ -46,7 +46,7 @@ export class StockDayPriceRangeComponent implements OnInit, AfterViewInit {
       this.renderer.setStyle(
         this.startThumb.nativeElement,
         'left',
-        `${pos + 5}px`
+        `${pos - 8}px`
       );
 
       let pos2 =
@@ -56,7 +56,7 @@ export class StockDayPriceRangeComponent implements OnInit, AfterViewInit {
       this.renderer.setStyle(
         this.endThumb.nativeElement,
         'left',
-        `${pos2 + 10}px`
+        `${pos2 - 8}px`
       );
     }
     this.updateSliderGradient();

@@ -125,17 +125,18 @@
         "compensationAsOfEpochDate": "2022-12-30 19:00:00",
         "maxAge": 86400
     },
-    "postMarketChangePercent": 0.0009886534,
-    "postMarketChange": 0.020000458,
-    "postMarketPrice": 20.25,
+    "preMarketChangePercent": 0.0024716335,
+    "preMarketChange": 0.050001144,
+    "preMarketTime": "2024-03-01 08:00:05",
+    "preMarketPrice": 20.28,
     "regularMarketChangePercent": 0.003472207,
     "regularMarketChange": 0.069999695,
     "regularMarketPrice": 20.23,
     "regularMarketDayHigh": 20.25,
     "regularMarketDayLow": 20.13,
     "regularMarketVolume": 2441321,
-    "averageDailyVolume10Day": 4390800,
-    "averageDailyVolume3Month": 4098005,
+    "averageDailyVolume10Day": 4195660,
+    "averageDailyVolume3Month": 4070491,
     "regularMarketPreviousClose": 20.16,
     "regularMarketOpen": 20.25,
     "exchange": "NMS",
@@ -158,13 +159,13 @@
     "trailingPE": 7.548507,
     "forwardPE": 9.112613,
     "volume": 2441321,
-    "averageVolume": 4098005,
-    "averageVolume10days": 4390800,
+    "averageVolume": 4070491,
+    "averageVolume10days": 4195660,
     "fiftyTwoWeekLow": 16.95,
     "fiftyTwoWeekHigh": 20.65,
     "priceToSalesTrailing12Months": 4.506561,
-    "fiftyDayAverage": 20.1518,
-    "twoHundredDayAverage": 19.47565,
+    "fiftyDayAverage": 20.1648,
+    "twoHundredDayAverage": 19.48555,
     "trailingAnnualDividendRate": 1.92,
     "trailingAnnualDividendYield": 0.0952381,
     "enterpriseValue": 23212152832,
@@ -176,7 +177,7 @@
     "dateShortInterest": "2024-02-14 19:00:00",
     "sharesPercentSharesOut": 0.044,
     "heldPercentInsiders": 0.00592,
-    "heldPercentInstitutions": 0.30537,
+    "heldPercentInstitutions": 0.30535,
     "shortRatio": 6.83,
     "shortPercentOfFloat": 0.0442,
     "impliedSharesOutstanding": 582310976,
@@ -191,8 +192,8 @@
     "forwardEps": 2.22,
     "pegRatio": -9.43,
     "enterpriseToRevenue": 8.88,
-    "52WeekChange": 0.03650391,
-    "SandP52WeekChange": 0.25314164,
+    "52WeekChange": 0.04010284,
+    "SandP52WeekChange": 0.25969434,
     "lastDividendValue": 0.48,
     "lastDividendDate": 1702512000,
     "currentPrice": 20.23,
@@ -2440,42 +2441,46 @@
         {
             "date": "2024-02-07",
             "epochDate": "2024-02-06 19:00:00",
-            "type": "8-K",
-            "title": "Corporate Changes & Voting Matters",
-            "edgarUrl": "https://finance.yahoo.com/sec-filing/ARCC/0001104659-24-011654_1287750",
+            "type": "10-K",
+            "title": "Periodic Financial Reports",
+            "edgarUrl": "https://finance.yahoo.com/sec-filing/ARCC/0001287750-24-000011_1287750",
             "exhibits": [
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465924011654/tm245311d3_8k.htm"
+                    "type": "EX-23.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775024000011/arccq4-2023exhibit231.htm"
+                },
+                {
+                    "type": "EX-99.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775024000011/arccq4-23ex991xreportonsup.htm"
+                },
+                {
+                    "type": "EX-21.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775024000011/arccq4-23exhibit211.htm"
+                },
+                {
+                    "type": "EX-31.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775024000011/arccq4-23exhibit311.htm"
+                },
+                {
+                    "type": "EX-31.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775024000011/arccq4-23exhibit312.htm"
+                },
+                {
+                    "type": "EX-32.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775024000011/arccq4-23exhibit321.htm"
+                },
+                {
+                    "type": "EX-97.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775024000011/arccq4-23exhibit971.htm"
                 },
                 {
                     "type": "EXCEL",
-                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001287750/000110465924011654/Financial_Report.xlsx",
-                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001287750/000110465924011654/Financial_Report.xlsx"
+                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001287750/000128775024000011/Financial_Report.xlsx",
+                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001287750/000128775024000011/Financial_Report.xlsx"
                 },
                 {
-                    "type": "EX-10.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465924011654/tm245311d3_ex10-1.htm"
-                },
-                {
-                    "type": "EX-10.2",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465924011654/tm245311d3_ex10-2.htm"
-                },
-                {
-                    "type": "EX-10.3",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465924011654/tm245311d3_ex10-3.htm"
-                },
-                {
-                    "type": "EX-10.4",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465924011654/tm245311d3_ex10-4.htm"
-                },
-                {
-                    "type": "EX-10.5",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465924011654/tm245311d3_ex10-5.htm"
-                },
-                {
-                    "type": "EX-5.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465924011654/tm245311d3_ex5-1.htm"
+                    "type": "10-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775024000011/arcc-20231231.htm"
                 }
             ],
             "maxAge": 1
@@ -2488,13 +2493,13 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ARCC/0001287750-24-000003_1287750",
             "exhibits": [
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775024000003/arcc-20240131.htm"
-                },
-                {
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001287750/000128775024000003/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001287750/000128775024000003/Financial_Report.xlsx"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775024000003/arcc-20240131.htm"
                 }
             ],
             "maxAge": 1
@@ -2596,10 +2601,6 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ARCC/0001104659-23-115983_1287750",
             "exhibits": [
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465923115983/tm2329803d3_8k.htm"
-                },
-                {
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001287750/000110465923115983/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001287750/000110465923115983/Financial_Report.xlsx"
@@ -2607,6 +2608,10 @@
                 {
                     "type": "EX-99.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465923115983/tm2329803d3_ex99-1.htm"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465923115983/tm2329803d3_8k.htm"
                 }
             ],
             "maxAge": 1
@@ -2614,22 +2619,30 @@
         {
             "date": "2023-10-24",
             "epochDate": "2023-10-23 20:00:00",
-            "type": "8-K",
-            "title": "Corporate Changes & Voting Matters",
-            "edgarUrl": "https://finance.yahoo.com/sec-filing/ARCC/0001287750-23-000043_1287750",
+            "type": "10-Q",
+            "title": "Periodic Financial Reports",
+            "edgarUrl": "https://finance.yahoo.com/sec-filing/ARCC/0001287750-23-000045_1287750",
             "exhibits": [
                 {
-                    "type": "EX-99.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775023000043/arccq3-23exhibit991.htm"
+                    "type": "EX-31.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775023000045/arccq3-23exhibit311.htm"
+                },
+                {
+                    "type": "EX-31.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775023000045/arccq3-23exhibit312.htm"
+                },
+                {
+                    "type": "EX-32.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775023000045/arccq3-23exhibit321.htm"
                 },
                 {
                     "type": "EXCEL",
-                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001287750/000128775023000043/Financial_Report.xlsx",
-                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001287750/000128775023000043/Financial_Report.xlsx"
+                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001287750/000128775023000045/Financial_Report.xlsx",
+                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001287750/000128775023000045/Financial_Report.xlsx"
                 },
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775023000043/arcc-20231024.htm"
+                    "type": "10-Q",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775023000045/arcc-20230930.htm"
                 }
             ],
             "maxAge": 1
@@ -2661,10 +2674,6 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ARCC/0001104659-23-087308_1287750",
             "exhibits": [
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465923087308/tm2322743d1_8k.htm"
-                },
-                {
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001287750/000110465923087308/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001287750/000110465923087308/Financial_Report.xlsx"
@@ -2684,6 +2693,10 @@
                 {
                     "type": "EX-5.2",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465923087308/tm2322743d1_ex5-2.htm"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465923087308/tm2322743d1_8k.htm"
                 }
             ],
             "maxAge": 1
@@ -2710,6 +2723,10 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ARCC/0001287750-23-000033_1287750",
             "exhibits": [
                 {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775023000033/arcc-20230725.htm"
+                },
+                {
                     "type": "EX-99.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775023000033/arccq2-23exhibit991.htm"
                 },
@@ -2717,10 +2734,6 @@
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001287750/000128775023000033/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001287750/000128775023000033/Financial_Report.xlsx"
-                },
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775023000033/arcc-20230725.htm"
                 }
             ],
             "maxAge": 1
@@ -4554,13 +4567,13 @@
         {
             "date": "2023-05-25",
             "epochDate": "2023-05-24 20:00:00",
-            "type": "DEF 14A",
+            "type": "DEFA14A",
             "title": "Proxy Statements",
-            "edgarUrl": "https://finance.yahoo.com/sec-filing/ARCC/0001104659-23-064725_1287750",
+            "edgarUrl": "https://finance.yahoo.com/sec-filing/ARCC/0001104659-23-064734_1287750",
             "exhibits": [
                 {
-                    "type": "DEF 14A",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465923064725/tm2314720-2_def14a.htm"
+                    "type": "DEFA14A",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465923064734/tm2314720d3_defa14a.htm"
                 }
             ],
             "maxAge": 1
@@ -4615,10 +4628,6 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ARCC/0001287750-23-000025_1287750",
             "exhibits": [
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775023000025/arcc-20230504.htm"
-                },
-                {
                     "type": "EX-10.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775023000025/arcc0522023-ex101.htm"
                 },
@@ -4626,6 +4635,10 @@
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001287750/000128775023000025/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001287750/000128775023000025/Financial_Report.xlsx"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775023000025/arcc-20230504.htm"
                 }
             ],
             "maxAge": 1
@@ -4633,42 +4646,34 @@
         {
             "date": "2023-04-25",
             "epochDate": "2023-04-24 20:00:00",
-            "type": "10-Q",
-            "title": "Periodic Financial Reports",
-            "edgarUrl": "https://finance.yahoo.com/sec-filing/ARCC/0001287750-23-000021_1287750",
+            "type": "8-K",
+            "title": "Corporate Changes & Voting Matters",
+            "edgarUrl": "https://finance.yahoo.com/sec-filing/ARCC/0001104659-23-049659_1287750",
             "exhibits": [
                 {
-                    "type": "EX-10.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775023000021/arcc-bnpfacility5thamendme.htm"
-                },
-                {
-                    "type": "EX-10.3",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775023000021/arcc-jpmfacility14thamendm.htm"
-                },
-                {
-                    "type": "EX-3.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775023000021/arccq1-23exhibit31.htm"
-                },
-                {
-                    "type": "EX-31.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775023000021/arccq1-23exhibit311.htm"
-                },
-                {
-                    "type": "EX-31.2",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775023000021/arccq1-23exhibit312.htm"
-                },
-                {
-                    "type": "EX-32.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775023000021/arccq1-23exhibit321.htm"
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465923049659/tm2313660d1_8k.htm"
                 },
                 {
                     "type": "EXCEL",
-                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001287750/000128775023000021/Financial_Report.xlsx",
-                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001287750/000128775023000021/Financial_Report.xlsx"
+                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001287750/000110465923049659/Financial_Report.xlsx",
+                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001287750/000110465923049659/Financial_Report.xlsx"
                 },
                 {
-                    "type": "10-Q",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775023000021/arcc-20230331.htm"
+                    "type": "EX-10.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465923049659/tm2313660d1_ex10-1.htm"
+                },
+                {
+                    "type": "EX-10.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465923049659/tm2313660d1_ex10-2.htm"
+                },
+                {
+                    "type": "EX-10.3",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465923049659/tm2313660d1_ex10-3.htm"
+                },
+                {
+                    "type": "EX-5.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465923049659/tm2313660d1_ex5-1.htm"
                 }
             ],
             "maxAge": 1
@@ -4695,10 +4700,6 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ARCC/0001628280-23-010219_1287750",
             "exhibits": [
                 {
-                    "type": "10-K/A",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000162828023010219/arcc-20221231.htm"
-                },
-                {
                     "type": "EX-23.2",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000162828023010219/arccq4-2022exhibit232_10xka.htm"
                 },
@@ -4722,6 +4723,10 @@
                 {
                     "type": "EX-99.2",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000162828023010219/ihamconsolidated-fy2022ex9.htm"
+                },
+                {
+                    "type": "10-K/A",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000162828023010219/arcc-20221231.htm"
                 }
             ],
             "maxAge": 1
@@ -4731,11 +4736,11 @@
             "epochDate": "2023-03-16 20:00:00",
             "type": "DEFA14A",
             "title": "Proxy Statements",
-            "edgarUrl": "https://finance.yahoo.com/sec-filing/ARCC/0001104659-23-033926_1287750",
+            "edgarUrl": "https://finance.yahoo.com/sec-filing/ARCC/0001104659-23-033923_1287750",
             "exhibits": [
                 {
                     "type": "DEFA14A",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465923033926/tm232042d3_defa14a.htm"
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465923033923/tm232042d2_defa14a.htm"
                 }
             ],
             "maxAge": 1
@@ -4771,10 +4776,6 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ARCC/0001104659-23-005014_1287750",
             "exhibits": [
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465923005014/tm233891d1_8k.htm"
-                },
-                {
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001287750/000110465923005014/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001287750/000110465923005014/Financial_Report.xlsx"
@@ -4782,6 +4783,10 @@
                 {
                     "type": "EX-99.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465923005014/tm233891d1_ex99-1.htm"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465923005014/tm233891d1_8k.htm"
                 }
             ],
             "maxAge": 1
@@ -4794,6 +4799,10 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ARCC/0001104659-23-004619_1287750",
             "exhibits": [
                 {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465923004619/tm233695d1_8k.htm"
+                },
+                {
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001287750/000110465923004619/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001287750/000110465923004619/Financial_Report.xlsx"
@@ -4805,10 +4814,6 @@
                 {
                     "type": "EX-5.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465923004619/tm233695d1_ex5-1.htm"
-                },
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465923004619/tm233695d1_8k.htm"
                 }
             ],
             "maxAge": 1
@@ -4821,10 +4826,6 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ARCC/0001104659-23-003069_1287750",
             "exhibits": [
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465923003069/tm233109d1_8k.htm"
-                },
-                {
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001287750/000110465923003069/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001287750/000110465923003069/Financial_Report.xlsx"
@@ -4832,6 +4833,10 @@
                 {
                     "type": "EX-10.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465923003069/tm233109d1_ex10-1.htm"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465923003069/tm233109d1_8k.htm"
                 }
             ],
             "maxAge": 1
@@ -4871,10 +4876,6 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ARCC/0001287750-22-000050_1287750",
             "exhibits": [
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775022000050/arcc-20221025.htm"
-                },
-                {
                     "type": "EX-99.2",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775022000050/arccpressrelease-exhibit992.htm"
                 },
@@ -4886,6 +4887,10 @@
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001287750/000128775022000050/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001287750/000128775022000050/Financial_Report.xlsx"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775022000050/arcc-20221025.htm"
                 }
             ],
             "maxAge": 1
@@ -7010,13 +7015,13 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ARCC/0001104659-22-087272_1287750",
             "exhibits": [
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465922087272/tm2222732d1_8k.htm"
-                },
-                {
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001287750/000110465922087272/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001287750/000110465922087272/Financial_Report.xlsx"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465922087272/tm2222732d1_8k.htm"
                 }
             ],
             "maxAge": 1
@@ -7029,6 +7034,10 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ARCC/0001104659-22-085212_1287750",
             "exhibits": [
                 {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465922085212/tm2222289d1_8k.htm"
+                },
+                {
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001287750/000110465922085212/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001287750/000110465922085212/Financial_Report.xlsx"
@@ -7040,10 +7049,6 @@
                 {
                     "type": "EX-5.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465922085212/tm2222289d1_ex5-1.htm"
-                },
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465922085212/tm2222289d1_8k.htm"
                 }
             ],
             "maxAge": 1
@@ -7051,25 +7056,17 @@
         {
             "date": "2022-07-26",
             "epochDate": "2022-07-25 20:00:00",
-            "type": "10-Q",
-            "title": "Periodic Financial Reports",
-            "edgarUrl": "https://finance.yahoo.com/sec-filing/ARCC/0001287750-22-000040_1287750",
+            "type": "8-K",
+            "title": "Corporate Changes & Voting Matters",
+            "edgarUrl": "https://finance.yahoo.com/sec-filing/ARCC/0001287750-22-000039_1287750",
             "exhibits": [
                 {
-                    "type": "10-Q",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775022000040/arccq2-202210q.htm"
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775022000039/arccq2-228k.htm"
                 },
                 {
-                    "type": "EX-31.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775022000040/arccq2-22exhibit311.htm"
-                },
-                {
-                    "type": "EX-31.2",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775022000040/arccq2-22exhibit312.htm"
-                },
-                {
-                    "type": "EX-32.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775022000040/arccq2-22exhibit321.htm"
+                    "type": "EX-99.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775022000039/arccq2-22exhibit991.htm"
                 }
             ],
             "maxAge": 1
@@ -7082,12 +7079,12 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ARCC/0001287750-22-000034_1287750",
             "exhibits": [
                 {
-                    "type": "EX-10.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775022000034/arcc_cpfundinglsa-ex101.htm"
-                },
-                {
                     "type": "8-K",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775022000034/arcc07012022-8xk.htm"
+                },
+                {
+                    "type": "EX-10.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775022000034/arcc_cpfundinglsa-ex101.htm"
                 }
             ],
             "maxAge": 1
@@ -7231,11 +7228,11 @@
             "epochDate": "2022-03-17 20:00:00",
             "type": "DEFA14A",
             "title": "Proxy Statements",
-            "edgarUrl": "https://finance.yahoo.com/sec-filing/ARCC/0001104659-22-035629_1287750",
+            "edgarUrl": "https://finance.yahoo.com/sec-filing/ARCC/0001104659-22-035626_1287750",
             "exhibits": [
                 {
                     "type": "DEFA14A",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465922035629/tm225148d3_defa14a.htm"
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000110465922035626/tm225148d2_defa14a.htm"
                 }
             ],
             "maxAge": 1
@@ -7261,45 +7258,13 @@
         {
             "date": "2022-02-09",
             "epochDate": "2022-02-08 19:00:00",
-            "type": "10-K",
-            "title": "Periodic Financial Reports",
-            "edgarUrl": "https://finance.yahoo.com/sec-filing/ARCC/0001287750-22-000007_1287750",
+            "type": "IRANNOTICE",
+            "title": "Notice of disclosure filed in Exchange Act quarterly and annual reports pursuant to Section 219 of the Iran Threat Reduction and Syria Human Rights Act of 2012 and Section 13(r) of the Exchange Act",
+            "edgarUrl": "https://finance.yahoo.com/sec-filing/ARCC/0001287750-22-000010_1287750",
             "exhibits": [
                 {
-                    "type": "EX-99.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775022000007/arccq4-2021ex991.htm"
-                },
-                {
-                    "type": "EX-10.22",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775022000007/arccq4-2021exhibit1022.htm"
-                },
-                {
-                    "type": "EX-10.27",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775022000007/arccq4-2021exhibit1027.htm"
-                },
-                {
-                    "type": "EX-21.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775022000007/arccq4-2021exhibit211.htm"
-                },
-                {
-                    "type": "EX-23.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775022000007/arccq4-2021exhibit231.htm"
-                },
-                {
-                    "type": "EX-31.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775022000007/arccq4-21exhibit311.htm"
-                },
-                {
-                    "type": "EX-31.2",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775022000007/arccq4-21exhibit312.htm"
-                },
-                {
-                    "type": "EX-32.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775022000007/arccq4-21exhibit321.htm"
-                },
-                {
-                    "type": "10-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775022000007/arccq4-202110k.htm"
+                    "type": "IRANNOTICE",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001287750/000128775022000010/irannotice-q4x21.htm"
                 }
             ],
             "maxAge": 1
@@ -7628,9 +7593,9 @@
         "majorHolders": {
             "maxAge": 1,
             "insidersPercentHeld": 0.00592,
-            "institutionsPercentHeld": 0.30537,
-            "institutionsFloatPercentHeld": 0.30718002,
-            "institutionsCount": 769
+            "institutionsPercentHeld": 0.30535,
+            "institutionsFloatPercentHeld": 0.30717,
+            "institutionsCount": 768
         }
     },
     "fcfPerShare": 1.6138284434466852,
