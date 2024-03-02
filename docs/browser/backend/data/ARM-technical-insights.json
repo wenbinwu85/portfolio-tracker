@@ -6,16 +6,16 @@
                 "provider": "Trading Central",
                 "sector": "Technology",
                 "shortTermOutlook": {
-                    "stateDescription": "Recent bearish events outweigh bullish events.",
-                    "direction": "Bearish",
+                    "stateDescription": "Recent bullish events outweigh bearish events.",
+                    "direction": "Bullish",
                     "score": 1,
-                    "scoreDescription": "Weak Bearish Evidence",
+                    "scoreDescription": "Weak Bullish Evidence",
                     "sectorDirection": "Bullish",
                     "sectorScore": 2,
                     "sectorScoreDescription": "Bullish Evidence",
                     "indexDirection": "Bullish",
-                    "indexScore": 3,
-                    "indexScoreDescription": "Strong Bullish Evidence"
+                    "indexScore": 2,
+                    "indexScoreDescription": "Bullish Evidence"
                 },
                 "intermediateTermOutlook": {
                     "stateDescription": "There are no events.",
@@ -48,7 +48,7 @@
             "valuation": {
                 "color": 0.0,
                 "description": "Overvalued",
-                "discount": "-0%",
+                "discount": "0%",
                 "relativeValue": "Premium",
                 "provider": "Trading Central"
             }
@@ -228,15 +228,6 @@
                 "formType": "DRS"
             },
             {
-                "id": "0000950123-23-006467_1973239",
-                "type": "Offering Registrations",
-                "title": "DRSLTR : Offering Registrations",
-                "description": "Draft Offering Statement Letter",
-                "filingDate": 1690761600000,
-                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001973239/000095012323006467/thumbnail.png",
-                "formType": "DRSLTR"
-            },
-            {
                 "id": "0000950123-23-006466_1973239",
                 "type": "Offering Registrations",
                 "title": "DRS/A : Offering Registrations",
@@ -244,6 +235,15 @@
                 "filingDate": 1690761600000,
                 "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001973239/000095012323006466/thumbnail.png",
                 "formType": "DRS/A"
+            },
+            {
+                "id": "0000950123-23-006467_1973239",
+                "type": "Offering Registrations",
+                "title": "DRSLTR : Offering Registrations",
+                "description": "Draft Offering Statement Letter",
+                "filingDate": 1690761600000,
+                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001973239/000095012323006467/thumbnail.png",
+                "formType": "DRSLTR"
             },
             {
                 "id": "0000950123-23-005680_1973239",

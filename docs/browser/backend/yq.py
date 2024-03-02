@@ -1,4 +1,3 @@
-import itertools
 import os
 import queue
 from concurrent.futures import ThreadPoolExecutor
@@ -267,27 +266,3 @@ def yq_technical_insights(symbol):
 def yq_recommendations(symbol):
     ticker = Ticker(symbol, asynchronous=True, progress=True)
     return ticker.recommendations
-
-
-# TODO: there is alL_financials module I should use instead of this
-# def yq_financials(symbol):
-#     try:
-#         ticker = Ticker(symbol, asynchronous=True, progress=True)
-
-#         path = os.path.join(STOCK_DATA_PATH, f'{symbol}-balance-sheet.json')
-#         balance_sheet = ticker.balance_sheet(frequency='q', trailing=True)
-#         balance_sheet.to_json(path, orient='records', indent=2)
-
-#         path = os.path.join(STOCK_DATA_PATH, f'{symbol}-cash-flow.json')
-#         cash_flow = ticker.cash_flow(frequency='q', trailing=True)
-#         cash_flow.to_json(path, orient='records', indent=2)
-
-#         path = os.path.join(STOCK_DATA_PATH, f'{symbol}-income-statement.json')
-#         income_statement = ticker.income_statement(frequency='q', trailing=True)
-#         income_statement.to_json(path, orient='records', indent=2)
-
-#         path = os.path.join(STOCK_DATA_PATH, f'{symbol}-valuation-measures.json')
-#         valuation_measures = ticker.valuation_measures
-#         valuation_measures.to_json(path, orient='records', indent=2)
-#     except Exception as e:
-#         print(symbol, 'failed to fetch financials:', e)

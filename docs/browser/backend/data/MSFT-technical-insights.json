@@ -6,13 +6,13 @@
                 "provider": "Trading Central",
                 "sector": "Technology",
                 "shortTermOutlook": {
-                    "stateDescription": "Recent bearish events outweigh bullish events.",
-                    "direction": "Bearish",
-                    "score": 3,
-                    "scoreDescription": "Strong Bearish Evidence",
-                    "sectorDirection": "Bearish",
+                    "stateDescription": "Recent bullish events outweigh bearish events.",
+                    "direction": "Bullish",
+                    "score": 1,
+                    "scoreDescription": "Weak Bullish Evidence",
+                    "sectorDirection": "Bullish",
                     "sectorScore": 2,
-                    "sectorScoreDescription": "Bearish Evidence",
+                    "sectorScoreDescription": "Bullish Evidence",
                     "indexDirection": "Bullish",
                     "indexScore": 2,
                     "indexScoreDescription": "Bullish Evidence"
@@ -46,7 +46,7 @@
                 "provider": "Trading Central",
                 "support": 332.89,
                 "resistance": 415.32,
-                "stopLoss": 391.562106
+                "stopLoss": 397.057937
             },
             "valuation": {
                 "color": 0.0,
@@ -59,12 +59,12 @@
         "companySnapshot": {
             "sectorInfo": "Technology",
             "company": {
-                "innovativeness": 0.9495,
+                "innovativeness": 0.9495999999999999,
                 "hiring": 0.9662999999999999,
                 "sustainability": 0.3583,
-                "insiderSentiments": 0.281,
-                "earningsReports": 0.8891,
-                "dividends": 0.1438
+                "insiderSentiments": 0.298,
+                "earningsReports": 0.8839,
+                "dividends": 0.1487
             },
             "sector": {
                 "innovativeness": 0.5,
@@ -107,13 +107,13 @@
         },
         "events": [
             {
-                "eventType": "Commodity Channel Index",
+                "eventType": "Momentum",
                 "pricePeriod": "D",
                 "tradingHorizon": "S",
-                "tradeType": "U",
+                "tradeType": "L",
                 "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-                "startDate": 1708612200,
-                "endDate": 1708612200
+                "startDate": 1709217000,
+                "endDate": 1709217000
             }
         ],
         "reports": [
@@ -2066,8 +2066,8 @@
         ],
         "sigDevs": [
             {
-                "headline": "Barco In Agreement With Microsoft Around Teams Devices",
-                "date": "2024-02-22"
+                "headline": "US SEC Investigating Whether OpenAI Investors Were Misled - WSJ",
+                "date": "2024-02-29"
             }
         ],
         "secReports": [
@@ -2360,15 +2360,6 @@
                 "formType": "SC 13G/A"
             },
             {
-                "id": "0001564590-22-002324_789019",
-                "type": "Periodic Financial Reports",
-                "title": "10-Q : Periodic Financial Reports",
-                "description": "Quarterly report pursuant to Section 13 or 15(d)",
-                "filingDate": 1643068800000,
-                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/789019/000156459022002324/thumbnail.png",
-                "formType": "10-Q"
-            },
-            {
                 "id": "0001193125-22-017041_789019",
                 "type": "Corporate Changes & Voting Matters",
                 "title": "8-K : Corporate Changes & Voting Matters",
@@ -2376,6 +2367,15 @@
                 "filingDate": 1643068800000,
                 "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/789019/000119312522017041/thumbnail.png",
                 "formType": "8-K"
+            },
+            {
+                "id": "0001564590-22-002324_789019",
+                "type": "Periodic Financial Reports",
+                "title": "10-Q : Periodic Financial Reports",
+                "description": "Quarterly report pursuant to Section 13 or 15(d)",
+                "filingDate": 1643068800000,
+                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/789019/000156459022002324/thumbnail.png",
+                "formType": "10-Q"
             }
         ]
     }
