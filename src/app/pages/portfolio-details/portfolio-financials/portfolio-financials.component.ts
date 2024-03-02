@@ -15,7 +15,7 @@ import {
 } from "@angular/material/table";
 import { EChartsOption } from "echarts";
 import { EchartComponent } from "../../../shared/components/charts/echart/echart.component";
-import { StockTickerNameComponent } from "../../../shared/components/stock/stock-ticker-name/stock-ticker-name.component";
+import { StockStaticTickerCardComponent } from "../../../shared/components/stock/stock-static-ticker-card/stock-static-ticker-card.component";
 import { DataService } from "../../../shared/services/data.service";
 
 @Component({
@@ -32,7 +32,7 @@ import { DataService } from "../../../shared/services/data.service";
     NgFor,
     NgIf,
     NgStyle,
-    StockTickerNameComponent,
+    StockStaticTickerCardComponent,
   ],
 })
 export class PortfolioFinancialsComponent implements OnInit, AfterViewInit {
@@ -241,7 +241,7 @@ export class PortfolioFinancialsComponent implements OnInit, AfterViewInit {
   getColor(index: number, stock: any) {
     const value = this.cells[index](stock);
     return value < 0 || value[0] === "-" || value[1] === "-"
-      ? "tomato"
+      ? "orangered"
       : "#000000DE";
   }
 }

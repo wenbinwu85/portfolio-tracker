@@ -1,5 +1,4 @@
 import {
-  ElementRef,
   Injectable,
   Renderer2,
   RendererFactory2,

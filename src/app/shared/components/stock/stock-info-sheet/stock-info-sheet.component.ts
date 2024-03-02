@@ -54,6 +54,8 @@ export class StockInfoSheetComponent implements OnInit {
   seekingalphaLink = "https://seekingalpha.com/symbol/";
   etfdbLink = "https://etfdb.com/etf/";
   etfcomLink = "https://www.etf.com/";
+  stockAnalysisLink = "https://www.stockanalysis.com/stocks/";
+  stockAnalysisLinkEtf = "https://www.stockanalysis.com/etf/";
   externalLinks: any = [];
   etfLinks: any = [];
   below50DayAverage = false;
@@ -94,6 +96,10 @@ export class StockInfoSheetComponent implements OnInit {
       {
         label: "Finviz",
         url: this.finvizLink + this.stock.symbol,
+      },
+      {
+        label: "StockAnalysis",
+        url: this.stock.quoteType === "EQUITY" ? this.stockAnalysisLink + this.stock.symbol : this.stockAnalysisLinkEtf + this.stock.symbol,
       },
     ];
     this.etfLinks = [

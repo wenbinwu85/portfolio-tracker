@@ -13,11 +13,11 @@ import {
   MatTableDataSource,
   MatTableModule,
 } from "@angular/material/table";
-import { NgxChartsModule } from "@swimlane/ngx-charts";
+import { Color, NgxChartsModule } from "@swimlane/ngx-charts";
 import { EChartsOption } from "echarts";
 import { EchartComponent } from "../../../shared/components/charts/echart/echart.component";
 import { InfoCardComponent } from "../../../shared/components/info-card/info-card.component";
-import { StockTickerNameComponent } from "../../../shared/components/stock/stock-ticker-name/stock-ticker-name.component";
+import { StockStaticTickerCardComponent } from "../../../shared/components/stock/stock-static-ticker-card/stock-static-ticker-card.component";
 import { DataService } from "../../../shared/services/data.service";
 
 @Component({
@@ -35,7 +35,7 @@ import { DataService } from "../../../shared/services/data.service";
     NgFor,
     NgIf,
     NgxChartsModule,
-    StockTickerNameComponent,
+    StockStaticTickerCardComponent,
   ],
 })
 export class PortfolioDividendComponent implements OnInit, AfterViewInit {
@@ -48,6 +48,7 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
   selectedSymbolLabel = "";
   infoCards: any[] = [];
   dividendLineChartData: any = [];
+  dividendChartColorScheme = { domain: ["navy"] } as Color;
   echartOptions!: EChartsOption;
   echartUpdateOptions: any = {
     yAxis: {},
@@ -167,7 +168,7 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
         value: (this.dividendIncome / 12).toFixed(2),
         valueType: "currency",
         subtitle: "Average Monthly Income",
-        color: "forestgreen",
+        color: "seagreen",
       },
       {
         icon: "payments",
@@ -188,7 +189,7 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
         value: this.portfolioYieldOnCost.toFixed(4),
         valueType: "percentage",
         subtitle: "Portfolio YOC",
-        color: "forestgreen",
+        color: "seagreen",
       },
     ];
   }

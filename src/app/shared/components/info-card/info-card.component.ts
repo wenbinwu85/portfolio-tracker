@@ -38,7 +38,7 @@ export class InfoCardComponent implements OnInit {
   borderLeftStyle = '';
 
   ngOnInit(): void {
-    this.borderLeftStyle = '6px solid ' + (this.accentColor ? this.accentColor : 'slateblue');
+    this.borderLeftStyle = '6px solid ' + (this.accentColor ? this.accentColor : 'navy');
   }
 
   getStyle() {

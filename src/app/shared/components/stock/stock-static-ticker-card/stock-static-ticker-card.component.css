@@ -8,11 +8,17 @@
 
 .symbol-container {
   padding-left: 10px;
+  align-items: center;
+}
+
+.stock-logo {
+  border-radius: 50%;
+  border: 1px solid slategrey;
 }
 
 .stock-symbol {
   display: flex;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   align-items: center;
 }
 
@@ -22,13 +28,10 @@
 }
 
 .stock-price {
-  color: forestgreen;
+  color: seagreen;
 }
 
-.price-change {
-  font-size: .75rem;
-}
-
-.long-name {
+.stock-name {
   float: left;
+  color: slategrey;
 }

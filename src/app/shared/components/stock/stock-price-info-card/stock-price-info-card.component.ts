@@ -6,25 +6,24 @@ import {
   NgIf,
   NgStyle,
   PercentPipe,
-} from '@angular/common';
-import { Component, Input } from '@angular/core';
-import { MatChipsModule } from '@angular/material/chips';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatIconModule } from '@angular/material/icon';
-import { MatSliderModule } from '@angular/material/slider';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-
-import { DataService } from '../../../../shared/services/data.service';
-import { StockDayPriceRangeComponent } from '../stock-day-price-range/stock-day-price-range.component';
-import { StockTickerNameComponent } from '../stock-ticker-name/stock-ticker-name.component';
+} from "@angular/common";
+import { Component, Input } from "@angular/core";
+import { MatChipsModule } from "@angular/material/chips";
+import { MatDividerModule } from "@angular/material/divider";
+import { MatIconModule } from "@angular/material/icon";
+import { MatSliderModule } from "@angular/material/slider";
+import { MatTooltipModule } from "@angular/material/tooltip";
+import { Router } from "@angular/router";
+import { Observable } from "rxjs";
+import { map } from "rxjs/operators";
+import { DataService } from "../../../../shared/services/data.service";
+import { StockDayPriceRangeComponent } from "../stock-day-price-range/stock-day-price-range.component";
+import { StockStaticTickerCardComponent } from "../stock-static-ticker-card/stock-static-ticker-card.component";
 
 @Component({
-  selector: 'stock-price-info-card',
-  templateUrl: './stock-price-info-card.component.html',
-  styleUrls: ['./stock-price-info-card.component.css'],
+  selector: "stock-price-info-card",
+  templateUrl: "./stock-price-info-card.component.html",
+  styleUrls: ["./stock-price-info-card.component.css"],
   standalone: true,
   imports: [
     AsyncPipe,
@@ -40,9 +39,8 @@ import { StockTickerNameComponent } from '../stock-ticker-name/stock-ticker-name
     NgStyle,
     PercentPipe,
     StockDayPriceRangeComponent,
-    StockTickerNameComponent,
+    StockStaticTickerCardComponent,
   ],
-  
 })
 export class StockPriceInfoCardComponent {
   @Input({ required: true }) stock!: any;
@@ -58,59 +56,66 @@ export class StockPriceInfoCardComponent {
 
   getTargetPriceRangeColor(stock: any) {
     return stock.regularMarketPrice > stock.targetMeanPrice
-      ? 'primary'
-      : 'accent';
+      ? "primary"
+      : "accent";
   }
 
   getTooltip() {
     const price = this.stock.regularMarketPrice;
     const target = this.stock.targetMeanPrice;
-    let hint = '';
-    if (this.getTargetPriceRangeColor(this.stock) === 'primary') {
-      hint = `Price $${price} is above mean target $${target} by $${(price - target).toFixed(2)}.`;
+    let hint = "";
+    if (this.getTargetPriceRangeColor(this.stock) === "primary") {
+      hint = `Price $${price} is above mean target $${target} by $${(
+        price - target
+      ).toFixed(2)}.`;
     } else {
-      hint = `Price $${price} is below mean target $${target} by $${(target - price).toFixed(2)}.`;
+      hint = `Price $${price} is below mean target $${target} by $${(
+        target - price
+      ).toFixed(2)}.`;
     }
     return hint;
   }
 
   openInfoSheet() {
-    this.router.navigate(['stock/' + this.stock.symbol]);
+    this.router.navigate(["stock/" + this.stock.symbol]);
   }
 
   getDiscountColor(discount: string) {
-    return discount.includes('-') ? 'tomato' : 'forestgreen';
+    return discount.includes("-") ? "orangered" : "seagreen";
   }
 
-  getValuationColor(valuation: string) { 
-    switch (valuation) { 
-      case 'Overvalued': return 'tomato';
-      case 'Undervalued': return 'forestgreen';
-      default: return 'slateblue';
+  getValuationColor(valuation: string) {
+    switch (valuation) {
+      case "Overvalued":
+        return "orangered";
+      case "Undervalued":
+        return "seagreen";
+      default:
+        return "navy";
     }
   }
 
   get50DMAColor(stock: any) {
     return stock.fiftyDayAverage < stock.regularMarketPrice
-      ? 'forestgreen'
-      : 'tomato';
+      ? "seagreen"
+      : "orangered";
   }
 
   get200DMAColor(stock: any) {
     return stock.twoHundredDayAverage < stock.regularMarketPrice
-      ? 'forestgreen'
-      : 'tomato';
+      ? "seagreen"
+      : "orangered";
   }
 
   get50DMATrendIcon(stock: any) {
     return stock.fiftyDayAverage < stock.regularMarketPrice
-      ? 'trending_up'
-      : 'trending_down';
+      ? "trending_up"
+      : "trending_down";
   }
 
   get200DMATrendIcon(stock: any) {
     return stock.twoHundredDayAverage < stock.regularMarketPrice
-      ? 'trending_up'
-      : 'trending_down';
+      ? "trending_up"
+      : "trending_down";
   }
 }

@@ -57,21 +57,21 @@ export class PortfolioPriceTrendsComponent implements OnInit {
   etfPerformanceChartData: any = [];
   sp500 = "S&P 500";
   activeSymbol = [{ name: this.sp500 }];
-  customColor = [{ name: this.sp500, value: "tomato" }];
+  customColor = [{ name: this.sp500, value: "orangered" }];
   selectedPerformanceChart = 1;
   selectedVSChart = 1;
   scaleType = ScaleType;
 
   performanceChartColorScheme = {
-    domain: ['steelblue']
+    domain: ['slategrey']
   } as Color
 
   fiftyTwoWeekChartColorScheme = {
-    domain: ['darkseagreen']
+    domain: ['slategrey']
   } as Color
 
   targetPriceChartColorScheme = {
-    domain: ['darkseagreen']
+    domain: ['slategrey']
   } as Color
 
   constructor(private dataService: DataService) {}
@@ -154,7 +154,7 @@ export class PortfolioPriceTrendsComponent implements OnInit {
   }
 
   getSP500ChangeColor(stock: any) {
-    return this.sp500FiftyTwoWeekChange > 0 ? "forestgreen" : "tomato";
+    return this.sp500FiftyTwoWeekChange > 0 ? "seagreen" : "orangered";
   }
 
   getTooltipData(name: string) {

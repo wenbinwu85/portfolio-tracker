@@ -1,74 +1,72 @@
 <section *ngIf="priceChangeChartData.length > 0" class="add-border">
-    <div class="chart-header">
+    <div class="add-flex">
         <div *ngIf="priceChangeChartData" class="title">
-            <span>Portfolio Day Gain: </span>
+            <span>Today's P/L: </span>
             <span [ngStyle]="{ color: getDayPriceChangeColor() }">
                 {{ priceChange | currency }}
             </span>
         </div>    
-        <mat-chip-listbox [ngStyle]="{padding: '20px'}">
+        <!-- <mat-chip-listbox [ngStyle]="{padding: '20px'}">
             <mat-chip-option selected (click)="displayChart(1)">Day Price Change</mat-chip-option>
             <mat-chip-option (click)="displayChart(2)">Day Price Range</mat-chip-option>
             <mat-chip-option (click)="displayChart(3)">Beta</mat-chip-option>
-        </mat-chip-listbox>
+        </mat-chip-listbox> -->
     </div>
 
-    <div *ngIf="selectedChart === 1" class="chart-container">
-        <ngx-charts-bar-vertical
-            [animations]="true" 
-            [results]="priceChangeChartData"
-            [xAxis]="true"
-            [yAxis]="true"
-            [showXAxisLabel]="true"
-            [showYAxisLabel]="true"
-            [yAxisLabel]="'Price Change %'"
-            [rotateXAxisTicks]="true"
-            [customColors]="getPriceChangeChartColor"
-        >
-            <!-- <ng-template #tooltipTemplate let-model="model">
-                <tv-mini-chart-widget [symbol]="model.name" [theme]="'dark'"/>
-                <mat-divider style="margin: none; border-top-color: darkgray"/>
-                <span>Pre/Post: {{ model.name }} </span>
-                <span>{{ model.value.toFixed(2) }}%</span>
-            </ng-template> -->
-        </ngx-charts-bar-vertical>
-    </div>
-    <div *ngIf="selectedChart === 2" class="chart-container">
-        <ngx-charts-bar-vertical-stacked
-            [scheme]="priceRangeColorScheme"
-            [animations]="true" 
-            [results]="priceRangeChartData"
-            [xAxis]="true"
-            [yAxis]="true"
-            [showXAxisLabel]="true"
-            [showYAxisLabel]="true"
-            [showDataLabel]="true"
-            [yAxisLabel]="'Market Day Price Range $'"
-            [rotateXAxisTicks]="true"
-        />
-    </div>
-    <div *ngIf="selectedChart === 3" class="chart-container">
-        <ngx-charts-bar-vertical
-            [scheme]="'solar'"
-            [schemeType]="scaleType.Linear"
-            [animations]="true" 
-            [results]="betaChartData"
-            [xAxis]="true"
-            [yAxis]="true"
-            [showXAxisLabel]="true"
-            [showYAxisLabel]="true"
-            [showDataLabel]="true"
-            [yAxisLabel]="'Beta'"
-            [rotateXAxisTicks]="true"
-        />
+    <div class="charts-flex">
+        <div class="chart-container">
+            <ngx-charts-bar-vertical
+                [animations]="true" 
+                [results]="priceChangeChartData"
+                [xAxis]="true"
+                [yAxis]="true"
+                [showXAxisLabel]="true"
+                [showYAxisLabel]="true"
+                [yAxisLabel]="'Price Change %'"
+                [rotateXAxisTicks]="true"
+                [customColors]="getPriceChangeChartColor"
+            >
+                <ng-template #tooltipTemplate let-model="model">
+                    <tv-mini-chart-widget [symbol]="model.name" [theme]="'dark'"/>
+                    <mat-divider style="margin: none; border-top-color: slategrey"/>
+                    <span>Pre/Post: {{ model.name }} </span>
+                    <span>{{ model.value.toFixed(2) }}%</span>
+                </ng-template>
+            </ngx-charts-bar-vertical>
+        </div>
+        <div class="chart-container">
+            <ngx-charts-bar-vertical-stacked
+                [scheme]="priceRangeColorScheme"
+                [animations]="true" 
+                [results]="priceRangeChartData"
+                [xAxis]="true"
+                [yAxis]="true"
+                [showXAxisLabel]="true"
+                [showYAxisLabel]="true"
+                [yAxisLabel]="'Market Day Price Range $'"
+                [rotateXAxisTicks]="true"
+            />
+        </div>
+        <div class="chart-container">
+            <ngx-charts-bar-vertical
+                [scheme]="betaColorScheme"
+                [schemeType]="scaleType.Linear"
+                [animations]="true" 
+                [results]="betaChartData"
+                [xAxis]="true"
+                [yAxis]="true"
+                [showXAxisLabel]="true"
+                [showYAxisLabel]="true"
+                [yAxisLabel]="'Beta'"
+                [rotateXAxisTicks]="true"
+            />
+        </div>
     </div>
 
-    <mat-divider />
-
-    <div *ngIf="showTickers">
-        <span class="title">Top Winners</span>
+    <div *ngIf="showTickers" class="add-border winners-losers">
+        <span class="title">Winners</span>
         <tv-tickers-widget [symbols]="winners" [tape]="false"/>
-        <span class="title">Top Losers</span>
+        <span class="title">Losers</span>
         <tv-tickers-widget [symbols]="losers" [tape]="false"/>
     </div>
 </section>

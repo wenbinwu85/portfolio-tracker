@@ -175,7 +175,7 @@ export class PortfolioSummaryComponent implements OnInit {
         const stock = this.portfolioData[symbol];
         this.allYocData.push({
           name: stock.symbol,
-          value: this.portfolioHoldings[symbol].yieldOnCost,
+          value: this.portfolioHoldings[symbol].yieldOnCost * 100,
           sector: stock.profile?.sector || "ETF",
         });
       });

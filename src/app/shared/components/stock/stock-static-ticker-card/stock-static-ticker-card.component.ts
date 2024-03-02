@@ -12,40 +12,33 @@ import {
   MatDialogModule,
   MatDialogRef,
 } from "@angular/material/dialog";
-import { Router } from "@angular/router";
 import { StockInfoSheetComponent } from "../stock-info-sheet/stock-info-sheet.component";
+import { HelperService } from "../../../services/helper.service";
 
 @Component({
-  selector: "stock-ticker-name",
-  templateUrl: "./stock-ticker-name.component.html",
-  styleUrls: ["./stock-ticker-name.component.css"],
+  selector: 'stock-static-ticker-card',
+  templateUrl: './stock-static-ticker-card.component.html',
+  styleUrls: ['./stock-static-ticker-card.component.css'],
   standalone: true,
   imports: [CommonModule, CurrencyPipe, PercentPipe, NgStyle, MatDialogModule],
 })
-export class StockTickerNameComponent {
+export class StockStaticTickerCardComponent {
   @Input({ required: true }) stock!: any;
   price = 0;
-  priceChange = 0;
-  priceChangePercent = 0;
 
-  constructor(public dialog: MatDialog, private router: Router) {}
+  constructor(public dialog: MatDialog, private helperService: HelperService) {}
 
   ngOnInit() {
-    if (this.stock.preMarketChange) {
-      this.price = this.stock.preMarketPrice;
-    } else if (this.stock.postMarketChange) {
-      this.price = this.stock.postMarketPrice;
-    } else {
-      this.price = this.stock.regularMarketPrice;
-    }
+    const priceKeyPrefix = this.helperService.getPriceKeyPrefix();
+    this.price = this.stock[priceKeyPrefix + "Price"];
   }
 
-  getLogo(stock: any) {
+  getLogoSource(stock: any) {
     return `/assets/ticker-logos/${stock.symbol}.png`;
   }
 
   getColor() {
-    return this.stock.regularMarketChange > 0 ? "forestgreen" : "tomato";
+    return this.helperService.getStockPriceColor(this.stock.symbol);
   }
 
   openInfoSheet() {
@@ -63,7 +56,7 @@ export class StockTickerNameComponent {
 }
 
 @Component({
-  selector: "info-sheet",
+  selector: 'info-sheet',
   template: ` <mat-dialog-actions align="end">
       <button mat-button mat-dialog-close>X</button>
     </mat-dialog-actions>
@@ -78,6 +71,6 @@ export class InfoSheetDialog {
     @Inject(MAT_DIALOG_DATA) public data: any,
     public dialogRef: MatDialogRef<any>
   ) {
-    // this.dialogRef.updateSize('95%', '90%');
+    this.dialogRef.updateSize('95%', '90%');
   }
 }

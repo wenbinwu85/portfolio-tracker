@@ -24,7 +24,7 @@ import {
 } from "@angular/material/table";
 import { NgxChartsModule } from "@swimlane/ngx-charts";
 import { ExpandedRowComponent } from "../../../shared/components/expanded-row/expanded-row.component";
-import { StockTickerNameComponent } from "../../../shared/components/stock/stock-ticker-name/stock-ticker-name.component";
+import { StockStaticTickerCardComponent } from "../../../shared/components/stock/stock-static-ticker-card/stock-static-ticker-card.component";
 import { TvSingleQuoteWidgetComponent } from "../../../shared/components/tradingview/tv-single-quote-widget/tv-single-quote-widget.component";
 import { DataService } from "../../../shared/services/data.service";
 
@@ -55,7 +55,7 @@ import { DataService } from "../../../shared/services/data.service";
     NgIf,
     NgStyle,
     NgxChartsModule,
-    StockTickerNameComponent,
+    StockStaticTickerCardComponent,
     TitleCasePipe,
     TvSingleQuoteWidgetComponent,
   ],
@@ -220,22 +220,17 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
 
   getColColor(stock: any, index: number) {
     switch (index) {
-      case 1:
-        return this.portfolioHoldings[stock.symbol].costAverage >
-          stock.fiftyTwoWeekLow
-          ? "tomato"
-          : "forestgreen";
       case 5:
       case 6:
         return this.portfolioHoldings[stock.symbol].unrealizedGain > 0
-          ? "forestgreen"
-          : "tomato";
+          ? "seagreen"
+          : "orangered";
       case 7:
         return this.portfolioHoldings[stock.symbol].dividendIncome > 0
-          ? "forestgreen"
-          : "tomato";
+          ? "seagreen"
+          : "orangered";
       case 11:
-        return stock.rating === "buy" ? "forestgreen" : "black";
+        return stock.rating === "buy" ? "seagreen" : "black";
       default:
         return "black";
     }

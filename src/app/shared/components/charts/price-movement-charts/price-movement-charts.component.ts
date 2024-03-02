@@ -31,7 +31,8 @@ export class PriceMovementChartsComponent {
   priceChangeChartData: any = [];
   priceKeyPrefix = "";
   priceRangeChartData: any = [];
-  priceRangeColorScheme = { domain: ["salmon", "lightgreen"] } as Color;
+  priceRangeColorScheme = { domain: ["skyblue", "steelblue"] } as Color;
+  betaColorScheme = { domain: ["palevioletred"] } as Color;
   scaleType = ScaleType;
   selectedChart = 1;
   winners = "";
@@ -110,13 +111,13 @@ export class PriceMovementChartsComponent {
   }
 
   getDayPriceChangeColor() {
-    return this.priceChange > 0 ? "forestgreen" : "tomato";
+    return this.priceChange > 0 ? "seagreen" : "orangered";
   }
 
   getPriceChangeChartColor = (symbol: any) => {
     const stock = this.portfolioData[symbol];
     const price = stock[this.priceKeyPrefix + "ChangePercent"];
-    return price > 0 ? "lightgreen" : "salmon";
+    return price > 0 ? "olivedrab" : "chocolate";
   };
 
   displayChart(chartID: number) {

@@ -103,13 +103,13 @@
         },
         "events": [
             {
-                "eventType": "Fast Stochastic",
+                "eventType": "Momentum",
                 "pricePeriod": "D",
                 "tradingHorizon": "S",
                 "tradeType": "S",
                 "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-                "startDate": 1709130600,
-                "endDate": 1709130600
+                "startDate": 1709217000,
+                "endDate": 1709217000
             }
         ],
         "reports": [
@@ -259,6 +259,17 @@
                 ]
             },
             {
+                "id": "5947_Analyst Report_1654869703000",
+                "headHtml": "Analyst Report: Viatris Inc",
+                "provider": "Argus Research",
+                "reportDate": "2022-06-10T14:01:43Z",
+                "reportTitle": "Viatris Inc., based in Pennsylvania, is a specialty and generic drug company formed in 2020 through the combination of Pfizer's Upjohn business and Mylan N.V. The shares are a component of the S&P 500. The company has 37,000 employees.",
+                "investmentRating": "Neutral",
+                "tickers": [
+                    "VTRS"
+                ]
+            },
+            {
                 "id": "33190_Market Update_1654869703000",
                 "headHtml": "Market Update: EIX, WMT, META, BYND, VTRS",
                 "provider": "Argus Research",
@@ -270,17 +281,6 @@
                     "EIX",
                     "VTRS",
                     "WMT"
-                ]
-            },
-            {
-                "id": "5947_Analyst Report_1654869703000",
-                "headHtml": "Analyst Report: Viatris Inc",
-                "provider": "Argus Research",
-                "reportDate": "2022-06-10T14:01:43Z",
-                "reportTitle": "Viatris Inc., based in Pennsylvania, is a specialty and generic drug company formed in 2020 through the combination of Pfizer's Upjohn business and Mylan N.V. The shares are a component of the S&P 500. The company has 37,000 employees.",
-                "investmentRating": "Neutral",
-                "tickers": [
-                    "VTRS"
                 ]
             },
             {
@@ -903,15 +903,6 @@
                 "formType": "8-K"
             },
             {
-                "id": "0001193125-22-279260_1792044",
-                "type": "Tender Offer/Acquisition Reports",
-                "title": "SC TO-C : Tender Offer/Acquisition Reports",
-                "description": "Written communication relating to an issuer or third party tender offer",
-                "filingDate": 1667779200000,
-                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001792044/000119312522279260/thumbnail.png",
-                "formType": "SC TO-C"
-            },
-            {
                 "id": "0001792044-22-000036_1792044",
                 "type": "Periodic Financial Reports",
                 "title": "10-Q : Periodic Financial Reports",
@@ -919,6 +910,15 @@
                 "filingDate": 1667779200000,
                 "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001792044/000179204422000036/thumbnail.png",
                 "formType": "10-Q"
+            },
+            {
+                "id": "0001193125-22-279260_1792044",
+                "type": "Tender Offer/Acquisition Reports",
+                "title": "SC TO-C : Tender Offer/Acquisition Reports",
+                "description": "Written communication relating to an issuer or third party tender offer",
+                "filingDate": 1667779200000,
+                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001792044/000119312522279260/thumbnail.png",
+                "formType": "SC TO-C"
             },
             {
                 "id": "0001193125-22-272577_1792044",
@@ -939,15 +939,6 @@
                 "formType": "DEF 14A"
             },
             {
-                "id": "0001792044-22-000026_1792044",
-                "type": "Corporate Changes & Voting Matters",
-                "title": "8-K : Corporate Changes & Voting Matters",
-                "description": "Current report filing",
-                "filingDate": 1659916800000,
-                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001792044/000179204422000026/thumbnail.png",
-                "formType": "8-K"
-            },
-            {
                 "id": "0001792044-22-000028_1792044",
                 "type": "Periodic Financial Reports",
                 "title": "10-Q : Periodic Financial Reports",
@@ -955,6 +946,15 @@
                 "filingDate": 1659916800000,
                 "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001792044/000179204422000028/thumbnail.png",
                 "formType": "10-Q"
+            },
+            {
+                "id": "0001792044-22-000026_1792044",
+                "type": "Corporate Changes & Voting Matters",
+                "title": "8-K : Corporate Changes & Voting Matters",
+                "description": "Current report filing",
+                "filingDate": 1659916800000,
+                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001792044/000179204422000026/thumbnail.png",
+                "formType": "8-K"
             },
             {
                 "id": "0001792044-22-000015_1792044",

@@ -41,7 +41,7 @@ export class PortfolioEventsComponent implements OnInit {
           date: calendarEvents.exDividendDate,
           event: "Ex-Dividend",
           icon: "rule",
-          color: "tomato",
+          color: "orangered",
         });
         this.events.push({
           symbol: data.symbol,
@@ -49,7 +49,7 @@ export class PortfolioEventsComponent implements OnInit {
           date: calendarEvents.dividendDate,
           event: "Dividend",
           icon: "attach_money",
-          color: "forestgreen",
+          color: "seagreen",
         });
         this.events.push({
           symbol: data.symbol,
@@ -57,7 +57,7 @@ export class PortfolioEventsComponent implements OnInit {
           date: calendarEvents.earnings?.earningsDate[0]?.slice(0, -2) || "N/A",
           event: "Earnings",
           icon: "insights",
-          color: "slateblue",
+          color: "navy",
         });
       }
     });

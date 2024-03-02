@@ -70,7 +70,7 @@ export class StockDayPriceRangeComponent implements OnInit, AfterViewInit {
     let gradient = `linear-gradient(
       to right,
       lightgrey 0% ${startPercentage}%,
-      tomato ${startPercentage}% ${endPercentage}%, 
+      orangered ${startPercentage}% ${endPercentage}%, 
       lightgrey ${endPercentage}% 100%
     )`;
     this.renderer.setStyle(this.line.nativeElement, 'background', gradient);
