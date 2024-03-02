@@ -31,7 +31,7 @@ export class PriceMovementChartsComponent {
   priceChangeChartData: any = [];
   priceKeyPrefix = "";
   priceRangeChartData: any = [];
-  priceRangeColorScheme = { domain: ["skyblue", "steelblue"] } as Color;
+  priceRangeColorScheme = { domain: ["steelblue", "skyblue"] } as Color;
   betaColorScheme = { domain: ["palevioletred"] } as Color;
   scaleType = ScaleType;
   selectedChart = 1;

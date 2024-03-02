@@ -197,7 +197,7 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
   updateChart(symbol: string, divHis: any) {
     let options: any = {
       title: {
-        text: "Dividend History",
+        text: "",
       },
       legend: {
         data: ["Dividend $"],
