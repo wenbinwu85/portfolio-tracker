@@ -1,0 +1,58 @@
+{
+    "SCHD": {
+        "symbol": "SCHD",
+        "instrumentInfo": {
+            "technicalEvents": {
+                "provider": "Trading Central",
+                "shortTermOutlook": {
+                    "stateDescription": "All events are bullish.",
+                    "direction": "Bullish",
+                    "score": 4,
+                    "scoreDescription": "Very Strong Bullish Evidence",
+                    "indexDirection": "Bullish",
+                    "indexScore": 3,
+                    "indexScoreDescription": "Strong Bullish Evidence"
+                },
+                "intermediateTermOutlook": {
+                    "stateDescription": "Bullish events outweigh bearish events.",
+                    "direction": "Bullish",
+                    "score": 2,
+                    "scoreDescription": "Bullish Evidence",
+                    "indexDirection": "Bullish",
+                    "indexScore": 1,
+                    "indexScoreDescription": "Weak Bullish Evidence"
+                },
+                "longTermOutlook": {
+                    "stateDescription": "All events are bullish.",
+                    "direction": "Bullish",
+                    "score": 2,
+                    "scoreDescription": "Bullish Evidence",
+                    "indexDirection": "Bullish",
+                    "indexScore": 2,
+                    "indexScoreDescription": "Bullish Evidence"
+                }
+            },
+            "keyTechnicals": {
+                "provider": "Trading Central",
+                "support": 76.57,
+                "resistance": 78.5301,
+                "stopLoss": 75.963916
+            },
+            "valuation": {
+                "provider": "Trading Central"
+            }
+        },
+        "events": [
+            {
+                "eventType": "Commodity Channel Index",
+                "pricePeriod": "D",
+                "tradingHorizon": "S",
+                "tradeType": "L",
+                "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
+                "startDate": 1709217000,
+                "endDate": 1709217000
+            }
+        ],
+        "sigDevs": []
+    }
+}

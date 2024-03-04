@@ -8,14 +8,14 @@
                 "shortTermOutlook": {
                     "stateDescription": "Recent bearish events outweigh bullish events.",
                     "direction": "Bearish",
-                    "score": 3,
-                    "scoreDescription": "Strong Bearish Evidence",
-                    "sectorDirection": "Bearish",
-                    "sectorScore": 1,
-                    "sectorScoreDescription": "Weak Bearish Evidence",
+                    "score": 2,
+                    "scoreDescription": "Bearish Evidence",
+                    "sectorDirection": "Bullish",
+                    "sectorScore": 3,
+                    "sectorScoreDescription": "Strong Bullish Evidence",
                     "indexDirection": "Bullish",
-                    "indexScore": 2,
-                    "indexScoreDescription": "Bullish Evidence"
+                    "indexScore": 3,
+                    "indexScoreDescription": "Strong Bullish Evidence"
                 },
                 "intermediateTermOutlook": {
                     "stateDescription": "Recent bullish events outweigh bearish events.",
@@ -26,8 +26,8 @@
                     "sectorScore": 1,
                     "sectorScoreDescription": "Weak Bullish Evidence",
                     "indexDirection": "Bullish",
-                    "indexScore": 2,
-                    "indexScoreDescription": "Bullish Evidence"
+                    "indexScore": 1,
+                    "indexScoreDescription": "Weak Bullish Evidence"
                 },
                 "longTermOutlook": {
                     "stateDescription": "Recent bullish events outweigh bearish events.",
@@ -46,7 +46,7 @@
                 "provider": "Trading Central",
                 "support": 91.01,
                 "resistance": 112.61,
-                "stopLoss": 107.153548
+                "stopLoss": 106.03898
             },
             "valuation": {
                 "color": 1.0,
@@ -63,8 +63,8 @@
                 "hiring": 0.8169,
                 "sustainability": 0.2895,
                 "insiderSentiments": 0.3226,
-                "earningsReports": 0.9467,
-                "dividends": 0.07780000000000001
+                "earningsReports": 0.9466,
+                "dividends": 0.0755
             },
             "sector": {
                 "innovativeness": 0.5,
@@ -1763,6 +1763,15 @@
         ],
         "secReports": [
             {
+                "id": "0000950157-24-000305_1744489",
+                "type": "Proxy Statements",
+                "title": "DEFA14A : Proxy Statements",
+                "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
+                "filingDate": 1709251200000,
+                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000305/thumbnail.png",
+                "formType": "DEFA14A"
+            },
+            {
                 "id": "0000950157-24-000290_1744489",
                 "type": "Proxy Statements",
                 "title": "DEFA14A : Proxy Statements",
@@ -1853,21 +1862,21 @@
                 "formType": "DEFA14A"
             },
             {
-                "id": "0000950157-24-000224_1744489",
-                "type": "Proxy Statements",
-                "title": "DEFA14A : Proxy Statements",
-                "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
-                "filingDate": 1707868800000,
-                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000224/thumbnail.png",
-                "formType": "DEFA14A"
-            },
-            {
                 "id": "0000950157-24-000229_1744489",
                 "type": "Proxy Statements",
                 "title": "DEFA14A : Proxy Statements",
                 "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
                 "filingDate": 1707868800000,
                 "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000229/thumbnail.png",
+                "formType": "DEFA14A"
+            },
+            {
+                "id": "0000950157-24-000224_1744489",
+                "type": "Proxy Statements",
+                "title": "DEFA14A : Proxy Statements",
+                "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
+                "filingDate": 1707868800000,
+                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000224/thumbnail.png",
                 "formType": "DEFA14A"
             },
             {
@@ -1925,15 +1934,6 @@
                 "formType": "DEFA14A"
             },
             {
-                "id": "0001744489-24-000081_1744489",
-                "type": "Periodic Financial Reports",
-                "title": "10-Q : Periodic Financial Reports",
-                "description": "Quarterly report pursuant to Section 13 or 15(d)",
-                "filingDate": 1707264000000,
-                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000174448924000081/thumbnail.png",
-                "formType": "10-Q"
-            },
-            {
                 "id": "0000950157-24-000135_1744489",
                 "type": "Proxy Statements",
                 "title": "DEFA14A : Proxy Statements",
@@ -1941,6 +1941,15 @@
                 "filingDate": 1707264000000,
                 "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000135/thumbnail.png",
                 "formType": "DEFA14A"
+            },
+            {
+                "id": "0001744489-24-000081_1744489",
+                "type": "Periodic Financial Reports",
+                "title": "10-Q : Periodic Financial Reports",
+                "description": "Quarterly report pursuant to Section 13 or 15(d)",
+                "filingDate": 1707264000000,
+                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000174448924000081/thumbnail.png",
+                "formType": "10-Q"
             },
             {
                 "id": "0001744489-24-000079_1744489",
@@ -2051,15 +2060,6 @@
                 "formType": "DFAN14A"
             },
             {
-                "id": "0000950157-23-001249_1744489",
-                "type": "Proxy Statements",
-                "title": "DEFA14A : Proxy Statements",
-                "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
-                "filingDate": 1702512000000,
-                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015723001249/thumbnail.png",
-                "formType": "DEFA14A"
-            },
-            {
                 "id": "0000902664-23-005876_1744489",
                 "type": "Proxy Statements",
                 "title": "DFAN14A : Proxy Statements",
@@ -2067,6 +2067,15 @@
                 "filingDate": 1702512000000,
                 "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000090266423005876/thumbnail.png",
                 "formType": "DFAN14A"
+            },
+            {
+                "id": "0000950157-23-001249_1744489",
+                "type": "Proxy Statements",
+                "title": "DEFA14A : Proxy Statements",
+                "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
+                "filingDate": 1702512000000,
+                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015723001249/thumbnail.png",
+                "formType": "DEFA14A"
             },
             {
                 "id": "0000902664-23-005752_1744489",
@@ -2183,15 +2192,6 @@
                 "description": "Current report filing",
                 "filingDate": 1689120000000,
                 "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000174448923000158/thumbnail.png",
-                "formType": "8-K"
-            },
-            {
-                "id": "0001744489-23-000112_1744489",
-                "type": "Corporate Changes & Voting Matters",
-                "title": "8-K : Corporate Changes & Voting Matters",
-                "description": "Current report filing",
-                "filingDate": 1686787200000,
-                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000174448923000112/thumbnail.png",
                 "formType": "8-K"
             }
         ]

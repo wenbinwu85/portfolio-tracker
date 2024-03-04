@@ -1,0 +1,220 @@
+<price-movement-charts />
+
+<section class="add-border">
+    <div class="title">Price Insights</div>
+    <div class="logos-container">
+        <button
+            *ngFor="let stock of sortedStocks" 
+            mat-button 
+            class="ticker-button" 
+            (click)="updateWidget(stock.symbol)"
+        >
+            <img
+                [src]="getLogoSource(stock)" 
+                alt="Logo" 
+                width="auto" 
+                height="35"
+                class="stock-logo"
+            />
+            <div>{{ stock.symbol }}</div>
+        </button>
+        <!-- <img
+            *ngFor="let etf of sortedEtfs"
+            [src]="getLogoSource(etf)" 
+            alt="Logo" 
+            width="auto" 
+            height="35" 
+            class="stock-logo" 
+            (click)="updateWidget(etf.symbol)"
+        /> -->
+    </div>
+    <div *ngIf="selectedSymbol" class="">
+        <!-- <tv-symbol-info-widget [symbol]="selectedSymbol" /> -->
+        <ng-container *ngComponentOutlet="getWidget.widget; inputs:{symbol: selectedSymbol};" />
+        <stock-price-info-card [stock]="getStock()" />
+    </div>
+</section>
+
+<section class="add-border">
+    <div class="chart-header">
+        <div class="title">
+            <span>Performance</span>
+        </div>
+        <mat-chip-listbox [ngStyle]="{padding: '20px'}">
+            <mat-chip-option selected (click)="changePerformanceChart(1)">Moving Averages</mat-chip-option>
+            <mat-chip-option (click)="changePerformanceChart(2)">52 Week vs S&P500</mat-chip-option>
+            <mat-chip-option (click)="changePerformanceChart(3)">ETFs Performance</mat-chip-option>
+        </mat-chip-listbox>
+    </div>
+    <div class="charts-flex">
+        <div *ngIf="selectedPerformanceChart === 1" class="chart-container">
+            <ngx-charts-bar-vertical
+                [scheme]="performanceChartColorScheme"
+                [animations]="true"
+                [results]="fiftyDayMAChartData"
+                [xAxis]="true"
+                [yAxis]="true"
+                [showXAxisLabel]="true"
+                [showYAxisLabel]="true"
+                [legend]="false"
+                [yAxisLabel]="'Price vs 50 Day MA %'"
+                [rotateXAxisTicks]="true"
+                [yScaleMin]="fiftyDayMAChartData[0].value - 5"
+            >
+                <ng-template #tooltipTemplate let-model="model">
+                    <stock-price-info-card [stock]="getTooltipData(model.name)" />
+                    <mat-divider style="margin: none;"/>
+                    <span>{{ model.name }}: </span>
+                    <span>{{ model.value.toFixed(2) }}%</span>
+                </ng-template>
+            </ngx-charts-bar-vertical>
+
+        </div> 
+        <div *ngIf="selectedPerformanceChart === 1" class="chart-container">
+            <ngx-charts-bar-vertical
+                [scheme]="'air'"
+                [scheme]="performanceChartColorScheme"
+                [animations]="true"
+                [results]="twoHundredDayMAChartData"
+                [xAxis]="true"
+                [yAxis]="true"
+                [showXAxisLabel]="true"
+                [showYAxisLabel]="true"
+                [legend]="false"
+                [yAxisLabel]="'Price vs 200 Day MA %'"
+                [rotateXAxisTicks]="true"
+                [yScaleMin]="twoHundredDayMAChartData[0].value - 5"
+            >
+                <ng-template #tooltipTemplate let-model="model" class="dark">
+                    <stock-price-info-card [stock]="getTooltipData(model.name)" />
+                    <mat-divider style="margin: none;"/>
+                    <span>{{ model.name }}: </span>
+                    <span>{{ model.value.toFixed(2) }}%</span>
+                </ng-template>
+            </ngx-charts-bar-vertical>
+        </div> 
+    </div>
+
+    <div *ngIf="selectedPerformanceChart === 2" class="chart-container">
+        <ngx-charts-bar-vertical
+            [scheme]="performanceChartColorScheme"
+            [animations]="true"
+            [results]="fiftyTwoWeekChangeChartData"
+            [xAxis]="true"
+            [yAxis]="true"
+            [showXAxisLabel]="true"
+            [showYAxisLabel]="true"
+            [legend]="false"
+            [yAxisLabel]="'52 Week Change %'"
+            [rotateXAxisTicks]="true"
+            [activeEntries]="['S&P 500']"
+            [customColors]="[{name:'S&P 500', value: 'gold'}]"
+        >
+            <ng-template #tooltipTemplate let-model="model" class="dark">
+                <stock-price-info-card *ngIf="model.name !== 'S&P 500'" [stock]="getTooltipData(model.name)" />
+                <mat-divider *ngIf="model.name !== 'S&P 500'" style="margin: none;" />
+                <span>{{ model.name }}: </span>
+                <span>{{ model.value.toFixed(2) }}%</span>
+            </ng-template>
+        </ngx-charts-bar-vertical>
+    </div>
+
+    <div *ngIf="selectedPerformanceChart === 3" class="chart-container">
+        <ngx-charts-bar-vertical-2d
+            [animations]="true"
+            [results]="etfPerformanceChartData"
+            [xAxis]="true"
+            [yAxis]="true"
+            [showXAxisLabel]="true"
+            [showYAxisLabel]="true"
+            [legend]="false"
+            [yAxisLabel]="'ETF Performance %'"
+            [showDataLabel]="true"
+            [rotateXAxisTicks]="true"
+            [customColors]="[{name: 'SCHD', value: 'deepskyblue'}, {name: 'VYM', value: 'maroon'}, {name: 'JEPI', value: 'dodgerblue'}]"
+        >
+            <ng-template #tooltipTemplate let-model="model" class="dark">
+                <stock-price-info-card [stock]="getTooltipData(model.name)" />
+            </ng-template>
+        </ngx-charts-bar-vertical-2d>
+    </div>
+</section>
+
+<!-- move to analysis page -->
+<section class="add-border">
+    <div class="chart-header">
+        <div class="title">
+            <span>Current Price vs 52 Week & Target Price</span>
+        </div>
+        <!-- <mat-chip-listbox [ngStyle]="{padding: '20px'}">
+            <mat-chip-option selected (click)="changeVSCharts(1)">VS 52 Week High Low</mat-chip-option>
+            <mat-chip-option (click)="changeVSCharts(2)">VS Target Price</mat-chip-option>
+        </mat-chip-listbox> -->
+    </div>
+    <div class="charts-flex">
+        <div class="chart-container">
+            <ngx-charts-bar-vertical
+                [scheme]="fiftyTwoWeekChartColorScheme"
+                [animations]="true"
+                [results]="fiftyTwoWeekLowChartData"
+                [xAxis]="true"
+                [yAxis]="true"
+                [showXAxisLabel]="true"
+                [showYAxisLabel]="true"
+                [legend]="false"
+                [yAxisLabel]="'Current price vs 52 week low %'"
+                [rotateXAxisTicks]="true"
+            >
+                <!-- <ng-template #tooltipTemplate let-model="model" class="dark">
+                    <stock-price-info-card [stock]="getTooltipData(model.name)" />
+                    <mat-divider style="margin: none;"/>
+                    <span>{{ model.name }}: </span>
+                    <span>{{ model.value.toFixed(2) }}%</span>
+                </ng-template> -->
+            </ngx-charts-bar-vertical>
+        </div> 
+        <div class="chart-container">
+            <ngx-charts-bar-vertical
+                [scheme]="fiftyTwoWeekChartColorScheme"
+                [animations]="true"
+                [results]="fiftyTwoWeekHighChartData"
+                [xAxis]="true"
+                [yAxis]="true"
+                [showXAxisLabel]="true"
+                [showYAxisLabel]="true"
+                [legend]="false"
+                [yAxisLabel]="'Current price vs 52 week High %'"
+                [rotateXAxisTicks]="true"
+            >
+                <!-- <ng-template #tooltipTemplate let-model="model" class="dark">
+                    <stock-price-info-card [stock]="getTooltipData(model.name)" />
+                    <mat-divider style="margin: none;"/>
+                    <span>{{ model.name }}: </span>
+                    <span>{{ model.value.toFixed(2) }}%</span>
+                </ng-template> -->
+            </ngx-charts-bar-vertical>
+        </div>
+        <div class="chart-container">
+            <ngx-charts-bar-vertical
+                [scheme]="targetPriceChartColorScheme"
+                [animations]="true"
+                [results]="discountChartData"
+                [xAxis]="true"
+                [yAxis]="true"
+                [showXAxisLabel]="true"
+                [showYAxisLabel]="true"
+                [legend]="false"
+                [yAxisLabel]="'Current price vs target price %'"
+                [rotateXAxisTicks]="true"
+                [yScaleMin]="-5"
+            >
+                <!-- <ng-template #tooltipTemplate let-model="model" class="dark">
+                    <stock-price-info-card [stock]="getTooltipData(model.name)" />
+                    <mat-divider style="margin: none;"/>
+                    <span>{{ model.name }}: </span>
+                    <span>{{ model.value.toFixed(2) }}%</span>
+                </ng-template> -->
+            </ngx-charts-bar-vertical>
+        </div> 
+    </div>
+</section>

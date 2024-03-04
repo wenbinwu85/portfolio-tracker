@@ -8,26 +8,26 @@
                 "shortTermOutlook": {
                     "stateDescription": "Recent bullish events outweigh bearish events.",
                     "direction": "Bullish",
-                    "score": 1,
-                    "scoreDescription": "Weak Bullish Evidence",
+                    "score": 2,
+                    "scoreDescription": "Bullish Evidence",
                     "sectorDirection": "Bullish",
-                    "sectorScore": 2,
-                    "sectorScoreDescription": "Bullish Evidence",
+                    "sectorScore": 4,
+                    "sectorScoreDescription": "Very Strong Bullish Evidence",
                     "indexDirection": "Bullish",
-                    "indexScore": 2,
-                    "indexScoreDescription": "Bullish Evidence"
+                    "indexScore": 3,
+                    "indexScoreDescription": "Strong Bullish Evidence"
                 },
                 "intermediateTermOutlook": {
-                    "stateDescription": "Bearish events outweigh bullish events.",
-                    "direction": "Bearish",
+                    "stateDescription": "There is one bullish event.",
+                    "direction": "Bullish",
                     "score": 1,
-                    "scoreDescription": "Weak Bearish Evidence",
+                    "scoreDescription": "Weak Bullish Evidence",
                     "sectorDirection": "Bearish",
-                    "sectorScore": 2,
-                    "sectorScoreDescription": "Bearish Evidence",
+                    "sectorScore": 1,
+                    "sectorScoreDescription": "Weak Bearish Evidence",
                     "indexDirection": "Bullish",
-                    "indexScore": 2,
-                    "indexScoreDescription": "Bullish Evidence"
+                    "indexScore": 1,
+                    "indexScoreDescription": "Weak Bullish Evidence"
                 },
                 "longTermOutlook": {
                     "stateDescription": "There are no events.",
@@ -45,8 +45,8 @@
             "keyTechnicals": {
                 "provider": "Trading Central",
                 "support": 332.89,
-                "resistance": 415.32,
-                "stopLoss": 397.057937
+                "resistance": 420.55,
+                "stopLoss": 386.650682
             },
             "valuation": {
                 "color": 0.0,
@@ -62,9 +62,9 @@
                 "innovativeness": 0.9495999999999999,
                 "hiring": 0.9662999999999999,
                 "sustainability": 0.3583,
-                "insiderSentiments": 0.298,
-                "earningsReports": 0.8839,
-                "dividends": 0.1487
+                "insiderSentiments": 0.2974,
+                "earningsReports": 0.884,
+                "dividends": 0.1485
             },
             "sector": {
                 "innovativeness": 0.5,
@@ -107,7 +107,7 @@
         },
         "events": [
             {
-                "eventType": "Momentum",
+                "eventType": "Price Crosses Moving Average",
                 "pricePeriod": "D",
                 "tradingHorizon": "S",
                 "tradeType": "L",

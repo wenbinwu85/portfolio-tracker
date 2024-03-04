@@ -2,9 +2,12 @@ import { CommonModule } from "@angular/common";
 import { Component, Input } from "@angular/core";
 import { MatChipsModule } from "@angular/material/chips";
 import { MatDividerModule } from "@angular/material/divider";
+import { MatExpansionModule } from "@angular/material/expansion";
+import { MatIconModule } from "@angular/material/icon";
 import { Color, NgxChartsModule, ScaleType } from "@swimlane/ngx-charts";
 import { DataService } from "../../../services/data.service";
 import { HelperService } from "../../../services/helper.service";
+import { StockPriceInfoCardComponent } from "../../stock/stock-price-info-card/stock-price-info-card.component";
 import { TvMiniChartWidgetComponent } from "../../tradingview/tv-mini-chart-widget/tv-mini-chart-widget.component";
 import { TvTickersWidgetComponent } from "../../tradingview/tv-tickers-widget/tv-tickers-widget.component";
 
@@ -13,9 +16,12 @@ import { TvTickersWidgetComponent } from "../../tradingview/tv-tickers-widget/tv
   standalone: true,
   imports: [
     CommonModule,
-    NgxChartsModule,
     MatChipsModule,
     MatDividerModule,
+    MatExpansionModule,
+    MatIconModule,
+    NgxChartsModule,
+    StockPriceInfoCardComponent,
     TvMiniChartWidgetComponent,
     TvTickersWidgetComponent,
   ],
@@ -24,16 +30,16 @@ import { TvTickersWidgetComponent } from "../../tradingview/tv-tickers-widget/tv
 })
 export class PriceMovementChartsComponent {
   @Input() showTickers = true;
-  betaChartData: any = [];
   portfolioData: any;
   portfolioHoldings: any;
   priceChange = 0;
   priceChangeChartData: any = [];
-  priceKeyPrefix = "";
   priceRangeChartData: any = [];
+  betaChartData: any = [];
   priceRangeColorScheme = { domain: ["steelblue", "skyblue"] } as Color;
   betaColorScheme = { domain: ["palevioletred"] } as Color;
   scaleType = ScaleType;
+  priceKeyPrefix = "";
   selectedChart = 1;
   winners = "";
   losers = "";

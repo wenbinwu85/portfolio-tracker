@@ -11,23 +11,23 @@
                     "score": 4,
                     "scoreDescription": "Very Strong Bearish Evidence",
                     "sectorDirection": "Bearish",
-                    "sectorScore": 4,
-                    "sectorScoreDescription": "Very Strong Bearish Evidence",
+                    "sectorScore": 3,
+                    "sectorScoreDescription": "Strong Bearish Evidence",
                     "indexDirection": "Bullish",
-                    "indexScore": 2,
-                    "indexScoreDescription": "Bullish Evidence"
+                    "indexScore": 3,
+                    "indexScoreDescription": "Strong Bullish Evidence"
                 },
                 "intermediateTermOutlook": {
-                    "stateDescription": "All events are bullish.",
+                    "stateDescription": "Recent bullish events outweigh bearish events.",
                     "direction": "Bullish",
                     "score": 3,
                     "scoreDescription": "Strong Bullish Evidence",
                     "sectorDirection": "Bullish",
-                    "sectorScore": 3,
-                    "sectorScoreDescription": "Strong Bullish Evidence",
+                    "sectorScore": 2,
+                    "sectorScoreDescription": "Bullish Evidence",
                     "indexDirection": "Bullish",
-                    "indexScore": 2,
-                    "indexScoreDescription": "Bullish Evidence"
+                    "indexScore": 1,
+                    "indexScoreDescription": "Weak Bullish Evidence"
                 },
                 "longTermOutlook": {
                     "stateDescription": "All events are bullish.",
@@ -46,22 +46,22 @@
                 "provider": "Trading Central",
                 "support": 9.3108,
                 "resistance": 13.24,
-                "stopLoss": 11.460332
+                "stopLoss": 11.282989
             },
             "valuation": {
                 "color": 0.5,
                 "description": "Near Fair Value",
-                "discount": "-0%",
+                "discount": "-1%",
                 "provider": "Trading Central"
             }
         },
         "companySnapshot": {
             "sectorInfo": "Healthcare",
             "company": {
-                "innovativeness": 0.6144,
+                "innovativeness": 0.6136,
                 "insiderSentiments": 0.3763,
                 "earningsReports": 0.9937999999999999,
-                "dividends": 0.8139
+                "dividends": 0.8106
             },
             "sector": {
                 "innovativeness": 0.5,
@@ -103,7 +103,7 @@
         },
         "events": [
             {
-                "eventType": "Momentum",
+                "eventType": "Slow Stochastic",
                 "pricePeriod": "D",
                 "tradingHorizon": "S",
                 "tradeType": "S",
@@ -885,15 +885,6 @@
                 "formType": "SC TO-C"
             },
             {
-                "id": "0001193125-22-278606_1792044",
-                "type": "Corporate Changes & Voting Matters",
-                "title": "8-K : Corporate Changes & Voting Matters",
-                "description": "Current report filing",
-                "filingDate": 1667779200000,
-                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001792044/000119312522278606/thumbnail.png",
-                "formType": "8-K"
-            },
-            {
                 "id": "0001792044-22-000034_1792044",
                 "type": "Corporate Changes & Voting Matters",
                 "title": "8-K : Corporate Changes & Voting Matters",
@@ -903,13 +894,13 @@
                 "formType": "8-K"
             },
             {
-                "id": "0001792044-22-000036_1792044",
-                "type": "Periodic Financial Reports",
-                "title": "10-Q : Periodic Financial Reports",
-                "description": "Quarterly report pursuant to Section 13 or 15(d)",
+                "id": "0001193125-22-278606_1792044",
+                "type": "Corporate Changes & Voting Matters",
+                "title": "8-K : Corporate Changes & Voting Matters",
+                "description": "Current report filing",
                 "filingDate": 1667779200000,
-                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001792044/000179204422000036/thumbnail.png",
-                "formType": "10-Q"
+                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001792044/000119312522278606/thumbnail.png",
+                "formType": "8-K"
             },
             {
                 "id": "0001193125-22-279260_1792044",
@@ -921,13 +912,13 @@
                 "formType": "SC TO-C"
             },
             {
-                "id": "0001193125-22-272577_1792044",
-                "type": "Proxy Statements",
-                "title": "DEFA14A : Proxy Statements",
-                "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
-                "filingDate": 1666915200000,
-                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001792044/000119312522272577/thumbnail.png",
-                "formType": "DEFA14A"
+                "id": "0001792044-22-000036_1792044",
+                "type": "Periodic Financial Reports",
+                "title": "10-Q : Periodic Financial Reports",
+                "description": "Quarterly report pursuant to Section 13 or 15(d)",
+                "filingDate": 1667779200000,
+                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001792044/000179204422000036/thumbnail.png",
+                "formType": "10-Q"
             },
             {
                 "id": "0001193125-22-272575_1792044",
@@ -937,6 +928,15 @@
                 "filingDate": 1666915200000,
                 "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001792044/000119312522272575/thumbnail.png",
                 "formType": "DEF 14A"
+            },
+            {
+                "id": "0001193125-22-272577_1792044",
+                "type": "Proxy Statements",
+                "title": "DEFA14A : Proxy Statements",
+                "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
+                "filingDate": 1666915200000,
+                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001792044/000119312522272577/thumbnail.png",
+                "formType": "DEFA14A"
             },
             {
                 "id": "0001792044-22-000028_1792044",

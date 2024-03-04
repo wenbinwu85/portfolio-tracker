@@ -11,7 +11,7 @@ import { PortfolioDividendComponent } from "../portfolio-details/portfolio-divid
 import { PortfolioEventsComponent } from "../portfolio-details/portfolio-events/portfolio-events.component";
 import { PortfolioFinancialsComponent } from "../portfolio-details/portfolio-financials/portfolio-financials.component";
 import { PortfolioHoldingsComponent } from "../portfolio-details/portfolio-holdings/portfolio-holdings.component";
-import { PortfolioPriceTrendsComponent } from "../portfolio-details/portfolio-price-trends/portfolio-price-trends.component";
+import { PortfolioPriceInsightsComponent } from "./portfolio-price-insights/portfolio-price-insights.component";
 
 @Component({
   selector: "portfolio-details",
@@ -28,7 +28,7 @@ import { PortfolioPriceTrendsComponent } from "../portfolio-details/portfolio-pr
     PortfolioEventsComponent,
     PortfolioFinancialsComponent,
     PortfolioHoldingsComponent,
-    PortfolioPriceTrendsComponent,
+    PortfolioPriceInsightsComponent,
     RouterLink,
     RouterOutlet,
     StockPriceInfoCardComponent,
@@ -43,8 +43,8 @@ export class PortfolioDetailsComponent implements OnInit {
       route: "holdings",
     },
     {
-      label: "Price Trends",
-      route: "price-trends",
+      label: "Price Insights",
+      route: "price-insights",
     },
     {
       label: "Dividend",

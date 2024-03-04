@@ -108,7 +108,7 @@
     "regularMarketPrice": 141.62,
     "regularMarketDayHigh": 144.98,
     "regularMarketDayLow": 139.04,
-    "regularMarketVolume": 9757780,
+    "regularMarketVolume": 9856913,
     "averageDailyVolume10Day": 19323250,
     "averageDailyVolume3Month": 15277490,
     "regularMarketPreviousClose": 141.04,
@@ -127,7 +127,7 @@
     "payoutRatio": 0.0,
     "trailingPE": 1770.25,
     "forwardPE": 91.96104,
-    "volume": 9757780,
+    "volume": 9856913,
     "averageVolume": 15277490,
     "averageVolume10days": 19323250,
     "fiftyTwoWeekLow": 46.5,
@@ -139,7 +139,7 @@
     "trailingAnnualDividendYield": 0.0,
     "enterpriseValue": 143416033280,
     "profitMargins": 0.02893,
-    "floatShares": 94418440,
+    "floatShares": 94079175,
     "sharesOutstanding": 1028080000,
     "sharesShort": 9267248,
     "sharesShortPriorMonth": 10718119,
@@ -501,8 +501,8 @@
     "indexTrend": {
         "maxAge": 1,
         "symbol": "SP5",
-        "peRatio": 14.383,
-        "pegRatio": 1.74929,
+        "peRatio": 14.3828,
+        "pegRatio": 1.74925,
         "estimates": [
             {
                 "period": "0q",
@@ -592,10 +592,6 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ARM/0001973239-24-000002_1973239",
             "exhibits": [
                 {
-                    "type": "6-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001973239/000197323924000002/arm-20240207.htm"
-                },
-                {
                     "type": "EX-99.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001973239/000197323924000002/exhibit991fye24q331-decx23.htm"
                 },
@@ -607,6 +603,10 @@
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001973239/000197323924000002/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001973239/000197323924000002/Financial_Report.xlsx"
+                },
+                {
+                    "type": "6-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001973239/000197323924000002/arm-20240207.htm"
                 }
             ],
             "maxAge": 1
@@ -752,13 +752,25 @@
         {
             "date": "2023-09-05",
             "epochDate": "2023-09-04 20:00:00",
-            "type": "CORRESP",
-            "title": "A correspondence can be sent as a document with another submission type or can be sent as a separate submission",
-            "edgarUrl": "https://finance.yahoo.com/sec-filing/ARM/0001193125-23-228066_1973239",
+            "type": "F-6/A",
+            "title": "Offering Registrations",
+            "edgarUrl": "https://finance.yahoo.com/sec-filing/ARM/0001193805-23-001247_1973239",
             "exhibits": [
                 {
-                    "type": "CORRESP",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001973239/000119312523228066/filename1.htm"
+                    "type": "EX-99.A",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001472033/000119380523001247/e618897_ex99-a.htm"
+                },
+                {
+                    "type": "EX-99.A",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001973239/000119380523001247/e618897_ex99-a.htm"
+                },
+                {
+                    "type": "F-6/A",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001472033/000119380523001247/e618897_f6a-arm.htm"
+                },
+                {
+                    "type": "F-6/A",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001973239/000119380523001247/e618897_f6a-arm.htm"
                 }
             ],
             "maxAge": 1
@@ -813,6 +825,14 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ARM/0001193805-23-001207_1973239",
             "exhibits": [
                 {
+                    "type": "F-6",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001472033/000119380523001207/e618888_f6-arm.htm"
+                },
+                {
+                    "type": "F-6",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001973239/000119380523001207/e618888_f6-arm.htm"
+                },
+                {
                     "type": "EX-99.(A)",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001472033/000119380523001207/e618888_ex99-a.htm"
                 },
@@ -827,14 +847,6 @@
                 {
                     "type": "EX-99.(D)",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001973239/000119380523001207/e618888_ex99-d.htm"
-                },
-                {
-                    "type": "F-6",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001472033/000119380523001207/e618888_f6-arm.htm"
-                },
-                {
-                    "type": "F-6",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001973239/000119380523001207/e618888_f6-arm.htm"
                 }
             ],
             "maxAge": 1
@@ -842,13 +854,29 @@
         {
             "date": "2023-08-21",
             "epochDate": "2023-08-20 20:00:00",
-            "type": "CORRESP",
-            "title": "A correspondence can be sent as a document with another submission type or can be sent as a separate submission",
-            "edgarUrl": "https://finance.yahoo.com/sec-filing/ARM/0001193125-23-216987_1973239",
+            "type": "F-1",
+            "title": "Offering Registrations",
+            "edgarUrl": "https://finance.yahoo.com/sec-filing/ARM/0001193125-23-216983_1973239",
             "exhibits": [
                 {
-                    "type": "CORRESP",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001973239/000119312523216987/filename1.htm"
+                    "type": "F-1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001973239/000119312523216983/d393891df1.htm"
+                },
+                {
+                    "type": "EX-10.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001973239/000119312523216983/d393891dex101.htm"
+                },
+                {
+                    "type": "EX-21.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001973239/000119312523216983/d393891dex211.htm"
+                },
+                {
+                    "type": "EX-23.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001973239/000119312523216983/d393891dex231.htm"
+                },
+                {
+                    "type": "EX-FILING FEES",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001973239/000119312523216983/d393891dexfilingfees.htm"
                 }
             ],
             "maxAge": 1

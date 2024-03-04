@@ -52,7 +52,7 @@ export class HeaderComponent implements OnInit {
   ];
   activeLink = this.navLinks[0];
   showProgressBar = false;
-
+  
   constructor(private dataService: DataService) {}
 
   ngOnInit() {

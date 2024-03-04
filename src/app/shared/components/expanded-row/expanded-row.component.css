@@ -2,13 +2,9 @@
   display: flex;
   flex-flow: row wrap;
   align-items: stretch;
-  justify-content: space-around;
+  margin-bottom: 0.5rem;
 }
 
 .chart {
   flex-grow: 20;
-}
-
-.ta {
-  flex-grow: 1;
 }

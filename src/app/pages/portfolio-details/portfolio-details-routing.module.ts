@@ -5,16 +5,16 @@ import { PortfolioDetailsComponent } from "./portfolio-details.component";
 const routes: Routes = [
   {
     path: "",
-    // redirectTo: '/portfolio/price-trends',
+    // redirectTo: '/portfolio/price-insights',
     // pathMatch: 'full',
     component: PortfolioDetailsComponent,
     children: [
       {
-        path: "price-trends",
+        path: "price-insights",
         loadComponent: () =>
-          import(
-            "./portfolio-price-trends/portfolio-price-trends.component"
-          ).then((c) => c.PortfolioPriceTrendsComponent),
+          import("./portfolio-price-insights/portfolio-price-insights.component").then(
+            (c) => c.PortfolioPriceInsightsComponent
+          ),
       },
       {
         path: "holdings",

@@ -11,23 +11,23 @@
                     "score": 2,
                     "scoreDescription": "Bearish Evidence",
                     "sectorDirection": "Bullish",
-                    "sectorScore": 1,
-                    "sectorScoreDescription": "Weak Bullish Evidence",
+                    "sectorScore": 2,
+                    "sectorScoreDescription": "Bullish Evidence",
                     "indexDirection": "Bullish",
-                    "indexScore": 2,
-                    "indexScoreDescription": "Bullish Evidence"
+                    "indexScore": 3,
+                    "indexScoreDescription": "Strong Bullish Evidence"
                 },
                 "intermediateTermOutlook": {
-                    "stateDescription": "All events are bullish.",
+                    "stateDescription": "Recent bullish events outweigh bearish events.",
                     "direction": "Bullish",
-                    "score": 3,
-                    "scoreDescription": "Strong Bullish Evidence",
+                    "score": 2,
+                    "scoreDescription": "Bullish Evidence",
                     "sectorDirection": "Bullish",
-                    "sectorScore": 3,
-                    "sectorScoreDescription": "Strong Bullish Evidence",
+                    "sectorScore": 4,
+                    "sectorScoreDescription": "Very Strong Bullish Evidence",
                     "indexDirection": "Bullish",
-                    "indexScore": 2,
-                    "indexScoreDescription": "Bullish Evidence"
+                    "indexScore": 1,
+                    "indexScoreDescription": "Weak Bullish Evidence"
                 },
                 "longTermOutlook": {
                     "stateDescription": "All events are bullish.",
@@ -45,8 +45,7 @@
             "keyTechnicals": {
                 "provider": "Trading Central",
                 "support": 13.885,
-                "resistance": 14.69,
-                "stopLoss": 14.256991
+                "stopLoss": 13.560122
             },
             "valuation": {
                 "color": 1.0,
@@ -59,10 +58,10 @@
         "companySnapshot": {
             "sectorInfo": "Energy",
             "company": {
-                "innovativeness": 0.2917,
+                "innovativeness": 0.287,
                 "sustainability": 0.9265000000000001,
                 "insiderSentiments": 0.9290999999999999,
-                "earningsReports": 0.8695999999999999,
+                "earningsReports": 0.8741,
                 "dividends": 0.7591
             },
             "sector": {
@@ -117,6 +116,15 @@
             }
         ],
         "secReports": [
+            {
+                "id": "0001193125-24-056149_1276187",
+                "type": "Offering Registrations",
+                "title": "S-3D : Offering Registrations",
+                "description": "Automatically effective registration statement for securities issued pursuant to dividend or interest reinvestment plans",
+                "filingDate": 1709251200000,
+                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001276187/000119312524056149/thumbnail.png",
+                "formType": "S-3D"
+            },
             {
                 "id": "0001276187-24-000024_1276187",
                 "type": "Periodic Financial Reports",
@@ -503,15 +511,6 @@
                 "filingDate": 1659571200000,
                 "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001276187/000127618722000058/thumbnail.png",
                 "formType": "10-Q"
-            },
-            {
-                "id": "0001276187-22-000054_1276187",
-                "type": "Corporate Changes & Voting Matters",
-                "title": "8-K : Corporate Changes & Voting Matters",
-                "description": "Current report filing",
-                "filingDate": 1659484800000,
-                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001276187/000127618722000054/thumbnail.png",
-                "formType": "8-K"
             }
         ]
     }
