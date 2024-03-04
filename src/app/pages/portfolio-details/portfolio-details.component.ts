@@ -6,7 +6,6 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatTabsModule } from "@angular/material/tabs";
 import { Router, RouterLink, RouterOutlet } from "@angular/router";
 import { NgxChartsModule } from "@swimlane/ngx-charts";
-import { StockPriceInfoCardComponent } from "../../../app/shared/components/stock/stock-price-info-card/stock-price-info-card.component";
 import { PortfolioDividendComponent } from "../portfolio-details/portfolio-dividend/portfolio-dividend.component";
 import { PortfolioEventsComponent } from "../portfolio-details/portfolio-events/portfolio-events.component";
 import { PortfolioFinancialsComponent } from "../portfolio-details/portfolio-financials/portfolio-financials.component";
@@ -31,7 +30,6 @@ import { PortfolioPriceInsightsComponent } from "./portfolio-price-insights/port
     PortfolioPriceInsightsComponent,
     RouterLink,
     RouterOutlet,
-    StockPriceInfoCardComponent,
   ],
   templateUrl: "./portfolio-details.component.html",
   styleUrls: ["./portfolio-details.component.css"],

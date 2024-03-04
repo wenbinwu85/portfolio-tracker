@@ -10,14 +10,15 @@ import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { MatTabsModule } from "@angular/material/tabs";
 import { Color, NgxChartsModule, ScaleType } from "@swimlane/ngx-charts";
 import { PriceMovementChartsComponent } from "../../../shared/components/charts/price-movement-charts/price-movement-charts.component";
+import { StockDayPriceRangeComponent } from "../../../shared/components/stock/stock-day-price-range/stock-day-price-range.component";
 import { StockPriceInfoCardComponent } from "../../../shared/components/stock/stock-price-info-card/stock-price-info-card.component";
+import { TvSymbolInfoWidgetComponent } from "../../../shared/components/tradingview/tv-symbol-info-widget/tv-symbol-info-widget.component";
 import { DataService } from "../../../shared/services/data.service";
 import { PortfolioChartsComponent } from "../../chart-wall/portfolio-charts/portfolio-charts.component";
 import { PortfolioDividendComponent } from "../portfolio-dividend/portfolio-dividend.component";
 import { PortfolioEventsComponent } from "../portfolio-events/portfolio-events.component";
 import { PortfolioFinancialsComponent } from "../portfolio-financials/portfolio-financials.component";
 import { PortfolioHoldingsComponent } from "../portfolio-holdings/portfolio-holdings.component";
-import { TvSymbolInfoWidgetComponent } from "../../../shared/components/tradingview/tv-symbol-info-widget/tv-symbol-info-widget.component";
 
 @Component({
   selector: "portfolio-price-insights",
@@ -41,6 +42,7 @@ import { TvSymbolInfoWidgetComponent } from "../../../shared/components/tradingv
     PriceMovementChartsComponent,
     StockPriceInfoCardComponent,
     TvSymbolInfoWidgetComponent,
+    StockDayPriceRangeComponent,
   ],
   templateUrl: "./portfolio-price-insights.component.html",
   styleUrls: ["./portfolio-price-insights.component.css"],
@@ -63,7 +65,7 @@ export class PortfolioPriceInsightsComponent implements OnInit {
   selectedPerformanceChart = 1;
   selectedVSChart = 1;
   scaleType = ScaleType;
-  selectedSymbol = "SCHD";
+  selectedSymbol = "AAPL";
 
   performanceChartColorScheme = {
     domain: ["slategrey"],

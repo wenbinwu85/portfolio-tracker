@@ -28,8 +28,7 @@
             (click)="updateWidget(etf.symbol)"
         /> -->
     </div>
-    <div *ngIf="selectedSymbol" class="">
-        <!-- <tv-symbol-info-widget [symbol]="selectedSymbol" /> -->
+    <div *ngIf="selectedSymbol" class="add-margin">
         <ng-container *ngComponentOutlet="getWidget.widget; inputs:{symbol: selectedSymbol};" />
         <stock-price-info-card [stock]="getStock()" />
     </div>
@@ -61,12 +60,12 @@
                 [rotateXAxisTicks]="true"
                 [yScaleMin]="fiftyDayMAChartData[0].value - 5"
             >
-                <ng-template #tooltipTemplate let-model="model">
+                <!-- <ng-template #tooltipTemplate let-model="model">
                     <stock-price-info-card [stock]="getTooltipData(model.name)" />
                     <mat-divider style="margin: none;"/>
                     <span>{{ model.name }}: </span>
                     <span>{{ model.value.toFixed(2) }}%</span>
-                </ng-template>
+                </ng-template> -->
             </ngx-charts-bar-vertical>
 
         </div> 
@@ -85,12 +84,12 @@
                 [rotateXAxisTicks]="true"
                 [yScaleMin]="twoHundredDayMAChartData[0].value - 5"
             >
-                <ng-template #tooltipTemplate let-model="model" class="dark">
+                <!-- <ng-template #tooltipTemplate let-model="model" class="dark">
                     <stock-price-info-card [stock]="getTooltipData(model.name)" />
                     <mat-divider style="margin: none;"/>
                     <span>{{ model.name }}: </span>
                     <span>{{ model.value.toFixed(2) }}%</span>
-                </ng-template>
+                </ng-template> -->
             </ngx-charts-bar-vertical>
         </div> 
     </div>
@@ -110,12 +109,12 @@
             [activeEntries]="['S&P 500']"
             [customColors]="[{name:'S&P 500', value: 'gold'}]"
         >
-            <ng-template #tooltipTemplate let-model="model" class="dark">
+            <!-- <ng-template #tooltipTemplate let-model="model" class="dark">
                 <stock-price-info-card *ngIf="model.name !== 'S&P 500'" [stock]="getTooltipData(model.name)" />
                 <mat-divider *ngIf="model.name !== 'S&P 500'" style="margin: none;" />
                 <span>{{ model.name }}: </span>
                 <span>{{ model.value.toFixed(2) }}%</span>
-            </ng-template>
+            </ng-template> -->
         </ngx-charts-bar-vertical>
     </div>
 

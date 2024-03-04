@@ -1,29 +1,24 @@
 <div *ngIf="technicalInsights$ | async as ti" class="price-info">
   <div class="trend-container">
-    <stock-static-ticker-card [stock]="stock" (click)="openInfoSheet()" />
-    <div class="icon-span">
-      <div *ngIf="ti.instrumentInfo.keyTechnicals.resistance !== undefined">
-        <mat-icon>vertical_align_top</mat-icon>
-        <span>{{ ti.instrumentInfo.keyTechnicals.resistance | currency }}</span>
-      </div>
-      <div *ngIf="ti.instrumentInfo.keyTechnicals.support !== undefined">
-        <mat-icon>vertical_align_bottom</mat-icon>
-        <span>{{ ti.instrumentInfo.keyTechnicals.support | currency }}</span>
-      </div>
+    <div *ngIf="ti.instrumentInfo.keyTechnicals.resistance !== undefined">
+      <span>Resistance:</span>
+      <span>{{ ti.instrumentInfo.keyTechnicals.resistance | currency }}</span>
     </div>
-  </div>
-  <div class="trend-container">
-    <div *ngIf="ti.instrumentInfo.valuation.description !== undefined">
-      <mat-icon>thumbs_up_down</mat-icon>
-      <span [ngStyle]="{ color: getValuationColor(ti.instrumentInfo.valuation.description)}">{{ ti.instrumentInfo.valuation.description }}</span>
-    </div>
-    <div *ngIf="ti.instrumentInfo.valuation.discount !== undefined">
-      <mat-icon>discount</mat-icon>
-      <span [ngStyle]="{ color: getDiscountColor(ti.instrumentInfo.valuation.discount) }">{{ ti.instrumentInfo.valuation.discount }}</span>
+    <div *ngIf="ti.instrumentInfo.keyTechnicals.support !== undefined">
+      <span>Support:</span>
+      <span>{{ ti.instrumentInfo.keyTechnicals.support | currency }}</span>
     </div>
     <div>
-      <mat-icon>dangerous</mat-icon>
+      <span>Stop Loss:</span>
       <span>{{ ti.instrumentInfo.keyTechnicals.stopLoss | currency }}</span>
+    </div>
+    <div *ngIf="ti.instrumentInfo.valuation.description !== undefined">
+      <span>Valuation:</span>
+      <span>{{ ti.instrumentInfo.valuation.description }}</span>
+    </div>
+    <div *ngIf="ti.instrumentInfo.valuation.discount !== undefined">
+      <span>Discount:</span>
+      <span [ngStyle]="{ color: getDiscountColor(ti.instrumentInfo.valuation.discount) }">{{ ti.instrumentInfo.valuation.discount }}</span>
     </div>
   </div>
 

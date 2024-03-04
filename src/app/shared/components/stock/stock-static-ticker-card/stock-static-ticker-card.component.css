@@ -2,12 +2,12 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .symbol-container {
-  padding-left: 10px;
+  padding-left: 1rem;
   align-items: center;
 }
 
@@ -24,7 +24,7 @@
 
 .stock-price,
 .price-change {
-  margin-left: 5px;
+  margin-left: 0.5rem;
 }
 
 .stock-price {
