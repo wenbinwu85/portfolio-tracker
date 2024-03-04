@@ -17,7 +17,7 @@ save_to_local = False
 
 @app.route('/')
 def index():
-    return '<h1>BenStockTracker2 Backend Homepage</h1>'
+    return '<h1>Portfolio Tracker Backend Running...</h1>'
 
 
 @app.route('/test')

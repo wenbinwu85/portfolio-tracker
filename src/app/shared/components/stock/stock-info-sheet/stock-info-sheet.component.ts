@@ -14,9 +14,6 @@ import { TvFinancialsWidgetComponent } from "../../tradingview/tv-financials-wid
 import { TvProfileWidgetComponent } from "../../tradingview/tv-profile-widget/tv-profile-widget.component";
 import { TvSymbolInfoWidgetComponent } from "../../tradingview/tv-symbol-info-widget/tv-symbol-info-widget.component";
 import { TvTechnicalAnalysisWidgetComponent } from "../../tradingview/tv-technical-analysis-widget/tv-technical-analysis-widget.component";
-import { StockCorporateEventsComponent } from "../stock-corporate-events/stock-corporate-events.component";
-import { StockResearchReportsComponent } from "../stock-research-reports/stock-research-reports.component";
-import { StockSecFilingsComponent } from "../stock-sec-filings/stock-sec-filings.component";
 
 @Component({
   selector: "stock-info-sheet",
@@ -33,9 +30,6 @@ import { StockSecFilingsComponent } from "../stock-sec-filings/stock-sec-filings
     MatSlideToggleModule,
     NgFor,
     NgIf,
-    StockCorporateEventsComponent,
-    StockResearchReportsComponent,
-    StockSecFilingsComponent,
     TvAdvancedChartWidgetComponent,
     TvFinancialsWidgetComponent,
     TvProfileWidgetComponent,

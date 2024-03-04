@@ -62,7 +62,7 @@
                 "hiring": 0.8902,
                 "sustainability": 0.7474,
                 "insiderSentiments": 0.24609999999999999,
-                "earningsReports": 0.8543000000000001,
+                "earningsReports": 0.8545,
                 "dividends": 0.4104
             },
             "sector": {
@@ -105,13 +105,13 @@
         },
         "events": [
             {
-                "eventType": "Price Crosses Moving Average",
+                "eventType": "Momentum",
                 "pricePeriod": "D",
-                "tradingHorizon": "I",
-                "tradeType": "L",
+                "tradingHorizon": "S",
+                "tradeType": "S",
                 "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-                "startDate": 1709217000,
-                "endDate": 1709217000
+                "startDate": 1709303400,
+                "endDate": 1709303400
             }
         ],
         "reports": [
@@ -195,17 +195,6 @@
                 ]
             },
             {
-                "id": "3375_Analyst Report_1691061233000",
-                "headHtml": "Analyst Report: Starbucks Corp.",
-                "provider": "Argus Research",
-                "reportDate": "2023-08-03T11:13:53Z",
-                "reportTitle": "Starbucks is a leading retailer of fresh-brewed coffee and branded merchandise. Its brands include Starbucks, Tazo Tea, and Frappuccino. With a market cap of $116.1 billion, SBUX shares are generally considered large-cap growth.",
-                "investmentRating": "Neutral",
-                "tickers": [
-                    "SBUX"
-                ]
-            },
-            {
                 "id": "37251_Market Summary_1691061233000",
                 "headHtml": "Market Digest: NLY, AMD, ETN, FIS, HP, PEG, SBUX, SON, IGT",
                 "provider": "Argus Research",
@@ -221,6 +210,17 @@
                     "HP",
                     "NLY",
                     "ETN"
+                ]
+            },
+            {
+                "id": "3375_Analyst Report_1691061233000",
+                "headHtml": "Analyst Report: Starbucks Corp.",
+                "provider": "Argus Research",
+                "reportDate": "2023-08-03T11:13:53Z",
+                "reportTitle": "Starbucks is a leading retailer of fresh-brewed coffee and branded merchandise. Its brands include Starbucks, Tazo Tea, and Frappuccino. With a market cap of $116.1 billion, SBUX shares are generally considered large-cap growth.",
+                "investmentRating": "Neutral",
+                "tickers": [
+                    "SBUX"
                 ]
             },
             {
@@ -1763,6 +1763,18 @@
                 ]
             },
             {
+                "id": "3375_Analyst Report_1556236800000",
+                "headHtml": "Strong quarter and higher guidance",
+                "provider": "Argus Research",
+                "reportDate": "2019-04-26T00:00:00Z",
+                "reportTitle": "Starbucks is a leading retailer of fresh-brewed coffee and branded merchandise. Its brands include Starbucks, Tazo Tea and Frappuccino. With a market cap of nearly $96 billion, SBUX shares are generally considered large-cap growth.",
+                "targetPrice": 88.0,
+                "investmentRating": "Bullish",
+                "tickers": [
+                    "SBUX"
+                ]
+            },
+            {
                 "id": "23824_Market Update_1556236800000",
                 "headHtml": "Market Update: COF, HSY, LAZ, LRCX, RSG, SBUX, XLNX, TSLA",
                 "provider": "Argus Research",
@@ -1777,18 +1789,6 @@
                     "LRCX",
                     "COF",
                     "HSY"
-                ]
-            },
-            {
-                "id": "3375_Analyst Report_1556236800000",
-                "headHtml": "Strong quarter and higher guidance",
-                "provider": "Argus Research",
-                "reportDate": "2019-04-26T00:00:00Z",
-                "reportTitle": "Starbucks is a leading retailer of fresh-brewed coffee and branded merchandise. Its brands include Starbucks, Tazo Tea and Frappuccino. With a market cap of nearly $96 billion, SBUX shares are generally considered large-cap growth.",
-                "targetPrice": 88.0,
-                "investmentRating": "Bullish",
-                "tickers": [
-                    "SBUX"
                 ]
             },
             {
@@ -1866,21 +1866,21 @@
                 "formType": "DEFA14A"
             },
             {
-                "id": "0001193125-24-038595_829224",
-                "type": "Proxy Statements",
-                "title": "DEFA14A : Proxy Statements",
-                "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
-                "filingDate": 1708041600000,
-                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000829224/000119312524038595/thumbnail.png",
-                "formType": "DEFA14A"
-            },
-            {
                 "id": "0001193125-24-038093_829224",
                 "type": "Proxy Statements",
                 "title": "DEFA14A : Proxy Statements",
                 "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
                 "filingDate": 1708041600000,
                 "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000829224/000119312524038093/thumbnail.png",
+                "formType": "DEFA14A"
+            },
+            {
+                "id": "0001193125-24-038595_829224",
+                "type": "Proxy Statements",
+                "title": "DEFA14A : Proxy Statements",
+                "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
+                "filingDate": 1708041600000,
+                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000829224/000119312524038595/thumbnail.png",
                 "formType": "DEFA14A"
             },
             {
@@ -1983,21 +1983,21 @@
                 "formType": "DEFA14A"
             },
             {
-                "id": "0001193125-24-015488_829224",
-                "type": "Proxy Statements",
-                "title": "DEFA14A : Proxy Statements",
-                "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
-                "filingDate": 1706140800000,
-                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000829224/000119312524015488/thumbnail.png",
-                "formType": "DEFA14A"
-            },
-            {
                 "id": "0001193125-24-015490_829224",
                 "type": "Proxy Statements",
                 "title": "DEFA14A : Proxy Statements",
                 "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
                 "filingDate": 1706140800000,
                 "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000829224/000119312524015490/thumbnail.png",
+                "formType": "DEFA14A"
+            },
+            {
+                "id": "0001193125-24-015488_829224",
+                "type": "Proxy Statements",
+                "title": "DEFA14A : Proxy Statements",
+                "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
+                "filingDate": 1706140800000,
+                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000829224/000119312524015488/thumbnail.png",
                 "formType": "DEFA14A"
             },
             {
@@ -2037,15 +2037,6 @@
                 "formType": "8-K"
             },
             {
-                "id": "0000902664-23-005690_829224",
-                "type": "Proxy Statements",
-                "title": "DFAN14A : Proxy Statements",
-                "description": "Definitive additional proxy soliciting materials filed by non-management including Rule 14(a)(12) material",
-                "filingDate": 1700611200000,
-                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0002001721/000090266423005690/thumbnail.png",
-                "formType": "DFAN14A"
-            },
-            {
                 "id": "0000950142-23-002828_829224",
                 "type": "Proxy Statements",
                 "title": "DEFA14A : Proxy Statements",
@@ -2053,6 +2044,15 @@
                 "filingDate": 1700611200000,
                 "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000829224/000095014223002828/thumbnail.png",
                 "formType": "DEFA14A"
+            },
+            {
+                "id": "0000902664-23-005690_829224",
+                "type": "Proxy Statements",
+                "title": "DFAN14A : Proxy Statements",
+                "description": "Definitive additional proxy soliciting materials filed by non-management including Rule 14(a)(12) material",
+                "filingDate": 1700611200000,
+                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0002001721/000090266423005690/thumbnail.png",
+                "formType": "DFAN14A"
             },
             {
                 "id": "0000902664-23-005676_829224",

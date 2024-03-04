@@ -62,8 +62,8 @@
                 "hiring": 0.9512999999999999,
                 "sustainability": 0.5667,
                 "insiderSentiments": 0.22690000000000002,
-                "earningsReports": 0.8445,
-                "dividends": 0.0821
+                "earningsReports": 0.8447,
+                "dividends": 0.0836
             },
             "sector": {
                 "innovativeness": 0.5,
@@ -109,13 +109,31 @@
                 "eventType": "Commodity Channel Index",
                 "pricePeriod": "D",
                 "tradingHorizon": "S",
-                "tradeType": "U",
+                "tradeType": "S",
                 "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-                "startDate": 1709044200,
-                "endDate": 1709044200
+                "startDate": 1709303400,
+                "endDate": 1709303400
             }
         ],
         "reports": [
+            {
+                "id": "39280_Top/Bottom Insider Activity_1709552011000",
+                "headHtml": "Daily \u2013 Vickers Top Buyers & Sellers for 03/04/2024",
+                "provider": "Argus Research",
+                "reportDate": "2024-03-04T11:33:31Z",
+                "reportTitle": "The Vickers Top Buyers & Sellers is a daily report that identifies the five companies the largest insider purchase transactions based on the dollar value of the transactions as well as the five companies the largest insider sales transactions based on the dollar value of the transactions.",
+                "tickers": [
+                    "SPHR",
+                    "AMN",
+                    "AAPL",
+                    "ACT",
+                    "AMR",
+                    "OKE",
+                    "GTES",
+                    "ABBV",
+                    "PRGO"
+                ]
+            },
             {
                 "id": "39013_Stock Picks_1707134957000",
                 "headHtml": "Weekly Stock List",
@@ -1494,6 +1512,18 @@
                 ]
             },
             {
+                "id": "2660_Analyst Report_1619704690000",
+                "headHtml": "Analyst Report: Apple Inc",
+                "provider": "Argus Research",
+                "reportDate": "2021-04-29T13:58:10Z",
+                "reportTitle": "Apple manufactures smartphones, tablets, PCs, software and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including AirPods, Beats headphones and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
+                "targetPrice": 165.0,
+                "investmentRating": "Bullish",
+                "tickers": [
+                    "AAPL"
+                ]
+            },
+            {
                 "id": "29761_Market Update_1619704690000",
                 "headHtml": "Market Update: AAPL, ADP, AEP, BA, MGM, QCOM, MA, MDLZ",
                 "provider": "Argus Research",
@@ -1508,18 +1538,6 @@
                     "AEP",
                     "ADP",
                     "BA"
-                ]
-            },
-            {
-                "id": "2660_Analyst Report_1619704690000",
-                "headHtml": "Analyst Report: Apple Inc",
-                "provider": "Argus Research",
-                "reportDate": "2021-04-29T13:58:10Z",
-                "reportTitle": "Apple manufactures smartphones, tablets, PCs, software and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including AirPods, Beats headphones and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
-                "targetPrice": 165.0,
-                "investmentRating": "Bullish",
-                "tickers": [
-                    "AAPL"
                 ]
             },
             {
@@ -1881,22 +1899,12 @@
                 "tickers": [
                     "AAPL"
                 ]
-            },
-            {
-                "id": "28060_Market Outlook_1601458385000",
-                "headHtml": "Daily Spotlight: Final 2Q GDP Reading: -31.4%",
-                "provider": "Argus Research",
-                "reportDate": "2020-09-30T09:33:05Z",
-                "reportTitle": "The U.S. Department of Commerce announced that its \"third\" estimate for 2Q20 GDP growth was a rate of -31.4%. This was in line with the previous estimates and with the consensus outlook. The GDP report also includes an inflation gauge, the PCE price index. This index, excluding food and energy, decreased at a deflationary 0.8% pace, well below the Federal Reserve's inflation target of 2.0%. This second quarter should be the bottom, and GDP reports going forward should signal recovery and ultimately growth. But there's a deep hole out of which the economy must climb. Personal Consumption Expenditures, which are the core of the economy, declined at a 33% rate in the quarter, including a 42% drop in spending on services. Domestic investment fell at a 47% rate, including 36% declines in both residential investment and investment into industrial equipment.  (Even investment into Intellectual Products, such as software and entertainment declined 11%.)  The one growth area was federal government spending, which rose at a 16% rate. That support may be fleeting if Congress is unable to reach another bipartisan rescue package.",
-                "tickers": [
-                    "AAPL"
-                ]
             }
         ],
         "sigDevs": [
             {
-                "headline": "Spotify Issues Letter To The European Commission On Apple\u2019S Lack Of DMA Compliance",
-                "date": "2024-03-01"
+                "headline": "Apple Unveils New 13-, 15-Inch Macbook Air With M3 Chip",
+                "date": "2024-03-04"
             }
         ],
         "secReports": [
