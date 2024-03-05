@@ -128,9 +128,9 @@
         "compensationAsOfEpochDate": "2022-12-30 19:00:00",
         "maxAge": 86400
     },
-    "postMarketChangePercent": 0.00112961,
-    "postMarketChange": 0.199997,
-    "postMarketPrice": 177.25,
+    "postMarketChangePercent": 0.000112987,
+    "postMarketChange": 0.0200043,
+    "postMarketPrice": 177.07,
     "regularMarketChangePercent": -0.010396301,
     "regularMarketChange": -1.86,
     "regularMarketPrice": 177.05,
@@ -2469,6 +2469,10 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001104659-24-027585_1551152",
             "exhibits": [
                 {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465924027585/tm246405d5_8k.htm"
+                },
+                {
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001551152/000110465924027585/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001551152/000110465924027585/Financial_Report.xlsx"
@@ -2512,10 +2516,6 @@
                 {
                     "type": "EX-5.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465924027585/tm246405d5_ex5-1.htm"
-                },
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465924027585/tm246405d5_8k.htm"
                 }
             ],
             "maxAge": 1
@@ -2527,10 +2527,6 @@
             "title": "Offering Registrations",
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001104659-24-026638_1551152",
             "exhibits": [
-                {
-                    "type": "S-8",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465924026638/tm246827d1_s8.htm"
-                },
                 {
                     "type": "EX-FILING FEES",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465924026638/tm246827d1_ex-filingfees.htm"
@@ -2550,6 +2546,10 @@
                 {
                     "type": "EX-5.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465924026638/tm246827d1_ex5-1.htm"
+                },
+                {
+                    "type": "S-8",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465924026638/tm246827d1_s8.htm"
                 }
             ],
             "maxAge": 1
@@ -2585,10 +2585,6 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001104659-24-013692_1551152",
             "exhibits": [
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465924013692/tm245657d1_8k.htm"
-                },
-                {
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001551152/000110465924013692/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001551152/000110465924013692/Financial_Report.xlsx"
@@ -2596,6 +2592,10 @@
                 {
                     "type": "EX-99.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465924013692/tm245657d1_99-1.htm"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465924013692/tm245657d1_8k.htm"
                 }
             ],
             "maxAge": 1
@@ -2629,7 +2629,16 @@
             "type": "SC 13G/A",
             "title": "Tender Offer/Acquisition Reports",
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001086364-24-003786_1551152",
-            "exhibits": [],
+            "exhibits": [
+                {
+                    "type": "SC 13G/A",
+                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001364742/000108636424003786/us00287y1091_012524.txt"
+                },
+                {
+                    "type": "SC 13G/A",
+                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001551152/000108636424003786/us00287y1091_012524.txt"
+                }
+            ],
             "maxAge": 1
         },
         {
@@ -2640,6 +2649,10 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001551152-24-000002_1551152",
             "exhibits": [
                 {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115224000002/abbv-20240105.htm"
+                },
+                {
                     "type": "EX-99.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115224000002/abbv-20231231nonxgaapxex991.htm"
                 },
@@ -2647,10 +2660,6 @@
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001551152/000155115224000002/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001551152/000155115224000002/Financial_Report.xlsx"
-                },
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115224000002/abbv-20240105.htm"
                 }
             ],
             "maxAge": 1
@@ -2690,6 +2699,10 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001104659-23-122241_1551152",
             "exhibits": [
                 {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465923122241/tm2331814d1_8k.htm"
+                },
+                {
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001551152/000110465923122241/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001551152/000110465923122241/Financial_Report.xlsx"
@@ -2701,10 +2714,6 @@
                 {
                     "type": "EX-99.2",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465923122241/tm2331814d1_ex99-2.htm"
-                },
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465923122241/tm2331814d1_8k.htm"
                 }
             ],
             "maxAge": 1
@@ -2716,6 +2725,14 @@
             "title": "Notification filed by national security exchange to report the removal from listing and registration of matured",
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0000876661-23-000860_1551152",
             "exhibits": [
+                {
+                    "type": "25-NSE",
+                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0000876661/000087666123000860/xslF25X02/primary_doc.xml"
+                },
+                {
+                    "type": "25-NSE",
+                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001551152/000087666123000860/xslF25X02/primary_doc.xml"
+                },
                 {
                     "type": "EX-99.25",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0000876661/000087666123000860/ruleprovisionnotice.htm"
@@ -2734,10 +2751,6 @@
             "title": "Periodic Financial Reports",
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001551152-23-000045_1551152",
             "exhibits": [
-                {
-                    "type": "10-Q",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115223000045/abbv-20230930.htm"
-                },
                 {
                     "type": "EX-10.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115223000045/abbv-20230930xex101.htm"
@@ -2762,6 +2775,10 @@
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001551152/000155115223000045/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001551152/000155115223000045/Financial_Report.xlsx"
+                },
+                {
+                    "type": "10-Q",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115223000045/abbv-20230930.htm"
                 }
             ],
             "maxAge": 1
@@ -2797,13 +2814,13 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001104659-23-108864_1551152",
             "exhibits": [
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465923108864/tm2328138d1_8k.htm"
-                },
-                {
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001551152/000110465923108864/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001551152/000110465923108864/Financial_Report.xlsx"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465923108864/tm2328138d1_8k.htm"
                 }
             ],
             "maxAge": 1
@@ -2816,6 +2833,10 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001551152-23-000036_1551152",
             "exhibits": [
                 {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115223000036/abbv-20231004.htm"
+                },
+                {
                     "type": "EX-99.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115223000036/abbv-20230930nonxgaapxex991.htm"
                 },
@@ -2823,10 +2844,6 @@
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001551152/000155115223000036/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001551152/000155115223000036/Financial_Report.xlsx"
-                },
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115223000036/abbv-20231004.htm"
                 }
             ],
             "maxAge": 1
@@ -2874,10 +2891,6 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001551152-23-000028_1551152",
             "exhibits": [
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115223000028/abbv-20230727.htm"
-                },
-                {
                     "type": "EX-99.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115223000028/abbv-20230630xexhibit991.htm"
                 },
@@ -2885,6 +2898,10 @@
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001551152/000155115223000028/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001551152/000155115223000028/Financial_Report.xlsx"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115223000028/abbv-20230727.htm"
                 }
             ],
             "maxAge": 1
@@ -2939,16 +2956,16 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001104659-23-075870_1551152",
             "exhibits": [
                 {
+                    "type": "11-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465923075870/tm2319683d1_11k.htm"
+                },
+                {
                     "type": "EX-23.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465923075870/tm2319683d1_ex23-1.htm"
                 },
                 {
                     "type": "EX-23.2",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465923075870/tm2319683d1_ex23-2.htm"
-                },
-                {
-                    "type": "11-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465923075870/tm2319683d1_11k.htm"
                 }
             ],
             "maxAge": 1
@@ -2993,13 +3010,13 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001104659-23-058520_1551152",
             "exhibits": [
                 {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465923058520/tm2315162d1_8k.htm"
+                },
+                {
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001551152/000110465923058520/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001551152/000110465923058520/Financial_Report.xlsx"
-                },
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465923058520/tm2315162d1_8k.htm"
                 }
             ],
             "maxAge": 1
@@ -3011,10 +3028,6 @@
             "title": "Periodic Financial Reports",
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001551152-23-000023_1551152",
             "exhibits": [
-                {
-                    "type": "10-Q",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115223000023/abbv-20230331.htm"
-                },
                 {
                     "type": "EX-10.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115223000023/abbv-20230331xex101.htm"
@@ -3059,6 +3072,10 @@
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001551152/000155115223000023/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001551152/000155115223000023/Financial_Report.xlsx"
+                },
+                {
+                    "type": "10-Q",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115223000023/abbv-20230331.htm"
                 }
             ],
             "maxAge": 1
@@ -3166,17 +3183,22 @@
         {
             "date": "2023-03-28",
             "epochDate": "2023-03-27 20:00:00",
-            "type": "PX14A6G",
-            "title": "Notice of exempt solicitation",
-            "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001214659-23-004251_1551152",
+            "type": "8-K",
+            "title": "Corporate Changes & Voting Matters",
+            "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001104659-23-037749_1551152",
             "exhibits": [
                 {
-                    "type": "PX14A6G",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000121465923004251/r327233px14a6g.htm"
+                    "type": "EXCEL",
+                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001551152/000110465923037749/Financial_Report.xlsx",
+                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001551152/000110465923037749/Financial_Report.xlsx"
                 },
                 {
-                    "type": "PX14A6G",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001696940/000121465923004251/r327233px14a6g.htm"
+                    "type": "EX-10.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465923037749/tm2310687d1_ex10-1.htm"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465923037749/tm2310687d1_8k.htm"
                 }
             ],
             "maxAge": 1
@@ -3236,10 +3258,6 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001551152-23-000011_1551152",
             "exhibits": [
                 {
-                    "type": "10-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115223000011/abbv-20221231.htm"
-                },
-                {
                     "type": "EX-21",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115223000011/abbv-20221231xex21.htm"
                 },
@@ -3271,6 +3289,10 @@
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001551152/000155115223000011/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001551152/000155115223000011/Financial_Report.xlsx"
+                },
+                {
+                    "type": "10-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115223000011/abbv-20221231.htm"
                 }
             ],
             "maxAge": 1
@@ -3281,28 +3303,32 @@
             "type": "SC 13G/A",
             "title": "Tender Offer/Acquisition Reports",
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001306550-23-008705_1551152",
-            "exhibits": [],
+            "exhibits": [
+                {
+                    "type": "SC 13G/A",
+                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001364742/000130655023008705/us00287y1091_021523.txt"
+                },
+                {
+                    "type": "SC 13G/A",
+                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001551152/000130655023008705/us00287y1091_021523.txt"
+                }
+            ],
             "maxAge": 1
         },
         {
             "date": "2023-02-09",
             "epochDate": "2023-02-08 19:00:00",
-            "type": "8-K",
-            "title": "Corporate Changes & Voting Matters",
-            "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001551152-23-000006_1551152",
+            "type": "SC 13G/A",
+            "title": "Tender Offer/Acquisition Reports",
+            "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001104659-23-015040_1551152",
             "exhibits": [
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115223000006/abbv-20230209.htm"
+                    "type": "SC 13G/A",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0000102909/000110465923015040/tv0002-abbvieinc.htm"
                 },
                 {
-                    "type": "EX-99.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115223000006/abbv-20221231xexhibit991.htm"
-                },
-                {
-                    "type": "EXCEL",
-                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001551152/000155115223000006/Financial_Report.xlsx",
-                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001551152/000155115223000006/Financial_Report.xlsx"
+                    "type": "SC 13G/A",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465923015040/tv0002-abbvieinc.htm"
                 }
             ],
             "maxAge": 1
@@ -3315,10 +3341,6 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001104659-23-002452_1551152",
             "exhibits": [
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465923002452/tm232769d1_8k.htm"
-                },
-                {
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001551152/000110465923002452/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001551152/000110465923002452/Financial_Report.xlsx"
@@ -3326,6 +3348,10 @@
                 {
                     "type": "EX-99.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465923002452/tm232769d1_ex99-1.htm"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465923002452/tm232769d1_8k.htm"
                 }
             ],
             "maxAge": 1
@@ -3361,13 +3387,13 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001104659-22-122661_1551152",
             "exhibits": [
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465922122661/tm2231449d1_8k.htm"
-                },
-                {
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001551152/000110465922122661/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001551152/000110465922122661/Financial_Report.xlsx"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465922122661/tm2231449d1_8k.htm"
                 }
             ],
             "maxAge": 1
@@ -3375,25 +3401,38 @@
         {
             "date": "2022-11-04",
             "epochDate": "2022-11-03 20:00:00",
-            "type": "S-8",
-            "title": "Offering Registrations",
-            "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001104659-22-114984_1551152",
+            "type": "10-Q",
+            "title": "Periodic Financial Reports",
+            "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001551152-22-000045_1551152",
             "exhibits": [
                 {
-                    "type": "S-8",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465922114984/tm2229665d1_s8.htm"
+                    "type": "EX-31.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115222000045/abbv-20220930xex311.htm"
                 },
                 {
-                    "type": "EX-FILING FEES",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465922114984/tm2229665d1_ex-filingfees.htm"
+                    "type": "EX-31.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115222000045/abbv-20220930xex312.htm"
                 },
                 {
-                    "type": "EX-23.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465922114984/tm2229665d1_ex23-1.htm"
+                    "type": "EX-32.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115222000045/abbv-20220930xex321.htm"
                 },
                 {
-                    "type": "EX-5.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465922114984/tm2229665d1_ex5-1.htm"
+                    "type": "EX-32.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115222000045/abbv-20220930xex322.htm"
+                },
+                {
+                    "type": "EX-10.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115222000045/abbv-2022930xex102.htm"
+                },
+                {
+                    "type": "EXCEL",
+                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001551152/000155115222000045/Financial_Report.xlsx",
+                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001551152/000155115222000045/Financial_Report.xlsx"
+                },
+                {
+                    "type": "10-Q",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115222000045/abbv-20220930.htm"
                 }
             ],
             "maxAge": 1
@@ -3452,6 +3491,10 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001104659-22-108910_1551152",
             "exhibits": [
                 {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465922108910/tm2228135d1_8k.htm"
+                },
+                {
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001551152/000110465922108910/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001551152/000110465922108910/Financial_Report.xlsx"
@@ -3463,10 +3506,6 @@
                 {
                     "type": "EX-3.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465922108910/tm2228135d1_ex3-1.htm"
-                },
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465922108910/tm2228135d1_8k.htm"
                 }
             ],
             "maxAge": 1
@@ -3479,6 +3518,10 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001551152-22-000034_1551152",
             "exhibits": [
                 {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115222000034/abbv-20221005.htm"
+                },
+                {
                     "type": "EX-99.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115222000034/abbv-20220930nonxgaapxex991.htm"
                 },
@@ -3486,10 +3529,6 @@
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001551152/000155115222000034/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001551152/000155115222000034/Financial_Report.xlsx"
-                },
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115222000034/abbv-20221005.htm"
                 }
             ],
             "maxAge": 1
@@ -3541,10 +3580,6 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001551152-22-000026_1551152",
             "exhibits": [
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115222000026/abbv-20220729.htm"
-                },
-                {
                     "type": "EX-99.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115222000026/abbv-20220630xexhibit991.htm"
                 },
@@ -3552,6 +3587,10 @@
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001551152/000155115222000026/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001551152/000155115222000026/Financial_Report.xlsx"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115222000026/abbv-20220729.htm"
                 }
             ],
             "maxAge": 1
@@ -3564,6 +3603,10 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001551152-22-000023_1551152",
             "exhibits": [
                 {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115222000023/abbv-20220706.htm"
+                },
+                {
                     "type": "EX-99.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115222000023/abbv-20220630nonxgaapxex991.htm"
                 },
@@ -3571,10 +3614,6 @@
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001551152/000155115222000023/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001551152/000155115222000023/Financial_Report.xlsx"
-                },
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115222000023/abbv-20220706.htm"
                 }
             ],
             "maxAge": 1
@@ -3629,12 +3668,12 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001104659-22-073948_1551152",
             "exhibits": [
                 {
-                    "type": "11-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465922073948/tm2219211d2_11k.htm"
-                },
-                {
                     "type": "EX-23.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465922073948/tm2219211d2_ex23-1.htm"
+                },
+                {
+                    "type": "11-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465922073948/tm2219211d2_11k.htm"
                 }
             ],
             "maxAge": 1
@@ -3647,12 +3686,12 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001104659-22-066635_1551152",
             "exhibits": [
                 {
-                    "type": "EX-1.01",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465922066635/tm2216942d1_ex1-01.htm"
-                },
-                {
                     "type": "SD",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465922066635/tm2216942d1_sd.htm"
+                },
+                {
+                    "type": "EX-1.01",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465922066635/tm2216942d1_ex1-01.htm"
                 }
             ],
             "maxAge": 1
@@ -3665,13 +3704,13 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001104659-22-058862_1551152",
             "exhibits": [
                 {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465922058862/tm2215079d1_8k.htm"
+                },
+                {
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001551152/000110465922058862/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001551152/000110465922058862/Financial_Report.xlsx"
-                },
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000110465922058862/tm2215079d1_8k.htm"
                 }
             ],
             "maxAge": 1
@@ -3740,20 +3779,20 @@
             "epochDate": "2022-04-28 20:00:00",
             "type": "8-K",
             "title": "Corporate Changes & Voting Matters",
-            "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001551152-22-000010_1551152",
+            "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001551152-22-000012_1551152",
             "exhibits": [
                 {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115222000012/abbv-20220429.htm"
+                },
+                {
                     "type": "EX-99.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115222000010/abbv-20220331xexhibit991.htm"
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115222000012/abbv-20220331xexhibit991.htm"
                 },
                 {
                     "type": "EXCEL",
-                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001551152/000155115222000010/Financial_Report.xlsx",
-                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001551152/000155115222000010/Financial_Report.xlsx"
-                },
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115222000010/abbv-20220429.htm"
+                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001551152/000155115222000012/Financial_Report.xlsx",
+                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001551152/000155115222000012/Financial_Report.xlsx"
                 }
             ],
             "maxAge": 1
@@ -3957,6 +3996,14 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001551152-22-000007_1551152",
             "exhibits": [
                 {
+                    "type": "10-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115222000007/abbv-20211231.htm"
+                },
+                {
+                    "type": "10-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/1551152/000155115222000007/abbv-20211231.htm"
+                },
+                {
                     "type": "EX-10.3",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115222000007/abbv-20211231xex103.htm"
                 },
@@ -4040,14 +4087,6 @@
                 {
                     "type": "EX-4.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/1551152/000155115222000007/abbv-20211231xex41.htm"
-                },
-                {
-                    "type": "10-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115222000007/abbv-20211231.htm"
-                },
-                {
-                    "type": "10-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/1551152/000155115222000007/abbv-20211231.htm"
                 }
             ],
             "maxAge": 1
@@ -4076,7 +4115,16 @@
             "type": "SC 13G/A",
             "title": "Tender Offer/Acquisition Reports",
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0000834237-22-006222_1551152",
-            "exhibits": [],
+            "exhibits": [
+                {
+                    "type": "SC 13G/A",
+                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001364742/000083423722006222/us00287y1091_020322.txt"
+                },
+                {
+                    "type": "SC 13G/A",
+                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001551152/000083423722006222/us00287y1091_020322.txt"
+                }
+            ],
             "maxAge": 1
         },
         {
@@ -4086,14 +4134,6 @@
             "title": "Corporate Changes & Voting Matters",
             "edgarUrl": "https://finance.yahoo.com/sec-filing/ABBV/0001551152-22-000003_1551152",
             "exhibits": [
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115222000003/abbv-20220202.htm"
-                },
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/1551152/000155115222000003/abbv-20220202.htm"
-                },
                 {
                     "type": "EX-99.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115222000003/abbv-20211231xexhibit991.htm"
@@ -4106,6 +4146,14 @@
                 {
                     "type": "EX-99.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/1551152/000155115222000003/abbv-20211231xexhibit991.htm"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115222000003/abbv-20220202.htm"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/1551152/000155115222000003/abbv-20220202.htm"
                 }
             ],
             "maxAge": 1

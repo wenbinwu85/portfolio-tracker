@@ -18,7 +18,7 @@ import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
 import { DataService } from "../../../../shared/services/data.service";
 import { StockDayPriceRangeComponent } from "../stock-day-price-range/stock-day-price-range.component";
-import { StockStaticTickerCardComponent } from "../stock-static-ticker-card/stock-static-ticker-card.component";
+import { StockNameCardComponent } from "../stock-name-card/stock-name-card.component";
 
 @Component({
   selector: "stock-price-info-card",
@@ -39,7 +39,7 @@ import { StockStaticTickerCardComponent } from "../stock-static-ticker-card/stoc
     NgStyle,
     PercentPipe,
     StockDayPriceRangeComponent,
-    StockStaticTickerCardComponent,
+    StockNameCardComponent,
   ],
 })
 export class StockPriceInfoCardComponent {

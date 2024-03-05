@@ -12,17 +12,17 @@ import {
   MatDialogModule,
   MatDialogRef,
 } from "@angular/material/dialog";
-import { StockInfoSheetComponent } from "../stock-info-sheet/stock-info-sheet.component";
+import { StockDataSheetComponent } from "../stock-data-sheet/stock-data-sheet.component";
 import { HelperService } from "../../../services/helper.service";
 
 @Component({
-  selector: 'stock-static-ticker-card',
-  templateUrl: './stock-static-ticker-card.component.html',
-  styleUrls: ['./stock-static-ticker-card.component.css'],
+  selector: 'stock-name-card',
+  templateUrl: './stock-name-card.component.html',
+  styleUrls: ['./stock-name-card.component.css'],
   standalone: true,
   imports: [CommonModule, CurrencyPipe, PercentPipe, NgStyle, MatDialogModule],
 })
-export class StockStaticTickerCardComponent {
+export class StockNameCardComponent {
   @Input({ required: true }) stock!: any;
   price = 0;
 
@@ -61,10 +61,10 @@ export class StockStaticTickerCardComponent {
       <button mat-button mat-dialog-close>X</button>
     </mat-dialog-actions>
     <mat-dialog-content class="mat-typography">
-      <stock-info-sheet [symbol]="data.symbol" />
+      <stock-data-sheet [symbol]="data.symbol" />
     </mat-dialog-content>`,
   standalone: true,
-  imports: [MatDialogModule, MatButtonModule, StockInfoSheetComponent],
+  imports: [MatDialogModule, MatButtonModule, StockDataSheetComponent],
 })
 export class InfoSheetDialog {
   constructor(

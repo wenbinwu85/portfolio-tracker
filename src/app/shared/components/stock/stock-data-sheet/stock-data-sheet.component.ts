@@ -16,9 +16,9 @@ import { TvSymbolInfoWidgetComponent } from "../../tradingview/tv-symbol-info-wi
 import { TvTechnicalAnalysisWidgetComponent } from "../../tradingview/tv-technical-analysis-widget/tv-technical-analysis-widget.component";
 
 @Component({
-  selector: "stock-info-sheet",
-  templateUrl: "./stock-info-sheet.component.html",
-  styleUrls: ["./stock-info-sheet.component.css"],
+  selector: 'stock-data-sheet',
+  templateUrl: './stock-data-sheet.component.html',
+  styleUrls: ['./stock-data-sheet.component.css'],
   standalone: true,
   imports: [
     CommonModule,
@@ -38,7 +38,7 @@ import { TvTechnicalAnalysisWidgetComponent } from "../../tradingview/tv-technic
     WallmineChartComponent,
   ],
 })
-export class StockInfoSheetComponent implements OnInit {
+export class StockDataSheetComponent implements OnInit {
   @Input({ required: true }) symbol: any;
   stock: any;
   position: any;
@@ -76,24 +76,26 @@ export class StockInfoSheetComponent implements OnInit {
     exchange === "NasdaqGS" ? "Nasdaq" : exchange;
     this.externalLinks = [
       {
-        label: "Yahoo Finance",
-        url: this.yahooLink + this.stock.symbol,
-      },
-      {
-        label: "Wallmine",
-        url: this.wallmineLink + exchange + "/" + this.stock.symbol,
+        label: "StockAnalysis",
+        url: this.stock.quoteType === "EQUITY"
+          ? this.stockAnalysisLink + this.stock.symbol
+          : this.stockAnalysisLinkEtf + this.stock.symbol,
       },
       {
         label: "Seekingalpha",
         url: this.seekingalphaLink + this.stock.symbol,
       },
       {
+        label: "Yahoo Finance",
+        url: this.yahooLink + this.stock.symbol,
+      },
+      {
         label: "Finviz",
         url: this.finvizLink + this.stock.symbol,
       },
       {
-        label: "StockAnalysis",
-        url: this.stock.quoteType === "EQUITY" ? this.stockAnalysisLink + this.stock.symbol : this.stockAnalysisLinkEtf + this.stock.symbol,
+        label: "Wallmine",
+        url: this.wallmineLink + exchange + "/" + this.stock.symbol,
       },
     ];
     this.etfLinks = [

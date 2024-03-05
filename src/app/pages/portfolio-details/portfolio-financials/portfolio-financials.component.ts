@@ -15,7 +15,7 @@ import {
 } from "@angular/material/table";
 import { EChartsOption } from "echarts";
 import { EchartComponent } from "../../../shared/components/charts/echart/echart.component";
-import { StockStaticTickerCardComponent } from "../../../shared/components/stock/stock-static-ticker-card/stock-static-ticker-card.component";
+import { StockNameCardComponent } from "../../../shared/components/stock/stock-name-card/stock-name-card.component";
 import { DataService } from "../../../shared/services/data.service";
 
 @Component({
@@ -32,7 +32,7 @@ import { DataService } from "../../../shared/services/data.service";
     NgFor,
     NgIf,
     NgStyle,
-    StockStaticTickerCardComponent,
+    StockNameCardComponent,
   ],
 })
 export class PortfolioFinancialsComponent implements OnInit, AfterViewInit {

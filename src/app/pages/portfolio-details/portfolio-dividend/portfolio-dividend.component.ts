@@ -17,7 +17,7 @@ import { Color, NgxChartsModule } from "@swimlane/ngx-charts";
 import { EChartsOption } from "echarts";
 import { EchartComponent } from "../../../shared/components/charts/echart/echart.component";
 import { InfoCardComponent } from "../../../shared/components/info-card/info-card.component";
-import { StockStaticTickerCardComponent } from "../../../shared/components/stock/stock-static-ticker-card/stock-static-ticker-card.component";
+import { StockNameCardComponent } from "../../../shared/components/stock/stock-name-card/stock-name-card.component";
 import { DataService } from "../../../shared/services/data.service";
 
 @Component({
@@ -35,7 +35,7 @@ import { DataService } from "../../../shared/services/data.service";
     NgFor,
     NgIf,
     NgxChartsModule,
-    StockStaticTickerCardComponent,
+    StockNameCardComponent,
   ],
 })
 export class PortfolioDividendComponent implements OnInit, AfterViewInit {

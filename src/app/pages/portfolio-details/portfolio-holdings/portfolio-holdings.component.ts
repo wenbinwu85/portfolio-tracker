@@ -24,7 +24,7 @@ import {
 } from "@angular/material/table";
 import { NgxChartsModule } from "@swimlane/ngx-charts";
 import { ExpandedRowComponent } from "../../../shared/components/expanded-row/expanded-row.component";
-import { StockStaticTickerCardComponent } from "../../../shared/components/stock/stock-static-ticker-card/stock-static-ticker-card.component";
+import { StockNameCardComponent } from "../../../shared/components/stock/stock-name-card/stock-name-card.component";
 import { TvSingleQuoteWidgetComponent } from "../../../shared/components/tradingview/tv-single-quote-widget/tv-single-quote-widget.component";
 import { DataService } from "../../../shared/services/data.service";
 
@@ -55,7 +55,7 @@ import { DataService } from "../../../shared/services/data.service";
     NgIf,
     NgStyle,
     NgxChartsModule,
-    StockStaticTickerCardComponent,
+    StockNameCardComponent,
     TitleCasePipe,
     TvSingleQuoteWidgetComponent,
   ],
