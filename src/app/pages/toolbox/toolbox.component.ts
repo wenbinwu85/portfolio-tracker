@@ -5,6 +5,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { TvAdvancedChartWidgetComponent } from "../../shared/components/tradingview/tv-advanced-chart-widget/tv-advanced-chart-widget.component";
 import { DataService } from "../../shared/services/data.service";
+import { TvHeatmapWidgetComponent } from "../../shared/components/tradingview/tv-heatmap-widget/tv-heatmap-widget.component";
 
 @Component({
   selector: "app-toolbox",
@@ -15,6 +16,7 @@ import { DataService } from "../../shared/services/data.service";
     MatIconModule,
     MatSlideToggleModule,
     TvAdvancedChartWidgetComponent,
+    TvHeatmapWidgetComponent,
   ],
   templateUrl: "./toolbox.component.html",
   styleUrls: ["./toolbox.component.css"],

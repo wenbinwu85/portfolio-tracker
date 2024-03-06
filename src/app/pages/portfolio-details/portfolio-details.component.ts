@@ -11,6 +11,7 @@ import { PortfolioEventsComponent } from "../portfolio-details/portfolio-events/
 import { PortfolioFinancialsComponent } from "../portfolio-details/portfolio-financials/portfolio-financials.component";
 import { PortfolioHoldingsComponent } from "../portfolio-details/portfolio-holdings/portfolio-holdings.component";
 import { PortfolioPriceInsightsComponent } from "./portfolio-price-insights/portfolio-price-insights.component";
+import { PortfolioSummaryComponent } from "./portfolio-summary/portfolio-summary.component";
 
 @Component({
   selector: "portfolio-details",
@@ -28,6 +29,7 @@ import { PortfolioPriceInsightsComponent } from "./portfolio-price-insights/port
     PortfolioFinancialsComponent,
     PortfolioHoldingsComponent,
     PortfolioPriceInsightsComponent,
+    PortfolioSummaryComponent,
     RouterLink,
     RouterOutlet,
   ],
@@ -36,6 +38,10 @@ import { PortfolioPriceInsightsComponent } from "./portfolio-price-insights/port
 })
 export class PortfolioDetailsComponent implements OnInit {
   navLinks = [
+    {
+      label: "Summary",
+      route: "summary",
+    },
     {
       label: "Holdings",
       route: "holdings",
@@ -66,6 +72,6 @@ export class PortfolioDetailsComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit() {
-    this.router.navigate(["portfolio", "holdings"]);
+    this.router.navigate(["portfolio", this.navLinks[0].route]);
   }
 }

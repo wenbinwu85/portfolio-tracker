@@ -17,20 +17,20 @@ export class TvAdvancedChartWidgetComponent implements OnInit {
   @Input() watchlist?: string[];
   @Input() theme!: string;
   private widgetParams = {
-    symbol: "SPY",
+    symbol: this.symbol,
     height: "800",
     width: "auto",
     autosize: false,
     timezone: "America/New_York",
     style: "1",
-    range: "YTD",
+    range: "12M",
     theme: "light",
     locale: "en",
     details: true,
     toolbar_bg: "#f1f3f6",
     withdateranges: true,
     hide_side_toolbar: false,
-    allow_symbol_change: false,
+    allow_symbol_change: true,
     watchlist: [],
     studies: ["STD;Bollinger_Bands", "STD;MACD", "STD;RSI"],
     show_popup_button: true,

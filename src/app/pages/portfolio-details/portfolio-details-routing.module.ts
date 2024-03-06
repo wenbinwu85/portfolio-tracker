@@ -10,10 +10,10 @@ const routes: Routes = [
     component: PortfolioDetailsComponent,
     children: [
       {
-        path: "price-insights",
+        path: 'summary',
         loadComponent: () =>
-          import("./portfolio-price-insights/portfolio-price-insights.component").then(
-            (c) => c.PortfolioPriceInsightsComponent
+          import("./portfolio-summary/portfolio-summary.component").then(
+            (c) => c.PortfolioSummaryComponent
           ),
       },
       {
@@ -21,6 +21,13 @@ const routes: Routes = [
         loadComponent: () =>
           import("./portfolio-holdings/portfolio-holdings.component").then(
             (c) => c.PortfolioHoldingsComponent
+          ),
+      },
+      {
+        path: "price-insights",
+        loadComponent: () =>
+          import("./portfolio-price-insights/portfolio-price-insights.component").then(
+            (c) => c.PortfolioPriceInsightsComponent
           ),
       },
       {

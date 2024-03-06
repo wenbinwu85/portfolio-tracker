@@ -19,6 +19,7 @@ export enum SourceScripts {
   TickerTape = "https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js",
   Tickers = "https://s3.tradingview.com/external-embedding/embed-widget-tickers.js",
   Timeline = "https://s3.tradingview.com/external-embedding/embed-widget-timeline.js",
+  Heatmap = "https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js",
 }
 
 @Injectable({
@@ -186,5 +187,27 @@ export class TradingviewService {
   // https://www.tradingview.com/widget-docs/widgets/watchlists/market-quotes/
   marketQuotesWidget(params: string) {
     return this.getScript(SourceScripts.MarketQuotes, params);
+  }
+
+  // https://www.tradingview.com/widget-docs/widgets/heatmaps/stock-heatmap/
+  heatMapWidget() { 
+    const params = `
+    {
+      "exchanges": [],
+      "dataSource": "SPX500",
+      "grouping": "sector",
+      "blockSize": "market_cap_basic",
+      "blockColor": "change",
+      "locale": "en",
+      "symbolUrl": "",
+      "colorTheme": "light",
+      "hasTopBar": true,
+      "isDataSetEnabled": true,
+      "isZoomEnabled": true,
+      "hasSymbolTooltip": true,
+      "width": "100%",
+      "height": "800"
+    }`
+    return this.getScript(SourceScripts.Heatmap, params);
   }
 }

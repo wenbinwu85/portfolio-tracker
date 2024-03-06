@@ -12,7 +12,7 @@
     </th>
     <td mat-cell *matCellDef="let stock">
       <div *ngIf="cidx === 0; else elseBlock" class="table-col-0">
-        <stock-static-ticker-card [stock]="stock" />
+        <stock-name-card [stock]="stock" />
       </div>
       <ng-template #elseBlock>
         <span [ngStyle]="{ color: getColor(cidx, stock)}">{{ cells[cidx](stock) }}</span>
@@ -32,7 +32,7 @@
     </th>
     <td mat-cell *matCellDef="let etf">
       <div *ngIf="cidx === 0; else elseBlock" class="table-col-0">
-        <stock-static-ticker-card [stock]="etf" />
+        <stock-name-card [stock]="etf" />
       </div>
       <ng-template #elseBlock>
         <span *ngIf="cidx < 13">{{ etfCells[cidx](etf) }}</span>

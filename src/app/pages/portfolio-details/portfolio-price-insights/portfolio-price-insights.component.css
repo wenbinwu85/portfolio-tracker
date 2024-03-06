@@ -5,15 +5,12 @@
 }
 
 .logos-container {
+    display: flex;
+    flex-wrap: wrap;
     margin: 0 1rem 1rem 1rem;
 }
 
 .ticker-button {
     align-items: center;
     height: 5rem;
-}
-
-.stock-logo {
-    border-radius: 50%;
-    border: 1px solid slategrey;
 }

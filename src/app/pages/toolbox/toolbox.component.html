@@ -2,19 +2,20 @@
   <mat-expansion-panel-header>
     <mat-panel-title>
       <mat-icon class="">candlestick_chart</mat-icon>
-      <span>Tradingview Chart</span>
+      <span>Advanced Chart</span>
     </mat-panel-title>
   </mat-expansion-panel-header>
-  <tv-advanced-chart-widget [symbol]="'SPY'" [showWatchlist]="true" [watchlist]="symbols" />
+  <tv-advanced-chart-widget symbol="SCHD" [showWatchlist]="true" [watchlist]="symbols" />
 </mat-expansion-panel>
 
 <mat-expansion-panel [expanded]="false">
   <mat-expansion-panel-header>
     <mat-panel-title>
-      <mat-icon class="">auto_graph</mat-icon>
-      <span>Tool B</span>
+      <mat-icon class="">analytics</mat-icon>
+      <span>Heatmap</span>
     </mat-panel-title>
   </mat-expansion-panel-header>
+  <tv-heatmap-widget />
 </mat-expansion-panel>
 
 <mat-expansion-panel [expanded]="false">
@@ -22,6 +23,15 @@
     <mat-panel-title>
       <mat-icon class="">auto_graph</mat-icon>
       <span>Tool C</span>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+</mat-expansion-panel>
+
+<mat-expansion-panel [expanded]="false">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <mat-icon class="">auto_graph</mat-icon>
+      <span>Tool D</span>
     </mat-panel-title>
   </mat-expansion-panel-header>
 </mat-expansion-panel>

@@ -19,10 +19,9 @@ export class HelperService {
     const postMarketEnd = new Date().setHours(20, 0, 0);
     const now = new Date().getTime();
 
-    console.log("sanity check");
+    console.log("--- sanity check --- ");
     console.log("time now:", new Date(now).toLocaleTimeString());
-    console.log("market open:", new Date(regularMarketStart).toLocaleTimeString());
-    console.log("market close:", new Date(regularMarketClose).toLocaleTimeString());
+
 
     if (preMarketStart < now && now < regularMarketStart) {
       console.log("currently in pre-market time");

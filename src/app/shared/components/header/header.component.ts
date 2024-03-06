@@ -34,7 +34,7 @@ import { DataService } from "../../services/data.service";
 export class HeaderComponent implements OnInit {
   navLinks = [
     {
-      label: "Portfolio Summary",
+      label: "Home",
       route: "",
     },
     {

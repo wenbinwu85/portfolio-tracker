@@ -6,9 +6,9 @@ import { MatExpansionModule } from "@angular/material/expansion";
 import { MatIconModule } from "@angular/material/icon";
 import { Color, NgxChartsModule, ScaleType } from "@swimlane/ngx-charts";
 import { DataService } from "../../../services/data.service";
-import { HelperService } from "../../../services/helper.service";
 import { TvMiniChartWidgetComponent } from "../../tradingview/tv-mini-chart-widget/tv-mini-chart-widget.component";
 import { TvTickersWidgetComponent } from "../../tradingview/tv-tickers-widget/tv-tickers-widget.component";
+import { TvMarketQuotesWidgetComponent } from "../../tradingview/tv-market-quotes-widget/tv-market-quotes-widget.component";
 
 @Component({
   selector: "price-movement-charts",
@@ -22,6 +22,7 @@ import { TvTickersWidgetComponent } from "../../tradingview/tv-tickers-widget/tv
     NgxChartsModule,
     TvMiniChartWidgetComponent,
     TvTickersWidgetComponent,
+    TvMarketQuotesWidgetComponent
   ],
   templateUrl: "./price-movement-charts.component.html",
   styleUrls: ["./price-movement-charts.component.css"],
@@ -34,32 +35,29 @@ export class PriceMovementChartsComponent {
   priceChangeChartData: any = [];
   priceRangeChartData: any = [];
   betaChartData: any = [];
+  stockNames: any = [];
   priceRangeColorScheme = { domain: ["steelblue", "skyblue"] } as Color;
   betaColorScheme = { domain: ["palevioletred"] } as Color;
   scaleType = ScaleType;
-  priceKeyPrefix = "";
   selectedChart = 1;
-  winners = "";
-  losers = "";
 
-  constructor(
-    private dataService: DataService,
-    private helperService: HelperService
-  ) {}
+  constructor(private dataService: DataService) {}
 
   ngOnInit() {
     this.portfolioHoldings = this.dataService.portfolioHoldings;
     this.portfolioData = this.dataService.portfolioData;
-    this.priceKeyPrefix = this.helperService.getPriceKeyPrefix();
 
-    this.dataService.portfolioSymbols.forEach((symbol: any) => {
+    this.dataService.portfolioSymbols?.forEach((symbol: any) => {
       const position = this.portfolioHoldings[symbol];
       const stock = this.portfolioData[symbol];
-      this.priceChange +=
-        stock[this.priceKeyPrefix + "Change"] * position.sharesOwned;
+      this.stockNames.push({
+        name: stock.symbol,
+        displayName: stock.longName
+      });
+      this.priceChange += stock.regularMarketChange * position.sharesOwned;
       this.priceChangeChartData.push({
         name: stock.symbol,
-        value: stock[this.priceKeyPrefix + "ChangePercent"] * 100 || 0,
+        value: stock.regularMarketChangePercent * 100 || 0,
       });
 
       this.priceRangeChartData.push({
@@ -83,6 +81,11 @@ export class PriceMovementChartsComponent {
         });
       }
     });
+    this.stockNames.sort((a: any, b: any) => {
+      const val1 = this.portfolioData[a.name].regularMarketChangePercent;
+      const val2 = this.portfolioData[b.name].regularMarketChangePercent;
+      return val1 - val2;
+    });
     this.priceChangeChartData.sort((a: any, b: any) => a.value - b.value);
     this.priceRangeChartData.sort(
       (a: any, b: any) =>
@@ -91,27 +94,6 @@ export class PriceMovementChartsComponent {
         (b.series[0].value + b.series[1].value)
     );
     this.betaChartData.sort((a: any, b: any) => a.value - b.value);
-
-    let winnerStocks: any = [];
-    [...this.priceChangeChartData]
-      .reverse()
-      .slice(0, 5)
-      .forEach((s: any) => {
-        winnerStocks.push({
-          title: this.portfolioData[s.name].shortName,
-          proName: s.name,
-        });
-      });
-    this.winners = JSON.stringify(winnerStocks);
-
-    let loserStocks: any = [];
-    [...this.priceChangeChartData].slice(0, 5).forEach((s: any) => {
-      loserStocks.push({
-        title: this.portfolioData[s.name].shortName,
-        proName: s.name,
-      });
-    });
-    this.losers = JSON.stringify(loserStocks);
   }
 
   getDayPriceChangeColor() {
@@ -120,7 +102,7 @@ export class PriceMovementChartsComponent {
 
   getPriceChangeChartColor = (symbol: any) => {
     const stock = this.portfolioData[symbol];
-    const price = stock[this.priceKeyPrefix + "ChangePercent"];
+    const price = stock.regularMarketChangePercent;
     return price > 0 ? "olivedrab" : "chocolate";
   };
 

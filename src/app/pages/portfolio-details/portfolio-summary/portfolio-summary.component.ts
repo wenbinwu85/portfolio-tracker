@@ -6,7 +6,7 @@ import { MatExpansionModule } from "@angular/material/expansion";
 import { MatIconModule } from "@angular/material/icon";
 import { MatSliderModule } from "@angular/material/slider";
 import { MatTooltipModule } from "@angular/material/tooltip";
-import { NgxChartsModule, ScaleType } from "@swimlane/ngx-charts";
+import { Color, NgxChartsModule, ScaleType } from "@swimlane/ngx-charts";
 import { InfoCardComponent } from "../../../shared/components/info-card/info-card.component";
 import { DataService } from "../../../shared/services/data.service";
 
@@ -33,14 +33,13 @@ export class PortfolioSummaryComponent implements OnInit {
   portfolioHoldings: any;
   portfolioData: any;
   portfolioSymbols: any;
-  portfolioYtdGain = 12345; // this.dataService.getPortfolioYtdGain();
-  ytdDividendEarned = 12345; // this.dataService.getPortfolioYtdDividend();
   portfolioValueTarget = 0;
   portfolioValueGoalPercentage = 0;
   passiveIncomeTarget = 12000;
   passiveIncomeGoalPercentage = 0;
   sectorsData: any = [];
   portfolioPercentBarChartData: any = [];
+  portfolioPercentBarChartColorScheme = { domain: ['lightsteelblue'] } as Color;
   allPortfolioPercentData: any = [];
   marketValueBarChartData: any[] = [];
   allMarketValueData: any[] = [];
@@ -213,13 +212,9 @@ export class PortfolioSummaryComponent implements OnInit {
 
   getTooltip(kind: string) {
     if (kind === "passive") {
-      return `Progress: ${(this.passiveIncomeGoalPercentage * 100).toFixed(
-        4
-      )}%`;
+      return `Progress: ${(this.passiveIncomeGoalPercentage * 100).toFixed(4)}%`;
     } else if (kind === "investment") {
-      return `Progress: ${(this.portfolioValueGoalPercentage * 100).toFixed(
-        4
-      )}%`;
+      return `Progress: ${(this.portfolioValueGoalPercentage * 100).toFixed(4)}%`;
     } else {
       return "";
     }

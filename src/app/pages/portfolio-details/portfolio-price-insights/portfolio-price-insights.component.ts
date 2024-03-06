@@ -1,5 +1,5 @@
 import { CommonModule } from "@angular/common";
-import { ChangeDetectorRef, Component, OnInit, Renderer2 } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
 import { MatChipsModule } from "@angular/material/chips";
 import { MatDividerModule } from "@angular/material/divider";
@@ -68,22 +68,18 @@ export class PortfolioPriceInsightsComponent implements OnInit {
   selectedSymbol = "AAPL";
 
   performanceChartColorScheme = {
-    domain: ["slategrey"],
+    domain: ["lightsteelblue"],
   } as Color;
 
   fiftyTwoWeekChartColorScheme = {
-    domain: ["slategrey"],
+    domain: ["lightsteelblue"],
   } as Color;
 
   targetPriceChartColorScheme = {
-    domain: ["slategrey"],
+    domain: ["lightsteelblue"],
   } as Color;
 
-  constructor(
-    private dataService: DataService,
-    private renderer: Renderer2,
-    private cdr: ChangeDetectorRef
-  ) {}
+  constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
     this.sortedStocks = Object.values(this.dataService.portfolioData)
@@ -209,8 +205,8 @@ export class PortfolioPriceInsightsComponent implements OnInit {
   }
 
   getStock() {
-    return this.sortedStocks.filter(
-      (stock) => stock.symbol === this.selectedSymbol
+    return Object.values(this.dataService.portfolioData).filter(
+      (stock: any) => stock.symbol === this.selectedSymbol
     )[0];
   }
 }

@@ -1,16 +1,12 @@
-.charts {
-  margin-top: 50px;
-}
-
 .table-actions {
   display: flex;
   justify-content: right;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 1.5rem;
 }
 
 mat-slide-toggle {
-  margin-right: 20px;
+  margin-right: 1.5rem;
 }
 
 tr.expanded-stock-row {
@@ -27,8 +23,8 @@ tr.expanded-stock-row {
 
 .single-quote-widget {
   z-index: 1000;
-  height: 90px;
-  margin-right: 20px;
+  height: 5.5rem;
+  margin-right: 1.25rem;
 }
 
 td.mat-mdc-cell:first-of-type td.mat-mdc-footer-cell:first-of-type {

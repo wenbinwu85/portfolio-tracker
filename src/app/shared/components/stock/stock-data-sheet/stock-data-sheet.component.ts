@@ -115,10 +115,6 @@ export class StockDataSheetComponent implements OnInit {
       this.stock.twoHundredDayAverage > this.stock.previousClose;
   }
 
-  goBack() {
-    this.location.back();
-  }
-
   selectChart(chatId: number) {
     this.selectedChart = chatId;
   }

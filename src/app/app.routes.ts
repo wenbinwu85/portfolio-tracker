@@ -32,9 +32,9 @@ export const routes: Routes = [
   {
     path: "stock/:symbol",
     loadComponent: () =>
-      import(
-./shared/components/stock/stock-data-sheet/stock-data-sheet.component"
-      ).then((c) => c.StockDataSheetComponent),
+      import("./shared/components/stock/stock-data-sheet/stock-data-sheet.component").then(
+        (c) => c.StockDataSheetComponent
+      ),
   },
   {
     path: "**",

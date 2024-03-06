@@ -1,4 +1,4 @@
-<section *ngIf="portfolioHoldings" class="summary-cards">
+<section *ngIf="portfolioHoldings" class="summary-cards-container">
   <info-card
     icon="numbers"
     [value]="portfolioHoldings.portfolioPositions"
@@ -56,22 +56,21 @@
 
 <mat-divider />
 
-<button 
-  *ngIf="showResetButton" 
-  mat-mini-fab 
-  color="accent" 
-  class="reset-button" 
-  (click)="filterBySector({name: 'all'})"
->
-  <mat-icon>restart_alt</mat-icon>
-</button> 
-
 <section class="add-border">
   <div class="title">
     <span>Portfolio Allocation</span>
   </div>
+  <button 
+    *ngIf="showResetButton" 
+    mat-mini-fab 
+    color="warn" 
+    class="reset-button" 
+    (click)="filterBySector({name: 'all'})"
+  >
+    <mat-icon>restart_alt</mat-icon>
+  </button> 
 
-  <section class="charts-flex add-margin">
+  <section class="add-flex">
     <div class="chart-container">
       <ngx-charts-pie-grid
         [scheme]="'picnic'"
@@ -83,7 +82,7 @@
     </div>
     <div class="chart-container">
       <ngx-charts-bar-vertical
-        [scheme]="'picnic'"
+        [scheme]="portfolioPercentBarChartColorScheme"
         [animations]="true"
         [results]="portfolioPercentBarChartData"
         [xAxis]="true"
@@ -100,7 +99,7 @@
   <section class="goal-container">
     <h1>
       <b>Portfolio Value Goal:</b>
-      <span class="goal">{{ portfolioValueGoalPercentage | percent : ".2" }}</span>
+      <span class="goal-title">{{ portfolioValueGoalPercentage | percent : ".2" }}</span>
     </h1>
   
     <mat-slider
@@ -108,7 +107,7 @@
       [max]="portfolioValueTarget"
       [step]="1000"
       [showTickMarks]="true"
-      [color]="'primary'"
+      [color]="'accent'"
     >
       <input
         matSliderThumb
@@ -117,7 +116,7 @@
         matTooltipPosition="above"
       />
     </mat-slider>
-    <div class="labels">
+    <div class="goal-labels">
       <h1>{{ "0" | currency }}</h1>
       <h1>{{ portfolioValueTarget | currency }}</h1>
     </div>
@@ -130,11 +129,10 @@
         <span>Portfolio Value</span>
       </mat-panel-title>
     </mat-expansion-panel-header>
-
-    <section class="charts-flex">
+    <section class="add-flex">
       <div class="chart-container">
         <ngx-charts-bar-vertical-stacked
-          [scheme]="'ocean'"
+          [scheme]="'picnic'"
           [animations]="true"
           [results]="marketValueBarChartData"
           [xAxis]="true"
@@ -147,7 +145,7 @@
       </div>
       <div class="chart-container">
         <ngx-charts-bar-vertical
-          [scheme]="'air'"
+          [scheme]="'picnic'"
           [animations]="true"
           [results]="unrealizedGainBarChartData"
           [xAxis]="true"
@@ -165,7 +163,7 @@
   <section class="goal-container">
     <h1>
       <b>Passive Income Goal:</b>
-      <span class="goal">{{ passiveIncomeGoalPercentage | percent : ".2" }}</span>
+      <span class="goal-title">{{ passiveIncomeGoalPercentage | percent : ".2" }}</span>
     </h1>
   
     <mat-slider
@@ -173,7 +171,7 @@
       [max]="passiveIncomeTarget"
       [step]="120"
       [showTickMarks]="true"
-      [color]="'primary'"
+      [color]="'accent'"
     >
       <input
         matSliderThumb
@@ -182,7 +180,7 @@
         matTooltipPosition="above"
       />
     </mat-slider>
-    <div class="labels">
+    <div class="goal-labels">
       <h1>{{ "0" | currency }}</h1>
       <h1>{{ passiveIncomeTarget | currency }}</h1>
     </div>
@@ -195,8 +193,7 @@
         <span>Passive Income</span>
       </mat-panel-title>
     </mat-expansion-panel-header>
-
-    <section class="charts-flex">
+    <section class="add-flex">
       <div class="chart-container">
         <ngx-charts-bar-vertical
           [scheme]="'natural'"
