@@ -46,6 +46,10 @@ export class HeaderComponent implements OnInit {
       route: "/chart-wall",
     },
     {
+      label: "Watchlists",
+      route: "/watchlists",
+    },
+    {
       label: "Toolbox",
       route: "/toolbox",
     },

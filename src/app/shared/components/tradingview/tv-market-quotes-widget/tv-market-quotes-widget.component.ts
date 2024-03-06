@@ -14,27 +14,27 @@ import { TradingviewService } from '../../../services/tradingview.service';
   standalone: true,
 })
 export class TvMarketQuotesWidgetComponent implements AfterViewInit {
-  @Input() stockNames: any;
+  @Input({ required: true }) stockNames: any;
+  @Input({ required: true }) height!: any 
   @ViewChild("marketQuotesWidget") marketQuotesWidget!: ElementRef;
-  params: any = {
-    width: '100%',
-    height: 820,
-    symbolsGroups: [
-      {
-        name: "Portfolio",
-        symbols: [] as any,
-      },
-    ],
-    showSymbolLogo: true,
-    isTransparent: false,
-    colorTheme: "light",
-    locale: "en",
-  };
-
+  params: any;
   constructor(private tradingviewService: TradingviewService) {}
 
   ngOnInit() {
-    this.params.symbolsGroups[0].symbols = this.stockNames;
+    this.params = {
+      width: '100%',
+      height: this.height,
+      symbolsGroups: [
+        {
+          name: "Portfolio",
+          symbols: this.stockNames,
+        },
+      ],
+      showSymbolLogo: true,
+      isTransparent: false,
+      colorTheme: "light",
+      locale: "en",
+    };
     this.params = JSON.stringify(this.params);
   }
 

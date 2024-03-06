@@ -52,7 +52,7 @@ export class PriceMovementChartsComponent {
       const stock = this.portfolioData[symbol];
       this.stockNames.push({
         name: stock.symbol,
-        displayName: stock.longName
+        displayName: `${stock.longName} - ${stock.symbol} `
       });
       this.priceChange += stock.regularMarketChange * position.sharesOwned;
       this.priceChangeChartData.push({

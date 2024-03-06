@@ -137,7 +137,7 @@ export class DataService {
    * @returns {Observable} load a single stock data from local backend data folder.
    */
   public loadStockDataFromDataFolder(symbol: string): Observable<JSON> {
-    const path = `${this.backendDataPath}${symbol}.json`;
+    const path = `${this.backendDataPath}${symbol.toLowerCase()}.json`;
     const options = { ...this.httpOptions, responseType: "json" };
     return this.wrapHttpCall(path, options);
   }

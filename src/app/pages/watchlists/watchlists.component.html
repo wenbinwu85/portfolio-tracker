@@ -1,0 +1,19 @@
+<mat-expansion-panel *ngIf="magnificent7PlusWatchlist.length === magnificent7Symbols.length" [expanded]="false">
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon>list</mat-icon>
+          <span>Magnificiant 7+</span>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+    <tv-market-quotes-widget [stockNames]="magnificent7PlusWatchlist" [height]="400"/>
+</mat-expansion-panel>
+
+<mat-expansion-panel *ngIf="potentialBuysWatchlist.length === potentialBuysSymbols.length" [expanded]="false">
+  <mat-expansion-panel-header>
+      <mat-panel-title>
+        <mat-icon>list</mat-icon>
+        <span>Potential Buys</span>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+  <tv-market-quotes-widget [stockNames]="potentialBuysWatchlist" [height]="400"/>
+</mat-expansion-panel>
