@@ -52,24 +52,30 @@ export class WatchlistsComponent implements OnInit {
 
   ngOnInit() {
     this.magnificent7Symbols.forEach((symbol) => {
-      try {
-        this.dataService
-          .loadStockDataFromDataFolder(symbol)
-          .subscribe((stock: any) => {
-            this.magnificent7PlusWatchlist.push({
-              name: stock.symbol,
-              displayName: `${stock.longName} - ${stock.symbol}`,
-              changePercent: stock.regularMarketChangePercent,
-            });
-          });
-      } catch {
-        this.dataService.getStockData(symbol, true).subscribe((stock: any) => {
+      this.dataService
+        .loadStockDataFromDataFolder(symbol)
+        .pipe(
+          map((response: any) => {
+            if (response.status === 500) {
+              throw `Api Error: ${symbol} - ${response.status} - ${response.message}`;
+            } else {
+              return response;
+            }
+          }),
+          catchError((err: any) => {
+            console.log(err);
+            return this.dataService
+              .getStockData(symbol, true)
+              .pipe(map((response) => response[symbol]));
+          })
+        )
+        .subscribe((stock: any) => {
           this.magnificent7PlusWatchlist.push({
-            name: stock[symbol].symbol,
-            displayName: stock[symbol].longName,
+            name: stock.symbol,
+            displayName: `${stock.longName} - ${stock.symbol}`,
+            changePercent: stock.regularMarketChangePercent,
           });
         });
-      }
     });
     this.magnificent7PlusWatchlist.sort(
       (a: any, b: any) => a.changePercent - b.changePercent
@@ -79,23 +85,21 @@ export class WatchlistsComponent implements OnInit {
       this.dataService
         .loadStockDataFromDataFolder(symbol)
         .pipe(
-          map((response: any) => { 
-            console.log('WTF!')
-            console.table(response)
+          map((response: any) => {
             if (response.status === 500) {
-              throw ('Api Error')
-            } else { 
-              return response
+              throw `Api Error: ${symbol} - ${response.status} - ${response.message}`;
+            } else {
+              return response;
             }
           }),
           catchError((err: any) => {
-            console.log("Error:", err)
-            return this.dataService.getStockData(symbol, true)
+            console.log(err);
+            return this.dataService
+              .getStockData(symbol, true)
+              .pipe(map((response) => response[symbol]));
           })
         )
         .subscribe((stock: any) => {
-          console.log('diu')
-          console.log(stock.symbol, stock.longName)
           this.potentialBuysWatchlist.push({
             name: stock.symbol,
             displayName: `${stock.longName} - ${stock.symbol}`,
