@@ -111,48 +111,48 @@
         "compensationAsOfEpochDate": "2022-12-30 19:00:00",
         "maxAge": 86400
     },
-    "postMarketChangePercent": 0.0024204599,
-    "postMarketChange": 0.0699997,
-    "postMarketPrice": 28.99,
-    "regularMarketChangePercent": -0.026917875,
-    "regularMarketChange": -0.79999924,
-    "regularMarketPrice": 28.92,
-    "regularMarketDayHigh": 29.645,
-    "regularMarketDayLow": 28.835,
-    "regularMarketVolume": 6055834,
-    "averageDailyVolume10Day": 7149770,
-    "averageDailyVolume3Month": 6481801,
-    "regularMarketPreviousClose": 29.72,
-    "regularMarketOpen": 29.61,
+    "postMarketChangePercent": 0.0,
+    "postMarketChange": 0.0,
+    "postMarketPrice": 28.94,
+    "regularMarketChangePercent": 0.0006915788,
+    "regularMarketChange": 0.020000458,
+    "regularMarketPrice": 28.94,
+    "regularMarketDayHigh": 29.14,
+    "regularMarketDayLow": 28.78,
+    "regularMarketVolume": 4695743,
+    "averageDailyVolume10Day": 7074250,
+    "averageDailyVolume3Month": 6469888,
+    "regularMarketPreviousClose": 28.92,
+    "regularMarketOpen": 29.11,
     "exchange": "NYQ",
     "exchangeName": "NYSE",
     "quoteType": "EQUITY",
     "symbol": "VICI",
     "shortName": "VICI Properties Inc.",
     "longName": "VICI Properties Inc.",
-    "marketCap": 30154305536,
-    "previousClose": 29.72,
-    "open": 29.61,
-    "dayLow": 28.835,
-    "dayHigh": 29.645,
+    "marketCap": 30175160320,
+    "previousClose": 28.92,
+    "open": 29.11,
+    "dayLow": 28.78,
+    "dayHigh": 29.14,
     "dividendRate": 1.66,
-    "dividendYield": 0.0559,
+    "dividendYield": 0.0574,
     "exDividendDate": "2023-12-19 19:00:00",
     "payoutRatio": 0.6518,
     "fiveYearAvgDividendYield": 4.93,
     "beta": 0.921,
-    "trailingPE": 12.049999,
-    "forwardPE": 10.83146,
-    "volume": 6055834,
-    "averageVolume": 6481801,
-    "averageVolume10days": 7149770,
+    "trailingPE": 11.716599,
+    "forwardPE": 10.838951,
+    "volume": 4695743,
+    "averageVolume": 6469888,
+    "averageVolume10days": 7074250,
     "fiftyTwoWeekLow": 26.625,
     "fiftyTwoWeekHigh": 34.185,
-    "priceToSalesTrailing12Months": 8.345438,
-    "fiftyDayAverage": 30.5552,
-    "twoHundredDayAverage": 30.43545,
+    "priceToSalesTrailing12Months": 8.351211,
+    "fiftyDayAverage": 30.5112,
+    "twoHundredDayAverage": 30.42255,
     "trailingAnnualDividendRate": 1.61,
-    "trailingAnnualDividendYield": 0.054172277,
+    "trailingAnnualDividendYield": 0.055670816,
     "enterpriseValue": 47671738368,
     "profitMargins": 0.69564,
     "floatShares": 1038112589,
@@ -168,22 +168,22 @@
     "shortPercentOfFloat": 0.0286,
     "impliedSharesOutstanding": 1042680000,
     "bookValue": 24.222,
-    "priceToBook": 1.1939559,
+    "priceToBook": 1.1947817,
     "lastFiscalYearEnd": "2023-12-30 19:00:00",
     "nextFiscalYearEnd": "2024-12-30 19:00:00",
     "mostRecentQuarter": "2023-12-30 19:00:00",
     "earningsQuarterlyGrowth": 0.238,
     "netIncomeToCommon": 2513540096,
-    "trailingEps": 2.4,
+    "trailingEps": 2.47,
     "forwardEps": 2.67,
     "pegRatio": 1.81,
     "enterpriseToRevenue": 13.194,
     "enterpriseToEbitda": 14.263,
-    "52WeekChange": -0.119668245,
-    "SandP52WeekChange": 0.2853049,
+    "52WeekChange": -0.12944007,
+    "SandP52WeekChange": 0.29612947,
     "lastDividendValue": 0.415,
     "lastDividendDate": 1703030400,
-    "currentPrice": 28.92,
+    "currentPrice": 28.94,
     "targetHighPrice": 43.0,
     "targetLowPrice": 32.0,
     "targetMeanPrice": 36.05,
@@ -561,20 +561,20 @@
     "indexTrend": {
         "maxAge": 1,
         "symbol": "SP5",
-        "peRatio": 14.5154,
-        "pegRatio": 1.78136,
+        "peRatio": 14.5787,
+        "pegRatio": 1.854,
         "estimates": [
             {
                 "period": "0q",
-                "growth": 0.036
+                "growth": 0.022
             },
             {
                 "period": "+1q",
-                "growth": 0.096
+                "growth": 0.1
             },
             {
                 "period": "0y",
-                "growth": 0.05
+                "growth": 0.045
             },
             {
                 "period": "+1y",
@@ -582,7 +582,7 @@
             },
             {
                 "period": "+5y",
-                "growth": 0.103926
+                "growth": 0.103042
             },
             {
                 "period": "-5y"
@@ -2429,43 +2429,195 @@
         {
             "date": "2024-02-22",
             "epochDate": "2024-02-21 19:00:00",
-            "type": "8-K",
-            "title": "Corporate Changes & Voting Matters",
-            "edgarUrl": "https://finance.yahoo.com/sec-filing/VICI/0001705696-24-000032_1705696",
+            "type": "10-K",
+            "title": "Periodic Financial Reports",
+            "edgarUrl": "https://finance.yahoo.com/sec-filing/VICI/0001705696-24-000033_1705696",
             "exhibits": [
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569624000032/vici-20240222.htm"
+                    "type": "EX-4.42",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569624000033/descriptionofregisteredsec.htm"
                 },
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569624000032/vici-20240222.htm"
+                    "type": "EX-4.10",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569624000033/exhibit410viciexchangeoffe.htm"
+                },
+                {
+                    "type": "EX-4.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569624000033/exhibit42viciexchangeoffer.htm"
+                },
+                {
+                    "type": "EX-4.4",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569624000033/exhibit44viciexchangeoffer.htm"
+                },
+                {
+                    "type": "EX-4.6",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569624000033/exhibit46viciexchangeoffer.htm"
+                },
+                {
+                    "type": "EX-4.8",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569624000033/exhibit48viciexchangeoffer.htm"
                 },
                 {
                     "type": "EXCEL",
-                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001705696/000170569624000032/Financial_Report.xlsx",
-                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001705696/000170569624000032/Financial_Report.xlsx"
+                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001705696/000170569624000033/Financial_Report.xlsx",
+                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001705696/000170569624000033/Financial_Report.xlsx"
                 },
                 {
-                    "type": "EX-99.2",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569624000032/vici4q23financialsupplem.htm"
+                    "type": "EX-97.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569624000033/vici-amendedclawbackpolicy.htm"
                 },
                 {
-                    "type": "EX-99.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569624000032/viciq42023earningsrelease.htm"
+                    "type": "EX-10.48",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569624000033/vici-amendedpsuagreementfe.htm"
+                },
+                {
+                    "type": "EX-10.47",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569624000033/vici-amendedrsaagreementfe.htm"
+                },
+                {
+                    "type": "EX-21.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569624000033/vici202310-kexhibit211.htm"
+                },
+                {
+                    "type": "EX-21.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569624000033/vici202310-kexhibit212.htm"
+                },
+                {
+                    "type": "EX-23.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569624000033/vici202310-kexhibit231.htm"
+                },
+                {
+                    "type": "EX-23.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569624000033/vici202310-kexhibit232.htm"
+                },
+                {
+                    "type": "EX-31.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569624000033/vici202310-kexhibit311.htm"
+                },
+                {
+                    "type": "EX-31.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569624000033/vici202310-kexhibit312.htm"
+                },
+                {
+                    "type": "EX-31.3",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569624000033/vici202310-kexhibit313.htm"
+                },
+                {
+                    "type": "EX-31.4",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569624000033/vici202310-kexhibit314.htm"
+                },
+                {
+                    "type": "EX-32.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569624000033/vici202310-kexhibit321.htm"
+                },
+                {
+                    "type": "EX-32.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569624000033/vici202310-kexhibit322.htm"
+                },
+                {
+                    "type": "EX-32.3",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569624000033/vici202310-kexhibit323.htm"
+                },
+                {
+                    "type": "EX-32.4",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569624000033/vici202310-kexhibit324.htm"
+                },
+                {
+                    "type": "EX-4.42",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569624000033/descriptionofregisteredsec.htm"
+                },
+                {
+                    "type": "EX-4.10",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569624000033/exhibit410viciexchangeoffe.htm"
+                },
+                {
+                    "type": "EX-4.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569624000033/exhibit42viciexchangeoffer.htm"
+                },
+                {
+                    "type": "EX-4.4",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569624000033/exhibit44viciexchangeoffer.htm"
+                },
+                {
+                    "type": "EX-4.6",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569624000033/exhibit46viciexchangeoffer.htm"
+                },
+                {
+                    "type": "EX-4.8",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569624000033/exhibit48viciexchangeoffer.htm"
                 },
                 {
                     "type": "EXCEL",
-                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001920791/000170569624000032/Financial_Report.xlsx",
-                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001920791/000170569624000032/Financial_Report.xlsx"
+                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001920791/000170569624000033/Financial_Report.xlsx",
+                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001920791/000170569624000033/Financial_Report.xlsx"
                 },
                 {
-                    "type": "EX-99.2",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569624000032/vici4q23financialsupplem.htm"
+                    "type": "EX-97.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569624000033/vici-amendedclawbackpolicy.htm"
                 },
                 {
-                    "type": "EX-99.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569624000032/viciq42023earningsrelease.htm"
+                    "type": "EX-10.48",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569624000033/vici-amendedpsuagreementfe.htm"
+                },
+                {
+                    "type": "EX-10.47",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569624000033/vici-amendedrsaagreementfe.htm"
+                },
+                {
+                    "type": "EX-21.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569624000033/vici202310-kexhibit211.htm"
+                },
+                {
+                    "type": "EX-21.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569624000033/vici202310-kexhibit212.htm"
+                },
+                {
+                    "type": "EX-23.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569624000033/vici202310-kexhibit231.htm"
+                },
+                {
+                    "type": "EX-23.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569624000033/vici202310-kexhibit232.htm"
+                },
+                {
+                    "type": "EX-31.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569624000033/vici202310-kexhibit311.htm"
+                },
+                {
+                    "type": "EX-31.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569624000033/vici202310-kexhibit312.htm"
+                },
+                {
+                    "type": "EX-31.3",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569624000033/vici202310-kexhibit313.htm"
+                },
+                {
+                    "type": "EX-31.4",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569624000033/vici202310-kexhibit314.htm"
+                },
+                {
+                    "type": "EX-32.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569624000033/vici202310-kexhibit321.htm"
+                },
+                {
+                    "type": "EX-32.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569624000033/vici202310-kexhibit322.htm"
+                },
+                {
+                    "type": "EX-32.3",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569624000033/vici202310-kexhibit323.htm"
+                },
+                {
+                    "type": "EX-32.4",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569624000033/vici202310-kexhibit324.htm"
+                },
+                {
+                    "type": "10-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569624000033/vici-20231231.htm"
+                },
+                {
+                    "type": "10-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569624000033/vici-20231231.htm"
                 }
             ],
             "maxAge": 1
@@ -2476,16 +2628,7 @@
             "type": "SC 13G/A",
             "title": "Tender Offer/Acquisition Reports",
             "edgarUrl": "https://finance.yahoo.com/sec-filing/VICI/0000093751-24-000406_1705696",
-            "exhibits": [
-                {
-                    "type": "SC 13G/A",
-                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0000093751/000009375124000406/VICI_Properties_Inc.txt"
-                },
-                {
-                    "type": "SC 13G/A",
-                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001705696/000009375124000406/VICI_Properties_Inc.txt"
-                }
-            ],
+            "exhibits": [],
             "maxAge": 1
         },
         {
@@ -2494,114 +2637,49 @@
             "type": "SC 13G/A",
             "title": "Tender Offer/Acquisition Reports",
             "edgarUrl": "https://finance.yahoo.com/sec-filing/VICI/0001086364-24-002729_1705696",
-            "exhibits": [
-                {
-                    "type": "SC 13G/A",
-                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001364742/000108636424002729/us9256521090_012424.txt"
-                },
-                {
-                    "type": "SC 13G/A",
-                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001705696/000108636424002729/us9256521090_012424.txt"
-                }
-            ],
+            "exhibits": [],
             "maxAge": 1
         },
         {
             "date": "2023-10-25",
             "epochDate": "2023-10-24 20:00:00",
-            "type": "10-Q",
-            "title": "Periodic Financial Reports",
-            "edgarUrl": "https://finance.yahoo.com/sec-filing/VICI/0001705696-23-000113_1705696",
+            "type": "8-K",
+            "title": "Corporate Changes & Voting Matters",
+            "edgarUrl": "https://finance.yahoo.com/sec-filing/VICI/0001705696-23-000112_1705696",
             "exhibits": [
                 {
-                    "type": "10-Q",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000113/vici-20230930.htm"
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000112/vici-20231025.htm"
                 },
                 {
-                    "type": "10-Q",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000113/vici-20230930.htm"
-                },
-                {
-                    "type": "EX-10.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000113/creditfacilitysecondamendm.htm"
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000112/vici-20231025.htm"
                 },
                 {
                     "type": "EXCEL",
-                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001705696/000170569623000113/Financial_Report.xlsx",
-                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001705696/000170569623000113/Financial_Report.xlsx"
+                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001705696/000170569623000112/Financial_Report.xlsx",
+                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001705696/000170569623000112/Financial_Report.xlsx"
                 },
                 {
-                    "type": "EX-31.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000113/viciq32023exh311xviciprope.htm"
+                    "type": "EX-99.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000112/vici3q23financialsupplem.htm"
                 },
                 {
-                    "type": "EX-31.2",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000113/viciq32023exh312xviciprope.htm"
-                },
-                {
-                    "type": "EX-31.3",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000113/viciq32023exh313xviciprope.htm"
-                },
-                {
-                    "type": "EX-31.4",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000113/viciq32023exh314xviciprope.htm"
-                },
-                {
-                    "type": "EX-32.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000113/viciq32023exh321xviciprope.htm"
-                },
-                {
-                    "type": "EX-32.2",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000113/viciq32023exh322xviciprope.htm"
-                },
-                {
-                    "type": "EX-32.3",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000113/viciq32023exh323xviciprope.htm"
-                },
-                {
-                    "type": "EX-32.4",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000113/viciq32023exh324xviciprope.htm"
-                },
-                {
-                    "type": "EX-10.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000113/creditfacilitysecondamendm.htm"
+                    "type": "EX-99.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000112/viciq32023earningsrelease.htm"
                 },
                 {
                     "type": "EXCEL",
-                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001920791/000170569623000113/Financial_Report.xlsx",
-                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001920791/000170569623000113/Financial_Report.xlsx"
+                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001920791/000170569623000112/Financial_Report.xlsx",
+                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001920791/000170569623000112/Financial_Report.xlsx"
                 },
                 {
-                    "type": "EX-31.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000113/viciq32023exh311xviciprope.htm"
+                    "type": "EX-99.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000112/vici3q23financialsupplem.htm"
                 },
                 {
-                    "type": "EX-31.2",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000113/viciq32023exh312xviciprope.htm"
-                },
-                {
-                    "type": "EX-31.3",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000113/viciq32023exh313xviciprope.htm"
-                },
-                {
-                    "type": "EX-31.4",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000113/viciq32023exh314xviciprope.htm"
-                },
-                {
-                    "type": "EX-32.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000113/viciq32023exh321xviciprope.htm"
-                },
-                {
-                    "type": "EX-32.2",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000113/viciq32023exh322xviciprope.htm"
-                },
-                {
-                    "type": "EX-32.3",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000113/viciq32023exh323xviciprope.htm"
-                },
-                {
-                    "type": "EX-32.4",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000113/viciq32023exh324xviciprope.htm"
+                    "type": "EX-99.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000112/viciq32023earningsrelease.htm"
                 }
             ],
             "maxAge": 1
@@ -2653,54 +2731,26 @@
         {
             "date": "2023-05-01",
             "epochDate": "2023-04-30 20:00:00",
-            "type": "10-Q",
-            "title": "Periodic Financial Reports",
-            "edgarUrl": "https://finance.yahoo.com/sec-filing/VICI/0001705696-23-000072_1705696",
+            "type": "8-K",
+            "title": "Corporate Changes & Voting Matters",
+            "edgarUrl": "https://finance.yahoo.com/sec-filing/VICI/0001705696-23-000071_1705696",
             "exhibits": [
                 {
-                    "type": "10-Q",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000072/vici-20230331.htm"
-                },
-                {
-                    "type": "EX-10.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000072/caesarsregionalmasterlease.htm"
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000071/vici-20230501.htm"
                 },
                 {
                     "type": "EXCEL",
-                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001705696/000170569623000072/Financial_Report.xlsx",
-                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001705696/000170569623000072/Financial_Report.xlsx"
+                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001705696/000170569623000071/Financial_Report.xlsx",
+                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001705696/000170569623000071/Financial_Report.xlsx"
                 },
                 {
-                    "type": "EX-31.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000072/viciq12023exh311xviciprope.htm"
+                    "type": "EX-99.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000071/vici1q23financialsupplem.htm"
                 },
                 {
-                    "type": "EX-31.2",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000072/viciq12023exh312xviciprope.htm"
-                },
-                {
-                    "type": "EX-31.3",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000072/viciq12023exh313xviciprope.htm"
-                },
-                {
-                    "type": "EX-31.4",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000072/viciq12023exh314xviciprope.htm"
-                },
-                {
-                    "type": "EX-32.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000072/viciq12023exh321xviciprope.htm"
-                },
-                {
-                    "type": "EX-32.2",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000072/viciq12023exh322xviciprope.htm"
-                },
-                {
-                    "type": "EX-32.3",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000072/viciq12023exh323xviciprope.htm"
-                },
-                {
-                    "type": "EX-32.4",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000072/viciq12023exh324xviciprope.htm"
+                    "type": "EX-99.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000071/viciq12023earningsrelease.htm"
                 }
             ],
             "maxAge": 1
@@ -2713,14 +2763,6 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/VICI/0001705696-23-000065_1705696",
             "exhibits": [
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000065/vici-20230427.htm"
-                },
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000065/vici-20230427.htm"
-                },
-                {
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001705696/000170569623000065/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001705696/000170569623000065/Financial_Report.xlsx"
@@ -2729,6 +2771,14 @@
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001920791/000170569623000065/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001920791/000170569623000065/Financial_Report.xlsx"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000065/vici-20230427.htm"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000065/vici-20230427.htm"
                 }
             ],
             "maxAge": 1
@@ -2736,13 +2786,17 @@
         {
             "date": "2023-03-15",
             "epochDate": "2023-03-14 20:00:00",
-            "type": "DEFA14A",
-            "title": "Proxy Statements",
-            "edgarUrl": "https://finance.yahoo.com/sec-filing/VICI/0001193125-23-070722_1705696",
+            "type": "ARS",
+            "title": "Annual Report to Shareholders",
+            "edgarUrl": "https://finance.yahoo.com/sec-filing/VICI/0001193125-23-070698_1705696",
             "exhibits": [
                 {
-                    "type": "DEFA14A",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000119312523070722/d356992ddefa14a.htm"
+                    "type": "ARS",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000119312523070698/d407609dars.pdf"
+                },
+                {
+                    "type": "ARS",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000119312523070698/d407609dars.pdf"
                 }
             ],
             "maxAge": 1
@@ -2754,6 +2808,14 @@
             "title": "Corporate Changes & Voting Matters",
             "edgarUrl": "https://finance.yahoo.com/sec-filing/VICI/0001193125-23-054690_1705696",
             "exhibits": [
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000119312523054690/d454644d8k.htm"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000119312523054690/d454644d8k.htm"
+                },
                 {
                     "type": "EX-1.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000119312523054690/d454644dex11.htm"
@@ -2787,14 +2849,6 @@
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001920791/000119312523054690/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001920791/000119312523054690/Financial_Report.xlsx"
-                },
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000119312523054690/d454644d8k.htm"
-                },
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000119312523054690/d454644d8k.htm"
                 }
             ],
             "maxAge": 1
@@ -2802,43 +2856,195 @@
         {
             "date": "2023-02-23",
             "epochDate": "2023-02-22 19:00:00",
-            "type": "8-K",
-            "title": "Corporate Changes & Voting Matters",
-            "edgarUrl": "https://finance.yahoo.com/sec-filing/VICI/0001705696-23-000034_1705696",
+            "type": "10-K",
+            "title": "Periodic Financial Reports",
+            "edgarUrl": "https://finance.yahoo.com/sec-filing/VICI/0001705696-23-000035_1705696",
             "exhibits": [
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000034/vici-20230223.htm"
+                    "type": "10-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000035/vici-20221231.htm"
                 },
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000034/vici-20230223.htm"
+                    "type": "10-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000035/vici-20221231.htm"
                 },
                 {
-                    "type": "EXCEL",
-                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001705696/000170569623000034/Financial_Report.xlsx",
-                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001705696/000170569623000034/Financial_Report.xlsx"
+                    "type": "EX-4.25",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000035/descriptionofregisteredsec.htm"
                 },
                 {
-                    "type": "EX-99.2",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000034/vici4q22financialsupplem.htm"
-                },
-                {
-                    "type": "EX-99.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000034/viciq42022earningsrelease.htm"
+                    "type": "EX-3.4",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000035/exhibit34-viciarbylawsdece.htm"
                 },
                 {
                     "type": "EXCEL",
-                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001920791/000170569623000034/Financial_Report.xlsx",
-                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001920791/000170569623000034/Financial_Report.xlsx"
+                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001705696/000170569623000035/Financial_Report.xlsx",
+                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001705696/000170569623000035/Financial_Report.xlsx"
                 },
                 {
-                    "type": "EX-99.2",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000034/vici4q22financialsupplem.htm"
+                    "type": "EX-10.34",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000035/first_amendmentxtoxloanxag.htm"
                 },
                 {
-                    "type": "EX-99.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000034/viciq42022earningsrelease.htm"
+                    "type": "EX-10.32",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000035/mgm_guarantyxmgmgrandxmand.htm"
+                },
+                {
+                    "type": "EX-10.31",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000035/mgmgrand_mandalaybayleasef.htm"
+                },
+                {
+                    "type": "EX-10.33",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000035/mgmgrand_mandalaybayloanxa.htm"
+                },
+                {
+                    "type": "EX-10.35",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000035/second_amendmentxtoxloanxa.htm"
+                },
+                {
+                    "type": "EX-10.24",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000035/secondamendmenttoarmasterl.htm"
+                },
+                {
+                    "type": "EX-10.36",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000035/third_amendmentxtoxloanxag.htm"
+                },
+                {
+                    "type": "EX-21.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000035/vici202210-kexhibit211.htm"
+                },
+                {
+                    "type": "EX-21.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000035/vici202210-kexhibit212.htm"
+                },
+                {
+                    "type": "EX-23.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000035/vici202210-kexhibit231.htm"
+                },
+                {
+                    "type": "EX-23.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000035/vici202210-kexhibit232.htm"
+                },
+                {
+                    "type": "EX-31.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000035/vici202210-kexhibit311.htm"
+                },
+                {
+                    "type": "EX-31.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000035/vici202210-kexhibit312.htm"
+                },
+                {
+                    "type": "EX-31.3",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000035/vici202210-kexhibit313.htm"
+                },
+                {
+                    "type": "EX-31.4",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000035/vici202210-kexhibit314.htm"
+                },
+                {
+                    "type": "EX-32.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000035/vici202210-kexhibit321.htm"
+                },
+                {
+                    "type": "EX-32.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000035/vici202210-kexhibit322.htm"
+                },
+                {
+                    "type": "EX-32.3",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000035/vici202210-kexhibit323.htm"
+                },
+                {
+                    "type": "EX-32.4",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569623000035/vici202210-kexhibit324.htm"
+                },
+                {
+                    "type": "EX-4.25",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000035/descriptionofregisteredsec.htm"
+                },
+                {
+                    "type": "EX-3.4",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000035/exhibit34-viciarbylawsdece.htm"
+                },
+                {
+                    "type": "EXCEL",
+                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001920791/000170569623000035/Financial_Report.xlsx",
+                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001920791/000170569623000035/Financial_Report.xlsx"
+                },
+                {
+                    "type": "EX-10.34",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000035/first_amendmentxtoxloanxag.htm"
+                },
+                {
+                    "type": "EX-10.32",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000035/mgm_guarantyxmgmgrandxmand.htm"
+                },
+                {
+                    "type": "EX-10.31",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000035/mgmgrand_mandalaybayleasef.htm"
+                },
+                {
+                    "type": "EX-10.33",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000035/mgmgrand_mandalaybayloanxa.htm"
+                },
+                {
+                    "type": "EX-10.35",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000035/second_amendmentxtoxloanxa.htm"
+                },
+                {
+                    "type": "EX-10.24",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000035/secondamendmenttoarmasterl.htm"
+                },
+                {
+                    "type": "EX-10.36",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000035/third_amendmentxtoxloanxag.htm"
+                },
+                {
+                    "type": "EX-21.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000035/vici202210-kexhibit211.htm"
+                },
+                {
+                    "type": "EX-21.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000035/vici202210-kexhibit212.htm"
+                },
+                {
+                    "type": "EX-23.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000035/vici202210-kexhibit231.htm"
+                },
+                {
+                    "type": "EX-23.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000035/vici202210-kexhibit232.htm"
+                },
+                {
+                    "type": "EX-31.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000035/vici202210-kexhibit311.htm"
+                },
+                {
+                    "type": "EX-31.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000035/vici202210-kexhibit312.htm"
+                },
+                {
+                    "type": "EX-31.3",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000035/vici202210-kexhibit313.htm"
+                },
+                {
+                    "type": "EX-31.4",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000035/vici202210-kexhibit314.htm"
+                },
+                {
+                    "type": "EX-32.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000035/vici202210-kexhibit321.htm"
+                },
+                {
+                    "type": "EX-32.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000035/vici202210-kexhibit322.htm"
+                },
+                {
+                    "type": "EX-32.3",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000035/vici202210-kexhibit323.htm"
+                },
+                {
+                    "type": "EX-32.4",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569623000035/vici202210-kexhibit324.htm"
                 }
             ],
             "maxAge": 1
@@ -2864,17 +3070,17 @@
         {
             "date": "2023-02-13",
             "epochDate": "2023-02-12 19:00:00",
-            "type": "SC 13G/A",
+            "type": "SC 13G",
             "title": "Tender Offer/Acquisition Reports",
-            "edgarUrl": "https://finance.yahoo.com/sec-filing/VICI/0001562230-23-000103_1705696",
+            "edgarUrl": "https://finance.yahoo.com/sec-filing/VICI/0001422848-23-000139_1705696",
             "exhibits": [
                 {
-                    "type": "SC 13G/A",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001562230/000156223023000103/SEC13G_Filing.htm"
+                    "type": "SC 13G",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001422848/000142284823000139/SEC13G_Filing.htm"
                 },
                 {
-                    "type": "SC 13G/A",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000156223023000103/SEC13G_Filing.htm"
+                    "type": "SC 13G",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000142284823000139/SEC13G_Filing.htm"
                 }
             ],
             "maxAge": 1
@@ -2903,16 +3109,7 @@
             "type": "SC 13G",
             "title": "Tender Offer/Acquisition Reports",
             "edgarUrl": "https://finance.yahoo.com/sec-filing/VICI/0000093751-23-000182_1705696",
-            "exhibits": [
-                {
-                    "type": "SC 13G",
-                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0000093751/000009375123000182/VICI_Properties_Inc.txt"
-                },
-                {
-                    "type": "SC 13G",
-                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001705696/000009375123000182/VICI_Properties_Inc.txt"
-                }
-            ],
+            "exhibits": [],
             "maxAge": 1
         },
         {
@@ -2921,16 +3118,7 @@
             "type": "SC 13G/A",
             "title": "Tender Offer/Acquisition Reports",
             "edgarUrl": "https://finance.yahoo.com/sec-filing/VICI/0001306550-23-002914_1705696",
-            "exhibits": [
-                {
-                    "type": "SC 13G/A",
-                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001364742/000130655023002914/us9256521090_012423.txt"
-                },
-                {
-                    "type": "SC 13G/A",
-                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001705696/000130655023002914/us9256521090_012423.txt"
-                }
-            ],
+            "exhibits": [],
             "maxAge": 1
         },
         {
@@ -3053,14 +3241,6 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/VICI/0001705696-22-000133_1705696",
             "exhibits": [
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569622000133/vici-20221219.htm"
-                },
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569622000133/vici-20221219.htm"
-                },
-                {
                     "type": "EX-10.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569622000133/compiledfirstamendmenttoar.htm"
                 },
@@ -3077,6 +3257,14 @@
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001920791/000170569622000133/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001920791/000170569622000133/Financial_Report.xlsx"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569622000133/vici-20221219.htm"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569622000133/vici-20221219.htm"
                 }
             ],
             "maxAge": 1
@@ -3088,14 +3276,6 @@
             "title": "Corporate Changes & Voting Matters",
             "edgarUrl": "https://finance.yahoo.com/sec-filing/VICI/0001193125-22-280176_1705696",
             "exhibits": [
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000119312522280176/d419132d8k.htm"
-                },
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000119312522280176/d419132d8k.htm"
-                },
                 {
                     "type": "EX-1.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000119312522280176/d419132dex11.htm"
@@ -3137,6 +3317,14 @@
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001920791/000119312522280176/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001920791/000119312522280176/Financial_Report.xlsx"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000119312522280176/d419132d8k.htm"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000119312522280176/d419132d8k.htm"
                 }
             ],
             "maxAge": 1
@@ -3192,14 +3380,6 @@
             "title": "Periodic Financial Reports",
             "edgarUrl": "https://finance.yahoo.com/sec-filing/VICI/0001705696-22-000111_1705696",
             "exhibits": [
-                {
-                    "type": "10-Q",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569622000111/vici-20220630.htm"
-                },
-                {
-                    "type": "10-Q",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569622000111/vici-20220630.htm"
-                },
                 {
                     "type": "EX-10.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569622000111/exhibit101firstamendmentto.htm"
@@ -3281,6 +3461,14 @@
                 {
                     "type": "EX-32.4",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569622000111/viciq22022exh324xviciprope.htm"
+                },
+                {
+                    "type": "10-Q",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569622000111/vici-20220630.htm"
+                },
+                {
+                    "type": "10-Q",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569622000111/vici-20220630.htm"
                 }
             ],
             "maxAge": 1
@@ -3292,14 +3480,6 @@
             "title": "Corporate Changes & Voting Matters",
             "edgarUrl": "https://finance.yahoo.com/sec-filing/VICI/0001705696-22-000089_1705696",
             "exhibits": [
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569622000089/vici-20220504.htm"
-                },
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569622000089/vici-20220504.htm"
-                },
                 {
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001705696/000170569622000089/Financial_Report.xlsx",
@@ -3325,6 +3505,14 @@
                 {
                     "type": "EX-99.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569622000089/viciq12022earningsrelease.htm"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569622000089/vici-20220504.htm"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001920791/000170569622000089/vici-20220504.htm"
                 }
             ],
             "maxAge": 1
@@ -3604,10 +3792,6 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/VICI/0001705696-22-000067_1705696",
             "exhibits": [
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569622000067/vici-20220414.htm"
-                },
-                {
                     "type": "EX-99.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569622000067/exchangeoffer-pressrelease.htm"
                 },
@@ -3615,6 +3799,10 @@
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001705696/000170569622000067/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001705696/000170569622000067/Financial_Report.xlsx"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569622000067/vici-20220414.htm"
                 }
             ],
             "maxAge": 1
@@ -3664,14 +3852,6 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/VICI/0001705696-22-000045_1705696",
             "exhibits": [
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569622000045/vici-20220223.htm"
-                },
-                {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/1705696/000170569622000045/vici-20220223.htm"
-                },
-                {
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001705696/000170569622000045/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001705696/000170569622000045/Financial_Report.xlsx"
@@ -3691,6 +3871,14 @@
                 {
                     "type": "EX-99.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/1705696/000170569622000045/viciq42021earningsrelease.htm"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000170569622000045/vici-20220223.htm"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/1705696/000170569622000045/vici-20220223.htm"
                 }
             ],
             "maxAge": 1
@@ -3729,17 +3917,17 @@
         {
             "date": "2022-02-11",
             "epochDate": "2022-02-10 19:00:00",
-            "type": "SC 13G",
+            "type": "SC 13G/A",
             "title": "Tender Offer/Acquisition Reports",
-            "edgarUrl": "https://finance.yahoo.com/sec-filing/VICI/0001422849-22-000138_1705696",
+            "edgarUrl": "https://finance.yahoo.com/sec-filing/VICI/0001562230-22-000096_1705696",
             "exhibits": [
                 {
-                    "type": "SC 13G",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001422849/000142284922000138/SEC13G_Filing.htm"
+                    "type": "SC 13G/A",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001562230/000156223022000096/SEC13G_Filing.htm"
                 },
                 {
-                    "type": "SC 13G",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000142284922000138/SEC13G_Filing.htm"
+                    "type": "SC 13G/A",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001705696/000156223022000096/SEC13G_Filing.htm"
                 }
             ],
             "maxAge": 1
@@ -3799,16 +3987,7 @@
             "type": "SC 13G/A",
             "title": "Tender Offer/Acquisition Reports",
             "edgarUrl": "https://finance.yahoo.com/sec-filing/VICI/0000834237-22-006380_1705696",
-            "exhibits": [
-                {
-                    "type": "SC 13G/A",
-                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001364742/000083423722006380/us9256521090_020322.txt"
-                },
-                {
-                    "type": "SC 13G/A",
-                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001705696/000083423722006380/us9256521090_020322.txt"
-                }
-            ],
+            "exhibits": [],
             "maxAge": 1
         }
     ],
@@ -3832,7 +4011,7 @@
                     "organization": "Capital Income Builder, Inc.",
                     "pctHeld": 0.044,
                     "position": 45902981,
-                    "value": 1327514214,
+                    "value": 1328432294,
                     "pctChange": 0.024
                 },
                 {
@@ -3841,7 +4020,7 @@
                     "organization": "Vanguard Specialized-Real Estate Index Fund",
                     "pctHeld": 0.0345,
                     "position": 36006863,
-                    "value": 1041318480,
+                    "value": 1042038634,
                     "pctChange": -0.024600001
                 },
                 {
@@ -3850,7 +4029,7 @@
                     "organization": "Vanguard Total Stock Market Index Fund",
                     "pctHeld": 0.0256,
                     "position": 26735572,
-                    "value": 773192744,
+                    "value": 773727467,
                     "pctChange": 0.0074
                 },
                 {
@@ -3859,7 +4038,7 @@
                     "organization": "Vanguard 500 Index Fund",
                     "pctHeld": 0.0217,
                     "position": 22618020,
-                    "value": 654113140,
+                    "value": 654565510,
                     "pctChange": 0.0422
                 },
                 {
@@ -3868,7 +4047,7 @@
                     "organization": "Vanguard Mid-Cap Index Fund",
                     "pctHeld": 0.0197,
                     "position": 20536438,
-                    "value": 593913788,
+                    "value": 594324526,
                     "pctChange": 0.0135
                 },
                 {
@@ -3877,7 +4056,7 @@
                     "organization": "Income Fund of America Inc",
                     "pctHeld": 0.0182,
                     "position": 18945662,
-                    "value": 547908546,
+                    "value": 548287468,
                     "pctChange": -0.45049998
                 },
                 {
@@ -3886,7 +4065,7 @@
                     "organization": "Fundamental Investors Inc",
                     "pctHeld": 0.0125,
                     "position": 13052996,
-                    "value": 377492645,
+                    "value": 377753711,
                     "pctChange": 0.1573
                 },
                 {
@@ -3895,16 +4074,16 @@
                     "organization": "Fidelity 500 Index Fund",
                     "pctHeld": 0.0117,
                     "position": 12157044,
-                    "value": 351581713,
+                    "value": 351824859,
                     "pctChange": 0.0294
                 },
                 {
                     "maxAge": 1,
-                    "reportDate": "2023-09-30",
+                    "reportDate": "2023-12-31",
                     "organization": "PIMCO Income Fd",
                     "pctHeld": 0.0111,
                     "position": 11625222,
-                    "value": 336201421,
+                    "value": 336433930,
                     "pctChange": 0.0
                 },
                 {
@@ -3913,7 +4092,7 @@
                     "organization": "SPDR S&P 500 ETF Trust",
                     "pctHeld": 0.011,
                     "position": 11424653,
-                    "value": 330400965,
+                    "value": 330629463,
                     "pctChange": 0.014400001
                 }
             ]
@@ -4032,7 +4211,7 @@
                     "organization": "Vanguard Group Inc",
                     "pctHeld": 0.1409,
                     "position": 146919295,
-                    "value": 4248906022,
+                    "value": 4251844475,
                     "pctChange": 0.0072000003
                 },
                 {
@@ -4041,7 +4220,7 @@
                     "organization": "Blackrock Inc.",
                     "pctHeld": 0.098000005,
                     "position": 102221825,
-                    "value": 2956255186,
+                    "value": 2958299670,
                     "pctChange": 0.0363
                 },
                 {
@@ -4050,7 +4229,7 @@
                     "organization": "Capital International Investors",
                     "pctHeld": 0.060300004,
                     "position": 62871097,
-                    "value": 1818232130,
+                    "value": 1819489580,
                     "pctChange": 0.174
                 },
                 {
@@ -4059,7 +4238,7 @@
                     "organization": "State Street Corporation",
                     "pctHeld": 0.052199997,
                     "position": 54463278,
-                    "value": 1575078003,
+                    "value": 1576167294,
                     "pctChange": 0.0541
                 },
                 {
@@ -4068,7 +4247,7 @@
                     "organization": "Cohen & Steers Inc.",
                     "pctHeld": 0.0334,
                     "position": 34784906,
-                    "value": 1005979484,
+                    "value": 1006675198,
                     "pctChange": 1.3195
                 },
                 {
@@ -4077,7 +4256,7 @@
                     "organization": "Capital Research Global Investors",
                     "pctHeld": 0.033099998,
                     "position": 34526829,
-                    "value": 998515897,
+                    "value": 999206449,
                     "pctChange": -0.070199996
                 },
                 {
@@ -4086,7 +4265,7 @@
                     "organization": "Bank of America Corporation",
                     "pctHeld": 0.0296,
                     "position": 30908919,
-                    "value": 893885939,
+                    "value": 894504132,
                     "pctChange": -0.13069999
                 },
                 {
@@ -4095,7 +4274,7 @@
                     "organization": "Principal Financial Group, Inc.",
                     "pctHeld": 0.0248,
                     "position": 25885444,
-                    "value": 748607042,
+                    "value": 749124763,
                     "pctChange": 0.0013
                 },
                 {
@@ -4104,7 +4283,7 @@
                     "organization": "Geode Capital Management, LLC",
                     "pctHeld": 0.0241,
                     "position": 25117457,
-                    "value": 726396858,
+                    "value": 726899218,
                     "pctChange": 0.048899997
                 },
                 {
@@ -4113,7 +4292,7 @@
                     "organization": "Allianz Asset Management GmbH",
                     "pctHeld": 0.0224,
                     "position": 23329637,
-                    "value": 674693103,
+                    "value": 675159707,
                     "pctChange": -0.0115
                 }
             ]
@@ -4127,6 +4306,6 @@
         }
     },
     "fcfPerShare": -5.4554010511374535,
-    "fcfYield": -0.1886376577702658,
+    "fcfYield": -0.188507285717049,
     "fcfPayoutRatio": -0.30428560328371995
 }

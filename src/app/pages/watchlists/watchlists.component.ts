@@ -79,10 +79,6 @@ export class WatchlistsComponent implements OnInit {
           });
         });
     });
-    this.magnificent7PlusWatchlist.sort(
-      (a: any, b: any) => a.changePercent - b.changePercent
-    );
-
     this.potentialBuysSymbols.forEach((symbol) => {
       this.dataService
         .loadStockDataFromDataFolder(symbol)
@@ -109,6 +105,10 @@ export class WatchlistsComponent implements OnInit {
           });
         });
     });
+
+    this.magnificent7PlusWatchlist.sort(
+      (a: any, b: any) => a.changePercent - b.changePercent
+    );
     this.potentialBuysWatchlist.sort(
       (a: any, b: any) => a.changePercent - b.changePercent
     );

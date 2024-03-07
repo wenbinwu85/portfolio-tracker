@@ -1,0 +1,20 @@
+.main-title-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-title {
+    font-size: 2rem;
+    text-wrap: nowrap;
+    padding: 1.5rem 1rem 0 1rem;
+    width: min-content;
+}
+
+.version {
+    font-size: 1.5rem;
+    color: navy;
+}
+
+tv-tickers-widget {
+    width: 100%;
+}

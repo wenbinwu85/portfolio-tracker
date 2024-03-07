@@ -36,7 +36,7 @@
                 "provider": "Trading Central",
                 "support": 54.8999,
                 "resistance": 57.88,
-                "stopLoss": 56.202503
+                "stopLoss": 56.201775
             },
             "valuation": {
                 "provider": "Trading Central"
@@ -45,12 +45,12 @@
         "upsell": {},
         "events": [
             {
-                "eventType": "Gap Down",
-                "pricePeriod": "D",
-                "tradingHorizon": "S",
-                "tradeType": "U",
+                "eventType": "Double Moving Average Crossover",
+                "pricePeriod": "W",
+                "tradingHorizon": "I",
+                "tradeType": "L",
                 "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-                "startDate": 1709217000,
+                "startDate": 1709303400,
                 "endDate": 1709303400
             }
         ],
