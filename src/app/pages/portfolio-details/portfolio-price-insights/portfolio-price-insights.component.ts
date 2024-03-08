@@ -7,11 +7,11 @@ import { MatExpansionModule } from "@angular/material/expansion";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatIconModule } from "@angular/material/icon";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
+import { MatTableDataSource, MatTableModule } from "@angular/material/table";
 import { MatTabsModule } from "@angular/material/tabs";
 import { Color, NgxChartsModule, ScaleType } from "@swimlane/ngx-charts";
 import { PriceMovementChartsComponent } from "../../../shared/components/charts/price-movement-charts/price-movement-charts.component";
 import { StockDayPriceRangeComponent } from "../../../shared/components/stock/stock-day-price-range/stock-day-price-range.component";
-import { StockPriceInfoCardComponent } from "../../../shared/components/stock/stock-price-info-card/stock-price-info-card.component";
 import { TvSymbolInfoWidgetComponent } from "../../../shared/components/tradingview/tv-symbol-info-widget/tv-symbol-info-widget.component";
 import { DataService } from "../../../shared/services/data.service";
 import { PortfolioChartsComponent } from "../../chart-wall/portfolio-charts/portfolio-charts.component";
@@ -32,6 +32,7 @@ import { PortfolioHoldingsComponent } from "../portfolio-holdings/portfolio-hold
     MatFormFieldModule,
     MatIconModule,
     MatSlideToggleModule,
+    MatTableModule,
     MatTabsModule,
     NgxChartsModule,
     PortfolioChartsComponent,
@@ -40,9 +41,8 @@ import { PortfolioHoldingsComponent } from "../portfolio-holdings/portfolio-hold
     PortfolioFinancialsComponent,
     PortfolioHoldingsComponent,
     PriceMovementChartsComponent,
-    StockPriceInfoCardComponent,
-    TvSymbolInfoWidgetComponent,
     StockDayPriceRangeComponent,
+    TvSymbolInfoWidgetComponent,
   ],
   templateUrl: "./portfolio-price-insights.component.html",
   styleUrls: ["./portfolio-price-insights.component.css"],
@@ -65,7 +65,7 @@ export class PortfolioPriceInsightsComponent implements OnInit {
   selectedPerformanceChart = 1;
   selectedVSChart = 1;
   scaleType = ScaleType;
-  selectedSymbol = "AAPL";
+  selectedSymbol = "SCHD";
 
   performanceChartColorScheme = {
     domain: ["lightsteelblue"],
@@ -78,6 +78,17 @@ export class PortfolioPriceInsightsComponent implements OnInit {
   targetPriceChartColorScheme = {
     domain: ["lightsteelblue"],
   } as Color;
+
+  tableColumns = [
+    "symbol",
+    "fiftyTwoWeekLow",
+    "dayLow",
+    "dayHigh",
+    "fiftyTwoWeekHigh",
+    "targetLowPrice",
+    "targetMedianPrice",
+    "targetHighPrice",
+  ];
 
   constructor(private dataService: DataService) {}
 
@@ -194,7 +205,7 @@ export class PortfolioPriceInsightsComponent implements OnInit {
 
   updateWidget(symbol: string) {
     this.selectedSymbol = "";
-    setTimeout(() => (this.selectedSymbol = symbol), 100);
+    setTimeout(() => (this.selectedSymbol = symbol), 50);
   }
 
   get getWidget() {
@@ -207,6 +218,13 @@ export class PortfolioPriceInsightsComponent implements OnInit {
   getStock() {
     return Object.values(this.dataService.portfolioData).filter(
       (stock: any) => stock.symbol === this.selectedSymbol
-    )[0];
+    )[0] as any;
+  }
+
+  getTableDataSource() {
+    const selectedStock = this.getStock();
+    let dataSource = new MatTableDataSource<any>();
+    dataSource.data = [selectedStock];
+    return dataSource;
   }
 }

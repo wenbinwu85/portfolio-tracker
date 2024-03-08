@@ -8,20 +8,20 @@
                 "shortTermOutlook": {
                     "stateDescription": "Recent bearish events outweigh bullish events.",
                     "direction": "Bearish",
-                    "score": 4,
-                    "scoreDescription": "Very Strong Bearish Evidence",
+                    "score": 3,
+                    "scoreDescription": "Strong Bearish Evidence",
                     "sectorDirection": "Bearish",
-                    "sectorScore": 3,
-                    "sectorScoreDescription": "Strong Bearish Evidence",
-                    "indexDirection": "Bullish",
-                    "indexScore": 3,
-                    "indexScoreDescription": "Strong Bullish Evidence"
+                    "sectorScore": 1,
+                    "sectorScoreDescription": "Weak Bearish Evidence",
+                    "indexDirection": "Bearish",
+                    "indexScore": 2,
+                    "indexScoreDescription": "Bearish Evidence"
                 },
                 "intermediateTermOutlook": {
-                    "stateDescription": "Recent bullish events outweigh bearish events.",
+                    "stateDescription": "Bullish events outweigh bearish events.",
                     "direction": "Bullish",
-                    "score": 2,
-                    "scoreDescription": "Bullish Evidence",
+                    "score": 1,
+                    "scoreDescription": "Weak Bullish Evidence",
                     "sectorDirection": "Bullish",
                     "sectorScore": 2,
                     "sectorScoreDescription": "Bullish Evidence",
@@ -44,27 +44,27 @@
             },
             "keyTechnicals": {
                 "provider": "Trading Central",
-                "support": 26.52,
+                "support": 27.17,
                 "resistance": 27.61,
-                "stopLoss": 25.512452
+                "stopLoss": 23.52133
             },
             "valuation": {
-                "color": 0.0,
-                "description": "Overvalued",
-                "discount": "-23%",
-                "relativeValue": "Premium",
+                "color": 1.0,
+                "description": "Undervalued",
+                "discount": "64%",
+                "relativeValue": "Discount",
                 "provider": "Trading Central"
             }
         },
         "companySnapshot": {
             "sectorInfo": "Healthcare",
             "company": {
-                "innovativeness": 0.8845999999999999,
+                "innovativeness": 0.8841,
                 "hiring": 0.9109999999999999,
                 "sustainability": 0.6639,
-                "insiderSentiments": 0.6792,
-                "earningsReports": 0.9773999999999999,
-                "dividends": 0.9511
+                "insiderSentiments": 0.6970000000000001,
+                "earningsReports": 0.9782,
+                "dividends": 0.9531999999999999
             },
             "sector": {
                 "innovativeness": 0.5,
@@ -107,16 +107,27 @@
         },
         "events": [
             {
-                "eventType": "Commodity Channel Index",
-                "pricePeriod": "W",
+                "eventType": "Gap Up",
+                "pricePeriod": "D",
                 "tradingHorizon": "S",
-                "tradeType": "S",
+                "tradeType": "U",
                 "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-                "startDate": 1709303400,
-                "endDate": 1709303400
+                "startDate": 1709649000,
+                "endDate": 1709735400
             }
         ],
         "reports": [
+            {
+                "id": "39326_Technical Analysis_1709812383000",
+                "headHtml": "Technical Assessment: Neutral in the Intermediate-Term",
+                "provider": "Argus Research",
+                "reportDate": "2024-03-07T11:53:03Z",
+                "reportTitle": "As if the stock market needed more help, now we have declining Treasury yields across the entire yield curve. Treasury yields fell consistently from October 19, 2023, until their most-recent bottom on December 27. That move certainly helped stocks rally off their October 27 low. Yields popped from 12/27/23 until 2/22/24 and stocks ignored the increase. Since their closing peaks of 4.33% a few weeks ago, both the 5- and 10-year yields have dropped to 4.1% while the 2-year has declined to 4.56% from 4.7%.",
+                "tickers": [
+                    "NTAP",
+                    "PFE"
+                ]
+            },
             {
                 "id": "39247_Thematic Portfolio_1709130218000",
                 "headHtml": "The Argus High-Yield Model Portfolio",
@@ -535,6 +546,18 @@
                 ]
             },
             {
+                "id": "3305_Analyst Report_1675686868000",
+                "headHtml": "Analyst Report: Pfizer Inc.",
+                "provider": "Argus Research",
+                "reportDate": "2023-02-06T12:34:28Z",
+                "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
+                "targetPrice": 60.0,
+                "investmentRating": "Bullish",
+                "tickers": [
+                    "PFE"
+                ]
+            },
+            {
                 "id": "35495_Market Summary_1675686868000",
                 "headHtml": "Market Digest: AMGN, ASH, EPD, LAZ, MMM, MO, PFE, ROP, SBUX, SWK, APTV, AGNC",
                 "provider": "Argus Research",
@@ -553,18 +576,6 @@
                     "AMGN",
                     "PFE",
                     "APTV"
-                ]
-            },
-            {
-                "id": "3305_Analyst Report_1675686868000",
-                "headHtml": "Analyst Report: Pfizer Inc.",
-                "provider": "Argus Research",
-                "reportDate": "2023-02-06T12:34:28Z",
-                "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
-                "targetPrice": 60.0,
-                "investmentRating": "Bullish",
-                "tickers": [
-                    "PFE"
                 ]
             },
             {
@@ -715,18 +726,6 @@
                 ]
             },
             {
-                "id": "3305_Analyst Report_1660239464000",
-                "headHtml": "Analyst Report: Pfizer Inc.",
-                "provider": "Argus Research",
-                "reportDate": "2022-08-11T17:37:44Z",
-                "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
-                "targetPrice": 65.0,
-                "investmentRating": "Bullish",
-                "tickers": [
-                    "PFE"
-                ]
-            },
-            {
                 "id": "33789_Market Update_1660239464000",
                 "headHtml": "Market Update: CENT, EBAY, PFE, VMC, RKT",
                 "provider": "Argus Research",
@@ -737,6 +736,18 @@
                     "CENT",
                     "RKT",
                     "VMC",
+                    "PFE"
+                ]
+            },
+            {
+                "id": "3305_Analyst Report_1660239464000",
+                "headHtml": "Analyst Report: Pfizer Inc.",
+                "provider": "Argus Research",
+                "reportDate": "2022-08-11T17:37:44Z",
+                "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
+                "targetPrice": 65.0,
+                "investmentRating": "Bullish",
+                "tickers": [
                     "PFE"
                 ]
             },
@@ -947,18 +958,6 @@
                 ]
             },
             {
-                "id": "3305_Analyst Report_1644585579000",
-                "headHtml": "Analyst Report: Pfizer Inc.",
-                "provider": "Argus Research",
-                "reportDate": "2022-02-11T13:19:39Z",
-                "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
-                "targetPrice": 65.0,
-                "investmentRating": "Bullish",
-                "tickers": [
-                    "PFE"
-                ]
-            },
-            {
                 "id": "32134_Market Update_1644585579000",
                 "headHtml": "Market Update: APD, MAS, MAT, PFE, TWTR",
                 "provider": "Argus Research",
@@ -969,6 +968,18 @@
                     "APD",
                     "TWTR",
                     "MAS",
+                    "PFE"
+                ]
+            },
+            {
+                "id": "3305_Analyst Report_1644585579000",
+                "headHtml": "Analyst Report: Pfizer Inc.",
+                "provider": "Argus Research",
+                "reportDate": "2022-02-11T13:19:39Z",
+                "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
+                "targetPrice": 65.0,
+                "investmentRating": "Bullish",
+                "tickers": [
                     "PFE"
                 ]
             },
@@ -1372,18 +1383,6 @@
                 ]
             },
             {
-                "id": "3305_Analyst Report_1613027405000",
-                "headHtml": "Analyst Report: Pfizer Inc.",
-                "provider": "Argus Research",
-                "reportDate": "2021-02-11T07:10:05Z",
-                "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
-                "targetPrice": 55.0,
-                "investmentRating": "Bullish",
-                "tickers": [
-                    "PFE"
-                ]
-            },
-            {
                 "id": "29117_Market Summary_1613027405000",
                 "headHtml": "Market Digest: CHKP, CMI, CSCO, IEX, J, PFE, CBOE, OTIS",
                 "provider": "Argus Research",
@@ -1397,6 +1396,18 @@
                     "OTIS",
                     "IEX",
                     "CMI",
+                    "PFE"
+                ]
+            },
+            {
+                "id": "3305_Analyst Report_1613027405000",
+                "headHtml": "Analyst Report: Pfizer Inc.",
+                "provider": "Argus Research",
+                "reportDate": "2021-02-11T07:10:05Z",
+                "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
+                "targetPrice": 55.0,
+                "investmentRating": "Bullish",
+                "tickers": [
                     "PFE"
                 ]
             },
@@ -1459,6 +1470,18 @@
                 ]
             },
             {
+                "id": "3305_Analyst Report_1604410075000",
+                "headHtml": "Analyst Report: Pfizer Inc.",
+                "provider": "Argus Research",
+                "reportDate": "2020-11-03T13:27:55Z",
+                "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
+                "targetPrice": 55.0,
+                "investmentRating": "Bullish",
+                "tickers": [
+                    "PFE"
+                ]
+            },
+            {
                 "id": "28335_Market Update_1604410075000",
                 "headHtml": "Market Update: BSX, TPR, FLEX, K, PFE, YUM, CBOE, PYPL, ANET",
                 "provider": "Argus Research",
@@ -1473,18 +1496,6 @@
                     "FLEX",
                     "CBOE",
                     "K",
-                    "PFE"
-                ]
-            },
-            {
-                "id": "3305_Analyst Report_1604410075000",
-                "headHtml": "Analyst Report: Pfizer Inc.",
-                "provider": "Argus Research",
-                "reportDate": "2020-11-03T13:27:55Z",
-                "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
-                "targetPrice": 55.0,
-                "investmentRating": "Bullish",
-                "tickers": [
                     "PFE"
                 ]
             },
@@ -1533,18 +1544,6 @@
                 ]
             },
             {
-                "id": "28051_Market Update_1601337600000",
-                "headHtml": "Market Update: DVN, KMX, PFE",
-                "provider": "Argus Research",
-                "reportDate": "2020-09-29T00:00:00Z",
-                "reportTitle": "Stocks fell on Tuesday morning, giving back some of Monday's gains as investors awaited the first presidential debate. On the economic front, the Commerce Department said that the U.S. trade deficit in goods rose 3.5% to $82.9 billion in August, reflecting strong imports of consumer goods and slower growth in exports. The increased deficit could weigh on 3Q GDP. Meanwhile, the Conference Board reported that its consumer confidence index rose to 101.8 in September, up from 86.3 in August and well above the Reuters consensus forecast of 89.5. The Dow fell 0.5%, the S&P 0.4%, and the Nasdaq 0.1%. Crude oil traded near $39 per barrel, while gold rose $10 to $1892 per ounce.",
-                "tickers": [
-                    "KMX",
-                    "DVN",
-                    "PFE"
-                ]
-            },
-            {
                 "id": "3305_Analyst Report_1601337600000",
                 "headHtml": "Analyst Report: Pfizer Inc.",
                 "provider": "Argus Research",
@@ -1553,6 +1552,18 @@
                 "targetPrice": 55.0,
                 "investmentRating": "Bullish",
                 "tickers": [
+                    "PFE"
+                ]
+            },
+            {
+                "id": "28051_Market Update_1601337600000",
+                "headHtml": "Market Update: DVN, KMX, PFE",
+                "provider": "Argus Research",
+                "reportDate": "2020-09-29T00:00:00Z",
+                "reportTitle": "Stocks fell on Tuesday morning, giving back some of Monday's gains as investors awaited the first presidential debate. On the economic front, the Commerce Department said that the U.S. trade deficit in goods rose 3.5% to $82.9 billion in August, reflecting strong imports of consumer goods and slower growth in exports. The increased deficit could weigh on 3Q GDP. Meanwhile, the Conference Board reported that its consumer confidence index rose to 101.8 in September, up from 86.3 in August and well above the Reuters consensus forecast of 89.5. The Dow fell 0.5%, the S&P 0.4%, and the Nasdaq 0.1%. Crude oil traded near $39 per barrel, while gold rose $10 to $1892 per ounce.",
+                "tickers": [
+                    "KMX",
+                    "DVN",
                     "PFE"
                 ]
             },
@@ -1639,17 +1650,6 @@
                 ]
             },
             {
-                "id": "27364_Market Summary_1594192370000",
-                "headHtml": "Market Digest: TMUS, PFE",
-                "provider": "Argus Research",
-                "reportDate": "2020-07-08T07:12:50Z",
-                "reportTitle": "In the first quarter, the S&P 500 declined 20% on a capital-appreciation basis (excluding dividends). In the second quarter, the index jumped back by a rounded 20%. Sector performance was abysmal across the board in the first quarter, while second-quarter sector performance showed some clear trends. The sector-performance map in the first half may hold some clues for second-half performance.",
-                "tickers": [
-                    "TMUS",
-                    "PFE"
-                ]
-            },
-            {
                 "id": "3305_Analyst Report_1594192370000",
                 "headHtml": "Analyst Report: Pfizer Inc.",
                 "provider": "Argus Research",
@@ -1662,10 +1662,10 @@
                 ]
             },
             {
-                "id": "27364_Market Summary_1594166400000",
+                "id": "27364_Market Summary_1594192370000",
                 "headHtml": "Market Digest: TMUS, PFE",
                 "provider": "Argus Research",
-                "reportDate": "2020-07-08T00:00:00Z",
+                "reportDate": "2020-07-08T07:12:50Z",
                 "reportTitle": "In the first quarter, the S&P 500 declined 20% on a capital-appreciation basis (excluding dividends). In the second quarter, the index jumped back by a rounded 20%. Sector performance was abysmal across the board in the first quarter, while second-quarter sector performance showed some clear trends. The sector-performance map in the first half may hold some clues for second-half performance.",
                 "tickers": [
                     "TMUS",
@@ -1681,6 +1681,17 @@
                 "targetPrice": 55.0,
                 "investmentRating": "Bullish",
                 "tickers": [
+                    "PFE"
+                ]
+            },
+            {
+                "id": "27364_Market Summary_1594166400000",
+                "headHtml": "Market Digest: TMUS, PFE",
+                "provider": "Argus Research",
+                "reportDate": "2020-07-08T00:00:00Z",
+                "reportTitle": "In the first quarter, the S&P 500 declined 20% on a capital-appreciation basis (excluding dividends). In the second quarter, the index jumped back by a rounded 20%. Sector performance was abysmal across the board in the first quarter, while second-quarter sector performance showed some clear trends. The sector-performance map in the first half may hold some clues for second-half performance.",
+                "tickers": [
+                    "TMUS",
                     "PFE"
                 ]
             },
@@ -1715,18 +1726,6 @@
                 ]
             },
             {
-                "id": "3305_Analyst Report_1588346235000",
-                "headHtml": "Analyst Report: Pfizer Inc.",
-                "provider": "Argus Research",
-                "reportDate": "2020-05-01T15:17:15Z",
-                "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
-                "targetPrice": 55.0,
-                "investmentRating": "Bullish",
-                "tickers": [
-                    "PFE"
-                ]
-            },
-            {
                 "id": "26834_Market Update_1588346235000",
                 "headHtml": "Market Update: AAPL, IQV, MSFT, NOK, PFE, TSLA, V, BA, IPG, LEN, RJF",
                 "provider": "Argus Research",
@@ -1747,6 +1746,30 @@
                 ]
             },
             {
+                "id": "3305_Analyst Report_1588346235000",
+                "headHtml": "Analyst Report: Pfizer Inc.",
+                "provider": "Argus Research",
+                "reportDate": "2020-05-01T15:17:15Z",
+                "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
+                "targetPrice": 55.0,
+                "investmentRating": "Bullish",
+                "tickers": [
+                    "PFE"
+                ]
+            },
+            {
+                "id": "3305_Analyst Report_1588291200000",
+                "headHtml": "Analyst Report: Pfizer Inc.",
+                "provider": "Argus Research",
+                "reportDate": "2020-05-01T00:00:00Z",
+                "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
+                "targetPrice": 55.0,
+                "investmentRating": "Bullish",
+                "tickers": [
+                    "PFE"
+                ]
+            },
+            {
                 "id": "26834_Market Update_1588291200000",
                 "headHtml": "Market Update: AAPL, IQV, MSFT, NOK, PFE, TSLA, V, BA, IPG, LEN, RJF",
                 "provider": "Argus Research",
@@ -1764,18 +1787,6 @@
                     "BA",
                     "IQV",
                     "RJF"
-                ]
-            },
-            {
-                "id": "3305_Analyst Report_1588291200000",
-                "headHtml": "Analyst Report: Pfizer Inc.",
-                "provider": "Argus Research",
-                "reportDate": "2020-05-01T00:00:00Z",
-                "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
-                "targetPrice": 55.0,
-                "investmentRating": "Bullish",
-                "tickers": [
-                    "PFE"
                 ]
             },
             {
@@ -1927,24 +1938,6 @@
                 "headHtml": "Market Update: AMD, EAT, GS, HOG, HCA, PYPL, PFE, URI, NEE",
                 "provider": "Argus Research",
                 "reportDate": "2020-01-30T13:06:15Z",
-                "reportTitle": "Stocks traded lower on Thursday morning as investors weighed new earnings reports and GDP data, along with the latest developments in the coronavirus outbreak. Industries doing well today include food products, software and beverages. Industries trading lower today include air freight and logistics, tobacco, and interactive media and services. The VIX is up 1.19 to 17.58. The Dow fell 0.4%, the S&P 0.5%, and the Nasdaq 0.6%. Crude oil fell 2% to $52 per barrel, while gold rose $11 to $1587 per ounce.",
-                "tickers": [
-                    "PYPL",
-                    "HOG",
-                    "HCA",
-                    "AMD",
-                    "EAT",
-                    "GS",
-                    "URI",
-                    "PFE",
-                    "NEE"
-                ]
-            },
-            {
-                "id": "26072_Market Update_1580342400000",
-                "headHtml": "Market Update: AMD, EAT, GS, HOG, HCA, PYPL, PFE, URI, NEE",
-                "provider": "Argus Research",
-                "reportDate": "2020-01-30T00:00:00Z",
                 "reportTitle": "Stocks traded lower on Thursday morning as investors weighed new earnings reports and GDP data, along with the latest developments in the coronavirus outbreak. Industries doing well today include food products, software and beverages. Industries trading lower today include air freight and logistics, tobacco, and interactive media and services. The VIX is up 1.19 to 17.58. The Dow fell 0.4%, the S&P 0.5%, and the Nasdaq 0.6%. Crude oil fell 2% to $52 per barrel, while gold rose $11 to $1587 per ounce.",
                 "tickers": [
                     "PYPL",
