@@ -5,13 +5,13 @@
             "technicalEvents": {
                 "provider": "Trading Central",
                 "shortTermOutlook": {
-                    "stateDescription": "Bullish events outweigh bearish events.",
-                    "direction": "Bullish",
-                    "score": 1,
-                    "scoreDescription": "Weak Bullish Evidence",
-                    "indexDirection": "Bullish",
-                    "indexScore": 3,
-                    "indexScoreDescription": "Strong Bullish Evidence"
+                    "stateDescription": "Recent bearish events outweigh bullish events.",
+                    "direction": "Bearish",
+                    "score": 2,
+                    "scoreDescription": "Bearish Evidence",
+                    "indexDirection": "Bearish",
+                    "indexScore": 2,
+                    "indexScoreDescription": "Bearish Evidence"
                 },
                 "intermediateTermOutlook": {
                     "stateDescription": "All events are bullish.",
@@ -25,8 +25,8 @@
                 "longTermOutlook": {
                     "stateDescription": "All events are bullish.",
                     "direction": "Bullish",
-                    "score": 3,
-                    "scoreDescription": "Strong Bullish Evidence",
+                    "score": 2,
+                    "scoreDescription": "Bullish Evidence",
                     "indexDirection": "Bullish",
                     "indexScore": 2,
                     "indexScoreDescription": "Bullish Evidence"
@@ -36,7 +36,7 @@
                 "provider": "Trading Central",
                 "support": 54.8999,
                 "resistance": 57.88,
-                "stopLoss": 56.202503
+                "stopLoss": 56.018833
             },
             "valuation": {
                 "provider": "Trading Central"
@@ -45,13 +45,13 @@
         "upsell": {},
         "events": [
             {
-                "eventType": "Short-term KST",
+                "eventType": "MACD",
                 "pricePeriod": "D",
                 "tradingHorizon": "S",
-                "tradeType": "L",
+                "tradeType": "S",
                 "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-                "startDate": 1708957800,
-                "endDate": 1708957800
+                "startDate": 1709649000,
+                "endDate": 1709649000
             }
         ],
         "sigDevs": []

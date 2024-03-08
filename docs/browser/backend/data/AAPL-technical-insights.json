@@ -8,20 +8,20 @@
                 "shortTermOutlook": {
                     "stateDescription": "All events are bearish.",
                     "direction": "Bearish",
-                    "score": 3,
-                    "scoreDescription": "Strong Bearish Evidence",
+                    "score": 2,
+                    "scoreDescription": "Bearish Evidence",
                     "sectorDirection": "Bullish",
-                    "sectorScore": 4,
-                    "sectorScoreDescription": "Very Strong Bullish Evidence",
-                    "indexDirection": "Bullish",
-                    "indexScore": 3,
-                    "indexScoreDescription": "Strong Bullish Evidence"
+                    "sectorScore": 3,
+                    "sectorScoreDescription": "Strong Bullish Evidence",
+                    "indexDirection": "Bearish",
+                    "indexScore": 2,
+                    "indexScoreDescription": "Bearish Evidence"
                 },
                 "intermediateTermOutlook": {
-                    "stateDescription": "The bullish and bearish events are balanced.",
+                    "stateDescription": "There are no events.",
                     "direction": "Neutral",
                     "score": 0,
-                    "scoreDescription": "Neutral Evidence",
+                    "scoreDescription": "No Evidence",
                     "sectorDirection": "Bearish",
                     "sectorScore": 1,
                     "sectorScoreDescription": "Weak Bearish Evidence",
@@ -30,7 +30,7 @@
                     "indexScoreDescription": "Weak Bullish Evidence"
                 },
                 "longTermOutlook": {
-                    "stateDescription": "All events are bearish.",
+                    "stateDescription": "There is one bearish event.",
                     "direction": "Bearish",
                     "score": 2,
                     "scoreDescription": "Bearish Evidence",
@@ -44,14 +44,14 @@
             },
             "keyTechnicals": {
                 "provider": "Trading Central",
-                "support": 173.36,
-                "resistance": 189.9,
-                "stopLoss": 174.135779
+                "support": 150.66,
+                "resistance": 173.36,
+                "stopLoss": 157.693051
             },
             "valuation": {
                 "color": 0.5,
                 "description": "Near Fair Value",
-                "discount": "-2%",
+                "discount": "-1%",
                 "provider": "Trading Central"
             }
         },
@@ -61,9 +61,9 @@
                 "innovativeness": 0.9981,
                 "hiring": 0.9512999999999999,
                 "sustainability": 0.5667,
-                "insiderSentiments": 0.22690000000000002,
-                "earningsReports": 0.8465,
-                "dividends": 0.0821
+                "insiderSentiments": 0.2076,
+                "earningsReports": 0.8412000000000001,
+                "dividends": 0.08529999999999999
             },
             "sector": {
                 "innovativeness": 0.5,
@@ -91,31 +91,49 @@
                 "Regulators have a keen eye on Apple, and recent regulations have chipped away at parts of Apple\u2019s sticky ecosystem. "
             ],
             "companyName": "Apple Inc.",
-            "msBullishBearishSummariesPublishDate": 1706841073000,
+            "msBullishBearishSummariesPublishDate": 1709685379000,
             "upsellReportType": "MORNINGSTAR_ANALYST"
         },
         "upsellSearchDD": {
             "researchReports": {
-                "reportId": "ARGUS_2660_AnalystReport_1706875524000",
-                "provider": "Argus",
-                "title": "iPhone achieves top smartphone market share",
-                "reportDate": "2024-02-02T12:05:24Z",
-                "summary": "Apple manufactures smartphones, tablets, PCs, software and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including AirPods, Beats headphones and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
-                "investmentRating": "Bullish"
+                "reportId": "MS_0P000000GY_AnalystReport_1709685379000",
+                "provider": "Morningstar",
+                "title": "Apple Earnings: Good Profits Offset Headwinds to iPhone and China Sales; Maintaining $160 Valuation",
+                "reportDate": "2024-03-06T00:36:19Z",
+                "summary": "Apple is among the largest companies in the world, with a broad portfolio of hardware and software products targeted at consumers and businesses. Apple\u2019s iPhone makes up a majority of the firm sales, and Apple\u2019s other products like Mac, iPad, and Watch are designed around the iPhone as the focal point of an expansive software ecosystem. Apple has progressively worked to add new applications, like streaming video, subscription bundles, and augmented reality. The firm designs its own software and semiconductors while working with subcontractors like Foxconn and TSMC to build its products and chips. Slightly less than half of Apple\u2019s sales come directly through its flagship stores, with a majority of sales coming indirectly through partnerships and distribution. ",
+                "investmentRating": "Neutral"
             }
         },
         "events": [
             {
-                "eventType": "Commodity Channel Index",
+                "eventType": "Gap Down",
                 "pricePeriod": "D",
                 "tradingHorizon": "S",
                 "tradeType": "U",
                 "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-                "startDate": 1709044200,
-                "endDate": 1709044200
+                "startDate": 1709562600,
+                "endDate": 1709649000
             }
         ],
         "reports": [
+            {
+                "id": "39280_Top/Bottom Insider Activity_1709552011000",
+                "headHtml": "Daily \u2013 Vickers Top Buyers & Sellers for 03/04/2024",
+                "provider": "Argus Research",
+                "reportDate": "2024-03-04T11:33:31Z",
+                "reportTitle": "The Vickers Top Buyers & Sellers is a daily report that identifies the five companies the largest insider purchase transactions based on the dollar value of the transactions as well as the five companies the largest insider sales transactions based on the dollar value of the transactions.",
+                "tickers": [
+                    "SPHR",
+                    "AMN",
+                    "AAPL",
+                    "ACT",
+                    "AMR",
+                    "OKE",
+                    "GTES",
+                    "ABBV",
+                    "PRGO"
+                ]
+            },
             {
                 "id": "39013_Stock Picks_1707134957000",
                 "headHtml": "Weekly Stock List",
@@ -414,18 +432,6 @@
                 ]
             },
             {
-                "id": "2660_Analyst Report_1691171066000",
-                "headHtml": "Analyst Report: Apple Inc",
-                "provider": "Argus Research",
-                "reportDate": "2023-08-04T17:44:26Z",
-                "reportTitle": "Apple manufactures smartphones, tablets, PCs, software and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including AirPods, Beats headphones and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
-                "targetPrice": 230.0,
-                "investmentRating": "Bullish",
-                "tickers": [
-                    "AAPL"
-                ]
-            },
-            {
                 "id": "37274_Market Update_1691171066000",
                 "headHtml": "Market Update: ILMN, AAPL, AMZN, ECL, ETR, KIM, MDT, PRU, SQ",
                 "provider": "Argus Research",
@@ -441,6 +447,18 @@
                     "KIM",
                     "SQ",
                     "ECL"
+                ]
+            },
+            {
+                "id": "2660_Analyst Report_1691171066000",
+                "headHtml": "Analyst Report: Apple Inc",
+                "provider": "Argus Research",
+                "reportDate": "2023-08-04T17:44:26Z",
+                "reportTitle": "Apple manufactures smartphones, tablets, PCs, software and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including AirPods, Beats headphones and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
+                "targetPrice": 230.0,
+                "investmentRating": "Bullish",
+                "tickers": [
+                    "AAPL"
                 ]
             },
             {
@@ -941,18 +959,6 @@
                 ]
             },
             {
-                "id": "33246_Market Summary_1655449615000",
-                "headHtml": "Market Digest: AAPL, TECH, ZTS",
-                "provider": "Argus Research",
-                "reportDate": "2022-06-17T07:06:55Z",
-                "reportTitle": "Stocks plummeted on Thursday amid mounting recession fears, as investors continued to assess the impact of the Fed's 75-basis-point rate hike and the ability of the central bank to control inflation. The S&P fell to its lowest level since December 2020 and is now down 23% year-to-date. On the employment front, first-time claims for state unemployment benefits fell to 229,000 for the week ended June 11, down from 232,000 a week earlier but above the consensus estimate of 215,000. The Dow fell 2.42%, the S&P 3.25%, and the Nasdaq 4.08%. Crude oil traded near $117 per barrel, while gold soared 2% to $1860 per ounce.",
-                "tickers": [
-                    "TECH",
-                    "AAPL",
-                    "ZTS"
-                ]
-            },
-            {
                 "id": "2660_Analyst Report_1655449615000",
                 "headHtml": "Analyst Report: Apple Inc",
                 "provider": "Argus Research",
@@ -962,6 +968,18 @@
                 "investmentRating": "Bullish",
                 "tickers": [
                     "AAPL"
+                ]
+            },
+            {
+                "id": "33246_Market Summary_1655449615000",
+                "headHtml": "Market Digest: AAPL, TECH, ZTS",
+                "provider": "Argus Research",
+                "reportDate": "2022-06-17T07:06:55Z",
+                "reportTitle": "Stocks plummeted on Thursday amid mounting recession fears, as investors continued to assess the impact of the Fed's 75-basis-point rate hike and the ability of the central bank to control inflation. The S&P fell to its lowest level since December 2020 and is now down 23% year-to-date. On the employment front, first-time claims for state unemployment benefits fell to 229,000 for the week ended June 11, down from 232,000 a week earlier but above the consensus estimate of 215,000. The Dow fell 2.42%, the S&P 3.25%, and the Nasdaq 4.08%. Crude oil traded near $117 per barrel, while gold soared 2% to $1860 per ounce.",
+                "tickers": [
+                    "TECH",
+                    "AAPL",
+                    "ZTS"
                 ]
             },
             {
@@ -1385,6 +1403,18 @@
                 ]
             },
             {
+                "id": "2660_Analyst Report_1627481615000",
+                "headHtml": "Analyst Report: Apple Inc",
+                "provider": "Argus Research",
+                "reportDate": "2021-07-28T14:13:35Z",
+                "reportTitle": "Apple manufactures smartphones, tablets, PCs, software and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including AirPods, Beats headphones and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
+                "targetPrice": 165.0,
+                "investmentRating": "Bullish",
+                "tickers": [
+                    "AAPL"
+                ]
+            },
+            {
                 "id": "30494_Market Update_1627481615000",
                 "headHtml": "Market Update: AAPL, ECL, ODFL, OMC, SBUX, SHW, SIVB, WM, AGNC",
                 "provider": "Argus Research",
@@ -1400,18 +1430,6 @@
                     "WM",
                     "ECL",
                     "ODFL"
-                ]
-            },
-            {
-                "id": "2660_Analyst Report_1627481615000",
-                "headHtml": "Analyst Report: Apple Inc",
-                "provider": "Argus Research",
-                "reportDate": "2021-07-28T14:13:35Z",
-                "reportTitle": "Apple manufactures smartphones, tablets, PCs, software and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including AirPods, Beats headphones and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
-                "targetPrice": 165.0,
-                "investmentRating": "Bullish",
-                "tickers": [
-                    "AAPL"
                 ]
             },
             {
@@ -1858,19 +1876,6 @@
                 ]
             },
             {
-                "id": "28167_Market Summary_1602633600000",
-                "headHtml": "Market Digest: AAPL, C, ECL, FTV",
-                "provider": "Argus Research",
-                "reportDate": "2020-10-14T00:00:00Z",
-                "reportTitle": "The stock market closed on October 9 with a winning session, ending its best week in three months. With a close at 3,477, the S&P 500 pulled within 3% of its all-time high of 3,588 from 9/2/20, and the index moved higher still on October 12. The September sell-off -- which resulted in a near-correction (defined as down 10%) for the broad market and full corrections for leading Technology names -- cleared away some (only some) of the excessive optimism. It also partly (only partly) restored some sector balance; two of the best sectors in 4Q20-to-date have been out of favor all year.",
-                "tickers": [
-                    "AAPL",
-                    "C",
-                    "FTV",
-                    "ECL"
-                ]
-            },
-            {
                 "id": "2660_Analyst Report_1602633600000",
                 "headHtml": "Analyst Report: Apple Inc",
                 "provider": "Argus Research",
@@ -1883,20 +1888,23 @@
                 ]
             },
             {
-                "id": "28060_Market Outlook_1601458385000",
-                "headHtml": "Daily Spotlight: Final 2Q GDP Reading: -31.4%",
+                "id": "28167_Market Summary_1602633600000",
+                "headHtml": "Market Digest: AAPL, C, ECL, FTV",
                 "provider": "Argus Research",
-                "reportDate": "2020-09-30T09:33:05Z",
-                "reportTitle": "The U.S. Department of Commerce announced that its \"third\" estimate for 2Q20 GDP growth was a rate of -31.4%. This was in line with the previous estimates and with the consensus outlook. The GDP report also includes an inflation gauge, the PCE price index. This index, excluding food and energy, decreased at a deflationary 0.8% pace, well below the Federal Reserve's inflation target of 2.0%. This second quarter should be the bottom, and GDP reports going forward should signal recovery and ultimately growth. But there's a deep hole out of which the economy must climb. Personal Consumption Expenditures, which are the core of the economy, declined at a 33% rate in the quarter, including a 42% drop in spending on services. Domestic investment fell at a 47% rate, including 36% declines in both residential investment and investment into industrial equipment.  (Even investment into Intellectual Products, such as software and entertainment declined 11%.)  The one growth area was federal government spending, which rose at a 16% rate. That support may be fleeting if Congress is unable to reach another bipartisan rescue package.",
+                "reportDate": "2020-10-14T00:00:00Z",
+                "reportTitle": "The stock market closed on October 9 with a winning session, ending its best week in three months. With a close at 3,477, the S&P 500 pulled within 3% of its all-time high of 3,588 from 9/2/20, and the index moved higher still on October 12. The September sell-off -- which resulted in a near-correction (defined as down 10%) for the broad market and full corrections for leading Technology names -- cleared away some (only some) of the excessive optimism. It also partly (only partly) restored some sector balance; two of the best sectors in 4Q20-to-date have been out of favor all year.",
                 "tickers": [
-                    "AAPL"
+                    "AAPL",
+                    "C",
+                    "FTV",
+                    "ECL"
                 ]
             }
         ],
         "sigDevs": [
             {
-                "headline": "Spotify Issues Letter To The European Commission On Apple\u2019S Lack Of DMA Compliance",
-                "date": "2024-03-01"
+                "headline": "Apple Unveils New 13-, 15-Inch Macbook Air With M3 Chip",
+                "date": "2024-03-04"
             }
         ],
         "secReports": [

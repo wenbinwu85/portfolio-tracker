@@ -13,9 +13,9 @@
                     "sectorDirection": "Bearish",
                     "sectorScore": 2,
                     "sectorScoreDescription": "Bearish Evidence",
-                    "indexDirection": "Bullish",
-                    "indexScore": 3,
-                    "indexScoreDescription": "Strong Bullish Evidence"
+                    "indexDirection": "Bearish",
+                    "indexScore": 2,
+                    "indexScoreDescription": "Bearish Evidence"
                 },
                 "intermediateTermOutlook": {
                     "stateDescription": "Bullish events outweigh bearish events.",
@@ -35,8 +35,8 @@
                     "score": 3,
                     "scoreDescription": "Strong Bearish Evidence",
                     "sectorDirection": "Bullish",
-                    "sectorScore": 3,
-                    "sectorScoreDescription": "Strong Bullish Evidence",
+                    "sectorScore": 2,
+                    "sectorScoreDescription": "Bullish Evidence",
                     "indexDirection": "Bullish",
                     "indexScore": 2,
                     "indexScoreDescription": "Bullish Evidence"
@@ -44,9 +44,9 @@
             },
             "keyTechnicals": {
                 "provider": "Trading Central",
-                "support": 10.822,
-                "resistance": 10.8678,
-                "stopLoss": 10.153209
+                "support": 10.8678,
+                "resistance": 11.1499,
+                "stopLoss": 10.426322
             },
             "valuation": {
                 "color": 0.0,
@@ -59,9 +59,9 @@
             "sectorInfo": "Financial Services",
             "company": {
                 "innovativeness": 0.0365,
-                "insiderSentiments": 0.85,
-                "earningsReports": 0.1374,
-                "dividends": 0.9834
+                "insiderSentiments": 0.8459,
+                "earningsReports": 0.1373,
+                "dividends": 0.9868000000000001
             },
             "sector": {
                 "innovativeness": 0.5,
@@ -77,13 +77,13 @@
         },
         "events": [
             {
-                "eventType": "Momentum",
+                "eventType": "Triple Moving Average Crossover",
                 "pricePeriod": "D",
                 "tradingHorizon": "S",
                 "tradeType": "S",
                 "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-                "startDate": 1709217000,
-                "endDate": 1709217000
+                "startDate": 1709735400,
+                "endDate": 1709735400
             }
         ],
         "reports": [
@@ -109,19 +109,37 @@
         ],
         "sigDevs": [
             {
-                "headline": "TriplePoint Venture Growth Q3 Net Asset Value Per Share USD 10.37",
-                "date": "2023-11-01"
+                "headline": "TriplePoint Venture Growth Q4 Net Asset Value Per Share USD 9.21",
+                "date": "2024-03-06"
             }
         ],
         "secReports": [
             {
-                "id": "0001580345-23-000038_1580345",
+                "id": "0001580345-24-000005_1580345",
+                "type": "Periodic Financial Reports",
+                "title": "10-K : Periodic Financial Reports",
+                "description": "Annual report pursuant to Section 13 and 15(d)",
+                "filingDate": 1709683200000,
+                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001580345/000158034524000005/thumbnail.png",
+                "formType": "10-K"
+            },
+            {
+                "id": "0001580345-24-000003_1580345",
                 "type": "Corporate Changes & Voting Matters",
                 "title": "8-K : Corporate Changes & Voting Matters",
                 "description": "Current report filing",
-                "filingDate": 1698796800000,
-                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001580345/000158034523000038/thumbnail.png",
+                "filingDate": 1709683200000,
+                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001580345/000158034524000003/thumbnail.png",
                 "formType": "8-K"
+            },
+            {
+                "id": "0001213900-24-020165_1580345",
+                "type": "Offering Registrations",
+                "title": "N-2 : Offering Registrations",
+                "description": "Initial filing of a registration statement on Form N-2 for closed-end investment companies",
+                "filingDate": 1709596800000,
+                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001580345/000121390024020165/thumbnail.png",
+                "formType": "N-2"
             },
             {
                 "id": "0001580345-23-000039_1580345",
@@ -133,21 +151,21 @@
                 "formType": "10-Q"
             },
             {
+                "id": "0001580345-23-000038_1580345",
+                "type": "Corporate Changes & Voting Matters",
+                "title": "8-K : Corporate Changes & Voting Matters",
+                "description": "Current report filing",
+                "filingDate": 1698796800000,
+                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001580345/000158034523000038/thumbnail.png",
+                "formType": "8-K"
+            },
+            {
                 "id": "0001580345-23-000034_1580345",
                 "type": "Corporate Changes & Voting Matters",
                 "title": "8-K : Corporate Changes & Voting Matters",
                 "description": "Current report filing",
                 "filingDate": 1692835200000,
                 "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001580345/000158034523000034/thumbnail.png",
-                "formType": "8-K"
-            },
-            {
-                "id": "0001580345-23-000030_1580345",
-                "type": "Corporate Changes & Voting Matters",
-                "title": "8-K : Corporate Changes & Voting Matters",
-                "description": "Current report filing",
-                "filingDate": 1690934400000,
-                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001580345/000158034523000030/thumbnail.png",
                 "formType": "8-K"
             },
             {
@@ -158,6 +176,15 @@
                 "filingDate": 1690934400000,
                 "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001580345/000158034523000032/thumbnail.png",
                 "formType": "10-Q"
+            },
+            {
+                "id": "0001580345-23-000030_1580345",
+                "type": "Corporate Changes & Voting Matters",
+                "title": "8-K : Corporate Changes & Voting Matters",
+                "description": "Current report filing",
+                "filingDate": 1690934400000,
+                "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001580345/000158034523000030/thumbnail.png",
+                "formType": "8-K"
             },
             {
                 "id": "0001580345-23-000027_1580345",
