@@ -66,7 +66,7 @@ export class PortfolioPriceInsightsComponent implements OnInit {
   customColor = [{ name: this.sp500, value: "orangered" }];
   selectedPerformanceChart = 1;
   selectedVSChart = 1;
-  selectedSymbol = "SCHD";
+  selectedSymbol: any = "SCHD";
   selectedStockTechnical: any;
 
   performanceChartColorScheme = {
@@ -83,6 +83,9 @@ export class PortfolioPriceInsightsComponent implements OnInit {
 
   tableColumns = [
     "symbol",
+    "support",
+    "resistance",
+    "stopLoss",
     "fiftyTwoWeekLow",
     "dayLow",
     "dayHigh",
@@ -90,11 +93,14 @@ export class PortfolioPriceInsightsComponent implements OnInit {
     "targetLowPrice",
     "targetMedianPrice",
     "targetHighPrice",
+    "argusTarget",
+    "tradingCentral"
   ];
 
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
+    this.getSelectedStockTechnicalInsights();
     this.sortedStocks = Object.values(this.dataService.portfolioData)
       .filter((a: any) => a.quoteType === "EQUITY")
       .sort((a: any, b: any) => a["52WeekChange"] - b["52WeekChange"]);
@@ -206,10 +212,12 @@ export class PortfolioPriceInsightsComponent implements OnInit {
   }
 
   updateWidget(symbol: string) {
-    this.selectedSymbol = "";
-    this.selectedStockTechnical = {};
-    this.getSelectedStockTechnicalInsights();
-    setTimeout(() => (this.selectedSymbol = symbol), 50);
+    this.selectedSymbol = null;
+    this.selectedStockTechnical = null;
+    setTimeout(() => {
+      this.selectedSymbol = symbol;
+      this.getSelectedStockTechnicalInsights();
+    }, 50);
   }
 
   get getWidget() {

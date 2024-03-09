@@ -69,8 +69,8 @@
         "compensationAsOfEpochDate": "2022-12-30 19:00:00",
         "maxAge": 86400
     },
-    "postMarketChangePercent": 0.0010173173,
-    "postMarketChange": 0.010000229,
+    "postMarketChangePercent": 0.00101732,
+    "postMarketChange": 0.0100002,
     "postMarketPrice": 9.84,
     "regularMarketChangePercent": 0.03147956,
     "regularMarketChange": 0.3000002,
@@ -78,8 +78,8 @@
     "regularMarketDayHigh": 9.89,
     "regularMarketDayLow": 9.53,
     "regularMarketVolume": 878094,
-    "averageDailyVolume10Day": 400770,
-    "averageDailyVolume3Month": 280343,
+    "averageDailyVolume10Day": 400890,
+    "averageDailyVolume3Month": 280363,
     "regularMarketPreviousClose": 9.53,
     "regularMarketOpen": 9.53,
     "exchange": "NYQ",
@@ -101,8 +101,8 @@
     "beta": 1.817,
     "forwardPE": 6.4671054,
     "volume": 878094,
-    "averageVolume": 280343,
-    "averageVolume10days": 400770,
+    "averageVolume": 280363,
+    "averageVolume10days": 400890,
     "fiftyTwoWeekLow": 9.13,
     "fiftyTwoWeekHigh": 12.699,
     "priceToSalesTrailing12Months": 2.6853547,
@@ -134,8 +134,8 @@
     "forwardEps": 1.52,
     "pegRatio": 1.44,
     "enterpriseToRevenue": 6.462,
-    "52WeekChange": -0.113488376,
-    "SandP52WeekChange": 0.33555353,
+    "52WeekChange": -0.14452422,
+    "SandP52WeekChange": 0.33757293,
     "lastDividendValue": 0.4,
     "lastDividendDate": 1702512000,
     "currentPrice": 9.83,
@@ -1041,22 +1041,50 @@
         {
             "date": "2024-03-06",
             "epochDate": "2024-03-05 19:00:00",
-            "type": "8-K",
-            "title": "Corporate Changes & Voting Matters",
-            "edgarUrl": "https://finance.yahoo.com/sec-filing/TPVG/0001580345-24-000003_1580345",
+            "type": "10-K",
+            "title": "Periodic Financial Reports",
+            "edgarUrl": "https://finance.yahoo.com/sec-filing/TPVG/0001580345-24-000005_1580345",
             "exhibits": [
                 {
                     "type": "EXCEL",
-                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001580345/000158034524000003/Financial_Report.xlsx",
-                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001580345/000158034524000003/Financial_Report.xlsx"
+                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001580345/000158034524000005/Financial_Report.xlsx",
+                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001580345/000158034524000005/Financial_Report.xlsx"
+                },
+                {
+                    "type": "EX-21.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034524000005/tpvg123123ex-211.htm"
+                },
+                {
+                    "type": "EX-23.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034524000005/tpvg123123ex-231.htm"
+                },
+                {
+                    "type": "EX-31.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034524000005/tpvg123123ex-311.htm"
+                },
+                {
+                    "type": "EX-31.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034524000005/tpvg123123ex-312.htm"
+                },
+                {
+                    "type": "EX-32.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034524000005/tpvg123123ex-321.htm"
+                },
+                {
+                    "type": "EX-32.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034524000005/tpvg123123ex-322.htm"
+                },
+                {
+                    "type": "EX-97.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034524000005/tpvg123123ex-971.htm"
                 },
                 {
                     "type": "EX-99.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034524000003/tpvgq42023earningsrelease.htm"
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034524000005/tpvg123123ex-991.htm"
                 },
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034524000003/tvpg-20240306.htm"
+                    "type": "10-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034524000005/tpvg-20231231.htm"
                 }
             ],
             "maxAge": 1
@@ -1211,10 +1239,6 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/TPVG/0001580345-23-000039_1580345",
             "exhibits": [
                 {
-                    "type": "10-Q",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034523000039/tpvg-20230930.htm"
-                },
-                {
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001580345/000158034523000039/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001580345/000158034523000039/Financial_Report.xlsx"
@@ -1234,6 +1258,10 @@
                 {
                     "type": "EX-32.2",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034523000039/tpvg093023ex-322.htm"
+                },
+                {
+                    "type": "10-Q",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034523000039/tpvg-20230930.htm"
                 }
             ],
             "maxAge": 1
@@ -1246,13 +1274,13 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/TPVG/0001580345-23-000034_1580345",
             "exhibits": [
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034523000034/tvpg-20230823.htm"
-                },
-                {
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001580345/000158034523000034/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001580345/000158034523000034/Financial_Report.xlsx"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034523000034/tvpg-20230823.htm"
                 }
             ],
             "maxAge": 1
@@ -1330,34 +1358,22 @@
         {
             "date": "2023-08-02",
             "epochDate": "2023-08-01 20:00:00",
-            "type": "10-Q",
-            "title": "Periodic Financial Reports",
-            "edgarUrl": "https://finance.yahoo.com/sec-filing/TPVG/0001580345-23-000032_1580345",
+            "type": "8-K",
+            "title": "Corporate Changes & Voting Matters",
+            "edgarUrl": "https://finance.yahoo.com/sec-filing/TPVG/0001580345-23-000030_1580345",
             "exhibits": [
                 {
-                    "type": "10-Q",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034523000032/tpvg-20230630.htm"
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034523000030/tvpg-20230802.htm"
                 },
                 {
                     "type": "EXCEL",
-                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001580345/000158034523000032/Financial_Report.xlsx",
-                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001580345/000158034523000032/Financial_Report.xlsx"
+                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001580345/000158034523000030/Financial_Report.xlsx",
+                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001580345/000158034523000030/Financial_Report.xlsx"
                 },
                 {
-                    "type": "EX-31.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034523000032/tpvg063023ex-311.htm"
-                },
-                {
-                    "type": "EX-31.2",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034523000032/tpvg063023ex-312.htm"
-                },
-                {
-                    "type": "EX-32.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034523000032/tpvg063023ex-321.htm"
-                },
-                {
-                    "type": "EX-32.2",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034523000032/tpvg063023ex-322.htm"
+                    "type": "EX-99.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034523000030/tpvgq22023earningsrelease.htm"
                 }
             ],
             "maxAge": 1
@@ -1379,22 +1395,34 @@
         {
             "date": "2023-05-03",
             "epochDate": "2023-05-02 20:00:00",
-            "type": "8-K",
-            "title": "Corporate Changes & Voting Matters",
-            "edgarUrl": "https://finance.yahoo.com/sec-filing/TPVG/0001580345-23-000025_1580345",
+            "type": "10-Q",
+            "title": "Periodic Financial Reports",
+            "edgarUrl": "https://finance.yahoo.com/sec-filing/TPVG/0001580345-23-000027_1580345",
             "exhibits": [
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034523000025/tvpg-20230503.htm"
+                    "type": "10-Q",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034523000027/tpvg-20230331.htm"
                 },
                 {
                     "type": "EXCEL",
-                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001580345/000158034523000025/Financial_Report.xlsx",
-                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001580345/000158034523000025/Financial_Report.xlsx"
+                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001580345/000158034523000027/Financial_Report.xlsx",
+                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001580345/000158034523000027/Financial_Report.xlsx"
                 },
                 {
-                    "type": "EX-99.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034523000025/tpvgq12023earningsrelease.htm"
+                    "type": "EX-31.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034523000027/tpvg033123ex-311.htm"
+                },
+                {
+                    "type": "EX-31.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034523000027/tpvg033123ex-312.htm"
+                },
+                {
+                    "type": "EX-32.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034523000027/tpvg033123ex-321.htm"
+                },
+                {
+                    "type": "EX-32.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034523000027/tpvg033123ex-322.htm"
                 }
             ],
             "maxAge": 1
@@ -1407,13 +1435,13 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/TPVG/0001580345-23-000021_1580345",
             "exhibits": [
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034523000021/tvpg-20230427.htm"
-                },
-                {
                     "type": "EXCEL",
                     "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001580345/000158034523000021/Financial_Report.xlsx",
                     "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001580345/000158034523000021/Financial_Report.xlsx"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034523000021/tvpg-20230427.htm"
                 }
             ],
             "maxAge": 1
@@ -1454,13 +1482,13 @@
         {
             "date": "2023-03-08",
             "epochDate": "2023-03-07 19:00:00",
-            "type": "DEF 14A",
+            "type": "DEFA14A",
             "title": "Proxy Statements",
-            "edgarUrl": "https://finance.yahoo.com/sec-filing/TPVG/0001580345-23-000012_1580345",
+            "edgarUrl": "https://finance.yahoo.com/sec-filing/TPVG/0001580345-23-000013_1580345",
             "exhibits": [
                 {
-                    "type": "DEF 14A",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034523000012/tpvg2023proxy.htm"
+                    "type": "DEFA14A",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034523000013/tpvg2023defa14a.htm"
                 }
             ],
             "maxAge": 1
@@ -1521,20 +1549,16 @@
             "epochDate": "2022-12-11 19:00:00",
             "type": "8-K",
             "title": "Corporate Changes & Voting Matters",
-            "edgarUrl": "https://finance.yahoo.com/sec-filing/TPVG/0001580345-22-000037_1580345",
+            "edgarUrl": "https://finance.yahoo.com/sec-filing/TPVG/0001580345-22-000035_1580345",
             "exhibits": [
                 {
-                    "type": "EXCEL",
-                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001580345/000158034522000037/Financial_Report.xlsx",
-                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001580345/000158034522000037/Financial_Report.xlsx"
-                },
-                {
-                    "type": "EX-99.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034522000037/tpvgpressreleasedated121222.htm"
-                },
-                {
                     "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034522000037/tvpg-20221209.htm"
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034522000035/tvpg-20221209.htm"
+                },
+                {
+                    "type": "EXCEL",
+                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001580345/000158034522000035/Financial_Report.xlsx",
+                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001580345/000158034522000035/Financial_Report.xlsx"
                 }
             ],
             "maxAge": 1
@@ -1542,22 +1566,61 @@
         {
             "date": "2022-11-02",
             "epochDate": "2022-11-01 20:00:00",
-            "type": "8-K",
-            "title": "Corporate Changes & Voting Matters",
-            "edgarUrl": "https://finance.yahoo.com/sec-filing/TPVG/0001580345-22-000031_1580345",
+            "type": "10-Q",
+            "title": "Periodic Financial Reports",
+            "edgarUrl": "https://finance.yahoo.com/sec-filing/TPVG/0001580345-22-000032_1580345",
             "exhibits": [
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034522000031/tvpg-20221102.htm"
+                    "type": "EXCEL",
+                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001580345/000158034522000032/Financial_Report.xlsx",
+                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001580345/000158034522000032/Financial_Report.xlsx"
+                },
+                {
+                    "type": "EX-31.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034522000032/tpvg093022ex-311.htm"
+                },
+                {
+                    "type": "EX-31.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034522000032/tpvg093022ex-312.htm"
+                },
+                {
+                    "type": "EX-32.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034522000032/tpvg093022ex-321.htm"
+                },
+                {
+                    "type": "EX-32.2",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034522000032/tpvg093022ex-322.htm"
+                },
+                {
+                    "type": "10-Q",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034522000032/tpvg-20220930.htm"
+                }
+            ],
+            "maxAge": 1
+        },
+        {
+            "date": "2022-09-30",
+            "epochDate": "2022-09-29 20:00:00",
+            "type": "8-K",
+            "title": "Corporate Changes & Voting Matters",
+            "edgarUrl": "https://finance.yahoo.com/sec-filing/TPVG/0001213900-22-060777_1580345",
+            "exhibits": [
+                {
+                    "type": "EX-1.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000121390022060777/ea166566ex1-1_triple.htm"
+                },
+                {
+                    "type": "EX-5.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000121390022060777/ea166566ex5-1_triple.htm"
                 },
                 {
                     "type": "EXCEL",
-                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001580345/000158034522000031/Financial_Report.xlsx",
-                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001580345/000158034522000031/Financial_Report.xlsx"
+                    "url": "https://s3.amazonaws.com/finance-pri-uw2/sec-filings/0001580345/000121390022060777/Financial_Report.xlsx",
+                    "downloadUrl": "https://finance.yahoo.com/_getSECFilingReportUrl?reportUrl=/sec-filings/0001580345/000121390022060777/Financial_Report.xlsx"
                 },
                 {
-                    "type": "EX-99.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034522000031/tpvgq32022earningsrelease.htm"
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000121390022060777/ea166566-8k_triplepoint.htm"
                 }
             ],
             "maxAge": 1
@@ -1647,29 +1710,17 @@
         {
             "date": "2022-05-04",
             "epochDate": "2022-05-03 20:00:00",
-            "type": "10-Q",
-            "title": "Periodic Financial Reports",
-            "edgarUrl": "https://finance.yahoo.com/sec-filing/TPVG/0001580345-22-000022_1580345",
+            "type": "8-K",
+            "title": "Corporate Changes & Voting Matters",
+            "edgarUrl": "https://finance.yahoo.com/sec-filing/TPVG/0001580345-22-000020_1580345",
             "exhibits": [
                 {
-                    "type": "10-Q",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034522000022/tpvg03312210-q.htm"
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034522000020/tpvg0504228-k.htm"
                 },
                 {
-                    "type": "EX-31.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034522000022/tpvg033122ex-311.htm"
-                },
-                {
-                    "type": "EX-31.2",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034522000022/tpvg033122ex-312.htm"
-                },
-                {
-                    "type": "EX-32.1",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034522000022/tpvg033122ex-321.htm"
-                },
-                {
-                    "type": "EX-32.2",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034522000022/tpvg033122ex-322.htm"
+                    "type": "EX-99.1",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034522000020/tpvgq12022earningsrelease.htm"
                 }
             ],
             "maxAge": 1
@@ -1724,12 +1775,12 @@
             "edgarUrl": "https://finance.yahoo.com/sec-filing/TPVG/0001580345-22-000003_1580345",
             "exhibits": [
                 {
-                    "type": "8-K",
-                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034522000003/tpvg0302228-k.htm"
-                },
-                {
                     "type": "EX-99.1",
                     "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034522000003/tpvgq42021earningsrelease.htm"
+                },
+                {
+                    "type": "8-K",
+                    "url": "https://cdn.yahoofinance.com/prod/sec-filings/0001580345/000158034522000003/tpvg0302228-k.htm"
                 }
             ],
             "maxAge": 1
