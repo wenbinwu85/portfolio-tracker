@@ -114,7 +114,7 @@ def fetch_corporate_events(symbol):
 def fetch_technical_insights(symbol):
     data = yq_technical_insights(symbol)
     path = os.path.join(DATA_PATH, f'{symbol.lower()}-technical-insights.json')
-    dump_data_to(data, path)
+    dump_data_to(data[symbol], path)
     return jsonify(data)
 
 

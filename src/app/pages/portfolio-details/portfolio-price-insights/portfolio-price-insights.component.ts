@@ -95,8 +95,6 @@ export class PortfolioPriceInsightsComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    this.getSelectedStockTechnicalInsights();
-
     this.sortedStocks = Object.values(this.dataService.portfolioData)
       .filter((a: any) => a.quoteType === "EQUITY")
       .sort((a: any, b: any) => a["52WeekChange"] - b["52WeekChange"]);
@@ -209,6 +207,8 @@ export class PortfolioPriceInsightsComponent implements OnInit {
 
   updateWidget(symbol: string) {
     this.selectedSymbol = "";
+    this.selectedStockTechnical = {};
+    this.getSelectedStockTechnicalInsights();
     setTimeout(() => (this.selectedSymbol = symbol), 50);
   }
 
@@ -245,9 +245,10 @@ export class PortfolioPriceInsightsComponent implements OnInit {
         catchError((err: any) => {
           console.log(err);
           return this.dataService
-            .getTechnicalInsights(this.selectedSymbol);
+            .getTechnicalInsights(this.selectedSymbol)
+            .pipe(map((response: any) => response[this.selectedSymbol]));
         })
       )
-      .subscribe(console.log);
+      .subscribe(insights => this.selectedStockTechnical = insights);
   }
 }

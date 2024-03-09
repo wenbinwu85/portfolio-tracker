@@ -109,6 +109,11 @@
             [showThumbs]="false"
         />
     </div>
+
+    <div *ngIf="selectedStockTechnical as insights">
+        {{ insights.symbol }}
+        {{ insights.instrumentInfo.keyTechnicals | json }}
+    </div>
 </section>
 
 <price-movement-charts />
