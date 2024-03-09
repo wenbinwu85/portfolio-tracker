@@ -172,6 +172,16 @@ export class DataService {
 
   /**
    * @param {string} symbol of stock to retrieve
+   * @returns {Observable} Returns technical insights of a stock.
+   */
+  public loadTechnicalInsightsFromDataFolder(symbol: string): Observable<JSON> { 
+    const path = `${this.backendDataPath}${symbol.toLowerCase()}-technical-insights.json`;
+    const options = { ...this.httpOptions, responseType: "json" };
+    return this.wrapHttpCall(path, options);
+  }
+
+  /**
+   * @param {string} symbol of stock to retrieve
    * @returns {Observable} Returns recommendations of a stock.
    */
   public getRecommendations(symbol: string): Observable<JSON> {

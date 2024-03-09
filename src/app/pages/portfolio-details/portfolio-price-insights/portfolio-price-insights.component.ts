@@ -19,6 +19,7 @@ import { PortfolioDividendComponent } from "../portfolio-dividend/portfolio-divi
 import { PortfolioEventsComponent } from "../portfolio-events/portfolio-events.component";
 import { PortfolioFinancialsComponent } from "../portfolio-financials/portfolio-financials.component";
 import { PortfolioHoldingsComponent } from "../portfolio-holdings/portfolio-holdings.component";
+import { catchError, map } from "rxjs";
 
 @Component({
   selector: "portfolio-price-insights",
@@ -59,13 +60,14 @@ export class PortfolioPriceInsightsComponent implements OnInit {
   displayTradingviewWidgets = false;
   sp500FiftyTwoWeekChange = 0;
   etfPerformanceChartData: any = [];
+    scaleType = ScaleType;
   sp500 = "S&P 500";
   activeSymbol = [{ name: this.sp500 }];
   customColor = [{ name: this.sp500, value: "orangered" }];
   selectedPerformanceChart = 1;
   selectedVSChart = 1;
-  scaleType = ScaleType;
   selectedSymbol = "SCHD";
+  selectedStockTechnical: any;
 
   performanceChartColorScheme = {
     domain: ["lightsteelblue"],
@@ -93,6 +95,8 @@ export class PortfolioPriceInsightsComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
+    this.getSelectedStockTechnicalInsights();
+
     this.sortedStocks = Object.values(this.dataService.portfolioData)
       .filter((a: any) => a.quoteType === "EQUITY")
       .sort((a: any, b: any) => a["52WeekChange"] - b["52WeekChange"]);
@@ -226,5 +230,24 @@ export class PortfolioPriceInsightsComponent implements OnInit {
     let dataSource = new MatTableDataSource<any>();
     dataSource.data = [selectedStock];
     return dataSource;
+  }
+
+  getSelectedStockTechnicalInsights() {
+    this.dataService.loadTechnicalInsightsFromDataFolder(this.selectedSymbol)
+      .pipe(
+        map((response: any) => {
+          if (response.status === 500) {
+            throw `Api Error: ${this.selectedSymbol} - ${response.status} - ${response.message}`;
+          } else {
+            return response;
+          }
+        }),
+        catchError((err: any) => {
+          console.log(err);
+          return this.dataService
+            .getTechnicalInsights(this.selectedSymbol);
+        })
+      )
+      .subscribe(console.log);
   }
 }

@@ -113,7 +113,7 @@ def fetch_corporate_events(symbol):
 @app.route('/fetch/technical-insights/<symbol>')
 def fetch_technical_insights(symbol):
     data = yq_technical_insights(symbol)
-    path = os.path.join(DATA_PATH, f'{symbol}-technical-insights.json')
+    path = os.path.join(DATA_PATH, f'{symbol.lower()}-technical-insights.json')
     dump_data_to(data, path)
     return jsonify(data)
 
@@ -121,7 +121,7 @@ def fetch_technical_insights(symbol):
 @app.route('/fetch/recommendations/<symbol>')
 def fetch_recommendations(symbol):
     data = yq_recommendations(symbol)
-    path = os.path.joins(DATA_PATH, f'{symbol}-recommendations.json')
+    path = os.path.joins(DATA_PATH, f'{symbol.lower()}-recommendations.json')
     dump_data_to(data, path)
     return jsonify(data)
 

@@ -134,7 +134,7 @@ def generate_holdings_data():
 
     for symbol, shares, cost_avg, _ in list(load_data_from(HOLDINGS_DATA_PATH)):
         holding_data = holdings.get(symbol, {})
-        stock_data_path = os.path.join(DATA_PATH, f"{symbol}.json")
+        stock_data_path = os.path.join(DATA_PATH, f"{symbol.lower()}.json")
         try:
             stock_data = load_data_from(stock_data_path)
         except FileNotFoundError:
