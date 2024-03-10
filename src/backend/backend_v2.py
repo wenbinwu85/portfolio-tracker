@@ -40,9 +40,6 @@ def fetch_stock_data(symbol):
     symbol_data = yq_stock_data(symbol)
     save_param = request.args.get('save')
     save = setting_options.get(save_param, save_to_local)
-    print('save to local:', save_to_local)
-    print('save param:', save_param)
-    print('save or not:', save)
     if (save):
         path = os.path.join(DATA_PATH, f'{symbol.lower()}.json')
         dump_data_to(symbol_data[symbol], path)
@@ -55,9 +52,6 @@ def fetch_stocks_data(symbols):
     symbols_data = yq_stock_data(symbols)
     save_param = request.args.get('save')
     save = setting_options.get(save_param, save_to_local)
-    print('save to local:', save_to_local)
-    print('save param:', save_param)
-    print('save or not:', save)
     if (save):
         for symbol in symbols_data:
             path = os.path.join(DATA_PATH, f'{symbol.lower()}.json')
@@ -145,7 +139,6 @@ def fetch_portfolio_data():
     should_update = setting_options.get(update_param, False)
     portfolio_data_path = os.path.join(DATA_PATH, 'portfolio.json')
     portfolio_data = {}
-    print('should update:', should_update)
 
     # update by fetching new data
     if should_update:
@@ -181,9 +174,7 @@ def fetch_portfolio_dividend_history():
     response = get_portfolio_symbols()
     symbols_string = response.response.data.decode('utf-8')
     symbols = ast.literal_eval(symbols_string)
-    print(symbols)
     for i in symbols[:1]:
-        print('symbol:', i)
         fetch_dividend_history(i)
     return "<h1>fetching dividend data...</h1>"
 
