@@ -73,7 +73,7 @@ def round_string_value(value, digit=2):
     return round(float(value), digit)
 
 
-def getFilePath(file_name, ext='json'):
+def get_file_path(file_name, ext='json'):
     return os.path.join(DATA_PATH, f'{file_name}.{ext}')
 
 
@@ -138,7 +138,7 @@ def generate_holdings_data():
     holdings_data = load_data_from(HOLDINGS_DATA_PATH)
     for symbol, shares, cost_avg, _ in list(holdings_data):
         stock_holding = holdings.get(symbol, {})
-        stock_data_path = getFilePath(symbol.lower())
+        stock_data_path = get_file_path(symbol.lower())
         try:
             stock_data = load_data_from(stock_data_path)
         except FileNotFoundError:
@@ -176,54 +176,53 @@ def generate_holdings_data():
     return holdings
 
 
-def map_stock_data(yqdata):
-    mapped_data = {}
-    for symbol, data in yqdata.items():
-        mapped_stock_data = {}
-        mapped_stock_data['profile'] = data['assetProfile']
-        mapped_stock_data.update(data['price'])
-        mapped_stock_data.update(data['summaryDetail'])
-        mapped_stock_data.update(data['defaultKeyStatistics'])
+def map_stock_data(yq_modules_data):
+    mapped_yq_data = {}
+    for symbol, data in yq_modules_data.items():
+        mapped_data = {}
+        mapped_data.update(data['price'])
+        mapped_data.update(data['summaryDetail'])
+        mapped_data.update(data['defaultKeyStatistics'])
+        mapped_data['profile'] = data['assetProfile']
 
         if data['price']['quoteType'] == 'EQUITY':
-            mapped_stock_data.update(data['financialData'])
-            mapped_stock_data['calendarEvents'] = data['calendarEvents']
-            mapped_stock_data['earnings'] = data['earnings']
-            mapped_stock_data['earnings'].update(data['earningsHistory'])
-            mapped_stock_data['earnings'].update(data['earningsTrend'])
-            mapped_stock_data['indexTrend'] = data['indexTrend']
-            mapped_stock_data['insiderTransactions'] = data.get('insiderTransactions', {}).get('transactions', {})
-            mapped_stock_data['recommendationTrend'] = data['recommendationTrend']['trend']
-            mapped_stock_data['secFilings'] = data.get('secFilings', {}).get('filings', {})
-            mapped_stock_data['sharePurchaseActivity'] = data['netSharePurchaseActivity']
-            mapped_stock_data['shareholders'] = {}
-            mapped_stock_data['shareholders']['fundOwnership'] = data.get('fundOwnership', {})
-            mapped_stock_data['shareholders']['insiderHolders'] = data.get('insiderHolders', {})
-            mapped_stock_data['shareholders']['institutionOwnership'] = data.get('institutionOwnership', {})
-            mapped_stock_data['shareholders']['majorHolders'] = data.get('majorHoldersBreakdown', {})
+            mapped_data.update(data['financialData'])
+            mapped_data['calendarEvents'] = data['calendarEvents']
+            mapped_data['earnings'] = data['earnings']
+            mapped_data['earnings'].update(data['earningsHistory'])
+            mapped_data['earnings'].update(data['earningsTrend'])
+            mapped_data['indexTrend'] = data['indexTrend']
+            mapped_data['insiderTransactions'] = data.get('insiderTransactions', {}).get('transactions', {})
+            mapped_data['recommendationTrend'] = data['recommendationTrend']['trend']
+            mapped_data['secFilings'] = data.get('secFilings', {}).get('filings', {})
+            mapped_data['sharePurchaseActivity'] = data['netSharePurchaseActivity']
+            mapped_data['shareholders'] = {}
+            mapped_data['shareholders']['fundOwnership'] = data.get('fundOwnership', {})
+            mapped_data['shareholders']['insiderHolders'] = data.get('insiderHolders', {})
+            mapped_data['shareholders']['institutionOwnership'] = data.get('institutionOwnership', {})
+            mapped_data['shareholders']['majorHolders'] = data.get('majorHoldersBreakdown', {})
             try:
-                mapped_stock_data['fcfPerShare'] = mapped_stock_data['freeCashflow'] / mapped_stock_data['sharesOutstanding']
-                mapped_stock_data['fcfYield'] = mapped_stock_data['freeCashflow'] / mapped_stock_data['marketCap']
-                if mapped_stock_data['fcfPerShare'] != 0:
-                    mapped_stock_data['fcfPayoutRatio'] = mapped_stock_data['dividendRate'] / mapped_stock_data['fcfPerShare']  
+                mapped_data['fcfPerShare'] = mapped_data['freeCashflow'] / mapped_data['sharesOutstanding']
+                mapped_data['fcfYield'] = mapped_data['freeCashflow'] / mapped_data['marketCap']
+                if mapped_data['fcfPerShare'] != 0:
+                    mapped_data['fcfPayoutRatio'] = mapped_data['dividendRate'] / mapped_data['fcfPerShare']  
                 else:
-                    mapped_stock_data['fcfPayoutRatio'] = 0
+                    mapped_data['fcfPayoutRatio'] = 0
             except KeyError:
-                mapped_stock_data['fcfPerShare'] = 0
-                mapped_stock_data['fcfYield'] = 0
-                mapped_stock_data['fcfPayoutRatio'] = 0
+                mapped_data['fcfPerShare'] = 0
+                mapped_data['fcfYield'] = 0
+                mapped_data['fcfPayoutRatio'] = 0
         else:
-            mapped_stock_data['dividendRate'] = data['summaryDetail']['yield'] * data['price']['regularMarketPrice']
-            mapped_stock_data['dividendYield'] = data['summaryDetail']['yield']
-            mapped_stock_data['topHoldings'] = data['topHoldings']
-            mapped_stock_data['profile'].update(data['fundProfile'])
-            mapped_stock_data['profile'].update(data['assetProfile'])
-            mapped_stock_data['fundPerformance'] = data['fundPerformance']
-        mapped_data[symbol] = mapped_stock_data
+            mapped_data['profile'].update(data['fundProfile'])
+            mapped_data['dividendRate'] = data['summaryDetail']['yield'] * data['price']['currentPrice']
+            mapped_data['dividendYield'] = data['summaryDetail']['yield']
+            mapped_data['topHoldings'] = data['topHoldings']
+            mapped_data['fundPerformance'] = data['fundPerformance']
+        mapped_yq_data[symbol] = mapped_data
 
-    for _, v in mapped_data.items():
+    for _, v in mapped_yq_data.items():
         clean(v)
-    return mapped_data
+    return mapped_yq_data
 
 
 def yq_stock_data(symbols=None):
@@ -231,9 +230,8 @@ def yq_stock_data(symbols=None):
         holdings = generate_holdings_data()
         symbols = [k for k, v in holdings.items() if isinstance(v, dict)]
     ticker = Ticker(symbols, asynchronous=True, progress=True)
-    ticker_data = ticker.get_modules(yq_modules)
-    mapped_data = map_stock_data(ticker_data)
-    return mapped_data
+    modules_data = ticker.get_modules(yq_modules)
+    return map_stock_data(modules_data)
 
 
 def yq_dividend_history(symbol, start_date):
