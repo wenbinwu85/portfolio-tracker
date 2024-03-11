@@ -9,12 +9,12 @@
                 "direction": "Bearish",
                 "score": 2,
                 "scoreDescription": "Bearish Evidence",
-                "sectorDirection": "Bearish",
-                "sectorScore": 1,
-                "sectorScoreDescription": "Weak Bearish Evidence",
+                "sectorDirection": "Bullish",
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bullish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 1,
-                "indexScoreDescription": "Weak Bearish Evidence"
+                "indexScore": 3,
+                "indexScoreDescription": "Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Bullish events outweigh bearish events.",
@@ -31,11 +31,11 @@
             "longTermOutlook": {
                 "stateDescription": "All events are bullish.",
                 "direction": "Bullish",
-                "score": 3,
-                "scoreDescription": "Strong Bullish Evidence",
+                "score": 2,
+                "scoreDescription": "Bullish Evidence",
                 "sectorDirection": "Bullish",
-                "sectorScore": 2,
-                "sectorScoreDescription": "Bullish Evidence",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bullish Evidence",
                 "indexDirection": "Bullish",
                 "indexScore": 2,
                 "indexScoreDescription": "Bullish Evidence"
@@ -43,9 +43,9 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 118.0,
-            "resistance": 149.96,
-            "stopLoss": 141.818034
+            "support": 111.1736,
+            "resistance": 151.51,
+            "stopLoss": 142.220477
         },
         "valuation": {
             "color": 0.0,
@@ -62,8 +62,8 @@
             "hiring": 0.6901,
             "sustainability": 0.5611999999999999,
             "insiderSentiments": 0.9484,
-            "earningsReports": 0.6869,
-            "dividends": 0.3738
+            "earningsReports": 0.6919,
+            "dividends": 0.3732
         },
         "sector": {
             "innovativeness": 0.5,
@@ -106,13 +106,13 @@
     },
     "events": [
         {
-            "eventType": "MACD",
+            "eventType": "Momentum",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "S",
+            "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1709821800,
-            "endDate": 1709821800
+            "startDate": 1709908200,
+            "endDate": 1709908200
         }
     ],
     "reports": [
@@ -1024,6 +1024,18 @@
             ]
         },
         {
+            "id": "3403_Analyst Report_1573221592000",
+            "headHtml": "Analyst Report: Simon Property Group, Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2019-11-08T13:59:52Z",
+            "reportTitle": "Simon Property Group Inc., based in Indianapolis, is a retail REIT that owns and leases malls and outlets. Simon has an interest in or owns 233 properties with 191 million square feet of leasable space in North America, Asia, and Europe. It also has a 22% interest in Klepierre, a Paris-based real estate firm, which owns shopping centers in 16 European countries. SPG is a member of the S&P 500.",
+            "targetPrice": 180.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "SPG"
+            ]
+        },
+        {
             "id": "25426_Market Update_1573221592000",
             "headHtml": "Market Update: BKNG, CPRI, SPG, CVX, LGF/A, LYB, NYT",
             "provider": "Argus Research",
@@ -1037,18 +1049,6 @@
                 "CPRI",
                 "BKNG",
                 "LGF-A"
-            ]
-        },
-        {
-            "id": "3403_Analyst Report_1573221592000",
-            "headHtml": "Analyst Report: Simon Property Group, Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2019-11-08T13:59:52Z",
-            "reportTitle": "Simon Property Group Inc., based in Indianapolis, is a retail REIT that owns and leases malls and outlets. Simon has an interest in or owns 233 properties with 191 million square feet of leasable space in North America, Asia, and Europe. It also has a 22% interest in Klepierre, a Paris-based real estate firm, which owns shopping centers in 16 European countries. SPG is a member of the S&P 500.",
-            "targetPrice": 180.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "SPG"
             ]
         },
         {

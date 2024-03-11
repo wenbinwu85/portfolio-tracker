@@ -1,5 +1,11 @@
 <section class="add-border">
-    <div class="title">Price Insights</div>
+    <div class="add-flex">
+        <div class="title">Price Insights</div>
+        <button mat-button extended color="primary" class="refresh-button" (click)="refreshData()">
+            <mat-icon>cloud_sync</mat-icon>
+            Refresh Data
+        </button>
+    </div>
     <div class="logos-container">
         <button
             *ngFor="let stock of sortedStocks" 

@@ -7,23 +7,23 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 4,
-                "scoreDescription": "Very Strong Bearish Evidence",
-                "sectorDirection": "Bearish",
-                "sectorScore": 1,
-                "sectorScoreDescription": "Weak Bearish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bearish Evidence",
+                "sectorDirection": "Bullish",
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bullish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 1,
-                "indexScoreDescription": "Weak Bearish Evidence"
+                "indexScore": 3,
+                "indexScoreDescription": "Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bullish events outweigh bearish events.",
                 "direction": "Bullish",
                 "score": 2,
                 "scoreDescription": "Bullish Evidence",
-                "sectorDirection": "Bullish",
+                "sectorDirection": "Bearish",
                 "sectorScore": 1,
-                "sectorScoreDescription": "Weak Bullish Evidence",
+                "sectorScoreDescription": "Weak Bearish Evidence",
                 "indexDirection": "Bullish",
                 "indexScore": 1,
                 "indexScoreDescription": "Weak Bullish Evidence"
@@ -45,12 +45,12 @@
             "provider": "Trading Central",
             "support": 91.01,
             "resistance": 112.61,
-            "stopLoss": 104.725377
+            "stopLoss": 104.669658
         },
         "valuation": {
             "color": 1.0,
             "description": "Undervalued",
-            "discount": "54%",
+            "discount": "53%",
             "relativeValue": "Discount",
             "provider": "Trading Central"
         }
@@ -62,7 +62,7 @@
             "hiring": 0.8169,
             "sustainability": 0.2895,
             "insiderSentiments": 0.3465,
-            "earningsReports": 0.9519,
+            "earningsReports": 0.9523,
             "dividends": 0.0864
         },
         "sector": {
@@ -109,10 +109,10 @@
             "eventType": "Price Crosses Moving Average",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "S",
+            "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1709821800,
-            "endDate": 1709821800
+            "startDate": 1709908200,
+            "endDate": 1709908200
         }
     ],
     "reports": [
@@ -1762,6 +1762,15 @@
     ],
     "secReports": [
         {
+            "id": "0000950157-24-000358_1744489",
+            "type": "Proxy Statements",
+            "title": "DEFA14A : Proxy Statements",
+            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
+            "filingDate": 1709856000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000358/thumbnail.png",
+            "formType": "DEFA14A"
+        },
+        {
             "id": "0000950157-24-000336_1744489",
             "type": "Proxy Statements",
             "title": "DEFA14A : Proxy Statements",
@@ -2200,15 +2209,6 @@
             "description": "Current report filing",
             "filingDate": 1695081600000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000174448923000174/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
-            "id": "0001193125-23-231673_1744489",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1694131200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000119312523231673/thumbnail.png",
             "formType": "8-K"
         }
     ]

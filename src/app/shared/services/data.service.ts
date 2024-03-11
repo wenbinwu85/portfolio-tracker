@@ -21,6 +21,7 @@ export class DataService {
   public portfolioHoldings: any;
   public portfolioSymbols: any;
   public portfolioData: any;
+  public portfolioTechnicalInsights: any = {};
   public isLoadingData = new BehaviorSubject(false);
 
   constructor(private http: HttpClient) {
@@ -67,6 +68,18 @@ export class DataService {
       console.log('--- sanity check ---')
       console.table(Object.entries(this.portfolioHoldings));
     });
+  }
+
+  updatePortfolioTechnicalInsights() { 
+    this.isLoadingData.next(true);
+    this.portfolioSymbols.forEach((symbol: string) => {
+      this.getTechnicalInsights(symbol).subscribe(data => { 
+        this.portfolioTechnicalInsights[symbol] = data;
+        if (Object.keys(this.portfolioTechnicalInsights).length === this.portfolioSymbols.length) { 
+          this.isLoadingData.next(false);
+        }
+      })
+    })
   }
 
   /**

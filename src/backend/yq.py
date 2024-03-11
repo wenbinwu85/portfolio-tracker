@@ -150,7 +150,7 @@ def generate_holdings_data():
         stock_holding['costAverage'] = cost_avg
         stock_holding['totalCost'] = round(cost_avg * shares, 4)
         stock_holding['symbol'] = symbol
-        stock_holding['marketPrice'] = stock_data.get('currentPrice', 0)
+        stock_holding['marketPrice'] = stock_data.get('currentPrice', 0) or stock_data.get('navPrice', 0)
         stock_holding['marketValue'] = stock_holding['marketPrice'] * stock_holding['sharesOwned']
         total_cost = stock_holding['totalCost']
         stock_holding['unrealizedGain'] = stock_holding['marketValue'] - total_cost
@@ -248,10 +248,16 @@ def yq_corporate_events(symbol):
 
 
 def yq_technical_insights(symbol):
-    ticker = Ticker(symbol, asynchronous=True, progress=True)
-    return ticker.technical_insights
+    try:
+        ticker = Ticker(symbol, asynchronous=True, progress=True)
+        return ticker.technical_insights
+    except Exception as e:
+        print(symbol, 'failed to fetch technical insights:', e)
 
 
 def yq_recommendations(symbol):
-    ticker = Ticker(symbol, asynchronous=True, progress=True)
-    return ticker.recommendations
+    try:
+        ticker = Ticker(symbol, asynchronous=True, progress=True)
+        return ticker.recommendations
+    except Exception as e:
+        print(symbol, 'failed to fetch recommendations:', e)

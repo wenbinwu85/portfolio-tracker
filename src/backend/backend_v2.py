@@ -7,10 +7,11 @@ from helpers.funcs import dump_data_to, load_data_from
 from yq import DATA_PATH, yq_stock_data, yq_dividend_history, yq_corporate_events
 from yq import yq_technical_insights, yq_recommendations, generate_holdings_data
 
-settings_options = {'true': True, 'false': False}
+setting_options = {'true': True, 'false': False}
 
 app = Quart(__name__)
 app = cors(app)
+
 
 def get_file_path(file_name, ext='json'):
     return os.path.join(DATA_PATH, f'{file_name}.{ext}')
@@ -61,19 +62,18 @@ def fetch_dividend_history(symbol):
     path = get_file_path(symbol.lower() + '-dividend', 'csv')
     div_his = {}
     data = []
-    
-    def update_div_his():
-    	  start_date = datetime.now() - timedelta(days=365 * years_param)
-        data = yq_dividend_history(symbol, start_date)
-        data.to_csv(path)
 
     if should_update:
-        update_div_his()
+        start_date = datetime.now() - timedelta(days=365 * years_param)
+        data = yq_dividend_history(symbol, start_date)
+        data.to_csv(path)
     else:
         try:
             data = load_data_from(path)
         except Exception:
-            update_div_his()
+            start_date = datetime.now() - timedelta(days=365 * years_param)
+            data = yq_dividend_history(symbol, start_date).to_csv(path)
+            data.to_csv(path)
     if not isinstance(data, list):
         for line in data.to_csv().split()[1:]:
             _, div_date, div_rate = line.split(',')
@@ -98,15 +98,15 @@ def fetch_corporate_events(symbol):
 
 @app.route('/fetch/technical-insights/<symbol>')
 def fetch_technical_insights(symbol):
-	  path = get_file_path(symbol.lower() + '-technical-insights', 'json')
-    data = yq_technical_insights(symbol)
-    dump_data_to(data[symbol], path)
+    path = get_file_path(symbol.lower() + '-technical-insights', 'json')
+    data = yq_technical_insights(symbol)[symbol]
+    dump_data_to(data, path)
     return jsonify(data)
 
 
 @app.route('/fetch/recommendations/<symbol>')
 def fetch_recommendations(symbol):
-	  path = get_file_path(symbol.lower() + '-recommendations', 'json')
+    path = get_file_path(symbol.lower() + '-recommendations', 'json')
     data = yq_recommendations(symbol)
     dump_data_to(data, path)
     return jsonify(data)
@@ -137,7 +137,7 @@ def fetch_portfolio_data():
         portfolio_data = yq_stock_data()
         dump_data_to(portfolio_data, portfolio_data_path)
         for symbol in portfolio_data:
-            path = get_file_path(symbol.lower(). 'json')
+            path = get_file_path(symbol.lower(), 'json')
             dump_data_to(portfolio_data[symbol], path)
         return jsonify(portfolio_data)
     else:
@@ -166,9 +166,22 @@ def fetch_portfolio_dividend_history():
     response = get_portfolio_symbols()
     symbols_string = response.response.data.decode('utf-8')
     symbols = ast.literal_eval(symbols_string)
-    for i in symbols[:1]:
+    for i in symbols:
         fetch_dividend_history(i)
-    return "<h1>fetching dividend data...</h1>"
+    return "<h1>fetching dividend history...</h1>"
+
+
+@app.route('/fetch/portfolio/technical-insights')
+def fetch_portfolio_technical_insights():
+    response = get_portfolio_symbols()
+    symbols_string = response.response.data.decode('utf-8')
+    symbols = ast.literal_eval(symbols_string)
+    for symbol in symbols:
+        path = get_file_path(symbol.lower() + '-technical-insights', 'json')
+        insights = yq_technical_insights(symbol)
+        dump_data_to(insights[symbol], path)
+
+    return "<h1>fetching technical insights...</h1>"
 
 
 if __name__ == '__main__':

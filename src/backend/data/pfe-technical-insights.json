@@ -5,16 +5,16 @@
             "provider": "Trading Central",
             "sector": "Healthcare",
             "shortTermOutlook": {
-                "stateDescription": "Recent bearish events outweigh bullish events.",
-                "direction": "Bearish",
-                "score": 2,
-                "scoreDescription": "Bearish Evidence",
+                "stateDescription": "Recent bullish events outweigh bearish events.",
+                "direction": "Bullish",
+                "score": 3,
+                "scoreDescription": "Strong Bullish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 3,
                 "sectorScoreDescription": "Strong Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 1,
-                "indexScoreDescription": "Weak Bearish Evidence"
+                "indexScore": 3,
+                "indexScoreDescription": "Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "All events are bullish.",
@@ -43,14 +43,14 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 26.52,
+            "support": 27.17,
             "resistance": 27.61,
-            "stopLoss": 25.625884
+            "stopLoss": 25.842227
         },
         "valuation": {
             "color": 1.0,
             "description": "Undervalued",
-            "discount": "65%",
+            "discount": "64%",
             "relativeValue": "Discount",
             "provider": "Trading Central"
         }
@@ -58,12 +58,12 @@
     "companySnapshot": {
         "sectorInfo": "Healthcare",
         "company": {
-            "innovativeness": 0.8841,
+            "innovativeness": 0.8845999999999999,
             "hiring": 0.9109999999999999,
             "sustainability": 0.6639,
             "insiderSentiments": 0.6970000000000001,
-            "earningsReports": 0.9781,
-            "dividends": 0.955
+            "earningsReports": 0.9784,
+            "dividends": 0.953
         },
         "sector": {
             "innovativeness": 0.5,
@@ -106,13 +106,13 @@
     },
     "events": [
         {
-            "eventType": "Slow Stochastic",
+            "eventType": "MACD",
             "pricePeriod": "D",
             "tradingHorizon": "S",
             "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1709821800,
-            "endDate": 1709821800
+            "startDate": 1709908200,
+            "endDate": 1709908200
         }
     ],
     "reports": [

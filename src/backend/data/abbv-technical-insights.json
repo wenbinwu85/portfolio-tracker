@@ -5,22 +5,22 @@
             "provider": "Trading Central",
             "sector": "Healthcare",
             "shortTermOutlook": {
-                "stateDescription": "Bearish events outweigh bullish events.",
+                "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 1,
-                "scoreDescription": "Weak Bearish Evidence",
+                "score": 2,
+                "scoreDescription": "Bearish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 3,
                 "sectorScoreDescription": "Strong Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 1,
-                "indexScoreDescription": "Weak Bearish Evidence"
+                "indexScore": 3,
+                "indexScoreDescription": "Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 2,
-                "scoreDescription": "Bullish Evidence",
+                "score": 1,
+                "scoreDescription": "Weak Bullish Evidence",
                 "sectorDirection": "Bullish",
                 "sectorScore": 2,
                 "sectorScoreDescription": "Bullish Evidence",
@@ -44,8 +44,8 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 147.87,
-            "resistance": 181.06,
-            "stopLoss": 171.853323
+            "resistance": 178.92,
+            "stopLoss": 171.725357
         },
         "valuation": {
             "color": 0.5,
@@ -57,11 +57,11 @@
     "companySnapshot": {
         "sectorInfo": "Healthcare",
         "company": {
-            "innovativeness": 0.95,
+            "innovativeness": 0.9514,
             "hiring": 0.9181,
             "sustainability": 0.9159999999999999,
             "insiderSentiments": 0.1076,
-            "earningsReports": 0.975,
+            "earningsReports": 0.9758,
             "dividends": 0.7812
         },
         "sector": {
@@ -104,13 +104,13 @@
     },
     "events": [
         {
-            "eventType": "Momentum",
+            "eventType": "Fast Stochastic",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "L",
+            "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1709649000,
-            "endDate": 1709649000
+            "startDate": 1709908200,
+            "endDate": 1709908200
         }
     ],
     "reports": [

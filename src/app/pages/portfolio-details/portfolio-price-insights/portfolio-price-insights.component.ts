@@ -259,4 +259,8 @@ export class PortfolioPriceInsightsComponent implements OnInit {
       )
       .subscribe(insights => this.selectedStockTechnical = insights);
   }
+
+  refreshData() { 
+    this.dataService.updatePortfolioTechnicalInsights();
+  }
 }

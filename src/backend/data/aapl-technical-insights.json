@@ -7,23 +7,23 @@
             "shortTermOutlook": {
                 "stateDescription": "All events are bearish.",
                 "direction": "Bearish",
-                "score": 2,
-                "scoreDescription": "Bearish Evidence",
-                "sectorDirection": "Bullish",
-                "sectorScore": 2,
-                "sectorScoreDescription": "Bullish Evidence",
-                "indexDirection": "Bearish",
-                "indexScore": 1,
-                "indexScoreDescription": "Weak Bearish Evidence"
-            },
-            "intermediateTermOutlook": {
-                "stateDescription": "There are no events.",
-                "direction": "Neutral",
-                "score": 0,
-                "scoreDescription": "No Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bearish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 1,
                 "sectorScoreDescription": "Weak Bearish Evidence",
+                "indexDirection": "Bearish",
+                "indexScore": 3,
+                "indexScoreDescription": "Strong Bearish Evidence"
+            },
+            "intermediateTermOutlook": {
+                "stateDescription": "There is one bearish event.",
+                "direction": "Bearish",
+                "score": 2,
+                "scoreDescription": "Bearish Evidence",
+                "sectorDirection": "Bearish",
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bearish Evidence",
                 "indexDirection": "Bullish",
                 "indexScore": 1,
                 "indexScoreDescription": "Weak Bullish Evidence"
@@ -44,8 +44,8 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 150.66,
-            "resistance": 173.36,
-            "stopLoss": 163.019364
+            "resistance": 179.35,
+            "stopLoss": 163.87847
         },
         "valuation": {
             "color": 0.5,
@@ -60,9 +60,9 @@
             "innovativeness": 0.9981,
             "hiring": 0.9512999999999999,
             "sustainability": 0.5667,
-            "insiderSentiments": 0.2076,
-            "earningsReports": 0.8409,
-            "dividends": 0.0964
+            "insiderSentiments": 0.2071,
+            "earningsReports": 0.8395999999999999,
+            "dividends": 0.0962
         },
         "sector": {
             "innovativeness": 0.5,
@@ -105,13 +105,13 @@
     },
     "events": [
         {
-            "eventType": "Gap Down",
+            "eventType": "Intermediate-term KST",
             "pricePeriod": "D",
-            "tradingHorizon": "S",
-            "tradeType": "U",
+            "tradingHorizon": "I",
+            "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1709562600,
-            "endDate": 1709649000
+            "startDate": 1709908200,
+            "endDate": 1709908200
         }
     ],
     "reports": [

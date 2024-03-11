@@ -9,12 +9,12 @@
                 "direction": "Bearish",
                 "score": 4,
                 "scoreDescription": "Very Strong Bearish Evidence",
-                "sectorDirection": "Bearish",
-                "sectorScore": 1,
-                "sectorScoreDescription": "Weak Bearish Evidence",
+                "sectorDirection": "Bullish",
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bullish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 1,
-                "indexScoreDescription": "Weak Bearish Evidence"
+                "indexScore": 3,
+                "indexScoreDescription": "Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
@@ -29,13 +29,13 @@
                 "indexScoreDescription": "Weak Bullish Evidence"
             },
             "longTermOutlook": {
-                "stateDescription": "Recent bearish events outweigh bullish events.",
+                "stateDescription": "All events are bearish.",
                 "direction": "Bearish",
-                "score": 2,
-                "scoreDescription": "Bearish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bearish Evidence",
                 "sectorDirection": "Bullish",
-                "sectorScore": 2,
-                "sectorScoreDescription": "Bullish Evidence",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bullish Evidence",
                 "indexDirection": "Bullish",
                 "indexScore": 2,
                 "indexScoreDescription": "Bullish Evidence"
@@ -45,7 +45,7 @@
             "provider": "Trading Central",
             "support": 28.83,
             "resistance": 29.68,
-            "stopLoss": 27.900819
+            "stopLoss": 27.615165
         },
         "valuation": {
             "color": 1.0,
@@ -60,8 +60,8 @@
         "company": {
             "innovativeness": 0.0888,
             "insiderSentiments": 0.5509000000000001,
-            "earningsReports": 0.5992000000000001,
-            "dividends": 0.4207
+            "earningsReports": 0.5969,
+            "dividends": 0.43189999999999995
         },
         "sector": {
             "innovativeness": 0.5,
@@ -82,13 +82,13 @@
     },
     "events": [
         {
-            "eventType": "Double Moving Average Crossover",
-            "pricePeriod": "D",
+            "eventType": "Triple Moving Average Crossover",
+            "pricePeriod": "W",
             "tradingHorizon": "I",
             "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1709821800,
-            "endDate": 1709821800
+            "startDate": 1709908200,
+            "endDate": 1709908200
         }
     ],
     "reports": [
@@ -1126,7 +1126,7 @@
             "title": "8-K : Corporate Changes & Voting Matters",
             "description": "Current report filing",
             "filingDate": 1709856000000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000110465924032475/thumbnail.png",
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001920791/000110465924032475/thumbnail.png",
             "formType": "8-K"
         },
         {
@@ -1346,15 +1346,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0001705696-22-000129_1705696",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1666828800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001920791/000170569622000129/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
             "id": "0001705696-22-000130_1705696",
             "type": "Periodic Financial Reports",
             "title": "10-Q : Periodic Financial Reports",
@@ -1362,6 +1353,15 @@
             "filingDate": 1666828800000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001920791/000170569622000130/thumbnail.png",
             "formType": "10-Q"
+        },
+        {
+            "id": "0001705696-22-000129_1705696",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1666828800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001920791/000170569622000129/thumbnail.png",
+            "formType": "8-K"
         },
         {
             "id": "0001705696-22-000111_1705696",
@@ -1427,15 +1427,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0001193125-22-107450_1705696",
-            "type": "Offering Registrations",
-            "title": "S-3ASR : Offering Registrations",
-            "description": "Automatic shelf registration statement of securities of well-known seasoned issuers",
-            "filingDate": 1650240000000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001920791/000119312522107450/thumbnail.png",
-            "formType": "S-3ASR"
-        },
-        {
             "id": "0001193125-22-107429_1705696",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -1443,6 +1434,15 @@
             "filingDate": 1650240000000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000119312522107429/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0001193125-22-107450_1705696",
+            "type": "Offering Registrations",
+            "title": "S-3ASR : Offering Registrations",
+            "description": "Automatic shelf registration statement of securities of well-known seasoned issuers",
+            "filingDate": 1650240000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001920791/000119312522107450/thumbnail.png",
+            "formType": "S-3ASR"
         },
         {
             "id": "0001705696-22-000067_1705696",

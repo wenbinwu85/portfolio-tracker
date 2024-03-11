@@ -9,21 +9,21 @@
                 "direction": "Bullish",
                 "score": 2,
                 "scoreDescription": "Bullish Evidence",
-                "sectorDirection": "Neutral",
-                "sectorScore": 0,
-                "sectorScoreDescription": "Neutral Evidence",
+                "sectorDirection": "Bullish",
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bullish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 1,
-                "indexScoreDescription": "Weak Bearish Evidence"
+                "indexScore": 3,
+                "indexScoreDescription": "Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 3,
-                "scoreDescription": "Strong Bullish Evidence",
+                "score": 4,
+                "scoreDescription": "Very Strong Bullish Evidence",
                 "sectorDirection": "Bullish",
-                "sectorScore": 4,
-                "sectorScoreDescription": "Very Strong Bullish Evidence",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bullish Evidence",
                 "indexDirection": "Bullish",
                 "indexScore": 1,
                 "indexScoreDescription": "Weak Bullish Evidence"
@@ -45,7 +45,7 @@
             "provider": "Trading Central",
             "support": 45.44,
             "resistance": 48.86,
-            "stopLoss": 43.668441
+            "stopLoss": 43.98562
         },
         "valuation": {
             "color": 0.5,
@@ -61,8 +61,8 @@
             "hiring": 0.24710000000000001,
             "sustainability": 0.5588000000000001,
             "insiderSentiments": 0.5152,
-            "earningsReports": 0.7237,
-            "dividends": 0.4606
+            "earningsReports": 0.7204,
+            "dividends": 0.4556
         },
         "sector": {
             "innovativeness": 0.5,
@@ -105,13 +105,13 @@
     },
     "events": [
         {
-            "eventType": "Head and Shoulders Bottom",
-            "pricePeriod": "D",
+            "eventType": "Price Crosses Moving Average",
+            "pricePeriod": "W",
             "tradingHorizon": "I",
             "tradeType": "L",
-            "imageUrl": "https://s.yimg.com/uc/fin/img/assets/bullish-head-and-shoulders-bottom.svg",
-            "startDate": 1705069800,
-            "endDate": 1709735400
+            "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
+            "startDate": 1709908200,
+            "endDate": 1709908200
         }
     ],
     "reports": [
