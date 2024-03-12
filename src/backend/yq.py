@@ -150,7 +150,7 @@ def generate_holdings_data():
         stock_holding['costAverage'] = cost_avg
         stock_holding['totalCost'] = round(cost_avg * shares, 4)
         stock_holding['symbol'] = symbol
-        stock_holding['marketPrice'] = stock_data.get('currentPrice', 0) or stock_data.get('navPrice', 0)
+        stock_holding['marketPrice'] = stock_data.get('regularMarketPrice', 0)
         stock_holding['marketValue'] = stock_holding['marketPrice'] * stock_holding['sharesOwned']
         total_cost = stock_holding['totalCost']
         stock_holding['unrealizedGain'] = stock_holding['marketValue'] - total_cost
@@ -214,7 +214,7 @@ def map_stock_data(yq_modules_data):
                 mapped_data['fcfPayoutRatio'] = 0
         else:
             mapped_data['profile'].update(data['fundProfile'])
-            mapped_data['dividendRate'] = data['summaryDetail']['yield'] * data['price']['currentPrice']
+            mapped_data['dividendRate'] = data['summaryDetail']['yield'] * data['price']['regularMarketPrice']
             mapped_data['dividendYield'] = data['summaryDetail']['yield']
             mapped_data['topHoldings'] = data['topHoldings']
             mapped_data['fundPerformance'] = data['fundPerformance']
