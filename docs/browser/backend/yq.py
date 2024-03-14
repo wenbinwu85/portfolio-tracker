@@ -164,9 +164,9 @@ def generate_holdings_data():
         holdings[symbol] = stock_holding
 
     for position in [v for v in holdings.values() if isinstance(v, dict)]:
+        holdings['portfolioPositions'] += 1
         position['portfolioPercent'] = position['marketValue'] / holdings['portfolioMarketValue']
         holdings[position['symbol']] = position
-        holdings['portfolioPositions'] += 1
 
     holdings['portfolioUnrealizedGainPercent'] = holdings['portfolioUnrealizedGain'] / holdings['portfolioTotalInvestment']
     holdings['portfolioYieldOnCost'] = holdings['portfolioDividendIncome'] / holdings['portfolioTotalInvestment']
@@ -235,16 +235,11 @@ def yq_stock_data(symbols=None):
 
 
 def yq_dividend_history(symbol, start_date):
-    ticker = Ticker(symbol, asynchronous=True, progress=True)
-    return ticker.dividend_history(start=start_date)
-
-
-def yq_corporate_events(symbol):
     try:
         ticker = Ticker(symbol, asynchronous=True, progress=True)
-        return ticker.corporate_events
+        return ticker.dividend_history(start=start_date)
     except Exception as e:
-        print(symbol, 'failed to fetch corporate events:', e)
+        print(symbol, 'failed to fetch dividend history:', e)
 
 
 def yq_technical_insights(symbol):
@@ -253,6 +248,14 @@ def yq_technical_insights(symbol):
         return ticker.technical_insights
     except Exception as e:
         print(symbol, 'failed to fetch technical insights:', e)
+
+
+def yq_corporate_events(symbol):
+    try:
+        ticker = Ticker(symbol, asynchronous=True, progress=True)
+        return ticker.corporate_events
+    except Exception as e:
+        print(symbol, 'failed to fetch corporate events:', e)
 
 
 def yq_recommendations(symbol):

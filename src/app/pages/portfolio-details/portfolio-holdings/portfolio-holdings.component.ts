@@ -4,29 +4,38 @@ import {
   style,
   transition,
   trigger,
-} from "@angular/animations";
+} from '@angular/animations';
 import {
   CurrencyPipe,
   NgFor,
   NgIf,
   NgStyle,
   TitleCasePipe,
-} from "@angular/common";
-import { AfterViewInit, Component, OnInit, ViewChild } from "@angular/core";
-import { MatFormFieldModule } from "@angular/material/form-field";
-import { MatInputModule } from "@angular/material/input";
-import { MatSlideToggleModule } from "@angular/material/slide-toggle";
-import { MatSort, MatSortModule } from "@angular/material/sort";
+} from '@angular/common';
+import {
+  AfterViewInit,
+  Component,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {
+  MatSort,
+  MatSortModule,
+} from '@angular/material/sort';
 import {
   MatTable,
   MatTableDataSource,
   MatTableModule,
-} from "@angular/material/table";
-import { NgxChartsModule } from "@swimlane/ngx-charts";
-import { ExpandedRowComponent } from "../../../shared/components/expanded-row/expanded-row.component";
-import { StockNameCardComponent } from "../../../shared/components/stock/stock-name-card/stock-name-card.component";
-import { TvSingleQuoteWidgetComponent } from "../../../shared/components/tradingview/tv-single-quote-widget/tv-single-quote-widget.component";
-import { DataService } from "../../../shared/services/data.service";
+} from '@angular/material/table';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { ExpandedRowComponent } from '../../../shared/components/expanded-row/expanded-row.component';
+import { StockNameCardComponent } from '../../../shared/components/stock/stock-name-card/stock-name-card.component';
+import { TvSingleQuoteWidgetComponent } from '../../../shared/components/tradingview/tv-single-quote-widget/tv-single-quote-widget.component';
+import { DataService } from '../../../shared/services/data.service';
 
 @Component({
   selector: "portfolio-holdings",
@@ -47,6 +56,7 @@ import { DataService } from "../../../shared/services/data.service";
     CurrencyPipe,
     ExpandedRowComponent,
     MatFormFieldModule,
+    MatIconModule,
     MatInputModule,
     MatSlideToggleModule,
     MatSortModule,
@@ -98,6 +108,40 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     "exchangeName",
     "rating",
   ];
+  cells: Function[] = [
+    (stock: any) => "",
+    (stock: any) => "",
+    (stock: any) => `$${this.portfolioHoldings[stock.symbol].totalCost}`,
+    (stock: any) =>
+      `$${this.portfolioHoldings[stock.symbol].marketValue.toFixed(2)}`,
+    (stock: any) =>
+      `${(this.portfolioHoldings[stock.symbol].portfolioPercent * 100).toFixed(2)}%`,
+    (stock: any) =>
+      `$${this.portfolioHoldings[stock.symbol].unrealizedGain.toFixed(2)}`,
+    (stock: any) =>
+      `${(this.portfolioHoldings[stock.symbol].unrealizedGainPercent * 100).toFixed(2)}%`,
+    (stock: any) =>
+      `$${this.portfolioHoldings[stock.symbol].dividendIncome.toFixed(2)}`,
+    (stock: any) =>
+      (this.portfolioHoldings[stock.symbol].yieldOnCost * 100).toFixed(2) + "%",
+    (stock: any) => stock.sector || "ETF",
+    (stock: any) => stock.exchangeName,
+    (stock: any) => "",
+  ];
+  footerRow: Function[] = [
+    () => "",
+    () => "",
+    () => `$${this.portfolioHoldings.portfolioTotalInvestment.toFixed(2)}`,
+    () => `$${this.portfolioHoldings.portfolioMarketValue.toFixed(2)}`,
+    () => "",
+    () => `$${this.portfolioHoldings.portfolioUnrealizedGain.toFixed(2)}`,
+    () => "",
+    () => `$${this.portfolioHoldings.portfolioDividendIncome.toFixed(2)}`,
+    () => `${(this.portfolioHoldings.portfolioYieldOnCost * 100).toFixed(2)}%`,
+    () => "",
+    () => "",
+    () => "",
+  ];
 
   constructor(private dataService: DataService) {}
 
@@ -148,53 +192,13 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
         longName: stock.longName,
       });
     });
-    this.allTotalCostChartData.sort((a: any, b: any) => a.value - b.value);
+    this.allTotalCostChartData.sort((a: any, b: any) => b.value - a.value);
     this.totalCostChartData = this.allTotalCostChartData;
   }
 
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
   }
-
-  cells: Function[] = [
-    (stock: any) => "",
-    (stock: any) => "",
-    (stock: any) => `$${this.portfolioHoldings[stock.symbol].totalCost}`,
-    (stock: any) =>
-      `$${this.portfolioHoldings[stock.symbol].marketValue.toFixed(2)}`,
-    (stock: any) =>
-      `${(this.portfolioHoldings[stock.symbol].portfolioPercent * 100).toFixed(
-        2
-      )}%`,
-    (stock: any) =>
-      `$${this.portfolioHoldings[stock.symbol].unrealizedGain.toFixed(2)}`,
-    (stock: any) =>
-      `${(
-        this.portfolioHoldings[stock.symbol].unrealizedGainPercent * 100
-      ).toFixed(2)}%`,
-    (stock: any) =>
-      `$${this.portfolioHoldings[stock.symbol].dividendIncome.toFixed(2)}`,
-    (stock: any) =>
-      (this.portfolioHoldings[stock.symbol].yieldOnCost * 100).toFixed(2) + "%",
-    (stock: any) => stock.sector || "ETF",
-    (stock: any) => stock.exchangeName,
-    (stock: any) => "",
-  ];
-
-  footerRow: Function[] = [
-    () => "",
-    () => "",
-    () => `$${this.portfolioHoldings.portfolioTotalInvestment.toFixed(2)}`,
-    () => `$${this.portfolioHoldings.portfolioMarketValue.toFixed(2)}`,
-    () => "",
-    () => `$${this.portfolioHoldings.portfolioUnrealizedGain.toFixed(2)}`,
-    () => "",
-    () => `$${this.portfolioHoldings.portfolioDividendIncome.toFixed(2)}`,
-    () => `${(this.portfolioHoldings.portfolioYieldOnCost * 100).toFixed(2)}%`,
-    () => "",
-    () => "",
-    () => "",
-  ];
 
   applyFilter(event: Event) {
     this.totalCostChartData = this.allTotalCostChartData;
@@ -214,11 +218,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     }
   }
 
-  expandRow(row: any) {
-    this.expandedRow = this.expandedRow === row ? null : row;
-  }
-
-  getColColor(stock: any, index: number) {
+  getCellColor(stock: any, index: number) {
     switch (index) {
       case 5:
       case 6:
@@ -236,6 +236,10 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     }
   }
 
+  expandRow(row: any) {
+    this.expandedRow = this.expandedRow === row ? null : row;
+  }
+  
   tradingviewWidgetToggleHandler() {
     this.displayTradingviewWidgets = !this.displayTradingviewWidgets;
   }

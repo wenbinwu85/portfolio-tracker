@@ -1,12 +1,9 @@
-import {
-  Injectable,
-  Renderer2,
-  RendererFactory2,
-} from "@angular/core";
+import { Injectable, Renderer2, RendererFactory2 } from "@angular/core";
 
 export enum SourceScripts {
   EconomicEvents = "https://s3.tradingview.com/external-embedding/embed-widget-events.js",
   Financials = "https://s3.tradingview.com/external-embedding/embed-widget-financials.js",
+  Heatmap = "https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js",
   HotLists = "https://s3.tradingview.com/external-embedding/embed-widget-hotlists.js",
   MarketOverview = "https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js",
   MarketQuotes = "https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js",
@@ -19,7 +16,6 @@ export enum SourceScripts {
   TickerTape = "https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js",
   Tickers = "https://s3.tradingview.com/external-embedding/embed-widget-tickers.js",
   Timeline = "https://s3.tradingview.com/external-embedding/embed-widget-timeline.js",
-  Heatmap = "https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js",
 }
 
 @Injectable({
@@ -46,7 +42,7 @@ export class TradingviewService {
     symbols: string,
     tape: boolean,
     displayMode = "adaptive",
-    theme = "light",
+    theme = "light"
   ) {
     const params = `
       {
@@ -163,7 +159,7 @@ export class TradingviewService {
     width = "100%",
     height = 200,
     dateRange = "12M",
-    theme = "light",
+    theme = "light"
   ) {
     const params = `
       {
@@ -183,14 +179,13 @@ export class TradingviewService {
     return this.getScript(SourceScripts.MiniSymbolOverview, params);
   }
 
-
   // https://www.tradingview.com/widget-docs/widgets/watchlists/market-quotes/
   marketQuotesWidget(params: string) {
     return this.getScript(SourceScripts.MarketQuotes, params);
   }
 
   // https://www.tradingview.com/widget-docs/widgets/heatmaps/stock-heatmap/
-  heatMapWidget() { 
+  heatMapWidget() {
     const params = `
     {
       "exchanges": [],
@@ -207,7 +202,7 @@ export class TradingviewService {
       "hasSymbolTooltip": true,
       "width": "100%",
       "height": "800"
-    }`
+    }`;
     return this.getScript(SourceScripts.Heatmap, params);
   }
 }

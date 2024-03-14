@@ -9,7 +9,8 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { MatTableDataSource, MatTableModule } from "@angular/material/table";
 import { MatTabsModule } from "@angular/material/tabs";
-import { Color, NgxChartsModule, ScaleType } from "@swimlane/ngx-charts";
+import { catchError, map } from "rxjs";
+import { Color, NgxChartsModule } from "@swimlane/ngx-charts";
 import { PriceMovementChartsComponent } from "../../../shared/components/charts/price-movement-charts/price-movement-charts.component";
 import { StockDayPriceRangeComponent } from "../../../shared/components/stock/stock-day-price-range/stock-day-price-range.component";
 import { TvSymbolInfoWidgetComponent } from "../../../shared/components/tradingview/tv-symbol-info-widget/tv-symbol-info-widget.component";
@@ -19,7 +20,6 @@ import { PortfolioDividendComponent } from "../portfolio-dividend/portfolio-divi
 import { PortfolioEventsComponent } from "../portfolio-events/portfolio-events.component";
 import { PortfolioFinancialsComponent } from "../portfolio-financials/portfolio-financials.component";
 import { PortfolioHoldingsComponent } from "../portfolio-holdings/portfolio-holdings.component";
-import { catchError, map } from "rxjs";
 
 @Component({
   selector: "portfolio-price-insights",
@@ -51,32 +51,25 @@ import { catchError, map } from "rxjs";
 export class PortfolioPriceInsightsComponent implements OnInit {
   sortedStocks: any[] = [];
   sortedEtfs: any[] = [];
+  sp500FiftyTwoWeekChange = 0;
   fiftyTwoWeekChangeChartData: any = [];
   fiftyTwoWeekLowChartData: any = [];
   fiftyTwoWeekHighChartData: any = [];
+  discountChartData: any = [];
   fiftyDayMAChartData: any = [];
   twoHundredDayMAChartData: any = [];
-  discountChartData: any = [];
-  displayTradingviewWidgets = false;
-  sp500FiftyTwoWeekChange = 0;
   etfPerformanceChartData: any = [];
-    scaleType = ScaleType;
   sp500 = "S&P 500";
-  activeSymbol = [{ name: this.sp500 }];
-  customColor = [{ name: this.sp500, value: "orangered" }];
   selectedPerformanceChart = 1;
-  selectedVSChart = 1;
   selectedSymbol: any = "SCHD";
+  selectedStock: any;
   selectedStockTechnical: any;
-
   performanceChartColorScheme = {
     domain: ["lightsteelblue"],
   } as Color;
-
   fiftyTwoWeekChartColorScheme = {
     domain: ["lightsteelblue"],
   } as Color;
-
   targetPriceChartColorScheme = {
     domain: ["lightsteelblue"],
   } as Color;
@@ -94,7 +87,7 @@ export class PortfolioPriceInsightsComponent implements OnInit {
     "targetMedianPrice",
     "targetHighPrice",
     "argusTarget",
-    "tradingCentral"
+    "tradingCentral",
   ];
 
   constructor(private dataService: DataService) {}
@@ -108,6 +101,9 @@ export class PortfolioPriceInsightsComponent implements OnInit {
       .filter((a: any) => a.quoteType === "ETF")
       .sort((a: any, b: any) => a["ytdReturn"] - b["ytdReturn"]);
     this.sp500FiftyTwoWeekChange = this.sortedStocks[0].SandP52WeekChange;
+    this.selectedStock = Object.values(this.dataService.portfolioData).filter(
+      (stock: any) => stock.symbol === this.selectedSymbol
+    )[0] as any;
 
     this.sortedStocks.forEach((stock: any) => {
       this.fiftyTwoWeekChangeChartData.push({
@@ -116,47 +112,31 @@ export class PortfolioPriceInsightsComponent implements OnInit {
       });
       this.fiftyTwoWeekLowChartData.push({
         name: stock.symbol,
-        value:
-          ((stock.regularMarketPrice - stock.fiftyTwoWeekLow) /
-            stock.fiftyTwoWeekLow) *
-          100,
+        value: ((stock.regularMarketPrice - stock.fiftyTwoWeekLow) / stock.fiftyTwoWeekLow) * 100,
       });
       this.fiftyTwoWeekHighChartData.push({
         name: stock.symbol,
-        value:
-          ((stock.regularMarketPrice - stock.fiftyTwoWeekHigh) /
-            stock.fiftyTwoWeekHigh) *
-          100,
+        value: ((stock.regularMarketPrice - stock.fiftyTwoWeekHigh) / stock.fiftyTwoWeekHigh) * 100,
       });
       this.discountChartData.push({
         name: stock.symbol,
-        value:
-          ((stock.regularMarketPrice - stock.targetMeanPrice) /
-            stock.targetMeanPrice) *
-          100,
+        value: ((stock.regularMarketPrice - stock.targetMeanPrice) / stock.targetMeanPrice) * 100,
       });
       this.fiftyDayMAChartData.push({
         name: stock.symbol,
-        value:
-          ((stock.regularMarketPrice - stock.fiftyDayAverage) /
-            stock.fiftyDayAverage) *
-          100,
+        value: ((stock.regularMarketPrice - stock.fiftyDayAverage) / stock.fiftyDayAverage) * 100,
       });
       this.twoHundredDayMAChartData.push({
         name: stock.symbol,
-        value:
-          ((stock.regularMarketPrice - stock.twoHundredDayAverage) /
-            stock.twoHundredDayAverage) *
-          100,
+        value: ((stock.regularMarketPrice - stock.twoHundredDayAverage) / stock.twoHundredDayAverage) * 100,
       });
     });
+
     this.fiftyTwoWeekChangeChartData.push({
       name: this.sp500,
       value: this.sortedStocks[0].SandP52WeekChange * 100,
     });
-    this.fiftyTwoWeekChangeChartData.sort(
-      (a: any, b: any) => a.value - b.value
-    );
+    this.fiftyTwoWeekChangeChartData.sort((a: any, b: any) => a.value - b.value);
     this.fiftyDayMAChartData.sort((a: any, b: any) => a.value - b.value);
     this.twoHundredDayMAChartData.sort((a: any, b: any) => a.value - b.value);
     this.fiftyTwoWeekLowChartData.sort((a: any, b: any) => a.value - b.value);
@@ -173,75 +153,23 @@ export class PortfolioPriceInsightsComponent implements OnInit {
       tenYear: "Ten Year",
     };
     Object.keys(keyLabelMapping).forEach((key: any) => {
-      if (keyLabelMapping[key]) {
-        let keyData: any = {
-          name: keyLabelMapping[key],
-          series: [],
-        };
-        this.sortedEtfs.forEach((etf: any) => {
-          keyData.series.push({
-            name: etf.symbol,
-            value: etf.fundPerformance.trailingReturns[key] * 100,
-          });
+      let keyData: any = {
+        name: keyLabelMapping[key],
+        series: [],
+      };
+      this.sortedEtfs.forEach((etf: any) => {
+        keyData.series.push({
+          name: etf.symbol,
+          value: etf.fundPerformance.trailingReturns[key] * 100,
         });
-        this.etfPerformanceChartData.push(keyData);
-      }
+      });
+      this.etfPerformanceChartData.push(keyData);
     });
   }
 
-  getSP500ChangeColor(stock: any) {
-    return this.sp500FiftyTwoWeekChange > 0 ? "seagreen" : "orangered";
-  }
-
-  getTooltipData(name: string) {
-    return Object.values(this.dataService.portfolioData).filter(
-      (a: any) => a.symbol === name
-    )[0];
-  }
-
-  changePerformanceChart(chartID: number) {
-    this.selectedPerformanceChart = chartID;
-  }
-
-  changeVSCharts(chartId: number) {
-    this.selectedVSChart = chartId;
-  }
-
-  getLogoSource(stock: any) {
-    return `/assets/ticker-logos/${stock.symbol}.png`;
-  }
-
-  updateWidget(symbol: string) {
-    this.selectedSymbol = null;
-    this.selectedStockTechnical = null;
-    setTimeout(() => {
-      this.selectedSymbol = symbol;
-      this.getSelectedStockTechnicalInsights();
-    }, 50);
-  }
-
-  get getWidget() {
-    return {
-      widget: TvSymbolInfoWidgetComponent,
-      inputs: { symbol: this.selectedSymbol },
-    };
-  }
-
-  getStock() {
-    return Object.values(this.dataService.portfolioData).filter(
-      (stock: any) => stock.symbol === this.selectedSymbol
-    )[0] as any;
-  }
-
-  getTableDataSource() {
-    const selectedStock = this.getStock();
-    let dataSource = new MatTableDataSource<any>();
-    dataSource.data = [selectedStock];
-    return dataSource;
-  }
-
   getSelectedStockTechnicalInsights() {
-    this.dataService.loadTechnicalInsightsFromDataFolder(this.selectedSymbol)
+    this.dataService
+      .loadTechnicalInsightsFromDataFolder(this.selectedSymbol)
       .pipe(
         map((response: any) => {
           if (response.status === 500) {
@@ -257,10 +185,43 @@ export class PortfolioPriceInsightsComponent implements OnInit {
             .pipe(map((response: any) => response[this.selectedSymbol]));
         })
       )
-      .subscribe(insights => this.selectedStockTechnical = insights);
+      .subscribe((insights) => (this.selectedStockTechnical = insights));
   }
 
-  refreshData() { 
+  refreshData() {
     this.dataService.updatePortfolioTechnicalInsights();
   }
+
+  changePerformanceChart(chartID: number) {
+    this.selectedPerformanceChart = chartID;
+  }
+
+  getLogoSource(stock: any) {
+    return `/assets/ticker-logos/${stock.symbol}.png`;
+  }
+
+  updateSelectedStock(symbol: string) {
+    this.selectedSymbol = null;
+    this.selectedStockTechnical = null;
+    setTimeout(() => {
+      this.selectedSymbol = symbol;
+      this.selectedStock = Object.values(this.dataService.portfolioData).filter(
+        (stock: any) => stock.symbol === this.selectedSymbol
+      )[0] as any;
+      this.getSelectedStockTechnicalInsights();
+    }, 50);
+  }
+
+  getTableDataSource() {
+    let dataSource = new MatTableDataSource<any>();
+    dataSource.data = [this.selectedStock];
+    return dataSource;
+  }
+
+  // get getWidget() {
+  //   return {
+  //     widget: TvSymbolInfoWidgetComponent,
+  //     inputs: { symbol: this.selectedSymbol },
+  //   };
+  // }
 }

@@ -1,4 +1,4 @@
-<section *ngIf="portfolioHoldings" class="summary-cards-container">
+<section class="summary-cards-container">
   <info-card
     icon="numbers"
     [value]="portfolioHoldings.portfolioPositions"
@@ -70,21 +70,21 @@
     <mat-icon>restart_alt</mat-icon>
   </button> 
 
-  <section class="add-flex">
+  <div class="add-flex">
     <div class="chart-container">
       <ngx-charts-pie-grid
         [scheme]="'picnic'"
         [animations]="true"
         [results]="sectorsData"
-        [label]="'Total $'"
+        [label]="'Dollars Invested'"
         (select)="filterBySector($event)"
       />
     </div>
     <div class="chart-container">
       <ngx-charts-bar-vertical
         [scheme]="portfolioPercentBarChartColorScheme"
-        [animations]="true"
         [results]="portfolioPercentBarChartData"
+        [animations]="true"
         [xAxis]="true"
         [yAxis]="true"
         [showXAxisLabel]="true"
@@ -92,13 +92,13 @@
         [yAxisLabel]="'Portfolio %'"
       />
     </div>
-  </section>
+  </div>
 </section>
 
-<div *ngIf="portfolioHoldings" class="add-border">
-  <section class="goal-container">
+<section class="add-border">
+  <div class="goal-container">
     <h1>
-      <b>Portfolio Value Goal:</b>
+      <span>Portfolio Value Goal:</span>
       <span class="goal-title">{{ portfolioValueGoalPercentage | percent : ".2" }}</span>
     </h1>
   
@@ -120,7 +120,7 @@
       <h1>{{ "0" | currency }}</h1>
       <h1>{{ portfolioValueTarget | currency }}</h1>
     </div>
-  </section>
+  </div>
 
   <mat-expansion-panel [expanded]="false">
     <mat-expansion-panel-header>
@@ -129,40 +129,39 @@
         <span>Portfolio Value</span>
       </mat-panel-title>
     </mat-expansion-panel-header>
-    <section class="add-flex">
+    <div class="add-flex">
       <div class="chart-container">
         <ngx-charts-bar-vertical-stacked
           [scheme]="'picnic'"
-          [animations]="true"
           [results]="marketValueBarChartData"
+          [animations]="true"
           [xAxis]="true"
           [yAxis]="true"
           [showXAxisLabel]="true"
           [showYAxisLabel]="true"
           [yAxisLabel]="'Market Value $'"
-          [yScaleMax]="marketValueYMax"
         />
       </div>
       <div class="chart-container">
         <ngx-charts-bar-vertical
           [scheme]="'picnic'"
-          [animations]="true"
           [results]="unrealizedGainBarChartData"
+          [animations]="true"
           [xAxis]="true"
           [yAxis]="true"
           [showXAxisLabel]="true"
           [showYAxisLabel]="true"
-          [yAxisLabel]="'Open P & L %'"
+          [yAxisLabel]="'Unrealized Gain %'"
         />
       </div>
-    </section>
+    </div>
   </mat-expansion-panel>
-</div>
+</section>
 
-<div *ngIf="portfolioHoldings" class="add-border">
-  <section class="goal-container">
+<section class="add-border">
+  <div class="goal-container">
     <h1>
-      <b>Passive Income Goal:</b>
+      <span>Passive Income Goal:</span>
       <span class="goal-title">{{ passiveIncomeGoalPercentage | percent : ".2" }}</span>
     </h1>
   
@@ -184,7 +183,7 @@
       <h1>{{ "0" | currency }}</h1>
       <h1>{{ passiveIncomeTarget | currency }}</h1>
     </div>
-  </section>
+  </div>
 
   <mat-expansion-panel [expanded]="false">
     <mat-expansion-panel-header>
@@ -193,33 +192,31 @@
         <span>Passive Income</span>
       </mat-panel-title>
     </mat-expansion-panel-header>
-    <section class="add-flex">
+    <div class="add-flex">
       <div class="chart-container">
         <ngx-charts-bar-vertical
           [scheme]="'natural'"
-          [animations]="true"
           [results]="dividendBarChartData"
+          [animations]="true"
           [xAxis]="true"
           [yAxis]="true"
           [showXAxisLabel]="true"
           [showYAxisLabel]="true"
           [yAxisLabel]="'Dividend Income $'"
-          [yScaleMax]="dividendYMax"
         />
       </div>
       <div class="chart-container">
         <ngx-charts-bar-vertical
           [scheme]="'natural'"
-          [animations]="true"
           [results]="yocBarChartData"
+          [animations]="true"
           [xAxis]="true"
           [yAxis]="true"
           [showXAxisLabel]="true"
           [showYAxisLabel]="true"
           [yAxisLabel]="'Yield On Cost %'"
-          [yScaleMax]="yocYMax"
         />
       </div>
-    </section>
+    </div>
   </mat-expansion-panel>
-</div>
+</section>

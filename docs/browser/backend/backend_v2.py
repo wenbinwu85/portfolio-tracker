@@ -4,8 +4,8 @@ from datetime import datetime, timedelta
 from quart import Quart, jsonify, request
 from quart_cors import cors
 from helpers.funcs import dump_data_to, load_data_from
-from yq import DATA_PATH, yq_stock_data, yq_dividend_history, yq_corporate_events
-from yq import yq_technical_insights, yq_recommendations, generate_holdings_data
+from yq import DATA_PATH, generate_holdings_data, yq_stock_data, yq_dividend_history
+from yq import yq_technical_insights, yq_corporate_events, yq_recommendations
 
 setting_options = {'true': True, 'false': False}
 
@@ -85,6 +85,14 @@ def fetch_dividend_history(symbol):
     return jsonify(div_his)
 
 
+@app.route('/fetch/technical-insights/<symbol>')
+def fetch_technical_insights(symbol):
+    path = get_file_path(symbol.lower() + '-technical-insights', 'json')
+    data = yq_technical_insights(symbol)[symbol]
+    dump_data_to(data, path)
+    return jsonify(data)
+
+
 @app.route('/fetch/events/<symbol>')
 def fetch_corporate_events(symbol):
     events = {}
@@ -94,14 +102,6 @@ def fetch_corporate_events(symbol):
         events[event['id']] = event
     dump_data_to(events, path)
     return jsonify(events)
-
-
-@app.route('/fetch/technical-insights/<symbol>')
-def fetch_technical_insights(symbol):
-    path = get_file_path(symbol.lower() + '-technical-insights', 'json')
-    data = yq_technical_insights(symbol)[symbol]
-    dump_data_to(data, path)
-    return jsonify(data)
 
 
 @app.route('/fetch/recommendations/<symbol>')
@@ -161,27 +161,24 @@ def fetch_portfolio_data():
         return jsonify(portfolio_data)
 
 
-@app.route('/fetch/portfolio/dividend-history')
-def fetch_portfolio_dividend_history():
-    response = get_portfolio_symbols()
-    symbols_string = response.response.data.decode('utf-8')
-    symbols = ast.literal_eval(symbols_string)
-    for i in symbols:
-        fetch_dividend_history(i)
-    return "<h1>fetching dividend history...</h1>"
-
-
 @app.route('/fetch/portfolio/technical-insights')
 def fetch_portfolio_technical_insights():
     response = get_portfolio_symbols()
     symbols_string = response.response.data.decode('utf-8')
     symbols = ast.literal_eval(symbols_string)
     for symbol in symbols:
-        path = get_file_path(symbol.lower() + '-technical-insights', 'json')
-        insights = yq_technical_insights(symbol)
-        dump_data_to(insights[symbol], path)
-
+        fetch_technical_insights(symbol)
     return "<h1>fetching technical insights...</h1>"
+
+
+@app.route('/fetch/portfolio/dividend-history')
+def fetch_portfolio_dividend_history():
+    response = get_portfolio_symbols()
+    symbols_string = response.response.data.decode('utf-8')
+    symbols = ast.literal_eval(symbols_string)
+    for symbol in symbols:
+        fetch_dividend_history(symbol)
+    return "<h1>fetching dividend history...</h1>"
 
 
 if __name__ == '__main__':

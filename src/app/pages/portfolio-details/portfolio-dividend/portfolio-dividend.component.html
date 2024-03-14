@@ -12,22 +12,22 @@
 </section>
 
 <section *ngIf="browser === 'Safari'" class="add-border">
-  <div class="title add-flex">
-    <span>Dividend History</span>
-    <button mat-button extended color="primary" class="refresh-button" (click)="refreshDividend(selectedSymbol, true)">
+  <div class="add-flex">
+    <span class="title">Dividend History</span>
+    <button mat-button color="primary" class="refresh-button" (click)="refreshDividend(selectedSymbol, true)">
       <mat-icon>cloud_sync</mat-icon>
-      Refresh Dividend
+      <span>Refresh Dividend History</span>
     </button>
   </div>
   <app-echart [options]="echartOptions" />
 </section>
 
 <section *ngIf="browser !== 'Safari'" class="add-border">
-  <div class="title add-flex">
-    <span>Dividend History</span>
-    <button mat-button extended color="primary" class="refresh-button" (click)="refreshDividend(selectedSymbol, true)">
+  <div class="add-flex">
+    <span class="title">Dividend History</span>
+    <button mat-button color="primary" class="refresh-button" (click)="refreshDividend(selectedSymbol, true)">
       <mat-icon>cloud_sync</mat-icon>
-      Refresh Dividend
+      <span>Refresh Dividend History</span>
     </button>
   </div>
   <div *ngIf="dividendLineChartData" class="chart-container">
@@ -43,6 +43,7 @@
       [autoScale]="true"
       [animations]="true"
       [gradient]="true"
+      [yScaleMin]="0"
     />
   </div>
 </section>

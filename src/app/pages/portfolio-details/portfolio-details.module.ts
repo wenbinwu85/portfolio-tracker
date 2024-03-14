@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { PortfolioDetailsRoutingModule } from './portfolio-details-routing.module';
 import { PortfolioDetailsComponent } from './portfolio-details.component';
+import { PortfolioDetailsRoutingModule } from './portfolio-details-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    PortfolioDetailsRoutingModule,
     PortfolioDetailsComponent,
+    PortfolioDetailsRoutingModule,
   ],
 })
 export class PortfolioDetailsModule {}

@@ -87,8 +87,7 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
     (stock: any) => `$${stock.dividendRate?.toFixed(2)}`,
     (stock: any) => `$${stock.trailingAnnualDividendRate?.toFixed(2) || 0}`,
     (stock: any) => `${(stock.dividendYield * 100 || 0).toFixed(2)}%`,
-    (stock: any) =>
-      `${(stock.trailingAnnualDividendYield * 100 || 0).toFixed(2)}%`,
+    (stock: any) => `${(stock.trailingAnnualDividendYield * 100 || 0).toFixed(2)}%`,
     (stock: any) => `${(stock.fiveYearAvgDividendYield || 0).toFixed(2)}%`,
     (stock: any) => `${(stock.payoutRatio * 100 || 0).toFixed(2)}%`,
     (stock: any) =>
@@ -112,10 +111,8 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
     this.dataSource.data = Object.values(this.dataService.portfolioData).filter(
       (a: any) => a.dividendYield
     );
-    this.dividendIncome =
-      this.dataService.portfolioHoldings?.portfolioDividendIncome;
-    this.portfolioYieldOnCost =
-      this.dataService.portfolioHoldings?.portfolioYieldOnCost;
+    this.dividendIncome = this.dataService.portfolioHoldings?.portfolioDividendIncome;
+    this.portfolioYieldOnCost = this.dataService.portfolioHoldings?.portfolioYieldOnCost;
     this.browser = this.getBrowserName();
     this.setInfoCards();
     this.refreshDividend(this.selectedSymbol, false);
@@ -124,7 +121,6 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
   }
-
 
   getBrowserName(): string {
     const agent = window?.navigator.userAgent.toLowerCase();
@@ -243,7 +239,6 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
         name: new Date(item[0].split("-").join(" ")),
         value: +item[1],
       });
-
       options.xAxis.data.push(item[0].split("-").join(" "));
       options.series[0].data.push(+item[1]);
     });
@@ -254,7 +249,7 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
     this.selectedSymbolLabel = `${stock.symbol} | ${stock.longName} | ${stock.profile?.sector || "ETF"}`;
 
     window.scroll({
-      top: 100,
+      top: 0,
       left: 0,
       behavior: "smooth",
     });

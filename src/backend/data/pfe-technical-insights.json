@@ -7,11 +7,11 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 3,
-                "scoreDescription": "Strong Bullish Evidence",
-                "sectorDirection": "Bearish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bearish Evidence",
+                "score": 4,
+                "scoreDescription": "Very Strong Bullish Evidence",
+                "sectorDirection": "Bullish",
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bullish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 3,
                 "indexScoreDescription": "Strong Bearish Evidence"
@@ -19,8 +19,8 @@
             "intermediateTermOutlook": {
                 "stateDescription": "All events are bullish.",
                 "direction": "Bullish",
-                "score": 2,
-                "scoreDescription": "Bullish Evidence",
+                "score": 4,
+                "scoreDescription": "Very Strong Bullish Evidence",
                 "sectorDirection": "Bullish",
                 "sectorScore": 2,
                 "sectorScoreDescription": "Bullish Evidence",
@@ -43,14 +43,14 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 27.17,
-            "resistance": 27.61,
-            "stopLoss": 25.842227
+            "support": 27.61,
+            "resistance": 28.3,
+            "stopLoss": 26.848361
         },
         "valuation": {
             "color": 1.0,
             "description": "Undervalued",
-            "discount": "64%",
+            "discount": "63%",
             "relativeValue": "Discount",
             "provider": "Trading Central"
         }
@@ -58,11 +58,11 @@
     "companySnapshot": {
         "sectorInfo": "Healthcare",
         "company": {
-            "innovativeness": 0.8845999999999999,
+            "innovativeness": 0.8834000000000001,
             "hiring": 0.9109999999999999,
             "sustainability": 0.6639,
-            "insiderSentiments": 0.6965,
-            "earningsReports": 0.9784,
+            "insiderSentiments": 0.7015,
+            "earningsReports": 0.9806,
             "dividends": 0.9571
         },
         "sector": {
@@ -106,13 +106,13 @@
     },
     "events": [
         {
-            "eventType": "MACD",
+            "eventType": "Inside Bar (Bearish)",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "L",
+            "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1709908200,
-            "endDate": 1709908200
+            "startDate": 1710163800,
+            "endDate": 1710250200
         }
     ],
     "reports": [
@@ -545,18 +545,6 @@
             ]
         },
         {
-            "id": "3305_Analyst Report_1675686868000",
-            "headHtml": "Analyst Report: Pfizer Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2023-02-06T12:34:28Z",
-            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
-            "targetPrice": 60.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "PFE"
-            ]
-        },
-        {
             "id": "35495_Market Summary_1675686868000",
             "headHtml": "Market Digest: AMGN, ASH, EPD, LAZ, MMM, MO, PFE, ROP, SBUX, SWK, APTV, AGNC",
             "provider": "Argus Research",
@@ -575,6 +563,18 @@
                 "AMGN",
                 "PFE",
                 "APTV"
+            ]
+        },
+        {
+            "id": "3305_Analyst Report_1675686868000",
+            "headHtml": "Analyst Report: Pfizer Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2023-02-06T12:34:28Z",
+            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
+            "targetPrice": 60.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "PFE"
             ]
         },
         {
@@ -957,18 +957,6 @@
             ]
         },
         {
-            "id": "3305_Analyst Report_1644585579000",
-            "headHtml": "Analyst Report: Pfizer Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2022-02-11T13:19:39Z",
-            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
-            "targetPrice": 65.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "PFE"
-            ]
-        },
-        {
             "id": "32134_Market Update_1644585579000",
             "headHtml": "Market Update: APD, MAS, MAT, PFE, TWTR",
             "provider": "Argus Research",
@@ -979,6 +967,18 @@
                 "APD",
                 "TWTR",
                 "MAS",
+                "PFE"
+            ]
+        },
+        {
+            "id": "3305_Analyst Report_1644585579000",
+            "headHtml": "Analyst Report: Pfizer Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2022-02-11T13:19:39Z",
+            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
+            "targetPrice": 65.0,
+            "investmentRating": "Bullish",
+            "tickers": [
                 "PFE"
             ]
         },
@@ -1234,18 +1234,6 @@
             ]
         },
         {
-            "id": "3305_Analyst Report_1627566246000",
-            "headHtml": "Analyst Report: Pfizer Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2021-07-29T13:44:06Z",
-            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
-            "targetPrice": 55.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "PFE"
-            ]
-        },
-        {
             "id": "30509_Market Update_1627566246000",
             "headHtml": "Market Update: ADP, BA, BYD, JBLU, PFE, QCOM, XLNX, V, PYPL",
             "provider": "Argus Research",
@@ -1261,6 +1249,18 @@
                 "ADP",
                 "PFE",
                 "BA"
+            ]
+        },
+        {
+            "id": "3305_Analyst Report_1627566246000",
+            "headHtml": "Analyst Report: Pfizer Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2021-07-29T13:44:06Z",
+            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
+            "targetPrice": 55.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "PFE"
             ]
         },
         {
@@ -1382,6 +1382,18 @@
             ]
         },
         {
+            "id": "3305_Analyst Report_1613027405000",
+            "headHtml": "Analyst Report: Pfizer Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2021-02-11T07:10:05Z",
+            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
+            "targetPrice": 55.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "PFE"
+            ]
+        },
+        {
             "id": "29117_Market Summary_1613027405000",
             "headHtml": "Market Digest: CHKP, CMI, CSCO, IEX, J, PFE, CBOE, OTIS",
             "provider": "Argus Research",
@@ -1395,18 +1407,6 @@
                 "OTIS",
                 "IEX",
                 "CMI",
-                "PFE"
-            ]
-        },
-        {
-            "id": "3305_Analyst Report_1613027405000",
-            "headHtml": "Analyst Report: Pfizer Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2021-02-11T07:10:05Z",
-            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
-            "targetPrice": 55.0,
-            "investmentRating": "Bullish",
-            "tickers": [
                 "PFE"
             ]
         },
@@ -1469,6 +1469,18 @@
             ]
         },
         {
+            "id": "3305_Analyst Report_1604410075000",
+            "headHtml": "Analyst Report: Pfizer Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2020-11-03T13:27:55Z",
+            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
+            "targetPrice": 55.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "PFE"
+            ]
+        },
+        {
             "id": "28335_Market Update_1604410075000",
             "headHtml": "Market Update: BSX, TPR, FLEX, K, PFE, YUM, CBOE, PYPL, ANET",
             "provider": "Argus Research",
@@ -1483,18 +1495,6 @@
                 "FLEX",
                 "CBOE",
                 "K",
-                "PFE"
-            ]
-        },
-        {
-            "id": "3305_Analyst Report_1604410075000",
-            "headHtml": "Analyst Report: Pfizer Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2020-11-03T13:27:55Z",
-            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
-            "targetPrice": 55.0,
-            "investmentRating": "Bullish",
-            "tickers": [
                 "PFE"
             ]
         },
@@ -1649,6 +1649,17 @@
             ]
         },
         {
+            "id": "27364_Market Summary_1594192370000",
+            "headHtml": "Market Digest: TMUS, PFE",
+            "provider": "Argus Research",
+            "reportDate": "2020-07-08T07:12:50Z",
+            "reportTitle": "In the first quarter, the S&P 500 declined 20% on a capital-appreciation basis (excluding dividends). In the second quarter, the index jumped back by a rounded 20%. Sector performance was abysmal across the board in the first quarter, while second-quarter sector performance showed some clear trends. The sector-performance map in the first half may hold some clues for second-half performance.",
+            "tickers": [
+                "TMUS",
+                "PFE"
+            ]
+        },
+        {
             "id": "3305_Analyst Report_1594192370000",
             "headHtml": "Analyst Report: Pfizer Inc.",
             "provider": "Argus Research",
@@ -1657,17 +1668,6 @@
             "targetPrice": 55.0,
             "investmentRating": "Bullish",
             "tickers": [
-                "PFE"
-            ]
-        },
-        {
-            "id": "27364_Market Summary_1594192370000",
-            "headHtml": "Market Digest: TMUS, PFE",
-            "provider": "Argus Research",
-            "reportDate": "2020-07-08T07:12:50Z",
-            "reportTitle": "In the first quarter, the S&P 500 declined 20% on a capital-appreciation basis (excluding dividends). In the second quarter, the index jumped back by a rounded 20%. Sector performance was abysmal across the board in the first quarter, while second-quarter sector performance showed some clear trends. The sector-performance map in the first half may hold some clues for second-half performance.",
-            "tickers": [
-                "TMUS",
                 "PFE"
             ]
         },
@@ -1951,22 +1951,28 @@
             ]
         },
         {
-            "id": "3305_Analyst Report_1580342400000",
-            "headHtml": "Analyst Report: Pfizer Inc.",
+            "id": "26072_Market Update_1580342400000",
+            "headHtml": "Market Update: AMD, EAT, GS, HOG, HCA, PYPL, PFE, URI, NEE",
             "provider": "Argus Research",
             "reportDate": "2020-01-30T00:00:00Z",
-            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
-            "targetPrice": 55.0,
-            "investmentRating": "Bullish",
+            "reportTitle": "Stocks traded lower on Thursday morning as investors weighed new earnings reports and GDP data, along with the latest developments in the coronavirus outbreak. Industries doing well today include food products, software and beverages. Industries trading lower today include air freight and logistics, tobacco, and interactive media and services. The VIX is up 1.19 to 17.58. The Dow fell 0.4%, the S&P 0.5%, and the Nasdaq 0.6%. Crude oil fell 2% to $52 per barrel, while gold rose $11 to $1587 per ounce.",
             "tickers": [
-                "PFE"
+                "PYPL",
+                "HOG",
+                "HCA",
+                "AMD",
+                "EAT",
+                "GS",
+                "URI",
+                "PFE",
+                "NEE"
             ]
         }
     ],
     "sigDevs": [
         {
-            "headline": "UK's MHRA Approves Etrasimod To Treat Patients Over Age Of 16 With Ulcerative Colitis",
-            "date": "2024-03-11"
+            "headline": "Pfizer Announces Positive Overall Survival In Phase 3 Trial Of Adcetris In Relapsed or \u200bRefractory Diffuse Large B-Cell Lymphoma",
+            "date": "2024-03-12"
         }
     ],
     "secReports": [

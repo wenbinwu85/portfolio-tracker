@@ -1,16 +1,3 @@
-.summary-cards-container {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.goal-container {
-  margin-top: 2rem;
-  margin-left: 1rem;
-}
-
 mat-slider {
   width: 99%;
   height: 0.5rem;
@@ -24,6 +11,28 @@ mat-slider {
   height: 0px !important;
 }
 
+button > mat-icon {
+  padding-right: 0;
+}
+
+.summary-cards-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.reset-button {
+  float: right;
+  margin: 1rem;
+}
+
+.goal-container {
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+
 .goal-title {
   padding-left: 1rem;
 }
@@ -34,13 +43,3 @@ mat-slider {
   width: 99%;
   margin-bottom: 1rem;
 }
-
-.reset-button {
-  float: right;
-  margin: 1rem;
-}
-
-button > mat-icon {
-  padding-right: 0;
-}
-

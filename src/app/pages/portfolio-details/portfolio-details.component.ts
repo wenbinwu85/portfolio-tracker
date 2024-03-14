@@ -39,32 +39,39 @@ import { PortfolioSummaryComponent } from "./portfolio-summary/portfolio-summary
 export class PortfolioDetailsComponent implements OnInit {
   navLinks = [
     {
-      label: "Summary",
+      label: "Portfolio Summary",
       route: "summary",
+      icon: "summarize"
     },
     {
-      label: "Holdings",
+      label: "Portfolio Holdings",
       route: "holdings",
+      icon: "list_alt"
     },
     {
       label: "Price Insights",
       route: "price-insights",
+      icon: "price_change"
     },
     {
-      label: "Dividend",
+      label: "Dividend Tracker",
       route: "dividend",
+      icon: "paid"
     },
     {
-      label: "Financials",
+      label: "Financial Metrics",
       route: "financials",
+      icon: "query_stats"
     },
     {
       label: "Analysis",
       route: "analysis",
+      icon: "calculate"
     },
     {
       label: "Events",
       route: "events",
+      icon: "event"
     },
   ];
   activeLink = this.navLinks[0];

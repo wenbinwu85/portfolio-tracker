@@ -69,9 +69,9 @@ export class StockDayPriceRangeComponent implements OnInit, AfterViewInit {
       ((this.highThumbValue - this.min) / (this.max - this.min)) * 100;
     let gradient = `linear-gradient(
       to right,
-      lightgrey 0% ${startPercentage}%,
+      lightsteelblue 0% ${startPercentage}%,
       orangered ${startPercentage}% ${endPercentage}%, 
-      lightgrey ${endPercentage}% 100%
+      lightsteelblue ${endPercentage}% 100%
     )`;
     this.renderer.setStyle(this.line.nativeElement, 'background', gradient);
   }

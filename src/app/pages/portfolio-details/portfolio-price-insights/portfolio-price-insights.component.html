@@ -1,9 +1,11 @@
+<price-movement-charts />
+
 <section class="add-border">
     <div class="add-flex">
         <div class="title">Price Insights</div>
         <button mat-button extended color="primary" class="refresh-button" (click)="refreshData()">
             <mat-icon>cloud_sync</mat-icon>
-            Refresh Technical Insight Data
+            <span>Refresh Technical Insights</span>
         </button>
     </div>
     <div class="logos-container">
@@ -11,7 +13,7 @@
             *ngFor="let stock of sortedStocks" 
             mat-button 
             class="ticker-button" 
-            (click)="updateWidget(stock.symbol)"
+            (click)="updateSelectedStock(stock.symbol)"
         >
             <img
                 [src]="getLogoSource(stock)" 
@@ -25,7 +27,7 @@
             *ngFor="let etf of sortedEtfs" 
             mat-button 
             class="ticker-button" 
-            (click)="updateWidget(etf.symbol)"
+            (click)="updateSelectedStock(etf.symbol)"
         >
             <img
                 [src]="getLogoSource(etf)" 
@@ -89,35 +91,35 @@
                 <th mat-header-cell *matHeaderCellDef>Target Price Low</th>
                 <td mat-cell *matCellDef="let element">
                     <span [ngStyle]="{color: 'navy'}">{{ (element.targetLowPrice - element.currentPrice) / element.currentPrice | percent: '.2' }}</span>
-                    <span [ngStyle]="{color: 'seagreen'}"> ({{ element.targetLowPrice | currency }})</span>
+                    <span *ngIf="selectedStock.quoteType === 'EQUITY'" [ngStyle]="{color: 'seagreen'}"> ({{ element.targetLowPrice | currency }})</span>
                 </td>
             </ng-container>
             <ng-container matColumnDef="targetMedianPrice">
                 <th mat-header-cell *matHeaderCellDef>Target Price Median</th>
                 <td mat-cell *matCellDef="let element">
                     <span [ngStyle]="{color: 'navy'}">{{ (element.targetMedianPrice - element.currentPrice) / element.currentPrice | percent: '.2' }}</span>
-                    <span [ngStyle]="{color: 'seagreen'}"> ( {{ element.targetMedianPrice | currency }} )</span>
+                    <span *ngIf="selectedStock.quoteType === 'EQUITY'" [ngStyle]="{color: 'seagreen'}"> ( {{ element.targetMedianPrice | currency }} )</span>
                 </td>
             </ng-container>
             <ng-container matColumnDef="targetHighPrice">
                 <th mat-header-cell *matHeaderCellDef>Target Price High</th>
                 <td mat-cell *matCellDef="let element">
                     <span [ngStyle]="{color: 'navy'}">{{ (element.targetHighPrice - element.currentPrice) / element.currentPrice | percent: '.2' }}</span>
-                    <span [ngStyle]="{color: 'seagreen'}"> ({{ element.targetHighPrice | currency }})</span>
+                    <span *ngIf="selectedStock.quoteType === 'EQUITY'" [ngStyle]="{color: 'seagreen'}"> ({{ element.targetHighPrice | currency }})</span>
                 </td>
             </ng-container>
             <ng-container matColumnDef="argusTarget">
                 <th mat-header-cell *matHeaderCellDef>Argus Research Target</th>
                 <td mat-cell *matCellDef="let element">
                     <span>{{ selectedStockTechnical?.recommendation?.targetPrice | currency }}</span>
-                    <span [ngStyle]="{color: 'navy'}"> ({{ selectedStockTechnical?.recommendation?.rating }})</span>
+                    <span *ngIf="selectedStock.quoteType === 'EQUITY'" [ngStyle]="{color: 'navy'}"> ({{ selectedStockTechnical?.recommendation?.rating }})</span>
                 </td>
             </ng-container>
             <ng-container matColumnDef="tradingCentral">
-                <th mat-header-cell *matHeaderCellDef>Trading Central valuation</th>
+                <th mat-header-cell *matHeaderCellDef>Trading Central Valuation</th>
                 <td mat-cell *matCellDef="let element">
                     <span>{{ selectedStockTechnical?.instrumentInfo?.valuation.description }}</span>
-                    <span [ngStyle]="{color: 'navy'}"> ({{ selectedStockTechnical?.instrumentInfo?.valuation.discount }})</span>
+                    <span *ngIf="selectedStock.quoteType === 'EQUITY'" [ngStyle]="{color: 'navy'}"> ({{ selectedStockTechnical?.instrumentInfo?.valuation.discount }})</span>
                 </td>
             </ng-container>
             <tr mat-header-row *matHeaderRowDef="tableColumns"></tr>
@@ -129,25 +131,23 @@
 
     <div *ngIf="selectedSymbol" class="add-margin">
         <!-- <ng-container *ngComponentOutlet="getWidget.widget; inputs:{symbol: selectedSymbol};" /> -->
-        <span>{{ getStock().symbol }} Day Range vs 52 Week Range</span>
+        <h3>{{ selectedStock.symbol }} Day Range vs 52 Week Range</h3>
         <stock-day-price-range
-            [min]="getStock().fiftyTwoWeekLow"
-            [max]="getStock().fiftyTwoWeekHigh"
-            [lowThumbValue]="getStock().dayLow"
-            [highThumbValue]="getStock().dayHigh"
+            [min]="selectedStock.fiftyTwoWeekLow"
+            [max]="selectedStock.fiftyTwoWeekHigh"
+            [lowThumbValue]="selectedStock.dayLow"
+            [highThumbValue]="selectedStock.dayHigh"
             [showThumbs]="false"
         />
     </div>
 </section>
-
-<price-movement-charts />
 
 <section class="add-border">
     <div class="chart-header">
         <div class="title">
             <span>Performance</span>
         </div>
-        <mat-chip-listbox [ngStyle]="{padding: '1.25rem'}">
+        <mat-chip-listbox [ngStyle]="{'padding-right': '1.25rem'}">
             <mat-chip-option selected (click)="changePerformanceChart(1)">Moving Averages</mat-chip-option>
             <mat-chip-option (click)="changePerformanceChart(2)">ETFs Performance</mat-chip-option>
         </mat-chip-listbox>
@@ -156,15 +156,15 @@
         <div *ngIf="selectedPerformanceChart === 1" class="chart-container">
             <ngx-charts-bar-vertical
                 [scheme]="performanceChartColorScheme"
-                [animations]="true"
                 [results]="fiftyDayMAChartData"
+                [animations]="true"
                 [xAxis]="true"
                 [yAxis]="true"
                 [showXAxisLabel]="true"
                 [showYAxisLabel]="true"
                 [legend]="false"
-                [yAxisLabel]="'Price vs 50 Day MA %'"
                 [rotateXAxisTicks]="true"
+                [yAxisLabel]="'Price vs 50 Day MA %'"
                 [yScaleMin]="fiftyDayMAChartData[0].value - 5"
             >
             </ngx-charts-bar-vertical>
@@ -172,17 +172,16 @@
         </div> 
         <div *ngIf="selectedPerformanceChart === 1" class="chart-container">
             <ngx-charts-bar-vertical
-                [scheme]="'air'"
                 [scheme]="performanceChartColorScheme"
-                [animations]="true"
                 [results]="twoHundredDayMAChartData"
+                [animations]="true"
                 [xAxis]="true"
                 [yAxis]="true"
                 [showXAxisLabel]="true"
                 [showYAxisLabel]="true"
                 [legend]="false"
-                [yAxisLabel]="'Price vs 200 Day MA %'"
                 [rotateXAxisTicks]="true"
+                [yAxisLabel]="'Price vs 200 Day MA %'"
                 [yScaleMin]="twoHundredDayMAChartData[0].value - 5"
             >
             </ngx-charts-bar-vertical>
@@ -190,34 +189,33 @@
         <div *ngIf="selectedPerformanceChart === 1" class="chart-container">
             <ngx-charts-bar-vertical
                 [scheme]="performanceChartColorScheme"
-                [animations]="true"
                 [results]="fiftyTwoWeekChangeChartData"
+                [animations]="true"
                 [xAxis]="true"
                 [yAxis]="true"
                 [showXAxisLabel]="true"
                 [showYAxisLabel]="true"
                 [legend]="false"
-                [yAxisLabel]="'52 Week Change %'"
                 [rotateXAxisTicks]="true"
+                [yAxisLabel]="'52 Week Change %'"
                 [activeEntries]="['S&P 500']"
-                [customColors]="[{name:'S&P 500', value: 'gold'}]"
+                [customColors]="[{name:'S&P 500', value: 'orangered'}]"
             >
             </ngx-charts-bar-vertical>
         </div>
     </div>
-
     <div *ngIf="selectedPerformanceChart === 2" class="chart-container">
         <ngx-charts-bar-vertical-2d
-            [animations]="true"
             [results]="etfPerformanceChartData"
+            [animations]="true"
             [xAxis]="true"
             [yAxis]="true"
             [showXAxisLabel]="true"
             [showYAxisLabel]="true"
             [legend]="false"
-            [yAxisLabel]="'ETF Performance %'"
             [showDataLabel]="true"
             [rotateXAxisTicks]="true"
+            [yAxisLabel]="'ETF Performance %'"
             [customColors]="[
                 {name: 'SCHD', value: 'deepskyblue'},
                 {name: 'VYM', value: 'maroon'}, 
@@ -233,7 +231,7 @@
         <div class="title">
             <span>Price vs 52 Week & Analyst Target</span>
         </div>
-        <!-- <mat-chip-listbox [ngStyle]="{padding: '20px'}">
+        <!-- <mat-chip-listbox [ngStyle]="{padding-right: '1.5rem'}">
             <mat-chip-option selected (click)="changeVSCharts(1)">VS 52 Week High Low</mat-chip-option>
             <mat-chip-option (click)="changeVSCharts(2)">VS Target Price</mat-chip-option>
         </mat-chip-listbox> -->
@@ -242,46 +240,46 @@
         <div class="chart-container">
             <ngx-charts-bar-vertical
                 [scheme]="fiftyTwoWeekChartColorScheme"
-                [animations]="true"
                 [results]="fiftyTwoWeekLowChartData"
+                [animations]="true"
                 [xAxis]="true"
                 [yAxis]="true"
                 [showXAxisLabel]="true"
                 [showYAxisLabel]="true"
                 [legend]="false"
-                [yAxisLabel]="'Price % above 52 week low'"
                 [rotateXAxisTicks]="true"
+                [yAxisLabel]="'Price % above 52 week low'"
             >
             </ngx-charts-bar-vertical>
         </div> 
         <div class="chart-container">
             <ngx-charts-bar-vertical
                 [scheme]="fiftyTwoWeekChartColorScheme"
-                [animations]="true"
                 [results]="fiftyTwoWeekHighChartData"
+                [animations]="true"
                 [xAxis]="true"
                 [yAxis]="true"
                 [showXAxisLabel]="true"
                 [showYAxisLabel]="true"
                 [legend]="false"
-                [yAxisLabel]="'Price % below 52 week high'"
                 [rotateXAxisTicks]="true"
+                [yAxisLabel]="'Price % below 52 week high'"
             >
             </ngx-charts-bar-vertical>
         </div>
         <div class="chart-container">
             <ngx-charts-bar-vertical
                 [scheme]="targetPriceChartColorScheme"
-                [animations]="true"
                 [results]="discountChartData"
+                [animations]="true"
                 [xAxis]="true"
                 [yAxis]="true"
                 [showXAxisLabel]="true"
                 [showYAxisLabel]="true"
                 [legend]="false"
-                [yAxisLabel]="'Price % vs mean target price'"
                 [rotateXAxisTicks]="true"
                 [yScaleMin]="-5"
+                [yAxisLabel]="'Price % vs mean target price'"
             >
             </ngx-charts-bar-vertical>
         </div> 

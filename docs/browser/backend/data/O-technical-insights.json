@@ -7,11 +7,11 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 2,
-                "scoreDescription": "Bullish Evidence",
+                "score": 4,
+                "scoreDescription": "Very Strong Bullish Evidence",
                 "sectorDirection": "Bullish",
-                "sectorScore": 2,
-                "sectorScoreDescription": "Bullish Evidence",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bullish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 3,
                 "indexScoreDescription": "Strong Bearish Evidence"
@@ -45,7 +45,7 @@
             "provider": "Trading Central",
             "support": 52.77,
             "resistance": 61.0311,
-            "stopLoss": 49.507877
+            "stopLoss": 50.093235
         },
         "valuation": {
             "color": 0.0,
@@ -61,8 +61,8 @@
             "innovativeness": 0.7452,
             "hiring": 0.5634,
             "sustainability": 0.6566,
-            "insiderSentiments": 0.4968,
-            "earningsReports": 0.8779,
+            "insiderSentiments": 0.5,
+            "earningsReports": 0.8835999999999999,
             "dividends": 0.4462
         },
         "sector": {
@@ -106,13 +106,13 @@
     },
     "events": [
         {
-            "eventType": "Inside Bar (Bullish)",
-            "pricePeriod": "W",
-            "tradingHorizon": "I",
+            "eventType": "Triple Moving Average Crossover",
+            "pricePeriod": "D",
+            "tradingHorizon": "S",
             "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1708093800,
-            "endDate": 1709908200
+            "startDate": 1710250200,
+            "endDate": 1710250200
         }
     ],
     "reports": [
