@@ -15,7 +15,7 @@
         <stock-name-card [stock]="stock" />
       </div>
       <ng-template #elseBlock>
-        <span [ngStyle]="{ color: getColor(cidx, stock)}">{{ cells[cidx](stock) }}</span>
+        <span [ngStyle]="{ color: getCellColor(cidx, stock)}">{{ cells[cidx](stock) }}</span>
       </ng-template>
     </td>
   </ng-container>
@@ -28,7 +28,7 @@
 <table mat-table matSort matSortActive="ytdReturn" matSortDirection="asc" [dataSource]="sortedEtfs">
   <ng-container *ngFor="let column of etfColumnDefs; index as cidx" [matColumnDef]="column">
     <th *matHeaderCellDef mat-header-cell mat-sort-header>
-      {{ etfHeaders[cidx] }}
+      <span>{{ etfHeaders[cidx] }}</span>
     </th>
     <td mat-cell *matCellDef="let etf">
       <div *ngIf="cidx === 0; else elseBlock" class="table-col-0">
