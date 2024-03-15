@@ -97,7 +97,9 @@ def fetch_technical_insights(symbol):
 def fetch_corporate_events(symbol):
     events = {}
     path = get_file_path(symbol.lower() + '-events', 'json')
-    data = yq_corporate_events(symbol).to_json(orient='records', indent=2)
+    data = yq_corporate_events(symbol)
+    print(data)
+    data = data.to_json(orient='records', indent=2)
     for event in ast.literal_eval(data)[-20:]:
         events[event['id']] = event
     dump_data_to(events, path)

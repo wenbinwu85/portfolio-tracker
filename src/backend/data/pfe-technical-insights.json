@@ -9,18 +9,18 @@
                 "direction": "Bullish",
                 "score": 4,
                 "scoreDescription": "Very Strong Bullish Evidence",
-                "sectorDirection": "Bullish",
+                "sectorDirection": "Bearish",
                 "sectorScore": 2,
-                "sectorScoreDescription": "Bullish Evidence",
+                "sectorScoreDescription": "Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "All events are bullish.",
                 "direction": "Bullish",
-                "score": 4,
-                "scoreDescription": "Very Strong Bullish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bullish Evidence",
                 "sectorDirection": "Bullish",
                 "sectorScore": 2,
                 "sectorScoreDescription": "Bullish Evidence",
@@ -45,7 +45,7 @@
             "provider": "Trading Central",
             "support": 27.61,
             "resistance": 28.3,
-            "stopLoss": 26.848361
+            "stopLoss": 26.931826
         },
         "valuation": {
             "color": 1.0,
@@ -58,12 +58,12 @@
     "companySnapshot": {
         "sectorInfo": "Healthcare",
         "company": {
-            "innovativeness": 0.8834000000000001,
+            "innovativeness": 0.8841,
             "hiring": 0.9109999999999999,
             "sustainability": 0.6639,
             "insiderSentiments": 0.7015,
-            "earningsReports": 0.9806,
-            "dividends": 0.9571
+            "earningsReports": 0.9811,
+            "dividends": 0.9570000000000001
         },
         "sector": {
             "innovativeness": 0.5,
@@ -725,18 +725,6 @@
             ]
         },
         {
-            "id": "3305_Analyst Report_1660239464000",
-            "headHtml": "Analyst Report: Pfizer Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2022-08-11T17:37:44Z",
-            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
-            "targetPrice": 65.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "PFE"
-            ]
-        },
-        {
             "id": "33789_Market Update_1660239464000",
             "headHtml": "Market Update: CENT, EBAY, PFE, VMC, RKT",
             "provider": "Argus Research",
@@ -747,6 +735,18 @@
                 "CENT",
                 "RKT",
                 "VMC",
+                "PFE"
+            ]
+        },
+        {
+            "id": "3305_Analyst Report_1660239464000",
+            "headHtml": "Analyst Report: Pfizer Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2022-08-11T17:37:44Z",
+            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
+            "targetPrice": 65.0,
+            "investmentRating": "Bullish",
+            "tickers": [
                 "PFE"
             ]
         },
@@ -1469,18 +1469,6 @@
             ]
         },
         {
-            "id": "3305_Analyst Report_1604410075000",
-            "headHtml": "Analyst Report: Pfizer Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2020-11-03T13:27:55Z",
-            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
-            "targetPrice": 55.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "PFE"
-            ]
-        },
-        {
             "id": "28335_Market Update_1604410075000",
             "headHtml": "Market Update: BSX, TPR, FLEX, K, PFE, YUM, CBOE, PYPL, ANET",
             "provider": "Argus Research",
@@ -1495,6 +1483,18 @@
                 "FLEX",
                 "CBOE",
                 "K",
+                "PFE"
+            ]
+        },
+        {
+            "id": "3305_Analyst Report_1604410075000",
+            "headHtml": "Analyst Report: Pfizer Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2020-11-03T13:27:55Z",
+            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
+            "targetPrice": 55.0,
+            "investmentRating": "Bullish",
+            "tickers": [
                 "PFE"
             ]
         },
@@ -1672,17 +1672,6 @@
             ]
         },
         {
-            "id": "27364_Market Summary_1594166400000",
-            "headHtml": "Market Digest: TMUS, PFE",
-            "provider": "Argus Research",
-            "reportDate": "2020-07-08T00:00:00Z",
-            "reportTitle": "In the first quarter, the S&P 500 declined 20% on a capital-appreciation basis (excluding dividends). In the second quarter, the index jumped back by a rounded 20%. Sector performance was abysmal across the board in the first quarter, while second-quarter sector performance showed some clear trends. The sector-performance map in the first half may hold some clues for second-half performance.",
-            "tickers": [
-                "TMUS",
-                "PFE"
-            ]
-        },
-        {
             "id": "3305_Analyst Report_1594166400000",
             "headHtml": "Analyst Report: Pfizer Inc.",
             "provider": "Argus Research",
@@ -1691,6 +1680,17 @@
             "targetPrice": 55.0,
             "investmentRating": "Bullish",
             "tickers": [
+                "PFE"
+            ]
+        },
+        {
+            "id": "27364_Market Summary_1594166400000",
+            "headHtml": "Market Digest: TMUS, PFE",
+            "provider": "Argus Research",
+            "reportDate": "2020-07-08T00:00:00Z",
+            "reportTitle": "In the first quarter, the S&P 500 declined 20% on a capital-appreciation basis (excluding dividends). In the second quarter, the index jumped back by a rounded 20%. Sector performance was abysmal across the board in the first quarter, while second-quarter sector performance showed some clear trends. The sector-performance map in the first half may hold some clues for second-half performance.",
+            "tickers": [
+                "TMUS",
                 "PFE"
             ]
         },
@@ -1725,18 +1725,6 @@
             ]
         },
         {
-            "id": "3305_Analyst Report_1588346235000",
-            "headHtml": "Analyst Report: Pfizer Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2020-05-01T15:17:15Z",
-            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
-            "targetPrice": 55.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "PFE"
-            ]
-        },
-        {
             "id": "26834_Market Update_1588346235000",
             "headHtml": "Market Update: AAPL, IQV, MSFT, NOK, PFE, TSLA, V, BA, IPG, LEN, RJF",
             "provider": "Argus Research",
@@ -1757,6 +1745,30 @@
             ]
         },
         {
+            "id": "3305_Analyst Report_1588346235000",
+            "headHtml": "Analyst Report: Pfizer Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2020-05-01T15:17:15Z",
+            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
+            "targetPrice": 55.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "PFE"
+            ]
+        },
+        {
+            "id": "3305_Analyst Report_1588291200000",
+            "headHtml": "Analyst Report: Pfizer Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2020-05-01T00:00:00Z",
+            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
+            "targetPrice": 55.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "PFE"
+            ]
+        },
+        {
             "id": "26834_Market Update_1588291200000",
             "headHtml": "Market Update: AAPL, IQV, MSFT, NOK, PFE, TSLA, V, BA, IPG, LEN, RJF",
             "provider": "Argus Research",
@@ -1774,18 +1786,6 @@
                 "BA",
                 "IQV",
                 "RJF"
-            ]
-        },
-        {
-            "id": "3305_Analyst Report_1588291200000",
-            "headHtml": "Analyst Report: Pfizer Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2020-05-01T00:00:00Z",
-            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
-            "targetPrice": 55.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "PFE"
             ]
         },
         {
@@ -1976,6 +1976,33 @@
         }
     ],
     "secReports": [
+        {
+            "id": "0000078003-24-000068_78003",
+            "type": "Proxy Statements",
+            "title": "DEF 14A : Proxy Statements",
+            "description": "Definitive proxy statements",
+            "filingDate": 1710374400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000078003/000007800324000068/thumbnail.png",
+            "formType": "DEF 14A"
+        },
+        {
+            "id": "0000078003-24-000070_78003",
+            "type": "Proxy Statements",
+            "title": "DEFA14A : Proxy Statements",
+            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
+            "filingDate": 1710374400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000078003/000007800324000070/thumbnail.png",
+            "formType": "DEFA14A"
+        },
+        {
+            "id": "0000078003-24-000072_78003",
+            "type": "Annual Report to Shareholders",
+            "title": "ARS : Annual Report to Shareholders",
+            "description": "Annual report to security holders",
+            "filingDate": 1710374400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000078003/000007800324000072/thumbnail.png",
+            "formType": "ARS"
+        },
         {
             "id": "0000078003-24-000052_78003",
             "type": "Offering Registrations",
@@ -2353,33 +2380,6 @@
             "filingDate": 1678924800000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000078003/000007800323000040/thumbnail.png",
             "formType": "DEF 14A"
-        },
-        {
-            "id": "0001193125-23-068538_78003",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1678665600000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000078003/000119312523068538/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
-            "id": "0000078003-23-000030_78003",
-            "type": "Offering Registrations",
-            "title": "S-8 : Offering Registrations",
-            "description": "Initial registration statement for securities to be offered to employees pursuant to employee benefit plans",
-            "filingDate": 1677456000000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000078003/000007800323000030/thumbnail.png",
-            "formType": "S-8"
-        },
-        {
-            "id": "0000078003-23-000024_78003",
-            "type": "Periodic Financial Reports",
-            "title": "10-K : Periodic Financial Reports",
-            "description": "Annual report pursuant to Section 13 and 15(d)",
-            "filingDate": 1677110400000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000078003/000007800323000024/thumbnail.png",
-            "formType": "10-K"
         }
     ]
 }

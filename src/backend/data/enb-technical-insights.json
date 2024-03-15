@@ -7,14 +7,14 @@
             "shortTermOutlook": {
                 "stateDescription": "Bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 2,
-                "scoreDescription": "Bullish Evidence",
+                "score": 1,
+                "scoreDescription": "Weak Bullish Evidence",
                 "sectorDirection": "Bullish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bullish Evidence",
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bullish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "All events are bullish.",
@@ -43,14 +43,14 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 35.9,
+            "support": 34.955,
             "resistance": 36.1,
-            "stopLoss": 34.884044
+            "stopLoss": 34.11584
         },
         "valuation": {
             "color": 1.0,
             "description": "Undervalued",
-            "discount": "36%",
+            "discount": "37%",
             "relativeValue": "Discount",
             "provider": "Trading Central"
         }
@@ -61,7 +61,7 @@
             "innovativeness": 0.5556,
             "sustainability": 0.0882,
             "insiderSentiments": 0.2407,
-            "dividends": 0.6881
+            "dividends": 0.6928
         },
         "sector": {
             "innovativeness": 0.5,
@@ -1465,18 +1465,6 @@
             ]
         },
         {
-            "id": "3799_Analyst Report_1628086520000",
-            "headHtml": "Analyst Report: Enbridge Inc",
-            "provider": "Argus Research",
-            "reportDate": "2021-08-04T14:15:20Z",
-            "reportTitle": "Enbridge Inc. is North America's largest energy infrastructure company. Enbridge has six operating segments: Liquids Pipelines, Gas Transmission & Midstream, Gas Distribution, Renewable Power Generation & Transmission, Energy Services, and Eliminations & Other. According to the company's most recent 10-K, Enbridge delivers over three million barrels of crude oil per day, and transports 62% of all U.S.-bound Canadian crude exports. The company also transports 18% of the natural gas used in the U.S. Its regulated utilities serve approximately 3.7 million retail customers.",
-            "targetPrice": 43.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "ENB"
-            ]
-        },
-        {
             "id": "30553_Market Update_1628086520000",
             "headHtml": "Market Update: ENB, CVX, LHX, JCI, VFC, NOW, CARR",
             "provider": "Argus Research",
@@ -1490,6 +1478,18 @@
                 "NOW",
                 "ENB",
                 "LHX"
+            ]
+        },
+        {
+            "id": "3799_Analyst Report_1628086520000",
+            "headHtml": "Analyst Report: Enbridge Inc",
+            "provider": "Argus Research",
+            "reportDate": "2021-08-04T14:15:20Z",
+            "reportTitle": "Enbridge Inc. is North America's largest energy infrastructure company. Enbridge has six operating segments: Liquids Pipelines, Gas Transmission & Midstream, Gas Distribution, Renewable Power Generation & Transmission, Energy Services, and Eliminations & Other. According to the company's most recent 10-K, Enbridge delivers over three million barrels of crude oil per day, and transports 62% of all U.S.-bound Canadian crude exports. The company also transports 18% of the natural gas used in the U.S. Its regulated utilities serve approximately 3.7 million retail customers.",
+            "targetPrice": 43.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "ENB"
             ]
         },
         {
@@ -2104,22 +2104,15 @@
             ]
         },
         {
-            "id": "26236_Market Summary_1582156800000",
-            "headHtml": "Market Digest: BABA, AWK, ADI, ECL, LIN, ENB, FOXA, NLOK, TSN, ATO",
+            "id": "3799_Analyst Report_1582156800000",
+            "headHtml": "Analyst Report: Enbridge Inc",
             "provider": "Argus Research",
             "reportDate": "2020-02-20T00:00:00Z",
-            "reportTitle": "The Situation is Evolving: Scenarios for an Outbreak",
+            "reportTitle": "Enbridge Inc. is North America's largest energy infrastructure company. Enbridge has six operating segments: Liquids Pipelines, Gas Transmission & Midstream, Gas Distribution, Renewable Power Generation & Transmission, Energy Services, and Eliminations & Other. According to the company's most recent 10-K, Enbridge delivers over three million barrels of crude oil per day, and transports 62% of all U.S.-bound Canadian crude exports. The company also transports 18% of the natural gas used in the U.S. Its regulated utilities serve approximately 3.7 million retail customers.",
+            "targetPrice": 46.0,
+            "investmentRating": "Bullish",
             "tickers": [
-                "LIN",
-                "BABA",
-                "FOXA",
-                "AWK",
-                "ADI",
-                "ENB",
-                "ATO",
-                "NLOK",
-                "TSN",
-                "ECL"
+                "ENB"
             ]
         }
     ],
@@ -2428,15 +2421,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0000895728-22-000032_895728",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1667520000000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000895728/000089572822000032/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
             "id": "0000895728-22-000033_895728",
             "type": "Periodic Financial Reports",
             "title": "10-Q : Periodic Financial Reports",
@@ -2444,6 +2428,15 @@
             "filingDate": 1667520000000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000895728/000089572822000033/thumbnail.png",
             "formType": "10-Q"
+        },
+        {
+            "id": "0000895728-22-000032_895728",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1667520000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000895728/000089572822000032/thumbnail.png",
+            "formType": "8-K"
         },
         {
             "id": "0001193125-22-257129_895728",

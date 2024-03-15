@@ -1,9 +1,47 @@
 <mat-expansion-panel [expanded]="true">
   <mat-expansion-panel-header>
     <mat-panel-title>
-      <mat-icon class="">auto_graph</mat-icon>
+      <mat-icon>auto_graph</mat-icon>
       <span>Price Change</span>
     </mat-panel-title>
   </mat-expansion-panel-header>
   <price-movement-charts />
+</mat-expansion-panel>
+
+<mat-expansion-panel [expanded]="true">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <mat-icon>auto_graph</mat-icon>
+      <span>News & Events</span>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+
+  <!-- <section>
+    <ng-container *ngFor="let stock of portfolioHoldings">
+      <div *ngIf="stock.symbol">
+        <stock-corporate-events [symbol]="stock.symbol" />
+      </div>
+    </ng-container>
+  </section> -->
+
+  <section class="add-border">
+    <div class="add-margin date-contianer">
+      <ng-container *ngFor="let calendarDay of mappedEvents; let i = index">
+        <div class="event-date">{{ calendarDay[0] | date: 'MMMM d, EEEE' }}</div>
+        <div class="event-container">
+          <ng-container *ngFor="let event of calendarDay[1]">
+            <info-card
+              [icon]="event.icon" 
+              [value]="event.name"
+              [subtitle]="event.event"
+              [additionalInfo]="event.detail"
+              [fontSize]="'1rem'" 
+              [color]="event.color"
+              [accentColor]="event.color"
+            />
+          </ng-container>
+        </div>
+      </ng-container>
+    </div>
+  </section>
 </mat-expansion-panel>

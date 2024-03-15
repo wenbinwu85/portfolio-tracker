@@ -17,7 +17,6 @@ import { TvSymbolInfoWidgetComponent } from "../../../shared/components/tradingv
 import { DataService } from "../../../shared/services/data.service";
 import { PortfolioChartsComponent } from "../../chart-wall/portfolio-charts/portfolio-charts.component";
 import { PortfolioDividendComponent } from "../portfolio-dividend/portfolio-dividend.component";
-import { PortfolioEventsComponent } from "../portfolio-events/portfolio-events.component";
 import { PortfolioFinancialsComponent } from "../portfolio-financials/portfolio-financials.component";
 import { PortfolioHoldingsComponent } from "../portfolio-holdings/portfolio-holdings.component";
 
@@ -38,7 +37,6 @@ import { PortfolioHoldingsComponent } from "../portfolio-holdings/portfolio-hold
     NgxChartsModule,
     PortfolioChartsComponent,
     PortfolioDividendComponent,
-    PortfolioEventsComponent,
     PortfolioFinancialsComponent,
     PortfolioHoldingsComponent,
     PriceMovementChartsComponent,

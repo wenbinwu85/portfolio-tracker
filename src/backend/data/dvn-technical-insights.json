@@ -5,19 +5,19 @@
             "provider": "Trading Central",
             "sector": "Energy",
             "shortTermOutlook": {
-                "stateDescription": "Recent bullish events outweigh bearish events.",
+                "stateDescription": "Bullish events outweigh bearish events.",
                 "direction": "Bullish",
                 "score": 2,
                 "scoreDescription": "Bullish Evidence",
                 "sectorDirection": "Bullish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bullish Evidence",
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bullish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "intermediateTermOutlook": {
-                "stateDescription": "Recent bullish events outweigh bearish events.",
+                "stateDescription": "All events are bullish.",
                 "direction": "Bullish",
                 "score": 4,
                 "scoreDescription": "Very Strong Bullish Evidence",
@@ -29,10 +29,10 @@
                 "indexScoreDescription": "Weak Bullish Evidence"
             },
             "longTermOutlook": {
-                "stateDescription": "There is one bearish event.",
-                "direction": "Bearish",
+                "stateDescription": "Recent bullish events outweigh bearish events.",
+                "direction": "Bullish",
                 "score": 1,
-                "scoreDescription": "Weak Bearish Evidence",
+                "scoreDescription": "Weak Bullish Evidence",
                 "sectorDirection": "Bullish",
                 "sectorScore": 3,
                 "sectorScoreDescription": "Strong Bullish Evidence",
@@ -45,12 +45,12 @@
             "provider": "Trading Central",
             "support": 45.44,
             "resistance": 48.86,
-            "stopLoss": 43.87418
+            "stopLoss": 44.56324
         },
         "valuation": {
             "color": 0.5,
             "description": "Near Fair Value",
-            "discount": "-3%",
+            "discount": "-4%",
             "provider": "Trading Central"
         }
     },
@@ -61,8 +61,8 @@
             "hiring": 0.24710000000000001,
             "sustainability": 0.5588000000000001,
             "insiderSentiments": 0.746,
-            "earningsReports": 0.7240000000000001,
-            "dividends": 0.4507
+            "earningsReports": 0.7321,
+            "dividends": 0.4498
         },
         "sector": {
             "innovativeness": 0.5,
@@ -95,26 +95,50 @@
     },
     "upsellSearchDD": {
         "researchReports": {
-            "reportId": "MS_0P000001P4_AnalystReport_1709154669000",
-            "provider": "Morningstar",
-            "title": "Devon Earnings: Investors Should Consider This Higher-Quality US E&P Play at Current Valuations",
-            "reportDate": "2024-02-28T21:11:09Z",
-            "summary": "Devon Energy, based in Oklahoma City, is one of the largest independent exploration and production companies in North America. The firm's asset base is spread throughout onshore North America and includes exposure to the Delaware, STACK, Eagle Ford, Powder River Basin, and Bakken plays. At year-end 2023, net production totaled roughly 658 thousand boe/d, of which oil and natural gas liquids made up roughly three-quarters of production, with natural gas accounting for the remainder. ",
+            "reportId": "ARGUS_2912_AnalystReport_1710500841000",
+            "provider": "Argus",
+            "title": "Raising fixed dividend by 5% to $0.22 per share",
+            "reportDate": "2024-03-15T11:07:21Z",
+            "summary": "Based in Oklahoma City, Devon has operations in New Mexico (Delaware Basin), North Dakota (Williston Basin), Oklahoma (Anadarko Basin), Texas (Eagle Ford) and Wyoming (Powder River Basin). On January 7, 2021, Devon completed a 'merger of equals' with WPX Energy. The combination created a leading shale oil producer in the U.S. The company has approximately 1600 employees.",
             "investmentRating": "Bullish"
         }
     },
     "events": [
         {
             "eventType": "Price Crosses Moving Average",
-            "pricePeriod": "W",
-            "tradingHorizon": "I",
+            "pricePeriod": "D",
+            "tradingHorizon": "L",
             "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1709908200,
-            "endDate": 1709908200
+            "startDate": 1710336600,
+            "endDate": 1710336600
         }
     ],
     "reports": [
+        {
+            "id": "2912_Analyst Report_1710500841000",
+            "headHtml": "Analyst Report: Devon Energy Corp.",
+            "provider": "Argus Research",
+            "reportDate": "2024-03-15T11:07:21Z",
+            "reportTitle": "Based in Oklahoma City, Devon has operations in New Mexico (Delaware Basin), North Dakota (Williston Basin), Oklahoma (Anadarko Basin), Texas (Eagle Ford) and Wyoming (Powder River Basin). On January 7, 2021, Devon completed a 'merger of equals' with WPX Energy. The combination created a leading shale oil producer in the U.S. The company has approximately 1600 employees.",
+            "targetPrice": 71.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "DVN"
+            ]
+        },
+        {
+            "id": "39408_Market Summary_1710499941000",
+            "headHtml": "Market Digest: DVN, THO, SPLK",
+            "provider": "Argus Research",
+            "reportDate": "2024-03-15T10:52:21Z",
+            "reportTitle": "U.S. markets pulled back on Thursday on hotter-than-expected inflation data. In February, headline PPI rose 0.6%, up from 0.2% in January and ahead of the expected 0.3% increase -- with nearly two-thirds of the increase attributed to a rise in prices for final-demand goods. The U.S. Census Bureau reported that sales in January were down 1.3%. Leading the decline were merchant wholesalers (-1.7%), while retailer sales slipped 1.1%, and manufacturer sales declined 1.0%. Inventories were essentially flat, as a 0.4% rise in retail inventories was offset by a 0.3% drop in merchant wholesaler and 0.1% decline in manufacturer inventories. Initial jobless claims for the week were 209,000, down 1,000 from the previous-week's revised level. The Dow fell 0.4%, the S&P 500 was down 0.3%, and the Nasdaq lost 0.3%. Crude oil traded above $81 per barrel, while gold fell $13 to $2167 per ounce.",
+            "tickers": [
+                "SPLK",
+                "THO",
+                "DVN"
+            ]
+        },
         {
             "id": "39297_Top/Bottom Insider Activity_1709637356000",
             "headHtml": "Daily \u2013 Vickers Top Buyers & Sellers for 03/05/2024",
@@ -1323,18 +1347,6 @@
             ]
         },
         {
-            "id": "2912_Analyst Report_1589810792000",
-            "headHtml": "Analyst Report: Devon Energy Corp.",
-            "provider": "Argus Research",
-            "reportDate": "2020-05-18T14:06:32Z",
-            "reportTitle": "Devon Energy is a leading independent energy company engaged in oil and gas exploration, production and property acquisitions. Based in Oklahoma City, Devon is among the largest U.S.-based independent oil and gas producers and is included in the S&P 500 index. The company's operations are focused onshore in the United States and Canada.",
-            "targetPrice": 15.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "DVN"
-            ]
-        },
-        {
             "id": "26968_Market Update_1589810792000",
             "headHtml": "Market Update: WYNN, DVN, DD, MDC, WMB, PEG",
             "provider": "Argus Research",
@@ -1347,6 +1359,18 @@
                 "DVN",
                 "MDC",
                 "WMB"
+            ]
+        },
+        {
+            "id": "2912_Analyst Report_1589810792000",
+            "headHtml": "Analyst Report: Devon Energy Corp.",
+            "provider": "Argus Research",
+            "reportDate": "2020-05-18T14:06:32Z",
+            "reportTitle": "Devon Energy is a leading independent energy company engaged in oil and gas exploration, production and property acquisitions. Based in Oklahoma City, Devon is among the largest U.S.-based independent oil and gas producers and is included in the S&P 500 index. The company's operations are focused onshore in the United States and Canada.",
+            "targetPrice": 15.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "DVN"
             ]
         },
         {
@@ -1515,6 +1539,18 @@
             ]
         },
         {
+            "id": "2912_Analyst Report_1573516800000",
+            "headHtml": "Analyst Report: Devon Energy Corp.",
+            "provider": "Argus Research",
+            "reportDate": "2019-11-12T00:00:00Z",
+            "reportTitle": "Devon Energy is a leading independent energy company engaged in oil and gas exploration, production and property acquisitions. Based in Oklahoma City, Devon is among the largest U.S.-based independent oil and gas producers and is included in the S&P 500 index. The company's operations are focused onshore in the United States and Canada.",
+            "targetPrice": 32.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "DVN"
+            ]
+        },
+        {
             "id": "25441_Market Summary_1573516800000",
             "headHtml": "Market Digest: AZN, MCK, YUM, CERN, DVN, IQV, S, AEP",
             "provider": "Argus Research",
@@ -1529,18 +1565,6 @@
                 "AEP",
                 "DVN",
                 "IQV"
-            ]
-        },
-        {
-            "id": "2912_Analyst Report_1573516800000",
-            "headHtml": "Analyst Report: Devon Energy Corp.",
-            "provider": "Argus Research",
-            "reportDate": "2019-11-12T00:00:00Z",
-            "reportTitle": "Devon Energy is a leading independent energy company engaged in oil and gas exploration, production and property acquisitions. Based in Oklahoma City, Devon is among the largest U.S.-based independent oil and gas producers and is included in the S&P 500 index. The company's operations are focused onshore in the United States and Canada.",
-            "targetPrice": 32.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "DVN"
             ]
         },
         {
@@ -1593,36 +1617,6 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "DVN"
-            ]
-        },
-        {
-            "id": "2912_Analyst Report_1557213487000",
-            "headHtml": "Reaffirming BUY and target of $37",
-            "provider": "Argus Research",
-            "reportDate": "2019-05-07T07:18:07Z",
-            "reportTitle": "Devon Energy is a leading independent energy company engaged in oil and gas exploration, production and property acquisitions. Based in Oklahoma City, Devon is among the largest U.S.-based independent oil and gas producers and is included in the S&P 500 index. The company's operations are focused onshore in the United States and Canada.",
-            "targetPrice": 37.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "DVN"
-            ]
-        },
-        {
-            "id": "23901_Market Summary_1557212587000",
-            "headHtml": "Market Digest: ASH, BIIB, DVN, ETN, NSC, PCAR, BDN, DISCA, AAL",
-            "provider": "Argus Research",
-            "reportDate": "2019-05-07T07:03:07Z",
-            "reportTitle": "As earnings season winds down, the volume of insider transactions ramps up. Within that well-established pattern comes increased relevance to the signals thrown off by corporate executives, directors and beneficial owners. We've used this space to point out that recent insider sentiment has been moving in a cautious direction, but not to a degree that has been of concern. This week, we still feel that way. But, as always, there are a few developments that are worth considering.",
-            "tickers": [
-                "PCAR",
-                "ASH",
-                "AAL",
-                "DISCA",
-                "BDN",
-                "DVN",
-                "ETN",
-                "BIIB",
-                "NSC"
             ]
         }
     ],

@@ -5,16 +5,16 @@
             "provider": "Trading Central",
             "sector": "Real Estate",
             "shortTermOutlook": {
-                "stateDescription": "Bullish events outweigh bearish events.",
-                "direction": "Bullish",
-                "score": 2,
-                "scoreDescription": "Bullish Evidence",
-                "sectorDirection": "Bullish",
+                "stateDescription": "Recent bearish events outweigh bullish events.",
+                "direction": "Bearish",
+                "score": 3,
+                "scoreDescription": "Strong Bearish Evidence",
+                "sectorDirection": "Bearish",
                 "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bullish Evidence",
+                "sectorScoreDescription": "Strong Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "All events are bullish.",
@@ -44,8 +44,8 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 134.85,
-            "resistance": 150.35,
-            "stopLoss": 137.257339
+            "resistance": 144.075,
+            "stopLoss": 133.580104
         },
         "valuation": {
             "color": 0.0,
@@ -61,8 +61,8 @@
             "innovativeness": 0.5058,
             "sustainability": 0.40399999999999997,
             "insiderSentiments": 0.44229999999999997,
-            "earningsReports": 0.9065000000000001,
-            "dividends": 0.1722
+            "earningsReports": 0.903,
+            "dividends": 0.17170000000000002
         },
         "sector": {
             "innovativeness": 0.5,
@@ -105,13 +105,13 @@
     },
     "events": [
         {
-            "eventType": "Fast Stochastic",
+            "eventType": "MACD",
             "pricePeriod": "D",
             "tradingHorizon": "S",
             "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1710163800,
-            "endDate": 1710163800
+            "startDate": 1710336600,
+            "endDate": 1710336600
         }
     ],
     "reports": [
@@ -1170,16 +1170,6 @@
             ]
         },
         {
-            "id": "25125_Market Update_1570060800000",
-            "headHtml": "Market Update: DLR",
-            "provider": "Argus Research",
-            "reportDate": "2019-10-03T00:00:00Z",
-            "reportTitle": "Stocks recovered from early losses on Thursday morning, led by the Real Estate and Consumer Staples sectors, though economic data was weak. The Institute for Supply Management said that its U.S. nonmanufacturing index fell 3.8 points to 52.6 in September, below the Reuters consensus estimate of 55.0 and the lowest reading since August 2016. The Commerce Department also reported that factory orders fell 0.1% in August, slightly better than the consensus forecast, but down sharply from 1.4% growth in July. Orders for core capital goods also fell 0.4% in August, down from a previously reported 0.2% decline. The Dow rose 0.1%, the S&P 0.3%, and the Nasdaq 0.5%. Crude oil traded near $52 per barrel, while gold rose $9 to trade near $1517 per ounce",
-            "tickers": [
-                "DLR"
-            ]
-        },
-        {
             "id": "4555_Analyst Report_1570060800000",
             "headHtml": "Analyst Report: Digital Realty Trust Inc",
             "provider": "Argus Research",
@@ -1187,6 +1177,16 @@
             "reportTitle": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 35 metropolitan markets on five continents.",
             "targetPrice": 140.0,
             "investmentRating": "Bullish",
+            "tickers": [
+                "DLR"
+            ]
+        },
+        {
+            "id": "25125_Market Update_1570060800000",
+            "headHtml": "Market Update: DLR",
+            "provider": "Argus Research",
+            "reportDate": "2019-10-03T00:00:00Z",
+            "reportTitle": "Stocks recovered from early losses on Thursday morning, led by the Real Estate and Consumer Staples sectors, though economic data was weak. The Institute for Supply Management said that its U.S. nonmanufacturing index fell 3.8 points to 52.6 in September, below the Reuters consensus estimate of 55.0 and the lowest reading since August 2016. The Commerce Department also reported that factory orders fell 0.1% in August, slightly better than the consensus forecast, but down sharply from 1.4% growth in July. Orders for core capital goods also fell 0.4% in August, down from a previously reported 0.2% decline. The Dow rose 0.1%, the S&P 0.3%, and the Nasdaq 0.5%. Crude oil traded near $52 per barrel, while gold rose $9 to trade near $1517 per ounce",
             "tickers": [
                 "DLR"
             ]

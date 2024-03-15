@@ -6,11 +6,11 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 2,
-                "scoreDescription": "Bullish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bullish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "All events are bullish.",
@@ -35,7 +35,7 @@
             "provider": "Trading Central",
             "support": 54.8999,
             "resistance": 57.88,
-            "stopLoss": 56.51378
+            "stopLoss": 56.541157
         },
         "valuation": {
             "provider": "Trading Central"
@@ -44,7 +44,7 @@
     "upsell": {},
     "events": [
         {
-            "eventType": "MACD",
+            "eventType": "Commodity Channel Index",
             "pricePeriod": "D",
             "tradingHorizon": "S",
             "tradeType": "L",

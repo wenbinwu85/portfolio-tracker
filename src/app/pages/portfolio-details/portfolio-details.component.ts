@@ -7,7 +7,6 @@ import { MatTabsModule } from "@angular/material/tabs";
 import { Router, RouterLink, RouterOutlet } from "@angular/router";
 import { NgxChartsModule } from "@swimlane/ngx-charts";
 import { PortfolioDividendComponent } from "../portfolio-details/portfolio-dividend/portfolio-dividend.component";
-import { PortfolioEventsComponent } from "../portfolio-details/portfolio-events/portfolio-events.component";
 import { PortfolioFinancialsComponent } from "../portfolio-details/portfolio-financials/portfolio-financials.component";
 import { PortfolioHoldingsComponent } from "../portfolio-details/portfolio-holdings/portfolio-holdings.component";
 import { PortfolioPriceInsightsComponent } from "./portfolio-price-insights/portfolio-price-insights.component";
@@ -25,7 +24,6 @@ import { PortfolioSummaryComponent } from "./portfolio-summary/portfolio-summary
     NgFor,
     NgxChartsModule,
     PortfolioDividendComponent,
-    PortfolioEventsComponent,
     PortfolioFinancialsComponent,
     PortfolioHoldingsComponent,
     PortfolioPriceInsightsComponent,
@@ -67,11 +65,6 @@ export class PortfolioDetailsComponent implements OnInit {
       label: "Analysis",
       route: "analysis",
       icon: "calculate"
-    },
-    {
-      label: "Events",
-      route: "events",
-      icon: "event"
     },
   ];
   activeLink = this.navLinks[0];
