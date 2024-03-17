@@ -62,6 +62,7 @@ export class PortfolioPriceInsightsComponent implements OnInit {
   selectedSymbol: any = "SCHD";
   selectedStock: any;
   selectedStockTechnical: any;
+  selectedSymbolColor: any = {name: "SCHD", value: "seagreen"};
   performanceChartColorScheme = {
     domain: ["lightsteelblue"],
   } as Color;
@@ -202,6 +203,8 @@ export class PortfolioPriceInsightsComponent implements OnInit {
     this.selectedSymbol = null;
     this.selectedStockTechnical = null;
     setTimeout(() => {
+      this.selectedSymbolColor = {name: symbol, value: "orangered"};
+      console.log(this.selectedSymbolColor);
       this.selectedSymbol = symbol;
       this.selectedStock = Object.values(this.dataService.portfolioData).filter(
         (stock: any) => stock.symbol === this.selectedSymbol

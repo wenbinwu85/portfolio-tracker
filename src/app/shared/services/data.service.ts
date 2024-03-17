@@ -74,7 +74,7 @@ export class DataService {
         const stocks = Object.values(this.portfolioData).filter((stock: any) => stock.quoteType === 'EQUITY');
         let counter = 0;
         stocks.forEach((stock: any) => {
-          this.getCorporateEvents(stock.symbol).subscribe((events: any) => {
+          this.getCorporateEvents(stock.symbol).subscribe(() => {
             counter++
             if (counter === stocks.length) {
               this.isLoadingData.next(false);

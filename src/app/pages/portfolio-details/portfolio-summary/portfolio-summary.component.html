@@ -1,52 +1,52 @@
 <section class="summary-cards-container">
   <info-card
     icon="numbers"
-    [value]="portfolioHoldings.portfolioPositions"
+    [value]="portfolioHoldings?.portfolioPositions"
     subtitle="Total Positions"
   />
   <info-card
     icon="payments"
-    [value]="portfolioHoldings.portfolioTotalInvestment"
+    [value]="portfolioHoldings?.portfolioTotalInvestment"
     valueType="currency"
     subtitle="Total Investment"
   />
   <info-card
     icon="payments"
-    [value]="portfolioHoldings.portfolioMarketValue"
+    [value]="portfolioHoldings?.portfolioMarketValue"
     valueType="currency"
     subtitle="Market Value"
   />
   <info-card
     icon="payments"
-    [value]="portfolioHoldings.portfolioUnrealizedGain"
+    [value]="portfolioHoldings?.portfolioUnrealizedGain"
     subtitle="Unrealized Gain"
     valueType="currency"
-    [color]="portfolioHoldings.portfolioUnrealizedGain > 0 ? 'seagreen' : 'orangered'"
-    [accentColor]="portfolioHoldings.portfolioUnrealizedGain > 0 ? 'seagreen' : 'orangered'"
+    [color]="portfolioHoldings?.portfolioUnrealizedGain > 0 ? 'seagreen' : 'orangered'"
+    [accentColor]="portfolioHoldings?.portfolioUnrealizedGain > 0 ? 'seagreen' : 'orangered'"
   />
   <info-card
     icon="percentage"
-    [value]="portfolioHoldings.portfolioUnrealizedGainPercent"
+    [value]="portfolioHoldings?.portfolioUnrealizedGainPercent"
     valueType="percentage"
     subtitle="Unrealized Gain %"
-    [color]="portfolioHoldings.portfolioUnrealizedGainPercent > 0 ? 'seagreen' : 'orangered'"
-    [accentColor]="portfolioHoldings.portfolioUnrealizedGain > 0 ? 'seagreen' : 'orangered'"
+    [color]="portfolioHoldings?.portfolioUnrealizedGainPercent > 0 ? 'seagreen' : 'orangered'"
+    [accentColor]="portfolioHoldings?.portfolioUnrealizedGain > 0 ? 'seagreen' : 'orangered'"
   />
   <info-card
     icon="payments"
-    [value]="portfolioHoldings.portfolioDividendIncome"
+    [value]="portfolioHoldings?.portfolioDividendIncome"
     valueType="currency"
     subtitle="Projected Annual Income"
   />
   <info-card
     icon="percentage"
-    [value]="portfolioHoldings.portfolioYield"
+    [value]="portfolioHoldings?.portfolioYield"
     valueType="percentage"
     subtitle="Portfolio Yield"
   />
   <info-card
     icon="percentage"
-    [value]="portfolioHoldings.portfolioYieldOnCost"
+    [value]="portfolioHoldings?.portfolioYieldOnCost"
     valueType="percentage"
     subtitle="Portfolio YOC"
     color="seagreen"
@@ -111,7 +111,7 @@
     >
       <input
         matSliderThumb
-        [value]="portfolioHoldings.portfolioMarketValue"
+        [value]="portfolioHoldings?.portfolioMarketValue"
         [matTooltip]="getTooltip('investment')"
         matTooltipPosition="above"
       />
@@ -174,7 +174,7 @@
     >
       <input
         matSliderThumb
-        [value]="portfolioHoldings.portfolioDividendIncome"
+        [value]="portfolioHoldings?.portfolioDividendIncome"
         [matTooltip]="getTooltip('passive')"
         matTooltipPosition="above"
       />

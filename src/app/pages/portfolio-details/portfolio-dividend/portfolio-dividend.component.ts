@@ -1,11 +1,7 @@
 import { NgFor, NgIf } from "@angular/common";
-import {
-  AfterViewInit,
-  Component,
-  OnInit,
-  ViewChild,
-} from "@angular/core";
+import { AfterViewInit, Component, OnInit, ViewChild } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
+import { MatDividerModule } from "@angular/material/divider";
 import { MatIconModule } from "@angular/material/icon";
 import { MatSort, MatSortModule } from "@angular/material/sort";
 import {
@@ -13,13 +9,13 @@ import {
   MatTableDataSource,
   MatTableModule,
 } from "@angular/material/table";
+import { catchError, map } from "rxjs";
 import { Color, NgxChartsModule } from "@swimlane/ngx-charts";
 import { EChartsOption } from "echarts";
 import { EchartComponent } from "../../../shared/components/charts/echart/echart.component";
 import { InfoCardComponent } from "../../../shared/components/info-card/info-card.component";
 import { StockNameCardComponent } from "../../../shared/components/stock/stock-name-card/stock-name-card.component";
 import { DataService } from "../../../shared/services/data.service";
-import { catchError, map } from "rxjs";
 
 @Component({
   selector: "portfolio-dividend",
@@ -30,6 +26,7 @@ import { catchError, map } from "rxjs";
     EchartComponent,
     InfoCardComponent,
     MatButtonModule,
+    MatDividerModule,
     MatIconModule,
     MatSortModule,
     MatTableModule,
@@ -42,6 +39,8 @@ import { catchError, map } from "rxjs";
 export class PortfolioDividendComponent implements OnInit, AfterViewInit {
   @ViewChild(MatTable) table!: MatTable<any>;
   @ViewChild(MatSort) sort!: MatSort;
+  portfolioHoldings: any;
+  portfolioData: any;
   browser = "";
   dividendIncome = 0;
   portfolioYieldOnCost = 0;
@@ -50,6 +49,7 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
   infoCards: any[] = [];
   dividendLineChartData: any = [];
   dividendChartColorScheme = { domain: ["navy"] } as Color;
+  pieChartData: any = [];
   echartOptions!: EChartsOption;
   echartUpdateOptions: any = {
     yAxis: {},
@@ -59,19 +59,23 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
   dataSource = new MatTableDataSource<any>();
   headers = [
     "Symbol",
+    "Dividend Income",
+    "Yield on Cost",
     "Dividend Rate",
     "Dividend Rate (TTM)",
     "Dividend Yield",
     "Dividend Yield (TTM)",
     "5Y Avg. Yield",
     "Payout Ratio",
-    "Free Cash Flow Payout Ratio",
+    "FCF Payout Ratio",
     "Last Dividend Paid",
     "Ex-dividend Date",
     "Dividend Date",
   ];
   columnDefs = [
     "symbol",
+    "dividendIncome",
+    "yieldOnCost",
     "dividendRate",
     "trailingAnnualDividendRate",
     "dividendYield",
@@ -85,10 +89,13 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
   ];
   cells: Function[] = [
     (stock: any) => "",
+    (stock: any) => `$${stock.dividendIncome.toFixed(2)}`,
+    (stock: any) => `${(stock.yieldOnCost * 100).toFixed(2)}%`,
     (stock: any) => `$${stock.dividendRate?.toFixed(2)}`,
     (stock: any) => `$${stock.trailingAnnualDividendRate?.toFixed(2) || 0}`,
     (stock: any) => `${(stock.dividendYield * 100 || 0).toFixed(2)}%`,
-    (stock: any) => `${(stock.trailingAnnualDividendYield * 100 || 0).toFixed(2)}%`,
+    (stock: any) =>
+      `${(stock.trailingAnnualDividendYield * 100 || 0).toFixed(2)}%`,
     (stock: any) => `${(stock.fiveYearAvgDividendYield || 0).toFixed(2)}%`,
     (stock: any) => `${(stock.payoutRatio * 100 || 0).toFixed(2)}%`,
     (stock: any) =>
@@ -109,14 +116,29 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    this.dataSource.data = Object.values(this.dataService.portfolioData).filter(
-      (a: any) => a.dividendYield
-    );
-    this.dividendIncome = this.dataService.portfolioHoldings?.portfolioDividendIncome;
-    this.portfolioYieldOnCost = this.dataService.portfolioHoldings?.portfolioYieldOnCost;
+    this.portfolioHoldings = this.dataService.portfolioHoldings;
+    this.portfolioData = this.dataService.portfolioData;
+    this.dataSource.data = Object.values(this.portfolioData)
+      .filter((stock: any) => stock.dividendYield > 0)
+      .map((stock: any) => {
+        return {
+          ...this.portfolioHoldings[stock.symbol],
+          ...stock,
+        };
+      });
+    this.dividendIncome = this.portfolioHoldings.portfolioDividendIncome;
+    this.portfolioYieldOnCost = this.portfolioHoldings.portfolioYieldOnCost;
     this.browser = this.getBrowserName();
     this.setInfoCards();
     this.refreshDividend(this.selectedSymbol, true);
+    this.dataSource.data
+      // .sort((a: any, b: any) => b.dividendIncome - a.dividendIncome)
+      .forEach((stock: any) => {
+        this.pieChartData.push({
+          name: stock.symbol,
+          value: stock.dividendIncome,
+        });
+      });
   }
 
   ngAfterViewInit() {
@@ -247,17 +269,20 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
     this.echartOptions = options;
     this.dividendLineChartData = [divData];
     this.selectedSymbol = stock.symbol;
-    this.selectedSymbolLabel = `${stock.symbol} | ${stock.longName} | ${stock.profile?.sector || "ETF"}`;
+    this.selectedSymbolLabel = `${stock.symbol} | ${stock.longName} | ${
+      stock.profile?.sector || "ETF"
+    }`;
 
     window.scroll({
-      top: 0,
+      top: 100,
       left: 0,
       behavior: "smooth",
     });
   }
 
-  refreshDividend(symbol: string, fromLocal: boolean) { 
-    this.dataService.getDividendHistory(symbol, 10, fromLocal)
+  refreshDividend(symbol: string, fromLocal: boolean) {
+    this.dataService
+      .getDividendHistory(symbol, 10, fromLocal)
       .pipe(
         map((response: any) => {
           if (response.status === 500) {
@@ -268,11 +293,24 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
         }),
         catchError((err: any) => {
           console.log(err);
-          return this.dataService.getDividendHistory(symbol, 10, false)
+          return this.dataService.getDividendHistory(symbol, 10, false);
         })
       )
       .subscribe((divHis: any) => {
         this.updateChart(symbol, divHis);
-    });
+      });
+  }
+
+  onSelect(data: any): void {
+    const symbol = data.name || data;
+    this.refreshDividend(symbol, true);
+  }
+
+  onActivate(data: any): void {
+    console.log("Activate", JSON.parse(JSON.stringify(data)));
+  }
+
+  onDeactivate(data: any): void {
+    console.log("Deactivate", JSON.parse(JSON.stringify(data)));
   }
 }
