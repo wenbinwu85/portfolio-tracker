@@ -14,7 +14,7 @@ import {
   MatTableModule,
 } from "@angular/material/table";
 import { EChartsOption } from "echarts";
-import { EchartComponent } from "../../../shared/components/charts/echart/echart.component";
+import { EchartsVerticalBarChartComponent } from "../../../shared/components/charts/echart/echarts-vertical-bar-chart/echarts-vertical-bar-chart.component";
 import { StockNameCardComponent } from "../../../shared/components/stock/stock-name-card/stock-name-card.component";
 import { DataService } from "../../../shared/services/data.service";
 
@@ -25,7 +25,7 @@ import { DataService } from "../../../shared/services/data.service";
   standalone: true,
   imports: [
     CurrencyPipe,
-    EchartComponent,
+    EchartsVerticalBarChartComponent,
     MatDividerModule,
     MatSortModule,
     MatTableModule,

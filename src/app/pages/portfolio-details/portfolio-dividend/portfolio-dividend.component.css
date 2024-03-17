@@ -1,10 +1,19 @@
+echarts-vertical-bar-chart {
+    width: 100%;
+}
+
+.safari-charts-container {
+    display: flex;
+    align-items: center;
+}
+
 .dividend-cards-container {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     margin-top: 1rem;
     margin-bottom: 1rem;
-  }
+}
 
 .table-col-0 {
     display: flex;
@@ -28,7 +37,7 @@ td.mat-mdc-cell:first-of-type td.mat-mdc-footer-cell:first-of-type {
 }
 
 .dividend-chart {
-   width: 60%; 
+    width: 60%;
 }
 
 .dividend-pie {

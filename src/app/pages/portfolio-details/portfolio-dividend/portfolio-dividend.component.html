@@ -21,7 +21,23 @@
       <span>Refresh Dividend History</span>
     </button>
   </div>
-  <app-echart [options]="echartOptions" />
+  <div class="safari-charts-container">
+    <echarts-vertical-bar-chart [options]="echartOptions" />
+    <div class="chart-container dividend-pie">
+      <ngx-charts-pie-chart
+        [scheme]="'picnic'"
+        [results]="pieChartData"
+        [animations]="true"
+        [explodeSlices]="true"
+        [labels]="true"
+        [legend]="true"
+        [arcWidth]=".75"
+        (select)="onSelect($event)"
+        (activate)="onActivate($event)"
+        (deactivate)="onDeactivate($event)"
+      />
+    </div>
+  </div>
 </section>
 
 <section *ngIf="browser !== 'Safari'" class="add-border">

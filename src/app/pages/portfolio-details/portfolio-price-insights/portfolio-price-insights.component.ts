@@ -11,7 +11,7 @@ import { MatTableDataSource, MatTableModule } from "@angular/material/table";
 import { MatTabsModule } from "@angular/material/tabs";
 import { catchError, map } from "rxjs";
 import { Color, NgxChartsModule } from "@swimlane/ngx-charts";
-import { PriceMovementChartsComponent } from "../../../shared/components/charts/price-movement-charts/price-movement-charts.component";
+import { StockPriceMovementChartsComponent } from "../../../shared/components/stock/stock-price-movement-charts/stock-price-movement-charts.component";
 import { StockDayPriceRangeComponent } from "../../../shared/components/stock/stock-day-price-range/stock-day-price-range.component";
 import { TvSymbolInfoWidgetComponent } from "../../../shared/components/tradingview/tv-symbol-info-widget/tv-symbol-info-widget.component";
 import { DataService } from "../../../shared/services/data.service";
@@ -39,7 +39,7 @@ import { PortfolioHoldingsComponent } from "../portfolio-holdings/portfolio-hold
     PortfolioDividendComponent,
     PortfolioFinancialsComponent,
     PortfolioHoldingsComponent,
-    PriceMovementChartsComponent,
+    StockPriceMovementChartsComponent,
     StockDayPriceRangeComponent,
     TvSymbolInfoWidgetComponent,
   ],

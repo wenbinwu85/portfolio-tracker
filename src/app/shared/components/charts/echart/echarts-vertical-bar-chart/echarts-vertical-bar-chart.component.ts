@@ -4,7 +4,7 @@ import { EChartsOption } from 'echarts';
 import { NGX_ECHARTS_CONFIG, NgxEchartsModule } from 'ngx-echarts';
 
 @Component({
-  selector: 'app-echart',
+  selector: 'echarts-vertical-bar-chart',
   standalone: true,
   imports: [CommonModule, NgxEchartsModule],
   providers: [
@@ -13,10 +13,10 @@ import { NGX_ECHARTS_CONFIG, NgxEchartsModule } from 'ngx-echarts';
       useFactory: () => ({ echarts: () => import('echarts') }),
     },
   ],
-  templateUrl: './echart.component.html',
-  styleUrls: ['./echart.component.css'],
+  templateUrl: './echarts-vertical-bar-chart.component.html',
+  styleUrls: ['./echarts-vertical-bar-chart.component.css'],
 })
-export class EchartComponent {
+export class EchartsVerticalBarChartComponent {
   @Input({ required: true }) options!: EChartsOption;
   @Input() updateOptions?: any;
   @Input() renderType: 'svg' | 'canvas' = 'svg';

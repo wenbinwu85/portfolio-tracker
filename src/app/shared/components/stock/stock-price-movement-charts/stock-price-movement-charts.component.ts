@@ -11,7 +11,7 @@ import { TvTickersWidgetComponent } from "../../tradingview/tv-tickers-widget/tv
 import { TvMarketQuotesWidgetComponent } from "../../tradingview/tv-market-quotes-widget/tv-market-quotes-widget.component";
 
 @Component({
-  selector: "price-movement-charts",
+  selector: 'stock-price-movement-charts',
   standalone: true,
   imports: [
     CommonModule,
@@ -24,10 +24,10 @@ import { TvMarketQuotesWidgetComponent } from "../../tradingview/tv-market-quote
     TvTickersWidgetComponent,
     TvMarketQuotesWidgetComponent
   ],
-  templateUrl: "./price-movement-charts.component.html",
-  styleUrls: ["./price-movement-charts.component.css"],
+  templateUrl: './stock-price-movement-charts.component.html',
+  styleUrls: ['./stock-price-movement-charts.component.css'],
 })
-export class PriceMovementChartsComponent {
+export class StockPriceMovementChartsComponent {
   @Input() showTickers = true;
   portfolioData: any;
   portfolioHoldings: any;

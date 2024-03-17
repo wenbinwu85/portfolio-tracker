@@ -2,7 +2,7 @@
   <div class="title">
     <span>Financial Data</span>
   </div>
-  <app-echart [options]="echartOptions" />
+  <echarts-vertical-bar-chart [options]="echartOptions" />
 </section>
 
 <table mat-table matSort matSortActive="earningsQuarterlyGrowth" matSortDirection="asc" [dataSource]="dataSource">

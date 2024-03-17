@@ -1,4 +1,5 @@
 import os
+import pickle
 import queue
 from concurrent.futures import ThreadPoolExecutor
 from multiprocessing import Pool, Process, cpu_count
@@ -173,6 +174,8 @@ def generate_holdings_data():
     holdings['portfolioYield'] = holdings['portfolioDividendIncome'] / holdings['portfolioMarketValue']
 
     dump_data_to(holdings, HOLDINGS_JSON_PATH)
+    with open(get_file_path('holdings', 'pickle'), 'wb') as holdings_pickle:
+        pickle.dump(holdings, holdings_pickle)
     return holdings
 
 
@@ -231,7 +234,16 @@ def yq_stock_data(symbols=None):
         symbols = [k for k, v in holdings.items() if isinstance(v, dict)]
     ticker = Ticker(symbols, asynchronous=True, progress=True)
     modules_data = ticker.get_modules(yq_modules)
-    return map_stock_data(modules_data)
+    mapped_data = map_stock_data(modules_data)
+
+    path = get_file_path('portfolio', 'json')
+    dump_data_to(mapped_data, path)
+    with open(get_file_path('portfolio', 'pickle'), 'wb') as portfolio_pickle:
+        pickle.dump(mapped_data, portfolio_pickle)
+    for symbol in mapped_data:
+        path = get_file_path(symbol.lower(), 'json')
+        dump_data_to(mapped_data[symbol], path)
+    return mapped_data
 
 
 def yq_dividend_history(symbol, start_date):

@@ -1,11 +1,10 @@
 import { Component, OnInit } from "@angular/core";
 import { MatExpansionModule } from "@angular/material/expansion";
 import { MatIconModule } from "@angular/material/icon";
-import { PriceMovementChartsComponent } from "../../shared/components/charts/price-movement-charts/price-movement-charts.component";
+import { StockPriceMovementChartsComponent } from "../../shared/components/stock/stock-price-movement-charts/stock-price-movement-charts.component";
 import { DataService } from "../../shared/services/data.service";
 import { InfoCardComponent } from "../../shared/components/info-card/info-card.component";
 import { DatePipe, JsonPipe, NgFor, NgIf } from "@angular/common";
-import { StockCorporateEventsComponent } from "../../shared/components/#junk/stock-corporate-events/stock-corporate-events.component";
 import { MatDividerModule } from "@angular/material/divider";
 
 @Component({
@@ -22,8 +21,7 @@ import { MatDividerModule } from "@angular/material/divider";
     NgIf,
     NgFor,
     JsonPipe,
-    PriceMovementChartsComponent,
-    StockCorporateEventsComponent,
+    StockPriceMovementChartsComponent,
   ],
 })
 export class PortfolioMainComponent implements OnInit{

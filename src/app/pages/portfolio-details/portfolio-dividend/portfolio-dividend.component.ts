@@ -12,7 +12,7 @@ import {
 import { catchError, map } from "rxjs";
 import { Color, NgxChartsModule } from "@swimlane/ngx-charts";
 import { EChartsOption } from "echarts";
-import { EchartComponent } from "../../../shared/components/charts/echart/echart.component";
+import { EchartsVerticalBarChartComponent } from "../../../shared/components/charts/echart/echarts-vertical-bar-chart/echarts-vertical-bar-chart.component";
 import { InfoCardComponent } from "../../../shared/components/info-card/info-card.component";
 import { StockNameCardComponent } from "../../../shared/components/stock/stock-name-card/stock-name-card.component";
 import { DataService } from "../../../shared/services/data.service";
@@ -23,7 +23,7 @@ import { DataService } from "../../../shared/services/data.service";
   styleUrls: ["./portfolio-dividend.component.css"],
   standalone: true,
   imports: [
-    EchartComponent,
+    EchartsVerticalBarChartComponent,
     InfoCardComponent,
     MatButtonModule,
     MatDividerModule,

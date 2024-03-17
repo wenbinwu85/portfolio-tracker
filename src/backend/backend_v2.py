@@ -1,5 +1,6 @@
 import ast
 import os
+import pickle
 from datetime import datetime, timedelta
 from quart import Quart, jsonify, request
 from quart_cors import cors
@@ -99,8 +100,7 @@ def fetch_corporate_events(symbol):
 
 @app.route('/fetch/portfolio/holdings')
 def get_portfolio_holdings():
-    data = generate_holdings_data()
-    return jsonify(data)
+    return jsonify(generate_holdings_data())
 
 
 @app.route('/fetch/portfolio/symbols')
@@ -112,13 +112,7 @@ def get_portfolio_symbols():
 
 @app.route('/fetch/portfolio/data')
 def fetch_portfolio_data():
-    portfolio_data_path = get_file_path('portfolio', 'json')
-    portfolio_data = yq_stock_data()
-    dump_data_to(portfolio_data, portfolio_data_path)
-    for symbol in portfolio_data:
-        path = get_file_path(symbol.lower(), 'json')
-        dump_data_to(portfolio_data[symbol], path)
-    return jsonify(portfolio_data)
+    return jsonify(yq_stock_data())
 
 
 @app.route('/fetch/portfolio/technical-insights')

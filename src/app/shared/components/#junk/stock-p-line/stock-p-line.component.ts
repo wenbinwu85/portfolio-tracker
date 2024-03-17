@@ -1,4 +1,4 @@
-import { DataService } from './../../../services/data.service';
+import { DataService } from '../../../services/data.service';
 import { NgIf, CommonModule } from '@angular/common';
 import {
   AfterViewInit,
