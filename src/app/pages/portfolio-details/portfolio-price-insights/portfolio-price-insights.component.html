@@ -47,7 +47,7 @@
                 <th mat-header-cell *matHeaderCellDef>Symbol</th>
                 <td mat-cell *matCellDef="let element">
                     <span>{{ element.symbol }}</span>
-                    <span [ngStyle]="{color: 'seagreen'}"> {{ element.currentPrice | currency }}</span>
+                    <span [ngStyle]="{color: 'teal'}"> {{ element.currentPrice | currency }}</span>
                 </td>
             </ng-container>
             <ng-container matColumnDef="support">
@@ -70,42 +70,42 @@
                 <th mat-header-cell *matHeaderCellDef>Day Low</th>
                 <td mat-cell *matCellDef="let element">
                     <span>{{ element.dayLow | currency }}</span>
-                    <span [ngStyle]="{color: 'seagreen'}"> +{{(element.dayLow - element.fiftyTwoWeekLow).toFixed(2)}}</span>
+                    <span [ngStyle]="{color: 'teal'}"> +{{(element.dayLow - element.fiftyTwoWeekLow).toFixed(2)}}</span>
                 </td>
             </ng-container>
             <ng-container matColumnDef="dayHigh">
                 <th mat-header-cell *matHeaderCellDef>Day High</th>
                 <td mat-cell *matCellDef="let element">
                     <span>{{ element.dayHigh | currency }}</span>
-                    <span [ngStyle]="{color: 'seagreen'}"> +{{(element.dayHigh - element.dayLow).toFixed(2)}}</span>
+                    <span [ngStyle]="{color: 'teal'}"> +{{(element.dayHigh - element.dayLow).toFixed(2)}}</span>
                 </td>
             </ng-container>
             <ng-container matColumnDef="fiftyTwoWeekHigh">
                 <th mat-header-cell *matHeaderCellDef>52 Week High</th>
                 <td mat-cell *matCellDef="let element">
                     <span>{{ element.fiftyTwoWeekHigh | currency }}</span>
-                    <span [ngStyle]="{color: 'seagreen'}"> +{{(element.fiftyTwoWeekHigh - element.dayHigh).toFixed(2)}}</span>
+                    <span [ngStyle]="{color: 'teal'}"> +{{(element.fiftyTwoWeekHigh - element.dayHigh).toFixed(2)}}</span>
                 </td>
             </ng-container>
             <ng-container matColumnDef="targetLowPrice">
                 <th mat-header-cell *matHeaderCellDef>Target Price Low</th>
                 <td mat-cell *matCellDef="let element">
                     <span [ngStyle]="{color: 'navy'}">{{ (element.targetLowPrice - element.currentPrice) / element.currentPrice | percent: '.2' }}</span>
-                    <span *ngIf="selectedStock.quoteType === 'EQUITY'" [ngStyle]="{color: 'seagreen'}"> ({{ element.targetLowPrice | currency }})</span>
+                    <span *ngIf="selectedStock.quoteType === 'EQUITY'" [ngStyle]="{color: 'teal'}"> ({{ element.targetLowPrice | currency }})</span>
                 </td>
             </ng-container>
             <ng-container matColumnDef="targetMedianPrice">
                 <th mat-header-cell *matHeaderCellDef>Target Price Median</th>
                 <td mat-cell *matCellDef="let element">
                     <span [ngStyle]="{color: 'navy'}">{{ (element.targetMedianPrice - element.currentPrice) / element.currentPrice | percent: '.2' }}</span>
-                    <span *ngIf="selectedStock.quoteType === 'EQUITY'" [ngStyle]="{color: 'seagreen'}"> ( {{ element.targetMedianPrice | currency }} )</span>
+                    <span *ngIf="selectedStock.quoteType === 'EQUITY'" [ngStyle]="{color: 'teal'}"> ( {{ element.targetMedianPrice | currency }} )</span>
                 </td>
             </ng-container>
             <ng-container matColumnDef="targetHighPrice">
                 <th mat-header-cell *matHeaderCellDef>Target Price High</th>
                 <td mat-cell *matCellDef="let element">
                     <span [ngStyle]="{color: 'navy'}">{{ (element.targetHighPrice - element.currentPrice) / element.currentPrice | percent: '.2' }}</span>
-                    <span *ngIf="selectedStock.quoteType === 'EQUITY'" [ngStyle]="{color: 'seagreen'}"> ({{ element.targetHighPrice | currency }})</span>
+                    <span *ngIf="selectedStock.quoteType === 'EQUITY'" [ngStyle]="{color: 'teal'}"> ({{ element.targetHighPrice | currency }})</span>
                 </td>
             </ng-container>
             <ng-container matColumnDef="argusTarget">
@@ -201,7 +201,7 @@
                 [rotateXAxisTicks]="true"
                 [yAxisLabel]="'52 Week Change %'"
                 [activeEntries]="['S&P 500']"
-                [customColors]="[selectedSymbolColor, {name:'S&P 500', value: 'navy'}]"
+                [customColors]="[selectedSymbolColor, {name:'S&P 500', value: 'gold'}]"
             >
             </ngx-charts-bar-vertical>
         </div>

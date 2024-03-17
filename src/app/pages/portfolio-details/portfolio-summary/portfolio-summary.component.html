@@ -21,16 +21,16 @@
     [value]="portfolioHoldings?.portfolioUnrealizedGain"
     subtitle="Unrealized Gain"
     valueType="currency"
-    [color]="portfolioHoldings?.portfolioUnrealizedGain > 0 ? 'seagreen' : 'orangered'"
-    [accentColor]="portfolioHoldings?.portfolioUnrealizedGain > 0 ? 'seagreen' : 'orangered'"
+    [color]="portfolioHoldings?.portfolioUnrealizedGain > 0 ? 'teal' : 'chocolate'"
+    [accentColor]="portfolioHoldings?.portfolioUnrealizedGain > 0 ? 'teal' : 'chocolate'"
   />
   <info-card
     icon="percentage"
     [value]="portfolioHoldings?.portfolioUnrealizedGainPercent"
     valueType="percentage"
     subtitle="Unrealized Gain %"
-    [color]="portfolioHoldings?.portfolioUnrealizedGainPercent > 0 ? 'seagreen' : 'orangered'"
-    [accentColor]="portfolioHoldings?.portfolioUnrealizedGain > 0 ? 'seagreen' : 'orangered'"
+    [color]="portfolioHoldings?.portfolioUnrealizedGainPercent > 0 ? 'teal' : 'chocolate'"
+    [accentColor]="portfolioHoldings?.portfolioUnrealizedGain > 0 ? 'teal' : 'chocolate'"
   />
   <info-card
     icon="payments"
@@ -49,8 +49,8 @@
     [value]="portfolioHoldings?.portfolioYieldOnCost"
     valueType="percentage"
     subtitle="Portfolio YOC"
-    color="seagreen"
-    accentColor="seagreen"
+    color="teal"
+    accentColor="teal"
   />
 </section>
 

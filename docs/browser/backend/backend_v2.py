@@ -3,9 +3,10 @@ import os
 from datetime import datetime, timedelta
 from quart import Quart, jsonify, request
 from quart_cors import cors
-from helpers.funcs import dump_data_to, load_data_from
-from yq import DATA_PATH, generate_holdings_data, yq_stock_data, yq_dividend_history
-from yq import yq_technical_insights, yq_corporate_events, yq_recommendations
+from helpers.funcs import dump_data_to
+from yq import DATA_PATH
+from yq import generate_holdings_data, yq_stock_data, yq_dividend_history
+from yq import yq_technical_insights, yq_corporate_events
 
 setting_options = {'true': True, 'false': False}
 
@@ -27,27 +28,23 @@ def test_get():
     return '<h1>Testing 123</h1>'
 
 
+# fetch single stock data
 @app.route('/fetch/stock/<symbol>')
 def fetch_stock_data(symbol):
+    path = get_file_path(symbol, 'json')
     symbol_data = yq_stock_data(symbol)
-    save_param = request.args.get('save', 'true')
-    save = setting_options.get(save_param, True)
-    if (save):
-        path = get_file_path(symbol.lower(), 'json')
-        dump_data_to(symbol_data[symbol], path)
+    dump_data_to(symbol_data[symbol], path)
     return jsonify(symbol_data)
 
 
+# fetch multiple stocks data
 @app.route('/fetch/stocks/<symbols>')
 def fetch_stocks_data(symbols):
     symbols = symbols.split(':')
     symbols_data = yq_stock_data(symbols)
-    save_param = request.args.get('save', 'true')
-    save = setting_options.get(save_param, True)
-    if (save):
-        for symbol in symbols_data:
-            path = get_file_path(symbol.lower(), 'json')
-            dump_data_to(symbols_data[symbol], path)
+    for symbol in symbols_data:
+        path = get_file_path(symbol.lower(), 'json')
+        dump_data_to(symbols_data[symbol], path)
     return jsonify(symbols_data)
 
 
@@ -57,31 +54,15 @@ def fetch_dividend_history(symbol):
         years_param = int(request.args.get('years', 10))
     except ValueError:
         years_param = 10
-    update_param = request.args.get('update', 'true')
-    should_update = setting_options.get(update_param, True)
-    path = get_file_path(symbol.lower() + '-dividend', 'csv')
+    path = get_file_path(symbol.lower() + '-dividend', 'json')
     div_his = {}
     data = []
-
-    if should_update:
-        start_date = datetime.now() - timedelta(days=365 * years_param)
-        data = yq_dividend_history(symbol, start_date)
-        data.to_csv(path)
-    else:
-        try:
-            data = load_data_from(path)
-        except Exception:
-            start_date = datetime.now() - timedelta(days=365 * years_param)
-            data = yq_dividend_history(symbol, start_date).to_csv(path)
-            data.to_csv(path)
-    if not isinstance(data, list):
-        for line in data.to_csv().split()[1:]:
-            _, div_date, div_rate = line.split(',')
-            div_his[div_date] = div_rate
-    else:
-        for line in data[1:]:
-            _, div_date, div_rate = line
-            div_his[div_date] = div_rate
+    start_date = datetime.now() - timedelta(days=365 * years_param)
+    data = yq_dividend_history(symbol, start_date)
+    for line in data.to_csv().split()[1:]:
+        _, div_date, div_rate = line.split(',')
+        div_his[div_date] = div_rate
+    dump_data_to(div_his, path)
     return jsonify(div_his)
 
 
@@ -95,21 +76,25 @@ def fetch_technical_insights(symbol):
 
 @app.route('/fetch/events/<symbol>')
 def fetch_corporate_events(symbol):
-    events = {}
     path = get_file_path(symbol.lower() + '-events', 'json')
-    data = yq_corporate_events(symbol).to_json(orient='records', indent=2)
-    for event in ast.literal_eval(data)[-20:]:
-        events[event['id']] = event
+    data = yq_corporate_events(symbol)
+    data = data.tail().to_dict(orient='split')
+    timestamps = data['index']
+    articles = data['data']
+    events = {symbol: []}
+    for article in zip(timestamps, articles):
+        timestamp = article[0][1]
+        if timestamp.year == datetime.now().year:
+            event = {
+                'symbol': article[0][0],
+                'time': timestamp.value,
+                'displayTime': f'{timestamp.day_name()}, {timestamp.month_name()} {timestamp.day} {timestamp.year}',
+                'title': article[1][2],
+                'text': article[1][3]
+            }
+            events[symbol].append(event)
     dump_data_to(events, path)
     return jsonify(events)
-
-
-@app.route('/fetch/recommendations/<symbol>')
-def fetch_recommendations(symbol):
-    path = get_file_path(symbol.lower() + '-recommendations', 'json')
-    data = yq_recommendations(symbol)
-    dump_data_to(data, path)
-    return jsonify(data)
 
 
 @app.route('/fetch/portfolio/holdings')
@@ -127,38 +112,13 @@ def get_portfolio_symbols():
 
 @app.route('/fetch/portfolio/data')
 def fetch_portfolio_data():
-    update_param = request.args.get('update')
-    should_update = setting_options.get(update_param, False)
     portfolio_data_path = get_file_path('portfolio', 'json')
-    portfolio_data = {}
-
-    # update by fetching new data
-    if should_update:
-        portfolio_data = yq_stock_data()
-        dump_data_to(portfolio_data, portfolio_data_path)
-        for symbol in portfolio_data:
-            path = get_file_path(symbol.lower(), 'json')
-            dump_data_to(portfolio_data[symbol], path)
-        return jsonify(portfolio_data)
-    else:
-        # no update, load from local
-        try:
-            portfolio_data = load_data_from(portfolio_data_path)
-        except Exception:
-            for symbol in list(generate_holdings_data().keys()):
-                data = None
-                path = get_file_path(symbol.lower(), 'json')
-                try:
-                    data = load_data_from(path)
-                except Exception:
-                    # failed to load from local, fetch new data
-                    print(f'error loading {symbol} data, fetching new data...')
-                    data = yq_stock_data(symbol)[symbol]
-                    dump_data_to(data, path)
-                if data:
-                    portfolio_data.update({symbol: data})
-        dump_data_to(portfolio_data, portfolio_data_path)
-        return jsonify(portfolio_data)
+    portfolio_data = yq_stock_data()
+    dump_data_to(portfolio_data, portfolio_data_path)
+    for symbol in portfolio_data:
+        path = get_file_path(symbol.lower(), 'json')
+        dump_data_to(portfolio_data[symbol], path)
+    return jsonify(portfolio_data)
 
 
 @app.route('/fetch/portfolio/technical-insights')

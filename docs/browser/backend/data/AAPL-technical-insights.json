@@ -5,28 +5,28 @@
             "provider": "Trading Central",
             "sector": "Technology",
             "shortTermOutlook": {
+                "stateDescription": "Bearish events outweigh bullish events.",
+                "direction": "Bearish",
+                "score": 1,
+                "scoreDescription": "Weak Bearish Evidence",
+                "sectorDirection": "Bearish",
+                "sectorScore": 4,
+                "sectorScoreDescription": "Very Strong Bearish Evidence",
+                "indexDirection": "Bearish",
+                "indexScore": 4,
+                "indexScoreDescription": "Very Strong Bearish Evidence"
+            },
+            "intermediateTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
                 "score": 2,
                 "scoreDescription": "Bearish Evidence",
-                "sectorDirection": "Bullish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bullish Evidence",
-                "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
-            },
-            "intermediateTermOutlook": {
-                "stateDescription": "All events are bearish.",
-                "direction": "Bearish",
-                "score": 2,
-                "scoreDescription": "Bearish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 2,
-                "sectorScoreDescription": "Bearish Evidence",
-                "indexDirection": "Bullish",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bearish Evidence",
+                "indexDirection": "Bearish",
                 "indexScore": 1,
-                "indexScoreDescription": "Weak Bullish Evidence"
+                "indexScoreDescription": "Weak Bearish Evidence"
             },
             "longTermOutlook": {
                 "stateDescription": "There is one bearish event.",
@@ -43,9 +43,9 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 173.19,
+            "support": 150.66,
             "resistance": 179.35,
-            "stopLoss": 166.502683
+            "stopLoss": 165.278777
         },
         "valuation": {
             "color": 0.5,
@@ -57,11 +57,11 @@
     "companySnapshot": {
         "sectorInfo": "Technology",
         "company": {
-            "innovativeness": 0.9981,
+            "innovativeness": 0.998,
             "hiring": 0.9512999999999999,
             "sustainability": 0.5667,
-            "insiderSentiments": 0.21539999999999998,
-            "earningsReports": 0.8415,
+            "insiderSentiments": 0.2119,
+            "earningsReports": 0.8425,
             "dividends": 0.0981
         },
         "sector": {
@@ -105,10 +105,10 @@
     },
     "events": [
         {
-            "eventType": "Double Moving Average Crossover",
+            "eventType": "Commodity Channel Index",
             "pricePeriod": "D",
-            "tradingHorizon": "I",
-            "tradeType": "S",
+            "tradingHorizon": "S",
+            "tradeType": "U",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
             "startDate": 1710163800,
             "endDate": 1710163800
@@ -431,18 +431,6 @@
             ]
         },
         {
-            "id": "2660_Analyst Report_1691171066000",
-            "headHtml": "Analyst Report: Apple Inc",
-            "provider": "Argus Research",
-            "reportDate": "2023-08-04T17:44:26Z",
-            "reportTitle": "Apple manufactures smartphones, tablets, PCs, software and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including AirPods, Beats headphones and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
-            "targetPrice": 230.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "AAPL"
-            ]
-        },
-        {
             "id": "37274_Market Update_1691171066000",
             "headHtml": "Market Update: ILMN, AAPL, AMZN, ECL, ETR, KIM, MDT, PRU, SQ",
             "provider": "Argus Research",
@@ -458,6 +446,18 @@
                 "KIM",
                 "SQ",
                 "ECL"
+            ]
+        },
+        {
+            "id": "2660_Analyst Report_1691171066000",
+            "headHtml": "Analyst Report: Apple Inc",
+            "provider": "Argus Research",
+            "reportDate": "2023-08-04T17:44:26Z",
+            "reportTitle": "Apple manufactures smartphones, tablets, PCs, software and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including AirPods, Beats headphones and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
+            "targetPrice": 230.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "AAPL"
             ]
         },
         {
@@ -1402,6 +1402,18 @@
             ]
         },
         {
+            "id": "2660_Analyst Report_1627481615000",
+            "headHtml": "Analyst Report: Apple Inc",
+            "provider": "Argus Research",
+            "reportDate": "2021-07-28T14:13:35Z",
+            "reportTitle": "Apple manufactures smartphones, tablets, PCs, software and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including AirPods, Beats headphones and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
+            "targetPrice": 165.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "AAPL"
+            ]
+        },
+        {
             "id": "30494_Market Update_1627481615000",
             "headHtml": "Market Update: AAPL, ECL, ODFL, OMC, SBUX, SHW, SIVB, WM, AGNC",
             "provider": "Argus Research",
@@ -1417,18 +1429,6 @@
                 "WM",
                 "ECL",
                 "ODFL"
-            ]
-        },
-        {
-            "id": "2660_Analyst Report_1627481615000",
-            "headHtml": "Analyst Report: Apple Inc",
-            "provider": "Argus Research",
-            "reportDate": "2021-07-28T14:13:35Z",
-            "reportTitle": "Apple manufactures smartphones, tablets, PCs, software and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including AirPods, Beats headphones and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
-            "targetPrice": 165.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "AAPL"
             ]
         },
         {
@@ -1511,6 +1511,18 @@
             ]
         },
         {
+            "id": "2660_Analyst Report_1619704690000",
+            "headHtml": "Analyst Report: Apple Inc",
+            "provider": "Argus Research",
+            "reportDate": "2021-04-29T13:58:10Z",
+            "reportTitle": "Apple manufactures smartphones, tablets, PCs, software and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including AirPods, Beats headphones and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
+            "targetPrice": 165.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "AAPL"
+            ]
+        },
+        {
             "id": "29761_Market Update_1619704690000",
             "headHtml": "Market Update: AAPL, ADP, AEP, BA, MGM, QCOM, MA, MDLZ",
             "provider": "Argus Research",
@@ -1525,18 +1537,6 @@
                 "AEP",
                 "ADP",
                 "BA"
-            ]
-        },
-        {
-            "id": "2660_Analyst Report_1619704690000",
-            "headHtml": "Analyst Report: Apple Inc",
-            "provider": "Argus Research",
-            "reportDate": "2021-04-29T13:58:10Z",
-            "reportTitle": "Apple manufactures smartphones, tablets, PCs, software and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including AirPods, Beats headphones and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
-            "targetPrice": 165.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "AAPL"
             ]
         },
         {

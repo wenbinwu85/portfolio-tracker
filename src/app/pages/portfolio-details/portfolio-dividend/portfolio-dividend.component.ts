@@ -48,7 +48,7 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
   selectedSymbolLabel = "";
   infoCards: any[] = [];
   dividendLineChartData: any = [];
-  dividendChartColorScheme = { domain: ["navy"] } as Color;
+  dividendChartColorScheme = { domain: ["teal"] } as Color;
   pieChartData: any = [];
   echartOptions!: EChartsOption;
   echartUpdateOptions: any = {
@@ -187,7 +187,7 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
         value: (this.dividendIncome / 12).toFixed(2),
         valueType: "currency",
         subtitle: "Average Monthly Income",
-        color: "seagreen",
+        color: "teal",
       },
       {
         icon: "payments",
@@ -208,7 +208,7 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
         value: this.portfolioYieldOnCost.toFixed(4),
         valueType: "percentage",
         subtitle: "Portfolio YOC",
-        color: "seagreen",
+        color: "teal",
       },
     ];
   }

@@ -56,9 +56,9 @@
     "companySnapshot": {
         "sectorInfo": "Financial Services",
         "company": {
-            "innovativeness": 0.029900000000000003,
-            "insiderSentiments": 0.8456999999999999,
-            "earningsReports": 0.1572,
+            "innovativeness": 0.0301,
+            "insiderSentiments": 0.8469,
+            "earningsReports": 0.1573,
             "dividends": 0.993
         },
         "sector": {
@@ -75,12 +75,12 @@
     },
     "events": [
         {
-            "eventType": "Double Moving Average Crossover",
+            "eventType": "Gap Down",
             "pricePeriod": "D",
-            "tradingHorizon": "I",
-            "tradeType": "S",
+            "tradingHorizon": "S",
+            "tradeType": "U",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1710336600,
+            "startDate": 1710250200,
             "endDate": 1710336600
         }
     ],
@@ -275,21 +275,21 @@
             "formType": "8-K"
         },
         {
-            "id": "0001580345-22-000037_1580345",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1670803200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001580345/000158034522000037/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
             "id": "0001580345-22-000035_1580345",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
             "description": "Current report filing",
             "filingDate": 1670803200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001580345/000158034522000035/thumbnail.png",
+            "formType": "8-K"
+        },
+        {
+            "id": "0001580345-22-000037_1580345",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1670803200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001580345/000158034522000037/thumbnail.png",
             "formType": "8-K"
         },
         {

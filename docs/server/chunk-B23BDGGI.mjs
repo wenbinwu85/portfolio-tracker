@@ -1,2 +1,0 @@
-import './polyfills.server.mjs';
-import{a}from"./chunk-VWTIVFVV.mjs";import"./chunk-CWWFS64B.mjs";import"./chunk-IISZCSYF.mjs";import"./chunk-B576T3DZ.mjs";import"./chunk-V7TPPDIP.mjs";import"./chunk-EGVPYZSP.mjs";import"./chunk-BLW2ILG2.mjs";import"./chunk-KXLYS4R4.mjs";import"./chunk-YG54OGXN.mjs";import"./chunk-WUBBEX7Z.mjs";import"./chunk-FRE24EMT.mjs";import"./chunk-ILXILXJ3.mjs";import"./chunk-CTKXV6KZ.mjs";import"./chunk-VVCT4QZE.mjs";export{a as ToolboxComponent};

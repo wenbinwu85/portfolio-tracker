@@ -5,16 +5,16 @@
             "provider": "Trading Central",
             "sector": "Real Estate",
             "shortTermOutlook": {
-                "stateDescription": "Recent bullish events outweigh bearish events.",
-                "direction": "Bullish",
-                "score": 4,
-                "scoreDescription": "Very Strong Bullish Evidence",
-                "sectorDirection": "Bullish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bullish Evidence",
+                "stateDescription": "Recent bearish events outweigh bullish events.",
+                "direction": "Bearish",
+                "score": 3,
+                "scoreDescription": "Strong Bearish Evidence",
+                "sectorDirection": "Bearish",
+                "sectorScore": 4,
+                "sectorScoreDescription": "Very Strong Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
+                "indexScore": 4,
+                "indexScoreDescription": "Very Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
@@ -22,11 +22,11 @@
                 "score": 2,
                 "scoreDescription": "Bearish Evidence",
                 "sectorDirection": "Bullish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bullish Evidence",
-                "indexDirection": "Bullish",
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bullish Evidence",
+                "indexDirection": "Bearish",
                 "indexScore": 1,
-                "indexScoreDescription": "Weak Bullish Evidence"
+                "indexScoreDescription": "Weak Bearish Evidence"
             },
             "longTermOutlook": {
                 "stateDescription": "All events are bearish.",
@@ -34,8 +34,8 @@
                 "score": 2,
                 "scoreDescription": "Bearish Evidence",
                 "sectorDirection": "Bullish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bullish Evidence",
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bullish Evidence",
                 "indexDirection": "Bullish",
                 "indexScore": 2,
                 "indexScoreDescription": "Bullish Evidence"
@@ -43,14 +43,14 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 52.77,
+            "support": 49.95,
             "resistance": 61.0311,
-            "stopLoss": 50.093235
+            "stopLoss": 49.791543
         },
         "valuation": {
             "color": 0.0,
             "description": "Overvalued",
-            "discount": "-30%",
+            "discount": "-29%",
             "relativeValue": "Premium",
             "provider": "Trading Central"
         }
@@ -60,10 +60,10 @@
         "company": {
             "innovativeness": 0.7452,
             "hiring": 0.5634,
-            "sustainability": 0.6566,
+            "sustainability": 0.6531,
             "insiderSentiments": 0.5,
-            "earningsReports": 0.8835999999999999,
-            "dividends": 0.4462
+            "earningsReports": 0.88,
+            "dividends": 0.4506
         },
         "sector": {
             "innovativeness": 0.5,
@@ -75,7 +75,7 @@
         }
     },
     "recommendation": {
-        "targetPrice": 47.0,
+        "targetPrice": 48.0,
         "provider": "Argus Research",
         "rating": "SELL"
     },
@@ -106,16 +106,28 @@
     },
     "events": [
         {
-            "eventType": "Triple Moving Average Crossover",
+            "eventType": "Williams %R",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "L",
+            "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1710250200,
-            "endDate": 1710250200
+            "startDate": 1710423000,
+            "endDate": 1710423000
         }
     ],
     "reports": [
+        {
+            "id": "3273_Quantitative Report_1710288000000",
+            "headHtml": "Raising target price to $48.00",
+            "provider": "Argus Research",
+            "reportDate": "2024-03-13T00:00:00Z",
+            "reportTitle": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $48.000000; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium.",
+            "targetPrice": 48.0,
+            "investmentRating": "Bearish",
+            "tickers": [
+                "O"
+            ]
+        },
         {
             "id": "3273_Quantitative Report_1709683200000",
             "headHtml": "What does Argus have to say about O?",
@@ -1303,24 +1315,12 @@
             "tickers": [
                 "O"
             ]
-        },
-        {
-            "id": "3273_Quantitative Report_1646784000000",
-            "headHtml": "What does Argus have to say about O?",
-            "provider": "Argus Research",
-            "reportDate": "2022-03-09T00:00:00Z",
-            "reportTitle": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $69.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Low.",
-            "targetPrice": 69.0,
-            "investmentRating": "Neutral",
-            "tickers": [
-                "O"
-            ]
         }
     ],
     "sigDevs": [
         {
-            "headline": "Realty Income Corp Files For Offering Of Up To 120 Million Shares Of Common Stock - SEC Filing",
-            "date": "2024-02-23"
+            "headline": "Realty Income Declares Dividend Increase",
+            "date": "2024-03-13"
         }
     ],
     "secReports": [
@@ -1532,21 +1532,21 @@
             "formType": "8-K"
         },
         {
-            "id": "0001104659-23-121259_726728",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1701043200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000726728/000110465923121259/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
             "id": "0001104659-23-121255_726728",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
             "description": "Current report filing",
             "filingDate": 1701043200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000726728/000110465923121255/thumbnail.png",
+            "formType": "8-K"
+        },
+        {
+            "id": "0001104659-23-121259_726728",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1701043200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000726728/000110465923121259/thumbnail.png",
             "formType": "8-K"
         },
         {

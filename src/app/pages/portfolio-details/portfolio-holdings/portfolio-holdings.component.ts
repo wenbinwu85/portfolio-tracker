@@ -223,14 +223,14 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
       case 5:
       case 6:
         return this.portfolioHoldings[stock.symbol].unrealizedGain > 0
-          ? "seagreen"
-          : "orangered";
+          ? "teal"
+          : "chocolate";
       case 7:
         return this.portfolioHoldings[stock.symbol].dividendIncome > 0
-          ? "seagreen"
-          : "orangered";
+          ? "teal"
+          : "chocolate";
       case 11:
-        return stock.rating === "buy" ? "seagreen" : "black";
+        return stock.rating === "buy" ? "teal" : "black";
       default:
         return "black";
     }

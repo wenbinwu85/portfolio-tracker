@@ -25,9 +25,9 @@ export class DataService {
   };
   private backendDataPath = "../../../backend/data";
   private backendUrl = "http://127.0.0.1:5000";
-  public portfolioHoldings: any;
-  public portfolioSymbols: any;
-  public portfolioData: any;
+  public portfolioHoldings: any = {};
+  public portfolioSymbols: any = [];
+  public portfolioData: any = {};
   public portfolioTechnicalInsights: any = {};
   public isLoadingData = new BehaviorSubject(false);
 
@@ -79,21 +79,21 @@ export class DataService {
             if (counter === stocks.length) {
               this.isLoadingData.next(false);
 
-              console.log("%c ----- Sanity Check -----", 'background: seagreen; color: white');
+              console.log("%c ----- Sanity Check -----", 'background: teal; color: white');
               const thing = counter === stocks.length;
               console.log('counter equal stocks.length:', thing);
-              console.log('%c ------------------------', 'background: seagreen; color: white');
+              console.log('%c ------------------------', 'background: teal; color: white');
             }
           });
         })
       } else {
         this.isLoadingData.next(false);
 
-        console.log("%c ----- Sanity Check -----", 'background: seagreen; color: white');
+        console.log("%c ----- Sanity Check -----", 'background: teal; color: white');
         const thing = Object.keys(this.portfolioData).length === this.portfolioSymbols.length;
         console.log('data.length equal symbols.length:', thing);
         console.table(Object.entries(this.portfolioHoldings));
-        console.log('%c ------------------------', 'background: seagreen; color: white');
+        console.log('%c ------------------------', 'background: teal; color: white');
       }
     });
   }
@@ -110,11 +110,11 @@ export class DataService {
         if (Object.keys(this.portfolioTechnicalInsights).length === this.portfolioSymbols.length) {
           this.isLoadingData.next(false);
 
-          console.log("%c ----- Sanity Check -----", 'background: seagreen; color: white');
+          console.log("%c ----- Sanity Check -----", 'background: teal; color: white');
           const thing = Object.keys(this.portfolioTechnicalInsights).length === this.portfolioSymbols.length;
           console.log('technicalInsights.length equal symbols.length:', thing);
           console.table(Object.entries(this.portfolioTechnicalInsights));
-          console.log('%c ------------------------', 'background: seagreen; color: white');
+          console.log('%c ------------------------', 'background: teal; color: white');
         }
       });
     });

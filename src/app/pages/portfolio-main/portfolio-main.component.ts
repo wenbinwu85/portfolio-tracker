@@ -27,7 +27,6 @@ import { MatDividerModule } from "@angular/material/divider";
   ],
 })
 export class PortfolioMainComponent implements OnInit{
-  portfolioHoldings: any;
   events: any = [];
   eventDates: any = [];
   mappedEvents: any = {};
@@ -44,9 +43,7 @@ export class PortfolioMainComponent implements OnInit{
           this.corporateEvents.sort((a: any, b: any) => b.time - a.time)
         });
       })
-
-    this.portfolioHoldings = Object.values(this.dataService.portfolioHoldings);
-    const stocks = Object.values(this.dataService.portfolioData).filter((stock: any) => stock.calendarEvents);
+    const stocks = Object.values(this.dataService!.portfolioData).filter((stock: any) => stock.calendarEvents);
     stocks.forEach((stock: any) => {
       const calEvents = stock.calendarEvents;
       const earnings = stock.earnings.earningsChart;

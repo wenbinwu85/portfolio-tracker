@@ -5,16 +5,16 @@
             "provider": "Trading Central",
             "sector": "Energy",
             "shortTermOutlook": {
-                "stateDescription": "Bullish events outweigh bearish events.",
+                "stateDescription": "Recent bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 1,
-                "scoreDescription": "Weak Bullish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bullish Evidence",
                 "sectorDirection": "Bullish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bullish Evidence",
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bullish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
+                "indexScore": 4,
+                "indexScoreDescription": "Very Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bullish events outweigh bearish events.",
@@ -22,11 +22,11 @@
                 "score": 2,
                 "scoreDescription": "Bullish Evidence",
                 "sectorDirection": "Bullish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bullish Evidence",
-                "indexDirection": "Bullish",
+                "sectorScore": 4,
+                "sectorScoreDescription": "Very Strong Bullish Evidence",
+                "indexDirection": "Bearish",
                 "indexScore": 1,
-                "indexScoreDescription": "Weak Bullish Evidence"
+                "indexScoreDescription": "Weak Bearish Evidence"
             },
             "longTermOutlook": {
                 "stateDescription": "All events are bullish.",
@@ -44,13 +44,12 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 13.885,
-            "resistance": 15.06,
-            "stopLoss": 14.578339
+            "stopLoss": 14.634672
         },
         "valuation": {
             "color": 1.0,
             "description": "Undervalued",
-            "discount": "28%",
+            "discount": "27%",
             "relativeValue": "Discount",
             "provider": "Trading Central"
         }
@@ -58,11 +57,11 @@
     "companySnapshot": {
         "sectorInfo": "Energy",
         "company": {
-            "innovativeness": 0.287,
+            "innovativeness": 0.2857,
             "sustainability": 0.9265000000000001,
             "insiderSentiments": 0.8889,
             "earningsReports": 0.8739,
-            "dividends": 0.7525
+            "dividends": 0.753
         },
         "sector": {
             "innovativeness": 0.5,
@@ -100,13 +99,13 @@
     },
     "events": [
         {
-            "eventType": "Fast Stochastic",
+            "eventType": "MACD",
             "pricePeriod": "D",
             "tradingHorizon": "S",
             "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1710163800,
-            "endDate": 1710163800
+            "startDate": 1710423000,
+            "endDate": 1710423000
         }
     ],
     "sigDevs": [

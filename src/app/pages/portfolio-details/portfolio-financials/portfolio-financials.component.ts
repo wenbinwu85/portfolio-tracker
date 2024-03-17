@@ -225,7 +225,7 @@ export class PortfolioFinancialsComponent implements OnInit, AfterViewInit {
   getCellColor(index: number, stock: any) {
     const value = this.cells[index](stock);
     return value < 0 || value[0] === "-" || value[1] === "-"
-      ? "orangered"
+      ? "chocolate"
       : "#000000DE";
   }
 }

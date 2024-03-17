@@ -7,14 +7,14 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 2,
-                "scoreDescription": "Bullish Evidence",
-                "sectorDirection": "Bullish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bullish Evidence",
+                "score": 4,
+                "scoreDescription": "Very Strong Bullish Evidence",
+                "sectorDirection": "Bearish",
+                "sectorScore": 4,
+                "sectorScoreDescription": "Very Strong Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
+                "indexScore": 4,
+                "indexScoreDescription": "Very Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "All events are bullish.",
@@ -22,11 +22,11 @@
                 "score": 2,
                 "scoreDescription": "Bullish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 2,
-                "sectorScoreDescription": "Bearish Evidence",
-                "indexDirection": "Bullish",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bearish Evidence",
+                "indexDirection": "Bearish",
                 "indexScore": 1,
-                "indexScoreDescription": "Weak Bullish Evidence"
+                "indexScoreDescription": "Weak Bearish Evidence"
             },
             "longTermOutlook": {
                 "stateDescription": "There are no events.",
@@ -44,8 +44,8 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 332.89,
-            "resistance": 415.32,
-            "stopLoss": 369.320408
+            "resistance": 417.35,
+            "stopLoss": 400.120503
         },
         "valuation": {
             "color": 0.0,
@@ -58,12 +58,12 @@
     "companySnapshot": {
         "sectorInfo": "Technology",
         "company": {
-            "innovativeness": 0.9554,
+            "innovativeness": 0.9606999999999999,
             "hiring": 0.9662999999999999,
             "sustainability": 0.3583,
-            "insiderSentiments": 0.35159999999999997,
-            "earningsReports": 0.8839,
-            "dividends": 0.1472
+            "insiderSentiments": 0.3488,
+            "earningsReports": 0.8835,
+            "dividends": 0.14400000000000002
         },
         "sector": {
             "innovativeness": 0.5,
@@ -106,13 +106,13 @@
     },
     "events": [
         {
-            "eventType": "Price Crosses Moving Average",
+            "eventType": "MACD",
             "pricePeriod": "D",
             "tradingHorizon": "S",
             "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1710250200,
-            "endDate": 1710250200
+            "startDate": 1710423000,
+            "endDate": 1710423000
         }
     ],
     "reports": [
@@ -1539,6 +1539,18 @@
             ]
         },
         {
+            "id": "3212_Analyst Report_1642576070000",
+            "headHtml": "Analyst Report: Microsoft Corporation",
+            "provider": "Argus Research",
+            "reportDate": "2022-01-19T07:07:50Z",
+            "reportTitle": "Microsoft is the world's largest independent software developer. The company was founded on the MS Windows operating system and MS Office business applications suite for PCs. As it has grown, Microsoft has expanded into enterprise software with Windows Server, SQL Server, Dynamics CRM, SharePoint, Azure and Lync; hardware with the Xbox gaming/media platform and the Surface tablet; and online services through MSN and Bing. Microsoft acquired Skype, the internet VoIP communications service, in October 2011. The company acquired Nokia's Devices and Services Business in April 2014. More than 50% of revenue is generated outside the U.S.",
+            "targetPrice": 371.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "MSFT"
+            ]
+        },
+        {
             "id": "31912_Market Summary_1642576070000",
             "headHtml": "Market Digest: ATVI, GS, MSFT, PNC",
             "provider": "Argus Research",
@@ -1549,18 +1561,6 @@
                 "PNC",
                 "ATVI",
                 "GS"
-            ]
-        },
-        {
-            "id": "3212_Analyst Report_1642576070000",
-            "headHtml": "Analyst Report: Microsoft Corporation",
-            "provider": "Argus Research",
-            "reportDate": "2022-01-19T07:07:50Z",
-            "reportTitle": "Microsoft is the world's largest independent software developer. The company was founded on the MS Windows operating system and MS Office business applications suite for PCs. As it has grown, Microsoft has expanded into enterprise software with Windows Server, SQL Server, Dynamics CRM, SharePoint, Azure and Lync; hardware with the Xbox gaming/media platform and the Surface tablet; and online services through MSN and Bing. Microsoft acquired Skype, the internet VoIP communications service, in October 2011. The company acquired Nokia's Devices and Services Business in April 2014. More than 50% of revenue is generated outside the U.S.",
-            "targetPrice": 371.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "MSFT"
             ]
         },
         {
@@ -2071,8 +2071,8 @@
     ],
     "sigDevs": [
         {
-            "headline": "OpenAI Says Sam Altman Will Rejoin Board",
-            "date": "2024-03-08"
+            "headline": "CWA Says Workers At Activision Form Union",
+            "date": "2024-03-14"
         }
     ],
     "secReports": [
@@ -2374,13 +2374,13 @@
             "formType": "SC 13G/A"
         },
         {
-            "id": "0001564590-22-002324_789019",
-            "type": "Periodic Financial Reports",
-            "title": "10-Q : Periodic Financial Reports",
-            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "id": "0001193125-22-017041_789019",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
             "filingDate": 1643068800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/789019/000156459022002324/thumbnail.png",
-            "formType": "10-Q"
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/789019/000119312522017041/thumbnail.png",
+            "formType": "8-K"
         }
     ]
 }

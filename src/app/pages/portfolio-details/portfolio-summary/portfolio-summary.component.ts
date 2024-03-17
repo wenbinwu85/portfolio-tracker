@@ -45,7 +45,7 @@ export class PortfolioSummaryComponent implements OnInit {
   allDividendData: any[] = [];
   allYocData: any[] = [];
   portfolioPercentBarChartData: any = [];
-  portfolioPercentBarChartColorScheme = { domain: ['lightsteelblue'] } as Color;
+  portfolioPercentBarChartColorScheme = { domain: ['slategrey'] } as Color;
   marketValueBarChartData: any[] = [];
   unrealizedGainBarChartData: any[] = [];
   dividendBarChartData: any[] = [];

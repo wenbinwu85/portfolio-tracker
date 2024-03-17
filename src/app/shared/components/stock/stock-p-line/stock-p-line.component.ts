@@ -68,7 +68,7 @@ export class StockPLineComponent implements OnInit, AfterViewInit {
     let gradient = `linear-gradient(
       to right,
       ghostwhite 0% ${startPercentage}%,
-      orangered ${startPercentage}% ${endPercentage}%, 
+      chocolate ${startPercentage}% ${endPercentage}%, 
       ghostwhite ${endPercentage}% 100%
     )`;
     this.renderer.setStyle(this.line.nativeElement, 'background', gradient);

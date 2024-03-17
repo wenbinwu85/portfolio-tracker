@@ -1,6 +1,6 @@
 export enum StockPriceColorsEnum { 
-    Gain = 'seagreen',
-    Lost = 'orangered'
+    Gain = 'teal',
+    Lost = 'chocolate'
 }
 
 

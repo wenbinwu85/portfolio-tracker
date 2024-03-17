@@ -97,13 +97,13 @@ export class PriceMovementChartsComponent {
   }
 
   getDayPriceChangeColor() {
-    return this.priceChange > 0 ? "seagreen" : "orangered";
+    return this.priceChange > 0 ? "teal" : "chocolate";
   }
 
   getPriceChangeChartColor = (symbol: any) => {
     const stock = this.portfolioData[symbol];
     const price = stock.regularMarketChangePercent;
-    return price > 0 ? "olivedrab" : "chocolate";
+    return price > 0 ? "teal" : "chocolate";
   };
 
   displayChart(chartID: number) {

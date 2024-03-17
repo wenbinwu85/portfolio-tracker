@@ -7,14 +7,14 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 2,
-                "scoreDescription": "Bearish Evidence",
-                "sectorDirection": "Bullish",
-                "sectorScore": 2,
-                "sectorScoreDescription": "Bullish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bearish Evidence",
+                "sectorDirection": "Bearish",
+                "sectorScore": 4,
+                "sectorScoreDescription": "Very Strong Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
+                "indexScore": 4,
+                "indexScoreDescription": "Very Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Bullish events outweigh bearish events.",
@@ -22,11 +22,11 @@
                 "score": 1,
                 "scoreDescription": "Weak Bullish Evidence",
                 "sectorDirection": "Bullish",
-                "sectorScore": 2,
-                "sectorScoreDescription": "Bullish Evidence",
-                "indexDirection": "Bullish",
+                "sectorScore": 1,
+                "sectorScoreDescription": "Weak Bullish Evidence",
+                "indexDirection": "Bearish",
                 "indexScore": 1,
-                "indexScoreDescription": "Weak Bullish Evidence"
+                "indexScoreDescription": "Weak Bearish Evidence"
             },
             "longTermOutlook": {
                 "stateDescription": "All events are bullish.",
@@ -44,8 +44,8 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 147.87,
-            "resistance": 182.16,
-            "stopLoss": 175.015406
+            "resistance": 178.92,
+            "stopLoss": 172.244931
         },
         "valuation": {
             "color": 0.5,
@@ -57,12 +57,12 @@
     "companySnapshot": {
         "sectorInfo": "Healthcare",
         "company": {
-            "innovativeness": 0.9501999999999999,
+            "innovativeness": 0.9533,
             "hiring": 0.9181,
             "sustainability": 0.9159999999999999,
             "insiderSentiments": 0.091,
-            "earningsReports": 0.976,
-            "dividends": 0.7770999999999999
+            "earningsReports": 0.9749,
+            "dividends": 0.7787000000000001
         },
         "sector": {
             "innovativeness": 0.5,
@@ -107,10 +107,10 @@
             "eventType": "Commodity Channel Index",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "L",
+            "tradeType": "U",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1710250200,
-            "endDate": 1710250200
+            "startDate": 1710423000,
+            "endDate": 1710423000
         }
     ],
     "reports": [
@@ -804,6 +804,18 @@
             ]
         },
         {
+            "id": "3610_Analyst Report_1636096726000",
+            "headHtml": "Analyst Report: AbbVie Inc",
+            "provider": "Argus Research",
+            "reportDate": "2021-11-05T07:18:46Z",
+            "reportTitle": "AbbVie, a research-based biopharmaceutical company, was spun off from Abbott Laboratories in January 2013. The company is based in suburban Chicago. The shares are a component of the S&P 500.",
+            "targetPrice": 140.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "ABBV"
+            ]
+        },
+        {
             "id": "31322_Market Summary_1636096726000",
             "headHtml": "Market Digest: ETN, PH, RL, AWK, ABBV, QRVO, SHOP",
             "provider": "Argus Research",
@@ -817,18 +829,6 @@
                 "ABBV",
                 "QRVO",
                 "ETN"
-            ]
-        },
-        {
-            "id": "3610_Analyst Report_1636096726000",
-            "headHtml": "Analyst Report: AbbVie Inc",
-            "provider": "Argus Research",
-            "reportDate": "2021-11-05T07:18:46Z",
-            "reportTitle": "AbbVie, a research-based biopharmaceutical company, was spun off from Abbott Laboratories in January 2013. The company is based in suburban Chicago. The shares are a component of the S&P 500.",
-            "targetPrice": 140.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "ABBV"
             ]
         },
         {
@@ -1425,18 +1425,6 @@
             ]
         },
         {
-            "id": "27078_Market Summary_1591056000000",
-            "headHtml": "Market Digest: ABBV, UTI, ZTS",
-            "provider": "Argus Research",
-            "reportDate": "2020-06-02T00:00:00Z",
-            "reportTitle": "Two weeks ago, we saw a surprisingly bullish pop in sentiment from corporate executives, directors and beneficial owners. It faded a tad last week and has further dissipated this week. Current insider-transaction data from Vickers Stock Research reflects a neutral-to-cautious attitude. We view that as normal after the very quick snapback in share prices since the last bottom in late March. ",
-            "tickers": [
-                "ZTS",
-                "ABBV",
-                "UTI"
-            ]
-        },
-        {
             "id": "3610_Analyst Report_1591056000000",
             "headHtml": "Analyst Report: AbbVie Inc",
             "provider": "Argus Research",
@@ -1446,6 +1434,18 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "ABBV"
+            ]
+        },
+        {
+            "id": "27078_Market Summary_1591056000000",
+            "headHtml": "Market Digest: ABBV, UTI, ZTS",
+            "provider": "Argus Research",
+            "reportDate": "2020-06-02T00:00:00Z",
+            "reportTitle": "Two weeks ago, we saw a surprisingly bullish pop in sentiment from corporate executives, directors and beneficial owners. It faded a tad last week and has further dissipated this week. Current insider-transaction data from Vickers Stock Research reflects a neutral-to-cautious attitude. We view that as normal after the very quick snapback in share prices since the last bottom in late March. ",
+            "tickers": [
+                "ZTS",
+                "ABBV",
+                "UTI"
             ]
         },
         {
@@ -1585,6 +1585,17 @@
             ]
         },
         {
+            "id": "3610_Analyst Report_1583798400000",
+            "headHtml": "Analyst Report: AbbVie Inc",
+            "provider": "Argus Research",
+            "reportDate": "2020-03-10T00:00:00Z",
+            "reportTitle": "AbbVie, a research-based biopharmaceutical company, was spun off from Abbott Laboratories in January 2013. The company is based in suburban Chicago. The shares are a component of the S&P 500.",
+            "investmentRating": "Neutral",
+            "tickers": [
+                "ABBV"
+            ]
+        },
+        {
             "id": "26389_Market Summary_1583798400000",
             "headHtml": "Market Digest: ABBV, FL, ANF, DG",
             "provider": "Argus Research",
@@ -1594,17 +1605,6 @@
                 "DG",
                 "FL",
                 "ANF",
-                "ABBV"
-            ]
-        },
-        {
-            "id": "3610_Analyst Report_1583798400000",
-            "headHtml": "Analyst Report: AbbVie Inc",
-            "provider": "Argus Research",
-            "reportDate": "2020-03-10T00:00:00Z",
-            "reportTitle": "AbbVie, a research-based biopharmaceutical company, was spun off from Abbott Laboratories in January 2013. The company is based in suburban Chicago. The shares are a component of the S&P 500.",
-            "investmentRating": "Neutral",
-            "tickers": [
                 "ABBV"
             ]
         },
@@ -1645,17 +1645,6 @@
             ]
         },
         {
-            "id": "3610_Analyst Report_1573457626000",
-            "headHtml": "Analyst Report: AbbVie Inc",
-            "provider": "Argus Research",
-            "reportDate": "2019-11-11T07:33:46Z",
-            "reportTitle": "AbbVie, a research-based biopharmaceutical company, was spun off from Abbott Laboratories in January 2013. The company is based in suburban Chicago. The shares are a component of the S&P 500.",
-            "investmentRating": "Neutral",
-            "tickers": [
-                "ABBV"
-            ]
-        },
-        {
             "id": "25430_Market Summary_1573457626000",
             "headHtml": "Market Digest: W, LHX, ABBV, EL, PRU, STX, DIS, GSK, OXY, EIX",
             "provider": "Argus Research",
@@ -1675,6 +1664,28 @@
             ]
         },
         {
+            "id": "3610_Analyst Report_1573457626000",
+            "headHtml": "Analyst Report: AbbVie Inc",
+            "provider": "Argus Research",
+            "reportDate": "2019-11-11T07:33:46Z",
+            "reportTitle": "AbbVie, a research-based biopharmaceutical company, was spun off from Abbott Laboratories in January 2013. The company is based in suburban Chicago. The shares are a component of the S&P 500.",
+            "investmentRating": "Neutral",
+            "tickers": [
+                "ABBV"
+            ]
+        },
+        {
+            "id": "3610_Analyst Report_1573430400000",
+            "headHtml": "Analyst Report: AbbVie Inc",
+            "provider": "Argus Research",
+            "reportDate": "2019-11-11T00:00:00Z",
+            "reportTitle": "AbbVie, a research-based biopharmaceutical company, was spun off from Abbott Laboratories in January 2013. The company is based in suburban Chicago. The shares are a component of the S&P 500.",
+            "investmentRating": "Neutral",
+            "tickers": [
+                "ABBV"
+            ]
+        },
+        {
             "id": "25430_Market Summary_1573430400000",
             "headHtml": "Market Digest: W, LHX, ABBV, EL, PRU, STX, DIS, GSK, OXY, EIX",
             "provider": "Argus Research",
@@ -1691,17 +1702,6 @@
                 "LHX",
                 "GSK",
                 "DIS"
-            ]
-        },
-        {
-            "id": "3610_Analyst Report_1573430400000",
-            "headHtml": "Analyst Report: AbbVie Inc",
-            "provider": "Argus Research",
-            "reportDate": "2019-11-11T00:00:00Z",
-            "reportTitle": "AbbVie, a research-based biopharmaceutical company, was spun off from Abbott Laboratories in January 2013. The company is based in suburban Chicago. The shares are a component of the S&P 500.",
-            "investmentRating": "Neutral",
-            "tickers": [
-                "ABBV"
             ]
         },
         {
@@ -1726,22 +1726,22 @@
             ]
         },
         {
+            "id": "25067_Market Update_1569456000000",
+            "headHtml": "Market Update: ABBV",
+            "provider": "Argus Research",
+            "reportDate": "2019-09-26T00:00:00Z",
+            "reportTitle": "Stocks fell on Thursday morning amid new developments in the Trump impeachment inquiry, as the House Intelligence Committee released a declassified whistleblower report charging the president with soliciting foreign interference in the 2020 election. On the economic front, the Commerce Department said that U.S. GDP rose at a 2.0% rate in 2Q19, unchanged from its previous estimate, as strong consumer spending was offset by lower-than-expected business investment. The Dow fell 0.1%, the S&P 0.5%, and the Nasdaq 0.4%. Crude oil traded near $56 per barrel, while gold rose slightly to trade near $1515 per ounce.",
+            "tickers": [
+                "ABBV"
+            ]
+        },
+        {
             "id": "3610_Analyst Report_1569456000000",
             "headHtml": "Analyst Report: AbbVie Inc",
             "provider": "Argus Research",
             "reportDate": "2019-09-26T00:00:00Z",
             "reportTitle": "AbbVie, a research-based biopharmaceutical company, was spun off from Abbott Laboratories in January 2013. The company is based in suburban Chicago. The shares are a component of the S&P 500.",
             "investmentRating": "Neutral",
-            "tickers": [
-                "ABBV"
-            ]
-        },
-        {
-            "id": "25067_Market Update_1569456000000",
-            "headHtml": "Market Update: ABBV",
-            "provider": "Argus Research",
-            "reportDate": "2019-09-26T00:00:00Z",
-            "reportTitle": "Stocks fell on Thursday morning amid new developments in the Trump impeachment inquiry, as the House Intelligence Committee released a declassified whistleblower report charging the president with soliciting foreign interference in the 2020 election. On the economic front, the Commerce Department said that U.S. GDP rose at a 2.0% rate in 2Q19, unchanged from its previous estimate, as strong consumer spending was offset by lower-than-expected business investment. The Dow fell 0.1%, the S&P 0.5%, and the Nasdaq 0.4%. Crude oil traded near $56 per barrel, while gold rose slightly to trade near $1515 per ounce.",
             "tickers": [
                 "ABBV"
             ]
@@ -1772,17 +1772,6 @@
             ]
         },
         {
-            "id": "3610_Analyst Report_1565049600000",
-            "headHtml": "Maintaining HOLD on increasing Humira competition",
-            "provider": "Argus Research",
-            "reportDate": "2019-08-06T00:00:00Z",
-            "reportTitle": "AbbVie, a research-based biopharmaceutical company, was spun off from Abbott Laboratories in January 2013. The company is based in suburban Chicago. The shares are a component of the S&P 500.",
-            "investmentRating": "Neutral",
-            "tickers": [
-                "ABBV"
-            ]
-        },
-        {
             "id": "24641_Market Update_1565049600000",
             "headHtml": "Market Update: ABBV, ADM, EPD, HES, X",
             "provider": "Argus Research",
@@ -1793,6 +1782,17 @@
                 "EPD",
                 "X",
                 "ADM",
+                "ABBV"
+            ]
+        },
+        {
+            "id": "3610_Analyst Report_1565049600000",
+            "headHtml": "Maintaining HOLD on increasing Humira competition",
+            "provider": "Argus Research",
+            "reportDate": "2019-08-06T00:00:00Z",
+            "reportTitle": "AbbVie, a research-based biopharmaceutical company, was spun off from Abbott Laboratories in January 2013. The company is based in suburban Chicago. The shares are a component of the S&P 500.",
+            "investmentRating": "Neutral",
+            "tickers": [
                 "ABBV"
             ]
         },
@@ -1990,15 +1990,6 @@
             "formType": "S-8"
         },
         {
-            "id": "0001551152-24-000011_1551152",
-            "type": "Periodic Financial Reports",
-            "title": "10-K : Periodic Financial Reports",
-            "description": "Annual report pursuant to Section 13 and 15(d)",
-            "filingDate": 1708387200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001551152/000155115224000011/thumbnail.png",
-            "formType": "10-K"
-        },
-        {
             "id": "0001104659-24-025262_1551152",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -2006,6 +1997,15 @@
             "filingDate": 1708387200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001551152/000110465924025262/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0001551152-24-000011_1551152",
+            "type": "Periodic Financial Reports",
+            "title": "10-K : Periodic Financial Reports",
+            "description": "Annual report pursuant to Section 13 and 15(d)",
+            "filingDate": 1708387200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001551152/000155115224000011/thumbnail.png",
+            "formType": "10-K"
         },
         {
             "id": "0001104659-24-013692_1551152",
