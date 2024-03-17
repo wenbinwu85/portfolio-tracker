@@ -55,7 +55,7 @@ export class WatchlistsComponent implements OnInit {
   ngOnInit() {
     this.magnificent7Symbols.forEach((symbol) => {
       this.dataService
-        .loadStockDataFromDataFolder(symbol)
+        .getStockData(symbol, true)
         .pipe(
           map((response: any) => {
             if (response.status === 500) {
@@ -67,8 +67,8 @@ export class WatchlistsComponent implements OnInit {
           catchError((err: any) => {
             console.log(err);
             return this.dataService
-              .getStockData(symbol, true)
-              .pipe(map((response) => response[symbol]));
+              .getStockData(symbol, false)
+              .pipe(map((response: any) => response[symbol]));
           })
         )
         .subscribe((stock: any) => {
@@ -81,7 +81,7 @@ export class WatchlistsComponent implements OnInit {
     });
     this.potentialBuysSymbols.forEach((symbol) => {
       this.dataService
-        .loadStockDataFromDataFolder(symbol)
+        .getStockData(symbol, true)
         .pipe(
           map((response: any) => {
             if (response.status === 500) {
@@ -93,8 +93,8 @@ export class WatchlistsComponent implements OnInit {
           catchError((err: any) => {
             console.log(err);
             return this.dataService
-              .getStockData(symbol, true)
-              .pipe(map((response) => response[symbol]));
+              .getStockData(symbol, false)
+              .pipe(map((response: any) => response[symbol]));
           })
         )
         .subscribe((stock: any) => {

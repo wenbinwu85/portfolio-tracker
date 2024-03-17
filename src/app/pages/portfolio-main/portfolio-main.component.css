@@ -1,3 +1,12 @@
+.main-section {
+    display: flex;
+}
+
+.news-container, 
+.events-container {
+    max-width: 50vw;
+}
+
 .day-container {
     display: flex;
     flex-direction: column;

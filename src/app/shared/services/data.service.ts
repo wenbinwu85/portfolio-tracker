@@ -7,9 +7,9 @@ import {
 import { Injectable } from '@angular/core';
 import {
   BehaviorSubject,
+  Observable,
   catchError,
   forkJoin,
-  Observable,
   of,
   retry,
 } from 'rxjs';
@@ -23,7 +23,7 @@ export class DataService {
       .set("content-type", "application/json")
       .set("Access-Control-Allow-Origin", "*"),
   };
-  private backendDataPath = "../../../backend/data/";
+  private backendDataPath = "../../../backend/data";
   private backendUrl = "http://127.0.0.1:5000";
   public portfolioHoldings: any;
   public portfolioSymbols: any;
@@ -32,7 +32,7 @@ export class DataService {
   public isLoadingData = new BehaviorSubject(false);
 
   constructor(private http: HttpClient) {
-    this.updatePortfolioData(false);
+    this.updatePortfolioData(true);
   }
 
   private error(error: HttpErrorResponse): Observable<any> {
@@ -44,9 +44,9 @@ export class DataService {
   }
 
   /**
-   * @param {string} path of api call
-   * @param {null | boolean} options for http call
-   * @returns {Observable} Returns http call response
+   * @param {string} path - Path of api call
+   * @param {null | boolean} options - Options for http call
+   * @returns {Observable} Http call observable
    */
   private wrapHttpCall(
     path: string,
@@ -58,30 +58,48 @@ export class DataService {
 
   /**
    * @description fetch stock data and update data, holdings, and symbols
-   * @param {boolean} should update stock data from yahoo finance api or not
-   * @returns {null}
+   * @param {boolean} fromLocal - should load data from local or api, default: false
    */
-  updatePortfolioData(shouldUpdate: boolean) {
+  updatePortfolioData(fromLocal: boolean) {
     this.isLoadingData.next(true);
     forkJoin([
-      this.getPortfolioData(shouldUpdate),
+      this.getPortfolioData(fromLocal),
       this.getPortfolioHoldings(),
     ]).subscribe(([data, holdings]) => {
       this.portfolioData = data;
       this.portfolioHoldings = holdings;
       this.portfolioSymbols = Object.keys(this.portfolioData);
-      if (shouldUpdate) {
-        location.reload();
-      }
-      this.isLoadingData.next(false);
 
-      console.log("--- sanity check ---");
-      console.table(Object.entries(this.portfolioHoldings));
+      if (!fromLocal) {
+        const stocks = Object.values(this.portfolioData).filter((stock: any) => stock.quoteType === 'EQUITY');
+        let counter = 0;
+        stocks.forEach((stock: any) => {
+          this.getCorporateEvents(stock.symbol).subscribe((events: any) => {
+            counter++
+            if (counter === stocks.length) {
+              this.isLoadingData.next(false);
+
+              console.log("%c ----- Sanity Check -----", 'background: seagreen; color: white');
+              const thing = counter === stocks.length;
+              console.log('counter equal stocks.length:', thing);
+              console.log('%c ------------------------', 'background: seagreen; color: white');
+            }
+          });
+        })
+      } else {
+        this.isLoadingData.next(false);
+
+        console.log("%c ----- Sanity Check -----", 'background: seagreen; color: white');
+        const thing = Object.keys(this.portfolioData).length === this.portfolioSymbols.length;
+        console.log('data.length equal symbols.length:', thing);
+        console.table(Object.entries(this.portfolioHoldings));
+        console.log('%c ------------------------', 'background: seagreen; color: white');
+      }
     });
   }
 
   /**
-   * @description fetch portfolio technical insights
+   * @description Fetch portfolio technical insights
    * @returns {null}
    */
   updatePortfolioTechnicalInsights() {
@@ -91,134 +109,107 @@ export class DataService {
         this.portfolioTechnicalInsights[symbol] = data;
         if (Object.keys(this.portfolioTechnicalInsights).length === this.portfolioSymbols.length) {
           this.isLoadingData.next(false);
+
+          console.log("%c ----- Sanity Check -----", 'background: seagreen; color: white');
+          const thing = Object.keys(this.portfolioTechnicalInsights).length === this.portfolioSymbols.length;
+          console.log('technicalInsights.length equal symbols.length:', thing);
+          console.table(Object.entries(this.portfolioTechnicalInsights));
+          console.log('%c ------------------------', 'background: seagreen; color: white');
         }
       });
     });
   }
 
   /**
-   * @returns {Observable} Returns portfolio holdings data.
+   * @returns {Observable} Portfolio holdings data.
    */
   public getPortfolioHoldings(): Observable<JSON> {
-    const path = `${this.backendUrl}/fetch/portfolio/holdings`;
-    return this.wrapHttpCall(path);
+    const apiPath = `${this.backendUrl}/fetch/portfolio/holdings`;
+    return this.wrapHttpCall(apiPath);
   }
 
   /**
-   * @returns {Observable} Returns portfolio symbols.
+   * @returns {Observable} Portfolio symbols.
    */
   public getPortfolioSymbols(): Observable<Array<string>> {
-    const path = `${this.backendUrl}/fetch/portfolio/symbols`;
-    return this.wrapHttpCall(path);
+    const apiPath = `${this.backendUrl}/fetch/portfolio/symbols`;
+    return this.wrapHttpCall(apiPath);
   }
 
   /**
-   * @param {null | boolean} update stock data from api call
-   * @returns {Observable} Returns entire portfolio stock data.
+   * @param {boolean} fromLocal - should load data from local or api, default: false
+   * @returns {Observable} Portfolio stock data.
    */
-  public getPortfolioData(update: null | boolean): Observable<any> {
-    const path = `${this.backendUrl}/fetch/portfolio/data`;
-    if (update !== null) {
-      let params = new HttpParams().set("update", String(update));
-      const options = { ...this.httpOptions, params };
-      return this.wrapHttpCall(path, options);
+  public getPortfolioData(fromLocal: boolean = false): Observable<JSON> {
+    if (fromLocal) {
+      const localPath = `${this.backendDataPath}/portfolio.json`;
+      const options = { ...this.httpOptions, responseType: "json" };
+      return this.wrapHttpCall(localPath, options);
     }
-    return this.wrapHttpCall(path);
+    const apiPath = `${this.backendUrl}/fetch/portfolio/data`;
+    return this.wrapHttpCall(apiPath);
   }
 
   /**
-   * @param {string} symbol of stock to retrieve
-   * @param {null | boolean} save stock data option
-   * @returns {Observable} Returns a single stock data.
+   * @param {string} symbol - Symbol of stock to retrieve data for
+   * @param {boolean} fromLocal - should load data from local or api, default: false
+   * @returns {Observable} Stock data.
    */
-  public getStockData(symbol: string, save: null | boolean): Observable<any> {
-    const path = `${this.backendUrl}/fetch/stock/${symbol}`;
-    if (save !== null) {
-      let params = new HttpParams().set("save", String(save));
-      const options = { ...this.httpOptions, params };
-      return this.wrapHttpCall(path, options);
+  public getStockData(symbol: string, fromLocal: boolean = false): Observable<JSON> {
+    if (fromLocal) {
+      const localPath = `${this.backendDataPath}/${symbol.toLowerCase()}.json`;
+      const options = { ...this.httpOptions, responseType: "json" };
+      return this.wrapHttpCall(localPath, options);
     }
-    return this.wrapHttpCall(path);
+    const apiPath = `${this.backendUrl}/fetch/stock/${symbol.toLowerCase()}`;
+    return this.wrapHttpCall(apiPath);
   }
 
   /**
-   * @param {Array} symbols of stock to retrieves
-   * @param {null | boolean} save stock data option
-   * @returns {Observable} Returns multiple stock data.
+   * @param {string} symbol - symbol of stock to retrieve data for
+   * @param {number} years - years of history to retrieve
+   * @param {boolean} fromLocal - should load data from local or api, default: false
+   * @returns {Observable} Dividend history.
    */
-  public getStocksData(symbols: string[], save: null | boolean): Observable<JSON> {
-    const path = `${this.backendUrl}/fetch/stocks/` + symbols.join(":");
-    if (save !== null) {
-      let params = new HttpParams().set("save", String(save));
-      const options = { ...this.httpOptions, params };
-      return this.wrapHttpCall(path, options);
+  public getDividendHistory(symbol: string, years = 10, fromLocal: boolean = false): Observable<any> {
+    if (fromLocal) {
+      const localPath = `${this.backendDataPath}/${symbol.toLowerCase()}-dividend.json`;
+      const localOptions = { ...this.httpOptions, responseType: "json" };
+      return this.wrapHttpCall(localPath, localOptions);
     }
-    return this.wrapHttpCall(path);
+    const apiPath = `${this.backendUrl}/fetch/dividend-history/${symbol}`;
+    const params = new HttpParams().set("years", years);
+    const apiOptions = { ...this.httpOptions, params };
+    return this.wrapHttpCall(apiPath, apiOptions);
   }
 
   /**
-   * @param {Array} symbol of stock to retrieves
-   * @returns {Observable} load a single stock data from local backend data folder.
+   * @param {string} symbol - Symbol of stock to retrieve data for
+   * @param {boolean} fromLocal - should load data from local or api, default: false
+   * @returns {Observable} Technical insights of a stock.
    */
-  public loadStockDataFromDataFolder(symbol: string): Observable<JSON> {
-    const path = `${this.backendDataPath}${symbol.toLowerCase()}.json`;
-    const options = { ...this.httpOptions, responseType: "json" };
-    return this.wrapHttpCall(path, options);
+  public getTechnicalInsights(symbol: string, fromLocal: boolean = false): Observable<JSON> {
+    if (fromLocal) {
+      const localPath = `${this.backendDataPath}/${symbol.toLowerCase()}-technical-insights.json`;
+      const options = { ...this.httpOptions, responseType: "json" };
+      return this.wrapHttpCall(localPath, options);
+    }
+    const apiPath = `${this.backendUrl}/fetch/technical-insights/${symbol}`;
+    return this.wrapHttpCall(apiPath);
   }
 
   /**
-   * @param {string} symbol of stock to retrieve
-   * @param {null | number} years of history to retrieve
-   * @param {null | boolean} update stock data from api call
-   * @returns {Observable} Returns a single stock dividend history.
+   * @param {string} symbol - Symbol of stock to retrieve data for
+   * @param {boolean} fromLocal - Should load data from local or api, default: false
+   * @returns {Observable} Corporate events of a stock.
    */
-  public getDividendHistory(
-    symbol: string,
-    years = 10,
-    update = false
-  ): Observable<JSON> {
-    const path = `${this.backendUrl}/fetch/dividend-history/${symbol}`;
-    let params = new HttpParams();
-    params = params.set("update", String(update));
-    params = params.set("years", years);
-    const options = { ...this.httpOptions, params };
-    return this.wrapHttpCall(path, options);
-  }
-
-  /**
-   * @param {string} symbol of stock to retrieve
-   * @returns {Observable} Returns technical insights of a stock.
-   */
-  public getTechnicalInsights(symbol: string): Observable<JSON> {
-    const path = `${this.backendUrl}/fetch/technical-insights/${symbol}`;
-    return this.wrapHttpCall(path);
-  }
-
-  /**
-   * @param {string} symbol of stock to retrieve
-   * @returns {Observable} Returns technical insights of a stock.
-   */
-  public loadTechnicalInsightsFromDataFolder(symbol: string): Observable<JSON> {
-    const path = `${this.backendDataPath}${symbol.toLowerCase()}-technical-insights.json`;
-    const options = { ...this.httpOptions, responseType: "json" };
-    return this.wrapHttpCall(path, options);
-  }
-
-  /**
-   * @param {string} symbol of stock to retrieve
-   * @returns {Observable} Returns corporate events of a stock.
-   */
-  public getCorporateEvents(symbol: string): Observable<JSON> {
-    const path = `${this.backendUrl}/fetch/events/${symbol}`;
-    return this.wrapHttpCall(path);
-  }
-  
-  /**
-   * @param {string} symbol of stock to retrieve
-   * @returns {Observable} Returns recommendations of a stock.
-   */
-  public getRecommendations(symbol: string): Observable<JSON> {
-    const path = `${this.backendUrl}/fetch/recommendations/${symbol}`;
-    return this.wrapHttpCall(path);
+  public getCorporateEvents(symbol: string, fromLocal: boolean = false): Observable<JSON> {
+    if (fromLocal) {
+      const localPath = `${this.backendDataPath}/${symbol.toLowerCase()}-events.json`;
+      const options = { ...this.httpOptions, responseType: "json" };
+      return this.wrapHttpCall(localPath, options)
+    }
+    const apiPath = `${this.backendUrl}/fetch/events/${symbol}`;
+    return this.wrapHttpCall(apiPath);
   }
 }

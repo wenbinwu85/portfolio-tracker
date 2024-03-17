@@ -4,8 +4,9 @@ import { MatIconModule } from "@angular/material/icon";
 import { PriceMovementChartsComponent } from "../../shared/components/charts/price-movement-charts/price-movement-charts.component";
 import { DataService } from "../../shared/services/data.service";
 import { InfoCardComponent } from "../../shared/components/info-card/info-card.component";
-import { DatePipe, NgFor, NgIf } from "@angular/common";
+import { DatePipe, JsonPipe, NgFor, NgIf } from "@angular/common";
 import { StockCorporateEventsComponent } from "../../shared/components/#junk/stock-corporate-events/stock-corporate-events.component";
+import { MatDividerModule } from "@angular/material/divider";
 
 @Component({
   selector: "app-portfolio-main",
@@ -15,10 +16,12 @@ import { StockCorporateEventsComponent } from "../../shared/components/#junk/sto
   imports: [
     DatePipe,
     InfoCardComponent,
+    MatDividerModule,
     MatExpansionModule,
     MatIconModule,
     NgIf,
     NgFor,
+    JsonPipe,
     PriceMovementChartsComponent,
     StockCorporateEventsComponent,
   ],
@@ -28,16 +31,22 @@ export class PortfolioMainComponent implements OnInit{
   events: any = [];
   eventDates: any = [];
   mappedEvents: any = {};
+  corporateEvents: any = [];
 
   constructor(private dataService: DataService) { }
   
   ngOnInit() {
-    this.dataService.getCorporateEvents('DVN').subscribe(data => { 
-      console.log('!!!')
-      console.log(data)
-    })
-    const stocks = Object.values(this.dataService.portfolioData).filter((stock: any) => stock.calendarEvents);
+    Object.values(this.dataService.portfolioData)
+      .filter((stock: any) => stock.quoteType === 'EQUITY')
+      .forEach((stock: any) => { 
+        this.dataService.getCorporateEvents(stock.symbol, true).subscribe((events: any) => {
+          this.corporateEvents.push(...events[stock.symbol]);
+          this.corporateEvents.sort((a: any, b: any) => b.time - a.time)
+        });
+      })
+
     this.portfolioHoldings = Object.values(this.dataService.portfolioHoldings);
+    const stocks = Object.values(this.dataService.portfolioData).filter((stock: any) => stock.calendarEvents);
     stocks.forEach((stock: any) => {
       const calEvents = stock.calendarEvents;
       const earnings = stock.earnings.earningsChart;

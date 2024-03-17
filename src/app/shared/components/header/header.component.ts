@@ -66,6 +66,6 @@ export class HeaderComponent implements OnInit {
   }
 
   refreshData() {
-    this.dataService.updatePortfolioData(true);
+    this.dataService.updatePortfolioData(false);
   }
 }

@@ -258,9 +258,9 @@ def yq_corporate_events(symbol):
         print(symbol, 'failed to fetch corporate events:', e)
 
 
-def yq_recommendations(symbol):
-    try:
-        ticker = Ticker(symbol, asynchronous=True, progress=True)
-        return ticker.recommendations
-    except Exception as e:
-        print(symbol, 'failed to fetch recommendations:', e)
+# def yq_recommendations(symbol):
+#     try:
+#         ticker = Ticker(symbol, asynchronous=True, progress=True)
+#         return ticker.recommendations
+#     except Exception as e:
+#         print(symbol, 'failed to fetch recommendations:', e)

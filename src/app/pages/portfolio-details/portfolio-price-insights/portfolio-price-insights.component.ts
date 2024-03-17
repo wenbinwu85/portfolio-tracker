@@ -167,7 +167,7 @@ export class PortfolioPriceInsightsComponent implements OnInit {
 
   getSelectedStockTechnicalInsights() {
     this.dataService
-      .loadTechnicalInsightsFromDataFolder(this.selectedSymbol)
+      .getTechnicalInsights(this.selectedSymbol, true)
       .pipe(
         map((response: any) => {
           if (response.status === 500) {

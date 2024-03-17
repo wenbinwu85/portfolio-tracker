@@ -115,7 +115,7 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
     this.portfolioYieldOnCost = this.dataService.portfolioHoldings?.portfolioYieldOnCost;
     this.browser = this.getBrowserName();
     this.setInfoCards();
-    this.refreshDividend(this.selectedSymbol, false);
+    this.refreshDividend(this.selectedSymbol, true);
   }
 
   ngAfterViewInit() {
@@ -255,8 +255,9 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
     });
   }
 
-  refreshDividend(symbol: string, update: boolean = true) { 
-    this.dataService.getDividendHistory(symbol, 10, update).subscribe((divHis: any) => {
+  refreshDividend(symbol: string, fromLocal: boolean) { 
+    this.dataService.getDividendHistory(symbol, 10, fromLocal).subscribe((divHis: any) => {
+      console.log(divHis);
       this.updateChart(symbol, divHis);
     });
   }
