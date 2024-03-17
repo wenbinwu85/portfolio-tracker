@@ -19,6 +19,7 @@ import { EchartComponent } from "../../../shared/components/charts/echart/echart
 import { InfoCardComponent } from "../../../shared/components/info-card/info-card.component";
 import { StockNameCardComponent } from "../../../shared/components/stock/stock-name-card/stock-name-card.component";
 import { DataService } from "../../../shared/services/data.service";
+import { catchError, map } from "rxjs";
 
 @Component({
   selector: "portfolio-dividend",
@@ -256,9 +257,22 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
   }
 
   refreshDividend(symbol: string, fromLocal: boolean) { 
-    this.dataService.getDividendHistory(symbol, 10, fromLocal).subscribe((divHis: any) => {
-      console.log(divHis);
-      this.updateChart(symbol, divHis);
+    this.dataService.getDividendHistory(symbol, 10, fromLocal)
+      .pipe(
+        map((response: any) => {
+          if (response.status === 500) {
+            throw `Api Error: ${symbol} - ${response.status} - ${response.message}`;
+          } else {
+            return response;
+          }
+        }),
+        catchError((err: any) => {
+          console.log(err);
+          return this.dataService.getDividendHistory(symbol, 10, false)
+        })
+      )
+      .subscribe((divHis: any) => {
+        this.updateChart(symbol, divHis);
     });
   }
 }
