@@ -7,8 +7,8 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 1,
-                "scoreDescription": "Weak Bullish Evidence",
+                "score": 2,
+                "scoreDescription": "Bullish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 4,
                 "sectorScoreDescription": "Very Strong Bearish Evidence",
@@ -43,9 +43,8 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 111.1736,
-            "resistance": 153.11,
-            "stopLoss": 144.101458
+            "support": 118.0,
+            "stopLoss": 144.260785
         },
         "valuation": {
             "color": 0.0,
@@ -109,10 +108,10 @@
             "eventType": "Momentum",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "S",
+            "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1710768600,
-            "endDate": 1710768600
+            "startDate": 1710855000,
+            "endDate": 1710855000
         }
     ],
     "reports": [
@@ -865,18 +864,6 @@
             ]
         },
         {
-            "id": "3403_Analyst Report_1598452719000",
-            "headHtml": "Analyst Report: Simon Property Group, Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2020-08-26T14:38:39Z",
-            "reportTitle": "Simon Property Group Inc., based in Indianapolis, is a retail REIT that owns and leases malls and outlets. Simon has an interest in or owns 234 properties with 191 million square feet of leasable space in North America, Asia, and Europe. It also has a 22% interest in Klepierre, a Paris-based real estate firm, which owns shopping centers in 15 European countries. SPG is a member of the S&P 500.",
-            "targetPrice": 85.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "SPG"
-            ]
-        },
-        {
             "id": "27784_Market Update_1598452719000",
             "headHtml": "Market Update: PANW, SLF, BBY, MDU, SPG",
             "provider": "Argus Research",
@@ -888,6 +875,18 @@
                 "SLF",
                 "MDU",
                 "PANW"
+            ]
+        },
+        {
+            "id": "3403_Analyst Report_1598452719000",
+            "headHtml": "Analyst Report: Simon Property Group, Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2020-08-26T14:38:39Z",
+            "reportTitle": "Simon Property Group Inc., based in Indianapolis, is a retail REIT that owns and leases malls and outlets. Simon has an interest in or owns 234 properties with 191 million square feet of leasable space in North America, Asia, and Europe. It also has a 22% interest in Klepierre, a Paris-based real estate firm, which owns shopping centers in 15 European countries. SPG is a member of the S&P 500.",
+            "targetPrice": 85.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "SPG"
             ]
         },
         {
@@ -917,20 +916,6 @@
             ]
         },
         {
-            "id": "27168_Market Update_1591883229000",
-            "headHtml": "Market Update: BAX, SPG, ULTA, LB, M",
-            "provider": "Argus Research",
-            "reportDate": "2020-06-11T13:47:09Z",
-            "reportTitle": "Stocks fell sharply on Thursday morning amid concerns about rising coronavirus cases in many states and a bleak economic outlook from the Federal Reserve. First-time jobless claims totaled 1.542 million for the week ended June 6, down from the prior week and below the Reuters consensus of 1.55 million. The Dow fell 3.2%, the S&P 3.4%, and the Nasdaq 1.7%. Crude oil fell nearly 7% to $37 per barrel, while gold rose $29 to $1750 per ounce.",
-            "tickers": [
-                "ULTA",
-                "LB",
-                "BAX",
-                "SPG",
-                "M"
-            ]
-        },
-        {
             "id": "3403_Analyst Report_1591883229000",
             "headHtml": "Analyst Report: Simon Property Group, Inc.",
             "provider": "Argus Research",
@@ -943,10 +928,10 @@
             ]
         },
         {
-            "id": "27168_Market Update_1591833600000",
+            "id": "27168_Market Update_1591883229000",
             "headHtml": "Market Update: BAX, SPG, ULTA, LB, M",
             "provider": "Argus Research",
-            "reportDate": "2020-06-11T00:00:00Z",
+            "reportDate": "2020-06-11T13:47:09Z",
             "reportTitle": "Stocks fell sharply on Thursday morning amid concerns about rising coronavirus cases in many states and a bleak economic outlook from the Federal Reserve. First-time jobless claims totaled 1.542 million for the week ended June 6, down from the prior week and below the Reuters consensus of 1.55 million. The Dow fell 3.2%, the S&P 3.4%, and the Nasdaq 1.7%. Crude oil fell nearly 7% to $37 per barrel, while gold rose $29 to $1750 per ounce.",
             "tickers": [
                 "ULTA",
@@ -966,6 +951,20 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "SPG"
+            ]
+        },
+        {
+            "id": "27168_Market Update_1591833600000",
+            "headHtml": "Market Update: BAX, SPG, ULTA, LB, M",
+            "provider": "Argus Research",
+            "reportDate": "2020-06-11T00:00:00Z",
+            "reportTitle": "Stocks fell sharply on Thursday morning amid concerns about rising coronavirus cases in many states and a bleak economic outlook from the Federal Reserve. First-time jobless claims totaled 1.542 million for the week ended June 6, down from the prior week and below the Reuters consensus of 1.55 million. The Dow fell 3.2%, the S&P 3.4%, and the Nasdaq 1.7%. Crude oil fell nearly 7% to $37 per barrel, while gold rose $29 to $1750 per ounce.",
+            "tickers": [
+                "ULTA",
+                "LB",
+                "BAX",
+                "SPG",
+                "M"
             ]
         },
         {
@@ -1253,18 +1252,6 @@
             ]
         },
         {
-            "id": "3403_Analyst Report_1556841600000",
-            "headHtml": "Maintaining BUY and $200 target",
-            "provider": "Argus Research",
-            "reportDate": "2019-05-03T00:00:00Z",
-            "reportTitle": "Simon Property Group Inc., based in Indianapolis, is a retail REIT that owns and leases malls and outlets. Simon has an interest in or owns 234 properties with 190 million square feet of leasable space. It also has a 22% interest in Klepierre, a Paris-based real estate firm, which owns shopping centers in 16 European countries. SPG is a member of the S&P 500.",
-            "targetPrice": 200.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "SPG"
-            ]
-        },
-        {
             "id": "23882_Market Update_1556841600000",
             "headHtml": "Market Update: VIAV, MET, RCL, SPG, GM, APO, CC",
             "provider": "Argus Research",
@@ -1278,6 +1265,18 @@
                 "RCL",
                 "SPG",
                 "MET"
+            ]
+        },
+        {
+            "id": "3403_Analyst Report_1556841600000",
+            "headHtml": "Maintaining BUY and $200 target",
+            "provider": "Argus Research",
+            "reportDate": "2019-05-03T00:00:00Z",
+            "reportTitle": "Simon Property Group Inc., based in Indianapolis, is a retail REIT that owns and leases malls and outlets. Simon has an interest in or owns 234 properties with 190 million square feet of leasable space. It also has a 22% interest in Klepierre, a Paris-based real estate firm, which owns shopping centers in 16 European countries. SPG is a member of the S&P 500.",
+            "targetPrice": 200.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "SPG"
             ]
         },
         {
@@ -1558,6 +1557,17 @@
             ]
         },
         {
+            "id": "22241_Market Summary_1539043200000",
+            "headHtml": "Market Digest: ILMN, SPG",
+            "provider": "Argus Research",
+            "reportDate": "2018-10-09T00:00:00Z",
+            "reportTitle": "Vickers Stock Research, Argus' sister company, calculates proprietary Sell/Buy Ratios using data from recent Form-4 filings (through which insiders register purchases and sales of their stock with the SEC). Insiders are deemed to be in a bullish mood when the Sell/Buy Ratio comes in at 2.00 or below; they are neutral in the 2.00 to 2.50 range; and they are bearish if results are 2.50 or above.",
+            "tickers": [
+                "ILMN",
+                "SPG"
+            ]
+        },
+        {
             "id": "3403_Analyst Report_1539043200000",
             "headHtml": "Raising target by $5 to $200 on redevelopment",
             "provider": "Argus Research",
@@ -1566,17 +1576,6 @@
             "targetPrice": 200.0,
             "investmentRating": "Bullish",
             "tickers": [
-                "SPG"
-            ]
-        },
-        {
-            "id": "22241_Market Summary_1539043200000",
-            "headHtml": "Market Digest: ILMN, SPG",
-            "provider": "Argus Research",
-            "reportDate": "2018-10-09T00:00:00Z",
-            "reportTitle": "Vickers Stock Research, Argus' sister company, calculates proprietary Sell/Buy Ratios using data from recent Form-4 filings (through which insiders register purchases and sales of their stock with the SEC). Insiders are deemed to be in a bullish mood when the Sell/Buy Ratio comes in at 2.00 or below; they are neutral in the 2.00 to 2.50 range; and they are bearish if results are 2.50 or above.",
-            "tickers": [
-                "ILMN",
                 "SPG"
             ]
         },

@@ -7,11 +7,11 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 1,
-                "scoreDescription": "Weak Bullish Evidence",
-                "sectorDirection": "Bearish",
-                "sectorScore": 4,
-                "sectorScoreDescription": "Very Strong Bearish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bullish Evidence",
+                "sectorDirection": "Bullish",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bullish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 3,
                 "indexScoreDescription": "Strong Bearish Evidence"
@@ -45,12 +45,12 @@
             "provider": "Trading Central",
             "support": 173.19,
             "resistance": 179.35,
-            "stopLoss": 166.670762
+            "stopLoss": 168.173047
         },
         "valuation": {
             "color": 0.5,
             "description": "Near Fair Value",
-            "discount": "-1%",
+            "discount": "-2%",
             "provider": "Trading Central"
         }
     },
@@ -59,9 +59,9 @@
         "company": {
             "innovativeness": 0.9981,
             "hiring": 0.9512999999999999,
-            "sustainability": 0.5667,
-            "insiderSentiments": 0.2151,
-            "earningsReports": 0.8423,
+            "sustainability": 0.5714,
+            "insiderSentiments": 0.2165,
+            "earningsReports": 0.8428,
             "dividends": 0.09939999999999999
         },
         "sector": {
@@ -105,13 +105,13 @@
     },
     "events": [
         {
-            "eventType": "MACD",
+            "eventType": "Williams %R",
             "pricePeriod": "D",
             "tradingHorizon": "S",
             "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1710768600,
-            "endDate": 1710768600
+            "startDate": 1710855000,
+            "endDate": 1710855000
         }
     ],
     "reports": [
@@ -1875,18 +1875,6 @@
             ]
         },
         {
-            "id": "2660_Analyst Report_1602633600000",
-            "headHtml": "Analyst Report: Apple Inc",
-            "provider": "Argus Research",
-            "reportDate": "2020-10-14T00:00:00Z",
-            "reportTitle": "Apple manufactures Smartphones, tablets, PCs, software and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including AirPods, Beats headphones and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
-            "targetPrice": 150.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "AAPL"
-            ]
-        },
-        {
             "id": "28167_Market Summary_1602633600000",
             "headHtml": "Market Digest: AAPL, C, ECL, FTV",
             "provider": "Argus Research",
@@ -1897,6 +1885,18 @@
                 "C",
                 "FTV",
                 "ECL"
+            ]
+        },
+        {
+            "id": "2660_Analyst Report_1602633600000",
+            "headHtml": "Analyst Report: Apple Inc",
+            "provider": "Argus Research",
+            "reportDate": "2020-10-14T00:00:00Z",
+            "reportTitle": "Apple manufactures Smartphones, tablets, PCs, software and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including AirPods, Beats headphones and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
+            "targetPrice": 150.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "AAPL"
             ]
         }
     ],
@@ -2160,15 +2160,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0001193125-22-128368_320193",
-            "type": "Offering Registrations",
-            "title": "S-8 : Offering Registrations",
-            "description": "Initial registration statement for securities to be offered to employees pursuant to employee benefit plans",
-            "filingDate": 1651190400000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000119312522128368/thumbnail.png",
-            "formType": "S-8"
-        },
-        {
             "id": "0001193125-22-128361_320193",
             "type": "Offering Registrations",
             "title": "S-8 POS : Offering Registrations",
@@ -2176,6 +2167,15 @@
             "filingDate": 1651190400000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000119312522128361/thumbnail.png",
             "formType": "S-8 POS"
+        },
+        {
+            "id": "0001193125-22-128368_320193",
+            "type": "Offering Registrations",
+            "title": "S-8 : Offering Registrations",
+            "description": "Initial registration statement for securities to be offered to employees pursuant to employee benefit plans",
+            "filingDate": 1651190400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000119312522128368/thumbnail.png",
+            "formType": "S-8"
         },
         {
             "id": "0000320193-22-000059_320193",
