@@ -1,5 +1,5 @@
-Ben's stock portfolio tracker
+a stock portfolio tracker
 
-Backend: Python 3 Quart app with Yahooquery
-Frontend: Angular app
+Backend: Python3 Quart app with Yahooquery for yahoo finance api.
+Frontend: Angular 17
 
