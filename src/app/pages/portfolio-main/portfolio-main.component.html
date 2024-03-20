@@ -2,7 +2,7 @@
   <mat-expansion-panel-header>
     <mat-panel-title>
       <mat-icon>auto_graph</mat-icon>
-      <span>Price Change</span>
+      <span>Today's Price Change</span>
     </mat-panel-title>
   </mat-expansion-panel-header>
   <stock-price-movement-charts />
@@ -11,13 +11,14 @@
 <mat-expansion-panel [expanded]="true">
   <mat-expansion-panel-header>
     <mat-panel-title>
-      <mat-icon>auto_graph</mat-icon>
-      <span>Corporate Events</span>
+      <mat-icon>event</mat-icon>
+      <span>Events</span>
     </mat-panel-title>
   </mat-expansion-panel-header>
 
   <section class="add-border main-section">
-    <div class="news-container">
+    <div class="events-container">
+      <div class="title add-margin">Corporate Events</div>
       <div *ngFor="let article of corporateEvents" class="add-margin">
         <info-card 
           [icon]="'article'" 
@@ -32,9 +33,10 @@
     </div>
 
     <mat-divider vertical />
-  
+
     <div class="events-container">
-      <div class="add-margin date-contianer">
+      <div class="title add-margin">Calendar Events</div>
+      <div class="add-margin day-container">
         <ng-container *ngFor="let calendarDay of mappedEvents; let i = index">
           <div class="event-date">{{ calendarDay[0] | date: 'MMMM d, EEEE' }}</div>
           <div class="event-container">
@@ -51,6 +53,24 @@
             </ng-container>
           </div>
         </ng-container>
+      </div>
+    </div>
+
+    <mat-divider vertical />
+
+    <div class="events-container">
+      <div class="title add-margin">Upgrades & Downgrades</div>
+      <div *ngFor="let grading of gradingEvents" class="add-margin">
+        <info-card
+          [icon]="'thumbs_up_down'"
+          [value]="grading.fromGrade + ' --> ' + grading.toGrade"
+          [subtitle]="grading.symbol"
+          [additionalInfo]="grading.firm"
+          [date]="grading.date"
+          [fontSize]="'1rem'"
+          [color]="grading.color"
+          [accentColor]="grading.color"
+        />
       </div>
     </div>
   </section>

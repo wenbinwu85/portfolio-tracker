@@ -2,9 +2,8 @@
     display: flex;
 }
 
-.news-container, 
 .events-container {
-    max-width: 50vw;
+    max-width: 33vw;
 }
 
 .day-container {
@@ -13,6 +12,7 @@
 }
 
 .event-date {
+    margin-top: 1rem;
     padding-bottom: 0.5rem;
 }
 

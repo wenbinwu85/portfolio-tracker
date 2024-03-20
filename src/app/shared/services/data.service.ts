@@ -83,6 +83,8 @@ export class DataService {
               const thing = counter === stocks.length;
               console.log('counter equal stocks.length:', thing);
               console.log('%c ------------------------', 'background: teal; color: white');
+
+              location.reload();
             }
           });
         })

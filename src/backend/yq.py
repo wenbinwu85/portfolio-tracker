@@ -33,9 +33,10 @@ yq_modules = [
     'netSharePurchaseActivity',
     'price',  # Detailed pricing data for given symbol(s), exchange, quote type, currency, market cap, pre / post market data, etc.
     'recommendationTrend',  # Data related to historical recommendations (buy, hold, sell)
-    'secFilings',
     'summaryDetail',  # Contains information available via the Summary tab
-    'topHoldings'
+    'topHoldings',
+    'upgradeDowngradeHistory',
+    'secFilings',
 ]
 
 
@@ -186,10 +187,9 @@ def map_stock_data(yq_modules_data):
         mapped_data.update(data['price'])
         mapped_data.update(data['summaryDetail'])
         mapped_data.update(data['defaultKeyStatistics'])
-        mapped_data['profile'] = data['assetProfile']
-
         if data['price']['quoteType'] == 'EQUITY':
             mapped_data.update(data['financialData'])
+            mapped_data['profile'] = data['assetProfile']
             mapped_data['calendarEvents'] = data['calendarEvents']
             mapped_data['earnings'] = data['earnings']
             mapped_data['earnings'].update(data['earningsHistory'])
@@ -204,6 +204,7 @@ def map_stock_data(yq_modules_data):
             mapped_data['shareholders']['insiderHolders'] = data.get('insiderHolders', {})
             mapped_data['shareholders']['institutionOwnership'] = data.get('institutionOwnership', {})
             mapped_data['shareholders']['majorHolders'] = data.get('majorHoldersBreakdown', {})
+            mapped_data['upgradeDowngradeHistory'] = data['upgradeDowngradeHistory']['history'][:5]
             try:
                 mapped_data['fcfPerShare'] = mapped_data['freeCashflow'] / mapped_data['sharesOutstanding']
                 mapped_data['fcfYield'] = mapped_data['freeCashflow'] / mapped_data['marketCap']
@@ -216,6 +217,7 @@ def map_stock_data(yq_modules_data):
                 mapped_data['fcfYield'] = 0
                 mapped_data['fcfPayoutRatio'] = 0
         else:
+            mapped_data['profile'] = data['assetProfile']
             mapped_data['profile'].update(data['fundProfile'])
             mapped_data['dividendRate'] = data['summaryDetail']['yield'] * data['price']['regularMarketPrice']
             mapped_data['dividendYield'] = data['summaryDetail']['yield']

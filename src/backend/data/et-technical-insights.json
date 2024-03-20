@@ -7,23 +7,23 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 3,
-                "scoreDescription": "Strong Bullish Evidence",
-                "sectorDirection": "Bullish",
-                "sectorScore": 2,
-                "sectorScoreDescription": "Bullish Evidence",
-                "indexDirection": "Bearish",
-                "indexScore": 4,
-                "indexScoreDescription": "Very Strong Bearish Evidence"
-            },
-            "intermediateTermOutlook": {
-                "stateDescription": "Recent bullish events outweigh bearish events.",
-                "direction": "Bullish",
                 "score": 2,
                 "scoreDescription": "Bullish Evidence",
                 "sectorDirection": "Bullish",
-                "sectorScore": 4,
-                "sectorScoreDescription": "Very Strong Bullish Evidence",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bullish Evidence",
+                "indexDirection": "Bearish",
+                "indexScore": 3,
+                "indexScoreDescription": "Strong Bearish Evidence"
+            },
+            "intermediateTermOutlook": {
+                "stateDescription": "Bullish events outweigh bearish events.",
+                "direction": "Bullish",
+                "score": 1,
+                "scoreDescription": "Weak Bullish Evidence",
+                "sectorDirection": "Bullish",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bullish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 1,
                 "indexScoreDescription": "Weak Bearish Evidence"
@@ -44,7 +44,7 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 13.885,
-            "stopLoss": 14.634672
+            "stopLoss": 14.803864
         },
         "valuation": {
             "color": 1.0,
@@ -57,11 +57,11 @@
     "companySnapshot": {
         "sectorInfo": "Energy",
         "company": {
-            "innovativeness": 0.2857,
+            "innovativeness": 0.2731,
             "sustainability": 0.9265000000000001,
-            "insiderSentiments": 0.8889,
-            "earningsReports": 0.8739,
-            "dividends": 0.753
+            "insiderSentiments": 0.8984000000000001,
+            "earningsReports": 0.8769,
+            "dividends": 0.7484999999999999
         },
         "sector": {
             "innovativeness": 0.5,
@@ -99,13 +99,13 @@
     },
     "events": [
         {
-            "eventType": "MACD",
+            "eventType": "Commodity Channel Index",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "S",
+            "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1710423000,
-            "endDate": 1710423000
+            "startDate": 1710509400,
+            "endDate": 1710509400
         }
     ],
     "sigDevs": [
