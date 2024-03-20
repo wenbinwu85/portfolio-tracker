@@ -6,11 +6,11 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 3,
-                "scoreDescription": "Strong Bearish Evidence",
+                "score": 4,
+                "scoreDescription": "Very Strong Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 4,
-                "indexScoreDescription": "Very Strong Bearish Evidence"
+                "indexScore": 3,
+                "indexScoreDescription": "Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "All events are bullish.",
@@ -35,7 +35,7 @@
             "provider": "Trading Central",
             "support": 54.8999,
             "resistance": 57.2816,
-            "stopLoss": 56.400312
+            "stopLoss": 56.529226
         },
         "valuation": {
             "provider": "Trading Central"
@@ -44,13 +44,13 @@
     "upsell": {},
     "events": [
         {
-            "eventType": "MACD",
+            "eventType": "Williams %R",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "L",
+            "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1710250200,
-            "endDate": 1710250200
+            "startDate": 1710509400,
+            "endDate": 1710509400
         }
     ],
     "sigDevs": []

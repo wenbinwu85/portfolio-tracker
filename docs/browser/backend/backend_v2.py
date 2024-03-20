@@ -1,6 +1,5 @@
 import ast
 import os
-import pickle
 from datetime import datetime, timedelta
 from quart import Quart, jsonify, request
 from quart_cors import cors
@@ -79,7 +78,7 @@ def fetch_technical_insights(symbol):
 def fetch_corporate_events(symbol):
     path = get_file_path(symbol.lower() + '-events', 'json')
     data = yq_corporate_events(symbol)
-    data = data.tail().to_dict(orient='split')
+    data = data.to_dict(orient='split')
     timestamps = data['index']
     articles = data['data']
     events = {symbol: []}
