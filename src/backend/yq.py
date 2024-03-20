@@ -30,13 +30,13 @@ yq_modules = [
     'insiderTransactions',  # Transactions by insiders
     'institutionOwnership',  # Top 10 owners of a given symbol(s)
     'majorHoldersBreakdown',  # Data showing breakdown of owners of given symbol(s), insiders, institutions, etc.
-    'netSharePurchaseActivity',
     'price',  # Detailed pricing data for given symbol(s), exchange, quote type, currency, market cap, pre / post market data, etc.
     'recommendationTrend',  # Data related to historical recommendations (buy, hold, sell)
     'summaryDetail',  # Contains information available via the Summary tab
     'topHoldings',
     'upgradeDowngradeHistory',
-    'secFilings',
+    # 'secFilings',
+    # 'netSharePurchaseActivity',
 ]
 
 
@@ -197,12 +197,12 @@ def map_stock_data(yq_modules_data):
             mapped_data['indexTrend'] = data['indexTrend']
             mapped_data['insiderTransactions'] = data.get('insiderTransactions', {}).get('transactions', {})
             mapped_data['recommendationTrend'] = data['recommendationTrend']['trend']
-            mapped_data['secFilings'] = data.get('secFilings', {}).get('filings', {})
-            mapped_data['sharePurchaseActivity'] = data['netSharePurchaseActivity']
+            # mapped_data['secFilings'] = data.get('secFilings', {}).get('filings', {})
+            # mapped_data['sharePurchaseActivity'] = data['netSharePurchaseActivity']
             mapped_data['shareholders'] = {}
-            mapped_data['shareholders']['fundOwnership'] = data.get('fundOwnership', {})
-            mapped_data['shareholders']['insiderHolders'] = data.get('insiderHolders', {})
-            mapped_data['shareholders']['institutionOwnership'] = data.get('institutionOwnership', {})
+            mapped_data['shareholders']['fundOwnership'] = data['fundOwnership']['ownershipList']
+            mapped_data['shareholders']['insiderHolders'] = data['insiderHolders']['holders']
+            mapped_data['shareholders']['institutionOwnership'] = data['institutionOwnership']['ownershipList']
             mapped_data['shareholders']['majorHolders'] = data.get('majorHoldersBreakdown', {})
             mapped_data['upgradeDowngradeHistory'] = data['upgradeDowngradeHistory']['history'][:5]
             try:
