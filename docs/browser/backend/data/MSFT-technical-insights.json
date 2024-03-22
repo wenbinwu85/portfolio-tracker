@@ -10,11 +10,11 @@
                 "score": 4,
                 "scoreDescription": "Very Strong Bullish Evidence",
                 "sectorDirection": "Bullish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bullish Evidence",
+                "sectorScore": 4,
+                "sectorScoreDescription": "Very Strong Bullish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "There is one bullish event.",
@@ -44,8 +44,8 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 332.89,
-            "resistance": 422.6,
-            "stopLoss": 395.632224
+            "resistance": 425.22,
+            "stopLoss": 400.921166
         },
         "valuation": {
             "color": 0.0,
@@ -58,12 +58,12 @@
     "companySnapshot": {
         "sectorInfo": "Technology",
         "company": {
-            "innovativeness": 0.9611,
+            "innovativeness": 0.961,
             "hiring": 0.9662999999999999,
             "sustainability": 0.3613,
-            "insiderSentiments": 0.317,
-            "earningsReports": 0.8859999999999999,
-            "dividends": 0.1451
+            "insiderSentiments": 0.3177,
+            "earningsReports": 0.8893000000000001,
+            "dividends": 0.1472
         },
         "sector": {
             "innovativeness": 0.5,
@@ -106,7 +106,7 @@
     },
     "events": [
         {
-            "eventType": "Commodity Channel Index",
+            "eventType": "Short-term KST",
             "pricePeriod": "D",
             "tradingHorizon": "S",
             "tradeType": "L",
@@ -1885,6 +1885,18 @@
             ]
         },
         {
+            "id": "3212_Analyst Report_1627653568000",
+            "headHtml": "Analyst Report: Microsoft Corporation",
+            "provider": "Argus Research",
+            "reportDate": "2021-07-30T13:59:28Z",
+            "reportTitle": "Microsoft is the world's largest independent software developer. The company was founded on the MS Windows operating system and MS Office business applications suite for PCs. As it has grown, Microsoft has expanded into enterprise software with Windows Server, SQL Server, Dynamics CRM, SharePoint, Azure and Lync; hardware with the Xbox gaming/media platform and the Surface tablet; and online services through MSN and Bing. Microsoft acquired Skype, the internet VoIP communications service, in October 2011. The company acquired Nokia's Devices and Services Business in April 2014. More than 50% of revenue is generated outside the U.S.",
+            "targetPrice": 325.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "MSFT"
+            ]
+        },
+        {
             "id": "30518_Market Update_1627653568000",
             "headHtml": "Market Update: ADS, THRM, CAKE, CME, MSFT, NOV, RSG, TROW, MA",
             "provider": "Argus Research",
@@ -1900,18 +1912,6 @@
                 "RSG",
                 "THRM",
                 "CME"
-            ]
-        },
-        {
-            "id": "3212_Analyst Report_1627653568000",
-            "headHtml": "Analyst Report: Microsoft Corporation",
-            "provider": "Argus Research",
-            "reportDate": "2021-07-30T13:59:28Z",
-            "reportTitle": "Microsoft is the world's largest independent software developer. The company was founded on the MS Windows operating system and MS Office business applications suite for PCs. As it has grown, Microsoft has expanded into enterprise software with Windows Server, SQL Server, Dynamics CRM, SharePoint, Azure and Lync; hardware with the Xbox gaming/media platform and the Surface tablet; and online services through MSN and Bing. Microsoft acquired Skype, the internet VoIP communications service, in October 2011. The company acquired Nokia's Devices and Services Business in April 2014. More than 50% of revenue is generated outside the U.S.",
-            "targetPrice": 325.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "MSFT"
             ]
         },
         {
@@ -2372,15 +2372,6 @@
             "filingDate": 1644451200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000789019/000110465922018095/thumbnail.png",
             "formType": "SC 13G/A"
-        },
-        {
-            "id": "0001193125-22-017041_789019",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1643068800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/789019/000119312522017041/thumbnail.png",
-            "formType": "8-K"
         }
     ]
 }

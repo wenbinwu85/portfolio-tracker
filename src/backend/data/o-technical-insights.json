@@ -5,25 +5,25 @@
             "provider": "Trading Central",
             "sector": "Real Estate",
             "shortTermOutlook": {
-                "stateDescription": "Recent bearish events outweigh bullish events.",
-                "direction": "Bearish",
-                "score": 4,
-                "scoreDescription": "Very Strong Bearish Evidence",
+                "stateDescription": "Recent bullish events outweigh bearish events.",
+                "direction": "Bullish",
+                "score": 1,
+                "scoreDescription": "Weak Bullish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 4,
-                "sectorScoreDescription": "Very Strong Bearish Evidence",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
                 "score": 2,
                 "scoreDescription": "Bearish Evidence",
-                "sectorDirection": "Bearish",
-                "sectorScore": 1,
-                "sectorScoreDescription": "Weak Bearish Evidence",
+                "sectorDirection": "Bullish",
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bullish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 1,
                 "indexScoreDescription": "Weak Bearish Evidence"
@@ -43,9 +43,9 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 49.95,
+            "support": 52.18,
             "resistance": 61.0311,
-            "stopLoss": 49.96662
+            "stopLoss": 50.190479
         },
         "valuation": {
             "color": 0.0,
@@ -62,8 +62,8 @@
             "hiring": 0.5634,
             "sustainability": 0.6531,
             "insiderSentiments": 0.5031,
-            "earningsReports": 0.8806999999999999,
-            "dividends": 0.45049999999999996
+            "earningsReports": 0.875,
+            "dividends": 0.44670000000000004
         },
         "sector": {
             "innovativeness": 0.5,
@@ -75,7 +75,7 @@
         }
     },
     "recommendation": {
-        "targetPrice": 48.0,
+        "targetPrice": 47.0,
         "provider": "Argus Research",
         "rating": "SELL"
     },
@@ -106,16 +106,28 @@
     },
     "events": [
         {
-            "eventType": "Commodity Channel Index",
+            "eventType": "Momentum",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "U",
+            "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1710768600,
-            "endDate": 1710768600
+            "startDate": 1710941400,
+            "endDate": 1710941400
         }
     ],
     "reports": [
+        {
+            "id": "3273_Quantitative Report_1710892800000",
+            "headHtml": "Lowering target price to $47.00",
+            "provider": "Argus Research",
+            "reportDate": "2024-03-20T00:00:00Z",
+            "reportTitle": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $47.000000; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium.",
+            "targetPrice": 47.0,
+            "investmentRating": "Bearish",
+            "tickers": [
+                "O"
+            ]
+        },
         {
             "id": "3273_Quantitative Report_1710288000000",
             "headHtml": "Raising target price to $48.00",
@@ -1299,18 +1311,6 @@
             "reportDate": "2022-03-23T00:00:00Z",
             "reportTitle": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $70.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Low.",
             "targetPrice": 70.0,
-            "investmentRating": "Neutral",
-            "tickers": [
-                "O"
-            ]
-        },
-        {
-            "id": "3273_Quantitative Report_1647388800000",
-            "headHtml": "What does Argus have to say about O?",
-            "provider": "Argus Research",
-            "reportDate": "2022-03-16T00:00:00Z",
-            "reportTitle": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $69.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Low.",
-            "targetPrice": 69.0,
             "investmentRating": "Neutral",
             "tickers": [
                 "O"

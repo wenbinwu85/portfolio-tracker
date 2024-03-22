@@ -5,16 +5,16 @@
             "provider": "Trading Central",
             "sector": "Consumer Defensive",
             "shortTermOutlook": {
-                "stateDescription": "All events are bullish.",
+                "stateDescription": "Recent bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 4,
-                "scoreDescription": "Very Strong Bullish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bullish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 2,
                 "sectorScoreDescription": "Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "All events are bullish.",
@@ -45,7 +45,7 @@
             "provider": "Trading Central",
             "support": 44.1154,
             "resistance": 45.45,
-            "stopLoss": 42.176591
+            "stopLoss": 43.135478
         },
         "valuation": {
             "color": 0.5,
@@ -61,8 +61,8 @@
             "hiring": 0.6476000000000001,
             "sustainability": 0.8525,
             "insiderSentiments": 0.7372,
-            "earningsReports": 0.7211,
-            "dividends": 0.9743999999999999
+            "earningsReports": 0.7226,
+            "dividends": 0.9745
         },
         "sector": {
             "innovativeness": 0.5,
@@ -104,13 +104,13 @@
     },
     "events": [
         {
-            "eventType": "Price Crosses Moving Average",
-            "pricePeriod": "W",
-            "tradingHorizon": "L",
-            "tradeType": "L",
+            "eventType": "Hanging Man",
+            "pricePeriod": "D",
+            "tradingHorizon": "S",
+            "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1710509400,
-            "endDate": 1710509400
+            "startDate": 1710941400,
+            "endDate": 1710941400
         }
     ],
     "reports": [
@@ -174,17 +174,6 @@
             ]
         },
         {
-            "id": "3203_Analyst Report_1694602872000",
-            "headHtml": "Analyst Report: Altria Group Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2023-09-13T11:01:12Z",
-            "reportTitle": "Altria Group, originally founded in 1822, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its wholly owned subsidiaries include Philip Morris USA Inc. and John Middleton Co., a leading U.S. cigar manufacturer. Its smoke-free portfolio includes ownership of U.S. Smokeless Tobacco Company LLC and Helix Innovations LLC, a manufacturer of oral nicotine pouches. \r\n\r\nThe company has a majority-owned joint venture, Horizon Innovations LLC (Horizon), for the U.S. marketing and commercialization of heated tobacco stick products. Altria also has equity investments in Anheuser-Busch InBev SA/NV and Cronos Group Inc., a Canadian cannabinoid company. The brand portfolios of its tobacco operating companies include Marlboro, Black & Mild, Copenhagen, on! and Skoal. The shares are a component of the S&P 500.",
-            "investmentRating": "Neutral",
-            "tickers": [
-                "MO"
-            ]
-        },
-        {
             "id": "37646_Market Summary_1694602872000",
             "headHtml": "Market Digest: RY, TFC, MO, TSN, MRNA",
             "provider": "Argus Research",
@@ -196,6 +185,17 @@
                 "RY",
                 "MRNA",
                 "TSN"
+            ]
+        },
+        {
+            "id": "3203_Analyst Report_1694602872000",
+            "headHtml": "Analyst Report: Altria Group Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2023-09-13T11:01:12Z",
+            "reportTitle": "Altria Group, originally founded in 1822, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its wholly owned subsidiaries include Philip Morris USA Inc. and John Middleton Co., a leading U.S. cigar manufacturer. Its smoke-free portfolio includes ownership of U.S. Smokeless Tobacco Company LLC and Helix Innovations LLC, a manufacturer of oral nicotine pouches. \r\n\r\nThe company has a majority-owned joint venture, Horizon Innovations LLC (Horizon), for the U.S. marketing and commercialization of heated tobacco stick products. Altria also has equity investments in Anheuser-Busch InBev SA/NV and Cronos Group Inc., a Canadian cannabinoid company. The brand portfolios of its tobacco operating companies include Marlboro, Black & Mild, Copenhagen, on! and Skoal. The shares are a component of the S&P 500.",
+            "investmentRating": "Neutral",
+            "tickers": [
+                "MO"
             ]
         },
         {
@@ -976,18 +976,6 @@
             ]
         },
         {
-            "id": "25178_Market Summary_1570690400000",
-            "headHtml": "Market Digest: MO, T, KSS",
-            "provider": "Argus Research",
-            "reportDate": "2019-10-10T06:53:20Z",
-            "reportTitle": "Market Environment and Outlook for 2019",
-            "tickers": [
-                "MO",
-                "T",
-                "KSS"
-            ]
-        },
-        {
             "id": "3203_Analyst Report_1570690400000",
             "headHtml": "Analyst Report: Altria Group Inc.",
             "provider": "Argus Research",
@@ -997,6 +985,18 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "MO"
+            ]
+        },
+        {
+            "id": "25178_Market Summary_1570690400000",
+            "headHtml": "Market Digest: MO, T, KSS",
+            "provider": "Argus Research",
+            "reportDate": "2019-10-10T06:53:20Z",
+            "reportTitle": "Market Environment and Outlook for 2019",
+            "tickers": [
+                "MO",
+                "T",
+                "KSS"
             ]
         },
         {
@@ -1585,6 +1585,15 @@
     ],
     "secReports": [
         {
+            "id": "0001193125-24-072688_764180",
+            "type": "Tender Offer/Acquisition Reports",
+            "title": "SC 13D/A : Tender Offer/Acquisition Reports",
+            "description": "Schedule filed to report acquisition of beneficial ownership of 5% or more of a class of equity securities",
+            "filingDate": 1710892800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001668717/000119312524072688/thumbnail.png",
+            "formType": "SC 13D/A"
+        },
+        {
             "id": "0001193125-24-071340_764180",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -1961,15 +1970,6 @@
             "filingDate": 1658966400000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000764180/000076418022000090/thumbnail.png",
             "formType": "8-K"
-        },
-        {
-            "id": "0000764180-22-000071_764180",
-            "type": "Periodic Financial Reports",
-            "title": "10-K/A : Periodic Financial Reports",
-            "description": "Annual report pursuant to Section 13 and 15(d)",
-            "filingDate": 1654041600000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000764180/000076418022000071/thumbnail.png",
-            "formType": "10-K/A"
         }
     ]
 }

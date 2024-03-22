@@ -10,20 +10,20 @@
                 "score": 4,
                 "scoreDescription": "Very Strong Bearish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 4,
-                "sectorScoreDescription": "Very Strong Bearish Evidence",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bullish events outweigh bearish events.",
                 "direction": "Bullish",
                 "score": 1,
                 "scoreDescription": "Weak Bullish Evidence",
-                "sectorDirection": "Bearish",
-                "sectorScore": 1,
-                "sectorScoreDescription": "Weak Bearish Evidence",
+                "sectorDirection": "Bullish",
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bullish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 1,
                 "indexScoreDescription": "Weak Bearish Evidence"
@@ -45,7 +45,7 @@
             "provider": "Trading Central",
             "support": 134.85,
             "resistance": 144.005,
-            "stopLoss": 130.799055
+            "stopLoss": 132.662578
         },
         "valuation": {
             "color": 0.0,
@@ -61,8 +61,8 @@
             "innovativeness": 0.5058,
             "sustainability": 0.4082,
             "insiderSentiments": 0.4783,
-            "earningsReports": 0.9053,
-            "dividends": 0.1675
+            "earningsReports": 0.8996,
+            "dividends": 0.16620000000000001
         },
         "sector": {
             "innovativeness": 0.5,
@@ -105,9 +105,9 @@
     },
     "events": [
         {
-            "eventType": "Short-term KST",
+            "eventType": "Price Crosses Moving Average",
             "pricePeriod": "D",
-            "tradingHorizon": "S",
+            "tradingHorizon": "I",
             "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
             "startDate": 1710855000,
@@ -515,6 +515,18 @@
             ]
         },
         {
+            "id": "4555_Analyst Report_1645709895000",
+            "headHtml": "Analyst Report: Digital Realty Trust Inc",
+            "provider": "Argus Research",
+            "reportDate": "2022-02-24T13:38:15Z",
+            "reportTitle": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company is based in Austin, Texas, and operates in more than 42 metropolitan markets on five continents. Recent expansions have focused on Africa and Asia.",
+            "targetPrice": 165.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "DLR"
+            ]
+        },
+        {
             "id": "32233_Market Update_1645709895000",
             "headHtml": "Market Update: AMGN, CMI, LOW, CBOE, DLR",
             "provider": "Argus Research",
@@ -526,18 +538,6 @@
                 "DLR",
                 "AMGN",
                 "CMI"
-            ]
-        },
-        {
-            "id": "4555_Analyst Report_1645709895000",
-            "headHtml": "Analyst Report: Digital Realty Trust Inc",
-            "provider": "Argus Research",
-            "reportDate": "2022-02-24T13:38:15Z",
-            "reportTitle": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company is based in Austin, Texas, and operates in more than 42 metropolitan markets on five continents. Recent expansions have focused on Africa and Asia.",
-            "targetPrice": 165.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "DLR"
             ]
         },
         {
@@ -830,18 +830,6 @@
             ]
         },
         {
-            "id": "4555_Analyst Report_1597017600000",
-            "headHtml": "Analyst Report: Digital Realty Trust Inc",
-            "provider": "Argus Research",
-            "reportDate": "2020-08-10T00:00:00Z",
-            "reportTitle": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 36 metropolitan markets on five continents.",
-            "targetPrice": 180.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "DLR"
-            ]
-        },
-        {
             "id": "27630_Market Summary_1597017600000",
             "headHtml": "Market Digest: BDX, MCHP, PCAR, TSCO, JCI, VLO, WDC, XOM, DLR, CPRI",
             "provider": "Argus Research",
@@ -858,6 +846,18 @@
                 "DLR",
                 "CPRI",
                 "TSCO"
+            ]
+        },
+        {
+            "id": "4555_Analyst Report_1597017600000",
+            "headHtml": "Analyst Report: Digital Realty Trust Inc",
+            "provider": "Argus Research",
+            "reportDate": "2020-08-10T00:00:00Z",
+            "reportTitle": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 36 metropolitan markets on five continents.",
+            "targetPrice": 180.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "DLR"
             ]
         },
         {

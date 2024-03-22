@@ -7,23 +7,23 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 2,
-                "scoreDescription": "Bearish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bearish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 4,
-                "sectorScoreDescription": "Very Strong Bearish Evidence",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
                 "score": 2,
                 "scoreDescription": "Bearish Evidence",
-                "sectorDirection": "Bearish",
-                "sectorScore": 1,
-                "sectorScoreDescription": "Weak Bearish Evidence",
+                "sectorDirection": "Bullish",
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bullish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 1,
                 "indexScoreDescription": "Weak Bearish Evidence"
@@ -45,12 +45,12 @@
             "provider": "Trading Central",
             "support": 28.725,
             "resistance": 29.68,
-            "stopLoss": 27.988502
+            "stopLoss": 27.713964
         },
         "valuation": {
             "color": 1.0,
             "description": "Undervalued",
-            "discount": "88%",
+            "discount": "89%",
             "relativeValue": "Discount",
             "provider": "Trading Central"
         }
@@ -60,8 +60,8 @@
         "company": {
             "innovativeness": 0.0888,
             "insiderSentiments": 0.5509000000000001,
-            "earningsReports": 0.6023,
-            "dividends": 0.4329
+            "earningsReports": 0.5947,
+            "dividends": 0.433
         },
         "sector": {
             "innovativeness": 0.5,
@@ -73,25 +73,37 @@
         }
     },
     "recommendation": {
-        "targetPrice": 31.0,
+        "targetPrice": 30.0,
         "provider": "Argus Research",
-        "rating": "HOLD"
+        "rating": "SELL"
     },
     "upsell": {
         "companyName": "VICI Properties Inc."
     },
     "events": [
         {
-            "eventType": "Commodity Channel Index",
+            "eventType": "Key Reversal Bar (Bullish)",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "U",
+            "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1710855000,
-            "endDate": 1710855000
+            "startDate": 1710941400,
+            "endDate": 1710941400
         }
     ],
     "reports": [
+        {
+            "id": "6054_Quantitative Report_1710892800000",
+            "headHtml": "Rating decreased to a SELL",
+            "provider": "Argus Research",
+            "reportDate": "2024-03-20T00:00:00Z",
+            "reportTitle": "VICI PROPERTIES INC has an Investment Rating of SELL; a target price of $30.000000; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium.",
+            "targetPrice": 30.0,
+            "investmentRating": "Bearish",
+            "tickers": [
+                "VICI"
+            ]
+        },
         {
             "id": "6054_Quantitative Report_1710288000000",
             "headHtml": "Raising target price to $31.00",
@@ -1232,15 +1244,6 @@
             "formType": "10-Q"
         },
         {
-            "id": "0001705696-23-000072_1705696",
-            "type": "Periodic Financial Reports",
-            "title": "10-Q : Periodic Financial Reports",
-            "description": "Quarterly report pursuant to Section 13 or 15(d)",
-            "filingDate": 1682899200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000170569623000072/thumbnail.png",
-            "formType": "10-Q"
-        },
-        {
             "id": "0001705696-23-000071_1705696",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -1248,6 +1251,15 @@
             "filingDate": 1682899200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000170569623000071/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0001705696-23-000072_1705696",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1682899200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000170569623000072/thumbnail.png",
+            "formType": "10-Q"
         },
         {
             "id": "0001705696-23-000065_1705696",
@@ -1394,15 +1406,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0001705696-22-000130_1705696",
-            "type": "Periodic Financial Reports",
-            "title": "10-Q : Periodic Financial Reports",
-            "description": "Quarterly report pursuant to Section 13 or 15(d)",
-            "filingDate": 1666828800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001920791/000170569622000130/thumbnail.png",
-            "formType": "10-Q"
-        },
-        {
             "id": "0001705696-22-000129_1705696",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -1410,6 +1413,15 @@
             "filingDate": 1666828800000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001920791/000170569622000129/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0001705696-22-000130_1705696",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1666828800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001920791/000170569622000130/thumbnail.png",
+            "formType": "10-Q"
         },
         {
             "id": "0001705696-22-000111_1705696",

@@ -7,23 +7,23 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 2,
-                "scoreDescription": "Bullish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bullish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 4,
-                "sectorScoreDescription": "Very Strong Bearish Evidence",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "All events are bullish.",
                 "direction": "Bullish",
                 "score": 2,
                 "scoreDescription": "Bullish Evidence",
-                "sectorDirection": "Bearish",
-                "sectorScore": 1,
-                "sectorScoreDescription": "Weak Bearish Evidence",
+                "sectorDirection": "Bullish",
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bullish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 1,
                 "indexScoreDescription": "Weak Bearish Evidence"
@@ -44,7 +44,7 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 118.0,
-            "stopLoss": 144.260785
+            "stopLoss": 146.193108
         },
         "valuation": {
             "color": 0.0,
@@ -61,8 +61,8 @@
             "hiring": 0.6901,
             "sustainability": 0.5611999999999999,
             "insiderSentiments": 0.9503,
-            "earningsReports": 0.7064,
-            "dividends": 0.37020000000000003
+            "earningsReports": 0.7045,
+            "dividends": 0.35090000000000005
         },
         "sector": {
             "innovativeness": 0.5,
@@ -105,13 +105,13 @@
     },
     "events": [
         {
-            "eventType": "Momentum",
+            "eventType": "MACD",
             "pricePeriod": "D",
             "tradingHorizon": "S",
             "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1710855000,
-            "endDate": 1710855000
+            "startDate": 1710941400,
+            "endDate": 1710941400
         }
     ],
     "reports": [
@@ -365,18 +365,6 @@
             ]
         },
         {
-            "id": "3403_Analyst Report_1683804637000",
-            "headHtml": "Analyst Report: Simon Property Group, Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2023-05-11T11:30:37Z",
-            "reportTitle": "Simon Property Group Inc., based in Indianapolis, is a retail REIT that is one of the largest owners of high-end malls, outlet centers, and lifestyle destinations in North America, Asia, and Europe. The company has expanded its profile by investing in the retail operations of several well-known brands, including JC Penny and SPARC (Aeropostale, Reebok, Nautica, Izod, and Forever 21). NOI from these retail investments is approximately 8% of total NOI. SPG also operates Simon Brand Ventures, which offers appraisals and real estate services.\r\n\r\nSimon owns or has interests in 230 properties with 184 million square feet of leasable space. U.S. malls and outlets account for approximately 72% of NOI. Properties in California, Florida, and Texas account for just under half of the portfolio. Additionally, the company has an 80% interest in the Taubman Group and a 22% interest in Klepierre, a Paris-based real estate firm. Recent development activity includes construction of a lifestyle center in Atlanta and premium outlets in Tokyo and South Korea. \r\n\r\nThe REIT has a varied tenant base with its largest U.S. tenant, Gap Inc., has almost 300 locations, but accounting for less than 3% of base minimum rents.  SPG is a member of the S&P 500 and has a market cap of $36.6 billion.",
-            "targetPrice": 140.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "SPG"
-            ]
-        },
-        {
             "id": "36436_Market Summary_1683804637000",
             "headHtml": "Market Digest: ACM, BIIB, CENT, DINO, SPG, TSN, VSH, KKR, ETSY",
             "provider": "Argus Research",
@@ -392,6 +380,18 @@
                 "SPG",
                 "TSN",
                 "BIIB"
+            ]
+        },
+        {
+            "id": "3403_Analyst Report_1683804637000",
+            "headHtml": "Analyst Report: Simon Property Group, Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2023-05-11T11:30:37Z",
+            "reportTitle": "Simon Property Group Inc., based in Indianapolis, is a retail REIT that is one of the largest owners of high-end malls, outlet centers, and lifestyle destinations in North America, Asia, and Europe. The company has expanded its profile by investing in the retail operations of several well-known brands, including JC Penny and SPARC (Aeropostale, Reebok, Nautica, Izod, and Forever 21). NOI from these retail investments is approximately 8% of total NOI. SPG also operates Simon Brand Ventures, which offers appraisals and real estate services.\r\n\r\nSimon owns or has interests in 230 properties with 184 million square feet of leasable space. U.S. malls and outlets account for approximately 72% of NOI. Properties in California, Florida, and Texas account for just under half of the portfolio. Additionally, the company has an 80% interest in the Taubman Group and a 22% interest in Klepierre, a Paris-based real estate firm. Recent development activity includes construction of a lifestyle center in Atlanta and premium outlets in Tokyo and South Korea. \r\n\r\nThe REIT has a varied tenant base with its largest U.S. tenant, Gap Inc., has almost 300 locations, but accounting for less than 3% of base minimum rents.  SPG is a member of the S&P 500 and has a market cap of $36.6 billion.",
+            "targetPrice": 140.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "SPG"
             ]
         },
         {
@@ -1847,15 +1847,6 @@
             "formType": "DEF 14A"
         },
         {
-            "id": "0001104659-23-036090_1063761",
-            "type": "Annual Report to Shareholders",
-            "title": "ARS : Annual Report to Shareholders",
-            "description": "Annual report to security holders",
-            "filingDate": 1679529600000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001063761/000110465923036090/thumbnail.png",
-            "formType": "ARS"
-        },
-        {
             "id": "0001104659-23-036098_1063761",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -1863,6 +1854,15 @@
             "filingDate": 1679529600000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001063761/000110465923036098/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0001104659-23-036090_1063761",
+            "type": "Annual Report to Shareholders",
+            "title": "ARS : Annual Report to Shareholders",
+            "description": "Annual report to security holders",
+            "filingDate": 1679529600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001063761/000110465923036090/thumbnail.png",
+            "formType": "ARS"
         },
         {
             "id": "0001104659-23-036086_1063761",
