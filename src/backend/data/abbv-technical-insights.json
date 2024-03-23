@@ -7,14 +7,14 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 4,
-                "scoreDescription": "Very Strong Bearish Evidence",
+                "score": 2,
+                "scoreDescription": "Bearish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 3,
                 "sectorScoreDescription": "Strong Bearish Evidence",
-                "indexDirection": "Bearish",
+                "indexDirection": "Bullish",
                 "indexScore": 2,
-                "indexScoreDescription": "Bearish Evidence"
+                "indexScoreDescription": "Bullish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "The bullish and bearish events are balanced.",
@@ -45,23 +45,23 @@
             "provider": "Trading Central",
             "support": 147.87,
             "resistance": 179.79,
-            "stopLoss": 166.615401
+            "stopLoss": 171.920668
         },
         "valuation": {
             "color": 0.5,
             "description": "Near Fair Value",
-            "discount": "26%",
+            "discount": "25%",
             "provider": "Trading Central"
         }
     },
     "companySnapshot": {
         "sectorInfo": "Healthcare",
         "company": {
-            "innovativeness": 0.9525,
+            "innovativeness": 0.9526,
             "hiring": 0.9181,
-            "sustainability": 0.9159999999999999,
+            "sustainability": 0.9237000000000001,
             "insiderSentiments": 0.09,
-            "earningsReports": 0.9749,
+            "earningsReports": 0.9745999999999999,
             "dividends": 0.7791
         },
         "sector": {
@@ -104,13 +104,13 @@
     },
     "events": [
         {
-            "eventType": "Price Crosses Moving Average",
+            "eventType": "Inside Bar (Bullish)",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "S",
+            "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
             "startDate": 1710941400,
-            "endDate": 1710941400
+            "endDate": 1711027800
         }
     ],
     "reports": [
@@ -1179,18 +1179,6 @@
             ]
         },
         {
-            "id": "3610_Analyst Report_1607432865000",
-            "headHtml": "Analyst Report: AbbVie Inc",
-            "provider": "Argus Research",
-            "reportDate": "2020-12-08T13:07:45Z",
-            "reportTitle": "AbbVie, a research-based biopharmaceutical company, was spun off from Abbott Laboratories in January 2013. The company is based in suburban Chicago. The shares are a component of the S&P 500.",
-            "targetPrice": 130.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "ABBV"
-            ]
-        },
-        {
             "id": "28614_Market Update_1607432865000",
             "headHtml": "Market Update: CC, PEAK, DG, ABBV, CC",
             "provider": "Argus Research",
@@ -1200,6 +1188,18 @@
                 "CC",
                 "DG",
                 "PEAK",
+                "ABBV"
+            ]
+        },
+        {
+            "id": "3610_Analyst Report_1607432865000",
+            "headHtml": "Analyst Report: AbbVie Inc",
+            "provider": "Argus Research",
+            "reportDate": "2020-12-08T13:07:45Z",
+            "reportTitle": "AbbVie, a research-based biopharmaceutical company, was spun off from Abbott Laboratories in January 2013. The company is based in suburban Chicago. The shares are a component of the S&P 500.",
+            "targetPrice": 130.0,
+            "investmentRating": "Bullish",
+            "tickers": [
                 "ABBV"
             ]
         },
@@ -1355,6 +1355,18 @@
             ]
         },
         {
+            "id": "3610_Analyst Report_1597708800000",
+            "headHtml": "Analyst Report: AbbVie Inc",
+            "provider": "Argus Research",
+            "reportDate": "2020-08-18T00:00:00Z",
+            "reportTitle": "AbbVie, a research-based biopharmaceutical company, was spun off from Abbott Laboratories in January 2013. The company is based in suburban Chicago. The shares are a component of the S&P 500.",
+            "targetPrice": 115.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "ABBV"
+            ]
+        },
+        {
             "id": "27712_Market Update_1597708800000",
             "headHtml": "Market Update: ABBV, MKL, FOXA, HOG, SYY, WRK, WSM, AEP",
             "provider": "Argus Research",
@@ -1369,18 +1381,6 @@
                 "ABBV",
                 "AEP",
                 "MKL"
-            ]
-        },
-        {
-            "id": "3610_Analyst Report_1597708800000",
-            "headHtml": "Analyst Report: AbbVie Inc",
-            "provider": "Argus Research",
-            "reportDate": "2020-08-18T00:00:00Z",
-            "reportTitle": "AbbVie, a research-based biopharmaceutical company, was spun off from Abbott Laboratories in January 2013. The company is based in suburban Chicago. The shares are a component of the S&P 500.",
-            "targetPrice": 115.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "ABBV"
             ]
         },
         {
@@ -1965,8 +1965,8 @@
     ],
     "sigDevs": [
         {
-            "headline": "Abbvie Inc Says CEO Richard Gonzalez's 2023 Total Compensation Was $25.7 Million Versus $26.3 Million In 2022 - SEC Filing",
-            "date": "2024-03-04"
+            "headline": "FDA Approves Mirvetuximab Soravtansine-Gynx For Ovarian Cancer",
+            "date": "2024-03-22"
         }
     ],
     "secReports": [

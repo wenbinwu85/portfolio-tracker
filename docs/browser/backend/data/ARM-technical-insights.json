@@ -7,14 +7,14 @@
             "shortTermOutlook": {
                 "stateDescription": "All events are bearish.",
                 "direction": "Bearish",
-                "score": 2,
-                "scoreDescription": "Bearish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bearish Evidence",
                 "sectorDirection": "Bullish",
-                "sectorScore": 4,
-                "sectorScoreDescription": "Very Strong Bullish Evidence",
-                "indexDirection": "Bearish",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bullish Evidence",
+                "indexDirection": "Bullish",
                 "indexScore": 2,
-                "indexScoreDescription": "Bearish Evidence"
+                "indexScoreDescription": "Bullish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "There are no events.",
@@ -47,7 +47,7 @@
         "valuation": {
             "color": 0.0,
             "description": "Overvalued",
-            "discount": "1%",
+            "discount": "0%",
             "relativeValue": "Premium",
             "provider": "Trading Central"
         }
@@ -93,13 +93,13 @@
     },
     "events": [
         {
-            "eventType": "Triple Moving Average Crossover",
+            "eventType": "Commodity Channel Index",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "S",
+            "tradeType": "U",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1710423000,
-            "endDate": 1710423000
+            "startDate": 1710941400,
+            "endDate": 1710941400
         }
     ],
     "sigDevs": [
@@ -227,15 +227,6 @@
             "formType": "DRS"
         },
         {
-            "id": "0000950123-23-006467_1973239",
-            "type": "Offering Registrations",
-            "title": "DRSLTR : Offering Registrations",
-            "description": "Draft Offering Statement Letter",
-            "filingDate": 1690761600000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001973239/000095012323006467/thumbnail.png",
-            "formType": "DRSLTR"
-        },
-        {
             "id": "0000950123-23-006466_1973239",
             "type": "Offering Registrations",
             "title": "DRS/A : Offering Registrations",
@@ -243,6 +234,15 @@
             "filingDate": 1690761600000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001973239/000095012323006466/thumbnail.png",
             "formType": "DRS/A"
+        },
+        {
+            "id": "0000950123-23-006467_1973239",
+            "type": "Offering Registrations",
+            "title": "DRSLTR : Offering Registrations",
+            "description": "Draft Offering Statement Letter",
+            "filingDate": 1690761600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001973239/000095012323006467/thumbnail.png",
+            "formType": "DRSLTR"
         },
         {
             "id": "0000950123-23-005680_1973239",

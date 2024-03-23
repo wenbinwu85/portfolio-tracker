@@ -5,16 +5,16 @@
             "provider": "Trading Central",
             "sector": "Energy",
             "shortTermOutlook": {
-                "stateDescription": "Recent bullish events outweigh bearish events.",
+                "stateDescription": "Bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 2,
-                "scoreDescription": "Bullish Evidence",
+                "score": 1,
+                "scoreDescription": "Weak Bullish Evidence",
                 "sectorDirection": "Bullish",
                 "sectorScore": 2,
                 "sectorScoreDescription": "Bullish Evidence",
-                "indexDirection": "Bearish",
+                "indexDirection": "Bullish",
                 "indexScore": 2,
-                "indexScoreDescription": "Bearish Evidence"
+                "indexScoreDescription": "Bullish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Bullish events outweigh bearish events.",
@@ -45,7 +45,7 @@
             "provider": "Trading Central",
             "support": 13.885,
             "resistance": 15.68,
-            "stopLoss": 15.090607
+            "stopLoss": 15.191931
         },
         "valuation": {
             "color": 1.0,
@@ -61,7 +61,7 @@
             "innovativeness": 0.2731,
             "sustainability": 0.9265000000000001,
             "insiderSentiments": 0.8984000000000001,
-            "earningsReports": 0.8684000000000001,
+            "earningsReports": 0.8679000000000001,
             "dividends": 0.7254999999999999
         },
         "sector": {
@@ -100,13 +100,13 @@
     },
     "events": [
         {
-            "eventType": "Commodity Channel Index",
+            "eventType": "Inside Bar (Bearish)",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "L",
+            "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1710509400,
-            "endDate": 1710509400
+            "startDate": 1710941400,
+            "endDate": 1711027800
         }
     ],
     "sigDevs": [

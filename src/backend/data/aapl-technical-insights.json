@@ -10,11 +10,11 @@
                 "score": 3,
                 "scoreDescription": "Strong Bullish Evidence",
                 "sectorDirection": "Bullish",
-                "sectorScore": 4,
-                "sectorScoreDescription": "Very Strong Bullish Evidence",
-                "indexDirection": "Bearish",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bullish Evidence",
+                "indexDirection": "Bullish",
                 "indexScore": 2,
-                "indexScoreDescription": "Bearish Evidence"
+                "indexScoreDescription": "Bullish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "All events are bearish.",
@@ -43,14 +43,14 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 173.19,
-            "resistance": 179.35,
-            "stopLoss": 172.622997
+            "support": 150.66,
+            "resistance": 173.19,
+            "stopLoss": 165.976222
         },
         "valuation": {
             "color": 0.5,
             "description": "Near Fair Value",
-            "discount": "-2%",
+            "discount": "-1%",
             "provider": "Trading Central"
         }
     },
@@ -61,7 +61,7 @@
             "hiring": 0.9512999999999999,
             "sustainability": 0.5714,
             "insiderSentiments": 0.217,
-            "earningsReports": 0.8431000000000001,
+            "earningsReports": 0.8418000000000001,
             "dividends": 0.1013
         },
         "sector": {
@@ -95,26 +95,53 @@
     },
     "upsellSearchDD": {
         "researchReports": {
-            "reportId": "MS_0P000000GY_AnalystReport_1711042614000",
-            "provider": "Morningstar",
-            "title": "Apple: We're Comfortable With Our Thesis in Light of Antitrust Lawsuit",
-            "reportDate": "2024-03-21T17:36:54Z",
-            "summary": "Apple is among the largest companies in the world, with a broad portfolio of hardware and software products targeted at consumers and businesses. Apple\u2019s iPhone makes up a majority of the firm sales, and Apple\u2019s other products like Mac, iPad, and Watch are designed around the iPhone as the focal point of an expansive software ecosystem. Apple has progressively worked to add new applications, like streaming video, subscription bundles, and augmented reality. The firm designs its own software and semiconductors while working with subcontractors like Foxconn and TSMC to build its products and chips. Slightly less than half of Apple\u2019s sales come directly through its flagship stores, with a majority of sales coming indirectly through partnerships and distribution. ",
-            "investmentRating": "Neutral"
+            "reportId": "ARGUS_2660_AnalystReport_1711127989000",
+            "provider": "Argus",
+            "title": "Legal battles and an AI tie-up",
+            "reportDate": "2024-03-22T17:19:49Z",
+            "summary": "Apple manufactures smartphones, tablets, PCs, software, and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including AirPods, Beats headphones, and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
+            "investmentRating": "Bullish"
         }
     },
     "events": [
         {
-            "eventType": "Price Crosses Moving Average",
+            "eventType": "Short-term KST",
             "pricePeriod": "D",
             "tradingHorizon": "S",
             "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1710941400,
-            "endDate": 1710941400
+            "startDate": 1711027800,
+            "endDate": 1711027800
         }
     ],
     "reports": [
+        {
+            "id": "2660_Analyst Report_1711127989000",
+            "headHtml": "Analyst Report: Apple Inc",
+            "provider": "Argus Research",
+            "reportDate": "2024-03-22T17:19:49Z",
+            "reportTitle": "Apple manufactures smartphones, tablets, PCs, software, and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including AirPods, Beats headphones, and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
+            "targetPrice": 230.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "AAPL"
+            ]
+        },
+        {
+            "id": "39489_Market Update_1711127089000",
+            "headHtml": "Market Update: AAPL, ADM, FDX, KR, NKE, WTRG",
+            "provider": "Argus Research",
+            "reportDate": "2024-03-22T17:04:49Z",
+            "reportTitle": "U.S. markets were mixed on Friday morning, but are still on track for gains for the week. On the earnings front, FedEx (FDX) rose 7% on an earnings beat, while Nike (NKE) was down about 7% on a weak outlook. The Dow was down 0.5%, the S&P 500 fell 0.1% and the Nasdaq gained less than 0.1%. Crude oil traded above $80 per barrel, while gold fell $16 to $2169 per ounce.",
+            "tickers": [
+                "AAPL",
+                "KR",
+                "NKE",
+                "ADM",
+                "WTRG",
+                "FDX"
+            ]
+        },
         {
             "id": "39280_Top/Bottom Insider Activity_1709552011000",
             "headHtml": "Daily \u2013 Vickers Top Buyers & Sellers for 03/04/2024",
@@ -1873,37 +1900,12 @@
                 "FTV",
                 "ECL"
             ]
-        },
-        {
-            "id": "28167_Market Summary_1602633600000",
-            "headHtml": "Market Digest: AAPL, C, ECL, FTV",
-            "provider": "Argus Research",
-            "reportDate": "2020-10-14T00:00:00Z",
-            "reportTitle": "The stock market closed on October 9 with a winning session, ending its best week in three months. With a close at 3,477, the S&P 500 pulled within 3% of its all-time high of 3,588 from 9/2/20, and the index moved higher still on October 12. The September sell-off -- which resulted in a near-correction (defined as down 10%) for the broad market and full corrections for leading Technology names -- cleared away some (only some) of the excessive optimism. It also partly (only partly) restored some sector balance; two of the best sectors in 4Q20-to-date have been out of favor all year.",
-            "tickers": [
-                "AAPL",
-                "C",
-                "FTV",
-                "ECL"
-            ]
-        },
-        {
-            "id": "2660_Analyst Report_1602633600000",
-            "headHtml": "Analyst Report: Apple Inc",
-            "provider": "Argus Research",
-            "reportDate": "2020-10-14T00:00:00Z",
-            "reportTitle": "Apple manufactures Smartphones, tablets, PCs, software and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including AirPods, Beats headphones and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
-            "targetPrice": 150.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "AAPL"
-            ]
         }
     ],
     "sigDevs": [
         {
-            "headline": "Apple, Google To Be Hit By First Probes Under EU Digital Law; Meta Also Expected To Face Scrutiny - Bloomberg News",
-            "date": "2024-03-21"
+            "headline": "U.S. Justice Department Antitrust Chief Jonathan Kanter On Apple Lawsuit Says Investigation Was Methodical, Involved Millions Of Documents\u2013 CNBC Interview",
+            "date": "2024-03-22"
         }
     ],
     "secReports": [

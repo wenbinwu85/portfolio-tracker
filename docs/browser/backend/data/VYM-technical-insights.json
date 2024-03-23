@@ -4,13 +4,13 @@
         "technicalEvents": {
             "provider": "Trading Central",
             "shortTermOutlook": {
-                "stateDescription": "Recent bearish events outweigh bullish events.",
-                "direction": "Bearish",
-                "score": 2,
-                "scoreDescription": "Bearish Evidence",
-                "indexDirection": "Bearish",
+                "stateDescription": "Recent bullish events outweigh bearish events.",
+                "direction": "Bullish",
+                "score": 1,
+                "scoreDescription": "Weak Bullish Evidence",
+                "indexDirection": "Bullish",
                 "indexScore": 2,
-                "indexScoreDescription": "Bearish Evidence"
+                "indexScoreDescription": "Bullish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "All events are bullish.",
@@ -34,8 +34,7 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 106.72,
-            "resistance": 118.74,
-            "stopLoss": 114.597846
+            "stopLoss": 113.763436
         },
         "valuation": {
             "provider": "Trading Central"
@@ -43,13 +42,13 @@
     },
     "events": [
         {
-            "eventType": "Commodity Channel Index",
+            "eventType": "MACD",
             "pricePeriod": "D",
             "tradingHorizon": "S",
             "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1710941400,
-            "endDate": 1710941400
+            "startDate": 1711027800,
+            "endDate": 1711027800
         }
     ],
     "sigDevs": []

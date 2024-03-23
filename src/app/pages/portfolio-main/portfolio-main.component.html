@@ -18,7 +18,7 @@
 
   <section class="add-border main-section">
     <div class="events-container">
-      <div class="title add-margin">Corporate Events</div>
+      <div class="title">Corporate</div>
       <div *ngFor="let article of corporateEvents" class="add-margin">
         <info-card 
           [icon]="'article'" 
@@ -34,8 +34,26 @@
 
     <mat-divider vertical />
 
-    <div class="events-container">
-      <div class="title add-margin">Calendar Events</div>
+    <div class="grading-events-container">
+      <div class="title">Gradings</div>
+      <div *ngFor="let grading of gradingEvents" class="add-margin">
+        <info-card
+          [icon]="'thumbs_up_down'"
+          [value]="grading.fromGrade + ' --> ' + grading.toGrade"
+          [subtitle]="grading.symbol"
+          [additionalInfo]="grading.firm"
+          [date]="grading.date"
+          [fontSize]="'1rem'"
+          [color]="grading.color"
+          [accentColor]="grading.color"
+        />
+      </div>
+    </div>
+
+    <mat-divider vertical />
+
+    <div class="calendar-events-container">
+      <div class="title">Calendar</div>
       <div class="add-margin day-container">
         <ng-container *ngFor="let calendarDay of mappedEvents; let i = index">
           <div class="event-date">{{ calendarDay[0] | date: 'MMMM d, EEEE' }}</div>
@@ -53,24 +71,6 @@
             </ng-container>
           </div>
         </ng-container>
-      </div>
-    </div>
-
-    <mat-divider vertical />
-
-    <div class="events-container">
-      <div class="title add-margin">Upgrades & Downgrades</div>
-      <div *ngFor="let grading of gradingEvents" class="add-margin">
-        <info-card
-          [icon]="'thumbs_up_down'"
-          [value]="grading.fromGrade + ' --> ' + grading.toGrade"
-          [subtitle]="grading.symbol"
-          [additionalInfo]="grading.firm"
-          [date]="grading.date"
-          [fontSize]="'1rem'"
-          [color]="grading.color"
-          [accentColor]="grading.color"
-        />
       </div>
     </div>
   </section>

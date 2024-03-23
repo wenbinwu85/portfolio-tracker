@@ -2,10 +2,6 @@
     display: flex;
 }
 
-.events-container {
-    max-width: 33vw;
-}
-
 .day-container {
     display: flex;
     flex-direction: column;
@@ -20,4 +16,18 @@
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 10px;
+}
+
+.calendar-events-container {
+    min-width: min-content;
+}
+
+.grading-events-container {
+    min-width: max-content;
+}
+
+.calendar-events-container,
+.grading-events-container,
+.events-container {
+    margin-top: 0.5rem;
 }

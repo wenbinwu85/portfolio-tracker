@@ -7,14 +7,14 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 3,
-                "scoreDescription": "Strong Bullish Evidence",
+                "score": 2,
+                "scoreDescription": "Bullish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 3,
                 "sectorScoreDescription": "Strong Bearish Evidence",
-                "indexDirection": "Bearish",
+                "indexDirection": "Bullish",
                 "indexScore": 2,
-                "indexScoreDescription": "Bearish Evidence"
+                "indexScoreDescription": "Bullish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "All events are bullish.",
@@ -45,7 +45,7 @@
             "provider": "Trading Central",
             "support": 27.315,
             "resistance": 28.3,
-            "stopLoss": 26.520237
+            "stopLoss": 26.540169
         },
         "valuation": {
             "color": 1.0,
@@ -58,11 +58,11 @@
     "companySnapshot": {
         "sectorInfo": "Healthcare",
         "company": {
-            "innovativeness": 0.8843000000000001,
+            "innovativeness": 0.8844,
             "hiring": 0.9109999999999999,
-            "sustainability": 0.6639,
+            "sustainability": 0.6695,
             "insiderSentiments": 0.7151000000000001,
-            "earningsReports": 0.98,
+            "earningsReports": 0.9798,
             "dividends": 0.9571
         },
         "sector": {
@@ -75,9 +75,8 @@
         }
     },
     "recommendation": {
-        "targetPrice": 39.0,
         "provider": "Argus Research",
-        "rating": "BUY"
+        "rating": "HOLD"
     },
     "upsell": {
         "msBullishSummary": [
@@ -116,6 +115,30 @@
         }
     ],
     "reports": [
+        {
+            "id": "3305_Analyst Report_1711105128000",
+            "headHtml": "Analyst Report: Pfizer Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2024-03-22T10:58:48Z",
+            "reportTitle": "Pfizer is a leading developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
+            "investmentRating": "Neutral",
+            "tickers": [
+                "PFE"
+            ]
+        },
+        {
+            "id": "39482_Market Summary_1711104228000",
+            "headHtml": "Market Digest: ACN, PFE, SRE, PANW",
+            "provider": "Argus Research",
+            "reportDate": "2024-03-22T10:43:48Z",
+            "reportTitle": "Stocks rallied on Thursday, extending yesterday's gains on rate-cut optimism. Turning to stocks, shares of Apple (AAPL) are down after the U.S. Department of Justice filed a lawsuit accusing the company of engineering a monopoly in the smartphone market. Bank stocks are up today as investors are optimistic that the anticipated rate cuts this year will drive more transactions. The S&P 500 is up 0.3%, the Dow is up 0.7%, the Nasdaq is up 0.2%, and the Russell 2000 is up 1.16%.",
+            "tickers": [
+                "SRE",
+                "ACN",
+                "PFE",
+                "PANW"
+            ]
+        },
         {
             "id": "39326_Technical Analysis_1709812383000",
             "headHtml": "Technical Assessment: Neutral in the Intermediate-Term",
@@ -545,6 +568,18 @@
             ]
         },
         {
+            "id": "3305_Analyst Report_1675686868000",
+            "headHtml": "Analyst Report: Pfizer Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2023-02-06T12:34:28Z",
+            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
+            "targetPrice": 60.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "PFE"
+            ]
+        },
+        {
             "id": "35495_Market Summary_1675686868000",
             "headHtml": "Market Digest: AMGN, ASH, EPD, LAZ, MMM, MO, PFE, ROP, SBUX, SWK, APTV, AGNC",
             "provider": "Argus Research",
@@ -563,18 +598,6 @@
                 "AMGN",
                 "PFE",
                 "APTV"
-            ]
-        },
-        {
-            "id": "3305_Analyst Report_1675686868000",
-            "headHtml": "Analyst Report: Pfizer Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2023-02-06T12:34:28Z",
-            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
-            "targetPrice": 60.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "PFE"
             ]
         },
         {
@@ -1543,18 +1566,6 @@
             ]
         },
         {
-            "id": "28051_Market Update_1601337600000",
-            "headHtml": "Market Update: DVN, KMX, PFE",
-            "provider": "Argus Research",
-            "reportDate": "2020-09-29T00:00:00Z",
-            "reportTitle": "Stocks fell on Tuesday morning, giving back some of Monday's gains as investors awaited the first presidential debate. On the economic front, the Commerce Department said that the U.S. trade deficit in goods rose 3.5% to $82.9 billion in August, reflecting strong imports of consumer goods and slower growth in exports. The increased deficit could weigh on 3Q GDP. Meanwhile, the Conference Board reported that its consumer confidence index rose to 101.8 in September, up from 86.3 in August and well above the Reuters consensus forecast of 89.5. The Dow fell 0.5%, the S&P 0.4%, and the Nasdaq 0.1%. Crude oil traded near $39 per barrel, while gold rose $10 to $1892 per ounce.",
-            "tickers": [
-                "KMX",
-                "DVN",
-                "PFE"
-            ]
-        },
-        {
             "id": "3305_Analyst Report_1601337600000",
             "headHtml": "Analyst Report: Pfizer Inc.",
             "provider": "Argus Research",
@@ -1563,6 +1574,18 @@
             "targetPrice": 55.0,
             "investmentRating": "Bullish",
             "tickers": [
+                "PFE"
+            ]
+        },
+        {
+            "id": "28051_Market Update_1601337600000",
+            "headHtml": "Market Update: DVN, KMX, PFE",
+            "provider": "Argus Research",
+            "reportDate": "2020-09-29T00:00:00Z",
+            "reportTitle": "Stocks fell on Tuesday morning, giving back some of Monday's gains as investors awaited the first presidential debate. On the economic front, the Commerce Department said that the U.S. trade deficit in goods rose 3.5% to $82.9 billion in August, reflecting strong imports of consumer goods and slower growth in exports. The increased deficit could weigh on 3Q GDP. Meanwhile, the Conference Board reported that its consumer confidence index rose to 101.8 in September, up from 86.3 in August and well above the Reuters consensus forecast of 89.5. The Dow fell 0.5%, the S&P 0.4%, and the Nasdaq 0.1%. Crude oil traded near $39 per barrel, while gold rose $10 to $1892 per ounce.",
+            "tickers": [
+                "KMX",
+                "DVN",
                 "PFE"
             ]
         },
@@ -1649,17 +1672,6 @@
             ]
         },
         {
-            "id": "27364_Market Summary_1594192370000",
-            "headHtml": "Market Digest: TMUS, PFE",
-            "provider": "Argus Research",
-            "reportDate": "2020-07-08T07:12:50Z",
-            "reportTitle": "In the first quarter, the S&P 500 declined 20% on a capital-appreciation basis (excluding dividends). In the second quarter, the index jumped back by a rounded 20%. Sector performance was abysmal across the board in the first quarter, while second-quarter sector performance showed some clear trends. The sector-performance map in the first half may hold some clues for second-half performance.",
-            "tickers": [
-                "TMUS",
-                "PFE"
-            ]
-        },
-        {
             "id": "3305_Analyst Report_1594192370000",
             "headHtml": "Analyst Report: Pfizer Inc.",
             "provider": "Argus Research",
@@ -1668,6 +1680,17 @@
             "targetPrice": 55.0,
             "investmentRating": "Bullish",
             "tickers": [
+                "PFE"
+            ]
+        },
+        {
+            "id": "27364_Market Summary_1594192370000",
+            "headHtml": "Market Digest: TMUS, PFE",
+            "provider": "Argus Research",
+            "reportDate": "2020-07-08T07:12:50Z",
+            "reportTitle": "In the first quarter, the S&P 500 declined 20% on a capital-appreciation basis (excluding dividends). In the second quarter, the index jumped back by a rounded 20%. Sector performance was abysmal across the board in the first quarter, while second-quarter sector performance showed some clear trends. The sector-performance map in the first half may hold some clues for second-half performance.",
+            "tickers": [
+                "TMUS",
                 "PFE"
             ]
         },
@@ -1931,36 +1954,6 @@
             "tickers": [
                 "PFE"
             ]
-        },
-        {
-            "id": "26072_Market Update_1580389575000",
-            "headHtml": "Market Update: AMD, EAT, GS, HOG, HCA, PYPL, PFE, URI, NEE",
-            "provider": "Argus Research",
-            "reportDate": "2020-01-30T13:06:15Z",
-            "reportTitle": "Stocks traded lower on Thursday morning as investors weighed new earnings reports and GDP data, along with the latest developments in the coronavirus outbreak. Industries doing well today include food products, software and beverages. Industries trading lower today include air freight and logistics, tobacco, and interactive media and services. The VIX is up 1.19 to 17.58. The Dow fell 0.4%, the S&P 0.5%, and the Nasdaq 0.6%. Crude oil fell 2% to $52 per barrel, while gold rose $11 to $1587 per ounce.",
-            "tickers": [
-                "PYPL",
-                "HOG",
-                "HCA",
-                "AMD",
-                "EAT",
-                "GS",
-                "URI",
-                "PFE",
-                "NEE"
-            ]
-        },
-        {
-            "id": "3305_Analyst Report_1580342400000",
-            "headHtml": "Analyst Report: Pfizer Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2020-01-30T00:00:00Z",
-            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
-            "targetPrice": 55.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "PFE"
-            ]
         }
     ],
     "sigDevs": [
@@ -2106,15 +2099,6 @@
             "formType": "SC 13D/A"
         },
         {
-            "id": "0000078003-24-000006_78003",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1704844800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000078003/000007800324000006/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
             "id": "0000078003-24-000004_78003",
             "type": "Tender Offer/Acquisition Reports",
             "title": "SC 13D/A : Tender Offer/Acquisition Reports",
@@ -2122,6 +2106,15 @@
             "filingDate": 1704844800000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001832168/000007800324000004/thumbnail.png",
             "formType": "SC 13D/A"
+        },
+        {
+            "id": "0000078003-24-000006_78003",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1704844800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000078003/000007800324000006/thumbnail.png",
+            "formType": "8-K"
         },
         {
             "id": "0001193125-23-294930_78003",

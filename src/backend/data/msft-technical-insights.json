@@ -10,11 +10,11 @@
                 "score": 4,
                 "scoreDescription": "Very Strong Bullish Evidence",
                 "sectorDirection": "Bullish",
-                "sectorScore": 4,
-                "sectorScoreDescription": "Very Strong Bullish Evidence",
-                "indexDirection": "Bearish",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bullish Evidence",
+                "indexDirection": "Bullish",
                 "indexScore": 2,
-                "indexScoreDescription": "Bearish Evidence"
+                "indexScoreDescription": "Bullish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "There is one bullish event.",
@@ -44,8 +44,7 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 332.89,
-            "resistance": 425.22,
-            "stopLoss": 400.921166
+            "stopLoss": 402.775751
         },
         "valuation": {
             "color": 0.0,
@@ -62,7 +61,7 @@
             "hiring": 0.9662999999999999,
             "sustainability": 0.3613,
             "insiderSentiments": 0.3177,
-            "earningsReports": 0.8893000000000001,
+            "earningsReports": 0.8879,
             "dividends": 0.1472
         },
         "sector": {
@@ -106,13 +105,13 @@
     },
     "events": [
         {
-            "eventType": "Short-term KST",
+            "eventType": "Gap Up",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "L",
+            "tradeType": "U",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1710855000,
-            "endDate": 1710855000
+            "startDate": 1710941400,
+            "endDate": 1711027800
         }
     ],
     "reports": [
@@ -738,6 +737,18 @@
             ]
         },
         {
+            "id": "3212_Analyst Report_1682594492000",
+            "headHtml": "Analyst Report: Microsoft Corporation",
+            "provider": "Argus Research",
+            "reportDate": "2023-04-27T11:21:32Z",
+            "reportTitle": "Microsoft is the world's largest independent software developer. The company was founded on the MS Windows operating system and MS Office business applications suite for PCs. As it has grown, Microsoft has expanded into enterprise software with Windows Server, SQL Server, Dynamics CRM, SharePoint, Azure, and Lync; hardware with the Xbox gaming/media platform and the Surface tablet; and online services through MSN and Bing. Microsoft acquired Skype, the internet VoIP communications service, in October 2011. More than 50% of revenue is generated outside the U.S.",
+            "targetPrice": 371.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "MSFT"
+            ]
+        },
+        {
             "id": "36292_Market Summary_1682594492000",
             "headHtml": "Market Digest: GPC, HAL, HBAN, MAN, MSFT, HLT",
             "provider": "Argus Research",
@@ -750,18 +761,6 @@
                 "HBAN",
                 "GPC",
                 "MAN"
-            ]
-        },
-        {
-            "id": "3212_Analyst Report_1682594492000",
-            "headHtml": "Analyst Report: Microsoft Corporation",
-            "provider": "Argus Research",
-            "reportDate": "2023-04-27T11:21:32Z",
-            "reportTitle": "Microsoft is the world's largest independent software developer. The company was founded on the MS Windows operating system and MS Office business applications suite for PCs. As it has grown, Microsoft has expanded into enterprise software with Windows Server, SQL Server, Dynamics CRM, SharePoint, Azure, and Lync; hardware with the Xbox gaming/media platform and the Surface tablet; and online services through MSN and Bing. Microsoft acquired Skype, the internet VoIP communications service, in October 2011. More than 50% of revenue is generated outside the U.S.",
-            "targetPrice": 371.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "MSFT"
             ]
         },
         {
