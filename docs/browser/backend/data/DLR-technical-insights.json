@@ -61,7 +61,7 @@
             "innovativeness": 0.5058,
             "sustainability": 0.4082,
             "insiderSentiments": 0.4783,
-            "earningsReports": 0.8992,
+            "earningsReports": 0.9015000000000001,
             "dividends": 0.16620000000000001
         },
         "sector": {
@@ -105,9 +105,9 @@
     },
     "events": [
         {
-            "eventType": "Triple Moving Average Crossover",
+            "eventType": "Price Crosses Moving Average",
             "pricePeriod": "D",
-            "tradingHorizon": "S",
+            "tradingHorizon": "I",
             "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
             "startDate": 1710855000,

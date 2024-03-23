@@ -59,8 +59,8 @@
         "company": {
             "innovativeness": 0.0118,
             "insiderSentiments": 0.5155,
-            "earningsReports": 0.4422,
-            "dividends": 0.8708
+            "earningsReports": 0.44270000000000004,
+            "dividends": 0.8804000000000001
         },
         "sector": {
             "innovativeness": 0.5,
@@ -76,10 +76,10 @@
     },
     "events": [
         {
-            "eventType": "Commodity Channel Index",
+            "eventType": "Triple Moving Average Crossover",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "U",
+            "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
             "startDate": 1711027800,
             "endDate": 1711027800
@@ -147,15 +147,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0001287750-24-000011_1287750",
-            "type": "Periodic Financial Reports",
-            "title": "10-K : Periodic Financial Reports",
-            "description": "Annual report pursuant to Section 13 and 15(d)",
-            "filingDate": 1707264000000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001287750/000128775024000011/thumbnail.png",
-            "formType": "10-K"
-        },
-        {
             "id": "0001104659-24-011654_1287750",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -163,6 +154,15 @@
             "filingDate": 1707264000000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001287750/000110465924011654/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0001287750-24-000011_1287750",
+            "type": "Periodic Financial Reports",
+            "title": "10-K : Periodic Financial Reports",
+            "description": "Annual report pursuant to Section 13 and 15(d)",
+            "filingDate": 1707264000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001287750/000128775024000011/thumbnail.png",
+            "formType": "10-K"
         },
         {
             "id": "0001287750-24-000003_1287750",
