@@ -61,10 +61,10 @@ table {
 
 .chart-container {
     display: flex;
+    flex-wrap: wrap;
     height: 25rem;
     width: 100%;
     min-width: 33%;
-    max-width: 100%;
 }
 
 .add-border {

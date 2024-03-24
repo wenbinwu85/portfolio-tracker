@@ -28,7 +28,7 @@ export class InfoCardComponent implements OnInit {
   @Input({ required: true }) icon: string = '';
   @Input({ required: true }) value: number | string = 0;
   @Input({ required: true }) subtitle: string = '';
-  @Input() date?: string;
+  @Input() date?: Date | string;
   @Input() additionalInfo?: string | number;
   @Input() valueType?: string = 'number';
   @Input() color?: string = 'black';
