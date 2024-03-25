@@ -1,7 +1,8 @@
 {
-    "postMarketChangePercent": 0.0,
-    "postMarketChange": 0.0,
-    "postMarketPrice": 178.45,
+    "preMarketChangePercent": 0.0015130528,
+    "preMarketChange": 0.27000427,
+    "preMarketTime": "2024-03-25 08:50:01",
+    "preMarketPrice": 178.72,
     "regularMarketChangePercent": 0.005352096,
     "regularMarketChange": 0.94999695,
     "regularMarketPrice": 178.45,
@@ -64,7 +65,7 @@
     "netIncomeToCommon": 4819999744,
     "trailingEps": 2.71,
     "forwardEps": 12.2,
-    "pegRatio": 4.27,
+    "pegRatio": 4.3,
     "enterpriseToRevenue": 6.683,
     "enterpriseToEbitda": 13.773,
     "52WeekChange": 0.13272822,
@@ -74,11 +75,11 @@
     "currentPrice": 178.45,
     "targetHighPrice": 206.0,
     "targetLowPrice": 161.0,
-    "targetMeanPrice": 183.47,
+    "targetMeanPrice": 183.62,
     "targetMedianPrice": 185.0,
-    "recommendationMean": 2.3,
+    "recommendationMean": 2.2,
     "recommendationKey": "buy",
-    "numberOfAnalystOpinions": 25,
+    "numberOfAnalystOpinions": 24,
     "totalCash": 12816000000,
     "totalCashPerShare": 7.255,
     "ebitda": 26357999616,
@@ -387,9 +388,9 @@
                 "epsTrend": {
                     "current": 2.34,
                     "7daysAgo": 2.34,
-                    "30daysAgo": 2.35,
+                    "30daysAgo": 2.18,
                     "60daysAgo": 2.48,
-                    "90daysAgo": 2.23
+                    "90daysAgo": 2.46
                 },
                 "epsRevisions": {
                     "upLast7days": 0,
@@ -422,9 +423,9 @@
                 "epsTrend": {
                     "current": 2.81,
                     "7daysAgo": 2.81,
-                    "30daysAgo": 2.8,
-                    "60daysAgo": 2.84,
-                    "90daysAgo": 2.57
+                    "30daysAgo": 2.59,
+                    "60daysAgo": 2.85,
+                    "90daysAgo": 2.84
                 },
                 "epsRevisions": {
                     "upLast7days": 0,
@@ -443,26 +444,26 @@
                     "low": 10.85,
                     "high": 11.56,
                     "yearAgoEps": 11.11,
-                    "numberOfAnalysts": 26,
+                    "numberOfAnalysts": 25,
                     "growth": 0.0069999998
                 },
                 "revenueEstimate": {
-                    "avg": 54537500000,
+                    "avg": 54540600000,
                     "low": 53855900000,
                     "high": 55384000000,
-                    "numberOfAnalysts": 26,
+                    "numberOfAnalysts": 25,
                     "yearAgoRevenue": 54318000000,
                     "growth": 0.004
                 },
                 "epsTrend": {
                     "current": 11.19,
                     "7daysAgo": 11.19,
-                    "30daysAgo": 11.19,
+                    "30daysAgo": 10.34,
                     "60daysAgo": 11.23,
-                    "90daysAgo": 10.12
+                    "90daysAgo": 11.16
                 },
                 "epsRevisions": {
-                    "upLast7days": 2,
+                    "upLast7days": 0,
                     "upLast30days": 3,
                     "downLast30days": 0,
                     "downLast90days": {}
@@ -478,28 +479,28 @@
                     "low": 11.5,
                     "high": 13.05,
                     "yearAgoEps": 11.19,
-                    "numberOfAnalysts": 25,
+                    "numberOfAnalysts": 24,
                     "growth": 0.09
                 },
                 "revenueEstimate": {
-                    "avg": 57897100000,
+                    "avg": 57879000000,
                     "low": 55723000000,
                     "high": 60798000000,
-                    "numberOfAnalysts": 25,
-                    "yearAgoRevenue": 54537500000,
-                    "growth": 0.062
+                    "numberOfAnalysts": 24,
+                    "yearAgoRevenue": 54540600000,
+                    "growth": 0.061
                 },
                 "epsTrend": {
                     "current": 12.2,
                     "7daysAgo": 12.2,
-                    "30daysAgo": 12.23,
+                    "30daysAgo": 11.3,
                     "60daysAgo": 12.25,
-                    "90daysAgo": 11.06
+                    "90daysAgo": 12.19
                 },
                 "epsRevisions": {
-                    "upLast7days": 2,
-                    "upLast30days": 4,
-                    "downLast30days": 1,
+                    "upLast7days": 0,
+                    "upLast30days": 3,
+                    "downLast30days": 0,
                     "downLast90days": {}
                 }
             },
@@ -607,6 +608,18 @@
         ]
     },
     "insiderTransactions": [
+        {
+            "maxAge": 1,
+            "shares": 21082,
+            "value": 3716757,
+            "filerUrl": "",
+            "transactionText": "Sale at price 176.30 per share.",
+            "filerName": "DONOGHOE NICHOLAS",
+            "filerRelation": "Officer",
+            "moneyText": "",
+            "startDate": "2024-03-20",
+            "ownership": "D"
+        },
         {
             "maxAge": 1,
             "shares": 58949,
@@ -2393,18 +2406,6 @@
             "moneyText": "",
             "startDate": "2021-05-24",
             "ownership": "D"
-        },
-        {
-            "maxAge": 1,
-            "shares": 1681,
-            "value": 0,
-            "filerUrl": "",
-            "transactionText": "Stock Award(Grant) at price 0.00 per share.",
-            "filerName": "FREYMAN THOMAS C",
-            "filerRelation": "Director",
-            "moneyText": "",
-            "startDate": "2021-05-07",
-            "ownership": "D"
         }
     ],
     "recommendationTrend": [
@@ -2550,10 +2551,10 @@
                 "name": "DONOGHOE NICHOLAS",
                 "relation": "Officer",
                 "url": "",
-                "transactionDescription": "Stock Award(Grant)",
-                "latestTransDate": "2024-02-15",
-                "positionDirect": 93756,
-                "positionDirectDate": "2024-02-15"
+                "transactionDescription": "Sale",
+                "latestTransDate": "2024-03-20",
+                "positionDirect": 55903,
+                "positionDirectDate": "2024-03-20"
             },
             {
                 "maxAge": 1,

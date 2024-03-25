@@ -1,7 +1,8 @@
 {
-    "postMarketChangePercent": -0.000604123,
-    "postMarketChange": -0.0699997,
-    "postMarketPrice": 115.8,
+    "preMarketChangePercent": 0.011737296,
+    "preMarketChange": 1.3600006,
+    "preMarketTime": "2024-03-25 08:53:18",
+    "preMarketPrice": 117.23,
     "regularMarketChangePercent": -0.0071122036,
     "regularMarketChange": -0.8299942,
     "regularMarketPrice": 115.87,
@@ -64,7 +65,7 @@
     "netIncomeToCommon": 2985999872,
     "trailingEps": 1.63,
     "forwardEps": 5.02,
-    "pegRatio": 1.73,
+    "pegRatio": 1.71,
     "enterpriseToRevenue": 2.899,
     "enterpriseToEbitda": 16.532,
     "52WeekChange": 0.21177578,
@@ -74,7 +75,7 @@
     "currentPrice": 115.87,
     "targetHighPrice": 130.7,
     "targetLowPrice": 60.75,
-    "targetMeanPrice": 108.25,
+    "targetMeanPrice": 108.32,
     "targetMedianPrice": 110.45,
     "recommendationMean": 2.1,
     "recommendationKey": "buy",
@@ -233,7 +234,7 @@
             "earningsAverage": 0.98,
             "earningsLow": 0.79,
             "earningsHigh": 1.08,
-            "revenueAverage": 20311500000,
+            "revenueAverage": 20310600000,
             "revenueLow": 19551100000,
             "revenueHigh": 21212500000
         },
@@ -373,7 +374,7 @@
                     "growth": 0.054
                 },
                 "revenueEstimate": {
-                    "avg": 20311500000,
+                    "avg": 20310600000,
                     "low": 19551100000,
                     "high": 21212500000,
                     "numberOfAnalysts": 18,
@@ -382,8 +383,8 @@
                 },
                 "epsTrend": {
                     "current": 0.98,
-                    "7daysAgo": 1.07,
-                    "30daysAgo": 1.06,
+                    "7daysAgo": 0.98,
+                    "30daysAgo": 0.98,
                     "60daysAgo": 1.01,
                     "90daysAgo": 0.94
                 },
@@ -398,17 +399,17 @@
                 "maxAge": 1,
                 "period": "+1q",
                 "endDate": "2024-06-30",
-                "growth": 0.136,
+                "growth": 0.126,
                 "earningsEstimate": {
-                    "avg": 1.17,
+                    "avg": 1.16,
                     "low": 1.09,
                     "high": 1.22,
                     "yearAgoEps": 1.03,
                     "numberOfAnalysts": 18,
-                    "growth": 0.136
+                    "growth": 0.126
                 },
                 "revenueEstimate": {
-                    "avg": 21402400000,
+                    "avg": 21393200000,
                     "low": 20818500000,
                     "high": 22068400000,
                     "numberOfAnalysts": 16,
@@ -416,16 +417,16 @@
                     "growth": {}
                 },
                 "epsTrend": {
-                    "current": 1.17,
-                    "7daysAgo": 1.26,
-                    "30daysAgo": 1.26,
+                    "current": 1.16,
+                    "7daysAgo": 1.16,
+                    "30daysAgo": 1.17,
                     "60daysAgo": 1.24,
                     "90daysAgo": 1.14
                 },
                 "epsRevisions": {
-                    "upLast7days": 1,
+                    "upLast7days": 0,
                     "upLast30days": 2,
-                    "downLast30days": 0,
+                    "downLast30days": 1,
                     "downLast90days": {}
                 }
             },
@@ -443,7 +444,7 @@
                     "growth": 0.138
                 },
                 "revenueEstimate": {
-                    "avg": 84403900000,
+                    "avg": 84397500000,
                     "low": 82763300000,
                     "high": 86074000000,
                     "numberOfAnalysts": 28,
@@ -452,8 +453,8 @@
                 },
                 "epsTrend": {
                     "current": 4.28,
-                    "7daysAgo": 4.64,
-                    "30daysAgo": 4.63,
+                    "7daysAgo": 4.26,
+                    "30daysAgo": 4.28,
                     "60daysAgo": 4.3,
                     "90daysAgo": 3.97
                 },
@@ -478,17 +479,17 @@
                     "growth": 0.173
                 },
                 "revenueEstimate": {
-                    "avg": 88841700000,
+                    "avg": 88832600000,
                     "low": 86910600000,
                     "high": 90634500000,
                     "numberOfAnalysts": 28,
-                    "yearAgoRevenue": 84403900000,
+                    "yearAgoRevenue": 84397500000,
                     "growth": 0.053000003
                 },
                 "epsTrend": {
                     "current": 5.02,
-                    "7daysAgo": 5.44,
-                    "30daysAgo": 5.45,
+                    "7daysAgo": 4.99,
+                    "30daysAgo": 5.03,
                     "60daysAgo": 5.2,
                     "90daysAgo": 4.77
                 },
@@ -2694,6 +2695,13 @@
     },
     "upgradeDowngradeHistory": [
         {
+            "epochGradeDate": "2024-03-25 04:49:13",
+            "firm": "Barclays",
+            "toGrade": "Overweight",
+            "fromGrade": "Equal-Weight",
+            "action": "up"
+        },
+        {
             "epochGradeDate": "2024-03-04 07:59:24",
             "firm": "Morgan Stanley",
             "toGrade": "Overweight",
@@ -2720,13 +2728,6 @@
             "toGrade": "Overweight",
             "fromGrade": "Overweight",
             "action": "main"
-        },
-        {
-            "epochGradeDate": "2024-02-08 07:19:26",
-            "firm": "Needham",
-            "toGrade": "Buy",
-            "fromGrade": "Hold",
-            "action": "up"
         }
     ],
     "fcfPerShare": 4.004865437411714,

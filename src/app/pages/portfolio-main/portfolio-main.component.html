@@ -56,13 +56,14 @@
       <div class="title">Calendar</div>
       <div class="add-margin day-container">
         <ng-container *ngFor="let calendarDay of mappedEvents; let i = index">
-          <div class="event-date">{{ calendarDay[0] | date: 'MMMM d, EEEE' }}</div>
+          <!-- <div class="event-date">{{ calendarDay[0] | date: 'MMMM d, EEEE' }}</div> -->
           <div class="event-container">
             <ng-container *ngFor="let event of calendarDay[1]">
               <info-card
                 [icon]="event.icon" 
                 [value]="event.name"
                 [subtitle]="event.event"
+                [date]="event.date"
                 [additionalInfo]="event.detail"
                 [fontSize]="'1rem'" 
                 [color]="event.color"

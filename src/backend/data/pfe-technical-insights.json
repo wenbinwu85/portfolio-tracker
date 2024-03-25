@@ -62,7 +62,7 @@
             "hiring": 0.9109999999999999,
             "sustainability": 0.6695,
             "insiderSentiments": 0.7151000000000001,
-            "earningsReports": 0.9799,
+            "earningsReports": 0.98,
             "dividends": 0.9571
         },
         "sector": {
@@ -105,13 +105,13 @@
     },
     "events": [
         {
-            "eventType": "Engulfing Line (Bullish)",
+            "eventType": "Price Crosses Moving Average",
             "pricePeriod": "D",
-            "tradingHorizon": "S",
-            "tradeType": "L",
+            "tradingHorizon": "I",
+            "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1710855000,
-            "endDate": 1710941400
+            "startDate": 1711114200,
+            "endDate": 1711114200
         }
     ],
     "reports": [
@@ -1358,6 +1358,18 @@
             ]
         },
         {
+            "id": "3305_Analyst Report_1622531573000",
+            "headHtml": "Analyst Report: Pfizer Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2021-06-01T07:12:53Z",
+            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
+            "targetPrice": 55.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "PFE"
+            ]
+        },
+        {
             "id": "30012_Market Summary_1622531573000",
             "headHtml": "Market Digest: HPQ, PFE, BCE, FOXA",
             "provider": "Argus Research",
@@ -1367,18 +1379,6 @@
                 "FOXA",
                 "BCE",
                 "HPQ",
-                "PFE"
-            ]
-        },
-        {
-            "id": "3305_Analyst Report_1622531573000",
-            "headHtml": "Analyst Report: Pfizer Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2021-06-01T07:12:53Z",
-            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
-            "targetPrice": 55.0,
-            "investmentRating": "Bullish",
-            "tickers": [
                 "PFE"
             ]
         },
