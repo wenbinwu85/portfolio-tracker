@@ -77,6 +77,8 @@ export class StockPriceInsightComponent implements OnInit {
     this.stockData = Object.values(this.dataService.portfolioData).filter(
       (stock: any) => stock.symbol === this.symbol
     )[0] as any;
+
+    console.log(this.stockData)
   }
 
   getTableDataSource() {
