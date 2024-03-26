@@ -7,12 +7,11 @@ import { MatExpansionModule } from "@angular/material/expansion";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatIconModule } from "@angular/material/icon";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
-import { MatTableDataSource, MatTableModule } from "@angular/material/table";
 import { MatTabsModule } from "@angular/material/tabs";
-import { catchError, map } from "rxjs";
 import { Color, NgxChartsModule } from "@swimlane/ngx-charts";
-import { StockPriceMovementChartsComponent } from "../../../shared/components/stock/stock-price-movement-charts/stock-price-movement-charts.component";
 import { StockDayPriceRangeComponent } from "../../../shared/components/stock/stock-day-price-range/stock-day-price-range.component";
+import { StockPriceInsightComponent } from "../../../shared/components/stock/stock-price-insight/stock-price-insight.component";
+import { StockPriceMovementChartsComponent } from "../../../shared/components/stock/stock-price-movement-charts/stock-price-movement-charts.component";
 import { TvSymbolInfoWidgetComponent } from "../../../shared/components/tradingview/tv-symbol-info-widget/tv-symbol-info-widget.component";
 import { DataService } from "../../../shared/services/data.service";
 import { PortfolioChartsComponent } from "../../chart-wall/portfolio-charts/portfolio-charts.component";
@@ -32,7 +31,6 @@ import { PortfolioHoldingsComponent } from "../portfolio-holdings/portfolio-hold
     MatFormFieldModule,
     MatIconModule,
     MatSlideToggleModule,
-    MatTableModule,
     MatTabsModule,
     NgxChartsModule,
     PortfolioChartsComponent,
@@ -42,6 +40,7 @@ import { PortfolioHoldingsComponent } from "../portfolio-holdings/portfolio-hold
     StockPriceMovementChartsComponent,
     StockDayPriceRangeComponent,
     TvSymbolInfoWidgetComponent,
+    StockPriceInsightComponent,
   ],
   templateUrl: "./portfolio-price-insights.component.html",
   styleUrls: ["./portfolio-price-insights.component.css"],
@@ -61,8 +60,7 @@ export class PortfolioPriceInsightsComponent implements OnInit {
   selectedPerformanceChart = 1;
   selectedSymbol: any = "SCHD";
   selectedStock: any;
-  selectedStockTechnical: any;
-  selectedSymbolColor: any = {name: "SCHD", value: "teal"};
+  selectedSymbolColor: any = { name: "SCHD", value: "teal" };
   performanceChartColorScheme = {
     domain: ["slategrey"],
   } as Color;
@@ -73,26 +71,9 @@ export class PortfolioPriceInsightsComponent implements OnInit {
     domain: ["slategrey"],
   } as Color;
 
-  tableColumns = [
-    "symbol",
-    "support",
-    "resistance",
-    "stopLoss",
-    "fiftyTwoWeekLow",
-    "dayLow",
-    "dayHigh",
-    "fiftyTwoWeekHigh",
-    "targetLowPrice",
-    "targetMedianPrice",
-    "targetHighPrice",
-    "argusTarget",
-    "tradingCentral",
-  ];
-
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    this.getSelectedStockTechnicalInsights();
     this.sortedStocks = Object.values(this.dataService.portfolioData)
       .filter((a: any) => a.quoteType === "EQUITY")
       .sort((a: any, b: any) => a["52WeekChange"] - b["52WeekChange"]);
@@ -111,23 +92,38 @@ export class PortfolioPriceInsightsComponent implements OnInit {
       });
       this.fiftyTwoWeekLowChartData.push({
         name: stock.symbol,
-        value: ((stock.regularMarketPrice - stock.fiftyTwoWeekLow) / stock.fiftyTwoWeekLow) * 100,
+        value:
+          ((stock.regularMarketPrice - stock.fiftyTwoWeekLow) /
+            stock.fiftyTwoWeekLow) *
+          100,
       });
       this.fiftyTwoWeekHighChartData.push({
         name: stock.symbol,
-        value: ((stock.regularMarketPrice - stock.fiftyTwoWeekHigh) / stock.fiftyTwoWeekHigh) * 100,
+        value:
+          ((stock.regularMarketPrice - stock.fiftyTwoWeekHigh) /
+            stock.fiftyTwoWeekHigh) *
+          100,
       });
       this.discountChartData.push({
         name: stock.symbol,
-        value: ((stock.regularMarketPrice - stock.targetMeanPrice) / stock.targetMeanPrice) * 100,
+        value:
+          ((stock.regularMarketPrice - stock.targetMeanPrice) /
+            stock.targetMeanPrice) *
+          100,
       });
       this.fiftyDayMAChartData.push({
         name: stock.symbol,
-        value: ((stock.regularMarketPrice - stock.fiftyDayAverage) / stock.fiftyDayAverage) * 100,
+        value:
+          ((stock.regularMarketPrice - stock.fiftyDayAverage) /
+            stock.fiftyDayAverage) *
+          100,
       });
       this.twoHundredDayMAChartData.push({
         name: stock.symbol,
-        value: ((stock.regularMarketPrice - stock.twoHundredDayAverage) / stock.twoHundredDayAverage) * 100,
+        value:
+          ((stock.regularMarketPrice - stock.twoHundredDayAverage) /
+            stock.twoHundredDayAverage) *
+          100,
       });
     });
 
@@ -135,7 +131,9 @@ export class PortfolioPriceInsightsComponent implements OnInit {
       name: this.sp500,
       value: this.sortedStocks[0].SandP52WeekChange * 100,
     });
-    this.fiftyTwoWeekChangeChartData.sort((a: any, b: any) => a.value - b.value);
+    this.fiftyTwoWeekChangeChartData.sort(
+      (a: any, b: any) => a.value - b.value
+    );
     this.fiftyDayMAChartData.sort((a: any, b: any) => a.value - b.value);
     this.twoHundredDayMAChartData.sort((a: any, b: any) => a.value - b.value);
     this.fiftyTwoWeekLowChartData.sort((a: any, b: any) => a.value - b.value);
@@ -166,27 +164,6 @@ export class PortfolioPriceInsightsComponent implements OnInit {
     });
   }
 
-  getSelectedStockTechnicalInsights() {
-    this.dataService
-      .getTechnicalInsights(this.selectedSymbol, true)
-      .pipe(
-        map((response: any) => {
-          if (response.status === 500) {
-            throw `Api Error: ${this.selectedSymbol} - ${response.status} - ${response.message}`;
-          } else {
-            return response;
-          }
-        }),
-        catchError((err: any) => {
-          console.log(err);
-          return this.dataService
-            .getTechnicalInsights(this.selectedSymbol)
-            .pipe(map((response: any) => response[this.selectedSymbol]));
-        })
-      )
-      .subscribe((insights) => (this.selectedStockTechnical = insights));
-  }
-
   refreshData() {
     this.dataService.updatePortfolioTechnicalInsights();
   }
@@ -201,22 +178,13 @@ export class PortfolioPriceInsightsComponent implements OnInit {
 
   updateSelectedStock(symbol: string) {
     this.selectedSymbol = null;
-    this.selectedStockTechnical = null;
     setTimeout(() => {
       this.selectedSymbolColor = { name: symbol, value: "chocolate" };
-      console.log(this.selectedSymbolColor);
       this.selectedSymbol = symbol;
       this.selectedStock = Object.values(this.dataService.portfolioData).filter(
         (stock: any) => stock.symbol === this.selectedSymbol
       )[0] as any;
-      this.getSelectedStockTechnicalInsights();
     }, 50);
-  }
-
-  getTableDataSource() {
-    let dataSource = new MatTableDataSource<any>();
-    dataSource.data = [this.selectedStock];
-    return dataSource;
   }
 
   // get getWidget() {
