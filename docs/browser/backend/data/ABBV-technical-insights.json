@@ -57,10 +57,10 @@
     "companySnapshot": {
         "sectorInfo": "Healthcare",
         "company": {
-            "innovativeness": 0.9512999999999999,
+            "innovativeness": 0.9512,
             "hiring": 0.9181,
             "sustainability": 0.9237000000000001,
-            "insiderSentiments": 0.0723,
+            "insiderSentiments": 0.0725,
             "earningsReports": 0.9758,
             "dividends": 0.7796
         },
@@ -104,13 +104,13 @@
     },
     "events": [
         {
-            "eventType": "Triple Moving Average Crossover",
+            "eventType": "Price Crosses Moving Average",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "S",
+            "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1711373400,
-            "endDate": 1711373400
+            "startDate": 1711459800,
+            "endDate": 1711459800
         }
     ],
     "reports": [
@@ -2007,15 +2007,6 @@
             "formType": "S-8"
         },
         {
-            "id": "0001551152-24-000011_1551152",
-            "type": "Periodic Financial Reports",
-            "title": "10-K : Periodic Financial Reports",
-            "description": "Annual report pursuant to Section 13 and 15(d)",
-            "filingDate": 1708387200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001551152/000155115224000011/thumbnail.png",
-            "formType": "10-K"
-        },
-        {
             "id": "0001104659-24-025262_1551152",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -2023,6 +2014,15 @@
             "filingDate": 1708387200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001551152/000110465924025262/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0001551152-24-000011_1551152",
+            "type": "Periodic Financial Reports",
+            "title": "10-K : Periodic Financial Reports",
+            "description": "Annual report pursuant to Section 13 and 15(d)",
+            "filingDate": 1708387200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001551152/000155115224000011/thumbnail.png",
+            "formType": "10-K"
         },
         {
             "id": "0001104659-24-013692_1551152",

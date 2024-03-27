@@ -106,6 +106,6 @@
   />
 </div>
 
-<div class="add-border rec-trends">
+<div *ngIf="stock.quoteType === 'EQUITY'" class="add-border rec-trends">
   <stock-recommendation-trends [symbol]="stock.symbol"/>
 </div>
