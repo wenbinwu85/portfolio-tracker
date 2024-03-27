@@ -7,14 +7,14 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 3,
-                "scoreDescription": "Strong Bearish Evidence",
+                "score": 1,
+                "scoreDescription": "Weak Bearish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 4,
                 "sectorScoreDescription": "Very Strong Bearish Evidence",
-                "indexDirection": "Bullish",
-                "indexScore": 1,
-                "indexScoreDescription": "Weak Bullish Evidence"
+                "indexDirection": "Bearish",
+                "indexScore": 3,
+                "indexScoreDescription": "Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
@@ -43,9 +43,9 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 52.04,
+            "support": 52.41,
             "resistance": 61.0311,
-            "stopLoss": 49.631839
+            "stopLoss": 49.772679
         },
         "valuation": {
             "color": 0.0,
@@ -63,7 +63,7 @@
             "sustainability": 0.6531,
             "insiderSentiments": 0.4878,
             "earningsReports": 0.8769,
-            "dividends": 0.44770000000000004
+            "dividends": 0.4459
         },
         "sector": {
             "innovativeness": 0.5,
@@ -91,22 +91,22 @@
             "Rising interest rates reduce the spread between acquisition cap rates and financing costs, sapping management of its ability to create value through continued external growth."
         ],
         "companyName": "Realty Income Corporation",
-        "msBullishBearishSummariesPublishDate": 1711394567000,
+        "msBullishBearishSummariesPublishDate": 1711490993000,
         "upsellReportType": "MORNINGSTAR_ANALYST"
     },
     "upsellSearchDD": {
         "researchReports": {
-            "reportId": "MS_0P000004M1_AnalystReport_1711394567000",
+            "reportId": "MS_0P000004M1_AnalystReport_1711490993000",
             "provider": "Morningstar",
-            "title": "Realty Income Provides Low but Steady Growth for Income-Oriented Investors",
-            "reportDate": "2024-03-25T19:22:47Z",
+            "title": "Following Two Years of Rising Interest Rates, We Believe REITs Are Trading at Significant Discounts",
+            "reportDate": "2024-03-26T22:09:53Z",
             "summary": "Realty Income owns roughly 13,400 properties, most of which are freestanding, single-tenant, triple-net-leased retail properties. Its properties are located in 49 states and Puerto Rico and are leased to 250 tenants from 47 industries. Recent acquisitions have added industrial, gaming, office, manufacturing, and distribution properties, which make up roughly 17% of revenue. ",
             "investmentRating": "Bullish"
         }
     },
     "events": [
         {
-            "eventType": "Momentum",
+            "eventType": "Price Crosses Moving Average",
             "pricePeriod": "D",
             "tradingHorizon": "S",
             "tradeType": "S",
@@ -1532,21 +1532,21 @@
             "formType": "8-K"
         },
         {
-            "id": "0001104659-23-121255_726728",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1701043200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000726728/000110465923121255/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
             "id": "0001104659-23-121259_726728",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
             "description": "Current report filing",
             "filingDate": 1701043200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000726728/000110465923121259/thumbnail.png",
+            "formType": "8-K"
+        },
+        {
+            "id": "0001104659-23-121255_726728",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1701043200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000726728/000110465923121255/thumbnail.png",
             "formType": "8-K"
         },
         {

@@ -10,11 +10,11 @@
                 "score": 2,
                 "scoreDescription": "Bearish Evidence",
                 "sectorDirection": "Bullish",
-                "sectorScore": 2,
-                "sectorScoreDescription": "Bullish Evidence",
-                "indexDirection": "Bullish",
-                "indexScore": 1,
-                "indexScoreDescription": "Weak Bullish Evidence"
+                "sectorScore": 1,
+                "sectorScoreDescription": "Weak Bullish Evidence",
+                "indexDirection": "Bearish",
+                "indexScore": 3,
+                "indexScoreDescription": "Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "All events are bullish.",
@@ -45,7 +45,7 @@
             "provider": "Trading Central",
             "support": 34.955,
             "resistance": 36.1,
-            "stopLoss": 33.7721
+            "stopLoss": 34.04742
         },
         "valuation": {
             "color": 0.0,
@@ -61,7 +61,7 @@
             "innovativeness": 0.5556,
             "sustainability": 0.0882,
             "insiderSentiments": 0.2407,
-            "dividends": 0.69
+            "dividends": 0.688
         },
         "sector": {
             "innovativeness": 0.5,
@@ -1943,22 +1943,6 @@
             ]
         },
         {
-            "id": "27063_Market Update_1590761426000",
-            "headHtml": "Market Update: AAP, CAH, FL, NTAP, BBY, ENB, CMS",
-            "provider": "Argus Research",
-            "reportDate": "2020-05-29T14:10:26Z",
-            "reportTitle": "Stocks were mixed on Friday morning amid continued U.S.-China tensions over Hong Kong and weak consumer spending data. The Commerce Department said that consumer spending fell 13.6% in April, nearly double the 6.9% drop in March and more than the Reuters consensus forecast, which called for a decline of 12.6%. The Dow fell 0.7%, the S&P fell 0.4%, and the Nasdaq rose 0.2%. Crude oil fell slightly to $33.50 per barrel, while gold rose $23 to $1751 per ounce.",
-            "tickers": [
-                "AAP",
-                "NTAP",
-                "FL",
-                "ENB",
-                "BBY",
-                "CMS",
-                "CAH"
-            ]
-        },
-        {
             "id": "3799_Analyst Report_1590761426000",
             "headHtml": "Analyst Report: Enbridge Inc",
             "provider": "Argus Research",
@@ -1971,10 +1955,10 @@
             ]
         },
         {
-            "id": "27063_Market Update_1590710400000",
+            "id": "27063_Market Update_1590761426000",
             "headHtml": "Market Update: AAP, CAH, FL, NTAP, BBY, ENB, CMS",
             "provider": "Argus Research",
-            "reportDate": "2020-05-29T00:00:00Z",
+            "reportDate": "2020-05-29T14:10:26Z",
             "reportTitle": "Stocks were mixed on Friday morning amid continued U.S.-China tensions over Hong Kong and weak consumer spending data. The Commerce Department said that consumer spending fell 13.6% in April, nearly double the 6.9% drop in March and more than the Reuters consensus forecast, which called for a decline of 12.6%. The Dow fell 0.7%, the S&P fell 0.4%, and the Nasdaq rose 0.2%. Crude oil fell slightly to $33.50 per barrel, while gold rose $23 to $1751 per ounce.",
             "tickers": [
                 "AAP",
@@ -1996,6 +1980,22 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "ENB"
+            ]
+        },
+        {
+            "id": "27063_Market Update_1590710400000",
+            "headHtml": "Market Update: AAP, CAH, FL, NTAP, BBY, ENB, CMS",
+            "provider": "Argus Research",
+            "reportDate": "2020-05-29T00:00:00Z",
+            "reportTitle": "Stocks were mixed on Friday morning amid continued U.S.-China tensions over Hong Kong and weak consumer spending data. The Commerce Department said that consumer spending fell 13.6% in April, nearly double the 6.9% drop in March and more than the Reuters consensus forecast, which called for a decline of 12.6%. The Dow fell 0.7%, the S&P fell 0.4%, and the Nasdaq rose 0.2%. Crude oil fell slightly to $33.50 per barrel, while gold rose $23 to $1751 per ounce.",
+            "tickers": [
+                "AAP",
+                "NTAP",
+                "FL",
+                "ENB",
+                "BBY",
+                "CMS",
+                "CAH"
             ]
         },
         {
@@ -2104,22 +2104,15 @@
             ]
         },
         {
-            "id": "26236_Market Summary_1582156800000",
-            "headHtml": "Market Digest: BABA, AWK, ADI, ECL, LIN, ENB, FOXA, NLOK, TSN, ATO",
+            "id": "3799_Analyst Report_1582156800000",
+            "headHtml": "Analyst Report: Enbridge Inc",
             "provider": "Argus Research",
             "reportDate": "2020-02-20T00:00:00Z",
-            "reportTitle": "The Situation is Evolving: Scenarios for an Outbreak",
+            "reportTitle": "Enbridge Inc. is North America's largest energy infrastructure company. Enbridge has six operating segments: Liquids Pipelines, Gas Transmission & Midstream, Gas Distribution, Renewable Power Generation & Transmission, Energy Services, and Eliminations & Other. According to the company's most recent 10-K, Enbridge delivers over three million barrels of crude oil per day, and transports 62% of all U.S.-bound Canadian crude exports. The company also transports 18% of the natural gas used in the U.S. Its regulated utilities serve approximately 3.7 million retail customers.",
+            "targetPrice": 46.0,
+            "investmentRating": "Bullish",
             "tickers": [
-                "LIN",
-                "BABA",
-                "FOXA",
-                "AWK",
-                "ADI",
-                "ENB",
-                "ATO",
-                "NLOK",
-                "TSN",
-                "ECL"
+                "ENB"
             ]
         }
     ],
@@ -2293,15 +2286,6 @@
             "formType": "10-Q"
         },
         {
-            "id": "0001193125-23-203941_895728",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K/A : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1691107200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000895728/000119312523203941/thumbnail.png",
-            "formType": "8-K/A"
-        },
-        {
             "id": "0000895728-23-000024_895728",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -2309,6 +2293,15 @@
             "filingDate": 1691107200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000895728/000089572823000024/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0001193125-23-203941_895728",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K/A : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1691107200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000895728/000119312523203941/thumbnail.png",
+            "formType": "8-K/A"
         },
         {
             "id": "0001193125-23-197747_895728",
@@ -2446,15 +2439,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0000895728-22-000032_895728",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1667520000000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000895728/000089572822000032/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
             "id": "0000895728-22-000033_895728",
             "type": "Periodic Financial Reports",
             "title": "10-Q : Periodic Financial Reports",
@@ -2462,6 +2446,15 @@
             "filingDate": 1667520000000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000895728/000089572822000033/thumbnail.png",
             "formType": "10-Q"
+        },
+        {
+            "id": "0000895728-22-000032_895728",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1667520000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000895728/000089572822000032/thumbnail.png",
+            "formType": "8-K"
         },
         {
             "id": "0001193125-22-257129_895728",
