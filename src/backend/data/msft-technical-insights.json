@@ -58,11 +58,11 @@
     "companySnapshot": {
         "sectorInfo": "Technology",
         "company": {
-            "innovativeness": 0.9609000000000001,
+            "innovativeness": 0.9608,
             "hiring": 0.9662999999999999,
             "sustainability": 0.3644,
             "insiderSentiments": 0.3237,
-            "earningsReports": 0.8891,
+            "earningsReports": 0.8898,
             "dividends": 0.1435
         },
         "sector": {
@@ -106,13 +106,13 @@
     },
     "events": [
         {
-            "eventType": "Commodity Channel Index",
+            "eventType": "Fast Stochastic",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "U",
+            "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1711373400,
-            "endDate": 1711373400
+            "startDate": 1711459800,
+            "endDate": 1711459800
         }
     ],
     "reports": [
@@ -738,18 +738,6 @@
             ]
         },
         {
-            "id": "3212_Analyst Report_1682594492000",
-            "headHtml": "Analyst Report: Microsoft Corporation",
-            "provider": "Argus Research",
-            "reportDate": "2023-04-27T11:21:32Z",
-            "reportTitle": "Microsoft is the world's largest independent software developer. The company was founded on the MS Windows operating system and MS Office business applications suite for PCs. As it has grown, Microsoft has expanded into enterprise software with Windows Server, SQL Server, Dynamics CRM, SharePoint, Azure, and Lync; hardware with the Xbox gaming/media platform and the Surface tablet; and online services through MSN and Bing. Microsoft acquired Skype, the internet VoIP communications service, in October 2011. More than 50% of revenue is generated outside the U.S.",
-            "targetPrice": 371.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "MSFT"
-            ]
-        },
-        {
             "id": "36292_Market Summary_1682594492000",
             "headHtml": "Market Digest: GPC, HAL, HBAN, MAN, MSFT, HLT",
             "provider": "Argus Research",
@@ -762,6 +750,18 @@
                 "HBAN",
                 "GPC",
                 "MAN"
+            ]
+        },
+        {
+            "id": "3212_Analyst Report_1682594492000",
+            "headHtml": "Analyst Report: Microsoft Corporation",
+            "provider": "Argus Research",
+            "reportDate": "2023-04-27T11:21:32Z",
+            "reportTitle": "Microsoft is the world's largest independent software developer. The company was founded on the MS Windows operating system and MS Office business applications suite for PCs. As it has grown, Microsoft has expanded into enterprise software with Windows Server, SQL Server, Dynamics CRM, SharePoint, Azure, and Lync; hardware with the Xbox gaming/media platform and the Surface tablet; and online services through MSN and Bing. Microsoft acquired Skype, the internet VoIP communications service, in October 2011. More than 50% of revenue is generated outside the U.S.",
+            "targetPrice": 371.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "MSFT"
             ]
         },
         {

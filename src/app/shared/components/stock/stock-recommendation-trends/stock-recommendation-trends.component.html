@@ -1,0 +1,16 @@
+<div class="chart-container rec-trends">
+    <ngx-charts-bar-vertical-stacked
+        [scheme]="recommendationTrendChartColorScheme"
+        [results]="recommendationTrendChartData"
+        [xAxis]="true"
+        [yAxis]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [rotateXAxisTicks]="true"
+        [animations]="true"
+        [legend]="true"
+        [showDataLabel]="true"
+        [legendTitle]="''"
+        [yAxisLabel]="symbol + ' Recommendation Trends'"
+    />
+</div>

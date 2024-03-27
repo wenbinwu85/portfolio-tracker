@@ -76,13 +76,13 @@
     },
     "events": [
         {
-            "eventType": "Slow Stochastic",
+            "eventType": "Price Crosses Moving Average",
             "pricePeriod": "D",
-            "tradingHorizon": "S",
+            "tradingHorizon": "I",
             "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1711373400,
-            "endDate": 1711373400
+            "startDate": 1711459800,
+            "endDate": 1711459800
         }
     ],
     "sigDevs": [
@@ -210,15 +210,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0001287750-23-000043_1287750",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1698105600000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001287750/000128775023000043/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
             "id": "0001287750-23-000045_1287750",
             "type": "Periodic Financial Reports",
             "title": "10-Q : Periodic Financial Reports",
@@ -226,6 +217,15 @@
             "filingDate": 1698105600000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001287750/000128775023000045/thumbnail.png",
             "formType": "10-Q"
+        },
+        {
+            "id": "0001287750-23-000043_1287750",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1698105600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001287750/000128775023000043/thumbnail.png",
+            "formType": "8-K"
         },
         {
             "id": "0001287750-23-000039_1287750",
@@ -336,15 +336,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0001287750-23-000021_1287750",
-            "type": "Periodic Financial Reports",
-            "title": "10-Q : Periodic Financial Reports",
-            "description": "Quarterly report pursuant to Section 13 or 15(d)",
-            "filingDate": 1682380800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001287750/000128775023000021/thumbnail.png",
-            "formType": "10-Q"
-        },
-        {
             "id": "0001104659-23-049659_1287750",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -352,6 +343,15 @@
             "filingDate": 1682380800000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001287750/000110465923049659/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0001287750-23-000021_1287750",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1682380800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001287750/000128775023000021/thumbnail.png",
+            "formType": "10-Q"
         },
         {
             "id": "0001287750-23-000018_1287750",

@@ -1,4 +1,4 @@
-import { CommonModule, Location, NgFor, NgIf } from "@angular/common";
+import { CommonModule, NgFor, NgIf } from "@angular/common";
 import { Component, Input, OnInit } from "@angular/core";
 import { MatButtonToggleModule } from "@angular/material/button-toggle";
 import { MatChipsModule } from "@angular/material/chips";
@@ -15,11 +15,12 @@ import { TvProfileWidgetComponent } from "../../tradingview/tv-profile-widget/tv
 import { TvSymbolInfoWidgetComponent } from "../../tradingview/tv-symbol-info-widget/tv-symbol-info-widget.component";
 import { TvTechnicalAnalysisWidgetComponent } from "../../tradingview/tv-technical-analysis-widget/tv-technical-analysis-widget.component";
 import { StockPriceInsightComponent } from "../stock-price-insight/stock-price-insight.component";
+import { StockRecommendationTrendsComponent } from "../stock-recommendation-trends/stock-recommendation-trends.component";
 
 @Component({
-  selector: 'stock-data-sheet',
-  templateUrl: './stock-data-sheet.component.html',
-  styleUrls: ['./stock-data-sheet.component.css'],
+  selector: "stock-data-sheet",
+  templateUrl: "./stock-data-sheet.component.html",
+  styleUrls: ["./stock-data-sheet.component.css"],
   standalone: true,
   imports: [
     CommonModule,
@@ -32,6 +33,7 @@ import { StockPriceInsightComponent } from "../stock-price-insight/stock-price-i
     NgFor,
     NgIf,
     StockPriceInsightComponent,
+    StockRecommendationTrendsComponent,
     TvAdvancedChartWidgetComponent,
     TvFinancialsWidgetComponent,
     TvProfileWidgetComponent,
@@ -60,8 +62,7 @@ export class StockDataSheetComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private dataService: DataService,
-    private location: Location
+    private dataService: DataService
   ) {}
 
   ngOnInit(): void {
@@ -79,9 +80,10 @@ export class StockDataSheetComponent implements OnInit {
     this.externalLinks = [
       {
         label: "StockAnalysis",
-        url: this.stock.quoteType === "EQUITY"
-          ? this.stockAnalysisLink + this.stock.symbol
-          : this.stockAnalysisLinkEtf + this.stock.symbol,
+        url:
+          this.stock.quoteType === "EQUITY"
+            ? this.stockAnalysisLink + this.stock.symbol
+            : this.stockAnalysisLinkEtf + this.stock.symbol,
       },
       {
         label: "Seekingalpha",
