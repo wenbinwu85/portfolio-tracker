@@ -1,8 +1,0 @@
-<ng-container *ngFor="let filing of (filings$ | async)">
-    <div class="filing-container">
-        <div class="filing-date">{{ filing.date | date:'fullDate' }}</div>
-        <div class="filing-title">
-            <a [href]="filing.edgarUrl" target="_blank">{{ filing.type }}: {{ filing.title }}</a>
-        </div>
-    </div>
-</ng-container>

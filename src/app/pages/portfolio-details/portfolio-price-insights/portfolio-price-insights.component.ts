@@ -12,6 +12,7 @@ import { Color, NgxChartsModule } from "@swimlane/ngx-charts";
 import { StockDayPriceRangeComponent } from "../../../shared/components/stock/stock-day-price-range/stock-day-price-range.component";
 import { StockPriceInsightComponent } from "../../../shared/components/stock/stock-price-insight/stock-price-insight.component";
 import { StockPriceMovementChartsComponent } from "../../../shared/components/stock/stock-price-movement-charts/stock-price-movement-charts.component";
+import { StockTickerButtonsComponent } from "../../../shared/components/stock/stock-ticker-buttons/stock-ticker-buttons.component";
 import { TvSymbolInfoWidgetComponent } from "../../../shared/components/tradingview/tv-symbol-info-widget/tv-symbol-info-widget.component";
 import { DataService } from "../../../shared/services/data.service";
 import { PortfolioChartsComponent } from "../../chart-wall/portfolio-charts/portfolio-charts.component";
@@ -37,10 +38,11 @@ import { PortfolioHoldingsComponent } from "../portfolio-holdings/portfolio-hold
     PortfolioDividendComponent,
     PortfolioFinancialsComponent,
     PortfolioHoldingsComponent,
-    StockPriceMovementChartsComponent,
     StockDayPriceRangeComponent,
-    TvSymbolInfoWidgetComponent,
     StockPriceInsightComponent,
+    StockPriceMovementChartsComponent,
+    StockTickerButtonsComponent,
+    TvSymbolInfoWidgetComponent,
   ],
   templateUrl: "./portfolio-price-insights.component.html",
   styleUrls: ["./portfolio-price-insights.component.css"],
@@ -172,18 +174,16 @@ export class PortfolioPriceInsightsComponent implements OnInit {
     this.selectedPerformanceChart = chartID;
   }
 
-  getLogoSource(stock: any) {
-    return `/assets/ticker-logos/${stock.symbol}.png`;
-  }
-
   updateSelectedStock(symbol: string) {
     this.selectedSymbol = null;
     setTimeout(() => {
       this.selectedSymbolColor = { name: symbol, value: "chocolate" };
       this.selectedSymbol = symbol;
-      this.selectedStock = Object.values(this.dataService.portfolioData).filter(
-        (stock: any) => stock.symbol === this.selectedSymbol
-      )[0] as any;
+      this.selectedStock = Object
+        .values(this.dataService.portfolioData)
+        .filter(
+          (stock: any) => stock.symbol === this.selectedSymbol
+        )[0] as any;
     }, 50);
   }
 

@@ -1,10 +1,30 @@
-<mat-expansion-panel [expanded]="false">
+<mat-expansion-panel [expanded]="true">
   <mat-expansion-panel-header>
     <mat-panel-title>
       <mat-icon class="">auto_graph</mat-icon>
-      <span>Analysis A</span>
+      <span>Recommendation Trends</span>
     </mat-panel-title>
   </mat-expansion-panel-header>
+
+  <stock-ticker-buttons [showETF]="false" (selectedTicker)="updateSelectedTicker($event)"/>
+
+  <div class="chart-container rec-trends">
+    <ngx-charts-bar-vertical-stacked
+      [scheme]="recommendationTrendChartColorScheme"
+      [results]="recommendationTrendChartData"
+      [xAxis]="true"
+      [yAxis]="true"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [rotateXAxisTicks]="true"
+      [animations]="true"
+      [legend]="true"
+      [showDataLabel]="true"
+      [legendTitle]="''"
+      [yAxisLabel]="selectedStock.symbol + ' Recommendation Trends'"
+    />
+  </div>
+
 </mat-expansion-panel>
 
 <mat-expansion-panel [expanded]="false">

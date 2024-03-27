@@ -8,36 +8,8 @@
             <span>Refresh Technical Insights</span>
         </button>
     </div>
-    <div class="logos-container">
-        <button
-            *ngFor="let stock of sortedStocks" 
-            mat-button 
-            class="ticker-button" 
-            (click)="updateSelectedStock(stock.symbol)"
-        >
-            <img
-                [src]="getLogoSource(stock)" 
-                alt="Logo" 
-                width="auto" 
-                height="35"
-            />
-            <div>{{ stock.symbol }}</div>
-        </button>
-        <button
-            *ngFor="let etf of sortedEtfs" 
-            mat-button 
-            class="ticker-button" 
-            (click)="updateSelectedStock(etf.symbol)"
-        >
-            <img
-                [src]="getLogoSource(etf)" 
-                alt="Logo" 
-                width="auto" 
-                height="35" 
-            />
-            <div>{{ etf.symbol }}</div>
-        </button>
-    </div>
+
+    <stock-ticker-buttons (selectedTicker)="updateSelectedStock($event)" />
 
     <mat-divider />
 

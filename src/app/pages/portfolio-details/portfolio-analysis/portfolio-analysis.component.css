@@ -1,0 +1,14 @@
+.rec-trends {
+    min-width: 25%;
+    max-width: 2rem;
+}
+
+::ng-deep div.ngx-charts-outer {
+    display: flex !important;
+    align-items: center !important;
+}
+
+::ng-deep ul.legend-labels {
+    width: min-content !important;
+    background: none !important;
+}

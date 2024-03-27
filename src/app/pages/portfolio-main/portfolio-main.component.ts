@@ -47,7 +47,7 @@ export class PortfolioMainComponent implements OnInit{
             toGrade: grading.toGrade,
             fromGrade: grading.fromGrade,
             action: grading.action,
-            color: grading.action === 'up' ? 'teal' : grading.action === 'down' ? 'chocolate' : 'slategrey'
+            color: grading.action === 'up' ? 'teal' : grading.action === 'down' ? 'chocolate' : 'steelblue'
           })
         })
 
@@ -63,7 +63,7 @@ export class PortfolioMainComponent implements OnInit{
               date: new Date(calEvents.exDividendDate).valueOf(),
               event: "Ex-Dividend",
               icon: "rule",
-              color: "sienna",
+              color: "chocolate",
               detail: `Yield: ${divYield}%`,
             });
           }
@@ -75,7 +75,7 @@ export class PortfolioMainComponent implements OnInit{
               date: new Date(calEvents.dividendDate).valueOf(),
               event: "Dividend",
               icon: "attach_money",
-              color: "darkcyan",
+              color: "teal",
               detail: `Income: $${dividendValue}`
             });
           }
@@ -87,7 +87,7 @@ export class PortfolioMainComponent implements OnInit{
               date: new Date(calEvents.earnings?.earningsDate[0]?.slice(0, -2)).valueOf(),
               event: "Earnings",
               icon: "insights",
-              color: "slategrey",
+              color: "steelblue",
               detail: estimate,
             });
           }

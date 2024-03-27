@@ -1,7 +1,0 @@
-<div *ngIf="technicalInsights$ | async as ti">
-    <div *ngFor="let report of ti.reports.slice(0, 10)" class="report">
-        <div>{{ report.reportDate | date }}</div>
-        <div class="headline">{{ report.headHtml }}</div>
-        <div>{{ report.reportTitle }}</div>
-    </div>
-</div>
