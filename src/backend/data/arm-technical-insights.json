@@ -93,12 +93,12 @@
     },
     "events": [
         {
-            "eventType": "Commodity Channel Index",
+            "eventType": "Top Triangle",
             "pricePeriod": "D",
-            "tradingHorizon": "S",
+            "tradingHorizon": "I",
             "tradeType": "S",
-            "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1711546200,
+            "imageUrl": "https://s.yimg.com/uc/fin/img/assets/bearish-top-triangle.svg",
+            "startDate": 1707748200,
             "endDate": 1711546200
         }
     ],
@@ -227,15 +227,6 @@
             "formType": "DRS"
         },
         {
-            "id": "0000950123-23-006466_1973239",
-            "type": "Offering Registrations",
-            "title": "DRS/A : Offering Registrations",
-            "description": "Draft registration statement submitted by Emerging Growth Company under Securities Act Section 6(e) or by Foreign Private Issuer under Division of Corporation Finance policy",
-            "filingDate": 1690761600000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001973239/000095012323006466/thumbnail.png",
-            "formType": "DRS/A"
-        },
-        {
             "id": "0000950123-23-006467_1973239",
             "type": "Offering Registrations",
             "title": "DRSLTR : Offering Registrations",
@@ -243,6 +234,15 @@
             "filingDate": 1690761600000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001973239/000095012323006467/thumbnail.png",
             "formType": "DRSLTR"
+        },
+        {
+            "id": "0000950123-23-006466_1973239",
+            "type": "Offering Registrations",
+            "title": "DRS/A : Offering Registrations",
+            "description": "Draft registration statement submitted by Emerging Growth Company under Securities Act Section 6(e) or by Foreign Private Issuer under Division of Corporation Finance policy",
+            "filingDate": 1690761600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001973239/000095012323006466/thumbnail.png",
+            "formType": "DRS/A"
         },
         {
             "id": "0000950123-23-005680_1973239",
