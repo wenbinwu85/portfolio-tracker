@@ -5,25 +5,25 @@
             "provider": "Trading Central",
             "sector": "Real Estate",
             "shortTermOutlook": {
-                "stateDescription": "Recent bearish events outweigh bullish events.",
-                "direction": "Bearish",
-                "score": 4,
-                "scoreDescription": "Very Strong Bearish Evidence",
-                "sectorDirection": "Bearish",
+                "stateDescription": "Recent bullish events outweigh bearish events.",
+                "direction": "Bullish",
+                "score": 1,
+                "scoreDescription": "Weak Bullish Evidence",
+                "sectorDirection": "Bullish",
                 "sectorScore": 4,
-                "sectorScoreDescription": "Very Strong Bearish Evidence",
+                "sectorScoreDescription": "Very Strong Bullish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "intermediateTermOutlook": {
-                "stateDescription": "Recent bearish events outweigh bullish events.",
-                "direction": "Bearish",
-                "score": 2,
-                "scoreDescription": "Bearish Evidence",
-                "sectorDirection": "Bearish",
-                "sectorScore": 1,
-                "sectorScoreDescription": "Weak Bearish Evidence",
+                "stateDescription": "Recent bullish events outweigh bearish events.",
+                "direction": "Bullish",
+                "score": 1,
+                "scoreDescription": "Weak Bullish Evidence",
+                "sectorDirection": "Bullish",
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bullish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 1,
                 "indexScoreDescription": "Weak Bearish Evidence"
@@ -44,8 +44,8 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 134.85,
-            "resistance": 144.005,
-            "stopLoss": 130.595951
+            "resistance": 144.66,
+            "stopLoss": 129.028379
         },
         "valuation": {
             "color": 0.0,
@@ -60,9 +60,9 @@
         "company": {
             "innovativeness": 0.5058,
             "sustainability": 0.4082,
-            "insiderSentiments": 0.46340000000000003,
-            "earningsReports": 0.8976999999999999,
-            "dividends": 0.16879999999999998
+            "insiderSentiments": 0.4606,
+            "earningsReports": 0.9024,
+            "dividends": 0.1659
         },
         "sector": {
             "innovativeness": 0.5,
@@ -105,13 +105,13 @@
     },
     "events": [
         {
-            "eventType": "Commodity Channel Index",
+            "eventType": "Momentum",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "U",
+            "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1711459800,
-            "endDate": 1711459800
+            "startDate": 1711632600,
+            "endDate": 1711632600
         }
     ],
     "reports": [
@@ -515,18 +515,6 @@
             ]
         },
         {
-            "id": "4555_Analyst Report_1645709895000",
-            "headHtml": "Analyst Report: Digital Realty Trust Inc",
-            "provider": "Argus Research",
-            "reportDate": "2022-02-24T13:38:15Z",
-            "reportTitle": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company is based in Austin, Texas, and operates in more than 42 metropolitan markets on five continents. Recent expansions have focused on Africa and Asia.",
-            "targetPrice": 165.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "DLR"
-            ]
-        },
-        {
             "id": "32233_Market Update_1645709895000",
             "headHtml": "Market Update: AMGN, CMI, LOW, CBOE, DLR",
             "provider": "Argus Research",
@@ -538,6 +526,18 @@
                 "DLR",
                 "AMGN",
                 "CMI"
+            ]
+        },
+        {
+            "id": "4555_Analyst Report_1645709895000",
+            "headHtml": "Analyst Report: Digital Realty Trust Inc",
+            "provider": "Argus Research",
+            "reportDate": "2022-02-24T13:38:15Z",
+            "reportTitle": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company is based in Austin, Texas, and operates in more than 42 metropolitan markets on five continents. Recent expansions have focused on Africa and Asia.",
+            "targetPrice": 165.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "DLR"
             ]
         },
         {
@@ -769,6 +769,18 @@
             ]
         },
         {
+            "id": "4555_Analyst Report_1605078153000",
+            "headHtml": "Analyst Report: Digital Realty Trust Inc",
+            "provider": "Argus Research",
+            "reportDate": "2020-11-11T07:02:33Z",
+            "reportTitle": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 36 metropolitan markets on five continents.",
+            "targetPrice": 180.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "DLR"
+            ]
+        },
+        {
             "id": "28394_Market Summary_1605078153000",
             "headHtml": "Market Digest: AIG, HSY, MDRX, NYT, PRGO, DISCA, DLR, HLT, MRNA",
             "provider": "Argus Research",
@@ -787,10 +799,10 @@
             ]
         },
         {
-            "id": "4555_Analyst Report_1605078153000",
+            "id": "4555_Analyst Report_1597044849000",
             "headHtml": "Analyst Report: Digital Realty Trust Inc",
             "provider": "Argus Research",
-            "reportDate": "2020-11-11T07:02:33Z",
+            "reportDate": "2020-08-10T07:34:09Z",
             "reportTitle": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 36 metropolitan markets on five continents.",
             "targetPrice": 180.0,
             "investmentRating": "Bullish",
@@ -818,10 +830,10 @@
             ]
         },
         {
-            "id": "4555_Analyst Report_1597044849000",
+            "id": "4555_Analyst Report_1597017600000",
             "headHtml": "Analyst Report: Digital Realty Trust Inc",
             "provider": "Argus Research",
-            "reportDate": "2020-08-10T07:34:09Z",
+            "reportDate": "2020-08-10T00:00:00Z",
             "reportTitle": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 36 metropolitan markets on five continents.",
             "targetPrice": 180.0,
             "investmentRating": "Bullish",
@@ -846,18 +858,6 @@
                 "DLR",
                 "CPRI",
                 "TSCO"
-            ]
-        },
-        {
-            "id": "4555_Analyst Report_1597017600000",
-            "headHtml": "Analyst Report: Digital Realty Trust Inc",
-            "provider": "Argus Research",
-            "reportDate": "2020-08-10T00:00:00Z",
-            "reportTitle": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 36 metropolitan markets on five continents.",
-            "targetPrice": 180.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "DLR"
             ]
         },
         {

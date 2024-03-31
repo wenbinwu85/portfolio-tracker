@@ -1,21 +1,34 @@
+<section class="main-title-container">
+  <h1 class="header-title">
+    <span>Ben's Amazing Investment Tracker </span>
+    <span class="version">v2</span>
+  </h1>
+  <tv-tickers-widget [tape]="true" />
+</section>
+
 <div *ngIf="showProgressBar" class="progress-bar-container">
   <h1 class="progress-bar-message">Loading new data...</h1>
   <mat-progress-bar color="warn" mode="query" />
 </div>
 
 <nav mat-tab-nav-bar [tabPanel]="tabPanel">
-  <a 
-    mat-tab-link
+  <a
     *ngFor="let link of navLinks; let i = index"
+    mat-tab-link
     (click)="activeLink = link"
     [active]="activeLink == link"
     [routerLink]="link.route"
   >
     {{ link.label }}
   </a>
-  <button mat-button color="primary" class="refresh-button" (click)="refreshData()">
+  <button
+    mat-button
+    color="primary"
+    class="refresh-button"
+    (click)="refreshData()"
+  >
     <mat-icon>cloud_sync</mat-icon>
-    Refresh Portfolio Data
+    <span>Refresh Portfolio Data</span>
   </button>
 </nav>
 <mat-tab-nav-panel #tabPanel />

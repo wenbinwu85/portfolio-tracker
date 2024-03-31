@@ -10,6 +10,7 @@ import { PortfolioDetailsComponent } from "../../../pages/portfolio-details/port
 import { PortfolioMainComponent } from "../../../pages/portfolio-main/portfolio-main.component";
 import { ToolboxComponent } from "../../../pages/toolbox/toolbox.component";
 import { DataService } from "../../services/data.service";
+import { TvTickersWidgetComponent } from "../tradingview/tv-tickers-widget/tv-tickers-widget.component";
 
 @Component({
   selector: "app-header",
@@ -29,6 +30,7 @@ import { DataService } from "../../services/data.service";
     RouterLink,
     RouterOutlet,
     ToolboxComponent,
+    TvTickersWidgetComponent,
   ],
 })
 export class HeaderComponent implements OnInit {
@@ -56,7 +58,7 @@ export class HeaderComponent implements OnInit {
   ];
   activeLink = this.navLinks[0];
   showProgressBar = false;
-  
+
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
