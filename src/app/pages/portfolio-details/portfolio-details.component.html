@@ -6,7 +6,12 @@
         </mat-panel-title>
     </mat-expansion-panel-header>
 
-    <nav mat-tab-nav-bar mat-stretch-tabs="false" mat-align-tabs="end" [tabPanel]="tabPanel">
+    <nav 
+        mat-tab-nav-bar
+        mat-stretch-tabs="false" 
+        mat-align-tabs="end"
+        [tabPanel]="tabPanel"
+    >
         <a
             *ngFor="let link of navLinks; let i = index"
             mat-tab-link
@@ -18,6 +23,7 @@
             <span>{{ link.label }}</span>
         </a>
     </nav>
-    <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
+
+    <mat-tab-nav-panel #tabPanel />
     <router-outlet />
 </mat-expansion-panel>

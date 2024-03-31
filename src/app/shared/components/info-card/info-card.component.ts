@@ -7,6 +7,7 @@ import {
 } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
@@ -18,6 +19,7 @@ import { MatIconModule } from '@angular/material/icon';
     CommonModule,
     CurrencyPipe,
     MatCardModule,
+    MatDividerModule,
     MatIconModule,
     NgIf,
     NgStyle,
@@ -31,7 +33,7 @@ export class InfoCardComponent implements OnInit {
   @Input() date?: Date | string;
   @Input() additionalInfo?: string | number;
   @Input() valueType?: string = 'number';
-  @Input() color?: string = 'black';
+  @Input() color?: string = 'steel';
   @Input() accentColor?: string;
   @Input() fontSize?: string = '2rem';
   borderStyle = ''

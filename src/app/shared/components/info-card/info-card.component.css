@@ -1,20 +1,25 @@
 mat-icon {
   padding: 0.5rem;
-  color: steel;
+  color: slategrey;
 }
 
 .mat-mdc-card {
   max-width: max-content;
   border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.mat-mdc-card:hover {
+  border: 1px solid slategrey;
 }
 
 .mat-mdc-card-title {
-  padding: 0.5rem 1rem 0 0.5rem;
+  padding: 0 1rem 0.5rem 0.5rem;
 }
 
 .mat-mdc-card-subtitle {
   padding: 0.5rem;
-  color: steel;
+  color: slategrey;
 }
 
 .flex-between {
@@ -24,6 +29,10 @@ mat-icon {
 }
 
 .date {
-  padding-right: 0.5rem;
-  color: steel;
+  padding: 0 0.5rem;
+  color: slategrey;
+}
+
+mat-divider {
+  padding-bottom: 0 !important;
 }
