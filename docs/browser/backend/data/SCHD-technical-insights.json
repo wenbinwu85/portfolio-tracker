@@ -24,8 +24,8 @@
             "longTermOutlook": {
                 "stateDescription": "All events are bullish.",
                 "direction": "Bullish",
-                "score": 2,
-                "scoreDescription": "Bullish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bullish Evidence",
                 "indexDirection": "Bullish",
                 "indexScore": 1,
                 "indexScoreDescription": "Weak Bullish Evidence"
@@ -34,8 +34,8 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 76.85,
-            "resistance": 80.63,
-            "stopLoss": 77.031281
+            "resistance": 80.355,
+            "stopLoss": 78.593154
         },
         "valuation": {
             "provider": "Trading Central"
@@ -43,13 +43,13 @@
     },
     "events": [
         {
-            "eventType": "Commodity Channel Index",
+            "eventType": "Long-term KST",
             "pricePeriod": "D",
-            "tradingHorizon": "S",
+            "tradingHorizon": "L",
             "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1711546200,
-            "endDate": 1711546200
+            "startDate": 1711891800,
+            "endDate": 1711891800
         }
     ],
     "sigDevs": []

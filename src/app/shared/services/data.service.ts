@@ -63,9 +63,9 @@ export class DataService {
   updatePortfolioData(fromLocal: boolean) {
     this.isLoadingData.next(true);
     forkJoin([
-      this.getPortfolioData(fromLocal),
       this.getPortfolioHoldings(),
-    ]).subscribe(([data, holdings]) => {
+      this.getPortfolioData(fromLocal),
+    ]).subscribe(([holdings, data]) => {
       this.portfolioData = data;
       this.portfolioHoldings = holdings;
       this.portfolioSymbols = Object.keys(this.portfolioData);

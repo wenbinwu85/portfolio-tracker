@@ -7,11 +7,11 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 3,
-                "scoreDescription": "Strong Bullish Evidence",
+                "score": 2,
+                "scoreDescription": "Bullish Evidence",
                 "sectorDirection": "Bullish",
-                "sectorScore": 1,
-                "sectorScoreDescription": "Weak Bullish Evidence",
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bullish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 2,
                 "indexScoreDescription": "Bearish Evidence"
@@ -43,9 +43,9 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 36.1,
-            "resistance": 36.751,
-            "stopLoss": 34.048551
+            "support": 34.955,
+            "resistance": 36.1,
+            "stopLoss": 34.918356
         },
         "valuation": {
             "color": 0.0,
@@ -58,10 +58,10 @@
     "companySnapshot": {
         "sectorInfo": "Energy",
         "company": {
-            "innovativeness": 0.5556,
+            "innovativeness": 0.5535,
             "sustainability": 0.0882,
             "insiderSentiments": 0.2407,
-            "dividends": 0.7090000000000001
+            "dividends": 0.7116
         },
         "sector": {
             "innovativeness": 0.5,
@@ -104,13 +104,13 @@
     },
     "events": [
         {
-            "eventType": "Price Crosses Moving Average",
-            "pricePeriod": "W",
-            "tradingHorizon": "L",
-            "tradeType": "L",
+            "eventType": "Commodity Channel Index",
+            "pricePeriod": "D",
+            "tradingHorizon": "S",
+            "tradeType": "U",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1711719000,
-            "endDate": 1711719000
+            "startDate": 1711978200,
+            "endDate": 1711978200
         }
     ],
     "reports": [
@@ -1465,18 +1465,6 @@
             ]
         },
         {
-            "id": "3799_Analyst Report_1628086520000",
-            "headHtml": "Analyst Report: Enbridge Inc",
-            "provider": "Argus Research",
-            "reportDate": "2021-08-04T14:15:20Z",
-            "reportTitle": "Enbridge Inc. is North America's largest energy infrastructure company. Enbridge has six operating segments: Liquids Pipelines, Gas Transmission & Midstream, Gas Distribution, Renewable Power Generation & Transmission, Energy Services, and Eliminations & Other. According to the company's most recent 10-K, Enbridge delivers over three million barrels of crude oil per day, and transports 62% of all U.S.-bound Canadian crude exports. The company also transports 18% of the natural gas used in the U.S. Its regulated utilities serve approximately 3.7 million retail customers.",
-            "targetPrice": 43.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "ENB"
-            ]
-        },
-        {
             "id": "30553_Market Update_1628086520000",
             "headHtml": "Market Update: ENB, CVX, LHX, JCI, VFC, NOW, CARR",
             "provider": "Argus Research",
@@ -1490,6 +1478,18 @@
                 "NOW",
                 "ENB",
                 "LHX"
+            ]
+        },
+        {
+            "id": "3799_Analyst Report_1628086520000",
+            "headHtml": "Analyst Report: Enbridge Inc",
+            "provider": "Argus Research",
+            "reportDate": "2021-08-04T14:15:20Z",
+            "reportTitle": "Enbridge Inc. is North America's largest energy infrastructure company. Enbridge has six operating segments: Liquids Pipelines, Gas Transmission & Midstream, Gas Distribution, Renewable Power Generation & Transmission, Energy Services, and Eliminations & Other. According to the company's most recent 10-K, Enbridge delivers over three million barrels of crude oil per day, and transports 62% of all U.S.-bound Canadian crude exports. The company also transports 18% of the natural gas used in the U.S. Its regulated utilities serve approximately 3.7 million retail customers.",
+            "targetPrice": 43.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "ENB"
             ]
         },
         {
@@ -1943,22 +1943,6 @@
             ]
         },
         {
-            "id": "27063_Market Update_1590761426000",
-            "headHtml": "Market Update: AAP, CAH, FL, NTAP, BBY, ENB, CMS",
-            "provider": "Argus Research",
-            "reportDate": "2020-05-29T14:10:26Z",
-            "reportTitle": "Stocks were mixed on Friday morning amid continued U.S.-China tensions over Hong Kong and weak consumer spending data. The Commerce Department said that consumer spending fell 13.6% in April, nearly double the 6.9% drop in March and more than the Reuters consensus forecast, which called for a decline of 12.6%. The Dow fell 0.7%, the S&P fell 0.4%, and the Nasdaq rose 0.2%. Crude oil fell slightly to $33.50 per barrel, while gold rose $23 to $1751 per ounce.",
-            "tickers": [
-                "AAP",
-                "NTAP",
-                "FL",
-                "ENB",
-                "BBY",
-                "CMS",
-                "CAH"
-            ]
-        },
-        {
             "id": "3799_Analyst Report_1590761426000",
             "headHtml": "Analyst Report: Enbridge Inc",
             "provider": "Argus Research",
@@ -1971,10 +1955,10 @@
             ]
         },
         {
-            "id": "27063_Market Update_1590710400000",
+            "id": "27063_Market Update_1590761426000",
             "headHtml": "Market Update: AAP, CAH, FL, NTAP, BBY, ENB, CMS",
             "provider": "Argus Research",
-            "reportDate": "2020-05-29T00:00:00Z",
+            "reportDate": "2020-05-29T14:10:26Z",
             "reportTitle": "Stocks were mixed on Friday morning amid continued U.S.-China tensions over Hong Kong and weak consumer spending data. The Commerce Department said that consumer spending fell 13.6% in April, nearly double the 6.9% drop in March and more than the Reuters consensus forecast, which called for a decline of 12.6%. The Dow fell 0.7%, the S&P fell 0.4%, and the Nasdaq rose 0.2%. Crude oil fell slightly to $33.50 per barrel, while gold rose $23 to $1751 per ounce.",
             "tickers": [
                 "AAP",
@@ -1996,6 +1980,22 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "ENB"
+            ]
+        },
+        {
+            "id": "27063_Market Update_1590710400000",
+            "headHtml": "Market Update: AAP, CAH, FL, NTAP, BBY, ENB, CMS",
+            "provider": "Argus Research",
+            "reportDate": "2020-05-29T00:00:00Z",
+            "reportTitle": "Stocks were mixed on Friday morning amid continued U.S.-China tensions over Hong Kong and weak consumer spending data. The Commerce Department said that consumer spending fell 13.6% in April, nearly double the 6.9% drop in March and more than the Reuters consensus forecast, which called for a decline of 12.6%. The Dow fell 0.7%, the S&P fell 0.4%, and the Nasdaq rose 0.2%. Crude oil fell slightly to $33.50 per barrel, while gold rose $23 to $1751 per ounce.",
+            "tickers": [
+                "AAP",
+                "NTAP",
+                "FL",
+                "ENB",
+                "BBY",
+                "CMS",
+                "CAH"
             ]
         },
         {
@@ -2104,29 +2104,22 @@
             ]
         },
         {
-            "id": "26236_Market Summary_1582156800000",
-            "headHtml": "Market Digest: BABA, AWK, ADI, ECL, LIN, ENB, FOXA, NLOK, TSN, ATO",
+            "id": "3799_Analyst Report_1582156800000",
+            "headHtml": "Analyst Report: Enbridge Inc",
             "provider": "Argus Research",
             "reportDate": "2020-02-20T00:00:00Z",
-            "reportTitle": "The Situation is Evolving: Scenarios for an Outbreak",
+            "reportTitle": "Enbridge Inc. is North America's largest energy infrastructure company. Enbridge has six operating segments: Liquids Pipelines, Gas Transmission & Midstream, Gas Distribution, Renewable Power Generation & Transmission, Energy Services, and Eliminations & Other. According to the company's most recent 10-K, Enbridge delivers over three million barrels of crude oil per day, and transports 62% of all U.S.-bound Canadian crude exports. The company also transports 18% of the natural gas used in the U.S. Its regulated utilities serve approximately 3.7 million retail customers.",
+            "targetPrice": 46.0,
+            "investmentRating": "Bullish",
             "tickers": [
-                "LIN",
-                "BABA",
-                "FOXA",
-                "AWK",
-                "ADI",
-                "ENB",
-                "ATO",
-                "NLOK",
-                "TSN",
-                "ECL"
+                "ENB"
             ]
         }
     ],
     "sigDevs": [
         {
-            "headline": "Enbridge To Enter Into JV Connecting Permian Basin Natural Gas Supply To Growing LNG And USGC Demand",
-            "date": "2024-03-26"
+            "headline": "Enbridge Completes Sale Of Its Interests In Alliance Pipeline And Aux Sable",
+            "date": "2024-04-01"
         }
     ],
     "secReports": [

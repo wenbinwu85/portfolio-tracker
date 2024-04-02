@@ -139,6 +139,7 @@ def generate_holdings_data():
 
     holdings_data = load_data_from(HOLDINGS_DATA_PATH)
     for symbol, shares, cost_avg, _ in list(holdings_data):
+        print(symbol, shares, cost_avg)
         stock_holding = holdings.get(symbol, {})
         stock_data_path = get_file_path(symbol.lower())
         try:

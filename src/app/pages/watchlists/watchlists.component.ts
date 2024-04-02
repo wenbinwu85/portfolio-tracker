@@ -19,7 +19,7 @@ import { catchError, map } from "rxjs";
   styleUrl: "./watchlists.component.css",
 })
 export class WatchlistsComponent implements OnInit {
-  magnificent7Symbols = [
+  magnificent7PlusSymbols = [
     "AAPL",
     "MSFT",
     "META",
@@ -32,9 +32,6 @@ export class WatchlistsComponent implements OnInit {
   ];
   magnificent7PlusWatchlist: any[] = [];
   potentialBuysSymbols = [
-    "PG",
-    "AMD",
-    "AMT",
     "DGRO",
     "DGRW",
     "DIVO",
@@ -42,18 +39,20 @@ export class WatchlistsComponent implements OnInit {
     "OBDC",
     "BAC",
     "NEE",
-    "CVS",
     "WFC",
     "NTES",
     "MCD",
-    "LOW"
+    "LOW",
+    "PG",
+    "AMD",
+    "AMT",
   ];
   potentialBuysWatchlist: any[] = [];
 
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    this.magnificent7Symbols.forEach((symbol) => {
+    this.magnificent7PlusSymbols.forEach((symbol) => {
       this.dataService
         .getStockData(symbol, true)
         .pipe(
