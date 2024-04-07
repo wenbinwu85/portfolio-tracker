@@ -5,34 +5,34 @@
             "provider": "Trading Central",
             "sector": "Healthcare",
             "shortTermOutlook": {
-                "stateDescription": "Recent bullish events outweigh bearish events.",
-                "direction": "Bullish",
-                "score": 3,
-                "scoreDescription": "Strong Bullish Evidence",
-                "sectorDirection": "Bullish",
+                "stateDescription": "Recent bearish events outweigh bullish events.",
+                "direction": "Bearish",
+                "score": 4,
+                "scoreDescription": "Very Strong Bearish Evidence",
+                "sectorDirection": "Bearish",
                 "sectorScore": 4,
-                "sectorScoreDescription": "Very Strong Bullish Evidence",
+                "sectorScoreDescription": "Very Strong Bearish Evidence",
+                "indexDirection": "Bearish",
+                "indexScore": 4,
+                "indexScoreDescription": "Very Strong Bearish Evidence"
+            },
+            "intermediateTermOutlook": {
+                "stateDescription": "Recent bearish events outweigh bullish events.",
+                "direction": "Bearish",
+                "score": 2,
+                "scoreDescription": "Bearish Evidence",
+                "sectorDirection": "Bearish",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bearish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 2,
                 "indexScoreDescription": "Bearish Evidence"
             },
-            "intermediateTermOutlook": {
-                "stateDescription": "Recent bullish events outweigh bearish events.",
-                "direction": "Bullish",
-                "score": 2,
-                "scoreDescription": "Bullish Evidence",
-                "sectorDirection": "Neutral",
-                "sectorScore": 0,
-                "sectorScoreDescription": "Neutral Evidence",
-                "indexDirection": "Bearish",
-                "indexScore": 1,
-                "indexScoreDescription": "Weak Bearish Evidence"
-            },
             "longTermOutlook": {
                 "stateDescription": "Bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 2,
-                "scoreDescription": "Bullish Evidence",
+                "score": 1,
+                "scoreDescription": "Weak Bullish Evidence",
                 "sectorDirection": "Bullish",
                 "sectorScore": 3,
                 "sectorScoreDescription": "Strong Bullish Evidence",
@@ -44,25 +44,25 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 69.554,
-            "resistance": 92.93,
-            "stopLoss": 76.758931
+            "resistance": 76.28,
+            "stopLoss": 70.36184
         },
         "valuation": {
             "color": 0.5,
             "description": "Near Fair Value",
-            "discount": "3%",
+            "discount": "5%",
             "provider": "Trading Central"
         }
     },
     "companySnapshot": {
         "sectorInfo": "Healthcare",
         "company": {
-            "innovativeness": 0.8993000000000001,
+            "innovativeness": 0.8892,
             "hiring": 0.9893000000000001,
             "sustainability": 0.4322,
-            "insiderSentiments": 0.46740000000000004,
-            "earningsReports": 0.8993000000000001,
-            "dividends": 0.7564
+            "insiderSentiments": 0.46880000000000005,
+            "earningsReports": 0.8964,
+            "dividends": 0.7893000000000001
         },
         "sector": {
             "innovativeness": 0.5,
@@ -90,7 +90,7 @@
             "CVS's profit growth prospects appear lower than its managed care peers due to the challenges it faces in its retail operations."
         ],
         "companyName": "CVS Health Corporation",
-        "msBullishBearishSummariesPublishDate": 1707322937000,
+        "msBullishBearishSummariesPublishDate": 1712072098000,
         "upsellReportType": "MORNINGSTAR_ANALYST"
     },
     "upsellSearchDD": {
@@ -105,13 +105,13 @@
     },
     "events": [
         {
-            "eventType": "Commodity Channel Index",
+            "eventType": "Short-term KST",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "U",
+            "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1711978200,
-            "endDate": 1711978200
+            "startDate": 1712237400,
+            "endDate": 1712237400
         }
     ],
     "reports": [
@@ -437,17 +437,6 @@
             ]
         },
         {
-            "id": "33374_Market Summary_1656573330000",
-            "headHtml": "Market Digest: CVS, PAYX",
-            "provider": "Argus Research",
-            "reportDate": "2022-06-30T07:15:30Z",
-            "reportTitle": "Market Tries to Rally amid Softening Data",
-            "tickers": [
-                "CVS",
-                "PAYX"
-            ]
-        },
-        {
             "id": "2877_Analyst Report_1656573330000",
             "headHtml": "Analyst Report: CVS Health Corp",
             "provider": "Argus Research",
@@ -457,6 +446,17 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "CVS"
+            ]
+        },
+        {
+            "id": "33374_Market Summary_1656573330000",
+            "headHtml": "Market Digest: CVS, PAYX",
+            "provider": "Argus Research",
+            "reportDate": "2022-06-30T07:15:30Z",
+            "reportTitle": "Market Tries to Rally amid Softening Data",
+            "tickers": [
+                "CVS",
+                "PAYX"
             ]
         },
         {
@@ -1731,6 +1731,33 @@
     ],
     "secReports": [
         {
+            "id": "0001308179-24-000463_64803",
+            "type": "Proxy Statements",
+            "title": "DEF 14A : Proxy Statements",
+            "description": "Definitive proxy statements",
+            "filingDate": 1712275200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000130817924000463/thumbnail.png",
+            "formType": "DEF 14A"
+        },
+        {
+            "id": "0000947871-24-000352_64803",
+            "type": "Annual Report to Shareholders",
+            "title": "ARS : Annual Report to Shareholders",
+            "description": "Annual report to security holders",
+            "filingDate": 1712275200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000094787124000352/thumbnail.png",
+            "formType": "ARS"
+        },
+        {
+            "id": "0001308179-24-000464_64803",
+            "type": "Proxy Statements",
+            "title": "DEFA14A : Proxy Statements",
+            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
+            "filingDate": 1712275200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000130817924000464/thumbnail.png",
+            "formType": "DEFA14A"
+        },
+        {
             "id": "0000064803-24-000009_64803",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -1857,15 +1884,6 @@
             "formType": "10-Q"
         },
         {
-            "id": "0000947871-23-000807_64803",
-            "type": "Offering Registrations",
-            "title": "S-8 : Offering Registrations",
-            "description": "Initial registration statement for securities to be offered to employees pursuant to employee benefit plans",
-            "filingDate": 1690934400000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000094787123000807/thumbnail.png",
-            "formType": "S-8"
-        },
-        {
             "id": "0000064803-23-000032_64803",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -1873,6 +1891,15 @@
             "filingDate": 1690934400000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000006480323000032/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0000947871-23-000807_64803",
+            "type": "Offering Registrations",
+            "title": "S-8 : Offering Registrations",
+            "description": "Initial registration statement for securities to be offered to employees pursuant to employee benefit plans",
+            "filingDate": 1690934400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000094787123000807/thumbnail.png",
+            "formType": "S-8"
         },
         {
             "id": "0000947871-23-000769_64803",
@@ -2064,15 +2091,6 @@
             "formType": "10-K"
         },
         {
-            "id": "0000947871-23-000137_64803",
-            "type": "Proxy Statements",
-            "title": "DFAN14A : Proxy Statements",
-            "description": "Definitive additional proxy soliciting materials filed by non-management including Rule 14(a)(12) material",
-            "filingDate": 1675814400000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001564406/000094787123000137/thumbnail.png",
-            "formType": "DFAN14A"
-        },
-        {
             "id": "0000064803-23-000008_64803",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -2080,6 +2098,15 @@
             "filingDate": 1675814400000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000006480323000008/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0000947871-23-000137_64803",
+            "type": "Proxy Statements",
+            "title": "DFAN14A : Proxy Statements",
+            "description": "Definitive additional proxy soliciting materials filed by non-management including Rule 14(a)(12) material",
+            "filingDate": 1675814400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001564406/000094787123000137/thumbnail.png",
+            "formType": "DFAN14A"
         },
         {
             "id": "0000947871-23-000080_64803",
@@ -2133,33 +2160,6 @@
             "description": "Current report filing",
             "filingDate": 1666224000000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000119312522265682/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
-            "id": "0000947871-22-001055_64803",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1665014400000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000094787122001055/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
-            "id": "0000947871-22-000962_64803",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1663027200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000094787122000962/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
-            "id": "0000064803-22-000032_64803",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1663027200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000006480322000032/thumbnail.png",
             "formType": "8-K"
         }
     ]

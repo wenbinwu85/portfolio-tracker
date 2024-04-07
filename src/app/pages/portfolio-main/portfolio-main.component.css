@@ -26,15 +26,9 @@
 .grading-events-container,
 .calendar-events-container {
     margin-top: 0.5rem;
-    min-width: min-content;
 }
 
-.corp-events-container {
-    max-width: 30%;;
-}
-
+.grading-events-container,
 .calendar-events-container {
     min-width: max-content;
-    max-width: 50%;
-    flex-wrap: wrap;
 }

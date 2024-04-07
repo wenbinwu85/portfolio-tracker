@@ -5,28 +5,28 @@
             "provider": "Trading Central",
             "sector": "Healthcare",
             "shortTermOutlook": {
-                "stateDescription": "Recent bullish events outweigh bearish events.",
-                "direction": "Bullish",
-                "score": 2,
-                "scoreDescription": "Bullish Evidence",
-                "sectorDirection": "Bullish",
+                "stateDescription": "Recent bearish events outweigh bullish events.",
+                "direction": "Bearish",
+                "score": 3,
+                "scoreDescription": "Strong Bearish Evidence",
+                "sectorDirection": "Bearish",
                 "sectorScore": 4,
-                "sectorScoreDescription": "Very Strong Bullish Evidence",
+                "sectorScoreDescription": "Very Strong Bearish Evidence",
+                "indexDirection": "Bearish",
+                "indexScore": 4,
+                "indexScoreDescription": "Very Strong Bearish Evidence"
+            },
+            "intermediateTermOutlook": {
+                "stateDescription": "Recent bearish events outweigh bullish events.",
+                "direction": "Bearish",
+                "score": 1,
+                "scoreDescription": "Weak Bearish Evidence",
+                "sectorDirection": "Bearish",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bearish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 2,
                 "indexScoreDescription": "Bearish Evidence"
-            },
-            "intermediateTermOutlook": {
-                "stateDescription": "All events are bullish.",
-                "direction": "Bullish",
-                "score": 3,
-                "scoreDescription": "Strong Bullish Evidence",
-                "sectorDirection": "Neutral",
-                "sectorScore": 0,
-                "sectorScoreDescription": "Neutral Evidence",
-                "indexDirection": "Bearish",
-                "indexScore": 1,
-                "indexScoreDescription": "Weak Bearish Evidence"
             },
             "longTermOutlook": {
                 "stateDescription": "All events are bearish.",
@@ -43,14 +43,14 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 27.6,
-            "resistance": 27.725,
-            "stopLoss": 26.274133
+            "support": 26.52,
+            "resistance": 27.6,
+            "stopLoss": 25.266102
         },
         "valuation": {
             "color": 1.0,
             "description": "Undervalued",
-            "discount": "64%",
+            "discount": "65%",
             "relativeValue": "Discount",
             "provider": "Trading Central"
         }
@@ -58,12 +58,12 @@
     "companySnapshot": {
         "sectorInfo": "Healthcare",
         "company": {
-            "innovativeness": 0.8737999999999999,
+            "innovativeness": 0.8733,
             "hiring": 0.9109999999999999,
             "sustainability": 0.6695,
-            "insiderSentiments": 0.7132,
-            "earningsReports": 0.9778,
-            "dividends": 0.9462
+            "insiderSentiments": 0.7123,
+            "earningsReports": 0.9769,
+            "dividends": 0.9483
         },
         "sector": {
             "innovativeness": 0.5,
@@ -105,13 +105,13 @@
     },
     "events": [
         {
-            "eventType": "Double Moving Average Crossover",
+            "eventType": "Commodity Channel Index",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "L",
+            "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1711978200,
-            "endDate": 1711978200
+            "startDate": 1712237400,
+            "endDate": 1712237400
         }
     ],
     "reports": [
@@ -991,18 +991,6 @@
             ]
         },
         {
-            "id": "3305_Analyst Report_1644585579000",
-            "headHtml": "Analyst Report: Pfizer Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2022-02-11T13:19:39Z",
-            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
-            "targetPrice": 65.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "PFE"
-            ]
-        },
-        {
             "id": "32134_Market Update_1644585579000",
             "headHtml": "Market Update: APD, MAS, MAT, PFE, TWTR",
             "provider": "Argus Research",
@@ -1013,6 +1001,18 @@
                 "APD",
                 "TWTR",
                 "MAS",
+                "PFE"
+            ]
+        },
+        {
+            "id": "3305_Analyst Report_1644585579000",
+            "headHtml": "Analyst Report: Pfizer Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2022-02-11T13:19:39Z",
+            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
+            "targetPrice": 65.0,
+            "investmentRating": "Bullish",
+            "tickers": [
                 "PFE"
             ]
         },
@@ -1503,6 +1503,18 @@
             ]
         },
         {
+            "id": "3305_Analyst Report_1604410075000",
+            "headHtml": "Analyst Report: Pfizer Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2020-11-03T13:27:55Z",
+            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
+            "targetPrice": 55.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "PFE"
+            ]
+        },
+        {
             "id": "28335_Market Update_1604410075000",
             "headHtml": "Market Update: BSX, TPR, FLEX, K, PFE, YUM, CBOE, PYPL, ANET",
             "provider": "Argus Research",
@@ -1517,18 +1529,6 @@
                 "FLEX",
                 "CBOE",
                 "K",
-                "PFE"
-            ]
-        },
-        {
-            "id": "3305_Analyst Report_1604410075000",
-            "headHtml": "Analyst Report: Pfizer Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2020-11-03T13:27:55Z",
-            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
-            "targetPrice": 55.0,
-            "investmentRating": "Bullish",
-            "tickers": [
                 "PFE"
             ]
         },
@@ -1653,18 +1653,6 @@
             ]
         },
         {
-            "id": "3305_Analyst Report_1596067200000",
-            "headHtml": "Analyst Report: Pfizer Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2020-07-30T00:00:00Z",
-            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
-            "targetPrice": 55.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "PFE"
-            ]
-        },
-        {
             "id": "27564_Market Update_1596067200000",
             "headHtml": "Market Update: ASH, EBAY, LRCX, ODFL, PFE, QCOM, STX, MDLZ, PYPL",
             "provider": "Argus Research",
@@ -1680,6 +1668,18 @@
                 "LRCX",
                 "PFE",
                 "ODFL"
+            ]
+        },
+        {
+            "id": "3305_Analyst Report_1596067200000",
+            "headHtml": "Analyst Report: Pfizer Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2020-07-30T00:00:00Z",
+            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
+            "targetPrice": 55.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "PFE"
             ]
         },
         {

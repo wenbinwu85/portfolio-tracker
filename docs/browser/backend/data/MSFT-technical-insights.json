@@ -5,28 +5,28 @@
             "provider": "Trading Central",
             "sector": "Technology",
             "shortTermOutlook": {
-                "stateDescription": "The bullish and bearish events are balanced.",
-                "direction": "Neutral",
-                "score": 0,
-                "scoreDescription": "Neutral Evidence",
-                "sectorDirection": "Bullish",
+                "stateDescription": "Recent bearish events outweigh bullish events.",
+                "direction": "Bearish",
+                "score": 3,
+                "scoreDescription": "Strong Bearish Evidence",
+                "sectorDirection": "Bearish",
+                "sectorScore": 4,
+                "sectorScoreDescription": "Very Strong Bearish Evidence",
+                "indexDirection": "Bearish",
+                "indexScore": 4,
+                "indexScoreDescription": "Very Strong Bearish Evidence"
+            },
+            "intermediateTermOutlook": {
+                "stateDescription": "Recent bearish events outweigh bullish events.",
+                "direction": "Bearish",
+                "score": 1,
+                "scoreDescription": "Weak Bearish Evidence",
+                "sectorDirection": "Bearish",
                 "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bullish Evidence",
+                "sectorScoreDescription": "Strong Bearish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 2,
                 "indexScoreDescription": "Bearish Evidence"
-            },
-            "intermediateTermOutlook": {
-                "stateDescription": "The bullish and bearish events are balanced.",
-                "direction": "Neutral",
-                "score": 0,
-                "scoreDescription": "Neutral Evidence",
-                "sectorDirection": "Bearish",
-                "sectorScore": 2,
-                "sectorScoreDescription": "Bearish Evidence",
-                "indexDirection": "Bearish",
-                "indexScore": 1,
-                "indexScoreDescription": "Weak Bearish Evidence"
             },
             "longTermOutlook": {
                 "stateDescription": "There are no events.",
@@ -44,8 +44,8 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 332.89,
-            "resistance": 425.22,
-            "stopLoss": 406.11939
+            "resistance": 427.82,
+            "stopLoss": 399.908531
         },
         "valuation": {
             "color": 0.0,
@@ -58,12 +58,12 @@
     "companySnapshot": {
         "sectorInfo": "Technology",
         "company": {
-            "innovativeness": 0.963,
+            "innovativeness": 0.9629000000000001,
             "hiring": 0.9662999999999999,
             "sustainability": 0.3644,
-            "insiderSentiments": 0.32439999999999997,
-            "earningsReports": 0.8835,
-            "dividends": 0.1574
+            "insiderSentiments": 0.32659999999999995,
+            "earningsReports": 0.8865000000000001,
+            "dividends": 0.1408
         },
         "sector": {
             "innovativeness": 0.5,
@@ -106,13 +106,13 @@
     },
     "events": [
         {
-            "eventType": "Momentum",
+            "eventType": "Short-term KST",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "L",
+            "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1711978200,
-            "endDate": 1711978200
+            "startDate": 1712237400,
+            "endDate": 1712237400
         }
     ],
     "reports": [
@@ -2071,8 +2071,8 @@
     ],
     "sigDevs": [
         {
-            "headline": "Microsoft And Nvidia Announce Major Integrations To Accelerate Generative AI For Enterprises Everywhere",
-            "date": "2024-03-18"
+            "headline": "OpenAI Says Adding New Features To Help Developers Have More Control Over Fine-Tuning",
+            "date": "2024-04-04"
         }
     ],
     "secReports": [

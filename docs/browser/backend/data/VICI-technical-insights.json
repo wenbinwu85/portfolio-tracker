@@ -7,35 +7,35 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 4,
-                "scoreDescription": "Very Strong Bullish Evidence",
-                "sectorDirection": "Bullish",
+                "score": 3,
+                "scoreDescription": "Strong Bullish Evidence",
+                "sectorDirection": "Bearish",
                 "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bullish Evidence",
+                "sectorScoreDescription": "Strong Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 2,
-                "indexScoreDescription": "Bearish Evidence"
+                "indexScore": 4,
+                "indexScoreDescription": "Very Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
                 "score": 3,
                 "scoreDescription": "Strong Bearish Evidence",
-                "sectorDirection": "Bullish",
-                "sectorScore": 2,
-                "sectorScoreDescription": "Bullish Evidence",
+                "sectorDirection": "Bearish",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 1,
-                "indexScoreDescription": "Weak Bearish Evidence"
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "longTermOutlook": {
-                "stateDescription": "Bearish events outweigh bullish events.",
+                "stateDescription": "All events are bearish.",
                 "direction": "Bearish",
-                "score": 1,
-                "scoreDescription": "Weak Bearish Evidence",
-                "sectorDirection": "Bullish",
-                "sectorScore": 2,
-                "sectorScoreDescription": "Bullish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bearish Evidence",
+                "sectorDirection": "Bearish",
+                "sectorScore": 1,
+                "sectorScoreDescription": "Weak Bearish Evidence",
                 "indexDirection": "Bullish",
                 "indexScore": 1,
                 "indexScoreDescription": "Weak Bullish Evidence"
@@ -43,9 +43,9 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 28.725,
+            "support": 29.18,
             "resistance": 29.685,
-            "stopLoss": 28.491813
+            "stopLoss": 27.600999
         },
         "valuation": {
             "color": 1.0,
@@ -58,10 +58,10 @@
     "companySnapshot": {
         "sectorInfo": "Real Estate",
         "company": {
-            "innovativeness": 0.0888,
+            "innovativeness": 0.0898,
             "insiderSentiments": 0.679,
-            "earningsReports": 0.5992000000000001,
-            "dividends": 0.43560000000000004
+            "earningsReports": 0.597,
+            "dividends": 0.4169
         },
         "sector": {
             "innovativeness": 0.5,
@@ -73,7 +73,7 @@
         }
     },
     "recommendation": {
-        "targetPrice": 26.0,
+        "targetPrice": 27.0,
         "provider": "Argus Research",
         "rating": "SELL"
     },
@@ -82,16 +82,28 @@
     },
     "events": [
         {
-            "eventType": "Price Crosses Moving Average",
+            "eventType": "Fast Stochastic",
             "pricePeriod": "D",
-            "tradingHorizon": "I",
+            "tradingHorizon": "S",
             "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1711978200,
-            "endDate": 1711978200
+            "startDate": 1712151000,
+            "endDate": 1712151000
         }
     ],
     "reports": [
+        {
+            "id": "6054_Quantitative Report_1712102400000",
+            "headHtml": "Raising target price to $27.00",
+            "provider": "Argus Research",
+            "reportDate": "2024-04-03T00:00:00Z",
+            "reportTitle": "VICI PROPERTIES INC has an Investment Rating of SELL; a target price of $27.000000; an Industry Subrating of Low; a Management Subrating of Low; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium.",
+            "targetPrice": 27.0,
+            "investmentRating": "Bearish",
+            "tickers": [
+                "VICI"
+            ]
+        },
         {
             "id": "6054_Quantitative Report_1711497600000",
             "headHtml": "Lowering target price to $26.00",
@@ -1346,15 +1358,6 @@
             "formType": "SC 13G/A"
         },
         {
-            "id": "0001562230-23-000103_1705696",
-            "type": "Tender Offer/Acquisition Reports",
-            "title": "SC 13G/A : Tender Offer/Acquisition Reports",
-            "description": "Schedule filed to report acquisition of beneficial ownership of 5% or more of a class of equity securities by passive investors and certain institutions",
-            "filingDate": 1676246400000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000156223023000103/thumbnail.png",
-            "formType": "SC 13G/A"
-        },
-        {
             "id": "0001422848-23-000139_1705696",
             "type": "Tender Offer/Acquisition Reports",
             "title": "SC 13G : Tender Offer/Acquisition Reports",
@@ -1362,6 +1365,15 @@
             "filingDate": 1676246400000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000142284823000139/thumbnail.png",
             "formType": "SC 13G"
+        },
+        {
+            "id": "0001562230-23-000103_1705696",
+            "type": "Tender Offer/Acquisition Reports",
+            "title": "SC 13G/A : Tender Offer/Acquisition Reports",
+            "description": "Schedule filed to report acquisition of beneficial ownership of 5% or more of a class of equity securities by passive investors and certain institutions",
+            "filingDate": 1676246400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000156223023000103/thumbnail.png",
+            "formType": "SC 13G/A"
         },
         {
             "id": "0001422849-23-000134_1705696",
@@ -1499,15 +1511,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0001193125-22-107429_1705696",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1650240000000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000119312522107429/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
             "id": "0001193125-22-107450_1705696",
             "type": "Offering Registrations",
             "title": "S-3ASR : Offering Registrations",
@@ -1515,6 +1518,15 @@
             "filingDate": 1650240000000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001920791/000119312522107450/thumbnail.png",
             "formType": "S-3ASR"
+        },
+        {
+            "id": "0001193125-22-107429_1705696",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1650240000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000119312522107429/thumbnail.png",
+            "formType": "8-K"
         },
         {
             "id": "0001705696-22-000067_1705696",

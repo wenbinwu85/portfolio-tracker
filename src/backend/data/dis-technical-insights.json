@@ -5,28 +5,28 @@
             "provider": "Trading Central",
             "sector": "Communication Services",
             "shortTermOutlook": {
-                "stateDescription": "Recent bullish events outweigh bearish events.",
-                "direction": "Bullish",
-                "score": 2,
-                "scoreDescription": "Bullish Evidence",
+                "stateDescription": "Recent bearish events outweigh bullish events.",
+                "direction": "Bearish",
+                "score": 4,
+                "scoreDescription": "Very Strong Bearish Evidence",
                 "sectorDirection": "Bullish",
                 "sectorScore": 2,
                 "sectorScoreDescription": "Bullish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 2,
-                "indexScoreDescription": "Bearish Evidence"
+                "indexScore": 4,
+                "indexScoreDescription": "Very Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
-                "stateDescription": "Bullish events outweigh bearish events.",
-                "direction": "Bullish",
+                "stateDescription": "Recent bearish events outweigh bullish events.",
+                "direction": "Bearish",
                 "score": 1,
-                "scoreDescription": "Weak Bullish Evidence",
+                "scoreDescription": "Weak Bearish Evidence",
                 "sectorDirection": "Neutral",
                 "sectorScore": 0,
                 "sectorScoreDescription": "No Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 1,
-                "indexScoreDescription": "Weak Bearish Evidence"
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "longTermOutlook": {
                 "stateDescription": "Bullish events outweigh bearish events.",
@@ -44,25 +44,26 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 91.01,
-            "resistance": 122.57,
-            "stopLoss": 115.457189
+            "resistance": 120.14,
+            "stopLoss": 112.204471
         },
         "valuation": {
-            "color": 0.5,
-            "description": "Near Fair Value",
+            "color": 1.0,
+            "description": "Undervalued",
             "discount": "30%",
+            "relativeValue": "Discount",
             "provider": "Trading Central"
         }
     },
     "companySnapshot": {
         "sectorInfo": "Communication Services",
         "company": {
-            "innovativeness": 0.9451,
+            "innovativeness": 0.9444,
             "hiring": 0.8169,
             "sustainability": 0.2895,
-            "insiderSentiments": 0.392,
-            "earningsReports": 0.9468000000000001,
-            "dividends": 0.0755
+            "insiderSentiments": 0.39520000000000005,
+            "earningsReports": 0.9440000000000001,
+            "dividends": 0.0667
         },
         "sector": {
             "innovativeness": 0.5,
@@ -90,28 +91,28 @@
             "Too many streaming platforms now exist, and it\u2019s questionable whether consumers will be willing to pay high prices or stick with individual services month in and month out. "
         ],
         "companyName": "Walt Disney Company (The)",
-        "msBullishBearishSummariesPublishDate": 1709150244000,
+        "msBullishBearishSummariesPublishDate": 1712176258000,
         "upsellReportType": "MORNINGSTAR_ANALYST"
     },
     "upsellSearchDD": {
         "researchReports": {
-            "reportId": "MS_0P000005UJ_AnalystReport_1709150244000",
+            "reportId": "MS_0P000005UJ_AnalystReport_1712176258000",
             "provider": "Morningstar",
-            "title": "Disney: India Exit a Wise Move; Our $115 Fair Value Estimate Unchanged",
-            "reportDate": "2024-02-28T19:57:24Z",
+            "title": "Disney: Changes Are on the Way Despite the Proxy Fight Victory",
+            "reportDate": "2024-04-03T20:30:58Z",
             "summary": "Disney operates in three global business segments: entertainment, sports, and experiences. Entertainment and experiences both benefit from franchises and characters the firm has created over the course of a century. Entertainment includes the ABC broadcast network, several cable television networks, and the Disney+ and Hulu streaming services. Within the segment, Disney also engages in movie and television production and distribution, with content licensed to movie theaters, other content providers, or, increasingly, kept in-house for use on Disney\u2019s own streaming platform and television networks. The sports segment houses ESPN and the ESPN+ streaming service. Experiences contains Disney\u2019s theme parks and vacation destinations, and also benefits from merchandise licensing. ",
             "investmentRating": "Neutral"
         }
     },
     "events": [
         {
-            "eventType": "Short-term KST",
+            "eventType": "Williams %R",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "L",
+            "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1711632600,
-            "endDate": 1711632600
+            "startDate": 1712237400,
+            "endDate": 1712237400
         }
     ],
     "reports": [
@@ -1062,18 +1063,6 @@
             ]
         },
         {
-            "id": "2894_Analyst Report_1588896000000",
-            "headHtml": "Analyst Report: Walt Disney Co (The)",
-            "provider": "Argus Research",
-            "reportDate": "2020-05-08T00:00:00Z",
-            "reportTitle": "Walt Disney Co. is a global entertainment company. The company owns and leverages well-known brands, ranging from Mickey Mouse and 'Frozen' to ESPN and ABC. Disney acquired the animated movie producer Pixar Animation Studios in 2006, comic book and movie producer Marvel Entertainment in 2010, 'Star Wars' originator Lucasfilm in 2012, a 75% interest in streaming video technology platform BAMTech (now Disney Streaming Services) in 2017, the assets of 21st Century Fox in March 2019, and Hulu in May 2019. Disney derives 24% of its revenue from outside of North America and 12% from Europe.",
-            "targetPrice": 130.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "DIS"
-            ]
-        },
-        {
             "id": "26890_Market Update_1588896000000",
             "headHtml": "Market Update: REGN, AMP, BDN, K, OXY, DIS, EIX",
             "provider": "Argus Research",
@@ -1086,6 +1075,18 @@
                 "K",
                 "REGN",
                 "BDN",
+                "DIS"
+            ]
+        },
+        {
+            "id": "2894_Analyst Report_1588896000000",
+            "headHtml": "Analyst Report: Walt Disney Co (The)",
+            "provider": "Argus Research",
+            "reportDate": "2020-05-08T00:00:00Z",
+            "reportTitle": "Walt Disney Co. is a global entertainment company. The company owns and leverages well-known brands, ranging from Mickey Mouse and 'Frozen' to ESPN and ABC. Disney acquired the animated movie producer Pixar Animation Studios in 2006, comic book and movie producer Marvel Entertainment in 2010, 'Star Wars' originator Lucasfilm in 2012, a 75% interest in streaming video technology platform BAMTech (now Disney Streaming Services) in 2017, the assets of 21st Century Fox in March 2019, and Hulu in May 2019. Disney derives 24% of its revenue from outside of North America and 12% from Europe.",
+            "targetPrice": 130.0,
+            "investmentRating": "Bullish",
+            "tickers": [
                 "DIS"
             ]
         },
@@ -1286,18 +1287,6 @@
             ]
         },
         {
-            "id": "26424_Market Summary_1584057600000",
-            "headHtml": "Market Digest: DIS, W, CCEP",
-            "provider": "Argus Research",
-            "reportDate": "2020-03-13T00:00:00Z",
-            "reportTitle": "Stocks plummeted in a record selloff on Thursday, ending the long-running bull market as investors passed judgment on President Trump's travel ban and overall handling of the coronavirus crisis. Meanwhile, states and cities continued to struggle with a lack of adequate testing, and imposed new restrictions on public gatherings in an effort to slow the spread of the virus. The markets briefly pared losses after the Fed announced $1.5 trillion in liquidity operations, but soon plunged again. Volatility soared, with the VIX rising more than 35% to 73.08. The Dow fell 9.99%, the S&P 9.51%, and the Nasdaq 9.43%. Crude oil fell nearly 6% to $31 per barrel, while gold fell $74 to $1569 per ounce.",
-            "tickers": [
-                "CCEP",
-                "W",
-                "DIS"
-            ]
-        },
-        {
             "id": "2894_Analyst Report_1584057600000",
             "headHtml": "Analyst Report: Walt Disney Co (The)",
             "provider": "Argus Research",
@@ -1306,6 +1295,18 @@
             "targetPrice": 130.0,
             "investmentRating": "Bullish",
             "tickers": [
+                "DIS"
+            ]
+        },
+        {
+            "id": "26424_Market Summary_1584057600000",
+            "headHtml": "Market Digest: DIS, W, CCEP",
+            "provider": "Argus Research",
+            "reportDate": "2020-03-13T00:00:00Z",
+            "reportTitle": "Stocks plummeted in a record selloff on Thursday, ending the long-running bull market as investors passed judgment on President Trump's travel ban and overall handling of the coronavirus crisis. Meanwhile, states and cities continued to struggle with a lack of adequate testing, and imposed new restrictions on public gatherings in an effort to slow the spread of the virus. The markets briefly pared losses after the Fed announced $1.5 trillion in liquidity operations, but soon plunged again. Volatility soared, with the VIX rising more than 35% to 73.08. The Dow fell 9.99%, the S&P 9.51%, and the Nasdaq 9.43%. Crude oil fell nearly 6% to $31 per barrel, while gold fell $74 to $1569 per ounce.",
+            "tickers": [
+                "CCEP",
+                "W",
                 "DIS"
             ]
         },
@@ -1564,6 +1565,18 @@
             ]
         },
         {
+            "id": "2894_Analyst Report_1573457626000",
+            "headHtml": "Analyst Report: Walt Disney Company",
+            "provider": "Argus Research",
+            "reportDate": "2019-11-11T07:33:46Z",
+            "reportTitle": "Walt Disney Co. is a global entertainment company. The company owns and leverages well-known brands, ranging from Mickey Mouse and 'Frozen' to ESPN and ABC. Disney acquired the animated movie producer Pixar Animation Studios in 2006, comic book and movie producer Marvel Entertainment in 2010, 'Star Wars' originator Lucasfilm in 2012, a 75% interest in streaming video technology platform BAMTech (now Disney Streaming Services) in 2017, the assets of 21st Century Fox in March 2019, and Hulu in May 2019. Disney derives 24% of its revenue from outside of North America and 12% of its revenue from Europe.",
+            "targetPrice": 160.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "DIS"
+            ]
+        },
+        {
             "id": "25430_Market Summary_1573457626000",
             "headHtml": "Market Digest: W, LHX, ABBV, EL, PRU, STX, DIS, GSK, OXY, EIX",
             "provider": "Argus Research",
@@ -1579,18 +1592,6 @@
                 "ABBV",
                 "LHX",
                 "GSK",
-                "DIS"
-            ]
-        },
-        {
-            "id": "2894_Analyst Report_1573457626000",
-            "headHtml": "Analyst Report: Walt Disney Company",
-            "provider": "Argus Research",
-            "reportDate": "2019-11-11T07:33:46Z",
-            "reportTitle": "Walt Disney Co. is a global entertainment company. The company owns and leverages well-known brands, ranging from Mickey Mouse and 'Frozen' to ESPN and ABC. Disney acquired the animated movie producer Pixar Animation Studios in 2006, comic book and movie producer Marvel Entertainment in 2010, 'Star Wars' originator Lucasfilm in 2012, a 75% interest in streaming video technology platform BAMTech (now Disney Streaming Services) in 2017, the assets of 21st Century Fox in March 2019, and Hulu in May 2019. Disney derives 24% of its revenue from outside of North America and 12% of its revenue from Europe.",
-            "targetPrice": 160.0,
-            "investmentRating": "Bullish",
-            "tickers": [
                 "DIS"
             ]
         },
@@ -1754,11 +1755,20 @@
     ],
     "sigDevs": [
         {
-            "headline": "Disney Board Member Everson Says Number One Priority Is To Oversee Succession Process Looking At Several Internal & External Candidates \u2013 CNBC",
-            "date": "2024-04-01"
+            "headline": "Disney CEO Bob Iger Says In June, Will Start Cracking Down On Password Sharing - CNBC Interview",
+            "date": "2024-04-04"
         }
     ],
     "secReports": [
+        {
+            "id": "0000950157-24-000570_1744489",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1712102400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000570/thumbnail.png",
+            "formType": "8-K"
+        },
         {
             "id": "0000950157-24-000550_1744489",
             "type": "Proxy Statements",
@@ -1814,21 +1824,21 @@
             "formType": "DEFA14A"
         },
         {
-            "id": "0000950157-24-000519_1744489",
-            "type": "Proxy Statements",
-            "title": "DEFA14A : Proxy Statements",
-            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
-            "filingDate": 1711324800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000519/thumbnail.png",
-            "formType": "DEFA14A"
-        },
-        {
             "id": "0000950157-24-000521_1744489",
             "type": "Proxy Statements",
             "title": "DEFA14A : Proxy Statements",
             "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
             "filingDate": 1711324800000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000521/thumbnail.png",
+            "formType": "DEFA14A"
+        },
+        {
+            "id": "0000950157-24-000519_1744489",
+            "type": "Proxy Statements",
+            "title": "DEFA14A : Proxy Statements",
+            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
+            "filingDate": 1711324800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000519/thumbnail.png",
             "formType": "DEFA14A"
         },
         {
@@ -2198,15 +2208,6 @@
             "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
             "filingDate": 1707696000000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000170/thumbnail.png",
-            "formType": "DEFA14A"
-        },
-        {
-            "id": "0000950157-24-000169_1744489",
-            "type": "Proxy Statements",
-            "title": "DEFA14A : Proxy Statements",
-            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
-            "filingDate": 1707696000000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000169/thumbnail.png",
             "formType": "DEFA14A"
         }
     ]
