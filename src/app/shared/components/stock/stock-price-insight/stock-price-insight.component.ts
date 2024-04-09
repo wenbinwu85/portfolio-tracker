@@ -34,6 +34,7 @@ import { StockDayPriceRangeComponent } from "../stock-day-price-range/stock-day-
 })
 export class StockPriceInsightComponent implements OnInit {
   @Input({ required: true }) symbol!: string;
+  @Input() showBorder: boolean = false;
   technicalInsights$!: Observable<any>;
   stockData: any;
 
