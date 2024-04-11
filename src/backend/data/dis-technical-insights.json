@@ -9,12 +9,12 @@
                 "direction": "Bearish",
                 "score": 4,
                 "scoreDescription": "Very Strong Bearish Evidence",
-                "sectorDirection": "Bullish",
-                "sectorScore": 2,
-                "sectorScoreDescription": "Bullish Evidence",
+                "sectorDirection": "Bearish",
+                "sectorScore": 1,
+                "sectorScoreDescription": "Weak Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 4,
-                "indexScoreDescription": "Very Strong Bearish Evidence"
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
@@ -45,7 +45,7 @@
             "provider": "Trading Central",
             "support": 91.01,
             "resistance": 120.14,
-            "stopLoss": 112.204471
+            "stopLoss": 108.932815
         },
         "valuation": {
             "color": 1.0,
@@ -61,9 +61,9 @@
             "innovativeness": 0.9444,
             "hiring": 0.8169,
             "sustainability": 0.2895,
-            "insiderSentiments": 0.39520000000000005,
-            "earningsReports": 0.9440000000000001,
-            "dividends": 0.067
+            "insiderSentiments": 0.40159999999999996,
+            "earningsReports": 0.9443,
+            "dividends": 0.0694
         },
         "sector": {
             "innovativeness": 0.5,
@@ -75,7 +75,7 @@
         }
     },
     "recommendation": {
-        "targetPrice": 125.0,
+        "targetPrice": 140.0,
         "provider": "Argus Research",
         "rating": "BUY"
     },
@@ -96,26 +96,52 @@
     },
     "upsellSearchDD": {
         "researchReports": {
-            "reportId": "MS_0P000005UJ_AnalystReport_1712176258000",
-            "provider": "Morningstar",
-            "title": "Disney: Changes Are on the Way Despite the Proxy Fight Victory",
-            "reportDate": "2024-04-03T20:30:58Z",
-            "summary": "Disney operates in three global business segments: entertainment, sports, and experiences. Entertainment and experiences both benefit from franchises and characters the firm has created over the course of a century. Entertainment includes the ABC broadcast network, several cable television networks, and the Disney+ and Hulu streaming services. Within the segment, Disney also engages in movie and television production and distribution, with content licensed to movie theaters, other content providers, or, increasingly, kept in-house for use on Disney\u2019s own streaming platform and television networks. The sports segment houses ESPN and the ESPN+ streaming service. Experiences contains Disney\u2019s theme parks and vacation destinations, and also benefits from merchandise licensing. ",
-            "investmentRating": "Neutral"
+            "reportId": "ARGUS_2894_AnalystReport_1712746706000",
+            "provider": "Argus",
+            "title": "Raising target price to $140 after proxy battle victory",
+            "reportDate": "2024-04-10T10:58:26Z",
+            "summary": "The Walt Disney Co. is a global entertainment company. The company owns and leverages well-known brands, ranging from Mickey Mouse and 'Frozen' to ESPN and ABC. Disney acquired the animated movie producer Pixar Animation Studios in 2006, comic book and movie producer Marvel Entertainment in 2010, 'Star Wars' originator Lucasfilm in 2012, streaming video technology platform BAMTech (now Disney Streaming Services) in 2017, the assets of 21st Century Fox in March 2019, and most of Hulu in May 2019. Disney derives 24% of its revenue from outside of North America and 12% from Europe.",
+            "investmentRating": "Bullish"
         }
     },
     "events": [
         {
-            "eventType": "Relative Strength Index (RSI)",
-            "pricePeriod": "W",
-            "tradingHorizon": "I",
+            "eventType": "Momentum",
+            "pricePeriod": "D",
+            "tradingHorizon": "S",
             "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1712323800,
-            "endDate": 1712323800
+            "startDate": 1712583000,
+            "endDate": 1712583000
         }
     ],
     "reports": [
+        {
+            "id": "2894_Analyst Report_1712746706000",
+            "headHtml": "Analyst Report: Walt Disney Co (The)",
+            "provider": "Argus Research",
+            "reportDate": "2024-04-10T10:58:26Z",
+            "reportTitle": "The Walt Disney Co. is a global entertainment company. The company owns and leverages well-known brands, ranging from Mickey Mouse and 'Frozen' to ESPN and ABC. Disney acquired the animated movie producer Pixar Animation Studios in 2006, comic book and movie producer Marvel Entertainment in 2010, 'Star Wars' originator Lucasfilm in 2012, streaming video technology platform BAMTech (now Disney Streaming Services) in 2017, the assets of 21st Century Fox in March 2019, and most of Hulu in May 2019. Disney derives 24% of its revenue from outside of North America and 12% from Europe.",
+            "targetPrice": 140.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "DIS"
+            ]
+        },
+        {
+            "id": "39651_Market Summary_1712745806000",
+            "headHtml": "Market Digest: ILMN, DIS, MCK, YUM, CAVA",
+            "provider": "Argus Research",
+            "reportDate": "2024-04-10T10:43:26Z",
+            "reportTitle": "The daily charts for the major indices all have a 'rolling-over' look, with the Nasdaq and Nasdaq 100 (QQQ) appearing to be ahead of the S&P 500 (SPX) for a break lower. As well, the news from the Middle East seems to be getting worse by the day -- but, so far, the U.S stock market and economy seem to be turning a blind eye to the potential implications. Crude oil prices, both WTI and Brent, aren't exploding, but have seen pretty good rallies. WTI hit $87.60/barrel at the end of last week from the low $70s just two months ago, while Brent almost reached $92 last week from $77 in early February. ",
+            "tickers": [
+                "YUM",
+                "MCK",
+                "CAVA",
+                "ILMN",
+                "DIS"
+            ]
+        },
         {
             "id": "39454_Technical Analysis_1710932924000",
             "headHtml": "Technical Assessment: Neutral in the Intermediate-Term",
@@ -1725,32 +1751,6 @@
                 "PEP",
                 "XEL"
             ]
-        },
-        {
-            "id": "24685_Stock Picks_1565609169000",
-            "headHtml": "Weekly Stock List",
-            "provider": "Argus Research",
-            "reportDate": "2019-08-12T11:26:09Z",
-            "reportTitle": "Argus has published its latest Portfolio Selector, which features its popular Focus List. Each month, Director of Research Jim Kelleher, CFA, surveys the team of Argus Research industry analysts for their timeliest recommendations out of the company's fundamental universe of approximately 480 stocks. The Focus List typically includes 30 stocks: turnover is high, as Director of Research Kelleher typically adds three or four new stocks per month. Performance information on the Focus List picks is available in our bi-annual Argus Performance Review. Here are the latest additions, all of which are rated BUY at Argus.",
-            "tickers": [
-                "TJX",
-                "CL",
-                "SQ",
-                "DIS"
-            ]
-        },
-        {
-            "id": "24685_Stock Picks_1565568000000",
-            "headHtml": "Weekly Stock List",
-            "provider": "Argus Research",
-            "reportDate": "2019-08-12T00:00:00Z",
-            "reportTitle": "Argus has published its latest Portfolio Selector, which features its popular Focus List. Each month, Director of Research Jim Kelleher, CFA, surveys the team of Argus Research industry analysts for their timeliest recommendations out of the company's fundamental universe of approximately 480 stocks. The Focus List typically includes 30 stocks: turnover is high, as Director of Research Kelleher typically adds three or four new stocks per month. Performance information on the Focus List picks is available in our bi-annual Argus Performance Review. Here are the latest additions, all of which are rated BUY at Argus.",
-            "tickers": [
-                "TJX",
-                "CL",
-                "SQ",
-                "DIS"
-            ]
         }
     ],
     "sigDevs": [
@@ -1760,6 +1760,15 @@
         }
     ],
     "secReports": [
+        {
+            "id": "0000950157-24-000595_1744489",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1712620800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000595/thumbnail.png",
+            "formType": "8-K"
+        },
         {
             "id": "0000950157-24-000570_1744489",
             "type": "Corporate Changes & Voting Matters",
@@ -1824,21 +1833,21 @@
             "formType": "DEFA14A"
         },
         {
-            "id": "0000950157-24-000521_1744489",
-            "type": "Proxy Statements",
-            "title": "DEFA14A : Proxy Statements",
-            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
-            "filingDate": 1711324800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000521/thumbnail.png",
-            "formType": "DEFA14A"
-        },
-        {
             "id": "0000950157-24-000519_1744489",
             "type": "Proxy Statements",
             "title": "DEFA14A : Proxy Statements",
             "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
             "filingDate": 1711324800000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000519/thumbnail.png",
+            "formType": "DEFA14A"
+        },
+        {
+            "id": "0000950157-24-000521_1744489",
+            "type": "Proxy Statements",
+            "title": "DEFA14A : Proxy Statements",
+            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
+            "filingDate": 1711324800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000521/thumbnail.png",
             "formType": "DEFA14A"
         },
         {
@@ -1950,21 +1959,21 @@
             "formType": "DEFA14A"
         },
         {
-            "id": "0000950157-24-000402_1744489",
-            "type": "Proxy Statements",
-            "title": "DEFA14A : Proxy Statements",
-            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
-            "filingDate": 1710288000000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000402/thumbnail.png",
-            "formType": "DEFA14A"
-        },
-        {
             "id": "0000950157-24-000390_1744489",
             "type": "Proxy Statements",
             "title": "DEFA14A : Proxy Statements",
             "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
             "filingDate": 1710288000000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000390/thumbnail.png",
+            "formType": "DEFA14A"
+        },
+        {
+            "id": "0000950157-24-000402_1744489",
+            "type": "Proxy Statements",
+            "title": "DEFA14A : Proxy Statements",
+            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
+            "filingDate": 1710288000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000402/thumbnail.png",
             "formType": "DEFA14A"
         },
         {
@@ -2166,21 +2175,21 @@
             "formType": "DEFA14A"
         },
         {
-            "id": "0000950157-24-000229_1744489",
-            "type": "Proxy Statements",
-            "title": "DEFA14A : Proxy Statements",
-            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
-            "filingDate": 1707868800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000229/thumbnail.png",
-            "formType": "DEFA14A"
-        },
-        {
             "id": "0000950157-24-000224_1744489",
             "type": "Proxy Statements",
             "title": "DEFA14A : Proxy Statements",
             "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
             "filingDate": 1707868800000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000224/thumbnail.png",
+            "formType": "DEFA14A"
+        },
+        {
+            "id": "0000950157-24-000229_1744489",
+            "type": "Proxy Statements",
+            "title": "DEFA14A : Proxy Statements",
+            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
+            "filingDate": 1707868800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000229/thumbnail.png",
             "formType": "DEFA14A"
         },
         {
@@ -2199,15 +2208,6 @@
             "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
             "filingDate": 1707782400000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000201/thumbnail.png",
-            "formType": "DEFA14A"
-        },
-        {
-            "id": "0000950157-24-000170_1744489",
-            "type": "Proxy Statements",
-            "title": "DEFA14A : Proxy Statements",
-            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
-            "filingDate": 1707696000000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000170/thumbnail.png",
             "formType": "DEFA14A"
         }
     ]

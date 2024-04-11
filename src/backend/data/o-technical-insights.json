@@ -7,23 +7,23 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 3,
-                "scoreDescription": "Strong Bullish Evidence",
-                "sectorDirection": "Bearish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bearish Evidence",
+                "score": 4,
+                "scoreDescription": "Very Strong Bullish Evidence",
+                "sectorDirection": "Bullish",
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bullish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 4,
-                "indexScoreDescription": "Very Strong Bearish Evidence"
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "intermediateTermOutlook": {
-                "stateDescription": "Bearish events outweigh bullish events.",
-                "direction": "Bearish",
-                "score": 1,
-                "scoreDescription": "Weak Bearish Evidence",
+                "stateDescription": "Recent bullish events outweigh bearish events.",
+                "direction": "Bullish",
+                "score": 2,
+                "scoreDescription": "Bullish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bearish Evidence",
+                "sectorScore": 1,
+                "sectorScoreDescription": "Weak Bearish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 2,
                 "indexScoreDescription": "Bearish Evidence"
@@ -45,12 +45,12 @@
             "provider": "Trading Central",
             "support": 52.815,
             "resistance": 61.0311,
-            "stopLoss": 50.689098
+            "stopLoss": 49.40825
         },
         "valuation": {
             "color": 0.0,
             "description": "Overvalued",
-            "discount": "-21%",
+            "discount": "-22%",
             "relativeValue": "Premium",
             "provider": "Trading Central"
         }
@@ -61,9 +61,9 @@
             "innovativeness": 0.7422,
             "hiring": 0.5634,
             "sustainability": 0.6531,
-            "insiderSentiments": 0.5062,
-            "earningsReports": 0.8764,
-            "dividends": 0.44310000000000005
+            "insiderSentiments": 0.5,
+            "earningsReports": 0.8774,
+            "dividends": 0.4366
         },
         "sector": {
             "innovativeness": 0.5,
@@ -106,13 +106,13 @@
     },
     "events": [
         {
-            "eventType": "Price Crosses Moving Average",
+            "eventType": "Commodity Channel Index",
             "pricePeriod": "D",
-            "tradingHorizon": "I",
+            "tradingHorizon": "S",
             "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1712323800,
-            "endDate": 1712323800
+            "startDate": 1712669400,
+            "endDate": 1712669400
         }
     ],
     "reports": [

@@ -7,14 +7,14 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 4,
-                "scoreDescription": "Very Strong Bearish Evidence",
-                "sectorDirection": "Bearish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bearish Evidence",
+                "score": 2,
+                "scoreDescription": "Bearish Evidence",
+                "sectorDirection": "Bullish",
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bullish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 4,
-                "indexScoreDescription": "Very Strong Bearish Evidence"
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bullish events outweigh bearish events.",
@@ -22,8 +22,8 @@
                 "score": 2,
                 "scoreDescription": "Bullish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bearish Evidence",
+                "sectorScore": 1,
+                "sectorScoreDescription": "Weak Bearish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 2,
                 "indexScoreDescription": "Bearish Evidence"
@@ -45,7 +45,7 @@
             "provider": "Trading Central",
             "support": 111.1736,
             "resistance": 150.92,
-            "stopLoss": 143.332802
+            "stopLoss": 143.271959
         },
         "valuation": {
             "color": 0.0,
@@ -61,9 +61,9 @@
             "innovativeness": 0.6211,
             "hiring": 0.6901,
             "sustainability": 0.5611999999999999,
-            "insiderSentiments": 0.9136,
-            "earningsReports": 0.6901,
-            "dividends": 0.3635
+            "insiderSentiments": 0.9573,
+            "earningsReports": 0.6868000000000001,
+            "dividends": 0.36840000000000006
         },
         "sector": {
             "innovativeness": 0.5,
@@ -106,13 +106,13 @@
     },
     "events": [
         {
-            "eventType": "Price Crosses Moving Average",
+            "eventType": "Slow Stochastic",
             "pricePeriod": "D",
-            "tradingHorizon": "I",
+            "tradingHorizon": "S",
             "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1712323800,
-            "endDate": 1712323800
+            "startDate": 1712669400,
+            "endDate": 1712669400
         }
     ],
     "reports": [
@@ -739,18 +739,6 @@
             ]
         },
         {
-            "id": "3403_Analyst Report_1637910693000",
-            "headHtml": "Analyst Report: Simon Property Group, Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2021-11-26T07:11:33Z",
-            "reportTitle": "Simon Property Group Inc., based in Indianapolis, is a retail REIT that owns and leases malls and outlets. Simon owns or has interest in 233 properties with 191 million square feet of leasable space in North America, Asia, and Europe. Additionally, the company owns an 80% interest in the Taubman group and a 22% interest in Klepierre, a Paris-based real estate firm. SPG is a member of the S&P 500.",
-            "targetPrice": 180.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "SPG"
-            ]
-        },
-        {
             "id": "31491_Market Summary_1637910693000",
             "headHtml": "Market Digest: HPQ, J, SPG, TJX, VNT",
             "provider": "Argus Research",
@@ -762,6 +750,18 @@
                 "J",
                 "SPG",
                 "VNT"
+            ]
+        },
+        {
+            "id": "3403_Analyst Report_1637910693000",
+            "headHtml": "Analyst Report: Simon Property Group, Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2021-11-26T07:11:33Z",
+            "reportTitle": "Simon Property Group Inc., based in Indianapolis, is a retail REIT that owns and leases malls and outlets. Simon owns or has interest in 233 properties with 191 million square feet of leasable space in North America, Asia, and Europe. Additionally, the company owns an 80% interest in the Taubman group and a 22% interest in Klepierre, a Paris-based real estate firm. SPG is a member of the S&P 500.",
+            "targetPrice": 180.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "SPG"
             ]
         },
         {
@@ -865,18 +865,6 @@
             ]
         },
         {
-            "id": "3403_Analyst Report_1598452719000",
-            "headHtml": "Analyst Report: Simon Property Group, Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2020-08-26T14:38:39Z",
-            "reportTitle": "Simon Property Group Inc., based in Indianapolis, is a retail REIT that owns and leases malls and outlets. Simon has an interest in or owns 234 properties with 191 million square feet of leasable space in North America, Asia, and Europe. It also has a 22% interest in Klepierre, a Paris-based real estate firm, which owns shopping centers in 15 European countries. SPG is a member of the S&P 500.",
-            "targetPrice": 85.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "SPG"
-            ]
-        },
-        {
             "id": "27784_Market Update_1598452719000",
             "headHtml": "Market Update: PANW, SLF, BBY, MDU, SPG",
             "provider": "Argus Research",
@@ -888,6 +876,18 @@
                 "SLF",
                 "MDU",
                 "PANW"
+            ]
+        },
+        {
+            "id": "3403_Analyst Report_1598452719000",
+            "headHtml": "Analyst Report: Simon Property Group, Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2020-08-26T14:38:39Z",
+            "reportTitle": "Simon Property Group Inc., based in Indianapolis, is a retail REIT that owns and leases malls and outlets. Simon has an interest in or owns 234 properties with 191 million square feet of leasable space in North America, Asia, and Europe. It also has a 22% interest in Klepierre, a Paris-based real estate firm, which owns shopping centers in 15 European countries. SPG is a member of the S&P 500.",
+            "targetPrice": 85.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "SPG"
             ]
         },
         {
@@ -917,6 +917,18 @@
             ]
         },
         {
+            "id": "3403_Analyst Report_1591883229000",
+            "headHtml": "Analyst Report: Simon Property Group, Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2020-06-11T13:47:09Z",
+            "reportTitle": "Simon Property Group Inc., based in Indianapolis, is a retail REIT that owns and leases malls and outlets. Simon has an interest in or owns 234 properties with 191 million square feet of leasable space in North America, Asia, and Europe. It also has a 22% interest in Klepierre, a Paris-based real estate firm, which owns shopping centers in 15 European countries. SPG is a member of the S&P 500.",
+            "targetPrice": 110.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "SPG"
+            ]
+        },
+        {
             "id": "27168_Market Update_1591883229000",
             "headHtml": "Market Update: BAX, SPG, ULTA, LB, M",
             "provider": "Argus Research",
@@ -928,18 +940,6 @@
                 "BAX",
                 "SPG",
                 "M"
-            ]
-        },
-        {
-            "id": "3403_Analyst Report_1591883229000",
-            "headHtml": "Analyst Report: Simon Property Group, Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2020-06-11T13:47:09Z",
-            "reportTitle": "Simon Property Group Inc., based in Indianapolis, is a retail REIT that owns and leases malls and outlets. Simon has an interest in or owns 234 properties with 191 million square feet of leasable space in North America, Asia, and Europe. It also has a 22% interest in Klepierre, a Paris-based real estate firm, which owns shopping centers in 15 European countries. SPG is a member of the S&P 500.",
-            "targetPrice": 110.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "SPG"
             ]
         },
         {
@@ -1052,18 +1052,6 @@
             ]
         },
         {
-            "id": "3403_Analyst Report_1573171200000",
-            "headHtml": "Analyst Report: Simon Property Group, Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2019-11-08T00:00:00Z",
-            "reportTitle": "Simon Property Group Inc., based in Indianapolis, is a retail REIT that owns and leases malls and outlets. Simon has an interest in or owns 233 properties with 191 million square feet of leasable space in North America, Asia, and Europe. It also has a 22% interest in Klepierre, a Paris-based real estate firm, which owns shopping centers in 16 European countries. SPG is a member of the S&P 500.",
-            "targetPrice": 180.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "SPG"
-            ]
-        },
-        {
             "id": "25426_Market Update_1573171200000",
             "headHtml": "Market Update: BKNG, CPRI, SPG, CVX, LGF/A, LYB, NYT",
             "provider": "Argus Research",
@@ -1077,6 +1065,18 @@
                 "CPRI",
                 "BKNG",
                 "LGF-A"
+            ]
+        },
+        {
+            "id": "3403_Analyst Report_1573171200000",
+            "headHtml": "Analyst Report: Simon Property Group, Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2019-11-08T00:00:00Z",
+            "reportTitle": "Simon Property Group Inc., based in Indianapolis, is a retail REIT that owns and leases malls and outlets. Simon has an interest in or owns 233 properties with 191 million square feet of leasable space in North America, Asia, and Europe. It also has a 22% interest in Klepierre, a Paris-based real estate firm, which owns shopping centers in 16 European countries. SPG is a member of the S&P 500.",
+            "targetPrice": 180.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "SPG"
             ]
         },
         {
@@ -1281,6 +1281,18 @@
             ]
         },
         {
+            "id": "3403_Analyst Report_1549438456000",
+            "headHtml": "Maintaining BUY on redevelopment and solid 4Q",
+            "provider": "Argus Research",
+            "reportDate": "2019-02-06T07:34:16Z",
+            "reportTitle": "Simon Property Group Inc., based in Indianapolis, is a retail REIT that owns and leases out its malls and outlets. Simon has an interest in or owns 234 properties with 191 million square feet of leasable space. It also has a 21% interest in Klepierre, a Paris-based real estate firm, which owns shopping centers in 16 European countries. SPG is a member of the S&P 500.",
+            "targetPrice": 200.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "SPG"
+            ]
+        },
+        {
             "id": "23161_Market Summary_1549438456000",
             "headHtml": "Market Digest: ILMN, NDAQ, NVS, CLS, EMR, GOOGL, RCL, SPG, STX, XOM",
             "provider": "Argus Research",
@@ -1296,18 +1308,6 @@
                 "NVS",
                 "CLS",
                 "EMR",
-                "SPG"
-            ]
-        },
-        {
-            "id": "3403_Analyst Report_1549438456000",
-            "headHtml": "Maintaining BUY on redevelopment and solid 4Q",
-            "provider": "Argus Research",
-            "reportDate": "2019-02-06T07:34:16Z",
-            "reportTitle": "Simon Property Group Inc., based in Indianapolis, is a retail REIT that owns and leases out its malls and outlets. Simon has an interest in or owns 234 properties with 191 million square feet of leasable space. It also has a 21% interest in Klepierre, a Paris-based real estate firm, which owns shopping centers in 16 European countries. SPG is a member of the S&P 500.",
-            "targetPrice": 200.0,
-            "investmentRating": "Bullish",
-            "tickers": [
                 "SPG"
             ]
         },
@@ -1535,6 +1535,17 @@
             ]
         },
         {
+            "id": "22241_Market Summary_1539068776000",
+            "headHtml": "Market Digest: ILMN, SPG",
+            "provider": "Argus Research",
+            "reportDate": "2018-10-09T07:06:16Z",
+            "reportTitle": "Vickers Stock Research, Argus' sister company, calculates proprietary Sell/Buy Ratios using data from recent Form-4 filings (through which insiders register purchases and sales of their stock with the SEC). Insiders are deemed to be in a bullish mood when the Sell/Buy Ratio comes in at 2.00 or below; they are neutral in the 2.00 to 2.50 range; and they are bearish if results are 2.50 or above.",
+            "tickers": [
+                "ILMN",
+                "SPG"
+            ]
+        },
+        {
             "id": "3403_Analyst Report_1539068776000",
             "headHtml": "Raising target by $5 to $200 on redevelopment",
             "provider": "Argus Research",
@@ -1543,17 +1554,6 @@
             "targetPrice": 200.0,
             "investmentRating": "Bullish",
             "tickers": [
-                "SPG"
-            ]
-        },
-        {
-            "id": "22241_Market Summary_1539068776000",
-            "headHtml": "Market Digest: ILMN, SPG",
-            "provider": "Argus Research",
-            "reportDate": "2018-10-09T07:06:16Z",
-            "reportTitle": "Vickers Stock Research, Argus' sister company, calculates proprietary Sell/Buy Ratios using data from recent Form-4 filings (through which insiders register purchases and sales of their stock with the SEC). Insiders are deemed to be in a bullish mood when the Sell/Buy Ratio comes in at 2.00 or below; they are neutral in the 2.00 to 2.50 range; and they are bearish if results are 2.50 or above.",
-            "tickers": [
-                "ILMN",
                 "SPG"
             ]
         },

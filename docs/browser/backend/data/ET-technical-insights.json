@@ -7,14 +7,14 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 2,
-                "scoreDescription": "Bearish Evidence",
-                "sectorDirection": "Bullish",
-                "sectorScore": 1,
-                "sectorScoreDescription": "Weak Bullish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bearish Evidence",
+                "sectorDirection": "Neutral",
+                "sectorScore": 0,
+                "sectorScoreDescription": "Neutral Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 4,
-                "indexScoreDescription": "Very Strong Bearish Evidence"
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Bullish events outweigh bearish events.",
@@ -44,8 +44,8 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 13.885,
-            "resistance": 16.0,
-            "stopLoss": 15.442675
+            "resistance": 15.77,
+            "stopLoss": 15.347772
         },
         "valuation": {
             "color": 1.0,
@@ -60,9 +60,9 @@
         "company": {
             "innovativeness": 0.2664,
             "sustainability": 0.9265000000000001,
-            "insiderSentiments": 0.8976000000000001,
-            "earningsReports": 0.8554,
-            "dividends": 0.7154
+            "insiderSentiments": 0.8984000000000001,
+            "earningsReports": 0.8484999999999999,
+            "dividends": 0.7188
         },
         "sector": {
             "innovativeness": 0.5,
@@ -100,13 +100,13 @@
     },
     "events": [
         {
-            "eventType": "Commodity Channel Index",
+            "eventType": "Short-term KST",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "U",
+            "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1712323800,
-            "endDate": 1712323800
+            "startDate": 1712583000,
+            "endDate": 1712583000
         }
     ],
     "sigDevs": [

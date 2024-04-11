@@ -7,14 +7,14 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 3,
-                "scoreDescription": "Strong Bearish Evidence",
+                "score": 2,
+                "scoreDescription": "Bearish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 4,
                 "sectorScoreDescription": "Very Strong Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 4,
-                "indexScoreDescription": "Very Strong Bearish Evidence"
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
@@ -43,9 +43,9 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 26.52,
+            "support": 26.63,
             "resistance": 27.6,
-            "stopLoss": 25.266102
+            "stopLoss": 25.906795
         },
         "valuation": {
             "color": 1.0,
@@ -58,12 +58,12 @@
     "companySnapshot": {
         "sectorInfo": "Healthcare",
         "company": {
-            "innovativeness": 0.8733,
+            "innovativeness": 0.8937999999999999,
             "hiring": 0.9109999999999999,
             "sustainability": 0.6695,
-            "insiderSentiments": 0.7134,
-            "earningsReports": 0.977,
-            "dividends": 0.9484999999999999
+            "insiderSentiments": 0.7121,
+            "earningsReports": 0.9773999999999999,
+            "dividends": 0.9489
         },
         "sector": {
             "innovativeness": 0.5,
@@ -1577,18 +1577,6 @@
             ]
         },
         {
-            "id": "3305_Analyst Report_1601337600000",
-            "headHtml": "Analyst Report: Pfizer Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2020-09-29T00:00:00Z",
-            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
-            "targetPrice": 55.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "PFE"
-            ]
-        },
-        {
             "id": "28051_Market Update_1601337600000",
             "headHtml": "Market Update: DVN, KMX, PFE",
             "provider": "Argus Research",
@@ -1597,6 +1585,18 @@
             "tickers": [
                 "KMX",
                 "DVN",
+                "PFE"
+            ]
+        },
+        {
+            "id": "3305_Analyst Report_1601337600000",
+            "headHtml": "Analyst Report: Pfizer Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2020-09-29T00:00:00Z",
+            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
+            "targetPrice": 55.0,
+            "investmentRating": "Bullish",
+            "tickers": [
                 "PFE"
             ]
         },
@@ -1653,6 +1653,18 @@
             ]
         },
         {
+            "id": "3305_Analyst Report_1596067200000",
+            "headHtml": "Analyst Report: Pfizer Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2020-07-30T00:00:00Z",
+            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
+            "targetPrice": 55.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "PFE"
+            ]
+        },
+        {
             "id": "27564_Market Update_1596067200000",
             "headHtml": "Market Update: ASH, EBAY, LRCX, ODFL, PFE, QCOM, STX, MDLZ, PYPL",
             "provider": "Argus Research",
@@ -1668,18 +1680,6 @@
                 "LRCX",
                 "PFE",
                 "ODFL"
-            ]
-        },
-        {
-            "id": "3305_Analyst Report_1596067200000",
-            "headHtml": "Analyst Report: Pfizer Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2020-07-30T00:00:00Z",
-            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
-            "targetPrice": 55.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "PFE"
             ]
         },
         {
@@ -1957,11 +1957,20 @@
     ],
     "sigDevs": [
         {
-            "headline": "Roivant Announces Positive Neptune Study Results For Brepocitinib In NIU",
-            "date": "2024-04-02"
+            "headline": "Pfizer Says Abrysvo Met Trial Primary Endpoints In Adults Aged 18 To 59 With Increased RSV Disease Risk",
+            "date": "2024-04-09"
         }
     ],
     "secReports": [
+        {
+            "id": "0000078003-24-000094_78003",
+            "type": "Proxy Statements",
+            "title": "DEFA14A : Proxy Statements",
+            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
+            "filingDate": 1712620800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000078003/000007800324000094/thumbnail.png",
+            "formType": "DEFA14A"
+        },
         {
             "id": "0000078003-24-000088_78003",
             "type": "Proxy Statements",
@@ -2366,15 +2375,6 @@
             "filingDate": 1680134400000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000078003/000007800323000061/thumbnail.png",
             "formType": "DEFA14A"
-        },
-        {
-            "id": "0000078003-23-000056_78003",
-            "type": "Tender Offer/Acquisition Reports",
-            "title": "SC 13D/A : Tender Offer/Acquisition Reports",
-            "description": "Schedule filed to report acquisition of beneficial ownership of 5% or more of a class of equity securities",
-            "filingDate": 1679875200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001832168/000007800323000056/thumbnail.png",
-            "formType": "SC 13D/A"
         }
     ]
 }

@@ -6,11 +6,11 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 4,
-                "scoreDescription": "Very Strong Bearish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 4,
-                "indexScoreDescription": "Very Strong Bearish Evidence"
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bullish events outweigh bearish events.",
@@ -34,8 +34,8 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 54.8999,
-            "resistance": 57.2816,
-            "stopLoss": 55.963828
+            "resistance": 57.2433,
+            "stopLoss": 56.215487
         },
         "valuation": {
             "provider": "Trading Central"
@@ -44,13 +44,13 @@
     "upsell": {},
     "events": [
         {
-            "eventType": "Triple Moving Average Crossover",
+            "eventType": "Fast Stochastic",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "S",
+            "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1712323800,
-            "endDate": 1712323800
+            "startDate": 1712583000,
+            "endDate": 1712583000
         }
     ],
     "sigDevs": []

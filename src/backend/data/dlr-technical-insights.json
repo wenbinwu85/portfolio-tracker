@@ -7,23 +7,23 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 1,
-                "scoreDescription": "Weak Bullish Evidence",
-                "sectorDirection": "Bearish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bearish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bullish Evidence",
+                "sectorDirection": "Bullish",
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bullish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 4,
-                "indexScoreDescription": "Very Strong Bearish Evidence"
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "intermediateTermOutlook": {
-                "stateDescription": "The bullish and bearish events are balanced.",
-                "direction": "Neutral",
-                "score": 0,
-                "scoreDescription": "Neutral Evidence",
+                "stateDescription": "Recent bullish events outweigh bearish events.",
+                "direction": "Bullish",
+                "score": 2,
+                "scoreDescription": "Bullish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bearish Evidence",
+                "sectorScore": 1,
+                "sectorScoreDescription": "Weak Bearish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 2,
                 "indexScoreDescription": "Bearish Evidence"
@@ -44,8 +44,8 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 134.85,
-            "resistance": 144.035,
-            "stopLoss": 131.799174
+            "resistance": 145.97,
+            "stopLoss": 132.962963
         },
         "valuation": {
             "color": 0.0,
@@ -60,9 +60,9 @@
         "company": {
             "innovativeness": 0.5078,
             "sustainability": 0.4082,
-            "insiderSentiments": 0.4753,
-            "earningsReports": 0.903,
-            "dividends": 0.1866
+            "insiderSentiments": 0.46340000000000003,
+            "earningsReports": 0.9057,
+            "dividends": 0.18230000000000002
         },
         "sector": {
             "innovativeness": 0.5,
@@ -105,13 +105,13 @@
     },
     "events": [
         {
-            "eventType": "Continuation Diamond (Bullish)",
+            "eventType": "Commodity Channel Index",
             "pricePeriod": "D",
-            "tradingHorizon": "I",
+            "tradingHorizon": "S",
             "tradeType": "L",
-            "imageUrl": "https://s.yimg.com/uc/fin/img/assets/bullish-continuation-diamond.svg",
-            "startDate": 1705415400,
-            "endDate": 1712323800
+            "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
+            "startDate": 1712669400,
+            "endDate": 1712669400
         }
     ],
     "reports": [
@@ -580,18 +580,6 @@
             ]
         },
         {
-            "id": "4555_Analyst Report_1635752351000",
-            "headHtml": "Analyst Report: Digital Realty Trust Inc",
-            "provider": "Argus Research",
-            "reportDate": "2021-11-01T07:39:11Z",
-            "reportTitle": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 36 metropolitan markets on five continents. It is based in Austin, Texas.",
-            "targetPrice": 180.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "DLR"
-            ]
-        },
-        {
             "id": "31276_Market Summary_1635752351000",
             "headHtml": "Market Digest: BA, BMY, CME, GD, MCO, MRK, WDC, FB, DLR, LIN, CARR",
             "provider": "Argus Research",
@@ -609,6 +597,18 @@
                 "GD",
                 "BA",
                 "BMY"
+            ]
+        },
+        {
+            "id": "4555_Analyst Report_1635752351000",
+            "headHtml": "Analyst Report: Digital Realty Trust Inc",
+            "provider": "Argus Research",
+            "reportDate": "2021-11-01T07:39:11Z",
+            "reportTitle": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 36 metropolitan markets on five continents. It is based in Austin, Texas.",
+            "targetPrice": 180.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "DLR"
             ]
         },
         {
@@ -1075,17 +1075,6 @@
             ]
         },
         {
-            "id": "25559_Market Summary_1574726400000",
-            "headHtml": "Market Digest: ARNC, DLR",
-            "provider": "Argus Research",
-            "reportDate": "2019-11-26T00:00:00Z",
-            "reportTitle": "Earnings season has come and gone, and the volume of insider transactions is not just back to normal -- it is exceeding recent patterns. This gives increased significance to any sentiment trends that come from trades made by corporate executives, directors and beneficial owners. This week, some 1661 insider transactions met the criteria for inclusion in Vickers Weekly Insider Report. The last time we saw this level of trading volume was back in May -- so transaction activity is brisk. That said, what is this activity telling us?",
-            "tickers": [
-                "ARNC",
-                "DLR"
-            ]
-        },
-        {
             "id": "4555_Analyst Report_1574726400000",
             "headHtml": "Analyst Report: Digital Realty Trust Inc",
             "provider": "Argus Research",
@@ -1094,6 +1083,17 @@
             "targetPrice": 130.0,
             "investmentRating": "Bullish",
             "tickers": [
+                "DLR"
+            ]
+        },
+        {
+            "id": "25559_Market Summary_1574726400000",
+            "headHtml": "Market Digest: ARNC, DLR",
+            "provider": "Argus Research",
+            "reportDate": "2019-11-26T00:00:00Z",
+            "reportTitle": "Earnings season has come and gone, and the volume of insider transactions is not just back to normal -- it is exceeding recent patterns. This gives increased significance to any sentiment trends that come from trades made by corporate executives, directors and beneficial owners. This week, some 1661 insider transactions met the criteria for inclusion in Vickers Weekly Insider Report. The last time we saw this level of trading volume was back in May -- so transaction activity is brisk. That said, what is this activity telling us?",
+            "tickers": [
+                "ARNC",
                 "DLR"
             ]
         },
