@@ -5,16 +5,16 @@
             "provider": "Trading Central",
             "sector": "Financial Services",
             "shortTermOutlook": {
-                "stateDescription": "Recent bullish events outweigh bearish events.",
-                "direction": "Bullish",
-                "score": 3,
-                "scoreDescription": "Strong Bullish Evidence",
+                "stateDescription": "Recent bearish events outweigh bullish events.",
+                "direction": "Bearish",
+                "score": 2,
+                "scoreDescription": "Bearish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bearish Evidence",
+                "sectorScore": 4,
+                "sectorScoreDescription": "Very Strong Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 2,
-                "indexScoreDescription": "Bearish Evidence"
+                "indexScore": 4,
+                "indexScoreDescription": "Very Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "All events are bearish.",
@@ -45,7 +45,7 @@
             "provider": "Trading Central",
             "support": 9.1414,
             "resistance": 10.8678,
-            "stopLoss": 8.817053
+            "stopLoss": 8.665089
         },
         "valuation": {
             "color": 0.0,
@@ -59,7 +59,7 @@
         "company": {
             "innovativeness": 0.0305,
             "insiderSentiments": 0.9101,
-            "earningsReports": 0.1454,
+            "earningsReports": 0.1456,
             "dividends": 0.998
         },
         "sector": {
@@ -79,10 +79,10 @@
             "eventType": "Price Crosses Moving Average",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "L",
+            "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1712669400,
-            "endDate": 1712669400
+            "startDate": 1712842200,
+            "endDate": 1712842200
         }
     ],
     "reports": [
@@ -159,15 +159,6 @@
             "formType": "N-2"
         },
         {
-            "id": "0001580345-23-000039_1580345",
-            "type": "Periodic Financial Reports",
-            "title": "10-Q : Periodic Financial Reports",
-            "description": "Quarterly report pursuant to Section 13 or 15(d)",
-            "filingDate": 1698796800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001580345/000158034523000039/thumbnail.png",
-            "formType": "10-Q"
-        },
-        {
             "id": "0001580345-23-000038_1580345",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -175,6 +166,15 @@
             "filingDate": 1698796800000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001580345/000158034523000038/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0001580345-23-000039_1580345",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1698796800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001580345/000158034523000039/thumbnail.png",
+            "formType": "10-Q"
         },
         {
             "id": "0001580345-23-000034_1580345",

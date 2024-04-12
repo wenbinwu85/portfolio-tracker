@@ -5,25 +5,25 @@
             "provider": "Trading Central",
             "sector": "Real Estate",
             "shortTermOutlook": {
-                "stateDescription": "Recent bullish events outweigh bearish events.",
-                "direction": "Bullish",
-                "score": 4,
-                "scoreDescription": "Very Strong Bullish Evidence",
-                "sectorDirection": "Bullish",
-                "sectorScore": 2,
-                "sectorScoreDescription": "Bullish Evidence",
+                "stateDescription": "Recent bearish events outweigh bullish events.",
+                "direction": "Bearish",
+                "score": 2,
+                "scoreDescription": "Bearish Evidence",
+                "sectorDirection": "Bearish",
+                "sectorScore": 4,
+                "sectorScoreDescription": "Very Strong Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 2,
-                "indexScoreDescription": "Bearish Evidence"
+                "indexScore": 4,
+                "indexScoreDescription": "Very Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
-                "stateDescription": "Recent bullish events outweigh bearish events.",
-                "direction": "Bullish",
+                "stateDescription": "Recent bearish events outweigh bullish events.",
+                "direction": "Bearish",
                 "score": 2,
-                "scoreDescription": "Bullish Evidence",
+                "scoreDescription": "Bearish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 1,
-                "sectorScoreDescription": "Weak Bearish Evidence",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bearish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 2,
                 "indexScoreDescription": "Bearish Evidence"
@@ -43,14 +43,14 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 52.815,
-            "resistance": 61.0311,
-            "stopLoss": 49.40825
+            "support": 52.04,
+            "resistance": 52.815,
+            "stopLoss": 49.789601
         },
         "valuation": {
             "color": 0.0,
             "description": "Overvalued",
-            "discount": "-22%",
+            "discount": "-21%",
             "relativeValue": "Premium",
             "provider": "Trading Central"
         }
@@ -62,8 +62,8 @@
             "hiring": 0.5634,
             "sustainability": 0.6531,
             "insiderSentiments": 0.5,
-            "earningsReports": 0.8774,
-            "dividends": 0.4366
+            "earningsReports": 0.8792,
+            "dividends": 0.44920000000000004
         },
         "sector": {
             "innovativeness": 0.5,
@@ -106,16 +106,28 @@
     },
     "events": [
         {
-            "eventType": "Commodity Channel Index",
+            "eventType": "MACD",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "L",
+            "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1712669400,
-            "endDate": 1712669400
+            "startDate": 1712842200,
+            "endDate": 1712842200
         }
     ],
     "reports": [
+        {
+            "id": "3273_Quantitative Report_1712707200000",
+            "headHtml": "What does Argus have to say about O?",
+            "provider": "Argus Research",
+            "reportDate": "2024-04-10T00:00:00Z",
+            "reportTitle": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $45.000000; an Industry Subrating of Low; a Management Subrating of Low; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium.",
+            "targetPrice": 45.0,
+            "investmentRating": "Bearish",
+            "tickers": [
+                "O"
+            ]
+        },
         {
             "id": "3273_Quantitative Report_1712102400000",
             "headHtml": "What does Argus have to say about O?",
@@ -1303,18 +1315,6 @@
             "tickers": [
                 "O"
             ]
-        },
-        {
-            "id": "3273_Quantitative Report_1649203200000",
-            "headHtml": "Raising target price to $75.00",
-            "provider": "Argus Research",
-            "reportDate": "2022-04-06T00:00:00Z",
-            "reportTitle": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $75.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Low.",
-            "targetPrice": 75.0,
-            "investmentRating": "Neutral",
-            "tickers": [
-                "O"
-            ]
         }
     ],
     "sigDevs": [
@@ -1532,21 +1532,21 @@
             "formType": "8-K"
         },
         {
-            "id": "0001104659-23-121255_726728",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1701043200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000726728/000110465923121255/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
             "id": "0001104659-23-121259_726728",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
             "description": "Current report filing",
             "filingDate": 1701043200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000726728/000110465923121259/thumbnail.png",
+            "formType": "8-K"
+        },
+        {
+            "id": "0001104659-23-121255_726728",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1701043200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000726728/000110465923121255/thumbnail.png",
             "formType": "8-K"
         },
         {

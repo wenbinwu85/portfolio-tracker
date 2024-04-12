@@ -7,14 +7,14 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 1,
-                "scoreDescription": "Weak Bullish Evidence",
-                "sectorDirection": "Bearish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bearish Evidence",
+                "score": 4,
+                "scoreDescription": "Very Strong Bullish Evidence",
+                "sectorDirection": "Neutral",
+                "sectorScore": 0,
+                "sectorScoreDescription": "Neutral Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 2,
-                "indexScoreDescription": "Bearish Evidence"
+                "indexScore": 4,
+                "indexScoreDescription": "Very Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "There is one bearish event.",
@@ -42,7 +42,8 @@
             }
         },
         "keyTechnicals": {
-            "provider": "Trading Central"
+            "provider": "Trading Central",
+            "stopLoss": 92.369565
         },
         "valuation": {
             "color": 0.0,
@@ -96,10 +97,10 @@
             "eventType": "Price Crosses Moving Average",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "S",
+            "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1712669400,
-            "endDate": 1712669400
+            "startDate": 1712842200,
+            "endDate": 1712842200
         }
     ],
     "sigDevs": [

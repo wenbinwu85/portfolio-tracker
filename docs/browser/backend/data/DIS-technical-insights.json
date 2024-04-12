@@ -10,11 +10,11 @@
                 "score": 4,
                 "scoreDescription": "Very Strong Bearish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 1,
-                "sectorScoreDescription": "Weak Bearish Evidence",
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 2,
-                "indexScoreDescription": "Bearish Evidence"
+                "indexScore": 4,
+                "indexScoreDescription": "Very Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
@@ -44,13 +44,13 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 91.01,
-            "resistance": 120.14,
-            "stopLoss": 108.932815
+            "resistance": 117.3309,
+            "stopLoss": 110.719575
         },
         "valuation": {
             "color": 1.0,
             "description": "Undervalued",
-            "discount": "30%",
+            "discount": "31%",
             "relativeValue": "Discount",
             "provider": "Trading Central"
         }
@@ -58,12 +58,12 @@
     "companySnapshot": {
         "sectorInfo": "Communication Services",
         "company": {
-            "innovativeness": 0.9444,
+            "innovativeness": 0.9274,
             "hiring": 0.8169,
             "sustainability": 0.2895,
-            "insiderSentiments": 0.40159999999999996,
-            "earningsReports": 0.9443,
-            "dividends": 0.0694
+            "insiderSentiments": 0.405,
+            "earningsReports": 0.9464,
+            "dividends": 0.0716
         },
         "sector": {
             "innovativeness": 0.5,
@@ -106,16 +106,27 @@
     },
     "events": [
         {
-            "eventType": "Momentum",
+            "eventType": "Triple Moving Average Crossover",
             "pricePeriod": "D",
             "tradingHorizon": "S",
             "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1712583000,
-            "endDate": 1712583000
+            "startDate": 1712842200,
+            "endDate": 1712842200
         }
     ],
     "reports": [
+        {
+            "id": "39684_Technical Analysis_1712919746000",
+            "headHtml": "Technical Assessment: Neutral in the Intermediate-Term",
+            "provider": "Argus Research",
+            "reportDate": "2024-04-12T11:02:26Z",
+            "reportTitle": "When the stock market is in a strong uptrend, pauses, and then finally threatens to pull back, what happens? When there has been institutional selling, better known as \"distribution\" in the Nasdaq 100, Technology often comes to the rescue after a short break and destroys the bears -- as well as a good number of technicians (hand raised) who expected more giveback.",
+            "tickers": [
+                "DKNG",
+                "DIS"
+            ]
+        },
         {
             "id": "2894_Analyst Report_1712746706000",
             "headHtml": "Analyst Report: Walt Disney Co (The)",
@@ -1157,6 +1168,18 @@
             ]
         },
         {
+            "id": "2894_Analyst Report_1586761958000",
+            "headHtml": "Analyst Report: Walt Disney Co (The)",
+            "provider": "Argus Research",
+            "reportDate": "2020-04-13T07:12:38Z",
+            "reportTitle": "Walt Disney Co. is a global entertainment company. The company owns and leverages well-known brands, ranging from Mickey Mouse and 'Frozen' to ESPN and ABC. Disney acquired the animated movie producer Pixar Animation Studios in 2006, comic book and movie producer Marvel Entertainment in 2010, 'Star Wars' originator Lucasfilm in 2012, a 75% interest in streaming video technology platform BAMTech (now Disney Streaming Services) in 2017, the assets of 21st Century Fox in March 2019, and Hulu in May 2019. Disney derives 24% of its revenue from outside of North America and 12% of its revenue from Europe.",
+            "targetPrice": 130.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "DIS"
+            ]
+        },
+        {
             "id": "26661_Market Summary_1586761958000",
             "headHtml": "Market Digest: SO, CTSH, DIS, XLNX, THO, SRE",
             "provider": "Argus Research",
@@ -1168,18 +1191,6 @@
                 "CTSH",
                 "THO",
                 "SO",
-                "DIS"
-            ]
-        },
-        {
-            "id": "2894_Analyst Report_1586761958000",
-            "headHtml": "Analyst Report: Walt Disney Co (The)",
-            "provider": "Argus Research",
-            "reportDate": "2020-04-13T07:12:38Z",
-            "reportTitle": "Walt Disney Co. is a global entertainment company. The company owns and leverages well-known brands, ranging from Mickey Mouse and 'Frozen' to ESPN and ABC. Disney acquired the animated movie producer Pixar Animation Studios in 2006, comic book and movie producer Marvel Entertainment in 2010, 'Star Wars' originator Lucasfilm in 2012, a 75% interest in streaming video technology platform BAMTech (now Disney Streaming Services) in 2017, the assets of 21st Century Fox in March 2019, and Hulu in May 2019. Disney derives 24% of its revenue from outside of North America and 12% of its revenue from Europe.",
-            "targetPrice": 130.0,
-            "investmentRating": "Bullish",
-            "tickers": [
                 "DIS"
             ]
         },
@@ -1622,18 +1633,6 @@
             ]
         },
         {
-            "id": "2894_Analyst Report_1573430400000",
-            "headHtml": "Analyst Report: Walt Disney Company",
-            "provider": "Argus Research",
-            "reportDate": "2019-11-11T00:00:00Z",
-            "reportTitle": "Walt Disney Co. is a global entertainment company. The company owns and leverages well-known brands, ranging from Mickey Mouse and 'Frozen' to ESPN and ABC. Disney acquired the animated movie producer Pixar Animation Studios in 2006, comic book and movie producer Marvel Entertainment in 2010, 'Star Wars' originator Lucasfilm in 2012, a 75% interest in streaming video technology platform BAMTech (now Disney Streaming Services) in 2017, the assets of 21st Century Fox in March 2019, and Hulu in May 2019. Disney derives 24% of its revenue from outside of North America and 12% of its revenue from Europe.",
-            "targetPrice": 160.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "DIS"
-            ]
-        },
-        {
             "id": "25430_Market Summary_1573430400000",
             "headHtml": "Market Digest: W, LHX, ABBV, EL, PRU, STX, DIS, GSK, OXY, EIX",
             "provider": "Argus Research",
@@ -1649,6 +1648,18 @@
                 "ABBV",
                 "LHX",
                 "GSK",
+                "DIS"
+            ]
+        },
+        {
+            "id": "2894_Analyst Report_1573430400000",
+            "headHtml": "Analyst Report: Walt Disney Company",
+            "provider": "Argus Research",
+            "reportDate": "2019-11-11T00:00:00Z",
+            "reportTitle": "Walt Disney Co. is a global entertainment company. The company owns and leverages well-known brands, ranging from Mickey Mouse and 'Frozen' to ESPN and ABC. Disney acquired the animated movie producer Pixar Animation Studios in 2006, comic book and movie producer Marvel Entertainment in 2010, 'Star Wars' originator Lucasfilm in 2012, a 75% interest in streaming video technology platform BAMTech (now Disney Streaming Services) in 2017, the assets of 21st Century Fox in March 2019, and Hulu in May 2019. Disney derives 24% of its revenue from outside of North America and 12% of its revenue from Europe.",
+            "targetPrice": 160.0,
+            "investmentRating": "Bullish",
+            "tickers": [
                 "DIS"
             ]
         },
@@ -1712,45 +1723,6 @@
                 "PEP",
                 "XEL"
             ]
-        },
-        {
-            "id": "24759_Thematic Portfolio_1566259200000",
-            "headHtml": "The Argus Min Vol Model Portfolio",
-            "provider": "Argus Research",
-            "reportDate": "2019-08-20T00:00:00Z",
-            "reportTitle": "As the stock market was racing to new highs earlier this year, most investors were either looking to get on board or stay aboard the galloping bull. But below the surface as many joined the party, the market was being driven higher primarily by Consumer and Information Technology stocks -- and investors likely became over-allocated to a couple of these high-risk/high-reward sectors. Even while riding the rally (and the recent ups and downs, as reflected in the elevated levels of volatility shown in our chart), some investors have started to investigate end-of-rally strategies. Minimum Volatility, or Min Vol, often falls into that defensive category. Argus believes that Min Vol is an all-weather strategy that is timely in any investing climate and that serves well as a complement to a core holdings strategy. Academic literature and (more to the point) returns history indicates that Min Vol can deliver market-matching returns on an absolute basis and superior returns on a risk-adjusted basis across the market cycle.",
-            "tickers": [
-                "ALL",
-                "JNJ",
-                "MRK",
-                "COST",
-                "T",
-                "SBUX",
-                "WM",
-                "LLY",
-                "TRV",
-                "MDT",
-                "LHX",
-                "NOC",
-                "TJX",
-                "HON",
-                "EL",
-                "AMT",
-                "AEP",
-                "ES",
-                "DIS",
-                "ECL",
-                "NEE",
-                "LMT",
-                "ROP",
-                "SYY",
-                "CMCSA",
-                "PEG",
-                "WEC",
-                "PAYX",
-                "PEP",
-                "XEL"
-            ]
         }
     ],
     "sigDevs": [
@@ -1779,21 +1751,21 @@
             "formType": "8-K"
         },
         {
-            "id": "0000950157-24-000539_1744489",
-            "type": "Proxy Statements",
-            "title": "DEFA14A : Proxy Statements",
-            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
-            "filingDate": 1711584000000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000539/thumbnail.png",
-            "formType": "DEFA14A"
-        },
-        {
             "id": "0000950157-24-000550_1744489",
             "type": "Proxy Statements",
             "title": "DEFA14A : Proxy Statements",
             "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
             "filingDate": 1711584000000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000550/thumbnail.png",
+            "formType": "DEFA14A"
+        },
+        {
+            "id": "0000950157-24-000539_1744489",
+            "type": "Proxy Statements",
+            "title": "DEFA14A : Proxy Statements",
+            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
+            "filingDate": 1711584000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000539/thumbnail.png",
             "formType": "DEFA14A"
         },
         {

@@ -7,29 +7,29 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
+                "score": 3,
+                "scoreDescription": "Strong Bearish Evidence",
+                "sectorDirection": "Neutral",
+                "sectorScore": 0,
+                "sectorScoreDescription": "Neutral Evidence",
+                "indexDirection": "Bearish",
+                "indexScore": 4,
+                "indexScoreDescription": "Very Strong Bearish Evidence"
+            },
+            "intermediateTermOutlook": {
+                "stateDescription": "All events are bearish.",
+                "direction": "Bearish",
                 "score": 2,
                 "scoreDescription": "Bearish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 1,
-                "sectorScoreDescription": "Weak Bearish Evidence",
-                "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
-            },
-            "intermediateTermOutlook": {
-                "stateDescription": "All events are bullish.",
-                "direction": "Bullish",
-                "score": 3,
-                "scoreDescription": "Strong Bullish Evidence",
-                "sectorDirection": "Bearish",
                 "sectorScore": 2,
                 "sectorScoreDescription": "Bearish Evidence",
-                "indexDirection": "Bullish",
-                "indexScore": 1,
-                "indexScoreDescription": "Weak Bullish Evidence"
+                "indexDirection": "Bearish",
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "longTermOutlook": {
-                "stateDescription": "All events are bullish.",
+                "stateDescription": "There is one bullish event.",
                 "direction": "Bullish",
                 "score": 1,
                 "scoreDescription": "Weak Bullish Evidence",
@@ -37,20 +37,20 @@
                 "sectorScore": 0,
                 "sectorScoreDescription": "No Evidence",
                 "indexDirection": "Bullish",
-                "indexScore": 2,
-                "indexScoreDescription": "Bullish Evidence"
+                "indexScore": 1,
+                "indexScoreDescription": "Weak Bullish Evidence"
             }
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 97.37,
-            "resistance": 211.01,
-            "stopLoss": 188.372654
+            "support": 101.86,
+            "resistance": 178.29,
+            "stopLoss": 153.192712
         },
         "valuation": {
             "color": 0.0,
             "description": "Overvalued",
-            "discount": "-5%",
+            "discount": "-1%",
             "relativeValue": "Premium",
             "provider": "Trading Central"
         }
@@ -58,10 +58,10 @@
     "companySnapshot": {
         "sectorInfo": "Technology",
         "company": {
-            "innovativeness": 0.7776000000000001,
+            "innovativeness": 0.75,
             "hiring": 0.8539,
-            "insiderSentiments": 0.13140000000000002,
-            "earningsReports": 0.986
+            "insiderSentiments": 0.1074,
+            "earningsReports": 0.9847
         },
         "sector": {
             "innovativeness": 0.5,
@@ -104,16 +104,44 @@
     },
     "events": [
         {
-            "eventType": "Outside Bar (Bearish)",
+            "eventType": "Slow Stochastic",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "S",
+            "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1709735400,
-            "endDate": 1709908200
+            "startDate": 1712842200,
+            "endDate": 1712842200
         }
     ],
     "reports": [
+        {
+            "id": "39672_Portfolio Ideas_1712833314000",
+            "headHtml": "Solid 1Q Leads into 2Q Uncertainty",
+            "provider": "Argus Research",
+            "reportDate": "2024-04-11T11:01:54Z",
+            "reportTitle": "The Portfolio Selector features the Argus Focus List, a group of 30 \"best idea\" stocks generated and regularly updated by Argus' analysts and investment policy committee. It also includes the director of research\u2019s monthly investment strategy column, stock recommendations and sector picks, economic forecasts, and an asset allocation model. This month, the Focus List additions are Laboratory Corp. Of America Hl (LH); Micron Technology Inc. (MU); Oracle Corp. (ORCL); Invesco Ltd (IVZ) and the Focus List deletions are Advanced Micro Devices Inc. (AMD); American Express Co. (AXP); Crowdstrike Holdings Inc (CRWD); Unitedhealth Group Inc (UNH).",
+            "tickers": [
+                "CRWD",
+                "AMD",
+                "MU",
+                "AXP",
+                "ORCL",
+                "IVZ",
+                "LH",
+                "UNH"
+            ]
+        },
+        {
+            "id": "39572_Technical Analysis_1712055121000",
+            "headHtml": "Technical Assessment: Neutral in the Intermediate-Term",
+            "provider": "Argus Research",
+            "reportDate": "2024-04-02T10:52:01Z",
+            "reportTitle": "No matter how you slice the price action from the last two quarters or past five months, the market may well have more upside ahead -- possibly in double digits. This is, of course, not a certainty, as there is always the possibility that something odd (say a pandemic) comes out of left field. But it is not rare for the S&P 500 (SPX) to be up for two consecutive quarters (at least during certain market periods), nor is it that uncommon for the index to be up for five straight months. Let's just hope that the solar eclipse next week is the only \"odd\" event we have for the rest of the year.",
+            "tickers": [
+                "CVX",
+                "AMD"
+            ]
+        },
         {
             "id": "39272_Technical Analysis_1709294231000",
             "headHtml": "Technical Assessment: Neutral in the Intermediate-Term",
@@ -315,18 +343,6 @@
             ]
         },
         {
-            "id": "2707_Analyst Report_1698921146000",
-            "headHtml": "Analyst Report: Advanced Micro Devices Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2023-11-02T10:32:26Z",
-            "reportTitle": "Advanced Micro Devices is the number-two player in x86-based microprocessors, behind Intel, and -- with the 2008 acquisition of ATI -- a top player in graphic processors. In 2021, Advanced Micro Devices acquired Xilinx, expanding its presence in embedded computing and data center.",
-            "targetPrice": 170.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "AMD"
-            ]
-        },
-        {
             "id": "38162_Market Summary_1698921146000",
             "headHtml": "Market Digest: AMD, DHR, ETR, MRK, NI, RJF, STX, OSTK, WRB, AGNC, NOW",
             "provider": "Argus Research",
@@ -344,6 +360,18 @@
                 "OSTK",
                 "DHR",
                 "RJF"
+            ]
+        },
+        {
+            "id": "2707_Analyst Report_1698921146000",
+            "headHtml": "Analyst Report: Advanced Micro Devices Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2023-11-02T10:32:26Z",
+            "reportTitle": "Advanced Micro Devices is the number-two player in x86-based microprocessors, behind Intel, and -- with the 2008 acquisition of ATI -- a top player in graphic processors. In 2021, Advanced Micro Devices acquired Xilinx, expanding its presence in embedded computing and data center.",
+            "targetPrice": 170.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "AMD"
             ]
         },
         {
@@ -1233,18 +1261,6 @@
             ]
         },
         {
-            "id": "2707_Analyst Report_1596067200000",
-            "headHtml": "Analyst Report: Advanced Micro Devices Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2020-07-30T00:00:00Z",
-            "reportTitle": "Advanced Micro Devices is the number-two player in x86-based microprocessors, behind Intel, and -- with the 2008 acquisition of ATI -- a top player in graphic processors. In 2009, Advanced Micro Devices spun off its foundry operations into a joint venture called Global Foundries. In mid-2014, AMD underwent an internal reorganization, aligning businesses along functional lines and creating a single internal infrastructure.",
-            "targetPrice": 82.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "AMD"
-            ]
-        },
-        {
             "id": "27554_Market Summary_1596067200000",
             "headHtml": "Market Digest: AMD, CMI, ETN, HSY, AAL",
             "provider": "Argus Research",
@@ -1256,6 +1272,18 @@
                 "ETN",
                 "CMI",
                 "HSY"
+            ]
+        },
+        {
+            "id": "2707_Analyst Report_1596067200000",
+            "headHtml": "Analyst Report: Advanced Micro Devices Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2020-07-30T00:00:00Z",
+            "reportTitle": "Advanced Micro Devices is the number-two player in x86-based microprocessors, behind Intel, and -- with the 2008 acquisition of ATI -- a top player in graphic processors. In 2009, Advanced Micro Devices spun off its foundry operations into a joint venture called Global Foundries. In mid-2014, AMD underwent an internal reorganization, aligning businesses along functional lines and creating a single internal infrastructure.",
+            "targetPrice": 82.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "AMD"
             ]
         },
         {
@@ -1484,6 +1512,19 @@
             ]
         },
         {
+            "id": "26640_Market Update_1586304000000",
+            "headHtml": "Market Update: AMD, M, NBL, PPL",
+            "provider": "Argus Research",
+            "reportDate": "2020-04-08T00:00:00Z",
+            "reportTitle": "Stocks rose on Wednesday morning on optimism that coronavirus cases in the U.S. were reaching their peak. On the political front, Senator Bernie Sanders said that he would suspend his campaign for the Democratic presidential nomination. The Dow rose 2.6%, the S&P 2.4%, and the Nasdaq 1.8%. Crude oil traded near $24.50 per barrel, while gold rose $3 to $1687 per ounce.",
+            "tickers": [
+                "AMD",
+                "NBL",
+                "M",
+                "PPL"
+            ]
+        },
+        {
             "id": "2707_Analyst Report_1586304000000",
             "headHtml": "Analyst Report: Advanced Micro Devices Inc.",
             "provider": "Argus Research",
@@ -1510,19 +1551,6 @@
                 "AMD",
                 "SQ",
                 "DHR"
-            ]
-        },
-        {
-            "id": "26640_Market Update_1586304000000",
-            "headHtml": "Market Update: AMD, M, NBL, PPL",
-            "provider": "Argus Research",
-            "reportDate": "2020-04-08T00:00:00Z",
-            "reportTitle": "Stocks rose on Wednesday morning on optimism that coronavirus cases in the U.S. were reaching their peak. On the political front, Senator Bernie Sanders said that he would suspend his campaign for the Democratic presidential nomination. The Dow rose 2.6%, the S&P 2.4%, and the Nasdaq 1.8%. Crude oil traded near $24.50 per barrel, while gold rose $3 to $1687 per ounce.",
-            "tickers": [
-                "AMD",
-                "NBL",
-                "M",
-                "PPL"
             ]
         },
         {
@@ -1639,84 +1667,6 @@
                 "PFE",
                 "NEE"
             ]
-        },
-        {
-            "id": "25999_Thematic Portfolio_1579675622000",
-            "headHtml": "The Argus ESG Model Portfolio",
-            "provider": "Argus Research",
-            "reportDate": "2020-01-22T06:47:02Z",
-            "reportTitle": "Sustainable Impact Investing is gaining traction not only with Argus Research clients, but also with the global investment community. According to the Forum for Sustainable and Responsible Investment, global assets under management in the strategy have grown to $11.6 trillion in 2018 from $178 billion in 2005. The UN Principles for Responsible Investing -- to which Argus Research is a signatory -- now represents more than 1,750 signatories with assets of US$70 trillion, according to BMO Global Asset Management. As assets have flowed in over the past 40 years, Sustainable Impact Investing has evolved. The discipline, originally known as Socially Responsible Investing, focused at first on excluding companies that conducted business in South Africa, or participated in industries such as tobacco, alcohol and firearms. In time, the list of industries to avoid increased to include soft drinks, fast food, and oil and gas, among numerous others. Performance of these initial strategies lagged, and the approach has been modified. Now, instead of merely identifying industries to avoid, the discipline promotes \"sustainable\" business practices across all industries that can have an \"impact\" on global issues such as the climate, hunger, poverty, disease, shelter and workers' rights.",
-            "tickers": [
-                "ALL",
-                "GOOGL",
-                "CVS",
-                "AAPL",
-                "PNC",
-                "JPM",
-                "MRK",
-                "DHR",
-                "MSFT",
-                "ABT",
-                "T",
-                "MA",
-                "WM",
-                "AMD",
-                "SPGI",
-                "NSC",
-                "KLAC",
-                "NVDA",
-                "ZBH",
-                "MSI",
-                "NOC",
-                "OKE",
-                "ICE",
-                "AVB",
-                "DIS",
-                "SYY",
-                "WEC",
-                "LOW",
-                "NOW",
-                "BAX"
-            ]
-        },
-        {
-            "id": "25999_Thematic Portfolio_1579651200000",
-            "headHtml": "The Argus ESG Model Portfolio",
-            "provider": "Argus Research",
-            "reportDate": "2020-01-22T00:00:00Z",
-            "reportTitle": "Sustainable Impact Investing is gaining traction not only with Argus Research clients, but also with the global investment community. According to the Forum for Sustainable and Responsible Investment, global assets under management in the strategy have grown to $11.6 trillion in 2018 from $178 billion in 2005. The UN Principles for Responsible Investing -- to which Argus Research is a signatory -- now represents more than 1,750 signatories with assets of US$70 trillion, according to BMO Global Asset Management. As assets have flowed in over the past 40 years, Sustainable Impact Investing has evolved. The discipline, originally known as Socially Responsible Investing, focused at first on excluding companies that conducted business in South Africa, or participated in industries such as tobacco, alcohol and firearms. In time, the list of industries to avoid increased to include soft drinks, fast food, and oil and gas, among numerous others. Performance of these initial strategies lagged, and the approach has been modified. Now, instead of merely identifying industries to avoid, the discipline promotes \"sustainable\" business practices across all industries that can have an \"impact\" on global issues such as the climate, hunger, poverty, disease, shelter and workers' rights.",
-            "tickers": [
-                "ALL",
-                "GOOGL",
-                "CVS",
-                "AAPL",
-                "PNC",
-                "JPM",
-                "MRK",
-                "DHR",
-                "MSFT",
-                "ABT",
-                "T",
-                "MA",
-                "WM",
-                "AMD",
-                "SPGI",
-                "NSC",
-                "KLAC",
-                "NVDA",
-                "ZBH",
-                "MSI",
-                "NOC",
-                "OKE",
-                "ICE",
-                "AVB",
-                "DIS",
-                "SYY",
-                "WEC",
-                "LOW",
-                "NOW",
-                "BAX"
-            ]
         }
     ],
     "sigDevs": [
@@ -1726,6 +1676,33 @@
         }
     ],
     "secReports": [
+        {
+            "id": "0001193125-24-076513_2488",
+            "type": "Proxy Statements",
+            "title": "DEF 14A : Proxy Statements",
+            "description": "Definitive proxy statements",
+            "filingDate": 1711324800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000119312524076513/thumbnail.png",
+            "formType": "DEF 14A"
+        },
+        {
+            "id": "0001193125-24-076535_2488",
+            "type": "Annual Report to Shareholders",
+            "title": "ARS : Annual Report to Shareholders",
+            "description": "Annual report to security holders",
+            "filingDate": 1711324800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000119312524076535/thumbnail.png",
+            "formType": "ARS"
+        },
+        {
+            "id": "0001193125-24-076521_2488",
+            "type": "Proxy Statements",
+            "title": "DEFA14A : Proxy Statements",
+            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
+            "filingDate": 1711324800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000119312524076521/thumbnail.png",
+            "formType": "DEFA14A"
+        },
         {
             "id": "0001628280-24-005593_2488",
             "type": "Corporate Changes & Voting Matters",
@@ -2066,33 +2043,6 @@
             "description": "Current report filing",
             "filingDate": 1646006400000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000000248822000054/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
-            "id": "0001193125-22-039726_2488",
-            "type": "Offering Registrations",
-            "title": "S-8 : Offering Registrations",
-            "description": "Initial registration statement for securities to be offered to employees pursuant to employee benefit plans",
-            "filingDate": 1644796800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000119312522039726/thumbnail.png",
-            "formType": "S-8"
-        },
-        {
-            "id": "0000002488-22-000031_2488",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1644796800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/2488/000000248822000031/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
-            "id": "0000002488-22-000026_2488",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1644451200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/2488/000000248822000026/thumbnail.png",
             "formType": "8-K"
         }
     ]

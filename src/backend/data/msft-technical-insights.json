@@ -5,16 +5,16 @@
             "provider": "Trading Central",
             "sector": "Technology",
             "shortTermOutlook": {
-                "stateDescription": "Recent bullish events outweigh bearish events.",
-                "direction": "Bullish",
-                "score": 2,
-                "scoreDescription": "Bullish Evidence",
-                "sectorDirection": "Bearish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bearish Evidence",
+                "stateDescription": "The bullish and bearish events are balanced.",
+                "direction": "Neutral",
+                "score": 0,
+                "scoreDescription": "Neutral Evidence",
+                "sectorDirection": "Neutral",
+                "sectorScore": 0,
+                "sectorScoreDescription": "Neutral Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 2,
-                "indexScoreDescription": "Bearish Evidence"
+                "indexScore": 4,
+                "indexScoreDescription": "Very Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
@@ -44,8 +44,8 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 332.89,
-            "resistance": 427.82,
-            "stopLoss": 410.693918
+            "resistance": 429.37,
+            "stopLoss": 411.872929
         },
         "valuation": {
             "color": 0.0,
@@ -58,11 +58,11 @@
     "companySnapshot": {
         "sectorInfo": "Technology",
         "company": {
-            "innovativeness": 0.9629000000000001,
+            "innovativeness": 0.9570000000000001,
             "hiring": 0.9662999999999999,
             "sustainability": 0.3644,
-            "insiderSentiments": 0.33039999999999997,
-            "earningsReports": 0.8854000000000001,
+            "insiderSentiments": 0.3311,
+            "earningsReports": 0.8876000000000001,
             "dividends": 0.1406
         },
         "sector": {
@@ -106,13 +106,13 @@
     },
     "events": [
         {
-            "eventType": "Momentum",
+            "eventType": "Williams %R",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "L",
+            "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1712583000,
-            "endDate": 1712583000
+            "startDate": 1712755800,
+            "endDate": 1712755800
         }
     ],
     "reports": [
