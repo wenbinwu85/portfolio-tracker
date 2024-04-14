@@ -7,8 +7,8 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 3,
-                "scoreDescription": "Strong Bearish Evidence",
+                "score": 4,
+                "scoreDescription": "Very Strong Bearish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 4,
                 "sectorScoreDescription": "Very Strong Bearish Evidence",
@@ -19,14 +19,14 @@
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 3,
-                "scoreDescription": "Strong Bearish Evidence",
+                "score": 4,
+                "scoreDescription": "Very Strong Bearish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bearish Evidence",
+                "sectorScore": 4,
+                "sectorScoreDescription": "Very Strong Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 2,
-                "indexScoreDescription": "Bearish Evidence"
+                "indexScore": 3,
+                "indexScoreDescription": "Strong Bearish Evidence"
             },
             "longTermOutlook": {
                 "stateDescription": "All events are bullish.",
@@ -44,24 +44,24 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 147.81,
-            "resistance": 178.92,
-            "stopLoss": 161.041868
+            "resistance": 163.66,
+            "stopLoss": 151.482696
         },
         "valuation": {
             "color": 0.5,
             "description": "Near Fair Value",
-            "discount": "27%",
+            "discount": "28%",
             "provider": "Trading Central"
         }
     },
     "companySnapshot": {
         "sectorInfo": "Healthcare",
         "company": {
-            "innovativeness": 0.9425,
+            "innovativeness": 0.9427,
             "hiring": 0.9181,
             "sustainability": 0.9316,
-            "insiderSentiments": 0.0782,
-            "earningsReports": 0.9728,
+            "insiderSentiments": 0.0783,
+            "earningsReports": 0.9729000000000001,
             "dividends": 0.7894
         },
         "sector": {
@@ -1952,14 +1952,14 @@
             ]
         },
         {
-            "id": "3610_Analyst Report_1561532293000",
-            "headHtml": "Maintaining HOLD",
+            "id": "24311_Market Summary_1561532293000",
+            "headHtml": "Market Digest: PINS, ABBV",
             "provider": "Argus Research",
             "reportDate": "2019-06-26T06:58:13Z",
-            "reportTitle": "AbbVie, a research-based biopharmaceutical company, was spun off from Abbott Laboratories in January 2013. The company is based in suburban Chicago. The shares are a component of the S&P 500.",
-            "investmentRating": "Neutral",
+            "reportTitle": "The S&P 500 closed the mid-June trading week with a four-point drop from its newly established all-time closing high (2,954). The index held above the prior high of 2,945 achieved early in May 2019. While not all-important in the short term, holding above the prior all-time high might give momentum investors fresh impetus to commit to the market. Any such momentum could be self-propagating as the index approaches the psychologically important 3,000 level.",
             "tickers": [
-                "ABBV"
+                "ABBV",
+                "PINS"
             ]
         }
     ],
@@ -2016,15 +2016,6 @@
             "formType": "S-8"
         },
         {
-            "id": "0001104659-24-025262_1551152",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1708387200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001551152/000110465924025262/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
             "id": "0001551152-24-000011_1551152",
             "type": "Periodic Financial Reports",
             "title": "10-K : Periodic Financial Reports",
@@ -2032,6 +2023,15 @@
             "filingDate": 1708387200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001551152/000155115224000011/thumbnail.png",
             "formType": "10-K"
+        },
+        {
+            "id": "0001104659-24-025262_1551152",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1708387200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001551152/000110465924025262/thumbnail.png",
+            "formType": "8-K"
         },
         {
             "id": "0001104659-24-013692_1551152",

@@ -5,10 +5,10 @@
             "provider": "Trading Central",
             "sector": "Financial Services",
             "shortTermOutlook": {
-                "stateDescription": "Bullish events outweigh bearish events.",
-                "direction": "Bullish",
-                "score": 1,
-                "scoreDescription": "Weak Bullish Evidence",
+                "stateDescription": "Recent bearish events outweigh bullish events.",
+                "direction": "Bearish",
+                "score": 3,
+                "scoreDescription": "Strong Bearish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 4,
                 "sectorScoreDescription": "Very Strong Bearish Evidence",
@@ -17,16 +17,16 @@
                 "indexScoreDescription": "Very Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
-                "stateDescription": "Recent bullish events outweigh bearish events.",
-                "direction": "Bullish",
-                "score": 3,
-                "scoreDescription": "Strong Bullish Evidence",
-                "sectorDirection": "Bullish",
+                "stateDescription": "The bullish and bearish events are balanced.",
+                "direction": "Neutral",
+                "score": 0,
+                "scoreDescription": "Neutral Evidence",
+                "sectorDirection": "Bearish",
                 "sectorScore": 2,
-                "sectorScoreDescription": "Bullish Evidence",
+                "sectorScoreDescription": "Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 2,
-                "indexScoreDescription": "Bearish Evidence"
+                "indexScore": 3,
+                "indexScoreDescription": "Strong Bearish Evidence"
             },
             "longTermOutlook": {
                 "stateDescription": "All events are bullish.",
@@ -44,8 +44,8 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 19.595,
-            "resistance": 20.66,
-            "stopLoss": 19.843178
+            "resistance": 20.495,
+            "stopLoss": 19.613633
         },
         "valuation": {
             "color": 0.5,
@@ -59,8 +59,8 @@
         "company": {
             "innovativeness": 0.012,
             "insiderSentiments": 0.5155,
-            "earningsReports": 0.4532,
-            "dividends": 0.8711
+            "earningsReports": 0.44920000000000004,
+            "dividends": 0.8692
         },
         "sector": {
             "innovativeness": 0.5,

@@ -1,14 +1,31 @@
 .container {
+  z-index: 999;
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-right: 0.5rem;
+  padding: .5rem;
+  overflow: hidden;
+  height: auto;
+  transition: height 1s;
+  -webkit-transition: height 1s;
+  .expand-section {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+}
+
+.container:hover {
+  height: max-content;
+  .expand-section {
+    width: max-content;
+    height: max-content;
+    visibility: visible;
+  }
 }
 
 .symbol-container {
-  padding-left: 1rem;
+  padding-left: 0.5rem;
   align-items: center;
 }
 
@@ -35,4 +52,14 @@
 .stock-name {
   float: left;
   color: slategrey;
+}
+
+.mat-mdc-card {
+  box-shadow: none;
+}
+
+.expand-section {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
 }

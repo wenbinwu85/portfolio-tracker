@@ -7,26 +7,26 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 3,
-                "scoreDescription": "Strong Bearish Evidence",
-                "sectorDirection": "Neutral",
-                "sectorScore": 0,
-                "sectorScoreDescription": "Neutral Evidence",
+                "score": 4,
+                "scoreDescription": "Very Strong Bearish Evidence",
+                "sectorDirection": "Bearish",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bearish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 4,
                 "indexScoreDescription": "Very Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
-                "stateDescription": "Bullish events outweigh bearish events.",
-                "direction": "Bullish",
-                "score": 1,
-                "scoreDescription": "Weak Bullish Evidence",
+                "stateDescription": "Recent bearish events outweigh bullish events.",
+                "direction": "Bearish",
+                "score": 2,
+                "scoreDescription": "Bearish Evidence",
                 "sectorDirection": "Bullish",
                 "sectorScore": 4,
                 "sectorScoreDescription": "Very Strong Bullish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 2,
-                "indexScoreDescription": "Bearish Evidence"
+                "indexScore": 3,
+                "indexScoreDescription": "Strong Bearish Evidence"
             },
             "longTermOutlook": {
                 "stateDescription": "All events are bearish.",
@@ -43,9 +43,9 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 34.465,
+            "support": 33.72,
             "resistance": 35.945,
-            "stopLoss": 33.452646
+            "stopLoss": 32.795963
         },
         "valuation": {
             "color": 0.5,
@@ -60,7 +60,7 @@
             "innovativeness": 0.5514,
             "sustainability": 0.0882,
             "insiderSentiments": 0.2407,
-            "dividends": 0.6934
+            "dividends": 0.6995999999999999
         },
         "sector": {
             "innovativeness": 0.5,
@@ -105,7 +105,7 @@
         {
             "eventType": "Price Crosses Moving Average",
             "pricePeriod": "D",
-            "tradingHorizon": "L",
+            "tradingHorizon": "I",
             "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
             "startDate": 1712755800,
@@ -2517,15 +2517,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0000895728-22-000017_895728",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1651795200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000895728/000089572822000017/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
             "id": "0000895728-22-000019_895728",
             "type": "Periodic Financial Reports",
             "title": "10-Q : Periodic Financial Reports",
@@ -2533,6 +2524,15 @@
             "filingDate": 1651795200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000895728/000089572822000019/thumbnail.png",
             "formType": "10-Q"
+        },
+        {
+            "id": "0000895728-22-000017_895728",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1651795200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000895728/000089572822000017/thumbnail.png",
+            "formType": "8-K"
         },
         {
             "id": "0001193125-22-142488_895728",

@@ -7,26 +7,26 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 4,
-                "scoreDescription": "Very Strong Bullish Evidence",
-                "sectorDirection": "Neutral",
-                "sectorScore": 0,
-                "sectorScoreDescription": "Neutral Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bullish Evidence",
+                "sectorDirection": "Bearish",
+                "sectorScore": 4,
+                "sectorScoreDescription": "Very Strong Bearish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 4,
                 "indexScoreDescription": "Very Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
-                "stateDescription": "There is one bearish event.",
+                "stateDescription": "All events are bearish.",
                 "direction": "Bearish",
                 "score": 2,
                 "scoreDescription": "Bearish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 2,
-                "sectorScoreDescription": "Bearish Evidence",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 2,
-                "indexScoreDescription": "Bearish Evidence"
+                "indexScore": 3,
+                "indexScoreDescription": "Strong Bearish Evidence"
             },
             "longTermOutlook": {
                 "stateDescription": "There are no events.",
@@ -43,7 +43,7 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "stopLoss": 92.369565
+            "stopLoss": 84.851057
         },
         "valuation": {
             "color": 0.0,

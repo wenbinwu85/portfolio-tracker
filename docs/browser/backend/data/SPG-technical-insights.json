@@ -7,8 +7,8 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 2,
-                "scoreDescription": "Bearish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bearish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 4,
                 "sectorScoreDescription": "Very Strong Bearish Evidence",
@@ -25,8 +25,8 @@
                 "sectorScore": 3,
                 "sectorScoreDescription": "Strong Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 2,
-                "indexScoreDescription": "Bearish Evidence"
+                "indexScore": 3,
+                "indexScoreDescription": "Strong Bearish Evidence"
             },
             "longTermOutlook": {
                 "stateDescription": "All events are bullish.",
@@ -34,8 +34,8 @@
                 "score": 2,
                 "scoreDescription": "Bullish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 1,
-                "sectorScoreDescription": "Weak Bearish Evidence",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bearish Evidence",
                 "indexDirection": "Bullish",
                 "indexScore": 1,
                 "indexScoreDescription": "Weak Bullish Evidence"
@@ -43,9 +43,9 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 111.1736,
+            "support": 111.195,
             "resistance": 150.92,
-            "stopLoss": 136.89784
+            "stopLoss": 135.794225
         },
         "valuation": {
             "color": 0.0,
@@ -62,7 +62,7 @@
             "hiring": 0.6901,
             "sustainability": 0.5611999999999999,
             "insiderSentiments": 0.9573,
-            "earningsReports": 0.6925,
+            "earningsReports": 0.693,
             "dividends": 0.36719999999999997
         },
         "sector": {
@@ -106,12 +106,12 @@
     },
     "events": [
         {
-            "eventType": "Gap Down",
+            "eventType": "Price Crosses Moving Average",
             "pricePeriod": "D",
-            "tradingHorizon": "S",
-            "tradeType": "U",
+            "tradingHorizon": "I",
+            "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1712669400,
+            "startDate": 1712755800,
             "endDate": 1712755800
         }
     ],

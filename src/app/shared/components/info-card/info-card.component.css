@@ -5,12 +5,13 @@ mat-icon {
 
 .mat-mdc-card {
   max-width: max-content;
-  border-radius: 0.5rem;
+  border-radius: 0 .6rem .6rem 0;;
   cursor: pointer;
 }
 
 .mat-mdc-card:hover {
-  border: 1px solid slategrey;
+  border: 1px solid steelblue;
+  background-color: ghostwhite;
 }
 
 .mat-mdc-card-title {

@@ -7,11 +7,11 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 3,
-                "scoreDescription": "Strong Bearish Evidence",
-                "sectorDirection": "Neutral",
-                "sectorScore": 0,
-                "sectorScoreDescription": "Neutral Evidence",
+                "score": 2,
+                "scoreDescription": "Bearish Evidence",
+                "sectorDirection": "Bearish",
+                "sectorScore": 4,
+                "sectorScoreDescription": "Very Strong Bearish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 4,
                 "indexScoreDescription": "Very Strong Bearish Evidence"
@@ -19,14 +19,14 @@
             "intermediateTermOutlook": {
                 "stateDescription": "All events are bearish.",
                 "direction": "Bearish",
-                "score": 2,
-                "scoreDescription": "Bearish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bearish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 2,
-                "sectorScoreDescription": "Bearish Evidence",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 2,
-                "indexScoreDescription": "Bearish Evidence"
+                "indexScore": 3,
+                "indexScoreDescription": "Strong Bearish Evidence"
             },
             "longTermOutlook": {
                 "stateDescription": "There is one bullish event.",
@@ -43,14 +43,14 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 101.86,
-            "resistance": 178.29,
-            "stopLoss": 153.192712
+            "support": 75.48,
+            "resistance": 174.22,
+            "stopLoss": 141.417959
         },
         "valuation": {
             "color": 0.0,
             "description": "Overvalued",
-            "discount": "-1%",
+            "discount": "-0%",
             "relativeValue": "Premium",
             "provider": "Trading Central"
         }
@@ -61,7 +61,7 @@
             "innovativeness": 0.75,
             "hiring": 0.8539,
             "insiderSentiments": 0.1074,
-            "earningsReports": 0.9847
+            "earningsReports": 0.9839
         },
         "sector": {
             "innovativeness": 0.5,
@@ -1471,18 +1471,6 @@
             ]
         },
         {
-            "id": "2707_Analyst Report_1586355407000",
-            "headHtml": "Analyst Report: Advanced Micro Devices Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2020-04-08T14:16:47Z",
-            "reportTitle": "Advanced Micro Devices is the number-two player in x86-based microprocessors, behind Intel, and -- with the 2008 acquisition of ATI -- a top player in graphic processors. In 2009, Advanced Micro Devices spun off its foundry operations into a joint venture called Global Foundries. In mid-2014, AMD underwent an internal reorganization, aligning businesses along functional lines and creating a single internal infrastructure.",
-            "targetPrice": 60.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "AMD"
-            ]
-        },
-        {
             "id": "26640_Market Update_1586355407000",
             "headHtml": "Market Update: AMD, M, NBL, PPL",
             "provider": "Argus Research",
@@ -1492,6 +1480,18 @@
                 "AMD",
                 "M",
                 "PPL"
+            ]
+        },
+        {
+            "id": "2707_Analyst Report_1586355407000",
+            "headHtml": "Analyst Report: Advanced Micro Devices Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2020-04-08T14:16:47Z",
+            "reportTitle": "Advanced Micro Devices is the number-two player in x86-based microprocessors, behind Intel, and -- with the 2008 acquisition of ATI -- a top player in graphic processors. In 2009, Advanced Micro Devices spun off its foundry operations into a joint venture called Global Foundries. In mid-2014, AMD underwent an internal reorganization, aligning businesses along functional lines and creating a single internal infrastructure.",
+            "targetPrice": 60.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "AMD"
             ]
         },
         {
@@ -1686,15 +1686,6 @@
             "formType": "DEF 14A"
         },
         {
-            "id": "0001193125-24-076535_2488",
-            "type": "Annual Report to Shareholders",
-            "title": "ARS : Annual Report to Shareholders",
-            "description": "Annual report to security holders",
-            "filingDate": 1711324800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000119312524076535/thumbnail.png",
-            "formType": "ARS"
-        },
-        {
             "id": "0001193125-24-076521_2488",
             "type": "Proxy Statements",
             "title": "DEFA14A : Proxy Statements",
@@ -1702,6 +1693,15 @@
             "filingDate": 1711324800000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000119312524076521/thumbnail.png",
             "formType": "DEFA14A"
+        },
+        {
+            "id": "0001193125-24-076535_2488",
+            "type": "Annual Report to Shareholders",
+            "title": "ARS : Annual Report to Shareholders",
+            "description": "Annual report to security holders",
+            "filingDate": 1711324800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000119312524076535/thumbnail.png",
+            "formType": "ARS"
         },
         {
             "id": "0001628280-24-005593_2488",
@@ -1839,15 +1839,6 @@
             "formType": "10-K"
         },
         {
-            "id": "0000002488-23-000040_2488",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1676937600000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000000248823000040/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
             "id": "0000002488-23-000042_2488",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K/A : Corporate Changes & Voting Matters",
@@ -1855,6 +1846,15 @@
             "filingDate": 1676937600000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000000248823000042/thumbnail.png",
             "formType": "8-K/A"
+        },
+        {
+            "id": "0000002488-23-000040_2488",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1676937600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000000248823000040/thumbnail.png",
+            "formType": "8-K"
         },
         {
             "id": "0001104659-23-015209_2488",

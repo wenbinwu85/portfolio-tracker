@@ -91,7 +91,6 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     "Dividend Income",
     "Yield on Cost",
     "Sector",
-    "Exchange",
     "Recommendation",
   ];
   columnDefs = [
@@ -105,7 +104,6 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     "dividendIncome",
     "yieldOnCost",
     "sector",
-    "exchangeName",
     "rating",
   ];
   cells: Function[] = [
@@ -125,7 +123,6 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     (stock: any) =>
       (this.portfolioHoldings[stock.symbol].yieldOnCost * 100).toFixed(2) + "%",
     (stock: any) => stock.sector || "ETF",
-    (stock: any) => stock.exchangeName,
     (stock: any) => "",
   ];
   footerRow: Function[] = [
@@ -138,7 +135,6 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     () => "",
     () => `$${this.portfolioHoldings.portfolioDividendIncome.toFixed(2)}`,
     () => `${(this.portfolioHoldings.portfolioYieldOnCost * 100).toFixed(2)}%`,
-    () => "",
     () => "",
     () => "",
   ];
@@ -164,7 +160,6 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
           regularMarketChangePercent: data.regularMarketChangePercent,
           preMarketPrice: data.preMarketPrice,
           postMarketPrice: data.postMarketPrice,
-          exchangeName: data.exchangeName,
         };
       }
     );
@@ -229,7 +224,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
         return this.portfolioHoldings[stock.symbol].dividendIncome > 0
           ? "teal"
           : "chocolate";
-      case 11:
+      case 10:
         return stock.rating === "buy" ? "teal" : "black";
       default:
         return "black";

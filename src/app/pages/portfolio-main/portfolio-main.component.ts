@@ -107,14 +107,14 @@ export class PortfolioMainComponent implements OnInit {
           .getCorporateEvents(stock.symbol, true)
           .subscribe((events: any) => {
             this.corporateEvents.push(...events[stock.symbol]);
-            this.corporateEvents = this.corporateEvents.sort((a: any, b: any) => b.time - a.time);
+            this.corporateEvents = this.corporateEvents.sort((a: any, b: any) => b.time - a.time).slice(0, 25);
           });
       });
     this.gradingEvents = this.gradingEvents.sort((a: any, b: any) => {
         const date1 = new Date(b.date).valueOf();
         const date2 = new Date(a.date).valueOf();
         return date1 - date2;
-      })
+      }).slice(0, 25)
     this.events = this.events.filter((event: any) => event.date >= new Date().valueOf());
     this.events.sort((event1: any, event2: any) => event1.date - event2.date);
     this.events.forEach((event: any) => this.eventDates.push(event.date));
@@ -123,7 +123,7 @@ export class PortfolioMainComponent implements OnInit {
     this.eventDates.forEach((date: any) => {
       this.mappedEvents[date] = this.events.filter((event: any) => event.date === date);
     });
-    this.mappedEvents = Object.entries(this.mappedEvents);
+    this.mappedEvents = Object.entries(this.mappedEvents).slice(0, 20);
   }
 
   // filterEvents(symbol: string) { 

@@ -2,14 +2,14 @@
     "postMarketChangePercent": 0.014285621,
     "postMarketChange": 0.12999916,
     "postMarketPrice": 9.23,
-    "regularMarketChangePercent": -0.014084416,
-    "regularMarketChange": -0.12999916,
+    "regularMarketChangePercent": -0.0140844,
+    "regularMarketChange": -0.129999,
     "regularMarketPrice": 9.1,
     "regularMarketDayHigh": 9.21,
     "regularMarketDayLow": 8.97,
-    "regularMarketVolume": 429528,
-    "averageDailyVolume10Day": 285010,
-    "averageDailyVolume3Month": 300949,
+    "regularMarketVolume": 431047,
+    "averageDailyVolume10Day": 273680,
+    "averageDailyVolume3Month": 303046,
     "regularMarketPreviousClose": 9.23,
     "regularMarketOpen": 9.2,
     "exchange": "NYQ",
@@ -24,23 +24,23 @@
     "dayLow": 8.97,
     "dayHigh": 9.21,
     "dividendRate": 1.6,
-    "dividendYield": 0.1733,
+    "dividendYield": 0.1758,
     "exDividendDate": "2024-03-12 20:00:00",
     "payoutRatio": 8.4706,
     "fiveYearAvgDividendYield": 11.71,
     "beta": 1.802,
     "forwardPE": 6.02649,
-    "volume": 429528,
-    "averageVolume": 300949,
-    "averageVolume10days": 285010,
+    "volume": 431047,
+    "averageVolume": 303046,
+    "averageVolume10days": 273680,
     "fiftyTwoWeekLow": 8.94,
     "fiftyTwoWeekHigh": 12.699,
     "priceToSalesTrailing12Months": 2.5247457,
-    "fiftyDayAverage": 10.1198,
-    "twoHundredDayAverage": 10.69915,
+    "fiftyDayAverage": 10.0776,
+    "twoHundredDayAverage": 10.68835,
     "trailingAnnualDividendRate": 1.6,
     "trailingAnnualDividendYield": 0.17334779,
-    "enterpriseValue": 801801600,
+    "enterpriseValue": 796910976,
     "profitMargins": -0.29368,
     "sharesOutstanding": 37620100,
     "sharesShort": 2555870,
@@ -62,9 +62,9 @@
     "trailingEps": -1.12,
     "forwardEps": 1.51,
     "pegRatio": 1.39,
-    "enterpriseToRevenue": 5.913,
-    "52WeekChange": -0.23147374,
-    "SandP52WeekChange": 0.2565279,
+    "enterpriseToRevenue": 5.877,
+    "52WeekChange": -0.24979389,
+    "SandP52WeekChange": 0.23416412,
     "lastDividendValue": 0.4,
     "lastDividendDate": 1710288000,
     "currentPrice": 9.1,
@@ -513,20 +513,20 @@
     "indexTrend": {
         "maxAge": 1,
         "symbol": "SP5",
-        "peRatio": 15.1344,
-        "pegRatio": 0.792576,
+        "peRatio": 14.9663,
+        "pegRatio": 0.787559,
         "estimates": [
             {
                 "period": "0q",
-                "growth": -0.009
+                "growth": 0.002
             },
             {
                 "period": "+1q",
-                "growth": 0.098000005
+                "growth": 0.11
             },
             {
                 "period": "0y",
-                "growth": 0.042
+                "growth": 0.048
             },
             {
                 "period": "+1y",
@@ -534,7 +534,7 @@
             },
             {
                 "period": "+5y",
-                "growth": 0.110854
+                "growth": 0.112375
             },
             {
                 "period": "-5y"
@@ -1047,10 +1047,10 @@
         {
             "period": "-1m",
             "strongBuy": 1,
-            "buy": 1,
+            "buy": 0,
             "hold": 5,
             "sell": 1,
-            "strongSell": 0
+            "strongSell": 1
         },
         {
             "period": "-2m",

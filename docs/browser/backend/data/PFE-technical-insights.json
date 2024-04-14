@@ -5,10 +5,10 @@
             "provider": "Trading Central",
             "sector": "Healthcare",
             "shortTermOutlook": {
-                "stateDescription": "Bearish events outweigh bullish events.",
+                "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 3,
-                "scoreDescription": "Strong Bearish Evidence",
+                "score": 4,
+                "scoreDescription": "Very Strong Bearish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 4,
                 "sectorScoreDescription": "Very Strong Bearish Evidence",
@@ -22,11 +22,11 @@
                 "score": 2,
                 "scoreDescription": "Bearish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bearish Evidence",
+                "sectorScore": 4,
+                "sectorScoreDescription": "Very Strong Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 2,
-                "indexScoreDescription": "Bearish Evidence"
+                "indexScore": 3,
+                "indexScoreDescription": "Strong Bearish Evidence"
             },
             "longTermOutlook": {
                 "stateDescription": "All events are bearish.",
@@ -43,14 +43,14 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 26.13,
+            "support": 25.69,
             "resistance": 27.6,
-            "stopLoss": 25.103848
+            "stopLoss": 24.137447
         },
         "valuation": {
             "color": 1.0,
             "description": "Undervalued",
-            "discount": "65%",
+            "discount": "66%",
             "relativeValue": "Discount",
             "provider": "Trading Central"
         }
@@ -58,11 +58,11 @@
     "companySnapshot": {
         "sectorInfo": "Healthcare",
         "company": {
-            "innovativeness": 0.8973,
+            "innovativeness": 0.8976000000000001,
             "hiring": 0.9109999999999999,
             "sustainability": 0.6751999999999999,
-            "insiderSentiments": 0.7117,
-            "earningsReports": 0.9764,
+            "insiderSentiments": 0.7127,
+            "earningsReports": 0.977,
             "dividends": 0.9489
         },
         "sector": {
@@ -1369,18 +1369,6 @@
             ]
         },
         {
-            "id": "3305_Analyst Report_1622531573000",
-            "headHtml": "Analyst Report: Pfizer Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2021-06-01T07:12:53Z",
-            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
-            "targetPrice": 55.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "PFE"
-            ]
-        },
-        {
             "id": "30012_Market Summary_1622531573000",
             "headHtml": "Market Digest: HPQ, PFE, BCE, FOXA",
             "provider": "Argus Research",
@@ -1390,6 +1378,18 @@
                 "FOXA",
                 "BCE",
                 "HPQ",
+                "PFE"
+            ]
+        },
+        {
+            "id": "3305_Analyst Report_1622531573000",
+            "headHtml": "Analyst Report: Pfizer Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2021-06-01T07:12:53Z",
+            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
+            "targetPrice": 55.0,
+            "investmentRating": "Bullish",
+            "tickers": [
                 "PFE"
             ]
         },

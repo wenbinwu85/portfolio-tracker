@@ -1,15 +1,15 @@
 {
-    "postMarketChangePercent": -0.0066144164,
-    "postMarketChange": -1.0800018,
-    "postMarketPrice": 162.2,
+    "postMarketChangePercent": -0.010289,
+    "postMarketChange": -1.67999,
+    "postMarketPrice": 161.6,
     "regularMarketChangePercent": -0.04234605,
     "regularMarketChange": -7.220001,
     "regularMarketPrice": 163.28,
     "regularMarketDayHigh": 165.7,
     "regularMarketDayLow": 161.83,
-    "regularMarketVolume": 62929324,
-    "averageDailyVolume10Day": 59312600,
-    "averageDailyVolume3Month": 77506872,
+    "regularMarketVolume": 63519643,
+    "averageDailyVolume10Day": 59889320,
+    "averageDailyVolume3Month": 77279274,
     "regularMarketPreviousClose": 170.5,
     "regularMarketOpen": 164.52,
     "exchange": "NMS",
@@ -26,21 +26,21 @@
     "exDividendDate": "1995-04-26 20:00:00",
     "payoutRatio": 0.0,
     "beta": 1.635,
-    "trailingPE": 308.0755,
+    "trailingPE": 314.0,
     "forwardPE": 29.850092,
-    "volume": 62929324,
-    "averageVolume": 77506872,
-    "averageVolume10days": 59312600,
+    "volume": 63519643,
+    "averageVolume": 77279274,
+    "averageVolume10days": 59889320,
     "fiftyTwoWeekLow": 81.02,
     "fiftyTwoWeekHigh": 227.3,
     "priceToSalesTrailing12Months": 11.635068,
-    "fiftyDayAverage": 181.1122,
-    "twoHundredDayAverage": 134.65234,
+    "fiftyDayAverage": 181.024,
+    "twoHundredDayAverage": 134.9168,
     "trailingAnnualDividendRate": 0.0,
     "trailingAnnualDividendYield": 0.0,
-    "enterpriseValue": 272827662336,
+    "enterpriseValue": 261161680896,
     "profitMargins": 0.03765,
-    "floatShares": 1604961069,
+    "floatShares": 1604944911,
     "sharesOutstanding": 1616140032,
     "sharesShort": 32846511,
     "sharesShortPriorMonth": 34379955,
@@ -48,10 +48,10 @@
     "dateShortInterest": "2024-03-27 20:00:00",
     "sharesPercentSharesOut": 0.020299999,
     "heldPercentInsiders": 0.00476,
-    "heldPercentInstitutions": 0.75004,
+    "heldPercentInstitutions": 0.74997,
     "shortRatio": 0.43,
     "shortPercentOfFloat": 0.020399999,
-    "impliedSharesOutstanding": 1616140032,
+    "impliedSharesOutstanding": 1687410048,
     "bookValue": 34.587,
     "priceToBook": 4.7208486,
     "lastFiscalYearEnd": "2023-12-29 19:00:00",
@@ -59,13 +59,13 @@
     "mostRecentQuarter": "2023-12-29 19:00:00",
     "earningsQuarterlyGrowth": 30.762,
     "netIncomeToCommon": 854000000,
-    "trailingEps": 0.53,
+    "trailingEps": 0.52,
     "forwardEps": 5.47,
     "pegRatio": 1.89,
-    "enterpriseToRevenue": 12.029,
-    "enterpriseToEbitda": 70.791,
-    "52WeekChange": 0.8583106,
-    "SandP52WeekChange": 0.2565279,
+    "enterpriseToRevenue": 11.515,
+    "enterpriseToEbitda": 67.764,
+    "52WeekChange": 0.8168466,
+    "SandP52WeekChange": 0.23416412,
     "currentPrice": 163.28,
     "targetHighPrice": 270.0,
     "targetLowPrice": 60.0,
@@ -381,7 +381,7 @@
                     "7daysAgo": 0.6,
                     "30daysAgo": 0.6,
                     "60daysAgo": 0.6,
-                    "90daysAgo": 0.68
+                    "90daysAgo": 0.62
                 },
                 "epsRevisions": {
                     "upLast7days": 1,
@@ -416,7 +416,7 @@
                     "7daysAgo": 0.69,
                     "30daysAgo": 0.69,
                     "60daysAgo": 0.69,
-                    "90daysAgo": 0.81
+                    "90daysAgo": 0.74
                 },
                 "epsRevisions": {
                     "upLast7days": 1,
@@ -451,7 +451,7 @@
                     "7daysAgo": 3.62,
                     "30daysAgo": 3.63,
                     "60daysAgo": 3.61,
-                    "90daysAgo": 3.74
+                    "90daysAgo": 3.42
                 },
                 "epsRevisions": {
                     "upLast7days": 1,
@@ -486,7 +486,7 @@
                     "7daysAgo": 5.47,
                     "30daysAgo": 5.48,
                     "60daysAgo": 5.45,
-                    "90daysAgo": 5.1
+                    "90daysAgo": 4.66
                 },
                 "epsRevisions": {
                     "upLast7days": 1,
@@ -570,20 +570,20 @@
     "indexTrend": {
         "maxAge": 1,
         "symbol": "SP5",
-        "peRatio": 15.1344,
-        "pegRatio": 0.792576,
+        "peRatio": 14.9663,
+        "pegRatio": 0.787559,
         "estimates": [
             {
                 "period": "0q",
-                "growth": -0.009
+                "growth": 0.002
             },
             {
                 "period": "+1q",
-                "growth": 0.098000005
+                "growth": 0.11
             },
             {
                 "period": "0y",
-                "growth": 0.042
+                "growth": 0.048
             },
             {
                 "period": "+1y",
@@ -591,7 +591,7 @@
             },
             {
                 "period": "+5y",
-                "growth": 0.110854
+                "growth": 0.112375
             },
             {
                 "period": "-5y"
@@ -2358,9 +2358,9 @@
         },
         {
             "period": "-1m",
-            "strongBuy": 15,
+            "strongBuy": 14,
             "buy": 23,
-            "hold": 11,
+            "hold": 12,
             "sell": 0,
             "strongSell": 0
         },
@@ -2671,9 +2671,9 @@
         "majorHolders": {
             "maxAge": 1,
             "insidersPercentHeld": 0.00476,
-            "institutionsPercentHeld": 0.75004,
-            "institutionsFloatPercentHeld": 0.75361997,
-            "institutionsCount": 3100
+            "institutionsPercentHeld": 0.74997,
+            "institutionsFloatPercentHeld": 0.75356,
+            "institutionsCount": 3110
         }
     },
     "upgradeDowngradeHistory": [

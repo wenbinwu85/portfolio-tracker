@@ -50,7 +50,7 @@
         </div>
       </div>
 
-      <div *ngIf="cidx === 11">
+      <div *ngIf="cidx === 10">
         <span [ngStyle]="{ color: getCellColor(stock, cidx) }" (click)="expandRow(stock)">{{ stock.rating | titlecase }}</span>
       </div>
 

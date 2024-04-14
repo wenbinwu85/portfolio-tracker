@@ -1,10 +1,32 @@
-<div class="container" (click)="openInfoSheet()">
-  <img [src]="getLogoSource(stock)" alt="Logo" width="auto" height="35" class="stock-logo" />
+<mat-card 
+  class="container"
+  (click)="openInfoSheet()"
+  [ngStyle]="{'border-left': borderLeftStyle}"
+>
+  <img 
+    [src]="getLogoSource(stock)" 
+    alt="Logo" 
+    width="auto" 
+    height="35" 
+    class="stock-logo" 
+  />
   <div class="symbol-container">
-    <div class="stock-symbol">
+    <mat-card-title class="stock-symbol">
       <span><b>{{ stock?.symbol }}</b></span>
       <span class="stock-price">{{ price | currency }}</span>
-    </div>
-    <span class="stock-name">{{ stock?.shortName }}</span>
+      <mat-card-subtitle [ngStyle]="{'color': stock.regularMarketChange > 0 ? 'teal' : 'chocolate'}">
+        ({{ stock.regularMarketChangePercent | percent: '.2' }})
+      </mat-card-subtitle>
+    </mat-card-title>
+    <mat-card-subtitle class="stock-name">{{ stock?.shortName }}</mat-card-subtitle>
   </div>
-</div>
+  <div class="expand-section">
+    <mat-card-subtitle>P/L:</mat-card-subtitle>
+    <mat-card-subtitle [ngStyle]="{'color': stock.unrealizedGain > 0 ? 'teal' : 'chocolate'}">
+      {{ stock.unrealizedGain | currency }}
+    </mat-card-subtitle>
+    <mat-card-subtitle [ngStyle]="{'color': stock.unrealizedGain > 0 ? 'teal' : 'chocolate'}">
+      {{ stock.unrealizedGainPercent | percent: '.2' }}
+    </mat-card-subtitle>
+  </div>
+</mat-card>

@@ -7,26 +7,26 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 1,
-                "scoreDescription": "Weak Bullish Evidence",
-                "sectorDirection": "Neutral",
-                "sectorScore": 0,
-                "sectorScoreDescription": "Neutral Evidence",
+                "score": 4,
+                "scoreDescription": "Very Strong Bullish Evidence",
+                "sectorDirection": "Bearish",
+                "sectorScore": 4,
+                "sectorScoreDescription": "Very Strong Bearish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 4,
                 "indexScoreDescription": "Very Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
-                "stateDescription": "All events are bearish.",
+                "stateDescription": "Bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 2,
-                "scoreDescription": "Bearish Evidence",
+                "score": 1,
+                "scoreDescription": "Weak Bearish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 2,
-                "sectorScoreDescription": "Bearish Evidence",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 2,
-                "indexScoreDescription": "Bearish Evidence"
+                "indexScore": 3,
+                "indexScoreDescription": "Strong Bearish Evidence"
             },
             "longTermOutlook": {
                 "stateDescription": "All events are bearish.",
@@ -45,12 +45,12 @@
             "provider": "Trading Central",
             "support": 173.19,
             "resistance": 179.35,
-            "stopLoss": 161.006916
+            "stopLoss": 168.891468
         },
         "valuation": {
             "color": 0.5,
             "description": "Near Fair Value",
-            "discount": "-1%",
+            "discount": "-2%",
             "provider": "Trading Central"
         }
     },
@@ -61,7 +61,7 @@
             "hiring": 0.9512999999999999,
             "sustainability": 0.5763,
             "insiderSentiments": 0.2349,
-            "earningsReports": 0.8445,
+            "earningsReports": 0.8473999999999999,
             "dividends": 0.09949999999999999
         },
         "sector": {
@@ -105,7 +105,7 @@
     },
     "events": [
         {
-            "eventType": "Williams %R",
+            "eventType": "Price Crosses Moving Average",
             "pricePeriod": "D",
             "tradingHorizon": "S",
             "tradeType": "L",
