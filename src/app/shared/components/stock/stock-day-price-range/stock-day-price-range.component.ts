@@ -8,6 +8,7 @@ import {
   Renderer2,
   ViewChild,
 } from '@angular/core';
+import { MatChipsModule } from '@angular/material/chips';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
@@ -15,7 +16,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   templateUrl: './stock-day-price-range.component.html',
   styleUrls: ['./stock-day-price-range.component.css'],
   standalone: true,
-  imports: [CommonModule, MatTooltipModule, NgIf],
+  imports: [CommonModule, MatTooltipModule, NgIf, MatChipsModule],
 })
 export class StockDayPriceRangeComponent implements OnInit, AfterViewInit {
   @Input({ required: true }) min!: number;

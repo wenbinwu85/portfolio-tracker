@@ -1,7 +1,8 @@
 <mat-card [ngStyle]="{'border': borderStyle, 'border-left': borderLeftStyle}">
     <div class="flex-between">
         <mat-icon *ngIf="icon">{{ icon }}</mat-icon>
-        <mat-card-subtitle *ngIf="subtitle">{{ subtitle }}</mat-card-subtitle>
+        <mat-card-subtitle *ngIf="subtitle && !subtitleChip">{{ subtitle }}</mat-card-subtitle>
+        <stock-ticker-chip *ngIf="subtitle && subtitleChip" [stock]="stock" />
     </div>
     <mat-divider />
     <mat-card-title *ngIf="value" [ngStyle]="getStyle()">

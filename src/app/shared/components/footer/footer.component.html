@@ -1,13 +1,26 @@
 <!-- <mat-divider /> -->
 
 <div class="footer-container">
-  <mat-icon>info</mat-icon>
-  <div class="footer-text">  
-    <span>Built with: </span>
-    <a href="https://angular.dev" target="_blank">Angular</a> | 
-    <a href="https://python.org" target="_blank">Python</a> | 
-    <a href="https://github.com/dpguthrie/yahooquery" target="_blank">Yahooquery</a> |
-    <a href="https://github.com/pallets/quart" target="_blank">Quart</a> | 
+  <div class="footer-row">
+    <mat-icon>info</mat-icon>
+    <span>Built with:</span>
+    <mat-chip-listbox>  
+      <mat-chip color="accent">
+        <a href="https://angular.dev" target="_blank">Angular</a>
+      </mat-chip>
+      <mat-chip color="accent">
+        <a href="https://python.org" target="_blank">Python</a>
+      </mat-chip>
+      <mat-chip color="accent">
+        <a href="https://github.com/dpguthrie/yahooquery" target="_blank">Yahooquery</a>
+      </mat-chip>
+      <mat-chip color="accent">
+        <a href="https://github.com/pallets/quart" target="_blank">Quart</a>
+      </mat-chip>
+    </mat-chip-listbox>
+  </div>
+  <div class="footer-row">
+    <mat-icon>update</mat-icon>
     <span>Last updated: {{ date }}</span>
   </div>
 </div>

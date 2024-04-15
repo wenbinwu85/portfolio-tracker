@@ -1,17 +1,23 @@
 .footer-container {
   display: flex;
   justify-content: right;
-  align-items: center;
-  align-content: center;
+  flex-direction: column;
+  align-items: flex-end;
   margin: 1.5rem;
   padding-bottom: 1.5rem;
 }
 
-.footer-text {
-  font-size: 1rem;
-  color: navy;
+.footer-row {
+  display: flex;
+  align-items: center;
+  color: slategrey;
 }
 
 a {
   text-decoration: none;
+  color: steelblue;
+}
+
+mat-chip-listbox {
+  margin-left: 0.5rem;
 }

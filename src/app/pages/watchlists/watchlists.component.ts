@@ -41,7 +41,6 @@ export class WatchlistsComponent implements OnInit {
     "MCD",
     "LOW",
     "PG",
-    "AMD",
     "AMT",
   ];
   potentialBuysWatchlist: any[] = [];

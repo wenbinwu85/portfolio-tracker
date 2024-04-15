@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatChipsModule } from '@angular/material/chips';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 
@@ -7,7 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css'],
   standalone: true,
-  imports: [MatDividerModule, MatIconModule],
+  imports: [MatChipsModule, MatDividerModule, MatIconModule],
 })
 export class FooterComponent {
   date = new Date().toLocaleString();
