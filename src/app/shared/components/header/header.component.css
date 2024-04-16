@@ -12,7 +12,7 @@
 
 .version {
   font-size: 1.5rem;
-  color: navy;
+  color: steelblue;
 }
 
 tv-tickers-widget {
@@ -30,10 +30,10 @@ tv-tickers-widget {
 
 .progress-bar-container {
   margin: 1.5rem;
-  border: 1px solid navy;
-  border-left: 0.5rem solid navy;
+  border: 1px solid steelblue;
+  border-left: 0.3rem solid steelblue;
   border-radius: 0.5rem;
-  max-width: 99vw;
+  max-width: 55vw;
 }
 
 .progress-bar-message {
@@ -42,5 +42,5 @@ tv-tickers-widget {
 
 mat-progress-bar {
   margin: 1rem;
-  max-width: 90vw;
+  max-width: 50vw;
 }

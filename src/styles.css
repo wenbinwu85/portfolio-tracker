@@ -27,11 +27,6 @@ mat-chip span {
     font-size: 0.75rem;
 }
 
-mat-expansion-panel {
-    border-top: 1px solid slategrey;
-    border-radius: 0.5rem;
-}
-
 table {
     margin-top: 1.5rem;
 }
@@ -83,4 +78,9 @@ table {
 
 .add-margin {
     margin: 1rem;
+}
+
+.expanded-stock-detail {
+    border: 1px solid slategrey;
+    border-radius: 0.5rem;
 }

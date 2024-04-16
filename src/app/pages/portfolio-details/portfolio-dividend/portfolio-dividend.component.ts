@@ -276,12 +276,15 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
     this.echartOptions = options;
     this.dividendLineChartData = [divData];
     this.selectedSymbol = stock.symbol;
-    this.selectedSymbolLabel = `${stock.symbol} | ${stock.longName} | ${
-      stock.profile?.sector || "ETF"
-    }`;
+    this.selectedSymbolLabel = `
+      ${stock.symbol} | 
+      ${stock.longName} | 
+      ${stock.profile?.sector || "ETF"} |
+      ${stock.profile?.industry || "ETF"}
+    `;
 
     window.scroll({
-      top: 100,
+      top: 0,
       left: 0,
       behavior: "smooth",
     });

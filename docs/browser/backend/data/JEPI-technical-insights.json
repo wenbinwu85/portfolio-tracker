@@ -44,13 +44,13 @@
     "upsell": {},
     "events": [
         {
-            "eventType": "Commodity Channel Index",
-            "pricePeriod": "D",
-            "tradingHorizon": "S",
+            "eventType": "Price Crosses Moving Average",
+            "pricePeriod": "W",
+            "tradingHorizon": "L",
             "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1712755800,
-            "endDate": 1712755800
+            "startDate": 1712928600,
+            "endDate": 1712928600
         }
     ],
     "sigDevs": []

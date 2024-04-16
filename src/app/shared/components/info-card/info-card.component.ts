@@ -47,7 +47,7 @@ export class InfoCardComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
-    this.borderLeftStyle = '0.3rem solid ' + (this.accentColor ? this.accentColor : 'navy');
+    this.borderLeftStyle = '0.3rem solid ' + (this.accentColor ? this.accentColor : 'steelblue');
     if (this.subtitleChip) { 
       this.stock = this.dataService.portfolioData[this.subtitle];
     };
