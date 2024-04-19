@@ -5,13 +5,13 @@
             "provider": "Trading Central",
             "sector": "Technology",
             "shortTermOutlook": {
-                "stateDescription": "Recent bullish events outweigh bearish events.",
-                "direction": "Bullish",
-                "score": 3,
-                "scoreDescription": "Strong Bullish Evidence",
+                "stateDescription": "Recent bearish events outweigh bullish events.",
+                "direction": "Bearish",
+                "score": 2,
+                "scoreDescription": "Bearish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 4,
-                "sectorScoreDescription": "Very Strong Bearish Evidence",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bearish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 4,
                 "indexScoreDescription": "Very Strong Bearish Evidence"
@@ -19,11 +19,11 @@
             "intermediateTermOutlook": {
                 "stateDescription": "All events are bearish.",
                 "direction": "Bearish",
-                "score": 2,
-                "scoreDescription": "Bearish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bearish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bearish Evidence",
+                "sectorScore": 4,
+                "sectorScoreDescription": "Very Strong Bearish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 3,
                 "indexScoreDescription": "Strong Bearish Evidence"
@@ -43,12 +43,12 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "stopLoss": 84.851057
+            "stopLoss": 65.420352
         },
         "valuation": {
             "color": 0.0,
             "description": "Overvalued",
-            "discount": "9%",
+            "discount": "13%",
             "relativeValue": "Premium",
             "provider": "Trading Central"
         }
@@ -56,7 +56,7 @@
     "companySnapshot": {
         "sectorInfo": "Technology",
         "company": {
-            "earningsReports": 0.9956
+            "earningsReports": 0.9942
         },
         "sector": {
             "innovativeness": 0.5,
@@ -94,13 +94,13 @@
     },
     "events": [
         {
-            "eventType": "Price Crosses Moving Average",
+            "eventType": "Top Triangle",
             "pricePeriod": "D",
             "tradingHorizon": "I",
             "tradeType": "S",
-            "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1712928600,
-            "endDate": 1712928600
+            "imageUrl": "https://s.yimg.com/uc/fin/img/assets/bearish-top-triangle.svg",
+            "startDate": 1707748200,
+            "endDate": 1713360600
         }
     ],
     "sigDevs": [

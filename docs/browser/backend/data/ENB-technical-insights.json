@@ -7,11 +7,11 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 4,
-                "scoreDescription": "Very Strong Bearish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bearish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bearish Evidence",
+                "sectorScore": 4,
+                "sectorScoreDescription": "Very Strong Bearish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 4,
                 "indexScoreDescription": "Very Strong Bearish Evidence"
@@ -19,11 +19,11 @@
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 2,
-                "scoreDescription": "Bearish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bearish Evidence",
                 "sectorDirection": "Bullish",
-                "sectorScore": 4,
-                "sectorScoreDescription": "Very Strong Bullish Evidence",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bullish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 3,
                 "indexScoreDescription": "Strong Bearish Evidence"
@@ -43,14 +43,14 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 33.72,
+            "support": 31.99,
             "resistance": 35.945,
-            "stopLoss": 32.795963
+            "stopLoss": 31.080155
         },
         "valuation": {
             "color": 0.5,
             "description": "Near Fair Value",
-            "discount": "3%",
+            "discount": "4%",
             "provider": "Trading Central"
         }
     },
@@ -60,7 +60,7 @@
             "innovativeness": 0.5514,
             "sustainability": 0.0882,
             "insiderSentiments": 0.2407,
-            "dividends": 0.6995999999999999
+            "dividends": 0.6943
         },
         "sector": {
             "innovativeness": 0.5,
@@ -103,13 +103,13 @@
     },
     "events": [
         {
-            "eventType": "Commodity Channel Index",
-            "pricePeriod": "W",
-            "tradingHorizon": "S",
+            "eventType": "Megaphone Top",
+            "pricePeriod": "D",
+            "tradingHorizon": "I",
             "tradeType": "S",
-            "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1712928600,
-            "endDate": 1712928600
+            "imageUrl": "https://s.yimg.com/uc/fin/img/assets/bearish-megaphone-top.svg",
+            "startDate": 1705933800,
+            "endDate": 1713274200
         }
     ],
     "reports": [
@@ -1464,6 +1464,18 @@
             ]
         },
         {
+            "id": "3799_Analyst Report_1628086520000",
+            "headHtml": "Analyst Report: Enbridge Inc",
+            "provider": "Argus Research",
+            "reportDate": "2021-08-04T14:15:20Z",
+            "reportTitle": "Enbridge Inc. is North America's largest energy infrastructure company. Enbridge has six operating segments: Liquids Pipelines, Gas Transmission & Midstream, Gas Distribution, Renewable Power Generation & Transmission, Energy Services, and Eliminations & Other. According to the company's most recent 10-K, Enbridge delivers over three million barrels of crude oil per day, and transports 62% of all U.S.-bound Canadian crude exports. The company also transports 18% of the natural gas used in the U.S. Its regulated utilities serve approximately 3.7 million retail customers.",
+            "targetPrice": 43.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "ENB"
+            ]
+        },
+        {
             "id": "30553_Market Update_1628086520000",
             "headHtml": "Market Update: ENB, CVX, LHX, JCI, VFC, NOW, CARR",
             "provider": "Argus Research",
@@ -1477,18 +1489,6 @@
                 "NOW",
                 "ENB",
                 "LHX"
-            ]
-        },
-        {
-            "id": "3799_Analyst Report_1628086520000",
-            "headHtml": "Analyst Report: Enbridge Inc",
-            "provider": "Argus Research",
-            "reportDate": "2021-08-04T14:15:20Z",
-            "reportTitle": "Enbridge Inc. is North America's largest energy infrastructure company. Enbridge has six operating segments: Liquids Pipelines, Gas Transmission & Midstream, Gas Distribution, Renewable Power Generation & Transmission, Energy Services, and Eliminations & Other. According to the company's most recent 10-K, Enbridge delivers over three million barrels of crude oil per day, and transports 62% of all U.S.-bound Canadian crude exports. The company also transports 18% of the natural gas used in the U.S. Its regulated utilities serve approximately 3.7 million retail customers.",
-            "targetPrice": 43.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "ENB"
             ]
         },
         {
@@ -1942,18 +1942,6 @@
             ]
         },
         {
-            "id": "3799_Analyst Report_1590761426000",
-            "headHtml": "Analyst Report: Enbridge Inc",
-            "provider": "Argus Research",
-            "reportDate": "2020-05-29T14:10:26Z",
-            "reportTitle": "Enbridge Inc. is North America's largest energy infrastructure company. Enbridge has six operating segments: Liquids Pipelines, Gas Transmission & Midstream, Gas Distribution, Renewable Power Generation & Transmission, Energy Services, and Eliminations & Other. According to the company's most recent 10-K, Enbridge delivers over three million barrels of crude oil per day, and transports 62% of all U.S.-bound Canadian crude exports. The company also transports 18% of the natural gas used in the U.S. Its regulated utilities serve approximately 3.7 million retail customers.",
-            "targetPrice": 38.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "ENB"
-            ]
-        },
-        {
             "id": "27063_Market Update_1590761426000",
             "headHtml": "Market Update: AAP, CAH, FL, NTAP, BBY, ENB, CMS",
             "provider": "Argus Research",
@@ -1970,10 +1958,10 @@
             ]
         },
         {
-            "id": "3799_Analyst Report_1590710400000",
+            "id": "3799_Analyst Report_1590761426000",
             "headHtml": "Analyst Report: Enbridge Inc",
             "provider": "Argus Research",
-            "reportDate": "2020-05-29T00:00:00Z",
+            "reportDate": "2020-05-29T14:10:26Z",
             "reportTitle": "Enbridge Inc. is North America's largest energy infrastructure company. Enbridge has six operating segments: Liquids Pipelines, Gas Transmission & Midstream, Gas Distribution, Renewable Power Generation & Transmission, Energy Services, and Eliminations & Other. According to the company's most recent 10-K, Enbridge delivers over three million barrels of crude oil per day, and transports 62% of all U.S.-bound Canadian crude exports. The company also transports 18% of the natural gas used in the U.S. Its regulated utilities serve approximately 3.7 million retail customers.",
             "targetPrice": 38.0,
             "investmentRating": "Bullish",
@@ -1995,6 +1983,18 @@
                 "BBY",
                 "CMS",
                 "CAH"
+            ]
+        },
+        {
+            "id": "3799_Analyst Report_1590710400000",
+            "headHtml": "Analyst Report: Enbridge Inc",
+            "provider": "Argus Research",
+            "reportDate": "2020-05-29T00:00:00Z",
+            "reportTitle": "Enbridge Inc. is North America's largest energy infrastructure company. Enbridge has six operating segments: Liquids Pipelines, Gas Transmission & Midstream, Gas Distribution, Renewable Power Generation & Transmission, Energy Services, and Eliminations & Other. According to the company's most recent 10-K, Enbridge delivers over three million barrels of crude oil per day, and transports 62% of all U.S.-bound Canadian crude exports. The company also transports 18% of the natural gas used in the U.S. Its regulated utilities serve approximately 3.7 million retail customers.",
+            "targetPrice": 38.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "ENB"
             ]
         },
         {
@@ -2103,15 +2103,22 @@
             ]
         },
         {
-            "id": "3799_Analyst Report_1582156800000",
-            "headHtml": "Analyst Report: Enbridge Inc",
+            "id": "26236_Market Summary_1582156800000",
+            "headHtml": "Market Digest: BABA, AWK, ADI, ECL, LIN, ENB, FOXA, NLOK, TSN, ATO",
             "provider": "Argus Research",
             "reportDate": "2020-02-20T00:00:00Z",
-            "reportTitle": "Enbridge Inc. is North America's largest energy infrastructure company. Enbridge has six operating segments: Liquids Pipelines, Gas Transmission & Midstream, Gas Distribution, Renewable Power Generation & Transmission, Energy Services, and Eliminations & Other. According to the company's most recent 10-K, Enbridge delivers over three million barrels of crude oil per day, and transports 62% of all U.S.-bound Canadian crude exports. The company also transports 18% of the natural gas used in the U.S. Its regulated utilities serve approximately 3.7 million retail customers.",
-            "targetPrice": 46.0,
-            "investmentRating": "Bullish",
+            "reportTitle": "The Situation is Evolving: Scenarios for an Outbreak",
             "tickers": [
-                "ENB"
+                "LIN",
+                "BABA",
+                "FOXA",
+                "AWK",
+                "ADI",
+                "ENB",
+                "ATO",
+                "NLOK",
+                "TSN",
+                "ECL"
             ]
         }
     ],
@@ -2150,15 +2157,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0001193125-24-066168_895728",
-            "type": "Periodic Financial Reports",
-            "title": "10-K/A : Periodic Financial Reports",
-            "description": "Annual report pursuant to Section 13 and 15(d)",
-            "filingDate": 1710288000000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000895728/000119312524066168/thumbnail.png",
-            "formType": "10-K/A"
-        },
-        {
             "id": "0001193125-24-066167_895728",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -2166,6 +2164,15 @@
             "filingDate": 1710288000000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000895728/000119312524066167/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0001193125-24-066168_895728",
+            "type": "Periodic Financial Reports",
+            "title": "10-K/A : Periodic Financial Reports",
+            "description": "Annual report pursuant to Section 13 and 15(d)",
+            "filingDate": 1710288000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000895728/000119312524066168/thumbnail.png",
+            "formType": "10-K/A"
         },
         {
             "id": "0001193125-24-063693_895728",
@@ -2447,15 +2454,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0000895728-22-000033_895728",
-            "type": "Periodic Financial Reports",
-            "title": "10-Q : Periodic Financial Reports",
-            "description": "Quarterly report pursuant to Section 13 or 15(d)",
-            "filingDate": 1667520000000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000895728/000089572822000033/thumbnail.png",
-            "formType": "10-Q"
-        },
-        {
             "id": "0000895728-22-000032_895728",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -2463,6 +2461,15 @@
             "filingDate": 1667520000000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000895728/000089572822000032/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0000895728-22-000033_895728",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1667520000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000895728/000089572822000033/thumbnail.png",
+            "formType": "10-Q"
         },
         {
             "id": "0001193125-22-257129_895728",
@@ -2510,15 +2517,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0000895728-22-000019_895728",
-            "type": "Periodic Financial Reports",
-            "title": "10-Q : Periodic Financial Reports",
-            "description": "Quarterly report pursuant to Section 13 or 15(d)",
-            "filingDate": 1651795200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000895728/000089572822000019/thumbnail.png",
-            "formType": "10-Q"
-        },
-        {
             "id": "0000895728-22-000017_895728",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -2526,6 +2524,15 @@
             "filingDate": 1651795200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000895728/000089572822000017/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0000895728-22-000019_895728",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1651795200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000895728/000089572822000019/thumbnail.png",
+            "formType": "10-Q"
         },
         {
             "id": "0001193125-22-142488_895728",

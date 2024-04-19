@@ -7,8 +7,8 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 3,
-                "scoreDescription": "Strong Bearish Evidence",
+                "score": 2,
+                "scoreDescription": "Bearish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 4,
                 "sectorScoreDescription": "Very Strong Bearish Evidence",
@@ -43,9 +43,9 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 40.35,
+            "support": 40.7117,
             "resistance": 45.45,
-            "stopLoss": 39.838466
+            "stopLoss": 39.048508
         },
         "valuation": {
             "color": 0.5,
@@ -57,12 +57,12 @@
     "companySnapshot": {
         "sectorInfo": "Consumer Defensive",
         "company": {
-            "innovativeness": 0.9540000000000001,
+            "innovativeness": 0.9655,
             "hiring": 0.6476000000000001,
             "sustainability": 0.8525,
             "insiderSentiments": 0.763,
-            "earningsReports": 0.7112999999999999,
-            "dividends": 0.9842
+            "earningsReports": 0.7092,
+            "dividends": 0.9856
         },
         "sector": {
             "innovativeness": 0.5,
@@ -104,13 +104,13 @@
     },
     "events": [
         {
-            "eventType": "Price Crosses Moving Average",
-            "pricePeriod": "W",
-            "tradingHorizon": "I",
-            "tradeType": "S",
+            "eventType": "Commodity Channel Index",
+            "pricePeriod": "D",
+            "tradingHorizon": "S",
+            "tradeType": "U",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1712928600,
-            "endDate": 1712928600
+            "startDate": 1713360600,
+            "endDate": 1713360600
         }
     ],
     "reports": [

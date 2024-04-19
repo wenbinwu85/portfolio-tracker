@@ -5,13 +5,13 @@
             "provider": "Trading Central",
             "sector": "Technology",
             "shortTermOutlook": {
-                "stateDescription": "Recent bearish events outweigh bullish events.",
+                "stateDescription": "Bearish events outweigh bullish events.",
                 "direction": "Bearish",
                 "score": 2,
                 "scoreDescription": "Bearish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 4,
-                "sectorScoreDescription": "Very Strong Bearish Evidence",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bearish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 4,
                 "indexScoreDescription": "Very Strong Bearish Evidence"
@@ -19,11 +19,11 @@
             "intermediateTermOutlook": {
                 "stateDescription": "All events are bearish.",
                 "direction": "Bearish",
-                "score": 3,
-                "scoreDescription": "Strong Bearish Evidence",
+                "score": 4,
+                "scoreDescription": "Very Strong Bearish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bearish Evidence",
+                "sectorScore": 4,
+                "sectorScoreDescription": "Very Strong Bearish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 3,
                 "indexScoreDescription": "Strong Bearish Evidence"
@@ -45,12 +45,12 @@
             "provider": "Trading Central",
             "support": 75.48,
             "resistance": 174.22,
-            "stopLoss": 141.417959
+            "stopLoss": 134.600445
         },
         "valuation": {
             "color": 0.0,
             "description": "Overvalued",
-            "discount": "-0%",
+            "discount": "1%",
             "relativeValue": "Premium",
             "provider": "Trading Central"
         }
@@ -58,9 +58,9 @@
     "companySnapshot": {
         "sectorInfo": "Technology",
         "company": {
-            "innovativeness": 0.75,
+            "innovativeness": 0.7515000000000001,
             "hiring": 0.8539,
-            "insiderSentiments": 0.1074,
+            "insiderSentiments": 0.10710000000000001,
             "earningsReports": 0.9839
         },
         "sector": {
@@ -89,28 +89,28 @@
             "AMD\u2019s gaming semi-custom chip business is beholden to the design cycles and launches of new gaming consoles, and it might be a couple of more years until next generation consoles arrive."
         ],
         "companyName": "Advanced Micro Devices, Inc.",
-        "msBullishBearishSummariesPublishDate": 1706672986000,
+        "msBullishBearishSummariesPublishDate": 1713226781000,
         "upsellReportType": "MORNINGSTAR_ANALYST"
     },
     "upsellSearchDD": {
         "researchReports": {
-            "reportId": "ARGUS_2707_AnalystReport_1706725600000",
-            "provider": "Argus",
-            "title": "Client growth, Data Center recovery",
-            "reportDate": "2024-01-31T18:26:40Z",
-            "summary": "Advanced Micro Devices is the number-two player in x86-based microprocessors, behind Intel, and -- with the 2008 acquisition of ATI -- a top player in graphic processors. In 2021, Advanced Micro Devices acquired Xilinx, expanding its presence in embedded computing and data center.",
-            "investmentRating": "Bullish"
+            "reportId": "MS_0P0000006A_AnalystReport_1713226781000",
+            "provider": "Morningstar",
+            "title": "AMD Earnings: Raising Valuation to $145 From $125 as AI GPU Revenue Is on the Rise",
+            "reportDate": "2024-04-16T00:19:41Z",
+            "summary": "Advanced Micro Devices designs a variety of digital semiconductors for markets such as PCs, gaming consoles, data centers, industrial, and automotive applications, among others. AMD\u2019s traditional strength was in central processing units, CPUs, and graphics processing units, or GPUs, used in PCs and data centers. Additionally, the firm supplies the chips found in prominent game consoles such as the Sony PlayStation and Microsoft Xbox. In 2022, the firm acquired field-programmable gate array, or FPGA, leader Xilinx to diversify its business and augment its opportunities in key end markets such as the data center and automotive. ",
+            "investmentRating": "Neutral"
         }
     },
     "events": [
         {
-            "eventType": "Price Crosses Moving Average",
-            "pricePeriod": "W",
+            "eventType": "Top Triangle",
+            "pricePeriod": "D",
             "tradingHorizon": "I",
             "tradeType": "S",
-            "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1712928600,
-            "endDate": 1712928600
+            "imageUrl": "https://s.yimg.com/uc/fin/img/assets/bearish-top-triangle.svg",
+            "startDate": 1709908200,
+            "endDate": 1713187800
         }
     ],
     "reports": [
@@ -1686,15 +1686,6 @@
             "formType": "DEF 14A"
         },
         {
-            "id": "0001193125-24-076521_2488",
-            "type": "Proxy Statements",
-            "title": "DEFA14A : Proxy Statements",
-            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
-            "filingDate": 1711324800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000119312524076521/thumbnail.png",
-            "formType": "DEFA14A"
-        },
-        {
             "id": "0001193125-24-076535_2488",
             "type": "Annual Report to Shareholders",
             "title": "ARS : Annual Report to Shareholders",
@@ -1702,6 +1693,15 @@
             "filingDate": 1711324800000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000119312524076535/thumbnail.png",
             "formType": "ARS"
+        },
+        {
+            "id": "0001193125-24-076521_2488",
+            "type": "Proxy Statements",
+            "title": "DEFA14A : Proxy Statements",
+            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
+            "filingDate": 1711324800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000119312524076521/thumbnail.png",
+            "formType": "DEFA14A"
         },
         {
             "id": "0001628280-24-005593_2488",

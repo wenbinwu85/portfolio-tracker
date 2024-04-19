@@ -7,11 +7,11 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 3,
-                "scoreDescription": "Strong Bearish Evidence",
+                "score": 4,
+                "scoreDescription": "Very Strong Bearish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 4,
-                "sectorScoreDescription": "Very Strong Bearish Evidence",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bearish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 4,
                 "indexScoreDescription": "Very Strong Bearish Evidence"
@@ -45,7 +45,7 @@
             "provider": "Trading Central",
             "support": 19.595,
             "resistance": 20.495,
-            "stopLoss": 19.613633
+            "stopLoss": 19.627824
         },
         "valuation": {
             "color": 0.5,
@@ -57,10 +57,10 @@
     "companySnapshot": {
         "sectorInfo": "Financial Services",
         "company": {
-            "innovativeness": 0.012,
+            "innovativeness": 0.011899999999999999,
             "insiderSentiments": 0.5155,
-            "earningsReports": 0.44909999999999994,
-            "dividends": 0.8692
+            "earningsReports": 0.46020000000000005,
+            "dividends": 0.866
         },
         "sector": {
             "innovativeness": 0.5,
@@ -76,22 +76,31 @@
     },
     "events": [
         {
-            "eventType": "Williams %R",
-            "pricePeriod": "W",
-            "tradingHorizon": "S",
-            "tradeType": "S",
+            "eventType": "Price Crosses Moving Average",
+            "pricePeriod": "D",
+            "tradingHorizon": "I",
+            "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1712928600,
-            "endDate": 1712928600
+            "startDate": 1713360600,
+            "endDate": 1713360600
         }
     ],
     "sigDevs": [
         {
-            "headline": "Ares Capital Corporation Q4 Adjusted EPS USD 0.63 Vs. IBES Estimate USD 0.6",
-            "date": "2024-02-07"
+            "headline": "Ares Capital Amended And Restated Its Senior Secured Credit Facility",
+            "date": "2024-04-17"
         }
     ],
     "secReports": [
+        {
+            "id": "0001287750-24-000021_1287750",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1713312000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001287750/000128775024000021/thumbnail.png",
+            "formType": "8-K"
+        },
         {
             "id": "0001287750-24-000018_1287750",
             "type": "Corporate Changes & Voting Matters",
@@ -345,15 +354,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0001287750-23-000021_1287750",
-            "type": "Periodic Financial Reports",
-            "title": "10-Q : Periodic Financial Reports",
-            "description": "Quarterly report pursuant to Section 13 or 15(d)",
-            "filingDate": 1682380800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001287750/000128775023000021/thumbnail.png",
-            "formType": "10-Q"
-        },
-        {
             "id": "0001104659-23-049659_1287750",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -361,6 +361,15 @@
             "filingDate": 1682380800000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001287750/000110465923049659/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0001287750-23-000021_1287750",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1682380800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001287750/000128775023000021/thumbnail.png",
+            "formType": "10-Q"
         },
         {
             "id": "0001287750-23-000018_1287750",
@@ -495,15 +504,6 @@
             "description": "Current report filing",
             "filingDate": 1666656000000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001287750/000128775022000050/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
-            "id": "0001104659-22-087272_1287750",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1659916800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001287750/000110465922087272/thumbnail.png",
             "formType": "8-K"
         }
     ]

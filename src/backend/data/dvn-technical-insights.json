@@ -5,13 +5,13 @@
             "provider": "Trading Central",
             "sector": "Energy",
             "shortTermOutlook": {
-                "stateDescription": "All events are bullish.",
-                "direction": "Bullish",
-                "score": 1,
-                "scoreDescription": "Weak Bullish Evidence",
+                "stateDescription": "Recent bearish events outweigh bullish events.",
+                "direction": "Bearish",
+                "score": 4,
+                "scoreDescription": "Very Strong Bearish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bearish Evidence",
+                "sectorScore": 4,
+                "sectorScoreDescription": "Very Strong Bearish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 4,
                 "indexScoreDescription": "Very Strong Bearish Evidence"
@@ -22,8 +22,8 @@
                 "score": 4,
                 "scoreDescription": "Very Strong Bullish Evidence",
                 "sectorDirection": "Bullish",
-                "sectorScore": 4,
-                "sectorScoreDescription": "Very Strong Bullish Evidence",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bullish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 3,
                 "indexScoreDescription": "Strong Bearish Evidence"
@@ -43,14 +43,14 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 48.86,
-            "resistance": 53.71,
-            "stopLoss": 51.076585
+            "support": 48.3101,
+            "resistance": 53.36,
+            "stopLoss": 49.780643
         },
         "valuation": {
             "color": 0.5,
             "description": "Near Fair Value",
-            "discount": "-6%",
+            "discount": "-5%",
             "provider": "Trading Central"
         }
     },
@@ -60,9 +60,9 @@
             "innovativeness": 0.8131,
             "hiring": 0.24710000000000001,
             "sustainability": 0.5588000000000001,
-            "insiderSentiments": 0.7559,
-            "earningsReports": 0.7315,
-            "dividends": 0.4071
+            "insiderSentiments": 0.754,
+            "earningsReports": 0.7276,
+            "dividends": 0.40630000000000005
         },
         "sector": {
             "innovativeness": 0.5,
@@ -105,13 +105,13 @@
     },
     "events": [
         {
-            "eventType": "Commodity Channel Index",
+            "eventType": "Momentum",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "U",
+            "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1712928600,
-            "endDate": 1712928600
+            "startDate": 1713360600,
+            "endDate": 1713360600
         }
     ],
     "reports": [

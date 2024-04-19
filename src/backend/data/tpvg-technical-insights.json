@@ -10,8 +10,8 @@
                 "score": 4,
                 "scoreDescription": "Very Strong Bearish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 4,
-                "sectorScoreDescription": "Very Strong Bearish Evidence",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bearish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 4,
                 "indexScoreDescription": "Very Strong Bearish Evidence"
@@ -31,8 +31,8 @@
             "longTermOutlook": {
                 "stateDescription": "All events are bearish.",
                 "direction": "Bearish",
-                "score": 3,
-                "scoreDescription": "Strong Bearish Evidence",
+                "score": 2,
+                "scoreDescription": "Bearish Evidence",
                 "sectorDirection": "Bullish",
                 "sectorScore": 1,
                 "sectorScoreDescription": "Weak Bullish Evidence",
@@ -43,9 +43,9 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 9.08,
+            "support": 8.99,
             "resistance": 10.8678,
-            "stopLoss": 8.590228
+            "stopLoss": 8.441328
         },
         "valuation": {
             "color": 0.0,
@@ -57,9 +57,9 @@
     "companySnapshot": {
         "sectorInfo": "Financial Services",
         "company": {
-            "innovativeness": 0.0305,
-            "insiderSentiments": 0.9101,
-            "earningsReports": 0.1457,
+            "innovativeness": 0.0304,
+            "insiderSentiments": 0.9087000000000001,
+            "earningsReports": 0.1399,
             "dividends": 0.998
         },
         "sector": {
@@ -76,7 +76,7 @@
     },
     "events": [
         {
-            "eventType": "Triple Moving Average Crossover",
+            "eventType": "Commodity Channel Index",
             "pricePeriod": "D",
             "tradingHorizon": "S",
             "tradeType": "S",
@@ -285,21 +285,21 @@
             "formType": "8-K"
         },
         {
-            "id": "0001580345-22-000037_1580345",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1670803200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001580345/000158034522000037/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
             "id": "0001580345-22-000035_1580345",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
             "description": "Current report filing",
             "filingDate": 1670803200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001580345/000158034522000035/thumbnail.png",
+            "formType": "8-K"
+        },
+        {
+            "id": "0001580345-22-000037_1580345",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1670803200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001580345/000158034522000037/thumbnail.png",
             "formType": "8-K"
         },
         {

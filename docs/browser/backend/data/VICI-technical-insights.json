@@ -43,14 +43,14 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 27.895,
+            "support": 26.625,
             "resistance": 29.685,
-            "stopLoss": 26.911143
+            "stopLoss": 26.072827
         },
         "valuation": {
             "color": 1.0,
             "description": "Undervalued",
-            "discount": "90%",
+            "discount": "91%",
             "relativeValue": "Discount",
             "provider": "Trading Central"
         }
@@ -59,9 +59,9 @@
         "sectorInfo": "Real Estate",
         "company": {
             "innovativeness": 0.0898,
-            "insiderSentiments": 0.6890000000000001,
-            "earningsReports": 0.5895,
-            "dividends": 0.4102
+            "insiderSentiments": 0.6848000000000001,
+            "earningsReports": 0.5852,
+            "dividends": 0.402
         },
         "sector": {
             "innovativeness": 0.5,
@@ -82,8 +82,8 @@
     },
     "events": [
         {
-            "eventType": "Short-term KST",
-            "pricePeriod": "D",
+            "eventType": "Commodity Channel Index",
+            "pricePeriod": "W",
             "tradingHorizon": "S",
             "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
@@ -1280,15 +1280,6 @@
             "formType": "10-Q"
         },
         {
-            "id": "0001705696-23-000072_1705696",
-            "type": "Periodic Financial Reports",
-            "title": "10-Q : Periodic Financial Reports",
-            "description": "Quarterly report pursuant to Section 13 or 15(d)",
-            "filingDate": 1682899200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000170569623000072/thumbnail.png",
-            "formType": "10-Q"
-        },
-        {
             "id": "0001705696-23-000071_1705696",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -1296,6 +1287,15 @@
             "filingDate": 1682899200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000170569623000071/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0001705696-23-000072_1705696",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1682899200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000170569623000072/thumbnail.png",
+            "formType": "10-Q"
         },
         {
             "id": "0001705696-23-000065_1705696",
@@ -1523,15 +1523,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0001193125-22-107450_1705696",
-            "type": "Offering Registrations",
-            "title": "S-3ASR : Offering Registrations",
-            "description": "Automatic shelf registration statement of securities of well-known seasoned issuers",
-            "filingDate": 1650240000000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001920791/000119312522107450/thumbnail.png",
-            "formType": "S-3ASR"
-        },
-        {
             "id": "0001193125-22-107429_1705696",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -1539,6 +1530,15 @@
             "filingDate": 1650240000000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000119312522107429/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0001193125-22-107450_1705696",
+            "type": "Offering Registrations",
+            "title": "S-3ASR : Offering Registrations",
+            "description": "Automatic shelf registration statement of securities of well-known seasoned issuers",
+            "filingDate": 1650240000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001920791/000119312522107450/thumbnail.png",
+            "formType": "S-3ASR"
         },
         {
             "id": "0001705696-22-000067_1705696",

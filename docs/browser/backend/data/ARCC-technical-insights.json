@@ -7,8 +7,8 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 3,
-                "scoreDescription": "Strong Bearish Evidence",
+                "score": 4,
+                "scoreDescription": "Very Strong Bearish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 4,
                 "sectorScoreDescription": "Very Strong Bearish Evidence",
@@ -17,10 +17,10 @@
                 "indexScoreDescription": "Very Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
-                "stateDescription": "The bullish and bearish events are balanced.",
-                "direction": "Neutral",
-                "score": 0,
-                "scoreDescription": "Neutral Evidence",
+                "stateDescription": "Recent bearish events outweigh bullish events.",
+                "direction": "Bearish",
+                "score": 2,
+                "scoreDescription": "Bearish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 2,
                 "sectorScoreDescription": "Bearish Evidence",
@@ -44,23 +44,23 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 19.595,
-            "resistance": 20.495,
-            "stopLoss": 19.613633
+            "resistance": 20.2597,
+            "stopLoss": 19.441019
         },
         "valuation": {
             "color": 0.5,
             "description": "Near Fair Value",
-            "discount": "4%",
+            "discount": "5%",
             "provider": "Trading Central"
         }
     },
     "companySnapshot": {
         "sectorInfo": "Financial Services",
         "company": {
-            "innovativeness": 0.012,
+            "innovativeness": 0.011899999999999999,
             "insiderSentiments": 0.5155,
-            "earningsReports": 0.44909999999999994,
-            "dividends": 0.8692
+            "earningsReports": 0.45899999999999996,
+            "dividends": 0.8669
         },
         "sector": {
             "innovativeness": 0.5,
@@ -76,13 +76,13 @@
     },
     "events": [
         {
-            "eventType": "Williams %R",
-            "pricePeriod": "W",
+            "eventType": "Triple Moving Average Crossover",
+            "pricePeriod": "D",
             "tradingHorizon": "S",
             "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1712928600,
-            "endDate": 1712928600
+            "startDate": 1713274200,
+            "endDate": 1713274200
         }
     ],
     "sigDevs": [
@@ -92,6 +92,15 @@
         }
     ],
     "secReports": [
+        {
+            "id": "0001287750-24-000021_1287750",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1713312000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001287750/000128775024000021/thumbnail.png",
+            "formType": "8-K"
+        },
         {
             "id": "0001287750-24-000018_1287750",
             "type": "Corporate Changes & Voting Matters",
@@ -219,15 +228,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0001287750-23-000045_1287750",
-            "type": "Periodic Financial Reports",
-            "title": "10-Q : Periodic Financial Reports",
-            "description": "Quarterly report pursuant to Section 13 or 15(d)",
-            "filingDate": 1698105600000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001287750/000128775023000045/thumbnail.png",
-            "formType": "10-Q"
-        },
-        {
             "id": "0001287750-23-000043_1287750",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -235,6 +235,15 @@
             "filingDate": 1698105600000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001287750/000128775023000043/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0001287750-23-000045_1287750",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1698105600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001287750/000128775023000045/thumbnail.png",
+            "formType": "10-Q"
         },
         {
             "id": "0001287750-23-000039_1287750",
@@ -495,15 +504,6 @@
             "description": "Current report filing",
             "filingDate": 1666656000000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001287750/000128775022000050/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
-            "id": "0001104659-22-087272_1287750",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1659916800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001287750/000110465922087272/thumbnail.png",
             "formType": "8-K"
         }
     ]
