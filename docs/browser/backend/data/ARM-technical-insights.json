@@ -7,8 +7,8 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 3,
-                "scoreDescription": "Strong Bearish Evidence",
+                "score": 4,
+                "scoreDescription": "Very Strong Bearish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 4,
                 "sectorScoreDescription": "Very Strong Bearish Evidence",
@@ -19,14 +19,14 @@
             "intermediateTermOutlook": {
                 "stateDescription": "All events are bearish.",
                 "direction": "Bearish",
-                "score": 2,
-                "scoreDescription": "Bearish Evidence",
+                "score": 4,
+                "scoreDescription": "Very Strong Bearish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 4,
                 "sectorScoreDescription": "Very Strong Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
+                "indexScore": 4,
+                "indexScoreDescription": "Very Strong Bearish Evidence"
             },
             "longTermOutlook": {
                 "stateDescription": "There are no events.",
@@ -43,12 +43,12 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "stopLoss": 86.373881
+            "stopLoss": 40.666032
         },
         "valuation": {
             "color": 0.0,
             "description": "Overvalued",
-            "discount": "10%",
+            "discount": "18%",
             "relativeValue": "Premium",
             "provider": "Trading Central"
         }
@@ -56,7 +56,7 @@
     "companySnapshot": {
         "sectorInfo": "Technology",
         "company": {
-            "earningsReports": 0.9956
+            "earningsReports": 0.9942
         },
         "sector": {
             "innovativeness": 0.5,
@@ -94,13 +94,13 @@
     },
     "events": [
         {
-            "eventType": "Double Moving Average Crossover",
-            "pricePeriod": "D",
-            "tradingHorizon": "S",
+            "eventType": "Price Crosses Moving Average",
+            "pricePeriod": "W",
+            "tradingHorizon": "I",
             "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1713274200,
-            "endDate": 1713274200
+            "startDate": 1713533400,
+            "endDate": 1713533400
         }
     ],
     "sigDevs": [
@@ -228,15 +228,6 @@
             "formType": "DRS"
         },
         {
-            "id": "0000950123-23-006466_1973239",
-            "type": "Offering Registrations",
-            "title": "DRS/A : Offering Registrations",
-            "description": "Draft registration statement submitted by Emerging Growth Company under Securities Act Section 6(e) or by Foreign Private Issuer under Division of Corporation Finance policy",
-            "filingDate": 1690761600000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001973239/000095012323006466/thumbnail.png",
-            "formType": "DRS/A"
-        },
-        {
             "id": "0000950123-23-006467_1973239",
             "type": "Offering Registrations",
             "title": "DRSLTR : Offering Registrations",
@@ -244,6 +235,15 @@
             "filingDate": 1690761600000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001973239/000095012323006467/thumbnail.png",
             "formType": "DRSLTR"
+        },
+        {
+            "id": "0000950123-23-006466_1973239",
+            "type": "Offering Registrations",
+            "title": "DRS/A : Offering Registrations",
+            "description": "Draft registration statement submitted by Emerging Growth Company under Securities Act Section 6(e) or by Foreign Private Issuer under Division of Corporation Finance policy",
+            "filingDate": 1690761600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001973239/000095012323006466/thumbnail.png",
+            "formType": "DRS/A"
         },
         {
             "id": "0000950123-23-005680_1973239",

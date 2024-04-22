@@ -66,8 +66,12 @@
 
   <ng-container matColumnDef="expandedRow">
     <td mat-cell *matCellDef="let stock" [attr.colspan]="columnDefs.length">
-      <div class="expanded-stock-detail" [@detailExpand]="stock === expandedRow ? 'expanded' : 'collapsed'">
-        <expanded-row *ngIf="expandedRow && expandedRow.symbol === stock.symbol" [stock]="stock" />
+      <div
+        *ngIf="expandedRow && expandedRow.symbol === stock.symbol" 
+        class="expanded-stock-detail"
+        [@detailExpand]="stock === expandedRow ? 'expanded' : 'collapsed'"
+      >
+        <expanded-row [stock]="stock" />
       </div>
     </td>
   </ng-container>

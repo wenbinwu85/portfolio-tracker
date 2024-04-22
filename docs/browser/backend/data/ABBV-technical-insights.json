@@ -5,13 +5,13 @@
             "provider": "Trading Central",
             "sector": "Healthcare",
             "shortTermOutlook": {
-                "stateDescription": "Recent bearish events outweigh bullish events.",
+                "stateDescription": "Bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 4,
-                "scoreDescription": "Very Strong Bearish Evidence",
+                "score": 2,
+                "scoreDescription": "Bearish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 4,
-                "sectorScoreDescription": "Very Strong Bearish Evidence",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bearish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 4,
                 "indexScoreDescription": "Very Strong Bearish Evidence"
@@ -19,14 +19,14 @@
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 4,
-                "scoreDescription": "Very Strong Bearish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bearish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 4,
                 "sectorScoreDescription": "Very Strong Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
+                "indexScore": 4,
+                "indexScoreDescription": "Very Strong Bearish Evidence"
             },
             "longTermOutlook": {
                 "stateDescription": "All events are bullish.",
@@ -34,8 +34,8 @@
                 "score": 1,
                 "scoreDescription": "Weak Bullish Evidence",
                 "sectorDirection": "Bullish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bullish Evidence",
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bullish Evidence",
                 "indexDirection": "Bullish",
                 "indexScore": 1,
                 "indexScoreDescription": "Weak Bullish Evidence"
@@ -44,25 +44,25 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 147.81,
-            "resistance": 163.66,
-            "stopLoss": 156.450424
+            "resistance": 178.92,
+            "stopLoss": 160.081067
         },
         "valuation": {
             "color": 0.5,
             "description": "Near Fair Value",
-            "discount": "28%",
+            "discount": "27%",
             "provider": "Trading Central"
         }
     },
     "companySnapshot": {
         "sectorInfo": "Healthcare",
         "company": {
-            "innovativeness": 0.9428,
+            "innovativeness": 0.9390000000000001,
             "hiring": 0.9181,
             "sustainability": 0.9316,
             "insiderSentiments": 0.0767,
-            "earningsReports": 0.9732999999999999,
-            "dividends": 0.7798
+            "earningsReports": 0.9743999999999999,
+            "dividends": 0.7831
         },
         "sector": {
             "innovativeness": 0.5,
@@ -94,26 +94,48 @@
     },
     "upsellSearchDD": {
         "researchReports": {
-            "reportId": "MS_0P0000XPGW_AnalystReport_1708451314000",
-            "provider": "Morningstar",
-            "title": "AbbVie: Robert Michael's Appointment as CEO Suggests Continuity of Business Strategy",
-            "reportDate": "2024-02-20T17:48:34Z",
-            "summary": "AbbVie is a pharmaceutical firm with a strong exposure to immunology (with Humira, Skyrizi, and Rinvoq) and oncology (with Imbruvica and Venclexta). The company was spun off from Abbott in early 2013. The 2020 acquisition of Allergan added several new products and drugs in aesthetics (including Botox). ",
+            "reportId": "ARGUS_3610_AnalystReport_1713438346000",
+            "provider": "Argus",
+            "title": "HOLD on Humira competition",
+            "reportDate": "2024-04-18T11:05:46Z",
+            "summary": "AbbVie, a research-based biopharmaceutical company, was spun off from Abbott Laboratories in January 2013. The company is based in suburban Chicago. The shares are a component of the S&P 500.",
             "investmentRating": "Neutral"
         }
     },
     "events": [
         {
-            "eventType": "Price Crosses Moving Average",
+            "eventType": "Inside Bar (Bullish)",
             "pricePeriod": "W",
             "tradingHorizon": "I",
-            "tradeType": "S",
+            "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
             "startDate": 1712928600,
-            "endDate": 1712928600
+            "endDate": 1713533400
         }
     ],
     "reports": [
+        {
+            "id": "3610_Analyst Report_1713438346000",
+            "headHtml": "Analyst Report: AbbVie Inc",
+            "provider": "Argus Research",
+            "reportDate": "2024-04-18T11:05:46Z",
+            "reportTitle": "AbbVie, a research-based biopharmaceutical company, was spun off from Abbott Laboratories in January 2013. The company is based in suburban Chicago. The shares are a component of the S&P 500.",
+            "investmentRating": "Neutral",
+            "tickers": [
+                "ABBV"
+            ]
+        },
+        {
+            "id": "39735_Market Summary_1713437446000",
+            "headHtml": "Market Digest: BK, ABBV",
+            "provider": "Argus Research",
+            "reportDate": "2024-04-18T10:50:46Z",
+            "reportTitle": "Strong First Quarter but Market Technicals send Red Flags",
+            "tickers": [
+                "BK",
+                "ABBV"
+            ]
+        },
         {
             "id": "39467_Top/Bottom Insider Activity_1711017455000",
             "headHtml": "Daily \u2013 Vickers Top Buyers & Sellers for 03/21/2024",
@@ -224,6 +246,17 @@
             ]
         },
         {
+            "id": "3610_Analyst Report_1682941454000",
+            "headHtml": "Analyst Report: AbbVie Inc",
+            "provider": "Argus Research",
+            "reportDate": "2023-05-01T11:44:14Z",
+            "reportTitle": "AbbVie, a research-based biopharmaceutical company, was spun off from Abbott Laboratories in January 2013. The company is based in suburban Chicago. The shares are a component of the S&P 500.",
+            "investmentRating": "Neutral",
+            "tickers": [
+                "ABBV"
+            ]
+        },
+        {
             "id": "36322_Market Summary_1682941454000",
             "headHtml": "Market Digest: NLY, AJG, BXP, CAT, CMCSA, COF, DPZ, FHI, HES, IP, JNPR, SHW, URI, WM, GM, HA, ABBV, SNAP, MRNA",
             "provider": "Argus Research",
@@ -249,17 +282,6 @@
                 "COF",
                 "MRNA",
                 "AJG"
-            ]
-        },
-        {
-            "id": "3610_Analyst Report_1682941454000",
-            "headHtml": "Analyst Report: AbbVie Inc",
-            "provider": "Argus Research",
-            "reportDate": "2023-05-01T11:44:14Z",
-            "reportTitle": "AbbVie, a research-based biopharmaceutical company, was spun off from Abbott Laboratories in January 2013. The company is based in suburban Chicago. The shares are a component of the S&P 500.",
-            "investmentRating": "Neutral",
-            "tickers": [
-                "ABBV"
             ]
         },
         {
@@ -823,6 +845,18 @@
             ]
         },
         {
+            "id": "3610_Analyst Report_1636096726000",
+            "headHtml": "Analyst Report: AbbVie Inc",
+            "provider": "Argus Research",
+            "reportDate": "2021-11-05T07:18:46Z",
+            "reportTitle": "AbbVie, a research-based biopharmaceutical company, was spun off from Abbott Laboratories in January 2013. The company is based in suburban Chicago. The shares are a component of the S&P 500.",
+            "targetPrice": 140.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "ABBV"
+            ]
+        },
+        {
             "id": "31322_Market Summary_1636096726000",
             "headHtml": "Market Digest: ETN, PH, RL, AWK, ABBV, QRVO, SHOP",
             "provider": "Argus Research",
@@ -836,18 +870,6 @@
                 "ABBV",
                 "QRVO",
                 "ETN"
-            ]
-        },
-        {
-            "id": "3610_Analyst Report_1636096726000",
-            "headHtml": "Analyst Report: AbbVie Inc",
-            "provider": "Argus Research",
-            "reportDate": "2021-11-05T07:18:46Z",
-            "reportTitle": "AbbVie, a research-based biopharmaceutical company, was spun off from Abbott Laboratories in January 2013. The company is based in suburban Chicago. The shares are a component of the S&P 500.",
-            "targetPrice": 140.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "ABBV"
             ]
         },
         {
@@ -1326,6 +1348,18 @@
             ]
         },
         {
+            "id": "3610_Analyst Report_1597759743000",
+            "headHtml": "Analyst Report: AbbVie Inc",
+            "provider": "Argus Research",
+            "reportDate": "2020-08-18T14:09:03Z",
+            "reportTitle": "AbbVie, a research-based biopharmaceutical company, was spun off from Abbott Laboratories in January 2013. The company is based in suburban Chicago. The shares are a component of the S&P 500.",
+            "targetPrice": 115.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "ABBV"
+            ]
+        },
+        {
             "id": "27712_Market Update_1597759743000",
             "headHtml": "Market Update: ABBV, MKL, FOXA, HOG, SYY, WRK, WSM, AEP",
             "provider": "Argus Research",
@@ -1340,18 +1374,6 @@
                 "ABBV",
                 "AEP",
                 "MKL"
-            ]
-        },
-        {
-            "id": "3610_Analyst Report_1597759743000",
-            "headHtml": "Analyst Report: AbbVie Inc",
-            "provider": "Argus Research",
-            "reportDate": "2020-08-18T14:09:03Z",
-            "reportTitle": "AbbVie, a research-based biopharmaceutical company, was spun off from Abbott Laboratories in January 2013. The company is based in suburban Chicago. The shares are a component of the S&P 500.",
-            "targetPrice": 115.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "ABBV"
             ]
         },
         {
@@ -1900,66 +1922,6 @@
                 "EAT",
                 "PM",
                 "ETN"
-            ]
-        },
-        {
-            "id": "24482_Thematic Portfolio_1563321600000",
-            "headHtml": "The Argus High-Yield Model Portfolio",
-            "provider": "Argus Research",
-            "reportDate": "2019-07-17T00:00:00Z",
-            "reportTitle": "Growth stocks may be outperforming, again, in 2019. But in an environment of historically low interest rates (and with the Federal Reserve seemingly poised to cut again), many investors are still searching for high levels of income, which can often be found in value stocks. When we look for attractive high-yield/value stocks at Argus, we look for low valuations on metrics such as price/earnings, price/sales, price/book, yield and price/cash flow. But we also look for companies with clean balance sheets, high levels of profitability, cash-flow generation, and an experienced management teams. We seek to avoid companies in industries that are in secular decline, or with dividend yields that are so high that the payout is clearly at risk. That said, many value companies may face a substantial near-term industry problem. That might be a retailer fending off Amazon.com; or an energy company tied to the uncertain long-term outlook for demand for fossil fuels; or a newspaper company in the digital advertising age. Some value companies, such as tobacco companies, may face ongoing legal or regulatory risks. And others may be facing problems such as over-aggressive acquisitions, patent expirations or recent earnings stumbles. Based on requests from clients, we have designed a portfolio of companies followed by Argus Research that are BUY- or HOLD-rated on a long-term (five-year) basis and have an average yield of 4.0% or higher.",
-            "tickers": [
-                "AVGO",
-                "D",
-                "VZ",
-                "HBAN",
-                "RY",
-                "KHC",
-                "HP",
-                "K",
-                "SPG",
-                "IVZ",
-                "SLF",
-                "BDN",
-                "M",
-                "PPL",
-                "BP",
-                "PFE",
-                "PRU",
-                "T",
-                "WFC",
-                "VLO",
-                "UPS",
-                "SO",
-                "GSK",
-                "SNY",
-                "MO",
-                "BCE",
-                "IP",
-                "OKE",
-                "KSS",
-                "ABBV",
-                "DOW",
-                "KIM",
-                "AZN",
-                "BTI",
-                "RDS-A",
-                "IGT",
-                "XOM",
-                "EAT",
-                "PM",
-                "ETN"
-            ]
-        },
-        {
-            "id": "3610_Analyst Report_1561532293000",
-            "headHtml": "Maintaining HOLD",
-            "provider": "Argus Research",
-            "reportDate": "2019-06-26T06:58:13Z",
-            "reportTitle": "AbbVie, a research-based biopharmaceutical company, was spun off from Abbott Laboratories in January 2013. The company is based in suburban Chicago. The shares are a component of the S&P 500.",
-            "investmentRating": "Neutral",
-            "tickers": [
-                "ABBV"
             ]
         }
     ],

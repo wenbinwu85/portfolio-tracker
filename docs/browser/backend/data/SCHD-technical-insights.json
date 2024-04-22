@@ -4,6 +4,15 @@
         "technicalEvents": {
             "provider": "Trading Central",
             "shortTermOutlook": {
+                "stateDescription": "Bearish events outweigh bullish events.",
+                "direction": "Bearish",
+                "score": 3,
+                "scoreDescription": "Strong Bearish Evidence",
+                "indexDirection": "Bearish",
+                "indexScore": 4,
+                "indexScoreDescription": "Very Strong Bearish Evidence"
+            },
+            "intermediateTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
                 "score": 4,
@@ -12,20 +21,11 @@
                 "indexScore": 4,
                 "indexScoreDescription": "Very Strong Bearish Evidence"
             },
-            "intermediateTermOutlook": {
-                "stateDescription": "Recent bearish events outweigh bullish events.",
-                "direction": "Bearish",
-                "score": 3,
-                "scoreDescription": "Strong Bearish Evidence",
-                "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
-            },
             "longTermOutlook": {
                 "stateDescription": "All events are bullish.",
                 "direction": "Bullish",
-                "score": 3,
-                "scoreDescription": "Strong Bullish Evidence",
+                "score": 2,
+                "scoreDescription": "Bullish Evidence",
                 "indexDirection": "Bullish",
                 "indexScore": 1,
                 "indexScoreDescription": "Weak Bullish Evidence"
@@ -33,9 +33,9 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 73.225,
-            "resistance": 76.0393,
-            "stopLoss": 74.215105
+            "support": 76.0393,
+            "resistance": 77.05,
+            "stopLoss": 73.38345
         },
         "valuation": {
             "provider": "Trading Central"
@@ -43,13 +43,13 @@
     },
     "events": [
         {
-            "eventType": "Momentum",
+            "eventType": "MACD",
             "pricePeriod": "W",
-            "tradingHorizon": "S",
+            "tradingHorizon": "I",
             "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1712928600,
-            "endDate": 1712928600
+            "startDate": 1713533400,
+            "endDate": 1713533400
         }
     ],
     "sigDevs": []

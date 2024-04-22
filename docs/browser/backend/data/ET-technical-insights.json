@@ -5,10 +5,10 @@
             "provider": "Trading Central",
             "sector": "Energy",
             "shortTermOutlook": {
-                "stateDescription": "Recent bearish events outweigh bullish events.",
-                "direction": "Bearish",
+                "stateDescription": "Recent bullish events outweigh bearish events.",
+                "direction": "Bullish",
                 "score": 4,
-                "scoreDescription": "Very Strong Bearish Evidence",
+                "scoreDescription": "Very Strong Bullish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 4,
                 "sectorScoreDescription": "Very Strong Bearish Evidence",
@@ -19,14 +19,14 @@
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 2,
-                "scoreDescription": "Bearish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bearish Evidence",
                 "sectorDirection": "Bullish",
                 "sectorScore": 3,
                 "sectorScoreDescription": "Strong Bullish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
+                "indexScore": 4,
+                "indexScoreDescription": "Very Strong Bearish Evidence"
             },
             "longTermOutlook": {
                 "stateDescription": "All events are bullish.",
@@ -43,14 +43,14 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 13.885,
-            "resistance": 15.71,
-            "stopLoss": 14.237782
+            "support": 12.8512,
+            "resistance": 15.85,
+            "stopLoss": 14.210314
         },
         "valuation": {
             "color": 1.0,
             "description": "Undervalued",
-            "discount": "28%",
+            "discount": "27%",
             "relativeValue": "Discount",
             "provider": "Trading Central"
         }
@@ -61,8 +61,8 @@
             "innovativeness": 0.2664,
             "sustainability": 0.9265000000000001,
             "insiderSentiments": 0.8968,
-            "earningsReports": 0.8451000000000001,
-            "dividends": 0.7199
+            "earningsReports": 0.8556999999999999,
+            "dividends": 0.7208
         },
         "sector": {
             "innovativeness": 0.5,
@@ -100,13 +100,13 @@
     },
     "events": [
         {
-            "eventType": "Triple Moving Average Crossover",
+            "eventType": "Slow Stochastic",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "S",
+            "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1713274200,
-            "endDate": 1713274200
+            "startDate": 1713533400,
+            "endDate": 1713533400
         }
     ],
     "sigDevs": [
