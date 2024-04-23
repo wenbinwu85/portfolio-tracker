@@ -6,8 +6,8 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 4,
-                "scoreDescription": "Very Strong Bearish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bearish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 4,
                 "indexScoreDescription": "Very Strong Bearish Evidence"
@@ -35,7 +35,7 @@
             "provider": "Trading Central",
             "support": 107.62,
             "resistance": 117.1,
-            "stopLoss": 111.067879
+            "stopLoss": 113.198872
         },
         "valuation": {
             "provider": "Trading Central"
@@ -43,10 +43,10 @@
     },
     "events": [
         {
-            "eventType": "Commodity Channel Index",
-            "pricePeriod": "D",
+            "eventType": "Slow Stochastic",
+            "pricePeriod": "W",
             "tradingHorizon": "S",
-            "tradeType": "U",
+            "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
             "startDate": 1713533400,
             "endDate": 1713533400

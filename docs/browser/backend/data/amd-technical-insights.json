@@ -5,10 +5,10 @@
             "provider": "Trading Central",
             "sector": "Technology",
             "shortTermOutlook": {
-                "stateDescription": "Bearish events outweigh bullish events.",
-                "direction": "Bearish",
+                "stateDescription": "Recent bullish events outweigh bearish events.",
+                "direction": "Bullish",
                 "score": 2,
-                "scoreDescription": "Bearish Evidence",
+                "scoreDescription": "Bullish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 4,
                 "sectorScoreDescription": "Very Strong Bearish Evidence",
@@ -43,14 +43,14 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 107.93,
+            "support": 75.48,
             "resistance": 174.22,
-            "stopLoss": 129.907559
+            "stopLoss": 131.096133
         },
         "valuation": {
             "color": 0.0,
             "description": "Overvalued",
-            "discount": "2%",
+            "discount": "1%",
             "relativeValue": "Premium",
             "provider": "Trading Central"
         }
@@ -60,8 +60,8 @@
         "company": {
             "innovativeness": 0.7509999999999999,
             "hiring": 0.8539,
-            "insiderSentiments": 0.10710000000000001,
-            "earningsReports": 0.9833
+            "insiderSentiments": 0.0964,
+            "earningsReports": 0.9840000000000001
         },
         "sector": {
             "innovativeness": 0.5,
@@ -104,13 +104,13 @@
     },
     "events": [
         {
-            "eventType": "Top Triangle",
+            "eventType": "Relative Strength Index (RSI)",
             "pricePeriod": "D",
-            "tradingHorizon": "I",
-            "tradeType": "S",
-            "imageUrl": "https://s.yimg.com/uc/fin/img/assets/bearish-top-triangle.svg",
-            "startDate": 1709908200,
-            "endDate": 1713187800
+            "tradingHorizon": "S",
+            "tradeType": "L",
+            "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
+            "startDate": 1713792600,
+            "endDate": 1713792600
         }
     ],
     "reports": [
@@ -343,18 +343,6 @@
             ]
         },
         {
-            "id": "2707_Analyst Report_1698921146000",
-            "headHtml": "Analyst Report: Advanced Micro Devices Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2023-11-02T10:32:26Z",
-            "reportTitle": "Advanced Micro Devices is the number-two player in x86-based microprocessors, behind Intel, and -- with the 2008 acquisition of ATI -- a top player in graphic processors. In 2021, Advanced Micro Devices acquired Xilinx, expanding its presence in embedded computing and data center.",
-            "targetPrice": 170.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "AMD"
-            ]
-        },
-        {
             "id": "38162_Market Summary_1698921146000",
             "headHtml": "Market Digest: AMD, DHR, ETR, MRK, NI, RJF, STX, OSTK, WRB, AGNC, NOW",
             "provider": "Argus Research",
@@ -372,6 +360,18 @@
                 "OSTK",
                 "DHR",
                 "RJF"
+            ]
+        },
+        {
+            "id": "2707_Analyst Report_1698921146000",
+            "headHtml": "Analyst Report: Advanced Micro Devices Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2023-11-02T10:32:26Z",
+            "reportTitle": "Advanced Micro Devices is the number-two player in x86-based microprocessors, behind Intel, and -- with the 2008 acquisition of ATI -- a top player in graphic processors. In 2021, Advanced Micro Devices acquired Xilinx, expanding its presence in embedded computing and data center.",
+            "targetPrice": 170.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "AMD"
             ]
         },
         {
@@ -394,18 +394,6 @@
             ]
         },
         {
-            "id": "2707_Analyst Report_1691061233000",
-            "headHtml": "Analyst Report: Advanced Micro Devices Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2023-08-03T11:13:53Z",
-            "reportTitle": "Advanced Micro Devices is the number-two player in x86-based microprocessors, behind Intel, and -- with the 2008 acquisition of ATI -- a top player in graphic processors. In 2021, Advanced Micro Devices acquired Xilinx, expanding its presence in embedded computing and data center.",
-            "targetPrice": 170.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "AMD"
-            ]
-        },
-        {
             "id": "37251_Market Summary_1691061233000",
             "headHtml": "Market Digest: NLY, AMD, ETN, FIS, HP, PEG, SBUX, SON, IGT",
             "provider": "Argus Research",
@@ -421,6 +409,18 @@
                 "HP",
                 "NLY",
                 "ETN"
+            ]
+        },
+        {
+            "id": "2707_Analyst Report_1691061233000",
+            "headHtml": "Analyst Report: Advanced Micro Devices Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2023-08-03T11:13:53Z",
+            "reportTitle": "Advanced Micro Devices is the number-two player in x86-based microprocessors, behind Intel, and -- with the 2008 acquisition of ATI -- a top player in graphic processors. In 2021, Advanced Micro Devices acquired Xilinx, expanding its presence in embedded computing and data center.",
+            "targetPrice": 170.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "AMD"
             ]
         },
         {
@@ -883,6 +883,18 @@
             ]
         },
         {
+            "id": "2707_Analyst Report_1635342612000",
+            "headHtml": "Analyst Report: Advanced Micro Devices Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2021-10-27T13:50:12Z",
+            "reportTitle": "Advanced Micro Devices is the number-two player in x86-based microprocessors, behind Intel, and -- with the 2008 acquisition of ATI -- a top player in graphic processors. In 2009, Advanced Micro Devices spun off its foundry operations into a joint venture called Global Foundries. In mid-2014, AMD underwent an internal reorganization, aligning businesses along functional lines and creating a single internal infrastructure.",
+            "targetPrice": 150.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "AMD"
+            ]
+        },
+        {
             "id": "31251_Market Update_1635342612000",
             "headHtml": "Market Update: ACC, AMD, HD, LLY, PCAR, SHW, HA, AGNC, IQV, HLT",
             "provider": "Argus Research",
@@ -899,18 +911,6 @@
                 "HA",
                 "HD",
                 "IQV"
-            ]
-        },
-        {
-            "id": "2707_Analyst Report_1635342612000",
-            "headHtml": "Analyst Report: Advanced Micro Devices Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2021-10-27T13:50:12Z",
-            "reportTitle": "Advanced Micro Devices is the number-two player in x86-based microprocessors, behind Intel, and -- with the 2008 acquisition of ATI -- a top player in graphic processors. In 2009, Advanced Micro Devices spun off its foundry operations into a joint venture called Global Foundries. In mid-2014, AMD underwent an internal reorganization, aligning businesses along functional lines and creating a single internal infrastructure.",
-            "targetPrice": 150.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "AMD"
             ]
         },
         {
@@ -1261,18 +1261,6 @@
             ]
         },
         {
-            "id": "2707_Analyst Report_1596067200000",
-            "headHtml": "Analyst Report: Advanced Micro Devices Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2020-07-30T00:00:00Z",
-            "reportTitle": "Advanced Micro Devices is the number-two player in x86-based microprocessors, behind Intel, and -- with the 2008 acquisition of ATI -- a top player in graphic processors. In 2009, Advanced Micro Devices spun off its foundry operations into a joint venture called Global Foundries. In mid-2014, AMD underwent an internal reorganization, aligning businesses along functional lines and creating a single internal infrastructure.",
-            "targetPrice": 82.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "AMD"
-            ]
-        },
-        {
             "id": "27554_Market Summary_1596067200000",
             "headHtml": "Market Digest: AMD, CMI, ETN, HSY, AAL",
             "provider": "Argus Research",
@@ -1284,6 +1272,18 @@
                 "ETN",
                 "CMI",
                 "HSY"
+            ]
+        },
+        {
+            "id": "2707_Analyst Report_1596067200000",
+            "headHtml": "Analyst Report: Advanced Micro Devices Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2020-07-30T00:00:00Z",
+            "reportTitle": "Advanced Micro Devices is the number-two player in x86-based microprocessors, behind Intel, and -- with the 2008 acquisition of ATI -- a top player in graphic processors. In 2009, Advanced Micro Devices spun off its foundry operations into a joint venture called Global Foundries. In mid-2014, AMD underwent an internal reorganization, aligning businesses along functional lines and creating a single internal infrastructure.",
+            "targetPrice": 82.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "AMD"
             ]
         },
         {
@@ -1416,18 +1416,6 @@
             ]
         },
         {
-            "id": "2707_Analyst Report_1588204800000",
-            "headHtml": "Analyst Report: Advanced Micro Devices Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2020-04-30T00:00:00Z",
-            "reportTitle": "Advanced Micro Devices is the number-two player in x86-based microprocessors, behind Intel, and -- with the 2008 acquisition of ATI -- a top player in graphic processors. In 2009, Advanced Micro Devices spun off its foundry operations into a joint venture called Global Foundries. In mid-2014, AMD underwent an internal reorganization, aligning businesses along functional lines and creating a single internal infrastructure.",
-            "targetPrice": 66.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "AMD"
-            ]
-        },
-        {
             "id": "26814_Market Summary_1588204800000",
             "headHtml": "Market Digest: AMD, CME, JNPR, MKTX, NOC, SBUX, GE, NEE",
             "provider": "Argus Research",
@@ -1442,6 +1430,18 @@
                 "CME",
                 "GE",
                 "NEE"
+            ]
+        },
+        {
+            "id": "2707_Analyst Report_1588204800000",
+            "headHtml": "Analyst Report: Advanced Micro Devices Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2020-04-30T00:00:00Z",
+            "reportTitle": "Advanced Micro Devices is the number-two player in x86-based microprocessors, behind Intel, and -- with the 2008 acquisition of ATI -- a top player in graphic processors. In 2009, Advanced Micro Devices spun off its foundry operations into a joint venture called Global Foundries. In mid-2014, AMD underwent an internal reorganization, aligning businesses along functional lines and creating a single internal infrastructure.",
+            "targetPrice": 66.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "AMD"
             ]
         },
         {
@@ -1512,6 +1512,19 @@
             ]
         },
         {
+            "id": "26640_Market Update_1586304000000",
+            "headHtml": "Market Update: AMD, M, NBL, PPL",
+            "provider": "Argus Research",
+            "reportDate": "2020-04-08T00:00:00Z",
+            "reportTitle": "Stocks rose on Wednesday morning on optimism that coronavirus cases in the U.S. were reaching their peak. On the political front, Senator Bernie Sanders said that he would suspend his campaign for the Democratic presidential nomination. The Dow rose 2.6%, the S&P 2.4%, and the Nasdaq 1.8%. Crude oil traded near $24.50 per barrel, while gold rose $3 to $1687 per ounce.",
+            "tickers": [
+                "AMD",
+                "NBL",
+                "M",
+                "PPL"
+            ]
+        },
+        {
             "id": "2707_Analyst Report_1586304000000",
             "headHtml": "Analyst Report: Advanced Micro Devices Inc.",
             "provider": "Argus Research",
@@ -1538,19 +1551,6 @@
                 "AMD",
                 "SQ",
                 "DHR"
-            ]
-        },
-        {
-            "id": "26640_Market Update_1586304000000",
-            "headHtml": "Market Update: AMD, M, NBL, PPL",
-            "provider": "Argus Research",
-            "reportDate": "2020-04-08T00:00:00Z",
-            "reportTitle": "Stocks rose on Wednesday morning on optimism that coronavirus cases in the U.S. were reaching their peak. On the political front, Senator Bernie Sanders said that he would suspend his campaign for the Democratic presidential nomination. The Dow rose 2.6%, the S&P 2.4%, and the Nasdaq 1.8%. Crude oil traded near $24.50 per barrel, while gold rose $3 to $1687 per ounce.",
-            "tickers": [
-                "AMD",
-                "NBL",
-                "M",
-                "PPL"
             ]
         },
         {
@@ -1686,15 +1686,6 @@
             "formType": "DEF 14A"
         },
         {
-            "id": "0001193125-24-076521_2488",
-            "type": "Proxy Statements",
-            "title": "DEFA14A : Proxy Statements",
-            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
-            "filingDate": 1711324800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000119312524076521/thumbnail.png",
-            "formType": "DEFA14A"
-        },
-        {
             "id": "0001193125-24-076535_2488",
             "type": "Annual Report to Shareholders",
             "title": "ARS : Annual Report to Shareholders",
@@ -1702,6 +1693,15 @@
             "filingDate": 1711324800000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000119312524076535/thumbnail.png",
             "formType": "ARS"
+        },
+        {
+            "id": "0001193125-24-076521_2488",
+            "type": "Proxy Statements",
+            "title": "DEFA14A : Proxy Statements",
+            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
+            "filingDate": 1711324800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000119312524076521/thumbnail.png",
+            "formType": "DEFA14A"
         },
         {
             "id": "0001628280-24-005593_2488",

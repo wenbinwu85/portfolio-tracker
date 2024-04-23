@@ -5,13 +5,13 @@
             "provider": "Trading Central",
             "sector": "Real Estate",
             "shortTermOutlook": {
-                "stateDescription": "Bearish events outweigh bullish events.",
+                "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 3,
-                "scoreDescription": "Strong Bearish Evidence",
+                "score": 2,
+                "scoreDescription": "Bearish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 4,
-                "sectorScoreDescription": "Very Strong Bearish Evidence",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bearish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 4,
                 "indexScoreDescription": "Very Strong Bearish Evidence"
@@ -43,9 +43,9 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 27.445,
+            "support": 27.895,
             "resistance": 29.685,
-            "stopLoss": 26.482576
+            "stopLoss": 26.87502
         },
         "valuation": {
             "color": 1.0,
@@ -59,9 +59,9 @@
         "sectorInfo": "Real Estate",
         "company": {
             "innovativeness": 0.0898,
-            "insiderSentiments": 0.6848000000000001,
-            "earningsReports": 0.5966,
-            "dividends": 0.3873
+            "insiderSentiments": 0.6728000000000001,
+            "earningsReports": 0.6057,
+            "dividends": 0.38630000000000003
         },
         "sector": {
             "innovativeness": 0.5,
@@ -82,13 +82,13 @@
     },
     "events": [
         {
-            "eventType": "Commodity Channel Index",
+            "eventType": "Fast Stochastic",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "U",
+            "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1713533400,
-            "endDate": 1713533400
+            "startDate": 1713792600,
+            "endDate": 1713792600
         }
     ],
     "reports": [
@@ -1382,15 +1382,6 @@
             "formType": "SC 13G/A"
         },
         {
-            "id": "0001562230-23-000103_1705696",
-            "type": "Tender Offer/Acquisition Reports",
-            "title": "SC 13G/A : Tender Offer/Acquisition Reports",
-            "description": "Schedule filed to report acquisition of beneficial ownership of 5% or more of a class of equity securities by passive investors and certain institutions",
-            "filingDate": 1676246400000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000156223023000103/thumbnail.png",
-            "formType": "SC 13G/A"
-        },
-        {
             "id": "0001422848-23-000139_1705696",
             "type": "Tender Offer/Acquisition Reports",
             "title": "SC 13G : Tender Offer/Acquisition Reports",
@@ -1398,6 +1389,15 @@
             "filingDate": 1676246400000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000142284823000139/thumbnail.png",
             "formType": "SC 13G"
+        },
+        {
+            "id": "0001562230-23-000103_1705696",
+            "type": "Tender Offer/Acquisition Reports",
+            "title": "SC 13G/A : Tender Offer/Acquisition Reports",
+            "description": "Schedule filed to report acquisition of beneficial ownership of 5% or more of a class of equity securities by passive investors and certain institutions",
+            "filingDate": 1676246400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000156223023000103/thumbnail.png",
+            "formType": "SC 13G/A"
         },
         {
             "id": "0001422849-23-000134_1705696",
@@ -1454,15 +1454,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0001705696-22-000130_1705696",
-            "type": "Periodic Financial Reports",
-            "title": "10-Q : Periodic Financial Reports",
-            "description": "Quarterly report pursuant to Section 13 or 15(d)",
-            "filingDate": 1666828800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001920791/000170569622000130/thumbnail.png",
-            "formType": "10-Q"
-        },
-        {
             "id": "0001705696-22-000129_1705696",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -1470,6 +1461,15 @@
             "filingDate": 1666828800000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001920791/000170569622000129/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0001705696-22-000130_1705696",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1666828800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001920791/000170569622000130/thumbnail.png",
+            "formType": "10-Q"
         },
         {
             "id": "0001705696-22-000111_1705696",
@@ -1616,15 +1616,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0001284812-22-000105_1705696",
-            "type": "Tender Offer/Acquisition Reports",
-            "title": "SC 13G : Tender Offer/Acquisition Reports",
-            "description": "Schedule filed to report acquisition of beneficial ownership of 5% or more of a class of equity securities by passive investors and certain institutions",
-            "filingDate": 1644796800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000128481222000105/thumbnail.png",
-            "formType": "SC 13G"
-        },
-        {
             "id": "0001705696-22-000022_1705696",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -1632,6 +1623,15 @@
             "filingDate": 1644796800000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/1705696/000170569622000022/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0001284812-22-000105_1705696",
+            "type": "Tender Offer/Acquisition Reports",
+            "title": "SC 13G : Tender Offer/Acquisition Reports",
+            "description": "Schedule filed to report acquisition of beneficial ownership of 5% or more of a class of equity securities by passive investors and certain institutions",
+            "filingDate": 1644796800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000128481222000105/thumbnail.png",
+            "formType": "SC 13G"
         },
         {
             "id": "0001422849-22-000138_1705696",

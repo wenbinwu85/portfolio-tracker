@@ -45,7 +45,7 @@
             "provider": "Trading Central",
             "support": 150.66,
             "resistance": 173.19,
-            "stopLoss": 158.545577
+            "stopLoss": 160.61846
         },
         "valuation": {
             "color": 0.5,
@@ -60,8 +60,8 @@
             "innovativeness": 0.9961,
             "hiring": 0.9512999999999999,
             "sustainability": 0.575,
-            "insiderSentiments": 0.33039999999999997,
-            "earningsReports": 0.8415,
+            "insiderSentiments": 0.2848,
+            "earningsReports": 0.8429000000000001,
             "dividends": 0.0981
         },
         "sector": {
@@ -105,8 +105,8 @@
     },
     "events": [
         {
-            "eventType": "Commodity Channel Index",
-            "pricePeriod": "W",
+            "eventType": "MACD",
+            "pricePeriod": "D",
             "tradingHorizon": "S",
             "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
@@ -115,6 +115,45 @@
         }
     ],
     "reports": [
+        {
+            "id": "39788_Thematic Portfolio_1713887664000",
+            "headHtml": "The Argus Innovation Model Portfolio",
+            "provider": "Argus Research",
+            "reportDate": "2024-04-23T15:54:24Z",
+            "reportTitle": "The United States economy is full of innovation. It has to be. Manufacturing industries that dominated the economy decades ago - textiles, televisions, even automobiles to a large degree - have moved overseas, where labor and materials costs are lower. Yet the U.S. economy, even during the pandemic and the current period of high inflation, has expanded to record levels. If U.S. corporations weren't innovating, creating new products (such as vaccines and AI) and services (such as Zoom calls) and moving into new markets, the domestic economy would not be growing, and capital would not be flooding into the country. The current high level of the U.S. dollar relative to currencies around the world attests to the confidence that global investors have in the durable and innovative U.S. economy.",
+            "tickers": [
+                "GOOGL",
+                "AMAT",
+                "AAPL",
+                "ANET",
+                "CVX",
+                "ADI",
+                "AXON",
+                "URI",
+                "COST",
+                "V",
+                "LLY",
+                "SPGI",
+                "PANW",
+                "META",
+                "NVDA",
+                "SYK",
+                "BSX",
+                "ORCL",
+                "CBOE",
+                "PWR",
+                "MCK",
+                "NOW",
+                "ADBE",
+                "LYFT",
+                "SCHW",
+                "MCHP",
+                "ISRG",
+                "AMZN",
+                "ODFL",
+                "CRM"
+            ]
+        },
         {
             "id": "39692_Technical Analysis_1713177949000",
             "headHtml": "Technical Assessment: Neutral in the Intermediate-Term",
@@ -996,18 +1035,6 @@
             ]
         },
         {
-            "id": "2660_Analyst Report_1655449615000",
-            "headHtml": "Analyst Report: Apple Inc",
-            "provider": "Argus Research",
-            "reportDate": "2022-06-17T07:06:55Z",
-            "reportTitle": "Apple manufactures smartphones, tablets, P6Cs, software and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including AirPods, Beats headphones and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
-            "targetPrice": 180.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "AAPL"
-            ]
-        },
-        {
             "id": "33246_Market Summary_1655449615000",
             "headHtml": "Market Digest: AAPL, TECH, ZTS",
             "provider": "Argus Research",
@@ -1017,6 +1044,18 @@
                 "TECH",
                 "AAPL",
                 "ZTS"
+            ]
+        },
+        {
+            "id": "2660_Analyst Report_1655449615000",
+            "headHtml": "Analyst Report: Apple Inc",
+            "provider": "Argus Research",
+            "reportDate": "2022-06-17T07:06:55Z",
+            "reportTitle": "Apple manufactures smartphones, tablets, P6Cs, software and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including AirPods, Beats headphones and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
+            "targetPrice": 180.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "AAPL"
             ]
         },
         {
@@ -1549,6 +1588,18 @@
             ]
         },
         {
+            "id": "2660_Analyst Report_1619704690000",
+            "headHtml": "Analyst Report: Apple Inc",
+            "provider": "Argus Research",
+            "reportDate": "2021-04-29T13:58:10Z",
+            "reportTitle": "Apple manufactures smartphones, tablets, PCs, software and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including AirPods, Beats headphones and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
+            "targetPrice": 165.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "AAPL"
+            ]
+        },
+        {
             "id": "29761_Market Update_1619704690000",
             "headHtml": "Market Update: AAPL, ADP, AEP, BA, MGM, QCOM, MA, MDLZ",
             "provider": "Argus Research",
@@ -1563,18 +1614,6 @@
                 "AEP",
                 "ADP",
                 "BA"
-            ]
-        },
-        {
-            "id": "2660_Analyst Report_1619704690000",
-            "headHtml": "Analyst Report: Apple Inc",
-            "provider": "Argus Research",
-            "reportDate": "2021-04-29T13:58:10Z",
-            "reportTitle": "Apple manufactures smartphones, tablets, PCs, software and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including AirPods, Beats headphones and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
-            "targetPrice": 165.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "AAPL"
             ]
         },
         {
@@ -1886,24 +1925,12 @@
                 "CMI",
                 "CB"
             ]
-        },
-        {
-            "id": "2660_Analyst Report_1602659370000",
-            "headHtml": "Analyst Report: Apple Inc",
-            "provider": "Argus Research",
-            "reportDate": "2020-10-14T07:09:30Z",
-            "reportTitle": "Apple manufactures Smartphones, tablets, PCs, software and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including AirPods, Beats headphones and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
-            "targetPrice": 150.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "AAPL"
-            ]
         }
     ],
     "sigDevs": [
         {
-            "headline": "Apple Says Cyberspace Administration Of China Ordered Removal Of Meta's WhatsApp And Threads From China Storefront",
-            "date": "2024-04-19"
+            "headline": "SEC Philippines Moves To Remove Binance App In Google, Apple App Store",
+            "date": "2024-04-23"
         }
     ],
     "secReports": [
@@ -2160,15 +2187,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0001193125-22-128361_320193",
-            "type": "Offering Registrations",
-            "title": "S-8 POS : Offering Registrations",
-            "description": "Post-effective amendment to a S-8 registration statement",
-            "filingDate": 1651190400000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000119312522128361/thumbnail.png",
-            "formType": "S-8 POS"
-        },
-        {
             "id": "0001193125-22-128368_320193",
             "type": "Offering Registrations",
             "title": "S-8 : Offering Registrations",
@@ -2176,6 +2194,15 @@
             "filingDate": 1651190400000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000119312522128368/thumbnail.png",
             "formType": "S-8"
+        },
+        {
+            "id": "0001193125-22-128361_320193",
+            "type": "Offering Registrations",
+            "title": "S-8 POS : Offering Registrations",
+            "description": "Post-effective amendment to a S-8 registration statement",
+            "filingDate": 1651190400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000119312522128361/thumbnail.png",
+            "formType": "S-8 POS"
         },
         {
             "id": "0000320193-22-000059_320193",

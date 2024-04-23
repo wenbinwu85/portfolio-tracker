@@ -33,9 +33,9 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 76.0393,
-            "resistance": 77.05,
-            "stopLoss": 73.38345
+            "support": 75.67,
+            "resistance": 77.535,
+            "stopLoss": 73.805223
         },
         "valuation": {
             "provider": "Trading Central"
@@ -43,13 +43,13 @@
     },
     "events": [
         {
-            "eventType": "MACD",
-            "pricePeriod": "W",
-            "tradingHorizon": "I",
-            "tradeType": "S",
+            "eventType": "Commodity Channel Index",
+            "pricePeriod": "D",
+            "tradingHorizon": "S",
+            "tradeType": "U",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1713533400,
-            "endDate": 1713533400
+            "startDate": 1713792600,
+            "endDate": 1713792600
         }
     ],
     "sigDevs": []
