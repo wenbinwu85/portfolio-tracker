@@ -9,14 +9,14 @@
                 "score": 3,
                 "scoreDescription": "Strong Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 4,
-                "indexScoreDescription": "Very Strong Bearish Evidence"
+                "indexScore": 3,
+                "indexScoreDescription": "Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
-                "stateDescription": "Recent bearish events outweigh bullish events.",
-                "direction": "Bearish",
+                "stateDescription": "Recent bullish events outweigh bearish events.",
+                "direction": "Bullish",
                 "score": 2,
-                "scoreDescription": "Bearish Evidence",
+                "scoreDescription": "Bullish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 4,
                 "indexScoreDescription": "Very Strong Bearish Evidence"
@@ -33,9 +33,9 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 107.62,
-            "resistance": 117.1,
-            "stopLoss": 113.198872
+            "support": 107.26,
+            "resistance": 118.41,
+            "stopLoss": 108.714802
         },
         "valuation": {
             "provider": "Trading Central"
@@ -43,13 +43,13 @@
     },
     "events": [
         {
-            "eventType": "Slow Stochastic",
-            "pricePeriod": "W",
+            "eventType": "Williams %R",
+            "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "S",
+            "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1713533400,
-            "endDate": 1713533400
+            "startDate": 1713879000,
+            "endDate": 1713879000
         }
     ],
     "sigDevs": []
