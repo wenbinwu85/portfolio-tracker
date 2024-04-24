@@ -13,6 +13,7 @@ import { MatTableDataSource, MatTableModule } from "@angular/material/table";
 import { catchError, map, Observable } from "rxjs";
 import { DataService } from "../../../services/data.service";
 import { StockDayPriceRangeComponent } from "../stock-day-price-range/stock-day-price-range.component";
+import { StockTickerChipComponent } from "../stock-ticker-chip/stock-ticker-chip.component";
 
 @Component({
   selector: "stock-price-insight",
@@ -28,6 +29,7 @@ import { StockDayPriceRangeComponent } from "../stock-day-price-range/stock-day-
     NgStyle,
     PercentPipe,
     StockDayPriceRangeComponent,
+    StockTickerChipComponent
   ],
   templateUrl: "./stock-price-insight.component.html",
   styleUrl: "./stock-price-insight.component.css",

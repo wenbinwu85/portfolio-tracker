@@ -11,6 +11,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { StockTickerChipComponent } from '../stock/stock-ticker-chip/stock-ticker-chip.component';
 import { DataService } from '../../services/data.service';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'info-card',
@@ -23,10 +24,11 @@ import { DataService } from '../../services/data.service';
     MatCardModule,
     MatDividerModule,
     MatIconModule,
+    MatTooltipModule,
     NgIf,
     NgStyle,
     PercentPipe,
-    StockTickerChipComponent
+    StockTickerChipComponent,
   ],
 })
 export class InfoCardComponent implements OnInit {
@@ -43,6 +45,7 @@ export class InfoCardComponent implements OnInit {
   borderStyle = ''
   borderLeftStyle = '';
   stock: any;
+  tickerChipTooltip = '';
 
   constructor(private dataService: DataService) { }
 
@@ -50,6 +53,7 @@ export class InfoCardComponent implements OnInit {
     this.borderLeftStyle = '0.3rem solid ' + (this.accentColor ? this.accentColor : 'steelblue');
     if (this.subtitleChip) { 
       this.stock = this.dataService.portfolioData[this.subtitle];
+      this.tickerChipTooltip = 'Fwd PE: ' + this.stock.forwardPE.toFixed(2) + ' Fwd EPS:' + this.stock.forwardEps.toFixed(2);
     };
   }
 
