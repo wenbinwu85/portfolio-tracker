@@ -9,9 +9,9 @@
                 "direction": "Bullish",
                 "score": 4,
                 "scoreDescription": "Very Strong Bullish Evidence",
-                "sectorDirection": "Bearish",
-                "sectorScore": 2,
-                "sectorScoreDescription": "Bearish Evidence",
+                "sectorDirection": "Bullish",
+                "sectorScore": 1,
+                "sectorScoreDescription": "Weak Bullish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 3,
                 "indexScoreDescription": "Strong Bearish Evidence"
@@ -44,8 +44,8 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 12.8512,
-            "resistance": 16.0,
-            "stopLoss": 15.011417
+            "resistance": 15.87,
+            "stopLoss": 15.288453
         },
         "valuation": {
             "color": 1.0,
@@ -61,8 +61,8 @@
             "innovativeness": 0.2664,
             "sustainability": 0.9265000000000001,
             "insiderSentiments": 0.8968,
-            "earningsReports": 0.8522,
-            "dividends": 0.7222
+            "earningsReports": 0.8526,
+            "dividends": 0.7237
         },
         "sector": {
             "innovativeness": 0.5,
@@ -100,13 +100,13 @@
     },
     "events": [
         {
-            "eventType": "Momentum",
+            "eventType": "MACD",
             "pricePeriod": "D",
             "tradingHorizon": "S",
             "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1713792600,
-            "endDate": 1713792600
+            "startDate": 1713965400,
+            "endDate": 1713965400
         }
     ],
     "sigDevs": [

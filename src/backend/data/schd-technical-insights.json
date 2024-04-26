@@ -4,7 +4,7 @@
         "technicalEvents": {
             "provider": "Trading Central",
             "shortTermOutlook": {
-                "stateDescription": "Bearish events outweigh bullish events.",
+                "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
                 "score": 2,
                 "scoreDescription": "Bearish Evidence",
@@ -33,9 +33,9 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 76.11,
+            "support": 76.61,
             "resistance": 79.05,
-            "stopLoss": 72.371638
+            "stopLoss": 72.396459
         },
         "valuation": {
             "provider": "Trading Central"
@@ -43,13 +43,13 @@
     },
     "events": [
         {
-            "eventType": "Commodity Channel Index",
+            "eventType": "Double Moving Average Crossover",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "U",
+            "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1713792600,
-            "endDate": 1713792600
+            "startDate": 1713965400,
+            "endDate": 1713965400
         }
     ],
     "sigDevs": []
