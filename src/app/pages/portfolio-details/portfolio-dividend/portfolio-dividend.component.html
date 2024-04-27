@@ -13,6 +13,44 @@
 
 <mat-divider />
 
+<section class="add-border">
+  <div class="add-flex">
+    <div class="title">
+      <span>Dividend Income Projection</span>
+    </div>
+  </div>
+  <div class="add-flex">
+    <div class="chart-container dividend-income">
+      <ngx-charts-bar-vertical-stacked
+        [scheme]="'natural'"
+        [results]="dividendIncomeChartData"
+        [animations]="true"
+        [xAxis]="true"
+        [yAxis]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [yAxisLabel]="'Scheduled Dividend Payments $'"
+        [noBarWhenZero]="true"
+        [showDataLabel]="true"
+      />
+    </div>
+    <div class="chart-container projected-dividend-income">
+      <ngx-charts-bar-horizontal-stacked
+        [scheme]="'natural'"
+        [results]="dividendProjectionChartData"
+        [animations]="true"
+        [xAxis]="true"
+        [yAxis]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [yAxisLabel]="'Estimated Monthly Dividend Income $'"
+        [noBarWhenZero]="true"
+        [showDataLabel]="true"
+      />
+    </div>
+  </div>
+</section>
+
 <section *ngIf="browser === 'Safari'" class="add-border">
   <div class="add-flex">
     <div class="title">
@@ -80,7 +118,6 @@
         [yScaleMin]="0"
       />
     </div>
-
     <div class="chart-container dividend-pie">
       <ngx-charts-pie-chart
         [scheme]="'picnic'"

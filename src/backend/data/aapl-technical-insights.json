@@ -7,14 +7,14 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 4,
-                "scoreDescription": "Very Strong Bearish Evidence",
+                "score": 1,
+                "scoreDescription": "Weak Bearish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 4,
-                "sectorScoreDescription": "Very Strong Bearish Evidence",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "All events are bearish.",
@@ -43,9 +43,9 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 150.66,
+            "support": 169.24,
             "resistance": 173.19,
-            "stopLoss": 163.101699
+            "stopLoss": 161.466525
         },
         "valuation": {
             "color": 0.5,
@@ -61,8 +61,8 @@
             "hiring": 0.9512999999999999,
             "sustainability": 0.575,
             "insiderSentiments": 0.2854,
-            "earningsReports": 0.8462000000000001,
-            "dividends": 0.10279999999999999
+            "earningsReports": 0.8429000000000001,
+            "dividends": 0.09789999999999999
         },
         "sector": {
             "innovativeness": 0.5,
@@ -105,13 +105,13 @@
     },
     "events": [
         {
-            "eventType": "Commodity Channel Index",
+            "eventType": "MACD",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "U",
+            "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1713965400,
-            "endDate": 1713965400
+            "startDate": 1714051800,
+            "endDate": 1714051800
         }
     ],
     "reports": [
@@ -1035,18 +1035,6 @@
             ]
         },
         {
-            "id": "33246_Market Summary_1655449615000",
-            "headHtml": "Market Digest: AAPL, TECH, ZTS",
-            "provider": "Argus Research",
-            "reportDate": "2022-06-17T07:06:55Z",
-            "reportTitle": "Stocks plummeted on Thursday amid mounting recession fears, as investors continued to assess the impact of the Fed's 75-basis-point rate hike and the ability of the central bank to control inflation. The S&P fell to its lowest level since December 2020 and is now down 23% year-to-date. On the employment front, first-time claims for state unemployment benefits fell to 229,000 for the week ended June 11, down from 232,000 a week earlier but above the consensus estimate of 215,000. The Dow fell 2.42%, the S&P 3.25%, and the Nasdaq 4.08%. Crude oil traded near $117 per barrel, while gold soared 2% to $1860 per ounce.",
-            "tickers": [
-                "TECH",
-                "AAPL",
-                "ZTS"
-            ]
-        },
-        {
             "id": "2660_Analyst Report_1655449615000",
             "headHtml": "Analyst Report: Apple Inc",
             "provider": "Argus Research",
@@ -1056,6 +1044,18 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "AAPL"
+            ]
+        },
+        {
+            "id": "33246_Market Summary_1655449615000",
+            "headHtml": "Market Digest: AAPL, TECH, ZTS",
+            "provider": "Argus Research",
+            "reportDate": "2022-06-17T07:06:55Z",
+            "reportTitle": "Stocks plummeted on Thursday amid mounting recession fears, as investors continued to assess the impact of the Fed's 75-basis-point rate hike and the ability of the central bank to control inflation. The S&P fell to its lowest level since December 2020 and is now down 23% year-to-date. On the employment front, first-time claims for state unemployment benefits fell to 229,000 for the week ended June 11, down from 232,000 a week earlier but above the consensus estimate of 215,000. The Dow fell 2.42%, the S&P 3.25%, and the Nasdaq 4.08%. Crude oil traded near $117 per barrel, while gold soared 2% to $1860 per ounce.",
+            "tickers": [
+                "TECH",
+                "AAPL",
+                "ZTS"
             ]
         },
         {
@@ -2187,15 +2187,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0001193125-22-128368_320193",
-            "type": "Offering Registrations",
-            "title": "S-8 : Offering Registrations",
-            "description": "Initial registration statement for securities to be offered to employees pursuant to employee benefit plans",
-            "filingDate": 1651190400000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000119312522128368/thumbnail.png",
-            "formType": "S-8"
-        },
-        {
             "id": "0001193125-22-128361_320193",
             "type": "Offering Registrations",
             "title": "S-8 POS : Offering Registrations",
@@ -2203,6 +2194,15 @@
             "filingDate": 1651190400000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000119312522128361/thumbnail.png",
             "formType": "S-8 POS"
+        },
+        {
+            "id": "0001193125-22-128368_320193",
+            "type": "Offering Registrations",
+            "title": "S-8 : Offering Registrations",
+            "description": "Initial registration statement for securities to be offered to employees pursuant to employee benefit plans",
+            "filingDate": 1651190400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000119312522128368/thumbnail.png",
+            "formType": "S-8"
         },
         {
             "id": "0000320193-22-000059_320193",

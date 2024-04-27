@@ -7,14 +7,14 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 1,
-                "scoreDescription": "Weak Bullish Evidence",
+                "score": 2,
+                "scoreDescription": "Bullish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 4,
-                "sectorScoreDescription": "Very Strong Bearish Evidence",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "All events are bearish.",
@@ -43,7 +43,7 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "stopLoss": 83.774019
+            "stopLoss": 73.206117
         },
         "valuation": {
             "color": 0.0,
@@ -56,7 +56,7 @@
     "companySnapshot": {
         "sectorInfo": "Technology",
         "company": {
-            "earningsReports": 0.9948999999999999
+            "earningsReports": 0.9956
         },
         "sector": {
             "innovativeness": 0.5,
@@ -94,13 +94,13 @@
     },
     "events": [
         {
-            "eventType": "Inside Bar (Bullish)",
+            "eventType": "Fast Stochastic",
             "pricePeriod": "D",
             "tradingHorizon": "S",
             "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1713533400,
-            "endDate": 1713792600
+            "startDate": 1713965400,
+            "endDate": 1713965400
         }
     ],
     "sigDevs": [

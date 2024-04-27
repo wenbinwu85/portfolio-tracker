@@ -38,7 +38,6 @@ export class StockNameCardComponent {
   constructor(public dialog: MatDialog, private helperService: HelperService) {}
 
   ngOnInit() {
-    console.log(Object.keys(this.stock));
     const priceKeyPrefix = this.helperService.getPriceKeyPrefix();
     this.price = this.stock[priceKeyPrefix + "Price"];
     this.borderLeftStyle = '0.3rem solid ' + (this.stock.unrealizedGain > 0 ? 'teal' : 'chocolate');

@@ -144,17 +144,27 @@ export class PortfolioFinancialsComponent implements OnInit, AfterViewInit {
 
   etfCells: Function[] = [
     (etf: any) => "",
-    (etf: any) => (etf.profile.feesExpensesInvestment.annualReportExpenseRatio * 100).toFixed(2) + "%",
+    (etf: any) =>
+      (
+        etf.profile.feesExpensesInvestment.annualReportExpenseRatio * 100
+      ).toFixed(2) + "%",
     (etf: any) => `$${etf.navPrice.toFixed(2)}`,
     (etf: any) => etf.trailingPE.toFixed(2),
     (etf: any) => etf.epsTrailingTwelveMonths?.toFixed(2) || "N/A",
-    (etf: any) => (etf.fundPerformance.trailingReturns.ytd * 100).toFixed(2) + "%",
-    (etf: any) => (etf.fundPerformance.trailingReturns.oneMonth * 100).toFixed(2) + "%",
-    (etf: any) => (etf.fundPerformance.trailingReturns.threeMonth * 100).toFixed(2) + "%",
-    (etf: any) => (etf.fundPerformance.trailingReturns.oneYear * 100).toFixed(2) + "%",
-    (etf: any) => (etf.fundPerformance.trailingReturns.threeYear * 100).toFixed(2) + "%",
-    (etf: any) => (etf.fundPerformance.trailingReturns.fiveYear * 100).toFixed(2) + "%",
-    (etf: any) => (etf.fundPerformance.trailingReturns.tenYear * 100).toFixed(2) + "%",
+    (etf: any) =>
+      (etf.fundPerformance.trailingReturns.ytd * 100).toFixed(2) + "%",
+    (etf: any) =>
+      (etf.fundPerformance.trailingReturns.oneMonth * 100).toFixed(2) + "%",
+    (etf: any) =>
+      (etf.fundPerformance.trailingReturns.threeMonth * 100).toFixed(2) + "%",
+    (etf: any) =>
+      (etf.fundPerformance.trailingReturns.oneYear * 100).toFixed(2) + "%",
+    (etf: any) =>
+      (etf.fundPerformance.trailingReturns.threeYear * 100).toFixed(2) + "%",
+    (etf: any) =>
+      (etf.fundPerformance.trailingReturns.fiveYear * 100).toFixed(2) + "%",
+    (etf: any) =>
+      (etf.fundPerformance.trailingReturns.tenYear * 100).toFixed(2) + "%",
     (etf: any) => etf.beta3Year,
     (etf: any) => etf.totalAssets,
   ];
@@ -165,11 +175,15 @@ export class PortfolioFinancialsComponent implements OnInit, AfterViewInit {
     const stocks = Object.values(this.dataService.portfolioData).filter(
       (stock: any) => stock.quoteType === "EQUITY"
     );
-    this.dataSource.data = stocks.sort((a: any, b: any) => a["52WeekChange"] - b["52WeekChange"]);
+    this.dataSource.data = stocks.sort(
+      (a: any, b: any) => a["52WeekChange"] - b["52WeekChange"]
+    );
     const etfs = Object.values(this.dataService.portfolioData).filter(
       (stock: any) => stock.quoteType === "ETF"
     );
-    this.sortedEtfs = etfs.sort((a: any, b: any) => a["ytdReturn"] - b["ytdReturn"]);
+    this.sortedEtfs = etfs.sort(
+      (a: any, b: any) => a["ytdReturn"] - b["ytdReturn"]
+    );
     this.setChartData(1);
   }
 
@@ -226,6 +240,6 @@ export class PortfolioFinancialsComponent implements OnInit, AfterViewInit {
     const value = this.cells[index](stock);
     return value < 0 || value[0] === "-" || value[1] === "-"
       ? "chocolate"
-      : "#000000DE";
+      : "";
   }
 }

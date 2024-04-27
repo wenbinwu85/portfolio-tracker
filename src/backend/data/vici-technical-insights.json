@@ -7,14 +7,14 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 2,
-                "scoreDescription": "Bullish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bullish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 2,
                 "sectorScoreDescription": "Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
@@ -45,7 +45,7 @@
             "provider": "Trading Central",
             "support": 28.13,
             "resistance": 29.685,
-            "stopLoss": 27.465216
+            "stopLoss": 27.583541
         },
         "valuation": {
             "color": 1.0,
@@ -60,7 +60,7 @@
         "company": {
             "innovativeness": 0.0895,
             "insiderSentiments": 0.6728000000000001,
-            "earningsReports": 0.6125,
+            "earningsReports": 0.611,
             "dividends": 0.4244
         },
         "sector": {
@@ -82,7 +82,7 @@
     },
     "events": [
         {
-            "eventType": "MACD",
+            "eventType": "Momentum",
             "pricePeriod": "D",
             "tradingHorizon": "S",
             "tradeType": "L",

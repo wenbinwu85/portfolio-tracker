@@ -5,16 +5,16 @@
             "provider": "Trading Central",
             "sector": "Real Estate",
             "shortTermOutlook": {
-                "stateDescription": "Recent bearish events outweigh bullish events.",
-                "direction": "Bearish",
-                "score": 3,
-                "scoreDescription": "Strong Bearish Evidence",
+                "stateDescription": "Recent bullish events outweigh bearish events.",
+                "direction": "Bullish",
+                "score": 1,
+                "scoreDescription": "Weak Bullish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 2,
                 "sectorScoreDescription": "Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "All events are bearish.",
@@ -43,9 +43,9 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 136.54,
+            "support": 135.26,
             "resistance": 144.035,
-            "stopLoss": 130.485194
+            "stopLoss": 131.185679
         },
         "valuation": {
             "color": 0.0,
@@ -61,8 +61,8 @@
             "innovativeness": 0.5136,
             "sustainability": 0.4082,
             "insiderSentiments": 0.46909999999999996,
-            "earningsReports": 0.9112,
-            "dividends": 0.1883
+            "earningsReports": 0.9089,
+            "dividends": 0.17170000000000002
         },
         "sector": {
             "innovativeness": 0.5,
@@ -105,13 +105,13 @@
     },
     "events": [
         {
-            "eventType": "Price Crosses Moving Average",
+            "eventType": "MACD",
             "pricePeriod": "D",
             "tradingHorizon": "S",
             "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1713965400,
-            "endDate": 1713965400
+            "startDate": 1714051800,
+            "endDate": 1714051800
         }
     ],
     "reports": [
@@ -580,6 +580,18 @@
             ]
         },
         {
+            "id": "4555_Analyst Report_1635752351000",
+            "headHtml": "Analyst Report: Digital Realty Trust Inc",
+            "provider": "Argus Research",
+            "reportDate": "2021-11-01T07:39:11Z",
+            "reportTitle": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 36 metropolitan markets on five continents. It is based in Austin, Texas.",
+            "targetPrice": 180.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "DLR"
+            ]
+        },
+        {
             "id": "31276_Market Summary_1635752351000",
             "headHtml": "Market Digest: BA, BMY, CME, GD, MCO, MRK, WDC, FB, DLR, LIN, CARR",
             "provider": "Argus Research",
@@ -597,18 +609,6 @@
                 "GD",
                 "BA",
                 "BMY"
-            ]
-        },
-        {
-            "id": "4555_Analyst Report_1635752351000",
-            "headHtml": "Analyst Report: Digital Realty Trust Inc",
-            "provider": "Argus Research",
-            "reportDate": "2021-11-01T07:39:11Z",
-            "reportTitle": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 36 metropolitan markets on five continents. It is based in Austin, Texas.",
-            "targetPrice": 180.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "DLR"
             ]
         },
         {
@@ -799,6 +799,18 @@
             ]
         },
         {
+            "id": "4555_Analyst Report_1597044849000",
+            "headHtml": "Analyst Report: Digital Realty Trust Inc",
+            "provider": "Argus Research",
+            "reportDate": "2020-08-10T07:34:09Z",
+            "reportTitle": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 36 metropolitan markets on five continents.",
+            "targetPrice": 180.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "DLR"
+            ]
+        },
+        {
             "id": "27630_Market Summary_1597044849000",
             "headHtml": "Market Digest: BDX, MCHP, PCAR, TSCO, JCI, VLO, WDC, XOM, DLR, CPRI",
             "provider": "Argus Research",
@@ -815,18 +827,6 @@
                 "DLR",
                 "CPRI",
                 "TSCO"
-            ]
-        },
-        {
-            "id": "4555_Analyst Report_1597044849000",
-            "headHtml": "Analyst Report: Digital Realty Trust Inc",
-            "provider": "Argus Research",
-            "reportDate": "2020-08-10T07:34:09Z",
-            "reportTitle": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 36 metropolitan markets on five continents.",
-            "targetPrice": 180.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "DLR"
             ]
         },
         {
@@ -1075,6 +1075,17 @@
             ]
         },
         {
+            "id": "25559_Market Summary_1574726400000",
+            "headHtml": "Market Digest: ARNC, DLR",
+            "provider": "Argus Research",
+            "reportDate": "2019-11-26T00:00:00Z",
+            "reportTitle": "Earnings season has come and gone, and the volume of insider transactions is not just back to normal -- it is exceeding recent patterns. This gives increased significance to any sentiment trends that come from trades made by corporate executives, directors and beneficial owners. This week, some 1661 insider transactions met the criteria for inclusion in Vickers Weekly Insider Report. The last time we saw this level of trading volume was back in May -- so transaction activity is brisk. That said, what is this activity telling us?",
+            "tickers": [
+                "ARNC",
+                "DLR"
+            ]
+        },
+        {
             "id": "4555_Analyst Report_1574726400000",
             "headHtml": "Analyst Report: Digital Realty Trust Inc",
             "provider": "Argus Research",
@@ -1083,17 +1094,6 @@
             "targetPrice": 130.0,
             "investmentRating": "Bullish",
             "tickers": [
-                "DLR"
-            ]
-        },
-        {
-            "id": "25559_Market Summary_1574726400000",
-            "headHtml": "Market Digest: ARNC, DLR",
-            "provider": "Argus Research",
-            "reportDate": "2019-11-26T00:00:00Z",
-            "reportTitle": "Earnings season has come and gone, and the volume of insider transactions is not just back to normal -- it is exceeding recent patterns. This gives increased significance to any sentiment trends that come from trades made by corporate executives, directors and beneficial owners. This week, some 1661 insider transactions met the criteria for inclusion in Vickers Weekly Insider Report. The last time we saw this level of trading volume was back in May -- so transaction activity is brisk. That said, what is this activity telling us?",
-            "tickers": [
-                "ARNC",
                 "DLR"
             ]
         },
@@ -1608,6 +1608,15 @@
     ],
     "secReports": [
         {
+            "id": "0001308179-24-000607_1297996",
+            "type": "Proxy Statements",
+            "title": "DEF 14A : Proxy Statements",
+            "description": "Definitive proxy statements",
+            "filingDate": 1714089600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001297996/000130817924000607/thumbnail.png",
+            "formType": "DEF 14A"
+        },
+        {
             "id": "0001558370-24-005623_1297996",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -2038,15 +2047,6 @@
             "filingDate": 1653523200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001297996/000155837022009357/thumbnail.png",
             "formType": "DEFA14A"
-        },
-        {
-            "id": "0001558370-22-007648_1297996",
-            "type": "Periodic Financial Reports",
-            "title": "10-Q : Periodic Financial Reports",
-            "description": "Quarterly report pursuant to Section 13 or 15(d)",
-            "filingDate": 1651795200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001494877/000155837022007648/thumbnail.png",
-            "formType": "10-Q"
         }
     ]
 }

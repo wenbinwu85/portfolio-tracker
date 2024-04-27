@@ -5,16 +5,16 @@
             "provider": "Trading Central",
             "sector": "Real Estate",
             "shortTermOutlook": {
-                "stateDescription": "Recent bearish events outweigh bullish events.",
-                "direction": "Bearish",
-                "score": 4,
-                "scoreDescription": "Very Strong Bearish Evidence",
+                "stateDescription": "Recent bullish events outweigh bearish events.",
+                "direction": "Bullish",
+                "score": 1,
+                "scoreDescription": "Weak Bullish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bearish Evidence",
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "All events are bearish.",
@@ -43,9 +43,9 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 135.94,
+            "support": 135.26,
             "resistance": 144.035,
-            "stopLoss": 126.504093
+            "stopLoss": 131.185679
         },
         "valuation": {
             "color": 0.0,
@@ -61,8 +61,8 @@
             "innovativeness": 0.5136,
             "sustainability": 0.4082,
             "insiderSentiments": 0.46909999999999996,
-            "earningsReports": 0.9134,
-            "dividends": 0.1883
+            "earningsReports": 0.9089,
+            "dividends": 0.17170000000000002
         },
         "sector": {
             "innovativeness": 0.5,
@@ -105,13 +105,13 @@
     },
     "events": [
         {
-            "eventType": "Commodity Channel Index",
+            "eventType": "MACD",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "U",
+            "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1713879000,
-            "endDate": 1713879000
+            "startDate": 1714051800,
+            "endDate": 1714051800
         }
     ],
     "reports": [
@@ -769,6 +769,18 @@
             ]
         },
         {
+            "id": "4555_Analyst Report_1605078153000",
+            "headHtml": "Analyst Report: Digital Realty Trust Inc",
+            "provider": "Argus Research",
+            "reportDate": "2020-11-11T07:02:33Z",
+            "reportTitle": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 36 metropolitan markets on five continents.",
+            "targetPrice": 180.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "DLR"
+            ]
+        },
+        {
             "id": "28394_Market Summary_1605078153000",
             "headHtml": "Market Digest: AIG, HSY, MDRX, NYT, PRGO, DISCA, DLR, HLT, MRNA",
             "provider": "Argus Research",
@@ -784,18 +796,6 @@
                 "PRGO",
                 "AIG",
                 "HSY"
-            ]
-        },
-        {
-            "id": "4555_Analyst Report_1605078153000",
-            "headHtml": "Analyst Report: Digital Realty Trust Inc",
-            "provider": "Argus Research",
-            "reportDate": "2020-11-11T07:02:33Z",
-            "reportTitle": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 36 metropolitan markets on five continents.",
-            "targetPrice": 180.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "DLR"
             ]
         },
         {
@@ -1602,18 +1602,27 @@
     ],
     "sigDevs": [
         {
-            "headline": "Digital Realty And Mitsubishi Corporation Form Data Center Development Joint Venture",
-            "date": "2024-03-04"
+            "headline": "Digital Realty Appoints Susan Swanezy To Board Of Directors",
+            "date": "2024-04-24"
         }
     ],
     "secReports": [
+        {
+            "id": "0001308179-24-000607_1297996",
+            "type": "Proxy Statements",
+            "title": "DEF 14A : Proxy Statements",
+            "description": "Definitive proxy statements",
+            "filingDate": 1714089600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001297996/000130817924000607/thumbnail.png",
+            "formType": "DEF 14A"
+        },
         {
             "id": "0001558370-24-005623_1297996",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
             "description": "Current report filing",
             "filingDate": 1713916800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001297996/000155837024005623/thumbnail.png",
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001494877/000155837024005623/thumbnail.png",
             "formType": "8-K"
         },
         {
@@ -2038,15 +2047,6 @@
             "filingDate": 1653523200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001297996/000155837022009357/thumbnail.png",
             "formType": "DEFA14A"
-        },
-        {
-            "id": "0001558370-22-007648_1297996",
-            "type": "Periodic Financial Reports",
-            "title": "10-Q : Periodic Financial Reports",
-            "description": "Quarterly report pursuant to Section 13 or 15(d)",
-            "filingDate": 1651795200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001494877/000155837022007648/thumbnail.png",
-            "formType": "10-Q"
         }
     ]
 }

@@ -11,7 +11,7 @@ import {
 } from "@angular/material/table";
 import { Color, NgxChartsModule } from "@swimlane/ngx-charts";
 import { EChartsOption } from "echarts";
-import { catchError, map } from "rxjs";
+import { catchError, filter, map } from "rxjs";
 import { EchartsVerticalBarChartComponent } from "../../../shared/components/charts/echart/echarts-vertical-bar-chart/echarts-vertical-bar-chart.component";
 import { InfoCardComponent } from "../../../shared/components/info-card/info-card.component";
 import { StockNameCardComponent } from "../../../shared/components/stock/stock-name-card/stock-name-card.component";
@@ -39,6 +39,32 @@ import { DataService } from "../../../shared/services/data.service";
 export class PortfolioDividendComponent implements OnInit, AfterViewInit {
   @ViewChild(MatTable) table!: MatTable<any>;
   @ViewChild(MatSort) sort!: MatSort;
+  monthStrings: string[] = [
+    "January", "February", "March", "April", "May", "June", "July",
+    "August", "September", "October", "November", "December"
+  ];
+  dividendPayoutMonths: any = {
+    "AAPL": [5, 8, 11, 2],
+    "ABBV": [7, 10, 1, 4],
+    "ARCC": [6, 9, 12, 3],
+    "CVS": [7, 10, 1, 4],
+    "DIS": [12, 7],
+    "DLR": [6, 9, 12, 3],
+    "DVN": [6, 9, 12, 3],
+    "ENB": [5, 8, 11, 2],
+    "EPD": [7, 10, 1, 4],
+    "ET": [5, 10, 2, 8],
+    "MO": [6, 9, 12, 3],
+    "MSFT": [5, 8, 11, 2],
+    "O": [5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4],
+    "PFE": [5, 7, 11, 1],
+    "SBUX": [5, 8, 11, 2],
+    "SCHD": [6, 9, 12, 3],
+    "SPG": [9, 12, 3, 6],
+    "TPVG": [12, 3, 6, 9],
+    "VICI": [3, 6, 9, 12],
+    "VYM": [6, 9, 12, 3]
+  }
   portfolioHoldings: any;
   portfolioData: any;
   browser = "";
@@ -49,6 +75,19 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
   infoCards: any[] = [];
   dividendLineChartData: any = [];
   dividendChartColorScheme = { domain: ["teal"] } as Color;
+  currentMonth = new Date().getMonth();
+  dividendIncomeChartData: any[] = Array.from({ length: 12 }, (_, index) => {
+    return {
+      name: index,
+      series: []
+    }
+  });
+  dividendProjectionChartData: any[] = Array.from({ length: 12 }, (_, index) => { 
+    return {
+      name: index,
+      series: []
+    }
+  })
   pieChartData: any = [];
   echartOptions!: EChartsOption;
   echartUpdateOptions: any = {
@@ -126,19 +165,43 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
           ...stock,
         };
       });
+
+    this.dataSource.data.forEach((stock: any) => {
+      this.pieChartData.push({
+        name: stock.symbol,
+        value: stock.dividendIncome,
+      });
+
+      if (stock.calendarEvents?.dividendDate) {
+        const calEvents = stock.calendarEvents;
+        const divDate = new Date(calEvents.dividendDate);
+        const month = divDate.getMonth();
+        if (month >= new Date().getMonth()) {
+          this.dividendIncomeChartData[month].series.push({
+            name: `${stock.symbol} | ${divDate.toDateString()}`,
+            value: stock.lastDividendValue * stock.sharesOwned,
+          });
+        }
+      }
+
+      this.dividendPayoutMonths[stock.symbol.toUpperCase()].forEach((month: number, _: any, arr: any[]) => {
+        const idx = month - 1;
+        const divAmount = stock.dividendRate / arr.length;
+        this.dividendProjectionChartData[idx].series.push({
+          name: `${stock.symbol} | ${stock.shortName}`,
+          value: stock.sharesOwned * divAmount,
+        })
+      });
+    });
+
+    this.dividendIncomeChartData.forEach((month, idx) => month.name = this.monthStrings[idx]);
+    this.dividendIncomeChartData = this.dividendIncomeChartData.filter(month => month.series.length > 0);
+    this.dividendProjectionChartData.forEach((month, idx) => month.name = this.monthStrings[idx]);
     this.dividendIncome = this.portfolioHoldings.portfolioDividendIncome;
     this.portfolioYieldOnCost = this.portfolioHoldings.portfolioYieldOnCost;
     this.browser = this.getBrowserName();
     this.setInfoCards();
     this.refreshDividend(this.selectedSymbol, true);
-    this.dataSource.data
-      // .sort((a: any, b: any) => b.dividendIncome - a.dividendIncome)
-      .forEach((stock: any) => {
-        this.pieChartData.push({
-          name: stock.symbol,
-          value: stock.dividendIncome,
-        });
-      });
   }
 
   ngAfterViewInit() {
@@ -260,7 +323,7 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
     )[0];
 
     let divData: any = {
-      name: stock.longName,
+      name: `${stock.symbol} | ${stock.shortName}`,
       series: [],
     };
 
