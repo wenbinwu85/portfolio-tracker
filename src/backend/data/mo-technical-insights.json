@@ -12,9 +12,9 @@
                 "sectorDirection": "Bullish",
                 "sectorScore": 4,
                 "sectorScoreDescription": "Very Strong Bullish Evidence",
-                "indexDirection": "Bearish",
-                "indexScore": 2,
-                "indexScoreDescription": "Bearish Evidence"
+                "indexDirection": "Neutral",
+                "indexScore": 0,
+                "indexScoreDescription": "Neutral Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "All events are bullish.",
@@ -29,10 +29,10 @@
                 "indexScoreDescription": "Very Strong Bearish Evidence"
             },
             "longTermOutlook": {
-                "stateDescription": "Recent bearish events outweigh bullish events.",
-                "direction": "Bearish",
-                "score": 1,
-                "scoreDescription": "Weak Bearish Evidence",
+                "stateDescription": "Recent bullish events outweigh bearish events.",
+                "direction": "Bullish",
+                "score": 2,
+                "scoreDescription": "Bullish Evidence",
                 "sectorDirection": "Bullish",
                 "sectorScore": 2,
                 "sectorScoreDescription": "Bullish Evidence",
@@ -45,7 +45,7 @@
             "provider": "Trading Central",
             "support": 41.38,
             "resistance": 45.45,
-            "stopLoss": 41.490075
+            "stopLoss": 41.826273
         },
         "valuation": {
             "color": 0.5,
@@ -104,7 +104,7 @@
     },
     "events": [
         {
-            "eventType": "Commodity Channel Index",
+            "eventType": "Triple Moving Average Crossover",
             "pricePeriod": "D",
             "tradingHorizon": "S",
             "tradeType": "L",

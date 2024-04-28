@@ -5,22 +5,22 @@
             "provider": "Trading Central",
             "sector": "Energy",
             "shortTermOutlook": {
-                "stateDescription": "Bearish events outweigh bullish events.",
-                "direction": "Bearish",
-                "score": 1,
-                "scoreDescription": "Weak Bearish Evidence",
+                "stateDescription": "Recent bullish events outweigh bearish events.",
+                "direction": "Bullish",
+                "score": 2,
+                "scoreDescription": "Bullish Evidence",
                 "sectorDirection": "Bullish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bullish Evidence",
-                "indexDirection": "Bearish",
-                "indexScore": 2,
-                "indexScoreDescription": "Bearish Evidence"
+                "sectorScore": 1,
+                "sectorScoreDescription": "Weak Bullish Evidence",
+                "indexDirection": "Neutral",
+                "indexScore": 0,
+                "indexScoreDescription": "Neutral Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 2,
-                "scoreDescription": "Bullish Evidence",
+                "score": 1,
+                "scoreDescription": "Weak Bullish Evidence",
                 "sectorDirection": "Bullish",
                 "sectorScore": 3,
                 "sectorScoreDescription": "Strong Bullish Evidence",
@@ -43,9 +43,9 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 26.2405,
-            "resistance": 29.045,
-            "stopLoss": 28.127256
+            "support": 26.425,
+            "resistance": 29.25,
+            "stopLoss": 28.147189
         },
         "valuation": {
             "color": 0.5,

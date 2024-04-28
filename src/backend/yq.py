@@ -139,14 +139,13 @@ def generate_holdings_data():
 
     holdings_data = load_data_from(HOLDINGS_DATA_PATH)
     for symbol, shares, cost_avg, _ in list(holdings_data):
-        print(symbol, shares, cost_avg)
         stock_holding = holdings.get(symbol, {})
         stock_data_path = get_file_path(symbol.lower())
         try:
             stock_data = load_data_from(stock_data_path)
         except FileNotFoundError:
             stock_data = yq_stock_data(symbol)
-            dump_data_to(stock_data, stock_data_path)
+            dump_data_to(stock_data[symbol], stock_data_path)
         shares = float(shares)
         cost_avg = float(cost_avg)
         stock_holding['sharesOwned'] = shares
@@ -154,7 +153,7 @@ def generate_holdings_data():
         stock_holding['totalCost'] = round(cost_avg * shares, 4)
         stock_holding['symbol'] = symbol
         stock_holding['marketPrice'] = stock_data.get('regularMarketPrice', 0)
-        stock_holding['marketValue'] = stock_holding['marketPrice'] * stock_holding['sharesOwned']
+        stock_holding['marketValue'] = stock_holding['marketPrice'] * shares
         total_cost = stock_holding['totalCost']
         stock_holding['unrealizedGain'] = stock_holding['marketValue'] - total_cost
         stock_holding['unrealizedGainPercent'] = stock_holding['unrealizedGain'] / total_cost

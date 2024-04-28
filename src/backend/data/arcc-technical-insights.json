@@ -12,15 +12,15 @@
                 "sectorDirection": "Bullish",
                 "sectorScore": 1,
                 "sectorScoreDescription": "Weak Bullish Evidence",
-                "indexDirection": "Bearish",
-                "indexScore": 2,
-                "indexScoreDescription": "Bearish Evidence"
+                "indexDirection": "Neutral",
+                "indexScore": 0,
+                "indexScoreDescription": "Neutral Evidence"
             },
             "intermediateTermOutlook": {
-                "stateDescription": "Recent bearish events outweigh bullish events.",
-                "direction": "Bearish",
-                "score": 1,
-                "scoreDescription": "Weak Bearish Evidence",
+                "stateDescription": "Recent bullish events outweigh bearish events.",
+                "direction": "Bullish",
+                "score": 2,
+                "scoreDescription": "Bullish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 1,
                 "sectorScoreDescription": "Weak Bearish Evidence",
@@ -44,8 +44,8 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 19.595,
-            "resistance": 20.7,
-            "stopLoss": 19.899021
+            "resistance": 20.78,
+            "stopLoss": 20.341711
         },
         "valuation": {
             "color": 0.5,
@@ -59,7 +59,7 @@
         "company": {
             "innovativeness": 0.011899999999999999,
             "insiderSentiments": 0.5155,
-            "earningsReports": 0.45030000000000003,
+            "earningsReports": 0.4514,
             "dividends": 0.8637999999999999
         },
         "sector": {
@@ -76,10 +76,10 @@
     },
     "events": [
         {
-            "eventType": "Commodity Channel Index",
+            "eventType": "Triple Moving Average Crossover",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "U",
+            "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
             "startDate": 1714051800,
             "endDate": 1714051800

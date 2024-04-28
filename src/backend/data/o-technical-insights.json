@@ -5,22 +5,22 @@
             "provider": "Trading Central",
             "sector": "Real Estate",
             "shortTermOutlook": {
-                "stateDescription": "Recent bullish events outweigh bearish events.",
+                "stateDescription": "All events are bullish.",
                 "direction": "Bullish",
                 "score": 4,
                 "scoreDescription": "Very Strong Bullish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 2,
                 "sectorScoreDescription": "Bearish Evidence",
-                "indexDirection": "Bearish",
-                "indexScore": 2,
-                "indexScoreDescription": "Bearish Evidence"
+                "indexDirection": "Neutral",
+                "indexScore": 0,
+                "indexScoreDescription": "Neutral Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 1,
-                "scoreDescription": "Weak Bullish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bullish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 3,
                 "sectorScoreDescription": "Strong Bearish Evidence",
@@ -43,9 +43,9 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 52.41,
-            "resistance": 61.0311,
-            "stopLoss": 51.68827
+            "support": 52.815,
+            "resistance": 53.73,
+            "stopLoss": 51.602466
         },
         "valuation": {
             "color": 0.0,
@@ -1559,21 +1559,21 @@
             "formType": "8-K"
         },
         {
-            "id": "0001104659-23-121259_726728",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1701043200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000726728/000110465923121259/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
             "id": "0001104659-23-121255_726728",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
             "description": "Current report filing",
             "filingDate": 1701043200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000726728/000110465923121255/thumbnail.png",
+            "formType": "8-K"
+        },
+        {
+            "id": "0001104659-23-121259_726728",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1701043200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000726728/000110465923121259/thumbnail.png",
             "formType": "8-K"
         },
         {

@@ -5,19 +5,19 @@
             "provider": "Trading Central",
             "sector": "Technology",
             "shortTermOutlook": {
-                "stateDescription": "Recent bullish events outweigh bearish events.",
-                "direction": "Bullish",
-                "score": 1,
-                "scoreDescription": "Weak Bullish Evidence",
+                "stateDescription": "The bullish and bearish events are balanced.",
+                "direction": "Neutral",
+                "score": 0,
+                "scoreDescription": "Neutral Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 3,
                 "sectorScoreDescription": "Strong Bearish Evidence",
-                "indexDirection": "Bearish",
-                "indexScore": 2,
-                "indexScoreDescription": "Bearish Evidence"
+                "indexDirection": "Neutral",
+                "indexScore": 0,
+                "indexScoreDescription": "Neutral Evidence"
             },
             "intermediateTermOutlook": {
-                "stateDescription": "All events are bearish.",
+                "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
                 "score": 3,
                 "scoreDescription": "Strong Bearish Evidence",
@@ -45,12 +45,12 @@
             "provider": "Trading Central",
             "support": 75.48,
             "resistance": 174.22,
-            "stopLoss": 127.491412
+            "stopLoss": 134.668346
         },
         "valuation": {
             "color": 0.0,
             "description": "Overvalued",
-            "discount": "1%",
+            "discount": "0%",
             "relativeValue": "Premium",
             "provider": "Trading Central"
         }
@@ -61,7 +61,7 @@
             "innovativeness": 0.7509999999999999,
             "hiring": 0.8539,
             "insiderSentiments": 0.0966,
-            "earningsReports": 0.9854999999999999
+            "earningsReports": 0.9854
         },
         "sector": {
             "innovativeness": 0.5,
@@ -1686,15 +1686,6 @@
             "formType": "DEF 14A"
         },
         {
-            "id": "0001193125-24-076535_2488",
-            "type": "Annual Report to Shareholders",
-            "title": "ARS : Annual Report to Shareholders",
-            "description": "Annual report to security holders",
-            "filingDate": 1711324800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000119312524076535/thumbnail.png",
-            "formType": "ARS"
-        },
-        {
             "id": "0001193125-24-076521_2488",
             "type": "Proxy Statements",
             "title": "DEFA14A : Proxy Statements",
@@ -1702,6 +1693,15 @@
             "filingDate": 1711324800000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000119312524076521/thumbnail.png",
             "formType": "DEFA14A"
+        },
+        {
+            "id": "0001193125-24-076535_2488",
+            "type": "Annual Report to Shareholders",
+            "title": "ARS : Annual Report to Shareholders",
+            "description": "Annual report to security holders",
+            "filingDate": 1711324800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000119312524076535/thumbnail.png",
+            "formType": "ARS"
         },
         {
             "id": "0001628280-24-005593_2488",

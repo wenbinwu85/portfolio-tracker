@@ -5,16 +5,16 @@
             "provider": "Trading Central",
             "sector": "Healthcare",
             "shortTermOutlook": {
-                "stateDescription": "Recent bullish events outweigh bearish events.",
-                "direction": "Bullish",
+                "stateDescription": "Recent bearish events outweigh bullish events.",
+                "direction": "Bearish",
                 "score": 2,
-                "scoreDescription": "Bullish Evidence",
+                "scoreDescription": "Bearish Evidence",
                 "sectorDirection": "Bullish",
-                "sectorScore": 1,
-                "sectorScoreDescription": "Weak Bullish Evidence",
-                "indexDirection": "Bearish",
-                "indexScore": 2,
-                "indexScoreDescription": "Bearish Evidence"
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bullish Evidence",
+                "indexDirection": "Neutral",
+                "indexScore": 0,
+                "indexScoreDescription": "Neutral Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
@@ -29,7 +29,7 @@
                 "indexScoreDescription": "Very Strong Bearish Evidence"
             },
             "longTermOutlook": {
-                "stateDescription": "All events are bullish.",
+                "stateDescription": "There is one bullish event.",
                 "direction": "Bullish",
                 "score": 1,
                 "scoreDescription": "Weak Bullish Evidence",
@@ -44,13 +44,13 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 149.14,
-            "resistance": 178.92,
-            "stopLoss": 160.137675
+            "resistance": 162.89,
+            "stopLoss": 143.576484
         },
         "valuation": {
             "color": 0.5,
             "description": "Near Fair Value",
-            "discount": "27%",
+            "discount": "28%",
             "provider": "Trading Central"
         }
     },
@@ -61,7 +61,7 @@
             "hiring": 0.9181,
             "sustainability": 0.9316,
             "insiderSentiments": 0.0815,
-            "earningsReports": 0.9656999999999999,
+            "earningsReports": 0.9662000000000001,
             "dividends": 0.7778
         },
         "sector": {
