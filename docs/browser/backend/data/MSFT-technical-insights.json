@@ -7,20 +7,20 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 3,
-                "scoreDescription": "Strong Bearish Evidence",
+                "score": 2,
+                "scoreDescription": "Bearish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 3,
                 "sectorScoreDescription": "Strong Bearish Evidence",
-                "indexDirection": "Bearish",
-                "indexScore": 2,
-                "indexScoreDescription": "Bearish Evidence"
+                "indexDirection": "Neutral",
+                "indexScore": 0,
+                "indexScoreDescription": "Neutral Evidence"
             },
             "intermediateTermOutlook": {
-                "stateDescription": "All events are bearish.",
+                "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 3,
-                "scoreDescription": "Strong Bearish Evidence",
+                "score": 2,
+                "scoreDescription": "Bearish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 4,
                 "sectorScoreDescription": "Very Strong Bearish Evidence",
@@ -45,12 +45,12 @@
             "provider": "Trading Central",
             "support": 332.89,
             "resistance": 422.6,
-            "stopLoss": 377.712239
+            "stopLoss": 390.598304
         },
         "valuation": {
             "color": 0.0,
             "description": "Overvalued",
-            "discount": "-1%",
+            "discount": "-2%",
             "relativeValue": "Premium",
             "provider": "Trading Central"
         }
@@ -58,7 +58,7 @@
     "companySnapshot": {
         "sectorInfo": "Technology",
         "company": {
-            "innovativeness": 0.9591,
+            "innovativeness": 0.9592,
             "hiring": 0.9662999999999999,
             "sustainability": 0.3667,
             "insiderSentiments": 0.3371,
@@ -106,13 +106,13 @@
     },
     "events": [
         {
-            "eventType": "Commodity Channel Index",
+            "eventType": "Gap Up",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "S",
+            "tradeType": "U",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
             "startDate": 1714051800,
-            "endDate": 1714051800
+            "endDate": 1714138200
         }
     ],
     "reports": [

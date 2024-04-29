@@ -1,4 +1,4 @@
-<section *ngIf="technicalInsights$ | async as ti" [class]="showBorder ? 'add-border' : ''">
+<section *ngIf="technicalInsights as ti" [class]="showBorder ? 'add-border' : ''">
     <table mat-table [dataSource]="getTableDataSource()">
         <ng-container matColumnDef="symbol">
             <th mat-header-cell *matHeaderCellDef>Symbol</th>

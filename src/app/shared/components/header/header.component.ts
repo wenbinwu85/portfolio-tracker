@@ -68,6 +68,9 @@ export class HeaderComponent implements OnInit {
   }
 
   refreshData() {
+    this.showProgressBar = true;
     this.dataService.updatePortfolioData(false);
+    setTimeout(() => this.dataService.updatePortfolioTechnicalInsights(false), 2000);
+    setTimeout(() => this.dataService.updatePortfolioDividendHistory(), 2000);
   }
 }

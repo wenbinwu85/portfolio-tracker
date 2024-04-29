@@ -145,21 +145,29 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     this.portfolioHoldings = this.dataService.portfolioHoldings;
     this.portfolioData = this.dataService.portfolioData;
     this.dataSource.data = Object.values(this.portfolioData).map(
-      (data: any) => {
+      (stock: any) => {
+        this.allTotalCostChartData.push({
+          name: stock.symbol,
+          value: this.portfolioHoldings[stock.symbol].totalCost,
+          sector: stock.profile?.sector || "ETF",
+          shortName: stock.shortName,
+          longName: stock.longName,
+        });
+
         return {
-          ...this.portfolioHoldings[data.symbol],
-          symbol: data.symbol,
-          sector: data.profile.sector,
-          rating: data.recommendationKey,
-          longName: data.longName,
-          shortName: data.shortName,
-          quoteType: data.quoteType,
-          fiftyTwoWeekLow: data.fiftyTwoWeekLow,
-          regularMarketPrice: data.regularMarketPrice,
-          regularMarketChange: data.regularMarketChange,
-          regularMarketChangePercent: data.regularMarketChangePercent,
-          preMarketPrice: data.preMarketPrice,
-          postMarketPrice: data.postMarketPrice,
+          ...this.portfolioHoldings[stock.symbol],
+          symbol: stock.symbol,
+          sector: stock.profile.sector,
+          rating: stock.recommendationKey,
+          longName: stock.longName,
+          shortName: stock.shortName,
+          quoteType: stock.quoteType,
+          fiftyTwoWeekLow: stock.fiftyTwoWeekLow,
+          regularMarketPrice: stock.regularMarketPrice,
+          regularMarketChange: stock.regularMarketChange,
+          regularMarketChangePercent: stock.regularMarketChangePercent,
+          preMarketPrice: stock.preMarketPrice,
+          postMarketPrice: stock.postMarketPrice,
         };
       }
     );
@@ -178,15 +186,6 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
       }
       return false;
     };
-    Object.values(this.portfolioData).forEach((stock: any) => {
-      this.allTotalCostChartData.push({
-        name: stock.symbol,
-        value: this.portfolioHoldings[stock.symbol].totalCost,
-        sector: stock.profile?.sector || "ETF",
-        shortName: stock.shortName,
-        longName: stock.longName,
-      });
-    });
     this.allTotalCostChartData.sort((a: any, b: any) => b.value - a.value);
     this.totalCostChartData = this.allTotalCostChartData;
   }

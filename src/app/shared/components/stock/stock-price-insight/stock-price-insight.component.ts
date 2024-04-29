@@ -37,7 +37,7 @@ import { StockTickerChipComponent } from "../stock-ticker-chip/stock-ticker-chip
 export class StockPriceInsightComponent implements OnInit {
   @Input({ required: true }) symbol!: string;
   @Input() showBorder: boolean = false;
-  technicalInsights$!: Observable<any>;
+  technicalInsights!: any;
   stockData: any;
 
   tableColumns = [
@@ -59,24 +59,7 @@ export class StockPriceInsightComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    this.technicalInsights$ = this.dataService
-      .getTechnicalInsights(this.symbol, true)
-      .pipe(
-        map((response: any) => {
-          if (response.status === 500) {
-            throw `Api Error: ${this.symbol} - ${response.status} - ${response.message}`;
-          } else {
-            return response;
-          }
-        }),
-        catchError((err: any) => {
-          console.log(err);
-          return this.dataService
-            .getTechnicalInsights(this.symbol)
-            .pipe(map((response: any) => response[this.symbol]));
-        })
-      );
-
+    this.technicalInsights = this.dataService.portfolioTechnicalInsights[this.symbol];
     this.stockData = Object.values(this.dataService.portfolioData).filter(
       (stock: any) => stock.symbol === this.symbol
     )[0] as any;

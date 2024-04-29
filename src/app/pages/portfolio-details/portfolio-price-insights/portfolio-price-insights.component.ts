@@ -166,10 +166,6 @@ export class PortfolioPriceInsightsComponent implements OnInit {
     });
   }
 
-  refreshData() {
-    this.dataService.updatePortfolioTechnicalInsights();
-  }
-
   changePerformanceChart(chartID: number) {
     this.selectedPerformanceChart = chartID;
   }
@@ -184,13 +180,6 @@ export class PortfolioPriceInsightsComponent implements OnInit {
         .filter(
           (stock: any) => stock.symbol === this.selectedSymbol
         )[0] as any;
-    }, 50);
+    });
   }
-
-  // get getWidget() {
-  //   return {
-  //     widget: TvSymbolInfoWidgetComponent,
-  //     inputs: { symbol: this.selectedSymbol },
-  //   };
-  // }
 }

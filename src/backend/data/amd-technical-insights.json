@@ -58,10 +58,10 @@
     "companySnapshot": {
         "sectorInfo": "Technology",
         "company": {
-            "innovativeness": 0.7509999999999999,
+            "innovativeness": 0.7515000000000001,
             "hiring": 0.8539,
             "insiderSentiments": 0.0966,
-            "earningsReports": 0.9854
+            "earningsReports": 0.9854999999999999
         },
         "sector": {
             "innovativeness": 0.5,
@@ -104,13 +104,13 @@
     },
     "events": [
         {
-            "eventType": "Commodity Channel Index",
-            "pricePeriod": "D",
-            "tradingHorizon": "S",
-            "tradeType": "U",
+            "eventType": "Inside Bar (Bullish)",
+            "pricePeriod": "W",
+            "tradingHorizon": "I",
+            "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1713965400,
-            "endDate": 1713965400
+            "startDate": 1713533400,
+            "endDate": 1714138200
         }
     ],
     "reports": [
@@ -1686,15 +1686,6 @@
             "formType": "DEF 14A"
         },
         {
-            "id": "0001193125-24-076521_2488",
-            "type": "Proxy Statements",
-            "title": "DEFA14A : Proxy Statements",
-            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
-            "filingDate": 1711324800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000119312524076521/thumbnail.png",
-            "formType": "DEFA14A"
-        },
-        {
             "id": "0001193125-24-076535_2488",
             "type": "Annual Report to Shareholders",
             "title": "ARS : Annual Report to Shareholders",
@@ -1702,6 +1693,15 @@
             "filingDate": 1711324800000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000119312524076535/thumbnail.png",
             "formType": "ARS"
+        },
+        {
+            "id": "0001193125-24-076521_2488",
+            "type": "Proxy Statements",
+            "title": "DEFA14A : Proxy Statements",
+            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
+            "filingDate": 1711324800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000119312524076521/thumbnail.png",
+            "formType": "DEFA14A"
         },
         {
             "id": "0001628280-24-005593_2488",
@@ -1839,15 +1839,6 @@
             "formType": "10-K"
         },
         {
-            "id": "0000002488-23-000040_2488",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1676937600000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000000248823000040/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
             "id": "0000002488-23-000042_2488",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K/A : Corporate Changes & Voting Matters",
@@ -1855,6 +1846,15 @@
             "filingDate": 1676937600000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000000248823000042/thumbnail.png",
             "formType": "8-K/A"
+        },
+        {
+            "id": "0000002488-23-000040_2488",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1676937600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000000248823000040/thumbnail.png",
+            "formType": "8-K"
         },
         {
             "id": "0001104659-23-015209_2488",

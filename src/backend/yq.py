@@ -1,8 +1,8 @@
 import os
 import pickle
-import queue
-from concurrent.futures import ThreadPoolExecutor
-from multiprocessing import Pool, Process, cpu_count
+# import queue
+# from concurrent.futures import ThreadPoolExecutor
+# from multiprocessing import Pool, Process, cpu_count
 from yahooquery import Ticker
 from helpers.funcs import load_data_from, dump_data_to
 
@@ -11,8 +11,8 @@ DATA_PATH = os.path.join(BACKEND_PATH, 'data')
 HOLDINGS_DATA_PATH = os.path.join(DATA_PATH, 'holdings.csv')
 HOLDINGS_JSON_PATH = os.path.join(DATA_PATH, 'holdings.json')
 
-total_cpu = cpu_count()
-parallel_method = 'thread'
+# total_cpu = cpu_count()
+# parallel_method = 'thread'
 
 yq_modules = [
     'assetProfile',  # Information related to the company's location, operations, and officers.
@@ -34,41 +34,39 @@ yq_modules = [
     'recommendationTrend',  # Data related to historical recommendations (buy, hold, sell)
     'summaryDetail',  # Contains information available via the Summary tab
     'topHoldings',
-    'upgradeDowngradeHistory',
-    # 'secFilings',
-    # 'netSharePurchaseActivity',
+    'upgradeDowngradeHistory'
 ]
 
 
-def parallelize(method):
-    def wrapper(func):
-        def multiprocess(*args, **kwargs):
-            processes = queue.Queue()
-            for i in args[0]:
-                p = Process(target=func, args=(i,))
-                processes.put(p)
-                p.start()
-            while not processes.empty():
-                p = processes.get()
-                p.join()
+# def parallelize(method):
+#     def wrapper(func):
+#         def multiprocess(*args, **kwargs):
+#             processes = queue.Queue()
+#             for i in args[0]:
+#                 p = Process(target=func, args=(i,))
+#                 processes.put(p)
+#                 p.start()
+#             while not processes.empty():
+#                 p = processes.get()
+#                 p.join()
 
-        def multipool(*args, **kwargs):
-            with Pool(cpu_count()) as pool:
-                return pool.map(func, *args, **kwargs)
+#         def multipool(*args, **kwargs):
+#             with Pool(cpu_count()) as pool:
+#                 return pool.map(func, *args, **kwargs)
 
-        def multithread(*args, **kwargs):
-            with ThreadPoolExecutor() as executor:
-                return executor.map(func, *args, **kwargs)
+#         def multithread(*args, **kwargs):
+#             with ThreadPoolExecutor() as executor:
+#                 return executor.map(func, *args, **kwargs)
 
-        funcs = {'thread': multithread, 'process': multiprocess, 'pool': multipool}
-        return funcs[method]
+#         funcs = {'thread': multithread, 'process': multiprocess, 'pool': multipool}
+#         return funcs[method]
 
-    return wrapper
+#     return wrapper
 
 
-def parallel_run(func, *args, **kwargs):
-    p_func = parallelize(parallel_method)(func)
-    p_func(*args, **kwargs)
+# def parallel_run(func, *args, **kwargs):
+#     p_func = parallelize(parallel_method)(func)
+#     p_func(*args, **kwargs)
 
 
 def round_string_value(value, digit=2):
@@ -150,7 +148,7 @@ def generate_holdings_data():
         cost_avg = float(cost_avg)
         stock_holding['sharesOwned'] = shares
         stock_holding['costAverage'] = cost_avg
-        stock_holding['totalCost'] = round(cost_avg * shares, 4)
+        stock_holding['totalCost'] = round_string_value(cost_avg * shares, 4)
         stock_holding['symbol'] = symbol
         stock_holding['marketPrice'] = stock_data.get('regularMarketPrice', 0)
         stock_holding['marketValue'] = stock_holding['marketPrice'] * shares
@@ -197,8 +195,6 @@ def map_stock_data(yq_modules_data):
             mapped_data['indexTrend'] = data['indexTrend']
             mapped_data['insiderTransactions'] = data.get('insiderTransactions', {}).get('transactions', {})
             mapped_data['recommendationTrend'] = data['recommendationTrend']['trend']
-            # mapped_data['secFilings'] = data.get('secFilings', {}).get('filings', {})
-            # mapped_data['sharePurchaseActivity'] = data['netSharePurchaseActivity']
             mapped_data['shareholders'] = {}
             mapped_data['shareholders']['fundOwnership'] = data['fundOwnership']['ownershipList']
             mapped_data['shareholders']['insiderHolders'] = data['insiderHolders']['holders']

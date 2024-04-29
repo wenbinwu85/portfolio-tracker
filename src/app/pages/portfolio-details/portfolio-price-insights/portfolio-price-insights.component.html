@@ -5,17 +5,15 @@
         <div class="title">
             <span>Price Insights</span>
         </div>
-        <button mat-button color="primary" (click)="refreshData()" class="add-margin">
-            <mat-icon>cloud_sync</mat-icon>
-            <span>Refresh Technical Insights</span>
-        </button>
     </div>
 
     <stock-ticker-buttons (selectedTicker)="updateSelectedStock($event)" />
 
     <mat-divider />
 
-    <stock-price-insight *ngIf="selectedSymbol" [symbol]="selectedSymbol" />
+    <div *ngIf="selectedSymbol">
+        <stock-price-insight [symbol]="selectedSymbol" />
+    </div>
 </section>
 
 <section class="add-border">
@@ -45,7 +43,6 @@
                 [customColors]="[selectedSymbolColor]"
             >
             </ngx-charts-bar-vertical>
-
         </div> 
         <div class="chart-container">
             <ngx-charts-bar-vertical

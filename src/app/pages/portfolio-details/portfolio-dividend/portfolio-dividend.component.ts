@@ -11,7 +11,7 @@ import {
 } from "@angular/material/table";
 import { Color, NgxChartsModule } from "@swimlane/ngx-charts";
 import { EChartsOption } from "echarts";
-import { catchError, filter, map } from "rxjs";
+import { catchError, map } from "rxjs";
 import { EchartsVerticalBarChartComponent } from "../../../shared/components/charts/echart/echarts-vertical-bar-chart/echarts-vertical-bar-chart.component";
 import { InfoCardComponent } from "../../../shared/components/info-card/info-card.component";
 import { StockNameCardComponent } from "../../../shared/components/stock/stock-name-card/stock-name-card.component";
