@@ -61,7 +61,7 @@
             "innovativeness": 0.9592,
             "hiring": 0.9662999999999999,
             "sustainability": 0.3667,
-            "insiderSentiments": 0.3371,
+            "insiderSentiments": 0.3356,
             "earningsReports": 0.8851,
             "dividends": 0.14529999999999998
         },
@@ -96,26 +96,60 @@
     },
     "upsellSearchDD": {
         "researchReports": {
-            "reportId": "MS_0P000003MH_AnalystReport_1714115615000",
-            "provider": "Morningstar",
-            "title": "Microsoft Earnings: Azure Strength Powered by AI as Microsoft Races to Expand Data Center Capacity",
-            "reportDate": "2024-04-26T07:13:35Z",
-            "summary": "Microsoft develops and licenses consumer and enterprise software. It is known for its Windows operating systems and Office productivity suite. The company is organized into three equally sized broad segments: productivity and business processes (legacy Microsoft Office, cloud-based Office 365, Exchange, SharePoint, Skype, LinkedIn, Dynamics), intelligence cloud (infrastructure- and platform-as-a-service offerings Azure, Windows Server OS, SQL Server), and more personal computing (Windows Client, Xbox, Bing search, display advertising, and Surface laptops, tablets, and desktops). ",
-            "investmentRating": "Neutral"
+            "reportId": "ARGUS_3212_AnalystReport_1714389631000",
+            "provider": "Argus",
+            "title": "Blow-out fiscal 3Q24",
+            "reportDate": "2024-04-29T11:20:31Z",
+            "summary": "Microsoft is the world's largest independent software developer. The company was founded on the MS Windows operating system and MS Office business applications suite for PCs. As it has grown, Microsoft has expanded into enterprise software with Windows Server, SQL Server, Dynamics CRM, SharePoint, Azure, and Lync; hardware with the Xbox gaming/media platform and the Surface tablet; and online services through MSN and Bing. Microsoft acquired Skype, the internet VoIP communications service, in October 2011. More than 50% of revenue is generated outside the U.S.",
+            "investmentRating": "Bullish"
         }
     },
     "events": [
         {
-            "eventType": "Gap Up",
-            "pricePeriod": "D",
+            "eventType": "Slow Stochastic",
+            "pricePeriod": "W",
             "tradingHorizon": "S",
-            "tradeType": "U",
+            "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1714051800,
+            "startDate": 1714138200,
             "endDate": 1714138200
         }
     ],
     "reports": [
+        {
+            "id": "3212_Analyst Report_1714389631000",
+            "headHtml": "Analyst Report: Microsoft Corporation",
+            "provider": "Argus Research",
+            "reportDate": "2024-04-29T11:20:31Z",
+            "reportTitle": "Microsoft is the world's largest independent software developer. The company was founded on the MS Windows operating system and MS Office business applications suite for PCs. As it has grown, Microsoft has expanded into enterprise software with Windows Server, SQL Server, Dynamics CRM, SharePoint, Azure, and Lync; hardware with the Xbox gaming/media platform and the Surface tablet; and online services through MSN and Bing. Microsoft acquired Skype, the internet VoIP communications service, in October 2011. More than 50% of revenue is generated outside the U.S.",
+            "targetPrice": 475.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "MSFT"
+            ]
+        },
+        {
+            "id": "39835_Market Summary_1714389631000",
+            "headHtml": "Market Digest: CAT, CMA, EQR, ITGR, GD, HOG, INTC, MSFT, TROW, WDC, XRX, AAL, CLF",
+            "provider": "Argus Research",
+            "reportDate": "2024-04-29T11:20:31Z",
+            "reportTitle": "Monday Tee Up: Here Comes the Fed, And More",
+            "tickers": [
+                "HOG",
+                "TROW",
+                "EQR",
+                "AAL",
+                "MSFT",
+                "ITGR",
+                "CMA",
+                "INTC",
+                "CAT",
+                "WDC",
+                "CLF",
+                "GD",
+                "XRX"
+            ]
+        },
         {
             "id": "39379_Top/Bottom Insider Activity_1710325036000",
             "headHtml": "Daily \u2013 Vickers Top Buyers & Sellers for 03/13/2024",
@@ -1539,6 +1573,18 @@
             ]
         },
         {
+            "id": "3212_Analyst Report_1642576070000",
+            "headHtml": "Analyst Report: Microsoft Corporation",
+            "provider": "Argus Research",
+            "reportDate": "2022-01-19T07:07:50Z",
+            "reportTitle": "Microsoft is the world's largest independent software developer. The company was founded on the MS Windows operating system and MS Office business applications suite for PCs. As it has grown, Microsoft has expanded into enterprise software with Windows Server, SQL Server, Dynamics CRM, SharePoint, Azure and Lync; hardware with the Xbox gaming/media platform and the Surface tablet; and online services through MSN and Bing. Microsoft acquired Skype, the internet VoIP communications service, in October 2011. The company acquired Nokia's Devices and Services Business in April 2014. More than 50% of revenue is generated outside the U.S.",
+            "targetPrice": 371.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "MSFT"
+            ]
+        },
+        {
             "id": "31912_Market Summary_1642576070000",
             "headHtml": "Market Digest: ATVI, GS, MSFT, PNC",
             "provider": "Argus Research",
@@ -1549,18 +1595,6 @@
                 "PNC",
                 "ATVI",
                 "GS"
-            ]
-        },
-        {
-            "id": "3212_Analyst Report_1642576070000",
-            "headHtml": "Analyst Report: Microsoft Corporation",
-            "provider": "Argus Research",
-            "reportDate": "2022-01-19T07:07:50Z",
-            "reportTitle": "Microsoft is the world's largest independent software developer. The company was founded on the MS Windows operating system and MS Office business applications suite for PCs. As it has grown, Microsoft has expanded into enterprise software with Windows Server, SQL Server, Dynamics CRM, SharePoint, Azure and Lync; hardware with the Xbox gaming/media platform and the Surface tablet; and online services through MSN and Bing. Microsoft acquired Skype, the internet VoIP communications service, in October 2011. The company acquired Nokia's Devices and Services Business in April 2014. More than 50% of revenue is generated outside the U.S.",
-            "targetPrice": 371.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "MSFT"
             ]
         },
         {
@@ -1996,77 +2030,6 @@
             "tickers": [
                 "MSFT"
             ]
-        },
-        {
-            "id": "29863_Thematic Portfolio_1620821989000",
-            "headHtml": "The Argus Dividend Growth Model Portfolio",
-            "provider": "Argus Research",
-            "reportDate": "2021-05-12T12:19:49Z",
-            "reportTitle": "Often overlooked amid gyrations in the stock market is dividend income, which is an important element of total return. Between 1930 and 2012, dividend income accounted for 42% of total return of the S&P 500, according to Hartford Funds. And that's just the average. In some decades, dividends accounted for more than 50% of total returns and even 100% of returns. More recently, dividends have accounted for 15%-20% of returns. Still, in 2018, dividend payments softened the blow when most market indices declined as the Federal Reserve hiked rates. Not all dividends are created equal, though, and it is important to understand the difference between the two main categories: high-yield stocks and dividend-growth stocks.",
-            "tickers": [
-                "BLK",
-                "ALL",
-                "DHI",
-                "INTU",
-                "CFG",
-                "JPM",
-                "TXN",
-                "AMGN",
-                "ADP",
-                "ITW",
-                "MSFT",
-                "COST",
-                "PRU",
-                "ABT",
-                "GLW",
-                "MA",
-                "SBUX",
-                "LLY",
-                "SPGI",
-                "NOC",
-                "SHW",
-                "SYK",
-                "HON",
-                "EL",
-                "CMCSA",
-                "WEC",
-                "ENB",
-                "FAST",
-                "HD",
-                "ODFL"
-            ]
-        },
-        {
-            "id": "29784_Stock Picks_1620045545000",
-            "headHtml": "Weekly Stock List",
-            "provider": "Argus Research",
-            "reportDate": "2021-05-03T12:39:05Z",
-            "reportTitle": "Stocks kept the momentum going in April, and are now up almost 12%, including dividends, in the year-to-date. Our analysts have been progressing through earnings season, and have come across many stocks in coverage that have approached target prices. We set target prices through our valuation framework, which includes analysis of historical multiples, peer multiples, future dividends, and cash flows.  After adjusting the models for the latest earnings and dividend information -- most of which has been good -- here are some of the stocks on which we have raised target prices over the past month.  All stocks are rated BUY at Argus.",
-            "tickers": [
-                "BLK",
-                "TGT",
-                "GOOGL",
-                "META",
-                "HOG",
-                "ZBH",
-                "C",
-                "JBHT",
-                "JPM",
-                "SLB",
-                "ACM",
-                "MMM",
-                "AES",
-                "MSFT",
-                "PAYX",
-                "V",
-                "PG",
-                "ADBE",
-                "VLO",
-                "TRV",
-                "CMG",
-                "DELL",
-                "BA"
-            ]
         }
     ],
     "sigDevs": [
@@ -2077,15 +2040,6 @@
     ],
     "secReports": [
         {
-            "id": "0000950170-24-048268_789019",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1714003200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000789019/000095017024048268/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
             "id": "0000950170-24-048288_789019",
             "type": "Periodic Financial Reports",
             "title": "10-Q : Periodic Financial Reports",
@@ -2093,6 +2047,15 @@
             "filingDate": 1714003200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000789019/000095017024048288/thumbnail.png",
             "formType": "10-Q"
+        },
+        {
+            "id": "0000950170-24-048268_789019",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1714003200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000789019/000095017024048268/thumbnail.png",
+            "formType": "8-K"
         },
         {
             "id": "0001193125-24-062997_789019",

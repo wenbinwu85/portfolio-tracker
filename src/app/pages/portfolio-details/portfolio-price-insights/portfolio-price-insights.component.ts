@@ -15,7 +15,6 @@ import { StockPriceMovementChartsComponent } from "../../../shared/components/st
 import { StockTickerButtonsComponent } from "../../../shared/components/stock/stock-ticker-buttons/stock-ticker-buttons.component";
 import { TvSymbolInfoWidgetComponent } from "../../../shared/components/tradingview/tv-symbol-info-widget/tv-symbol-info-widget.component";
 import { DataService } from "../../../shared/services/data.service";
-import { PortfolioChartsComponent } from "../../chart-wall/portfolio-charts/portfolio-charts.component";
 import { PortfolioDividendComponent } from "../portfolio-dividend/portfolio-dividend.component";
 import { PortfolioFinancialsComponent } from "../portfolio-financials/portfolio-financials.component";
 import { PortfolioHoldingsComponent } from "../portfolio-holdings/portfolio-holdings.component";
@@ -34,7 +33,6 @@ import { PortfolioHoldingsComponent } from "../portfolio-holdings/portfolio-hold
     MatSlideToggleModule,
     MatTabsModule,
     NgxChartsModule,
-    PortfolioChartsComponent,
     PortfolioDividendComponent,
     PortfolioFinancialsComponent,
     PortfolioHoldingsComponent,

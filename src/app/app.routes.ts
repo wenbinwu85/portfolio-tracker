@@ -16,13 +16,6 @@ export const routes: Routes = [
       ),
   },
   {
-    path: "chart-wall",
-    loadComponent: () =>
-      import("./pages/chart-wall/chart-wall.component").then(
-        (c) => c.ChartWallComponent
-      ),
-  },
-  {
     path: "watchlists",
     loadComponent: () =>
       import("./pages/watchlists/watchlists.component").then(

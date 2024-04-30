@@ -10,7 +10,6 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatDividerModule } from "@angular/material/divider";
 import { MatIconModule } from "@angular/material/icon";
 import { MatTableDataSource, MatTableModule } from "@angular/material/table";
-import { catchError, map, Observable } from "rxjs";
 import { DataService } from "../../../services/data.service";
 import { StockDayPriceRangeComponent } from "../stock-day-price-range/stock-day-price-range.component";
 import { StockTickerChipComponent } from "../stock-ticker-chip/stock-ticker-chip.component";
@@ -29,7 +28,7 @@ import { StockTickerChipComponent } from "../stock-ticker-chip/stock-ticker-chip
     NgStyle,
     PercentPipe,
     StockDayPriceRangeComponent,
-    StockTickerChipComponent
+    StockTickerChipComponent,
   ],
   templateUrl: "./stock-price-insight.component.html",
   styleUrl: "./stock-price-insight.component.css",
@@ -59,7 +58,8 @@ export class StockPriceInsightComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    this.technicalInsights = this.dataService.portfolioTechnicalInsights[this.symbol];
+    this.technicalInsights =
+      this.dataService.portfolioTechnicalInsights[this.symbol];
     this.stockData = Object.values(this.dataService.portfolioData).filter(
       (stock: any) => stock.symbol === this.symbol
     )[0] as any;

@@ -56,15 +56,6 @@
     <div class="title">
       <span>Dividend History</span>
     </div>
-    <button
-      mat-button
-      color="primary"
-      class="refresh-button"
-      (click)="refreshDividend(selectedSymbol, false)"
-    >
-      <mat-icon>cloud_sync</mat-icon>
-      <span>Refresh Dividend History</span>
-    </button>
   </div>
   <div class="safari-charts-container">
     <echarts-vertical-bar-chart [options]="echartOptions" />
@@ -90,15 +81,6 @@
     <div class="title">
       <span>Dividend History</span>
     </div>
-    <button
-      mat-button
-      color="primary"
-      class="refresh-button"
-      (click)="refreshDividend(selectedSymbol, false)"
-    >
-      <mat-icon>cloud_sync</mat-icon>
-      <span>Refresh Dividend History</span>
-    </button>
   </div>
 
   <div class="add-flex">
@@ -155,7 +137,7 @@
         <stock-name-card [stock]="stock" />
       </div>
       <ng-template #elseBlock>
-        <span (click)="refreshDividend(stock.symbol, true)">
+        <span (click)="updateChart(stock.symbol)">
           {{ cells[cidx](stock) }}
         </span>
       </ng-template>

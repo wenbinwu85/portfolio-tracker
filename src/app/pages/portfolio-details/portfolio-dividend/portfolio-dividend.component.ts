@@ -201,7 +201,7 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
     this.portfolioYieldOnCost = this.portfolioHoldings.portfolioYieldOnCost;
     this.browser = this.getBrowserName();
     this.setInfoCards();
-    this.refreshDividend(this.selectedSymbol, true);
+    this.updateChart(this.selectedSymbol, false);
   }
 
   ngAfterViewInit() {
@@ -283,7 +283,7 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
     ];
   }
 
-  updateChart(symbol: string, divHis: any) {
+  updateChart(symbol: string, scroll: boolean = true) {
     let options: any = {
       title: {
         text: "",
@@ -327,6 +327,8 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
       series: [],
     };
 
+    const divHis = this.dataService.portfolioDividendHistory[symbol];
+
     Object.entries(divHis).forEach((item: any) => {
       divData.series.push({
         name: new Date(item[0].split("-").join(" ")),
@@ -346,44 +348,21 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
       ${stock.profile?.industry || "ETF"}
     `;
 
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
-  }
-
-  refreshDividend(symbol: string, fromLocal: boolean) {
-    this.dataService
-      .getDividendHistory(symbol, 10, fromLocal)
-      .pipe(
-        map((response: any) => {
-          if (response.status === 500) {
-            throw `Api Error: ${symbol} - ${response.status} - ${response.message}`;
-          } else {
-            return response;
-          }
-        }),
-        catchError((err: any) => {
-          console.log(err);
-          return this.dataService.getDividendHistory(symbol, 10, false);
-        })
-      )
-      .subscribe((divHis: any) => {
-        this.updateChart(symbol, divHis);
+    if (scroll) { 
+      window.scroll({
+        top: 800,
+        left: 0,
+        behavior: "smooth",
       });
+    }
   }
 
   onSelect(data: any): void {
     const symbol = data.name || data;
-    this.refreshDividend(symbol, true);
+    this.updateChart(symbol);
   }
 
-  onActivate(data: any): void {
-    console.log("Activate", JSON.parse(JSON.stringify(data)));
-  }
+  onActivate(data: any): void {}
 
-  onDeactivate(data: any): void {
-    console.log("Deactivate", JSON.parse(JSON.stringify(data)));
-  }
+  onDeactivate(data: any): void {}
 }

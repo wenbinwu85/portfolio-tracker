@@ -34,7 +34,8 @@ export class DataService {
 
   constructor(private http: HttpClient) {
     this.updatePortfolioData(true);
-    this.updatePortfolioTechnicalInsights();
+    this.updatePortfolioTechnicalInsights(true);
+    this.updatePortfolioDividendHistory(true);
   }
 
   private error(error: HttpErrorResponse): Observable<any> {
@@ -154,10 +155,10 @@ export class DataService {
    * @description Fetch portfolio dividend history
    * @returns
    */
-  updatePortfolioDividendHistory() {
+  updatePortfolioDividendHistory(fromLocal: boolean = true) {
     this.isLoadingData.next(true);
     this.portfolioSymbols.forEach((symbol: string) => {
-      this.getDividendHistory(symbol, 10, false).subscribe((divHis: any) => {
+      this.getDividendHistory(symbol, 10, fromLocal).subscribe((divHis: any) => {
         this.portfolioDividendHistory[symbol] = divHis;
         if (Object.keys(this.portfolioDividendHistory).length === this.portfolioSymbols.length) {
           this.isLoadingData.next(false);

@@ -5,7 +5,6 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatProgressBarModule } from "@angular/material/progress-bar";
 import { MatTabsModule } from "@angular/material/tabs";
 import { RouterLink, RouterOutlet } from "@angular/router";
-import { MarketChartsComponent } from "../../../pages/chart-wall/market-charts/market-charts.component";
 import { PortfolioDetailsComponent } from "../../../pages/portfolio-details/portfolio-details.component";
 import { PortfolioMainComponent } from "../../../pages/portfolio-main/portfolio-main.component";
 import { ToolboxComponent } from "../../../pages/toolbox/toolbox.component";
@@ -18,7 +17,6 @@ import { TvTickersWidgetComponent } from "../tradingview/tv-tickers-widget/tv-ti
   styleUrls: ["./header.component.css"],
   standalone: true,
   imports: [
-    MarketChartsComponent,
     MatButtonModule,
     MatIconModule,
     MatProgressBarModule,
@@ -44,10 +42,6 @@ export class HeaderComponent implements OnInit {
       route: "/portfolio",
     },
     {
-      label: "Chart Wall",
-      route: "/chart-wall",
-    },
-    {
       label: "Watchlists",
       route: "/watchlists",
     },
@@ -70,7 +64,7 @@ export class HeaderComponent implements OnInit {
   refreshData() {
     this.showProgressBar = true;
     this.dataService.updatePortfolioData(false);
-    setTimeout(() => this.dataService.updatePortfolioTechnicalInsights(false), 2000);
-    setTimeout(() => this.dataService.updatePortfolioDividendHistory(), 2000);
+    setTimeout(() => this.dataService.updatePortfolioTechnicalInsights(false),2000);
+    setTimeout(() => this.dataService.updatePortfolioDividendHistory(false), 2000);
   }
 }

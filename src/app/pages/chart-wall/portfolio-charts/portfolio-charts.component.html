@@ -1,7 +1,0 @@
-<div *ngIf="!tradingview" class="wallmine-chart-container">
-  <wallmine-chart *ngFor="let symbol of symbols" [symbol]="symbol" class="wallmine-chart" />
-</div>
-
-<div *ngIf="tradingview" class="wallmine-chart-container">
-  <tv-single-quote-widget *ngFor="let symbol of symbols" [symbol]="symbol" />
-</div>
