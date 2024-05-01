@@ -1,18 +1,36 @@
 <section *ngIf="priceChangeChartData.length > 0" class="add-border">
     <div class="add-flex">
         <div *ngIf="priceChangeChartData" class="title">
-            <span>Today's Return: </span>
-            <span [ngStyle]="{ color: getDayPriceChangeColor() }">
-                {{ priceChange | currency }}
-            </span>
-            <span [ngStyle]="{ color: getDayPriceChangeColor() }">
-                ({{ priceChange / portfolioHoldings.portfolioMarketValue | percent: '.4' }})
-            </span>
+            <span>Portfolio Value Change</span>
         </div>    
         <mat-chip-listbox [ngStyle]="{'padding-right': '1.25rem'}">
             <mat-chip-option selected (click)="displayChart(1)">Today's Change</mat-chip-option>
             <mat-chip-option (click)="displayChart(2)">Beta</mat-chip-option>
         </mat-chip-listbox>
+    </div>
+
+    <div class="return-wrapper">
+        <div class="add-flex">
+            <span>Regular Market </span>
+            <mat-icon>schedule</mat-icon>
+            <span [ngStyle]="{ color: getDayPriceChangeColor() }">
+                {{ priceChange | currency }}
+            </span>
+            <span [ngStyle]="{ color: getPrePostPriceChangeColor() }">
+                ({{ priceChange / portfolioHoldings.portfolioMarketValue | percent: '.4' }})
+            </span>
+        </div>
+
+        <div *ngIf="prePostMarketPriceChange !== 0" class="add-flex">
+            <span>{{ prePostHourText }}</span>
+            <mat-icon>{{ prePostHourIcon }}</mat-icon>
+            <span [ngStyle]="{ color: getDayPriceChangeColor() }">
+                {{ prePostMarketPriceChange | currency }}
+            </span>
+            <span [ngStyle]="{ color: getPrePostPriceChangeColor() }">
+                ({{ prePostMarketPriceChange / portfolioHoldings.portfolioMarketValue | percent: '.4' }})
+            </span>
+        </div>
     </div>
 
     <div *ngIf="selectedChart === 1" class="add-flex">

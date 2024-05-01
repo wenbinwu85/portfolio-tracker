@@ -9,18 +9,18 @@
                 "direction": "Bullish",
                 "score": 3,
                 "scoreDescription": "Strong Bullish Evidence",
-                "sectorDirection": "Bearish",
-                "sectorScore": 2,
-                "sectorScoreDescription": "Bearish Evidence",
-                "indexDirection": "Neutral",
-                "indexScore": 0,
-                "indexScoreDescription": "Neutral Evidence"
+                "sectorDirection": "Bullish",
+                "sectorScore": 1,
+                "sectorScoreDescription": "Weak Bullish Evidence",
+                "indexDirection": "Bullish",
+                "indexScore": 3,
+                "indexScoreDescription": "Strong Bullish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 2,
-                "scoreDescription": "Bullish Evidence",
+                "score": 1,
+                "scoreDescription": "Weak Bullish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 3,
                 "sectorScoreDescription": "Strong Bearish Evidence",
@@ -45,7 +45,7 @@
             "provider": "Trading Central",
             "support": 135.94,
             "resistance": 144.035,
-            "stopLoss": 134.036649
+            "stopLoss": 135.852061
         },
         "valuation": {
             "color": 0.0,
@@ -61,8 +61,8 @@
             "innovativeness": 0.5136,
             "sustainability": 0.4082,
             "insiderSentiments": 0.46909999999999996,
-            "earningsReports": 0.9094,
-            "dividends": 0.17170000000000002
+            "earningsReports": 0.9055,
+            "dividends": 0.1745
         },
         "sector": {
             "innovativeness": 0.5,
@@ -106,7 +106,7 @@
     "events": [
         {
             "eventType": "Price Crosses Moving Average",
-            "pricePeriod": "D",
+            "pricePeriod": "W",
             "tradingHorizon": "I",
             "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
@@ -515,18 +515,6 @@
             ]
         },
         {
-            "id": "4555_Analyst Report_1645709895000",
-            "headHtml": "Analyst Report: Digital Realty Trust Inc",
-            "provider": "Argus Research",
-            "reportDate": "2022-02-24T13:38:15Z",
-            "reportTitle": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company is based in Austin, Texas, and operates in more than 42 metropolitan markets on five continents. Recent expansions have focused on Africa and Asia.",
-            "targetPrice": 165.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "DLR"
-            ]
-        },
-        {
             "id": "32233_Market Update_1645709895000",
             "headHtml": "Market Update: AMGN, CMI, LOW, CBOE, DLR",
             "provider": "Argus Research",
@@ -538,6 +526,18 @@
                 "DLR",
                 "AMGN",
                 "CMI"
+            ]
+        },
+        {
+            "id": "4555_Analyst Report_1645709895000",
+            "headHtml": "Analyst Report: Digital Realty Trust Inc",
+            "provider": "Argus Research",
+            "reportDate": "2022-02-24T13:38:15Z",
+            "reportTitle": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company is based in Austin, Texas, and operates in more than 42 metropolitan markets on five continents. Recent expansions have focused on Africa and Asia.",
+            "targetPrice": 165.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "DLR"
             ]
         },
         {
@@ -799,25 +799,6 @@
             ]
         },
         {
-            "id": "27630_Market Summary_1597044849000",
-            "headHtml": "Market Digest: BDX, MCHP, PCAR, TSCO, JCI, VLO, WDC, XOM, DLR, CPRI",
-            "provider": "Argus Research",
-            "reportDate": "2020-08-10T07:34:09Z",
-            "reportTitle": "Stocks were mixed on Friday, capping a strong week for the major indices. This week's rally favored value names over growth names, with blue chips outperforming tech stocks. On Friday, The Dow Jones Industrial Average gained 47 points, or 0.2%. The S&P 500 added 0.1% while the Nasdaq Composite fell 0.9%. For the full week, the Dow gained 3.8%. The S&P 500 and the Nasdaq were both up 2.5%. For the year-to-date, the Dow is down 3.9%, while the S&P is up 3.7% and the Nasdaq is up 22.7%. Over the past 52 weeks, the Dow is up 4.4%, the S&P 14.8%, and the Nasdaq 38.3%. ",
-            "tickers": [
-                "JCI",
-                "PCAR",
-                "BDX",
-                "XOM",
-                "WDC",
-                "VLO",
-                "MCHP",
-                "DLR",
-                "CPRI",
-                "TSCO"
-            ]
-        },
-        {
             "id": "4555_Analyst Report_1597044849000",
             "headHtml": "Analyst Report: Digital Realty Trust Inc",
             "provider": "Argus Research",
@@ -830,10 +811,10 @@
             ]
         },
         {
-            "id": "27630_Market Summary_1597017600000",
+            "id": "27630_Market Summary_1597044849000",
             "headHtml": "Market Digest: BDX, MCHP, PCAR, TSCO, JCI, VLO, WDC, XOM, DLR, CPRI",
             "provider": "Argus Research",
-            "reportDate": "2020-08-10T00:00:00Z",
+            "reportDate": "2020-08-10T07:34:09Z",
             "reportTitle": "Stocks were mixed on Friday, capping a strong week for the major indices. This week's rally favored value names over growth names, with blue chips outperforming tech stocks. On Friday, The Dow Jones Industrial Average gained 47 points, or 0.2%. The S&P 500 added 0.1% while the Nasdaq Composite fell 0.9%. For the full week, the Dow gained 3.8%. The S&P 500 and the Nasdaq were both up 2.5%. For the year-to-date, the Dow is down 3.9%, while the S&P is up 3.7% and the Nasdaq is up 22.7%. Over the past 52 weeks, the Dow is up 4.4%, the S&P 14.8%, and the Nasdaq 38.3%. ",
             "tickers": [
                 "JCI",
@@ -858,6 +839,25 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "DLR"
+            ]
+        },
+        {
+            "id": "27630_Market Summary_1597017600000",
+            "headHtml": "Market Digest: BDX, MCHP, PCAR, TSCO, JCI, VLO, WDC, XOM, DLR, CPRI",
+            "provider": "Argus Research",
+            "reportDate": "2020-08-10T00:00:00Z",
+            "reportTitle": "Stocks were mixed on Friday, capping a strong week for the major indices. This week's rally favored value names over growth names, with blue chips outperforming tech stocks. On Friday, The Dow Jones Industrial Average gained 47 points, or 0.2%. The S&P 500 added 0.1% while the Nasdaq Composite fell 0.9%. For the full week, the Dow gained 3.8%. The S&P 500 and the Nasdaq were both up 2.5%. For the year-to-date, the Dow is down 3.9%, while the S&P is up 3.7% and the Nasdaq is up 22.7%. Over the past 52 weeks, the Dow is up 4.4%, the S&P 14.8%, and the Nasdaq 38.3%. ",
+            "tickers": [
+                "JCI",
+                "PCAR",
+                "BDX",
+                "XOM",
+                "WDC",
+                "VLO",
+                "MCHP",
+                "DLR",
+                "CPRI",
+                "TSCO"
             ]
         },
         {

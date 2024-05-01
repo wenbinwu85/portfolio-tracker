@@ -7,14 +7,14 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 2,
-                "scoreDescription": "Bearish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bearish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bearish Evidence",
-                "indexDirection": "Neutral",
-                "indexScore": 0,
-                "indexScoreDescription": "Neutral Evidence"
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bearish Evidence",
+                "indexDirection": "Bullish",
+                "indexScore": 3,
+                "indexScoreDescription": "Strong Bullish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
@@ -44,13 +44,13 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 332.89,
-            "resistance": 422.6,
-            "stopLoss": 390.598304
+            "resistance": 405.63,
+            "stopLoss": 387.093129
         },
         "valuation": {
             "color": 0.0,
             "description": "Overvalued",
-            "discount": "-2%",
+            "discount": "-1%",
             "relativeValue": "Premium",
             "provider": "Trading Central"
         }
@@ -61,9 +61,9 @@
             "innovativeness": 0.9592,
             "hiring": 0.9662999999999999,
             "sustainability": 0.3667,
-            "insiderSentiments": 0.3356,
-            "earningsReports": 0.8851,
-            "dividends": 0.14529999999999998
+            "insiderSentiments": 0.3348,
+            "earningsReports": 0.8831,
+            "dividends": 0.153
         },
         "sector": {
             "innovativeness": 0.5,
@@ -106,13 +106,13 @@
     },
     "events": [
         {
-            "eventType": "Slow Stochastic",
-            "pricePeriod": "W",
+            "eventType": "Double Moving Average Crossover",
+            "pricePeriod": "D",
             "tradingHorizon": "S",
             "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1714138200,
-            "endDate": 1714138200
+            "startDate": 1714397400,
+            "endDate": 1714397400
         }
     ],
     "reports": [
@@ -2034,19 +2034,19 @@
     ],
     "sigDevs": [
         {
-            "headline": "OpenAI\u2019s Sam Altman And Other Tech Leaders To Serve On AI Safety Board- WSJ",
-            "date": "2024-04-26"
+            "headline": "Well Health Technologies Announces Collaboration With Microsoft To Accelerate Healthcare's Digital Transformation",
+            "date": "2024-04-30"
         }
     ],
     "secReports": [
         {
-            "id": "0000950170-24-048288_789019",
-            "type": "Periodic Financial Reports",
-            "title": "10-Q : Periodic Financial Reports",
-            "description": "Quarterly report pursuant to Section 13 or 15(d)",
-            "filingDate": 1714003200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000789019/000095017024048288/thumbnail.png",
-            "formType": "10-Q"
+            "id": "0001193125-24-118081_789019",
+            "type": "Offering Registrations",
+            "title": "S-4 : Offering Registrations",
+            "description": "Registration of securities issued in business combination transactions",
+            "filingDate": 1714089600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000789019/000119312524118081/thumbnail.png",
+            "formType": "S-4"
         },
         {
             "id": "0000950170-24-048268_789019",
@@ -2056,6 +2056,15 @@
             "filingDate": 1714003200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000789019/000095017024048268/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0000950170-24-048288_789019",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1714003200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000789019/000095017024048288/thumbnail.png",
+            "formType": "10-Q"
         },
         {
             "id": "0001193125-24-062997_789019",
@@ -2335,15 +2344,6 @@
             "filingDate": 1650931200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000789019/000119312522120207/thumbnail.png",
             "formType": "8-K"
-        },
-        {
-            "id": "0001564590-22-015675_789019",
-            "type": "Periodic Financial Reports",
-            "title": "10-Q : Periodic Financial Reports",
-            "description": "Quarterly report pursuant to Section 13 or 15(d)",
-            "filingDate": 1650931200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000789019/000156459022015675/thumbnail.png",
-            "formType": "10-Q"
         }
     ]
 }

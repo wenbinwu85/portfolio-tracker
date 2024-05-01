@@ -5,22 +5,22 @@
             "provider": "Trading Central",
             "sector": "Technology",
             "shortTermOutlook": {
-                "stateDescription": "Recent bearish events outweigh bullish events.",
-                "direction": "Bearish",
-                "score": 3,
-                "scoreDescription": "Strong Bearish Evidence",
+                "stateDescription": "Recent bullish events outweigh bearish events.",
+                "direction": "Bullish",
+                "score": 4,
+                "scoreDescription": "Very Strong Bullish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bearish Evidence",
-                "indexDirection": "Neutral",
-                "indexScore": 0,
-                "indexScoreDescription": "Neutral Evidence"
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bearish Evidence",
+                "indexDirection": "Bullish",
+                "indexScore": 3,
+                "indexScoreDescription": "Strong Bullish Evidence"
             },
             "intermediateTermOutlook": {
-                "stateDescription": "All events are bearish.",
+                "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 3,
-                "scoreDescription": "Strong Bearish Evidence",
+                "score": 2,
+                "scoreDescription": "Bearish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 4,
                 "sectorScoreDescription": "Very Strong Bearish Evidence",
@@ -43,9 +43,9 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 169.24,
-            "resistance": 170.99,
-            "stopLoss": 159.958135
+            "support": 170.99,
+            "resistance": 179.35,
+            "stopLoss": 163.435596
         },
         "valuation": {
             "color": 0.5,
@@ -60,9 +60,9 @@
             "innovativeness": 0.9961,
             "hiring": 0.9512999999999999,
             "sustainability": 0.575,
-            "insiderSentiments": 0.2838,
-            "earningsReports": 0.8429000000000001,
-            "dividends": 0.09789999999999999
+            "insiderSentiments": 0.2854,
+            "earningsReports": 0.8466,
+            "dividends": 0.0915
         },
         "sector": {
             "innovativeness": 0.5,
@@ -105,13 +105,13 @@
     },
     "events": [
         {
-            "eventType": "Price Crosses Moving Average",
+            "eventType": "Williams %R",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "S",
+            "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1714138200,
-            "endDate": 1714138200
+            "startDate": 1714397400,
+            "endDate": 1714397400
         }
     ],
     "reports": [
@@ -1035,18 +1035,6 @@
             ]
         },
         {
-            "id": "33246_Market Summary_1655449615000",
-            "headHtml": "Market Digest: AAPL, TECH, ZTS",
-            "provider": "Argus Research",
-            "reportDate": "2022-06-17T07:06:55Z",
-            "reportTitle": "Stocks plummeted on Thursday amid mounting recession fears, as investors continued to assess the impact of the Fed's 75-basis-point rate hike and the ability of the central bank to control inflation. The S&P fell to its lowest level since December 2020 and is now down 23% year-to-date. On the employment front, first-time claims for state unemployment benefits fell to 229,000 for the week ended June 11, down from 232,000 a week earlier but above the consensus estimate of 215,000. The Dow fell 2.42%, the S&P 3.25%, and the Nasdaq 4.08%. Crude oil traded near $117 per barrel, while gold soared 2% to $1860 per ounce.",
-            "tickers": [
-                "TECH",
-                "AAPL",
-                "ZTS"
-            ]
-        },
-        {
             "id": "2660_Analyst Report_1655449615000",
             "headHtml": "Analyst Report: Apple Inc",
             "provider": "Argus Research",
@@ -1056,6 +1044,18 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "AAPL"
+            ]
+        },
+        {
+            "id": "33246_Market Summary_1655449615000",
+            "headHtml": "Market Digest: AAPL, TECH, ZTS",
+            "provider": "Argus Research",
+            "reportDate": "2022-06-17T07:06:55Z",
+            "reportTitle": "Stocks plummeted on Thursday amid mounting recession fears, as investors continued to assess the impact of the Fed's 75-basis-point rate hike and the ability of the central bank to control inflation. The S&P fell to its lowest level since December 2020 and is now down 23% year-to-date. On the employment front, first-time claims for state unemployment benefits fell to 229,000 for the week ended June 11, down from 232,000 a week earlier but above the consensus estimate of 215,000. The Dow fell 2.42%, the S&P 3.25%, and the Nasdaq 4.08%. Crude oil traded near $117 per barrel, while gold soared 2% to $1860 per ounce.",
+            "tickers": [
+                "TECH",
+                "AAPL",
+                "ZTS"
             ]
         },
         {
@@ -1588,6 +1588,18 @@
             ]
         },
         {
+            "id": "2660_Analyst Report_1619704690000",
+            "headHtml": "Analyst Report: Apple Inc",
+            "provider": "Argus Research",
+            "reportDate": "2021-04-29T13:58:10Z",
+            "reportTitle": "Apple manufactures smartphones, tablets, PCs, software and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including AirPods, Beats headphones and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
+            "targetPrice": 165.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "AAPL"
+            ]
+        },
+        {
             "id": "29761_Market Update_1619704690000",
             "headHtml": "Market Update: AAPL, ADP, AEP, BA, MGM, QCOM, MA, MDLZ",
             "provider": "Argus Research",
@@ -1602,18 +1614,6 @@
                 "AEP",
                 "ADP",
                 "BA"
-            ]
-        },
-        {
-            "id": "2660_Analyst Report_1619704690000",
-            "headHtml": "Analyst Report: Apple Inc",
-            "provider": "Argus Research",
-            "reportDate": "2021-04-29T13:58:10Z",
-            "reportTitle": "Apple manufactures smartphones, tablets, PCs, software and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including AirPods, Beats headphones and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
-            "targetPrice": 165.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "AAPL"
             ]
         },
         {

@@ -9,6 +9,7 @@ import { DataService } from "../../../services/data.service";
 import { TvMiniChartWidgetComponent } from "../../tradingview/tv-mini-chart-widget/tv-mini-chart-widget.component";
 import { TvTickersWidgetComponent } from "../../tradingview/tv-tickers-widget/tv-tickers-widget.component";
 import { TvMarketQuotesWidgetComponent } from "../../tradingview/tv-market-quotes-widget/tv-market-quotes-widget.component";
+import { HelperService } from "../../../services/helper.service";
 
 @Component({
   selector: 'stock-price-movement-charts',
@@ -32,6 +33,9 @@ export class StockPriceMovementChartsComponent {
   portfolioData: any;
   portfolioHoldings: any;
   priceChange = 0;
+  prePostMarketPriceChange = 0;
+  prePostHourIcon: any;
+  prePostHourText: any;
   priceChangeChartData: any = [];
   priceRangeChartData: any = [];
   betaChartData: any = [];
@@ -41,7 +45,7 @@ export class StockPriceMovementChartsComponent {
   scaleType = ScaleType;
   selectedChart = 1;
 
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService, private helper: HelperService) {}
 
   ngOnInit() {
     this.portfolioHoldings = this.dataService.portfolioHoldings;
@@ -54,7 +58,15 @@ export class StockPriceMovementChartsComponent {
         name: stock.symbol,
         displayName: `${stock.longName} - ${stock.symbol} `
       });
+
       this.priceChange += stock.regularMarketChange * position.sharesOwned;
+      const prefix = this.helper.getPriceKeyPrefix();
+      if (!prefix.startsWith('regular')) { 
+        this.prePostMarketPriceChange += stock[prefix + 'Change'] * position.sharesOwned;
+        this.prePostHourIcon = prefix.startsWith('pre') ? 'light_mode' : 'dark_mode';
+        this.prePostHourText = prefix.startsWith('pre') ? 'Pre Market ' : 'Post Market ';
+      }
+
       this.priceChangeChartData.push({
         name: stock.symbol,
         value: stock.regularMarketChangePercent * 100 || 0,
@@ -99,6 +111,10 @@ export class StockPriceMovementChartsComponent {
   getDayPriceChangeColor() {
     return this.priceChange > 0 ? "teal" : "chocolate";
   }
+
+  getPrePostPriceChangeColor() {
+    return this.prePostMarketPriceChange > 0 ? "teal" : "chocolate";
+  } 
 
   getPriceChangeChartColor = (symbol: any) => {
     const stock = this.portfolioData[symbol];

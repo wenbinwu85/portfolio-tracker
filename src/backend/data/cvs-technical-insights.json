@@ -7,20 +7,20 @@
             "shortTermOutlook": {
                 "stateDescription": "Bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 2,
-                "scoreDescription": "Bearish Evidence",
+                "score": 1,
+                "scoreDescription": "Weak Bearish Evidence",
                 "sectorDirection": "Bullish",
                 "sectorScore": 2,
                 "sectorScoreDescription": "Bullish Evidence",
-                "indexDirection": "Neutral",
-                "indexScore": 0,
-                "indexScoreDescription": "Neutral Evidence"
+                "indexDirection": "Bullish",
+                "indexScore": 3,
+                "indexScoreDescription": "Strong Bullish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 4,
-                "scoreDescription": "Very Strong Bearish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bearish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 4,
                 "sectorScoreDescription": "Very Strong Bearish Evidence",
@@ -43,9 +43,9 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 66.97,
+            "support": 66.61,
             "resistance": 69.554,
-            "stopLoss": 63.102077
+            "stopLoss": 64.039496
         },
         "valuation": {
             "color": 0.5,
@@ -60,9 +60,9 @@
             "innovativeness": 0.8915000000000001,
             "hiring": 0.9893000000000001,
             "sustainability": 0.4359,
-            "insiderSentiments": 0.48,
-            "earningsReports": 0.8993000000000001,
-            "dividends": 0.8189
+            "insiderSentiments": 0.47869999999999996,
+            "earningsReports": 0.8991,
+            "dividends": 0.821
         },
         "sector": {
             "innovativeness": 0.5,
@@ -105,13 +105,13 @@
     },
     "events": [
         {
-            "eventType": "Relative Strength Index (RSI)",
+            "eventType": "Engulfing Line (Bullish)",
             "pricePeriod": "D",
             "tradingHorizon": "S",
             "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1713447000,
-            "endDate": 1713447000
+            "startDate": 1714138200,
+            "endDate": 1714397400
         }
     ],
     "reports": [
@@ -200,6 +200,18 @@
             ]
         },
         {
+            "id": "2877_Analyst Report_1692035160000",
+            "headHtml": "Analyst Report: CVS Health Corp",
+            "provider": "Argus Research",
+            "reportDate": "2023-08-14T17:46:00Z",
+            "reportTitle": "CVS Health Corp. operated 9,675 retail drugstores at the end of 2022, including over 1,880 locations in Target stores. The total number of locations exceeds 10,000 when we include a leading specialty pharmacy, Long Term Care pharmacies, Infusion Centers where cancer medicines, for example, are delivered through a needle. The combined company posted 2022 revenue of $322 billion, with about half in the PBM business (now Health Services), 34% in Retail/Long Term Care (Pharmacy & Consumer Wellness), and 27% in Health Care Benefits. Approximately 77% of the $107 billion in Retail and long-term care revenue came from prescriptions; 23% from over-the-counter medicines, Beauty and General Merchandise. The 2019 and 2020 results include Aetna, which was acquired at the end of 2018.\r\n\r\nCVS operated approximately 1,100 Minute Clinics, primarily within CVS pharmacy stores. The corporate headquarters is in Woonsocket, Rhode Island.",
+            "targetPrice": 100.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "CVS"
+            ]
+        },
+        {
             "id": "37358_Market Update_1692035160000",
             "headHtml": "Market Update: ALB, APA, CVS, DEO",
             "provider": "Argus Research",
@@ -210,18 +222,6 @@
                 "APA",
                 "ALB",
                 "DEO"
-            ]
-        },
-        {
-            "id": "2877_Analyst Report_1692035160000",
-            "headHtml": "Analyst Report: CVS Health Corp",
-            "provider": "Argus Research",
-            "reportDate": "2023-08-14T17:46:00Z",
-            "reportTitle": "CVS Health Corp. operated 9,675 retail drugstores at the end of 2022, including over 1,880 locations in Target stores. The total number of locations exceeds 10,000 when we include a leading specialty pharmacy, Long Term Care pharmacies, Infusion Centers where cancer medicines, for example, are delivered through a needle. The combined company posted 2022 revenue of $322 billion, with about half in the PBM business (now Health Services), 34% in Retail/Long Term Care (Pharmacy & Consumer Wellness), and 27% in Health Care Benefits. Approximately 77% of the $107 billion in Retail and long-term care revenue came from prescriptions; 23% from over-the-counter medicines, Beauty and General Merchandise. The 2019 and 2020 results include Aetna, which was acquired at the end of 2018.\r\n\r\nCVS operated approximately 1,100 Minute Clinics, primarily within CVS pharmacy stores. The corporate headquarters is in Woonsocket, Rhode Island.",
-            "targetPrice": 100.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "CVS"
             ]
         },
         {
@@ -351,6 +351,18 @@
             ]
         },
         {
+            "id": "2877_Analyst Report_1667497316000",
+            "headHtml": "Analyst Report: CVS Health Corp",
+            "provider": "Argus Research",
+            "reportDate": "2022-11-03T17:41:56Z",
+            "reportTitle": "CVS Health Corp. operated 9,940 retail drugstores at the end of 2021, including over 1,700 locations in Target stores. The total number of locations exceeds 10,000 when we include a leading specialty pharmacy, Long Term Care pharmacies, Infusion Centers where cancer medicines, for example, are delivered through a needle. The combined company posted 2021 revenue of $292 billion, with about half in the PBM business, 30% in Retail/Long Term Care, and 20% in Health Care Benefits. Approximately 76% of the $100 billion in Retail and long-term care revenue came from prescriptions; 24% from over-the-counter medicines, Beauty and General Merchandise. The 2019 and 2020 results include Aetna, which was acquired at the end of 2018.\r\n\r\nCVS operated approximately 1,200 Minute Clinics, primarily within CVS pharmacy stores. The corporate headquarters is in Woonsocket, Rhode Island.",
+            "targetPrice": 125.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "CVS"
+            ]
+        },
+        {
             "id": "34619_Market Update_1667497316000",
             "headHtml": "Market Update: CVS, NEM, RSG, HA, QSR, CC",
             "provider": "Argus Research",
@@ -363,18 +375,6 @@
                 "NEM",
                 "RSG",
                 "HA"
-            ]
-        },
-        {
-            "id": "2877_Analyst Report_1667497316000",
-            "headHtml": "Analyst Report: CVS Health Corp",
-            "provider": "Argus Research",
-            "reportDate": "2022-11-03T17:41:56Z",
-            "reportTitle": "CVS Health Corp. operated 9,940 retail drugstores at the end of 2021, including over 1,700 locations in Target stores. The total number of locations exceeds 10,000 when we include a leading specialty pharmacy, Long Term Care pharmacies, Infusion Centers where cancer medicines, for example, are delivered through a needle. The combined company posted 2021 revenue of $292 billion, with about half in the PBM business, 30% in Retail/Long Term Care, and 20% in Health Care Benefits. Approximately 76% of the $100 billion in Retail and long-term care revenue came from prescriptions; 24% from over-the-counter medicines, Beauty and General Merchandise. The 2019 and 2020 results include Aetna, which was acquired at the end of 2018.\r\n\r\nCVS operated approximately 1,200 Minute Clinics, primarily within CVS pharmacy stores. The corporate headquarters is in Woonsocket, Rhode Island.",
-            "targetPrice": 125.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "CVS"
             ]
         },
         {
@@ -437,6 +437,17 @@
             ]
         },
         {
+            "id": "33374_Market Summary_1656573330000",
+            "headHtml": "Market Digest: CVS, PAYX",
+            "provider": "Argus Research",
+            "reportDate": "2022-06-30T07:15:30Z",
+            "reportTitle": "Market Tries to Rally amid Softening Data",
+            "tickers": [
+                "CVS",
+                "PAYX"
+            ]
+        },
+        {
             "id": "2877_Analyst Report_1656573330000",
             "headHtml": "Analyst Report: CVS Health Corp",
             "provider": "Argus Research",
@@ -446,17 +457,6 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "CVS"
-            ]
-        },
-        {
-            "id": "33374_Market Summary_1656573330000",
-            "headHtml": "Market Digest: CVS, PAYX",
-            "provider": "Argus Research",
-            "reportDate": "2022-06-30T07:15:30Z",
-            "reportTitle": "Market Tries to Rally amid Softening Data",
-            "tickers": [
-                "CVS",
-                "PAYX"
             ]
         },
         {
@@ -703,18 +703,6 @@
             ]
         },
         {
-            "id": "2877_Analyst Report_1639490317000",
-            "headHtml": "Analyst Report: CVS Health Corp",
-            "provider": "Argus Research",
-            "reportDate": "2021-12-14T13:58:37Z",
-            "reportTitle": "CVS Health Corp. operated 9,900 retail drugstores at the end of 2020, including over 1,700 locations in Target stores. The total number of locations exceeds 10,000 when we include a leading specialty pharmacy, Long Term Care pharmacies, Infusion Centers where cancer medicines, for example, are delivered through a needle. The combined company posted 2020 revenue of $269 billion, with about half in the PBM business, 30% in Retail/Long Term Care, and 20% in Health Care Benefits. Approximately 77% of the $91 billion in Retail and long-term care revenue came from prescriptions; 23% from over-the-counter medicines, Beauty and General Merchandise. The 2019 and 2020 results include Aetna, which was acquired at the end of 2018.\r\n\r\nCVS operated approximately 1,100 Minute Clinics, primarily within CVS pharmacy stores. The corporate headquarters is in Woonsocket, Rhode Island.",
-            "targetPrice": 120.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "CVS"
-            ]
-        },
-        {
             "id": "31643_Market Update_1639490317000",
             "headHtml": "Market Update: CVS, HOG, THO, WTRG, ULTA",
             "provider": "Argus Research",
@@ -726,6 +714,18 @@
                 "ULTA",
                 "WTRG",
                 "THO"
+            ]
+        },
+        {
+            "id": "2877_Analyst Report_1639490317000",
+            "headHtml": "Analyst Report: CVS Health Corp",
+            "provider": "Argus Research",
+            "reportDate": "2021-12-14T13:58:37Z",
+            "reportTitle": "CVS Health Corp. operated 9,900 retail drugstores at the end of 2020, including over 1,700 locations in Target stores. The total number of locations exceeds 10,000 when we include a leading specialty pharmacy, Long Term Care pharmacies, Infusion Centers where cancer medicines, for example, are delivered through a needle. The combined company posted 2020 revenue of $269 billion, with about half in the PBM business, 30% in Retail/Long Term Care, and 20% in Health Care Benefits. Approximately 77% of the $91 billion in Retail and long-term care revenue came from prescriptions; 23% from over-the-counter medicines, Beauty and General Merchandise. The 2019 and 2020 results include Aetna, which was acquired at the end of 2018.\r\n\r\nCVS operated approximately 1,100 Minute Clinics, primarily within CVS pharmacy stores. The corporate headquarters is in Woonsocket, Rhode Island.",
+            "targetPrice": 120.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "CVS"
             ]
         },
         {
@@ -1191,6 +1191,18 @@
             ]
         },
         {
+            "id": "2877_Analyst Report_1597017600000",
+            "headHtml": "Analyst Report: CVS Health Corp",
+            "provider": "Argus Research",
+            "reportDate": "2020-08-10T00:00:00Z",
+            "reportTitle": "CVS Health Corp. operated 9,900 retail drugstores at the end of 2019, including over 1,700 locations in Target stores. The total number of locations exceeds 10,000 when we include a leading specialty pharmacy, Long Term Care pharmacies, Infusion Centers where cancer medicines, for example, are delivered through a needle. The combined company posted 2019 revenue of $257 billion, with about half in the PBM business, 30% in Retail/Long Term Care, and 20% in Health Care Benefits. Approximately 75% of the $87 billion in Retail and long-term care revenue came from prescriptions; 25% from over-the-counter medicines, Beauty and General Merchandise. The 2019 results include Aetna, which was acquired at the end of 2018.\r\n\r\nCVS operated approximately 1,100 Minute Clinics, primarily within CVS pharmacy stores. The corporate headquarters is in Woonsocket, Rhode Island.",
+            "targetPrice": 85.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "CVS"
+            ]
+        },
+        {
             "id": "27640_Market Update_1597017600000",
             "headHtml": "Market Update: CVS, CVX, FISV, RL, RHHBY, PSX",
             "provider": "Argus Research",
@@ -1203,18 +1215,6 @@
                 "FISV",
                 "RL",
                 "RHHBY"
-            ]
-        },
-        {
-            "id": "2877_Analyst Report_1597017600000",
-            "headHtml": "Analyst Report: CVS Health Corp",
-            "provider": "Argus Research",
-            "reportDate": "2020-08-10T00:00:00Z",
-            "reportTitle": "CVS Health Corp. operated 9,900 retail drugstores at the end of 2019, including over 1,700 locations in Target stores. The total number of locations exceeds 10,000 when we include a leading specialty pharmacy, Long Term Care pharmacies, Infusion Centers where cancer medicines, for example, are delivered through a needle. The combined company posted 2019 revenue of $257 billion, with about half in the PBM business, 30% in Retail/Long Term Care, and 20% in Health Care Benefits. Approximately 75% of the $87 billion in Retail and long-term care revenue came from prescriptions; 25% from over-the-counter medicines, Beauty and General Merchandise. The 2019 results include Aetna, which was acquired at the end of 2018.\r\n\r\nCVS operated approximately 1,100 Minute Clinics, primarily within CVS pharmacy stores. The corporate headquarters is in Woonsocket, Rhode Island.",
-            "targetPrice": 85.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "CVS"
             ]
         },
         {
@@ -1238,18 +1238,6 @@
             ]
         },
         {
-            "id": "2877_Analyst Report_1589550396000",
-            "headHtml": "Analyst Report: CVS Health Corp",
-            "provider": "Argus Research",
-            "reportDate": "2020-05-15T13:46:36Z",
-            "reportTitle": "CVS Health Corp. operated 9,900 retail drugstores at the end of 2019, including over 1,700 locations in Target stores. The total number of locations exceeds 10,000 when we include a leading specialty pharmacy, Long Term Care pharmacies, Infusion Centers where cancer medicines, for example, are delivered through a needle. The combined company posted 2019 revenue of $257 billion, with about half in the PBM business, 30% in Retail/Long Term Care, and 20% in Health Care Benefits. Approximately 75% of the $87 billion in Retail and long-term care revenue came from prescriptions; 25% from over-the-counter medicines, Beauty and General Merchandise. The 2019 results include Aetna, which was acquired at the end of 2018.\r\n\r\nCVS operated approximately 1,100 Minute Clinics, primarily within CVS pharmacy stores. The corporate headquarters is in Woonsocket, Rhode Island.",
-            "targetPrice": 85.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "CVS"
-            ]
-        },
-        {
             "id": "26951_Market Update_1589550396000",
             "headHtml": "Market Update: BDX, HST, MSI, CVS",
             "provider": "Argus Research",
@@ -1263,16 +1251,15 @@
             ]
         },
         {
-            "id": "26951_Market Update_1589500800000",
-            "headHtml": "Market Update: BDX, HST, MSI, CVS",
+            "id": "2877_Analyst Report_1589550396000",
+            "headHtml": "Analyst Report: CVS Health Corp",
             "provider": "Argus Research",
-            "reportDate": "2020-05-15T00:00:00Z",
-            "reportTitle": "Stocks fell on Friday morning following a sharp drop in U.S. retail sales. The Commerce Department said that sales plunged 16.4% in April. This followed an 8.3% decline in March and exceeded the Reuters consensus forecast, which had called for a decline of 12.0%. Meanwhile, the House prepared to vote on a new $3 trillion relief package that would include direct support for state governments and additional payments to individuals; however, Senate Republicans have promised to reject the measure. The S&P fell 1.0%, the Dow 1.0%, and the Nasdaq 1.1%. Crude oil rose 4% to more than $28 per barrel, while gold rose $8 to $1749 per ounce.",
+            "reportDate": "2020-05-15T13:46:36Z",
+            "reportTitle": "CVS Health Corp. operated 9,900 retail drugstores at the end of 2019, including over 1,700 locations in Target stores. The total number of locations exceeds 10,000 when we include a leading specialty pharmacy, Long Term Care pharmacies, Infusion Centers where cancer medicines, for example, are delivered through a needle. The combined company posted 2019 revenue of $257 billion, with about half in the PBM business, 30% in Retail/Long Term Care, and 20% in Health Care Benefits. Approximately 75% of the $87 billion in Retail and long-term care revenue came from prescriptions; 25% from over-the-counter medicines, Beauty and General Merchandise. The 2019 results include Aetna, which was acquired at the end of 2018.\r\n\r\nCVS operated approximately 1,100 Minute Clinics, primarily within CVS pharmacy stores. The corporate headquarters is in Woonsocket, Rhode Island.",
+            "targetPrice": 85.0,
+            "investmentRating": "Bullish",
             "tickers": [
-                "CVS",
-                "MSI",
-                "BDX",
-                "HST"
+                "CVS"
             ]
         },
         {
@@ -1285,6 +1272,19 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "CVS"
+            ]
+        },
+        {
+            "id": "26951_Market Update_1589500800000",
+            "headHtml": "Market Update: BDX, HST, MSI, CVS",
+            "provider": "Argus Research",
+            "reportDate": "2020-05-15T00:00:00Z",
+            "reportTitle": "Stocks fell on Friday morning following a sharp drop in U.S. retail sales. The Commerce Department said that sales plunged 16.4% in April. This followed an 8.3% decline in March and exceeded the Reuters consensus forecast, which had called for a decline of 12.0%. Meanwhile, the House prepared to vote on a new $3 trillion relief package that would include direct support for state governments and additional payments to individuals; however, Senate Republicans have promised to reject the measure. The S&P fell 1.0%, the Dow 1.0%, and the Nasdaq 1.1%. Crude oil rose 4% to more than $28 per barrel, while gold rose $8 to $1749 per ounce.",
+            "tickers": [
+                "CVS",
+                "MSI",
+                "BDX",
+                "HST"
             ]
         },
         {
@@ -1466,18 +1466,6 @@
             ]
         },
         {
-            "id": "2877_Analyst Report_1576540800000",
-            "headHtml": "Analyst Report: CVS Health Corp",
-            "provider": "Argus Research",
-            "reportDate": "2019-12-17T00:00:00Z",
-            "reportTitle": "CVS Health Corp. operated 9,900 retail drugstores at the end of 2018, including over 1,600 locations in Target stores, and 42 locations in Brazil. The total number of locations exceeds 10,000 when we include a leading specialty pharmacy, Long Term Care pharmacies, Infusion Centers where cancer medicines, for example, are delivered through a needle. The combined company posted 2018 revenue of $195 billion, with more than half in the PBM business. Approximately 75% of the $84 billion in Retail and long-term care revenue came from prescriptions; 25% from over-the-counter medicines, Beauty and General Merchandise. The 2018 results include Aetna, which was part of the company for approximately one month.\r\n\r\nCVS operated approximately 1,100 Minute Clinics, primarily within CVS pharmacy stores. The corporate headquarters is in Woonsocket, Rhode Island.",
-            "targetPrice": 85.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "CVS"
-            ]
-        },
-        {
             "id": "25734_Market Update_1576540800000",
             "headHtml": "Market Update: BA, STFC, CVS, VOD, EXC",
             "provider": "Argus Research",
@@ -1489,6 +1477,18 @@
                 "STFC",
                 "VOD",
                 "BA"
+            ]
+        },
+        {
+            "id": "2877_Analyst Report_1576540800000",
+            "headHtml": "Analyst Report: CVS Health Corp",
+            "provider": "Argus Research",
+            "reportDate": "2019-12-17T00:00:00Z",
+            "reportTitle": "CVS Health Corp. operated 9,900 retail drugstores at the end of 2018, including over 1,600 locations in Target stores, and 42 locations in Brazil. The total number of locations exceeds 10,000 when we include a leading specialty pharmacy, Long Term Care pharmacies, Infusion Centers where cancer medicines, for example, are delivered through a needle. The combined company posted 2018 revenue of $195 billion, with more than half in the PBM business. Approximately 75% of the $84 billion in Retail and long-term care revenue came from prescriptions; 25% from over-the-counter medicines, Beauty and General Merchandise. The 2018 results include Aetna, which was part of the company for approximately one month.\r\n\r\nCVS operated approximately 1,100 Minute Clinics, primarily within CVS pharmacy stores. The corporate headquarters is in Woonsocket, Rhode Island.",
+            "targetPrice": 85.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "CVS"
             ]
         },
         {
@@ -1884,15 +1884,6 @@
             "formType": "10-Q"
         },
         {
-            "id": "0000947871-23-000807_64803",
-            "type": "Offering Registrations",
-            "title": "S-8 : Offering Registrations",
-            "description": "Initial registration statement for securities to be offered to employees pursuant to employee benefit plans",
-            "filingDate": 1690934400000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000094787123000807/thumbnail.png",
-            "formType": "S-8"
-        },
-        {
             "id": "0000064803-23-000032_64803",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -1900,6 +1891,15 @@
             "filingDate": 1690934400000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000006480323000032/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0000947871-23-000807_64803",
+            "type": "Offering Registrations",
+            "title": "S-8 : Offering Registrations",
+            "description": "Initial registration statement for securities to be offered to employees pursuant to employee benefit plans",
+            "filingDate": 1690934400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000094787123000807/thumbnail.png",
+            "formType": "S-8"
         },
         {
             "id": "0000947871-23-000769_64803",
