@@ -61,7 +61,7 @@ export class PortfolioMainComponent implements OnInit {
 
         if (stock.calendarEvents) {
           const calEvents = stock.calendarEvents;
-          const earnings = stock.earnings.earningsChart;
+          const earnings = stock.earnings?.earningsChart;
           const position = this.dataService.portfolioHoldings[stock.symbol];
 
           if (calEvents.exDividendDate) {
@@ -90,17 +90,19 @@ export class PortfolioMainComponent implements OnInit {
             });
           }
 
-          if (calEvents.earnings.earningsDate[0]) {
+          if (earnings.earningsDate[0]) {
             const estimate = `${earnings.currentQuarterEstimateDate} estimate: ${earnings.currentQuarterEstimate}`;
             this.events.push({
               symbol: stock.symbol,
               name: stock.shortName,
-              date: new Date(calEvents.earnings?.earningsDate[0]?.slice(0, -2)).valueOf(),
+              date: new Date(earnings.earningsDate[0]?.slice(0, -2)).valueOf(),
               event: "Earnings",
               icon: "insights",
               color: "steelblue",
               detail: estimate,
             });
+
+            console.log(stock.symbol, earnings.earningsDate)
           }
         }
 
@@ -116,7 +118,7 @@ export class PortfolioMainComponent implements OnInit {
         const date2 = new Date(a.date).valueOf();
         return date1 - date2;
       }).slice(0, 25)
-    this.events = this.events.filter((event: any) => event.date >= new Date().valueOf());
+    // this.events = this.events.filter((event: any) => new Date(event.date).getDate() >= new Date().getDate());
     this.events.sort((event1: any, event2: any) => event1.date - event2.date);
     this.events.forEach((event: any) => this.eventDates.push(event.date));
     this.eventDates = new Set(this.eventDates);
@@ -124,7 +126,7 @@ export class PortfolioMainComponent implements OnInit {
     this.eventDates.forEach((date: any) => {
       this.mappedEvents[date] = this.events.filter((event: any) => event.date === date);
     });
-    this.mappedEvents = Object.entries(this.mappedEvents).slice(0, 20);
+    this.mappedEvents = Object.entries(this.mappedEvents) // .slice(0, 20);
   }
 
   // filterEvents(symbol: string) { 

@@ -10,13 +10,13 @@
     </div>
 
     <div class="return-wrapper">
-        <div class="add-flex">
+        <div *ngIf="priceChange !== 0" class="add-flex">
             <span>Regular Market </span>
             <mat-icon>schedule</mat-icon>
             <span [ngStyle]="{ color: getDayPriceChangeColor() }">
                 {{ priceChange | currency }}
             </span>
-            <span [ngStyle]="{ color: getPrePostPriceChangeColor() }">
+            <span [ngStyle]="{ color: getDayPriceChangeColor() }">
                 ({{ priceChange / portfolioHoldings.portfolioMarketValue | percent: '.4' }})
             </span>
         </div>
@@ -24,13 +24,17 @@
         <div *ngIf="prePostMarketPriceChange !== 0" class="add-flex">
             <span>{{ prePostHourText }}</span>
             <mat-icon>{{ prePostHourIcon }}</mat-icon>
-            <span [ngStyle]="{ color: getDayPriceChangeColor() }">
+            <span [ngStyle]="{ color: getPrePostPriceChangeColor() }">
                 {{ prePostMarketPriceChange | currency }}
             </span>
             <span [ngStyle]="{ color: getPrePostPriceChangeColor() }">
                 ({{ prePostMarketPriceChange / portfolioHoldings.portfolioMarketValue | percent: '.4' }})
             </span>
         </div>
+
+        <mat-slide-toggle *ngIf="!prefix.startsWith('regular')" (toggleChange)="changeChart()">
+            <span>Pre/Post Market Chart</span>
+        </mat-slide-toggle>
     </div>
 
     <div *ngIf="selectedChart === 1" class="add-flex">

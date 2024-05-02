@@ -10,6 +10,7 @@ import { TvMiniChartWidgetComponent } from "../../tradingview/tv-mini-chart-widg
 import { TvTickersWidgetComponent } from "../../tradingview/tv-tickers-widget/tv-tickers-widget.component";
 import { TvMarketQuotesWidgetComponent } from "../../tradingview/tv-market-quotes-widget/tv-market-quotes-widget.component";
 import { HelperService } from "../../../services/helper.service";
+import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 
 @Component({
   selector: 'stock-price-movement-charts',
@@ -23,7 +24,8 @@ import { HelperService } from "../../../services/helper.service";
     NgxChartsModule,
     TvMiniChartWidgetComponent,
     TvTickersWidgetComponent,
-    TvMarketQuotesWidgetComponent
+    TvMarketQuotesWidgetComponent,
+    MatSlideToggleModule
   ],
   templateUrl: './stock-price-movement-charts.component.html',
   styleUrls: ['./stock-price-movement-charts.component.css'],
@@ -44,12 +46,15 @@ export class StockPriceMovementChartsComponent {
   betaColorScheme = { domain: ["palevioletred"] } as Color;
   scaleType = ScaleType;
   selectedChart = 1;
+  prefix: any;
+  toggleChecked = false;
 
   constructor(private dataService: DataService, private helper: HelperService) {}
 
   ngOnInit() {
     this.portfolioHoldings = this.dataService.portfolioHoldings;
     this.portfolioData = this.dataService.portfolioData;
+    this.prefix = this.helper.getPriceKeyPrefix();
 
     this.dataService.portfolioSymbols?.forEach((symbol: any) => {
       const position = this.portfolioHoldings[symbol];
@@ -59,18 +64,20 @@ export class StockPriceMovementChartsComponent {
         displayName: `${stock.longName} - ${stock.symbol} `
       });
 
-      this.priceChange += stock.regularMarketChange * position.sharesOwned;
-      const prefix = this.helper.getPriceKeyPrefix();
-      if (!prefix.startsWith('regular')) { 
-        this.prePostMarketPriceChange += stock[prefix + 'Change'] * position.sharesOwned;
-        this.prePostHourIcon = prefix.startsWith('pre') ? 'light_mode' : 'dark_mode';
-        this.prePostHourText = prefix.startsWith('pre') ? 'Pre Market ' : 'Post Market ';
+      if (!this.prefix.startsWith('pre')) { 
+        this.priceChange += stock.regularMarketChange * position.sharesOwned;
+      }
+      if (!this.prefix.startsWith('regular')) { 
+        this.prePostMarketPriceChange += stock[this.prefix + 'Change'] * position.sharesOwned;
+        this.prePostHourIcon = this.prefix.startsWith('pre') ? 'light_mode' : 'dark_mode';
+        this.prePostHourText = this.prefix.startsWith('pre') ? 'Pre Market ' : 'Post Market ';
       }
 
       this.priceChangeChartData.push({
         name: stock.symbol,
         value: stock.regularMarketChangePercent * 100 || 0,
       });
+      this.priceChangeChartData.sort((a: any, b: any) => a.value - b.value);
 
       this.priceRangeChartData.push({
         name: stock.symbol,
@@ -86,6 +93,13 @@ export class StockPriceMovementChartsComponent {
         ],
       });
 
+      this.priceRangeChartData.sort(
+        (a: any, b: any) =>
+          a.series[0].value +
+          a.series[1].value -
+          (b.series[0].value + b.series[1].value)
+      );
+
       if (stock.quoteType === "EQUITY") {
         this.betaChartData.push({
           name: stock.symbol,
@@ -94,17 +108,11 @@ export class StockPriceMovementChartsComponent {
       }
     });
     this.stockNames.sort((a: any, b: any) => {
-      const val1 = this.portfolioData[a.name].regularMarketChangePercent;
-      const val2 = this.portfolioData[b.name].regularMarketChangePercent;
+      const val1 = this.portfolioData[a.name][this.prefix + 'ChangePercent'];
+      const val2 = this.portfolioData[b.name][this.prefix + 'ChangePercent'];
       return val1 - val2;
     });
-    this.priceChangeChartData.sort((a: any, b: any) => a.value - b.value);
-    this.priceRangeChartData.sort(
-      (a: any, b: any) =>
-        a.series[0].value +
-        a.series[1].value -
-        (b.series[0].value + b.series[1].value)
-    );
+
     this.betaChartData.sort((a: any, b: any) => a.value - b.value);
   }
 
@@ -117,12 +125,29 @@ export class StockPriceMovementChartsComponent {
   } 
 
   getPriceChangeChartColor = (symbol: any) => {
+    const prefix = this.toggleChecked ? this.prefix : 'regularMarket';
+    const prefixKey = prefix + 'ChangePercent';
     const stock = this.portfolioData[symbol];
-    const price = stock.regularMarketChangePercent;
-    return price > 0 ? "teal" : "chocolate";
+    return stock[prefixKey] > 0 ? "teal" : "chocolate";
   };
 
   displayChart(chartID: number) {
     this.selectedChart = chartID;
+  }
+
+  changeChart() { 
+    this.toggleChecked = !this.toggleChecked;
+    const prefix = this.toggleChecked ? this.prefix : 'regularMarket';
+    const prefixKey = prefix + 'ChangePercent';
+    this.priceChangeChartData = []
+
+    this.dataService.portfolioSymbols?.forEach((symbol: any) => {
+      const stock = this.portfolioData[symbol];
+      this.priceChangeChartData.push({
+        name: stock.symbol,
+        value: stock[prefixKey] * 100,
+      });
+    });
+    this.priceChangeChartData.sort((a: any, b: any) => a.value - b.value);
   }
 }

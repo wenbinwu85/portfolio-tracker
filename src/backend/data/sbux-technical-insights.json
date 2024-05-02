@@ -9,12 +9,12 @@
                 "direction": "Bullish",
                 "score": 3,
                 "scoreDescription": "Strong Bullish Evidence",
-                "sectorDirection": "Bullish",
-                "sectorScore": 2,
-                "sectorScoreDescription": "Bullish Evidence",
-                "indexDirection": "Bullish",
+                "sectorDirection": "Neutral",
+                "sectorScore": 0,
+                "sectorScoreDescription": "Neutral Evidence",
+                "indexDirection": "Bearish",
                 "indexScore": 3,
-                "indexScoreDescription": "Strong Bullish Evidence"
+                "indexScoreDescription": "Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Bullish events outweigh bearish events.",
@@ -22,8 +22,8 @@
                 "score": 2,
                 "scoreDescription": "Bullish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 2,
-                "sectorScoreDescription": "Bearish Evidence",
+                "sectorScore": 4,
+                "sectorScoreDescription": "Very Strong Bearish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 4,
                 "indexScoreDescription": "Very Strong Bearish Evidence"
@@ -45,7 +45,7 @@
             "provider": "Trading Central",
             "support": 86.15,
             "resistance": 93.48,
-            "stopLoss": 85.341288
+            "stopLoss": 85.885775
         },
         "valuation": {
             "color": 0.5,
@@ -57,12 +57,12 @@
     "companySnapshot": {
         "sectorInfo": "Consumer Cyclical",
         "company": {
-            "innovativeness": 0.9017000000000001,
+            "innovativeness": 0.8986,
             "hiring": 0.8902,
             "sustainability": 0.7461,
             "insiderSentiments": 0.24530000000000002,
-            "earningsReports": 0.8528,
-            "dividends": 0.4636
+            "earningsReports": 0.8645,
+            "dividends": 0.46490000000000004
         },
         "sector": {
             "innovativeness": 0.5,
@@ -84,20 +84,20 @@
             "The firm's reinvention plan, with investments in partner wages, cold beverage bar technology, and on-demand brewers should unlock peak transaction volume capacity starting in 2024."
         ],
         "msBearishSummary": [
-            "Intense competition for suburban drive-thru sites could pinch margins, with domestic new unit openings skewing heavily toward those footprints.",
+            "Declining traffic within the firm's occasional-customer base may take multiple quarters to reverse, pressuring comparable store sales and margin expansion initiatives.",
             "We expect substantially softer\u2014if still attractive\u2014cash on cash returns in China moving forward rather than the 50%-70% that Starbucks has historically enjoyed, as competition in that country intensifies.",
             "Shrinking arabica growing regions could drive structurally higher green coffee prices, threatening gross margins (if swallowed by Starbucks) or driving consumer switching toward cheaper caffeinated alternatives."
         ],
         "companyName": "Starbucks Corporation",
-        "msBullishBearishSummariesPublishDate": 1713200980000,
+        "msBullishBearishSummariesPublishDate": 1714595719000,
         "upsellReportType": "MORNINGSTAR_ANALYST"
     },
     "upsellSearchDD": {
         "researchReports": {
-            "reportId": "MS_0P00000546_AnalystReport_1713200980000",
+            "reportId": "MS_0P00000546_AnalystReport_1714595719000",
             "provider": "Morningstar",
-            "title": "Biggest Restaurant Brands Set To Gain Market Share as Industry Navigates Tough Environment",
-            "reportDate": "2024-04-15T17:09:40Z",
+            "title": "Sluggish Consumer Demand Sets Starbucks Up for Challenging 2024-25",
+            "reportDate": "2024-05-01T20:35:19Z",
             "summary": "Starbucks is one of the most widely recognized restaurant brands in the world, operating more than 38,000 stores across more than 80 countries as of the end of fiscal 2023. The firm operates in three segments: North America, international markets, and channel development (grocery and ready-to-drink beverage). The coffee chain generates revenue from company-operated stores, royalties, sales of equipment and products to license partners, ready-to-drink beverages, packaged coffee sales, and single-serve products. ",
             "investmentRating": "Bullish"
         }
@@ -194,6 +194,17 @@
             ]
         },
         {
+            "id": "3375_Analyst Report_1691061233000",
+            "headHtml": "Analyst Report: Starbucks Corp.",
+            "provider": "Argus Research",
+            "reportDate": "2023-08-03T11:13:53Z",
+            "reportTitle": "Starbucks is a leading retailer of fresh-brewed coffee and branded merchandise. Its brands include Starbucks, Tazo Tea, and Frappuccino. With a market cap of $116.1 billion, SBUX shares are generally considered large-cap growth.",
+            "investmentRating": "Neutral",
+            "tickers": [
+                "SBUX"
+            ]
+        },
+        {
             "id": "37251_Market Summary_1691061233000",
             "headHtml": "Market Digest: NLY, AMD, ETN, FIS, HP, PEG, SBUX, SON, IGT",
             "provider": "Argus Research",
@@ -209,17 +220,6 @@
                 "HP",
                 "NLY",
                 "ETN"
-            ]
-        },
-        {
-            "id": "3375_Analyst Report_1691061233000",
-            "headHtml": "Analyst Report: Starbucks Corp.",
-            "provider": "Argus Research",
-            "reportDate": "2023-08-03T11:13:53Z",
-            "reportTitle": "Starbucks is a leading retailer of fresh-brewed coffee and branded merchandise. Its brands include Starbucks, Tazo Tea, and Frappuccino. With a market cap of $116.1 billion, SBUX shares are generally considered large-cap growth.",
-            "investmentRating": "Neutral",
-            "tickers": [
-                "SBUX"
             ]
         },
         {
@@ -700,6 +700,18 @@
             ]
         },
         {
+            "id": "3375_Analyst Report_1604560633000",
+            "headHtml": "Analyst Report: Starbucks Corp.",
+            "provider": "Argus Research",
+            "reportDate": "2020-11-05T07:17:13Z",
+            "reportTitle": "Starbucks is a leading retailer of fresh-brewed coffee and branded merchandise. Its brands include Starbucks, Tazo Tea, and Frappuccino. With a market cap of more than $90 billion, SBUX shares are generally considered large-cap growth.",
+            "targetPrice": 100.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "SBUX"
+            ]
+        },
+        {
             "id": "28347_Market Summary_1604560633000",
             "headHtml": "Market Digest: EL, ETN, NOK, SBUX, TMO, CHTR, CARR, OTIS",
             "provider": "Argus Research",
@@ -714,18 +726,6 @@
                 "NOK",
                 "CHTR",
                 "ETN"
-            ]
-        },
-        {
-            "id": "3375_Analyst Report_1604560633000",
-            "headHtml": "Analyst Report: Starbucks Corp.",
-            "provider": "Argus Research",
-            "reportDate": "2020-11-05T07:17:13Z",
-            "reportTitle": "Starbucks is a leading retailer of fresh-brewed coffee and branded merchandise. Its brands include Starbucks, Tazo Tea, and Frappuccino. With a market cap of more than $90 billion, SBUX shares are generally considered large-cap growth.",
-            "targetPrice": 100.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "SBUX"
             ]
         },
         {
@@ -777,18 +777,6 @@
             ]
         },
         {
-            "id": "3375_Analyst Report_1596153600000",
-            "headHtml": "Analyst Report: Starbucks Corp.",
-            "provider": "Argus Research",
-            "reportDate": "2020-07-31T00:00:00Z",
-            "reportTitle": "Starbucks is a leading retailer of fresh-brewed coffee and branded merchandise. Its brands include Starbucks, Tazo Tea, and Frappuccino. With a market cap of more than $90 billion, SBUX shares are generally considered large-cap growth.",
-            "targetPrice": 100.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "SBUX"
-            ]
-        },
-        {
             "id": "27565_Market Summary_1596153600000",
             "headHtml": "Market Digest: CME, CTSH, MCO, SPGI, RJF, SBUX, UPS, MA, HCA",
             "provider": "Argus Research",
@@ -804,6 +792,18 @@
                 "UPS",
                 "CME",
                 "RJF"
+            ]
+        },
+        {
+            "id": "3375_Analyst Report_1596153600000",
+            "headHtml": "Analyst Report: Starbucks Corp.",
+            "provider": "Argus Research",
+            "reportDate": "2020-07-31T00:00:00Z",
+            "reportTitle": "Starbucks is a leading retailer of fresh-brewed coffee and branded merchandise. Its brands include Starbucks, Tazo Tea, and Frappuccino. With a market cap of more than $90 billion, SBUX shares are generally considered large-cap growth.",
+            "targetPrice": 100.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "SBUX"
             ]
         },
         {
@@ -973,18 +973,6 @@
             ]
         },
         {
-            "id": "3375_Analyst Report_1586995200000",
-            "headHtml": "Analyst Report: Starbucks Corp.",
-            "provider": "Argus Research",
-            "reportDate": "2020-04-16T00:00:00Z",
-            "reportTitle": "Starbucks is a leading retailer of fresh-brewed coffee and branded merchandise. Its brands include Starbucks, Tazo Tea, and Frappuccino. With a market cap of more than $86 billion, SBUX shares are generally considered large-cap growth.",
-            "targetPrice": 100.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "SBUX"
-            ]
-        },
-        {
             "id": "26703_Market Summary_1586995200000",
             "headHtml": "Market Digest: SCHW, PXD, PSA, SBUX, TXN, UNH, USB, EBAY, PEG",
             "provider": "Argus Research",
@@ -1000,6 +988,18 @@
                 "PXD",
                 "UNH",
                 "PSA"
+            ]
+        },
+        {
+            "id": "3375_Analyst Report_1586995200000",
+            "headHtml": "Analyst Report: Starbucks Corp.",
+            "provider": "Argus Research",
+            "reportDate": "2020-04-16T00:00:00Z",
+            "reportTitle": "Starbucks is a leading retailer of fresh-brewed coffee and branded merchandise. Its brands include Starbucks, Tazo Tea, and Frappuccino. With a market cap of more than $86 billion, SBUX shares are generally considered large-cap growth.",
+            "targetPrice": 100.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "SBUX"
             ]
         },
         {
@@ -1396,6 +1396,17 @@
             ]
         },
         {
+            "id": "24936_Market Update_1568160000000",
+            "headHtml": "Market Update: AAPL, SBUX",
+            "provider": "Argus Research",
+            "reportDate": "2019-09-11T00:00:00Z",
+            "reportTitle": "U.S. equity markets were up on Wednesday morning following news that China was suspending additional tariffs on some American imports. The Labor Department reported that its producer price index rose 0.1% in August, following a 0.2% gain in July. The cost of services offset the largest fall in the price of goods in seven months. The Dow gained 0.3%, the S&P 0.3%, and the Nasdaq was up 0.7%. Crude oil traded near $58 per barrel, while gold rose $3 to $1502 per ounce.",
+            "tickers": [
+                "AAPL",
+                "SBUX"
+            ]
+        },
+        {
             "id": "3375_Analyst Report_1568160000000",
             "headHtml": "Analyst Report: Starbucks Corp.",
             "provider": "Argus Research",
@@ -1404,17 +1415,6 @@
             "targetPrice": 110.0,
             "investmentRating": "Bullish",
             "tickers": [
-                "SBUX"
-            ]
-        },
-        {
-            "id": "24936_Market Update_1568160000000",
-            "headHtml": "Market Update: AAPL, SBUX",
-            "provider": "Argus Research",
-            "reportDate": "2019-09-11T00:00:00Z",
-            "reportTitle": "U.S. equity markets were up on Wednesday morning following news that China was suspending additional tariffs on some American imports. The Labor Department reported that its producer price index rose 0.1% in August, following a 0.2% gain in July. The cost of services offset the largest fall in the price of goods in seven months. The Dow gained 0.3%, the S&P 0.3%, and the Nasdaq was up 0.7%. Crude oil traded near $58 per barrel, while gold rose $3 to $1502 per ounce.",
-            "tickers": [
-                "AAPL",
                 "SBUX"
             ]
         },
@@ -1762,18 +1762,6 @@
             ]
         },
         {
-            "id": "3375_Analyst Report_1556236800000",
-            "headHtml": "Strong quarter and higher guidance",
-            "provider": "Argus Research",
-            "reportDate": "2019-04-26T00:00:00Z",
-            "reportTitle": "Starbucks is a leading retailer of fresh-brewed coffee and branded merchandise. Its brands include Starbucks, Tazo Tea and Frappuccino. With a market cap of nearly $96 billion, SBUX shares are generally considered large-cap growth.",
-            "targetPrice": 88.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "SBUX"
-            ]
-        },
-        {
             "id": "23824_Market Update_1556236800000",
             "headHtml": "Market Update: COF, HSY, LAZ, LRCX, RSG, SBUX, XLNX, TSLA",
             "provider": "Argus Research",
@@ -1788,6 +1776,18 @@
                 "LRCX",
                 "COF",
                 "HSY"
+            ]
+        },
+        {
+            "id": "3375_Analyst Report_1556236800000",
+            "headHtml": "Strong quarter and higher guidance",
+            "provider": "Argus Research",
+            "reportDate": "2019-04-26T00:00:00Z",
+            "reportTitle": "Starbucks is a leading retailer of fresh-brewed coffee and branded merchandise. Its brands include Starbucks, Tazo Tea and Frappuccino. With a market cap of nearly $96 billion, SBUX shares are generally considered large-cap growth.",
+            "targetPrice": 88.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "SBUX"
             ]
         },
         {
@@ -1823,7 +1823,7 @@
     ],
     "sigDevs": [
         {
-            "headline": "Starbucks Q2 adjusted EPS USD 0.68",
+            "headline": "Starbucks Cuts FY Comparable Sales Growth Forecast",
             "date": "2024-04-30"
         }
     ],
@@ -1901,21 +1901,21 @@
             "formType": "DEFA14A"
         },
         {
-            "id": "0001193125-24-038595_829224",
-            "type": "Proxy Statements",
-            "title": "DEFA14A : Proxy Statements",
-            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
-            "filingDate": 1708041600000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000829224/000119312524038595/thumbnail.png",
-            "formType": "DEFA14A"
-        },
-        {
             "id": "0001193125-24-038093_829224",
             "type": "Proxy Statements",
             "title": "DEFA14A : Proxy Statements",
             "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
             "filingDate": 1708041600000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000829224/000119312524038093/thumbnail.png",
+            "formType": "DEFA14A"
+        },
+        {
+            "id": "0001193125-24-038595_829224",
+            "type": "Proxy Statements",
+            "title": "DEFA14A : Proxy Statements",
+            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
+            "filingDate": 1708041600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000829224/000119312524038595/thumbnail.png",
             "formType": "DEFA14A"
         },
         {
@@ -2018,21 +2018,21 @@
             "formType": "DEFA14A"
         },
         {
-            "id": "0001193125-24-015488_829224",
-            "type": "Proxy Statements",
-            "title": "DEFA14A : Proxy Statements",
-            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
-            "filingDate": 1706140800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000829224/000119312524015488/thumbnail.png",
-            "formType": "DEFA14A"
-        },
-        {
             "id": "0001193125-24-015490_829224",
             "type": "Proxy Statements",
             "title": "DEFA14A : Proxy Statements",
             "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
             "filingDate": 1706140800000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000829224/000119312524015490/thumbnail.png",
+            "formType": "DEFA14A"
+        },
+        {
+            "id": "0001193125-24-015488_829224",
+            "type": "Proxy Statements",
+            "title": "DEFA14A : Proxy Statements",
+            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
+            "filingDate": 1706140800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000829224/000119312524015488/thumbnail.png",
             "formType": "DEFA14A"
         },
         {

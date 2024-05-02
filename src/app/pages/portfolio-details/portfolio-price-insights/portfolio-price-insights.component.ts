@@ -93,37 +93,31 @@ export class PortfolioPriceInsightsComponent implements OnInit {
       this.fiftyTwoWeekLowChartData.push({
         name: stock.symbol,
         value:
-          ((stock.regularMarketPrice - stock.fiftyTwoWeekLow) /
-            stock.fiftyTwoWeekLow) *
-          100,
+          (stock.regularMarketPrice - stock.fiftyTwoWeekLow) / stock.fiftyTwoWeekLow * 100,
       });
       this.fiftyTwoWeekHighChartData.push({
         name: stock.symbol,
         value:
-          ((stock.regularMarketPrice - stock.fiftyTwoWeekHigh) /
-            stock.fiftyTwoWeekHigh) *
-          100,
+          (stock.regularMarketPrice - stock.fiftyTwoWeekHigh) / stock.fiftyTwoWeekHigh * 100,
       });
-      this.discountChartData.push({
-        name: stock.symbol,
-        value:
-          ((stock.regularMarketPrice - stock.targetMeanPrice) /
-            stock.targetMeanPrice) *
-          100,
-      });
+
+      if (stock.targetMeanPrice) { 
+        this.discountChartData.push({
+          name: stock.symbol,
+          value:
+            (stock.regularMarketPrice - stock.targetMeanPrice) / stock.targetMeanPrice * 100,
+        });
+      }
+
       this.fiftyDayMAChartData.push({
         name: stock.symbol,
         value:
-          ((stock.regularMarketPrice - stock.fiftyDayAverage) /
-            stock.fiftyDayAverage) *
-          100,
+          (stock.regularMarketPrice - stock.fiftyDayAverage) / stock.fiftyDayAverage * 100,
       });
       this.twoHundredDayMAChartData.push({
         name: stock.symbol,
         value:
-          ((stock.regularMarketPrice - stock.twoHundredDayAverage) /
-            stock.twoHundredDayAverage) *
-          100,
+          (stock.regularMarketPrice - stock.twoHundredDayAverage) / stock.twoHundredDayAverage * 100,
       });
     });
 

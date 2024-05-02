@@ -12,9 +12,9 @@
                 "sectorDirection": "Bearish",
                 "sectorScore": 2,
                 "sectorScoreDescription": "Bearish Evidence",
-                "indexDirection": "Bullish",
+                "indexDirection": "Bearish",
                 "indexScore": 3,
-                "indexScoreDescription": "Strong Bullish Evidence"
+                "indexScoreDescription": "Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
@@ -45,12 +45,12 @@
             "provider": "Trading Central",
             "support": 101.86,
             "resistance": 174.22,
-            "stopLoss": 141.574426
+            "stopLoss": 141.497476
         },
         "valuation": {
             "color": 0.0,
             "description": "Overvalued",
-            "discount": "-0%",
+            "discount": "0%",
             "relativeValue": "Premium",
             "provider": "Trading Central"
         }
@@ -58,10 +58,10 @@
     "companySnapshot": {
         "sectorInfo": "Technology",
         "company": {
-            "innovativeness": 0.7515000000000001,
+            "innovativeness": 0.7825,
             "hiring": 0.8539,
-            "insiderSentiments": 0.0989,
-            "earningsReports": 0.9854
+            "insiderSentiments": 0.0987,
+            "earningsReports": 0.9823999999999999
         },
         "sector": {
             "innovativeness": 0.5,
@@ -89,28 +89,28 @@
             "AMD\u2019s gaming semi-custom chip business is beholden to the design cycles and launches of new gaming consoles, and it might be a couple of more years until next generation consoles arrive."
         ],
         "companyName": "Advanced Micro Devices, Inc.",
-        "msBullishBearishSummariesPublishDate": 1713226781000,
+        "msBullishBearishSummariesPublishDate": 1714546709000,
         "upsellReportType": "MORNINGSTAR_ANALYST"
     },
     "upsellSearchDD": {
         "researchReports": {
-            "reportId": "MS_0P0000006A_AnalystReport_1713226781000",
+            "reportId": "MS_0P0000006A_AnalystReport_1714546709000",
             "provider": "Morningstar",
-            "title": "AMD Earnings: Raising Valuation to $145 From $125 as AI GPU Revenue Is on the Rise",
-            "reportDate": "2024-04-16T00:19:41Z",
+            "title": "AMD Earnings: Maintaining $145 Valuation as AI GPU Sales Met Our Expectations",
+            "reportDate": "2024-05-01T06:58:29Z",
             "summary": "Advanced Micro Devices designs a variety of digital semiconductors for markets such as PCs, gaming consoles, data centers, industrial, and automotive applications, among others. AMD\u2019s traditional strength was in central processing units, CPUs, and graphics processing units, or GPUs, used in PCs and data centers. Additionally, the firm supplies the chips found in prominent game consoles such as the Sony PlayStation and Microsoft Xbox. In 2022, the firm acquired field-programmable gate array, or FPGA, leader Xilinx to diversify its business and augment its opportunities in key end markets such as the data center and automotive. ",
             "investmentRating": "Neutral"
         }
     },
     "events": [
         {
-            "eventType": "MACD",
+            "eventType": "Engulfing Line (Bearish)",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "L",
+            "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
             "startDate": 1714397400,
-            "endDate": 1714397400
+            "endDate": 1714483800
         }
     ],
     "reports": [
@@ -394,6 +394,18 @@
             ]
         },
         {
+            "id": "2707_Analyst Report_1691061233000",
+            "headHtml": "Analyst Report: Advanced Micro Devices Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2023-08-03T11:13:53Z",
+            "reportTitle": "Advanced Micro Devices is the number-two player in x86-based microprocessors, behind Intel, and -- with the 2008 acquisition of ATI -- a top player in graphic processors. In 2021, Advanced Micro Devices acquired Xilinx, expanding its presence in embedded computing and data center.",
+            "targetPrice": 170.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "AMD"
+            ]
+        },
+        {
             "id": "37251_Market Summary_1691061233000",
             "headHtml": "Market Digest: NLY, AMD, ETN, FIS, HP, PEG, SBUX, SON, IGT",
             "provider": "Argus Research",
@@ -409,18 +421,6 @@
                 "HP",
                 "NLY",
                 "ETN"
-            ]
-        },
-        {
-            "id": "2707_Analyst Report_1691061233000",
-            "headHtml": "Analyst Report: Advanced Micro Devices Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2023-08-03T11:13:53Z",
-            "reportTitle": "Advanced Micro Devices is the number-two player in x86-based microprocessors, behind Intel, and -- with the 2008 acquisition of ATI -- a top player in graphic processors. In 2021, Advanced Micro Devices acquired Xilinx, expanding its presence in embedded computing and data center.",
-            "targetPrice": 170.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "AMD"
             ]
         },
         {
@@ -1639,18 +1639,6 @@
             ]
         },
         {
-            "id": "2707_Analyst Report_1580342400000",
-            "headHtml": "Analyst Report: Advanced Micro Devices Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2020-01-30T00:00:00Z",
-            "reportTitle": "Advanced Micro Devices is the number-two player in x86-based microprocessors, behind Intel, and -- with the 2008 acquisition of ATI -- a top player in graphic processors. In 2009, Advanced Micro Devices spun off its foundry operations into a joint venture called Global Foundries. In mid-2014, AMD underwent an internal reorganization, aligning businesses along functional lines and creating a single internal infrastructure.",
-            "targetPrice": 60.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "AMD"
-            ]
-        },
-        {
             "id": "26072_Market Update_1580342400000",
             "headHtml": "Market Update: AMD, EAT, GS, HOG, HCA, PYPL, PFE, URI, NEE",
             "provider": "Argus Research",
@@ -1667,15 +1655,36 @@
                 "PFE",
                 "NEE"
             ]
+        },
+        {
+            "id": "2707_Analyst Report_1580342400000",
+            "headHtml": "Analyst Report: Advanced Micro Devices Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2020-01-30T00:00:00Z",
+            "reportTitle": "Advanced Micro Devices is the number-two player in x86-based microprocessors, behind Intel, and -- with the 2008 acquisition of ATI -- a top player in graphic processors. In 2009, Advanced Micro Devices spun off its foundry operations into a joint venture called Global Foundries. In mid-2014, AMD underwent an internal reorganization, aligning businesses along functional lines and creating a single internal infrastructure.",
+            "targetPrice": 60.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "AMD"
+            ]
         }
     ],
     "sigDevs": [
         {
-            "headline": "AMD Hits Us Roadblock In Selling Ai Chip Tailored For China - Bloomberg News",
-            "date": "2024-03-05"
+            "headline": "AMD Q1 EPS USD 0.07",
+            "date": "2024-04-30"
         }
     ],
     "secReports": [
+        {
+            "id": "0000002488-24-000056_2488",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1714521600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000000248824000056/thumbnail.png",
+            "formType": "10-Q"
+        },
         {
             "id": "0000002488-24-000054_2488",
             "type": "Corporate Changes & Voting Matters",
@@ -2035,15 +2044,6 @@
             "filingDate": 1651017600000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000119312522123652/thumbnail.png",
             "formType": "8-K/A"
-        },
-        {
-            "id": "0001193125-22-091851_2488",
-            "type": "Proxy Statements",
-            "title": "DEFA14A : Proxy Statements",
-            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
-            "filingDate": 1648684800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000119312522091851/thumbnail.png",
-            "formType": "DEFA14A"
         }
     ]
 }

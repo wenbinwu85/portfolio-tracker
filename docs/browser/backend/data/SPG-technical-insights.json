@@ -5,16 +5,16 @@
             "provider": "Trading Central",
             "sector": "Real Estate",
             "shortTermOutlook": {
-                "stateDescription": "Recent bullish events outweigh bearish events.",
-                "direction": "Bullish",
-                "score": 1,
-                "scoreDescription": "Weak Bullish Evidence",
+                "stateDescription": "Recent bearish events outweigh bullish events.",
+                "direction": "Bearish",
+                "score": 2,
+                "scoreDescription": "Bearish Evidence",
                 "sectorDirection": "Bullish",
                 "sectorScore": 1,
                 "sectorScoreDescription": "Weak Bullish Evidence",
-                "indexDirection": "Bullish",
+                "indexDirection": "Bearish",
                 "indexScore": 3,
-                "indexScoreDescription": "Strong Bullish Evidence"
+                "indexScoreDescription": "Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
@@ -43,14 +43,14 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 142.22,
-            "resistance": 150.92,
-            "stopLoss": 132.752863
+            "support": 111.17,
+            "resistance": 142.22,
+            "stopLoss": 133.76788
         },
         "valuation": {
             "color": 0.0,
             "description": "Overvalued",
-            "discount": "-22%",
+            "discount": "-21%",
             "relativeValue": "Premium",
             "provider": "Trading Central"
         }
@@ -58,12 +58,12 @@
     "companySnapshot": {
         "sectorInfo": "Real Estate",
         "company": {
-            "innovativeness": 0.6265,
+            "innovativeness": 0.625,
             "hiring": 0.6901,
             "sustainability": 0.5611999999999999,
             "insiderSentiments": 0.9506,
-            "earningsReports": 0.6957,
-            "dividends": 0.3772
+            "earningsReports": 0.6868000000000001,
+            "dividends": 0.3782
         },
         "sector": {
             "innovativeness": 0.5,
@@ -109,10 +109,10 @@
             "eventType": "MACD",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "L",
+            "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1714397400,
-            "endDate": 1714397400
+            "startDate": 1714483800,
+            "endDate": 1714483800
         }
     ],
     "reports": [
@@ -865,20 +865,6 @@
             ]
         },
         {
-            "id": "27784_Market Update_1598452719000",
-            "headHtml": "Market Update: PANW, SLF, BBY, MDU, SPG",
-            "provider": "Argus Research",
-            "reportDate": "2020-08-26T14:38:39Z",
-            "reportTitle": "Stocks were mixed on Wednesday morning amid strong earnings from Salesforce.com and new capital goods data. The Commerce Department said that orders for core capital goods excluding aircraft rose 1.9% in July, in line with the Reuters consensus forecast but down from 4.3% growth in June. Salesforce shares jumped 26% after the company posted strong fiscal 2Q results and raised its full-year revenue guidance. The Dow fell 0.3%, the S&P rose 0.4%, and the Nasdaq rose 1.0%. Crude oil traded near $43.50 per barrel, while gold rose $25 to $1948 per ounce.",
-            "tickers": [
-                "BBY",
-                "SPG",
-                "SLF",
-                "MDU",
-                "PANW"
-            ]
-        },
-        {
             "id": "3403_Analyst Report_1598452719000",
             "headHtml": "Analyst Report: Simon Property Group, Inc.",
             "provider": "Argus Research",
@@ -891,10 +877,10 @@
             ]
         },
         {
-            "id": "27784_Market Update_1598400000000",
+            "id": "27784_Market Update_1598452719000",
             "headHtml": "Market Update: PANW, SLF, BBY, MDU, SPG",
             "provider": "Argus Research",
-            "reportDate": "2020-08-26T00:00:00Z",
+            "reportDate": "2020-08-26T14:38:39Z",
             "reportTitle": "Stocks were mixed on Wednesday morning amid strong earnings from Salesforce.com and new capital goods data. The Commerce Department said that orders for core capital goods excluding aircraft rose 1.9% in July, in line with the Reuters consensus forecast but down from 4.3% growth in June. Salesforce shares jumped 26% after the company posted strong fiscal 2Q results and raised its full-year revenue guidance. The Dow fell 0.3%, the S&P rose 0.4%, and the Nasdaq rose 1.0%. Crude oil traded near $43.50 per barrel, while gold rose $25 to $1948 per ounce.",
             "tickers": [
                 "BBY",
@@ -917,15 +903,17 @@
             ]
         },
         {
-            "id": "3403_Analyst Report_1591883229000",
-            "headHtml": "Analyst Report: Simon Property Group, Inc.",
+            "id": "27784_Market Update_1598400000000",
+            "headHtml": "Market Update: PANW, SLF, BBY, MDU, SPG",
             "provider": "Argus Research",
-            "reportDate": "2020-06-11T13:47:09Z",
-            "reportTitle": "Simon Property Group Inc., based in Indianapolis, is a retail REIT that owns and leases malls and outlets. Simon has an interest in or owns 234 properties with 191 million square feet of leasable space in North America, Asia, and Europe. It also has a 22% interest in Klepierre, a Paris-based real estate firm, which owns shopping centers in 15 European countries. SPG is a member of the S&P 500.",
-            "targetPrice": 110.0,
-            "investmentRating": "Bullish",
+            "reportDate": "2020-08-26T00:00:00Z",
+            "reportTitle": "Stocks were mixed on Wednesday morning amid strong earnings from Salesforce.com and new capital goods data. The Commerce Department said that orders for core capital goods excluding aircraft rose 1.9% in July, in line with the Reuters consensus forecast but down from 4.3% growth in June. Salesforce shares jumped 26% after the company posted strong fiscal 2Q results and raised its full-year revenue guidance. The Dow fell 0.3%, the S&P rose 0.4%, and the Nasdaq rose 1.0%. Crude oil traded near $43.50 per barrel, while gold rose $25 to $1948 per ounce.",
             "tickers": [
-                "SPG"
+                "BBY",
+                "SPG",
+                "SLF",
+                "MDU",
+                "PANW"
             ]
         },
         {
@@ -940,6 +928,18 @@
                 "BAX",
                 "SPG",
                 "M"
+            ]
+        },
+        {
+            "id": "3403_Analyst Report_1591883229000",
+            "headHtml": "Analyst Report: Simon Property Group, Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2020-06-11T13:47:09Z",
+            "reportTitle": "Simon Property Group Inc., based in Indianapolis, is a retail REIT that owns and leases malls and outlets. Simon has an interest in or owns 234 properties with 191 million square feet of leasable space in North America, Asia, and Europe. It also has a 22% interest in Klepierre, a Paris-based real estate firm, which owns shopping centers in 15 European countries. SPG is a member of the S&P 500.",
+            "targetPrice": 110.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "SPG"
             ]
         },
         {
@@ -1420,6 +1420,18 @@
             ]
         },
         {
+            "id": "3403_Analyst Report_1540512000000",
+            "headHtml": "Maintaining BUY on redevelopment and solid 3Q",
+            "provider": "Argus Research",
+            "reportDate": "2018-10-26T00:00:00Z",
+            "reportTitle": "Simon Property Group Inc., based in Indianapolis, is a retail REIT that owns and leases out its malls and outlets. Simon has an interest in or owns 235 properties with 191 million square feet of leasable space. It also has a 21% interest in Klepierre, a Paris-based real estate firm, which owns shopping centers in 16 European countries. SPG is a member of the S&P 500.",
+            "targetPrice": 200.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "SPG"
+            ]
+        },
+        {
             "id": "22366_Market Summary_1540512000000",
             "headHtml": "Market Digest: BSX, CHKP, GD, LVS, MRK, MSFT, NOK, NSC, PKG, RTN, SPG, SWK, TROW, OC, KKR, TWTR",
             "provider": "Argus Research",
@@ -1442,18 +1454,6 @@
                 "CHKP",
                 "GD",
                 "NSC"
-            ]
-        },
-        {
-            "id": "3403_Analyst Report_1540512000000",
-            "headHtml": "Maintaining BUY on redevelopment and solid 3Q",
-            "provider": "Argus Research",
-            "reportDate": "2018-10-26T00:00:00Z",
-            "reportTitle": "Simon Property Group Inc., based in Indianapolis, is a retail REIT that owns and leases out its malls and outlets. Simon has an interest in or owns 235 properties with 191 million square feet of leasable space. It also has a 21% interest in Klepierre, a Paris-based real estate firm, which owns shopping centers in 16 European countries. SPG is a member of the S&P 500.",
-            "targetPrice": 200.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "SPG"
             ]
         },
         {

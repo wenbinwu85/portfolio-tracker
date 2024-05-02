@@ -5,25 +5,25 @@
             "provider": "Trading Central",
             "sector": "Energy",
             "shortTermOutlook": {
-                "stateDescription": "Recent bullish events outweigh bearish events.",
-                "direction": "Bullish",
-                "score": 2,
-                "scoreDescription": "Bullish Evidence",
-                "sectorDirection": "Bullish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bullish Evidence",
-                "indexDirection": "Bullish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bullish Evidence"
-            },
-            "intermediateTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
                 "score": 1,
                 "scoreDescription": "Weak Bearish Evidence",
+                "sectorDirection": "Bearish",
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bearish Evidence",
+                "indexDirection": "Bearish",
+                "indexScore": 3,
+                "indexScoreDescription": "Strong Bearish Evidence"
+            },
+            "intermediateTermOutlook": {
+                "stateDescription": "Recent bearish events outweigh bullish events.",
+                "direction": "Bearish",
+                "score": 2,
+                "scoreDescription": "Bearish Evidence",
                 "sectorDirection": "Bullish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bullish Evidence",
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bullish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 4,
                 "indexScoreDescription": "Very Strong Bearish Evidence"
@@ -31,8 +31,8 @@
             "longTermOutlook": {
                 "stateDescription": "All events are bullish.",
                 "direction": "Bullish",
-                "score": 3,
-                "scoreDescription": "Strong Bullish Evidence",
+                "score": 4,
+                "scoreDescription": "Very Strong Bullish Evidence",
                 "sectorDirection": "Bullish",
                 "sectorScore": 3,
                 "sectorScoreDescription": "Strong Bullish Evidence",
@@ -43,9 +43,9 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 26.2405,
+            "support": 26.425,
             "resistance": 29.045,
-            "stopLoss": 27.407486
+            "stopLoss": 26.740167
         },
         "valuation": {
             "color": 0.5,
@@ -58,9 +58,9 @@
         "sectorInfo": "Energy",
         "company": {
             "innovativeness": 0.2009,
-            "insiderSentiments": 0.7953,
-            "earningsReports": 0.7735,
-            "dividends": 0.6528
+            "insiderSentiments": 0.7968999999999999,
+            "earningsReports": 0.7719,
+            "dividends": 0.6751999999999999
         },
         "sector": {
             "innovativeness": 0.5,
@@ -103,13 +103,13 @@
     },
     "events": [
         {
-            "eventType": "Gap Down",
+            "eventType": "Double Top",
             "pricePeriod": "D",
-            "tradingHorizon": "S",
-            "tradeType": "U",
-            "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1714138200,
-            "endDate": 1714397400
+            "tradingHorizon": "I",
+            "tradeType": "S",
+            "imageUrl": "https://s.yimg.com/uc/fin/img/assets/bearish-double-top.svg",
+            "startDate": 1710250200,
+            "endDate": 1714483800
         }
     ],
     "reports": [
@@ -316,18 +316,6 @@
             ]
         },
         {
-            "id": "2942_Analyst Report_1660562833000",
-            "headHtml": "Analyst Report: Enterprise Prods Pntr L",
-            "provider": "Argus Research",
-            "reportDate": "2022-08-15T11:27:13Z",
-            "reportTitle": "Enterprise Products Partners L.P. is a North American provider of midstream energy services to producers and consumers of natural gas, NGLs, crude oil, refined products and petrochemicals. The partnership's assets include over 50,000 miles of natural gas, NGL, refined products, and petrochemical pipelines; 260 million barrels of storage capacity for NGLs, refined products and crude oil; and 14 billion cubic feet of natural gas storage capacity. The company completed its IPO in July 1998.",
-            "targetPrice": 32.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "EPD"
-            ]
-        },
-        {
             "id": "33802_Market Summary_1660562833000",
             "headHtml": "Market Digest: MKL, AES, AIG, CHD, EPD, ETR, VIAV, LUV, NI, OXY, SPH, ELV, KHC, W, UWMC",
             "provider": "Argus Research",
@@ -349,6 +337,18 @@
                 "CHD",
                 "AIG",
                 "UWMC"
+            ]
+        },
+        {
+            "id": "2942_Analyst Report_1660562833000",
+            "headHtml": "Analyst Report: Enterprise Prods Pntr L",
+            "provider": "Argus Research",
+            "reportDate": "2022-08-15T11:27:13Z",
+            "reportTitle": "Enterprise Products Partners L.P. is a North American provider of midstream energy services to producers and consumers of natural gas, NGLs, crude oil, refined products and petrochemicals. The partnership's assets include over 50,000 miles of natural gas, NGL, refined products, and petrochemical pipelines; 260 million barrels of storage capacity for NGLs, refined products and crude oil; and 14 billion cubic feet of natural gas storage capacity. The company completed its IPO in July 1998.",
+            "targetPrice": 32.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "EPD"
             ]
         },
         {
@@ -686,6 +686,18 @@
             ]
         },
         {
+            "id": "2942_Analyst Report_1596464132000",
+            "headHtml": "Analyst Report: Enterprise Prods Pntr L",
+            "provider": "Argus Research",
+            "reportDate": "2020-08-03T14:15:32Z",
+            "reportTitle": "Enterprise Products Partners L.P. is a North American provider of midstream energy services to producers and consumers of natural gas, NGLs, crude oil, refined products and petrochemicals. The partnership's assets include over 50,000 miles of natural gas, NGL, refined products, and petrochemical pipelines; 260 million barrels of storage capacity for NGLs, refined products and crude oil; and 14 billion cubic feet of natural gas storage capacity. The company completed its IPO in July 1998.",
+            "targetPrice": 20.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "EPD"
+            ]
+        },
+        {
             "id": "27585_Market Update_1596464132000",
             "headHtml": "Market Update: CLX, EPD, FLEX, HES, PG, SANM, AZN",
             "provider": "Argus Research",
@@ -699,18 +711,6 @@
                 "FLEX",
                 "SANM",
                 "CLX"
-            ]
-        },
-        {
-            "id": "2942_Analyst Report_1596464132000",
-            "headHtml": "Analyst Report: Enterprise Prods Pntr L",
-            "provider": "Argus Research",
-            "reportDate": "2020-08-03T14:15:32Z",
-            "reportTitle": "Enterprise Products Partners L.P. is a North American provider of midstream energy services to producers and consumers of natural gas, NGLs, crude oil, refined products and petrochemicals. The partnership's assets include over 50,000 miles of natural gas, NGL, refined products, and petrochemical pipelines; 260 million barrels of storage capacity for NGLs, refined products and crude oil; and 14 billion cubic feet of natural gas storage capacity. The company completed its IPO in July 1998.",
-            "targetPrice": 20.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "EPD"
             ]
         },
         {
@@ -920,6 +920,18 @@
             ]
         },
         {
+            "id": "2942_Analyst Report_1572357447000",
+            "headHtml": "Analyst Report: Enterprise Prods Pntr L",
+            "provider": "Argus Research",
+            "reportDate": "2019-10-29T13:57:27Z",
+            "reportTitle": "Enterprise Products Partners L.P. is a North American provider of midstream energy services to producers and consumers of natural gas, NGLs, crude oil, refined products and petrochemicals. The partnership's assets include over 50,000 miles of natural gas, NGL, refined products, and petrochemical pipelines; 260 million barrels of storage capacity for NGLs, refined products and crude oil; and 14 billion cubic feet of natural gas storage capacity. The company completed its IPO in July 1998.",
+            "targetPrice": 38.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "EPD"
+            ]
+        },
+        {
             "id": "25335_Market Update_1572357447000",
             "headHtml": "Market Update: DHR, FLEX, MA, RTN, QSR, VFC, BAX, EPD, GT, RIG",
             "provider": "Argus Research",
@@ -935,30 +947,6 @@
                 "BAX",
                 "GT",
                 "DHR"
-            ]
-        },
-        {
-            "id": "2942_Analyst Report_1572357447000",
-            "headHtml": "Analyst Report: Enterprise Prods Pntr L",
-            "provider": "Argus Research",
-            "reportDate": "2019-10-29T13:57:27Z",
-            "reportTitle": "Enterprise Products Partners L.P. is a North American provider of midstream energy services to producers and consumers of natural gas, NGLs, crude oil, refined products and petrochemicals. The partnership's assets include over 50,000 miles of natural gas, NGL, refined products, and petrochemical pipelines; 260 million barrels of storage capacity for NGLs, refined products and crude oil; and 14 billion cubic feet of natural gas storage capacity. The company completed its IPO in July 1998.",
-            "targetPrice": 38.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "EPD"
-            ]
-        },
-        {
-            "id": "2942_Analyst Report_1572307200000",
-            "headHtml": "Analyst Report: Enterprise Prods Pntr L",
-            "provider": "Argus Research",
-            "reportDate": "2019-10-29T00:00:00Z",
-            "reportTitle": "Enterprise Products Partners L.P. is a North American provider of midstream energy services to producers and consumers of natural gas, NGLs, crude oil, refined products and petrochemicals. The partnership's assets include over 50,000 miles of natural gas, NGL, refined products, and petrochemical pipelines; 260 million barrels of storage capacity for NGLs, refined products and crude oil; and 14 billion cubic feet of natural gas storage capacity. The company completed its IPO in July 1998.",
-            "targetPrice": 38.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "EPD"
             ]
         },
         {
@@ -978,6 +966,18 @@
                 "GT",
                 "RTN",
                 "DHR"
+            ]
+        },
+        {
+            "id": "2942_Analyst Report_1572307200000",
+            "headHtml": "Analyst Report: Enterprise Prods Pntr L",
+            "provider": "Argus Research",
+            "reportDate": "2019-10-29T00:00:00Z",
+            "reportTitle": "Enterprise Products Partners L.P. is a North American provider of midstream energy services to producers and consumers of natural gas, NGLs, crude oil, refined products and petrochemicals. The partnership's assets include over 50,000 miles of natural gas, NGL, refined products, and petrochemical pipelines; 260 million barrels of storage capacity for NGLs, refined products and crude oil; and 14 billion cubic feet of natural gas storage capacity. The company completed its IPO in July 1998.",
+            "targetPrice": 38.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "EPD"
             ]
         },
         {
@@ -1007,6 +1007,18 @@
             ]
         },
         {
+            "id": "2942_Analyst Report_1565049600000",
+            "headHtml": "Reaffirming BUY following better-than-expected 2Q19",
+            "provider": "Argus Research",
+            "reportDate": "2019-08-06T00:00:00Z",
+            "reportTitle": "Enterprise Products Partners L.P. is a North American provider of midstream energy services to producers and consumers of natural gas, NGLs, crude oil, refined products and petrochemicals. The partnership's assets include over 50,000 miles of natural gas, NGL, refined products, and petrochemical pipelines; 260 million barrels of storage capacity for NGLs, refined products and crude oil; and 14 billion cubic feet of natural gas storage capacity. The company completed its IPO in July 1998.",
+            "targetPrice": 38.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "EPD"
+            ]
+        },
+        {
             "id": "24641_Market Update_1565049600000",
             "headHtml": "Market Update: ABBV, ADM, EPD, HES, X",
             "provider": "Argus Research",
@@ -1018,18 +1030,6 @@
                 "X",
                 "ADM",
                 "ABBV"
-            ]
-        },
-        {
-            "id": "2942_Analyst Report_1565049600000",
-            "headHtml": "Reaffirming BUY following better-than-expected 2Q19",
-            "provider": "Argus Research",
-            "reportDate": "2019-08-06T00:00:00Z",
-            "reportTitle": "Enterprise Products Partners L.P. is a North American provider of midstream energy services to producers and consumers of natural gas, NGLs, crude oil, refined products and petrochemicals. The partnership's assets include over 50,000 miles of natural gas, NGL, refined products, and petrochemical pipelines; 260 million barrels of storage capacity for NGLs, refined products and crude oil; and 14 billion cubic feet of natural gas storage capacity. The company completed its IPO in July 1998.",
-            "targetPrice": 38.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "EPD"
             ]
         },
         {
@@ -1063,6 +1063,18 @@
             ]
         },
         {
+            "id": "2942_Analyst Report_1557360000000",
+            "headHtml": "Reiterating BUY following better-than-expected 1Q19",
+            "provider": "Argus Research",
+            "reportDate": "2019-05-09T00:00:00Z",
+            "reportTitle": "Enterprise Products Partners L.P. is a North American provider of midstream energy services to producers and consumers of natural gas, NGLs, crude oil, refined products and petrochemicals. The partnership's assets include over 50,000 miles of natural gas, NGL, refined products, and petrochemical pipelines; 260 million barrels of storage capacity for NGLs, refined products and crude oil; and 14 billion cubic feet of natural gas storage capacity. The company completed its IPO in July 1998.",
+            "targetPrice": 38.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "EPD"
+            ]
+        },
+        {
             "id": "23929_Market Update_1557360000000",
             "headHtml": "Market Update: GOLD, ACM, BBBY, CCEP, CHK, EPD, HSC, KLAC, NYT, OKE",
             "provider": "Argus Research",
@@ -1079,18 +1091,6 @@
                 "OKE",
                 "HSC",
                 "ACM"
-            ]
-        },
-        {
-            "id": "2942_Analyst Report_1557360000000",
-            "headHtml": "Reiterating BUY following better-than-expected 1Q19",
-            "provider": "Argus Research",
-            "reportDate": "2019-05-09T00:00:00Z",
-            "reportTitle": "Enterprise Products Partners L.P. is a North American provider of midstream energy services to producers and consumers of natural gas, NGLs, crude oil, refined products and petrochemicals. The partnership's assets include over 50,000 miles of natural gas, NGL, refined products, and petrochemical pipelines; 260 million barrels of storage capacity for NGLs, refined products and crude oil; and 14 billion cubic feet of natural gas storage capacity. The company completed its IPO in July 1998.",
-            "targetPrice": 38.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "EPD"
             ]
         },
         {
@@ -1120,6 +1120,18 @@
             ]
         },
         {
+            "id": "2942_Analyst Report_1549411200000",
+            "headHtml": "Better-than-expected 4Q results; reaffirm BUY",
+            "provider": "Argus Research",
+            "reportDate": "2019-02-06T00:00:00Z",
+            "reportTitle": "Enterprise Products Partners L.P. is a North American provider of midstream energy services to producers and consumers of natural gas, NGLs, crude oil, refined products and petrochemicals. The partnership's assets include over 50,000 miles of natural gas, NGL, refined products, and petrochemical pipelines; 260 million barrels of storage capacity for NGLs, refined products and crude oil; and 14 billion cubic feet of natural gas storage capacity. The company completed its IPO in July 1998.",
+            "targetPrice": 38.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "EPD"
+            ]
+        },
+        {
             "id": "23167_Market Update_1549411200000",
             "headHtml": "Market Update: EPD, ETN, RL, VSH, ANTM",
             "provider": "Argus Research",
@@ -1131,18 +1143,6 @@
                 "RL",
                 "VSH",
                 "ETN"
-            ]
-        },
-        {
-            "id": "2942_Analyst Report_1549411200000",
-            "headHtml": "Better-than-expected 4Q results; reaffirm BUY",
-            "provider": "Argus Research",
-            "reportDate": "2019-02-06T00:00:00Z",
-            "reportTitle": "Enterprise Products Partners L.P. is a North American provider of midstream energy services to producers and consumers of natural gas, NGLs, crude oil, refined products and petrochemicals. The partnership's assets include over 50,000 miles of natural gas, NGL, refined products, and petrochemical pipelines; 260 million barrels of storage capacity for NGLs, refined products and crude oil; and 14 billion cubic feet of natural gas storage capacity. The company completed its IPO in July 1998.",
-            "targetPrice": 38.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "EPD"
             ]
         },
         {
@@ -1175,6 +1175,18 @@
             ]
         },
         {
+            "id": "2942_Analyst Report_1541376000000",
+            "headHtml": "New guidance hike; reaffirming $38 target",
+            "provider": "Argus Research",
+            "reportDate": "2018-11-05T00:00:00Z",
+            "reportTitle": "Enterprise Products Partners L.P. is a North American provider of midstream energy services to producers and consumers of natural gas, NGLs, crude oil, refined products and petrochemicals. The partnership's assets include over 49,000 miles of natural gas, NGL, refined products, and petrochemical pipelines; 225 million barrels of storage capacity for NGLs, refined products and crude oil; and 14 billion cubic feet of natural gas storage capacity.",
+            "targetPrice": 38.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "EPD"
+            ]
+        },
+        {
             "id": "22430_Market Update_1541376000000",
             "headHtml": "Market Update: CLX, EPD, HES, MSI, OKE, PH, X, BRK/B",
             "provider": "Argus Research",
@@ -1189,18 +1201,6 @@
                 "PH",
                 "X",
                 "CLX"
-            ]
-        },
-        {
-            "id": "2942_Analyst Report_1541376000000",
-            "headHtml": "New guidance hike; reaffirming $38 target",
-            "provider": "Argus Research",
-            "reportDate": "2018-11-05T00:00:00Z",
-            "reportTitle": "Enterprise Products Partners L.P. is a North American provider of midstream energy services to producers and consumers of natural gas, NGLs, crude oil, refined products and petrochemicals. The partnership's assets include over 49,000 miles of natural gas, NGL, refined products, and petrochemical pipelines; 225 million barrels of storage capacity for NGLs, refined products and crude oil; and 14 billion cubic feet of natural gas storage capacity.",
-            "targetPrice": 38.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "EPD"
             ]
         }
     ],

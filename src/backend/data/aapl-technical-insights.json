@@ -12,15 +12,15 @@
                 "sectorDirection": "Bearish",
                 "sectorScore": 2,
                 "sectorScoreDescription": "Bearish Evidence",
-                "indexDirection": "Bullish",
+                "indexDirection": "Bearish",
                 "indexScore": 3,
-                "indexScoreDescription": "Strong Bullish Evidence"
+                "indexScoreDescription": "Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
-                "stateDescription": "Recent bearish events outweigh bullish events.",
+                "stateDescription": "All events are bearish.",
                 "direction": "Bearish",
-                "score": 2,
-                "scoreDescription": "Bearish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bearish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 4,
                 "sectorScoreDescription": "Very Strong Bearish Evidence",
@@ -43,9 +43,9 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 170.99,
-            "resistance": 179.35,
-            "stopLoss": 163.435596
+            "support": 169.24,
+            "resistance": 173.19,
+            "stopLoss": 162.458794
         },
         "valuation": {
             "color": 0.5,
@@ -60,9 +60,9 @@
             "innovativeness": 0.9961,
             "hiring": 0.9512999999999999,
             "sustainability": 0.575,
-            "insiderSentiments": 0.2854,
-            "earningsReports": 0.8466,
-            "dividends": 0.0915
+            "insiderSentiments": 0.2848,
+            "earningsReports": 0.8488,
+            "dividends": 0.0913
         },
         "sector": {
             "innovativeness": 0.5,
@@ -105,13 +105,13 @@
     },
     "events": [
         {
-            "eventType": "Williams %R",
+            "eventType": "Commodity Channel Index",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "L",
+            "tradeType": "U",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1714397400,
-            "endDate": 1714397400
+            "startDate": 1714483800,
+            "endDate": 1714483800
         }
     ],
     "reports": [
@@ -508,6 +508,18 @@
             ]
         },
         {
+            "id": "2660_Analyst Report_1691171066000",
+            "headHtml": "Analyst Report: Apple Inc",
+            "provider": "Argus Research",
+            "reportDate": "2023-08-04T17:44:26Z",
+            "reportTitle": "Apple manufactures smartphones, tablets, PCs, software and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including AirPods, Beats headphones and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
+            "targetPrice": 230.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "AAPL"
+            ]
+        },
+        {
             "id": "37274_Market Update_1691171066000",
             "headHtml": "Market Update: ILMN, AAPL, AMZN, ECL, ETR, KIM, MDT, PRU, SQ",
             "provider": "Argus Research",
@@ -523,18 +535,6 @@
                 "KIM",
                 "SQ",
                 "ECL"
-            ]
-        },
-        {
-            "id": "2660_Analyst Report_1691171066000",
-            "headHtml": "Analyst Report: Apple Inc",
-            "provider": "Argus Research",
-            "reportDate": "2023-08-04T17:44:26Z",
-            "reportTitle": "Apple manufactures smartphones, tablets, PCs, software and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including AirPods, Beats headphones and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
-            "targetPrice": 230.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "AAPL"
             ]
         },
         {
@@ -1479,18 +1479,6 @@
             ]
         },
         {
-            "id": "2660_Analyst Report_1627481615000",
-            "headHtml": "Analyst Report: Apple Inc",
-            "provider": "Argus Research",
-            "reportDate": "2021-07-28T14:13:35Z",
-            "reportTitle": "Apple manufactures smartphones, tablets, PCs, software and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including AirPods, Beats headphones and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
-            "targetPrice": 165.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "AAPL"
-            ]
-        },
-        {
             "id": "30494_Market Update_1627481615000",
             "headHtml": "Market Update: AAPL, ECL, ODFL, OMC, SBUX, SHW, SIVB, WM, AGNC",
             "provider": "Argus Research",
@@ -1506,6 +1494,18 @@
                 "WM",
                 "ECL",
                 "ODFL"
+            ]
+        },
+        {
+            "id": "2660_Analyst Report_1627481615000",
+            "headHtml": "Analyst Report: Apple Inc",
+            "provider": "Argus Research",
+            "reportDate": "2021-07-28T14:13:35Z",
+            "reportTitle": "Apple manufactures smartphones, tablets, PCs, software and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including AirPods, Beats headphones and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
+            "targetPrice": 165.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "AAPL"
             ]
         },
         {
@@ -1588,18 +1588,6 @@
             ]
         },
         {
-            "id": "2660_Analyst Report_1619704690000",
-            "headHtml": "Analyst Report: Apple Inc",
-            "provider": "Argus Research",
-            "reportDate": "2021-04-29T13:58:10Z",
-            "reportTitle": "Apple manufactures smartphones, tablets, PCs, software and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including AirPods, Beats headphones and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
-            "targetPrice": 165.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "AAPL"
-            ]
-        },
-        {
             "id": "29761_Market Update_1619704690000",
             "headHtml": "Market Update: AAPL, ADP, AEP, BA, MGM, QCOM, MA, MDLZ",
             "provider": "Argus Research",
@@ -1614,6 +1602,18 @@
                 "AEP",
                 "ADP",
                 "BA"
+            ]
+        },
+        {
+            "id": "2660_Analyst Report_1619704690000",
+            "headHtml": "Analyst Report: Apple Inc",
+            "provider": "Argus Research",
+            "reportDate": "2021-04-29T13:58:10Z",
+            "reportTitle": "Apple manufactures smartphones, tablets, PCs, software and peripherals for a worldwide customer base. Its products include Mac desktop and mobile PCs, iPhone, iPad, Apple Watch, and various consumer products, including AirPods, Beats headphones and Apple TV. Apple services include App Store, iTunes, iCloud, Apple TV+, Apple Arcade, Apple Music, Apple Pay, and more.",
+            "targetPrice": 165.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "AAPL"
             ]
         },
         {
@@ -2187,15 +2187,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0001193125-22-128361_320193",
-            "type": "Offering Registrations",
-            "title": "S-8 POS : Offering Registrations",
-            "description": "Post-effective amendment to a S-8 registration statement",
-            "filingDate": 1651190400000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000119312522128361/thumbnail.png",
-            "formType": "S-8 POS"
-        },
-        {
             "id": "0001193125-22-128368_320193",
             "type": "Offering Registrations",
             "title": "S-8 : Offering Registrations",
@@ -2203,6 +2194,15 @@
             "filingDate": 1651190400000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000119312522128368/thumbnail.png",
             "formType": "S-8"
+        },
+        {
+            "id": "0001193125-22-128361_320193",
+            "type": "Offering Registrations",
+            "title": "S-8 POS : Offering Registrations",
+            "description": "Post-effective amendment to a S-8 registration statement",
+            "filingDate": 1651190400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000320193/000119312522128361/thumbnail.png",
+            "formType": "S-8 POS"
         },
         {
             "id": "0000320193-22-000059_320193",

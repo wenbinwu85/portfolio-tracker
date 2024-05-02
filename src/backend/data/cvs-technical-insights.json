@@ -7,14 +7,14 @@
             "shortTermOutlook": {
                 "stateDescription": "Bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 1,
-                "scoreDescription": "Weak Bearish Evidence",
+                "score": 2,
+                "scoreDescription": "Bearish Evidence",
                 "sectorDirection": "Bullish",
-                "sectorScore": 2,
-                "sectorScoreDescription": "Bullish Evidence",
-                "indexDirection": "Bullish",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bullish Evidence",
+                "indexDirection": "Bearish",
                 "indexScore": 3,
-                "indexScoreDescription": "Strong Bullish Evidence"
+                "indexScoreDescription": "Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
@@ -29,10 +29,10 @@
                 "indexScoreDescription": "Very Strong Bearish Evidence"
             },
             "longTermOutlook": {
-                "stateDescription": "All events are bearish.",
+                "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 4,
-                "scoreDescription": "Very Strong Bearish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bearish Evidence",
                 "sectorDirection": "Bullish",
                 "sectorScore": 2,
                 "sectorScoreDescription": "Bullish Evidence",
@@ -43,9 +43,9 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 66.61,
+            "support": 67.67,
             "resistance": 69.554,
-            "stopLoss": 64.039496
+            "stopLoss": 64.911101
         },
         "valuation": {
             "color": 0.5,
@@ -57,11 +57,11 @@
     "companySnapshot": {
         "sectorInfo": "Healthcare",
         "company": {
-            "innovativeness": 0.8915000000000001,
+            "innovativeness": 0.8926000000000001,
             "hiring": 0.9893000000000001,
             "sustainability": 0.4359,
-            "insiderSentiments": 0.47869999999999996,
-            "earningsReports": 0.8991,
+            "insiderSentiments": 0.4779,
+            "earningsReports": 0.8994,
             "dividends": 0.821
         },
         "sector": {
@@ -87,31 +87,31 @@
         "msBearishSummary": [
             "Healthcare reform will likely remain a recurring political topic until universal, affordable coverage is achieved in the U.S., and CVS' stock may experience volatility if scenarios that threaten its prospects gain traction.",
             "Foot traffic at physical retail stores could continue to decline as consumers increasingly favor online retailers, like Amazon, creating the need to reinvent its retail store footprint's operations.",
-            "CVS's profit growth prospects appear lower than its managed care peers due to the challenges it faces in its retail operations."
+            "CVS' profit growth prospects appear lower than its managed care peers due to the challenges it faces in its retail operations."
         ],
         "companyName": "CVS Health Corporation",
-        "msBullishBearishSummariesPublishDate": 1712964835000,
+        "msBullishBearishSummariesPublishDate": 1714574053000,
         "upsellReportType": "MORNINGSTAR_ANALYST"
     },
     "upsellSearchDD": {
         "researchReports": {
-            "reportId": "MS_0P000000ZP_AnalystReport_1712964835000",
+            "reportId": "MS_0P000000ZP_AnalystReport_1714574053000",
             "provider": "Morningstar",
-            "title": "Medicare Advantage Final Rate Notice Weaker Than Anticipated, Cutting Into Our Humana FVE by 5%",
-            "reportDate": "2024-04-12T23:33:55Z",
+            "title": "CVS Earnings: Weak Medicare Advantage Profits Cut Into 2024 Outlook and Fair Value Estimate",
+            "reportDate": "2024-05-01T14:34:13Z",
             "summary": "CVS Health offers a diverse set of healthcare services. Its roots are in its retail pharmacy operations, where it operates over 9,000 stores primarily in the U.S. CVS is also the largest pharmacy benefit manager (acquired through Caremark), processing over 2 billion adjusted claims annually. It also operates a top-tier health insurer (acquired through Aetna) where it serves about 26 million medical members. The company's recent acquisition of Oak Street adds primary care services to the mix, which could have significant synergies with all its existing business lines. ",
             "investmentRating": "Bullish"
         }
     },
     "events": [
         {
-            "eventType": "Engulfing Line (Bullish)",
+            "eventType": "Long-term KST",
             "pricePeriod": "D",
-            "tradingHorizon": "S",
+            "tradingHorizon": "L",
             "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1714138200,
-            "endDate": 1714397400
+            "startDate": 1714483800,
+            "endDate": 1714483800
         }
     ],
     "reports": [
@@ -437,17 +437,6 @@
             ]
         },
         {
-            "id": "33374_Market Summary_1656573330000",
-            "headHtml": "Market Digest: CVS, PAYX",
-            "provider": "Argus Research",
-            "reportDate": "2022-06-30T07:15:30Z",
-            "reportTitle": "Market Tries to Rally amid Softening Data",
-            "tickers": [
-                "CVS",
-                "PAYX"
-            ]
-        },
-        {
             "id": "2877_Analyst Report_1656573330000",
             "headHtml": "Analyst Report: CVS Health Corp",
             "provider": "Argus Research",
@@ -457,6 +446,17 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "CVS"
+            ]
+        },
+        {
+            "id": "33374_Market Summary_1656573330000",
+            "headHtml": "Market Digest: CVS, PAYX",
+            "provider": "Argus Research",
+            "reportDate": "2022-06-30T07:15:30Z",
+            "reportTitle": "Market Tries to Rally amid Softening Data",
+            "tickers": [
+                "CVS",
+                "PAYX"
             ]
         },
         {
@@ -1288,18 +1288,6 @@
             ]
         },
         {
-            "id": "2877_Analyst Report_1587046120000",
-            "headHtml": "Analyst Report: CVS Health Corp",
-            "provider": "Argus Research",
-            "reportDate": "2020-04-16T14:08:40Z",
-            "reportTitle": "CVS Health Corp. operated 9,900 retail drugstores at the end of 2019, including over 1,700 locations in Target stores. The total number of locations exceeds 10,000 when we include a leading specialty pharmacy, Long Term Care pharmacies, Infusion Centers where cancer medicines, for example, are delivered through a needle. The combined company posted 2019 revenue of $257 billion, with about half in the PBM business, 30% in Retail/Long Term Care, and 20% in Health Care Benefits. Approximately 75% of the $87 billion in Retail and long-term care revenue came from prescriptions; 25% from over-the-counter medicines, Beauty and General Merchandise. The 2019 results include Aetna, which was acquired at the end of 2018.\r\n\r\nCVS operated approximately 1,100 Minute Clinics, primarily within CVS pharmacy stores. The corporate headquarters is in Woonsocket, Rhode Island.",
-            "targetPrice": 85.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "CVS"
-            ]
-        },
-        {
             "id": "26711_Market Update_1587046120000",
             "headHtml": "Market Update: ACC, AAPL, GOLD, BLK, CVS",
             "provider": "Argus Research",
@@ -1311,6 +1299,18 @@
                 "ACC",
                 "CVS",
                 "AAPL"
+            ]
+        },
+        {
+            "id": "2877_Analyst Report_1587046120000",
+            "headHtml": "Analyst Report: CVS Health Corp",
+            "provider": "Argus Research",
+            "reportDate": "2020-04-16T14:08:40Z",
+            "reportTitle": "CVS Health Corp. operated 9,900 retail drugstores at the end of 2019, including over 1,700 locations in Target stores. The total number of locations exceeds 10,000 when we include a leading specialty pharmacy, Long Term Care pharmacies, Infusion Centers where cancer medicines, for example, are delivered through a needle. The combined company posted 2019 revenue of $257 billion, with about half in the PBM business, 30% in Retail/Long Term Care, and 20% in Health Care Benefits. Approximately 75% of the $87 billion in Retail and long-term care revenue came from prescriptions; 25% from over-the-counter medicines, Beauty and General Merchandise. The 2019 results include Aetna, which was acquired at the end of 2018.\r\n\r\nCVS operated approximately 1,100 Minute Clinics, primarily within CVS pharmacy stores. The corporate headquarters is in Woonsocket, Rhode Island.",
+            "targetPrice": 85.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "CVS"
             ]
         },
         {
@@ -1725,11 +1725,29 @@
     ],
     "sigDevs": [
         {
-            "headline": "Pharmacy Professionals At CVS Omnicare In Las Vegas Vote Overwhelmingly To Form Union With The Pharmacy Guild",
-            "date": "2024-04-26"
+            "headline": "CVS Q1 Adjusted EPS USD 1.31 Vs. IBES Estimate USD 1.69",
+            "date": "2024-05-01"
         }
     ],
     "secReports": [
+        {
+            "id": "0000064803-24-000015_64803",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1714521600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000006480324000015/thumbnail.png",
+            "formType": "8-K"
+        },
+        {
+            "id": "0000064803-24-000016_64803",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1714521600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000006480324000016/thumbnail.png",
+            "formType": "10-Q"
+        },
         {
             "id": "0001308179-24-000463_64803",
             "type": "Proxy Statements",
@@ -1884,15 +1902,6 @@
             "formType": "10-Q"
         },
         {
-            "id": "0000064803-23-000032_64803",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1690934400000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000006480323000032/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
             "id": "0000947871-23-000807_64803",
             "type": "Offering Registrations",
             "title": "S-8 : Offering Registrations",
@@ -1900,6 +1909,15 @@
             "filingDate": 1690934400000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000094787123000807/thumbnail.png",
             "formType": "S-8"
+        },
+        {
+            "id": "0000064803-23-000032_64803",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1690934400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000006480323000032/thumbnail.png",
+            "formType": "8-K"
         },
         {
             "id": "0000947871-23-000769_64803",
@@ -1938,15 +1956,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0000947871-23-000633_64803",
-            "type": "Offering Registrations",
-            "title": "S-3ASR : Offering Registrations",
-            "description": "Automatic shelf registration statement of securities of well-known seasoned issuers",
-            "filingDate": 1684972800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000094787123000633/thumbnail.png",
-            "formType": "S-3ASR"
-        },
-        {
             "id": "0000064803-23-000021_64803",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -1954,6 +1963,15 @@
             "filingDate": 1684972800000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000006480323000021/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0000947871-23-000633_64803",
+            "type": "Offering Registrations",
+            "title": "S-3ASR : Offering Registrations",
+            "description": "Automatic shelf registration statement of securities of well-known seasoned issuers",
+            "filingDate": 1684972800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000094787123000633/thumbnail.png",
+            "formType": "S-3ASR"
         },
         {
             "id": "0000064803-23-000019_64803",
@@ -2091,15 +2109,6 @@
             "formType": "10-K"
         },
         {
-            "id": "0000947871-23-000137_64803",
-            "type": "Proxy Statements",
-            "title": "DFAN14A : Proxy Statements",
-            "description": "Definitive additional proxy soliciting materials filed by non-management including Rule 14(a)(12) material",
-            "filingDate": 1675814400000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001564406/000094787123000137/thumbnail.png",
-            "formType": "DFAN14A"
-        },
-        {
             "id": "0000064803-23-000008_64803",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -2107,6 +2116,15 @@
             "filingDate": 1675814400000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000006480323000008/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0000947871-23-000137_64803",
+            "type": "Proxy Statements",
+            "title": "DFAN14A : Proxy Statements",
+            "description": "Definitive additional proxy soliciting materials filed by non-management including Rule 14(a)(12) material",
+            "filingDate": 1675814400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001564406/000094787123000137/thumbnail.png",
+            "formType": "DFAN14A"
         },
         {
             "id": "0000947871-23-000080_64803",
@@ -2142,24 +2160,6 @@
             "description": "Current report filing",
             "filingDate": 1667347200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000006480322000037/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
-            "id": "0000064803-22-000038_64803",
-            "type": "Periodic Financial Reports",
-            "title": "10-Q : Periodic Financial Reports",
-            "description": "Quarterly report pursuant to Section 13 or 15(d)",
-            "filingDate": 1667347200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000006480322000038/thumbnail.png",
-            "formType": "10-Q"
-        },
-        {
-            "id": "0001193125-22-265682_64803",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1666224000000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000119312522265682/thumbnail.png",
             "formType": "8-K"
         }
     ]

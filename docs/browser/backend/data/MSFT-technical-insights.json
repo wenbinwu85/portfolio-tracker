@@ -12,15 +12,15 @@
                 "sectorDirection": "Bearish",
                 "sectorScore": 2,
                 "sectorScoreDescription": "Bearish Evidence",
-                "indexDirection": "Bullish",
+                "indexDirection": "Bearish",
                 "indexScore": 3,
-                "indexScoreDescription": "Strong Bullish Evidence"
+                "indexScoreDescription": "Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 2,
-                "scoreDescription": "Bearish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bearish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 4,
                 "sectorScoreDescription": "Very Strong Bearish Evidence",
@@ -45,13 +45,12 @@
             "provider": "Trading Central",
             "support": 332.89,
             "resistance": 405.63,
-            "stopLoss": 387.093129
+            "stopLoss": 365.641683
         },
         "valuation": {
-            "color": 0.0,
-            "description": "Overvalued",
-            "discount": "-1%",
-            "relativeValue": "Premium",
+            "color": 0.5,
+            "description": "Near Fair Value",
+            "discount": "0%",
             "provider": "Trading Central"
         }
     },
@@ -61,9 +60,9 @@
             "innovativeness": 0.9592,
             "hiring": 0.9662999999999999,
             "sustainability": 0.3667,
-            "insiderSentiments": 0.3348,
-            "earningsReports": 0.8831,
-            "dividends": 0.153
+            "insiderSentiments": 0.33409999999999995,
+            "earningsReports": 0.8862000000000001,
+            "dividends": 0.1559
         },
         "sector": {
             "innovativeness": 0.5,
@@ -106,13 +105,13 @@
     },
     "events": [
         {
-            "eventType": "Double Moving Average Crossover",
+            "eventType": "Commodity Channel Index",
             "pricePeriod": "D",
             "tradingHorizon": "S",
             "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1714397400,
-            "endDate": 1714397400
+            "startDate": 1714483800,
+            "endDate": 1714483800
         }
     ],
     "reports": [
@@ -1573,18 +1572,6 @@
             ]
         },
         {
-            "id": "3212_Analyst Report_1642576070000",
-            "headHtml": "Analyst Report: Microsoft Corporation",
-            "provider": "Argus Research",
-            "reportDate": "2022-01-19T07:07:50Z",
-            "reportTitle": "Microsoft is the world's largest independent software developer. The company was founded on the MS Windows operating system and MS Office business applications suite for PCs. As it has grown, Microsoft has expanded into enterprise software with Windows Server, SQL Server, Dynamics CRM, SharePoint, Azure and Lync; hardware with the Xbox gaming/media platform and the Surface tablet; and online services through MSN and Bing. Microsoft acquired Skype, the internet VoIP communications service, in October 2011. The company acquired Nokia's Devices and Services Business in April 2014. More than 50% of revenue is generated outside the U.S.",
-            "targetPrice": 371.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "MSFT"
-            ]
-        },
-        {
             "id": "31912_Market Summary_1642576070000",
             "headHtml": "Market Digest: ATVI, GS, MSFT, PNC",
             "provider": "Argus Research",
@@ -1595,6 +1582,18 @@
                 "PNC",
                 "ATVI",
                 "GS"
+            ]
+        },
+        {
+            "id": "3212_Analyst Report_1642576070000",
+            "headHtml": "Analyst Report: Microsoft Corporation",
+            "provider": "Argus Research",
+            "reportDate": "2022-01-19T07:07:50Z",
+            "reportTitle": "Microsoft is the world's largest independent software developer. The company was founded on the MS Windows operating system and MS Office business applications suite for PCs. As it has grown, Microsoft has expanded into enterprise software with Windows Server, SQL Server, Dynamics CRM, SharePoint, Azure and Lync; hardware with the Xbox gaming/media platform and the Surface tablet; and online services through MSN and Bing. Microsoft acquired Skype, the internet VoIP communications service, in October 2011. The company acquired Nokia's Devices and Services Business in April 2014. More than 50% of revenue is generated outside the U.S.",
+            "targetPrice": 371.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "MSFT"
             ]
         },
         {
