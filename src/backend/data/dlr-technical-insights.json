@@ -62,7 +62,7 @@
             "sustainability": 0.4082,
             "insiderSentiments": 0.46909999999999996,
             "earningsReports": 0.9115000000000001,
-            "dividends": 0.17350000000000002
+            "dividends": 0.1743
         },
         "sector": {
             "innovativeness": 0.5,
@@ -105,7 +105,7 @@
     },
     "events": [
         {
-            "eventType": "Price Crosses Moving Average",
+            "eventType": "Williams %R",
             "pricePeriod": "D",
             "tradingHorizon": "S",
             "tradeType": "S",
@@ -515,18 +515,6 @@
             ]
         },
         {
-            "id": "4555_Analyst Report_1645709895000",
-            "headHtml": "Analyst Report: Digital Realty Trust Inc",
-            "provider": "Argus Research",
-            "reportDate": "2022-02-24T13:38:15Z",
-            "reportTitle": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company is based in Austin, Texas, and operates in more than 42 metropolitan markets on five continents. Recent expansions have focused on Africa and Asia.",
-            "targetPrice": 165.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "DLR"
-            ]
-        },
-        {
             "id": "32233_Market Update_1645709895000",
             "headHtml": "Market Update: AMGN, CMI, LOW, CBOE, DLR",
             "provider": "Argus Research",
@@ -538,6 +526,18 @@
                 "DLR",
                 "AMGN",
                 "CMI"
+            ]
+        },
+        {
+            "id": "4555_Analyst Report_1645709895000",
+            "headHtml": "Analyst Report: Digital Realty Trust Inc",
+            "provider": "Argus Research",
+            "reportDate": "2022-02-24T13:38:15Z",
+            "reportTitle": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company is based in Austin, Texas, and operates in more than 42 metropolitan markets on five continents. Recent expansions have focused on Africa and Asia.",
+            "targetPrice": 165.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "DLR"
             ]
         },
         {
@@ -830,6 +830,18 @@
             ]
         },
         {
+            "id": "4555_Analyst Report_1597017600000",
+            "headHtml": "Analyst Report: Digital Realty Trust Inc",
+            "provider": "Argus Research",
+            "reportDate": "2020-08-10T00:00:00Z",
+            "reportTitle": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 36 metropolitan markets on five continents.",
+            "targetPrice": 180.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "DLR"
+            ]
+        },
+        {
             "id": "27630_Market Summary_1597017600000",
             "headHtml": "Market Digest: BDX, MCHP, PCAR, TSCO, JCI, VLO, WDC, XOM, DLR, CPRI",
             "provider": "Argus Research",
@@ -846,18 +858,6 @@
                 "DLR",
                 "CPRI",
                 "TSCO"
-            ]
-        },
-        {
-            "id": "4555_Analyst Report_1597017600000",
-            "headHtml": "Analyst Report: Digital Realty Trust Inc",
-            "provider": "Argus Research",
-            "reportDate": "2020-08-10T00:00:00Z",
-            "reportTitle": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 36 metropolitan markets on five continents.",
-            "targetPrice": 180.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "DLR"
             ]
         },
         {
@@ -1607,6 +1607,15 @@
         }
     ],
     "secReports": [
+        {
+            "id": "0001558370-24-006558_1297996",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1714608000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001297996/000155837024006558/thumbnail.png",
+            "formType": "8-K"
+        },
         {
             "id": "0001308179-24-000607_1297996",
             "type": "Proxy Statements",

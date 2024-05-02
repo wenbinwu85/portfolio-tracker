@@ -32,6 +32,7 @@ import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 })
 export class StockPriceMovementChartsComponent {
   @Input() showTickers = true;
+  @Input({ required: true }) expandQuotes!: boolean;
   portfolioData: any;
   portfolioHoldings: any;
   priceChange = 0;
@@ -114,8 +115,8 @@ export class StockPriceMovementChartsComponent {
       }
     });
     this.stockNames.sort((a: any, b: any) => {
-      const val1 = this.portfolioData[a.name][this.prefix + 'ChangePercent'];
-      const val2 = this.portfolioData[b.name][this.prefix + 'ChangePercent'];
+      const val1 = this.portfolioData[a.name].regularMarketChangePercent;
+      const val2 = this.portfolioData[b.name].regularMarketChangePercent;
       return val1 - val2;
     });
 
@@ -131,7 +132,7 @@ export class StockPriceMovementChartsComponent {
   } 
 
   getPriceChangeChartColor = (symbol: any) => {
-    const prefixKey = this.prefix + 'ChangePercent';
+    const prefixKey = this.toggleChecked ? this.prefix + 'ChangePercent' : 'regularMarketChangePercent';
     const stock = this.portfolioData[symbol];
     return stock[prefixKey] > 0 ? "teal" : "chocolate";
   };

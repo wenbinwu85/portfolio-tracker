@@ -1,16 +1,12 @@
-<!-- <mat-expansion-panel [expanded]="true">
-  <mat-expansion-panel-header>
-    <mat-panel-title>
-      <mat-icon>auto_graph</mat-icon>
-      <span>Price Change</span>
-    </mat-panel-title>
-  </mat-expansion-panel-header>
-  <stock-price-movement-charts />
-</mat-expansion-panel> -->
-
 <section class="add-margin">
-  <stock-price-movement-charts />
+  <stock-price-movement-charts [expandQuotes]="true"/>
 </section>
+
+<!-- <section class="add-border add-margin">
+  <div>
+    <span class="title">Happening Today</span>
+  </div>
+</section> -->
 
 <mat-expansion-panel [expanded]="false">
   <mat-expansion-panel-header>

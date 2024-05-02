@@ -10,6 +10,4 @@ import { MatIconModule } from '@angular/material/icon';
   standalone: true,
   imports: [MatChipsModule, MatDividerModule, MatIconModule],
 })
-export class FooterComponent {
-  date = new Date().toLocaleString();
-}
+export class FooterComponent {}

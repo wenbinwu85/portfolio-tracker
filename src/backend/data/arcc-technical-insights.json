@@ -59,7 +59,7 @@
         "company": {
             "innovativeness": 0.011899999999999999,
             "insiderSentiments": 0.5155,
-            "earningsReports": 0.4291,
+            "earningsReports": 0.4288,
             "dividends": 0.8528
         },
         "sector": {
@@ -76,13 +76,13 @@
     },
     "events": [
         {
-            "eventType": "Fast Stochastic",
+            "eventType": "Commodity Channel Index",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "S",
+            "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1714483800,
-            "endDate": 1714483800
+            "startDate": 1714570200,
+            "endDate": 1714570200
         }
     ],
     "sigDevs": [
@@ -102,15 +102,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0001104659-24-055273_1287750",
-            "type": "Offering Registrations",
-            "title": "N-2ASR : Offering Registrations",
-            "description": "Automatic shelf registration statement on Form N-2 for well-known seasoned issuers",
-            "filingDate": 1714521600000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001287750/000110465924055273/thumbnail.png",
-            "formType": "N-2ASR"
-        },
-        {
             "id": "0001287750-24-000028_1287750",
             "type": "Periodic Financial Reports",
             "title": "10-Q : Periodic Financial Reports",
@@ -118,6 +109,15 @@
             "filingDate": 1714521600000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001287750/000128775024000028/thumbnail.png",
             "formType": "10-Q"
+        },
+        {
+            "id": "0001104659-24-055273_1287750",
+            "type": "Offering Registrations",
+            "title": "N-2ASR : Offering Registrations",
+            "description": "Automatic shelf registration statement on Form N-2 for well-known seasoned issuers",
+            "filingDate": 1714521600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001287750/000110465924055273/thumbnail.png",
+            "formType": "N-2ASR"
         },
         {
             "id": "0001104659-24-054946_1287750",
@@ -201,15 +201,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0001104659-24-011654_1287750",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1707264000000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001287750/000110465924011654/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
             "id": "0001287750-24-000011_1287750",
             "type": "Periodic Financial Reports",
             "title": "10-K : Periodic Financial Reports",
@@ -217,6 +208,15 @@
             "filingDate": 1707264000000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001287750/000128775024000011/thumbnail.png",
             "formType": "10-K"
+        },
+        {
+            "id": "0001104659-24-011654_1287750",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1707264000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001287750/000110465924011654/thumbnail.png",
+            "formType": "8-K"
         },
         {
             "id": "0001287750-24-000003_1287750",

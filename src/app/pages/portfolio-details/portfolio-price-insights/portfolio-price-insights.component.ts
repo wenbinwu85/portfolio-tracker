@@ -61,15 +61,9 @@ export class PortfolioPriceInsightsComponent implements OnInit {
   selectedSymbol: any = "SCHD";
   selectedStock: any;
   selectedSymbolColor: any = { name: "SCHD", value: "teal" };
-  performanceChartColorScheme = {
-    domain: ["slategrey"],
-  } as Color;
-  fiftyTwoWeekChartColorScheme = {
-    domain: ["slategrey"],
-  } as Color;
-  targetPriceChartColorScheme = {
-    domain: ["slategrey"],
-  } as Color;
+  performanceChartColorScheme = { domain: ["slategrey"] } as Color;
+  fiftyTwoWeekChartColorScheme = { domain: ["slategrey"] } as Color;
+  targetPriceChartColorScheme = { domain: ["slategrey"] } as Color;
 
   constructor(private dataService: DataService) {}
 
