@@ -43,9 +43,9 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 28.13,
-            "resistance": 29.685,
-            "stopLoss": 26.999762
+            "support": 28.725,
+            "resistance": 31.0679,
+            "stopLoss": 27.399754
         },
         "valuation": {
             "color": 1.0,
@@ -60,8 +60,8 @@
         "company": {
             "innovativeness": 0.0898,
             "insiderSentiments": 0.679,
-            "earningsReports": 0.6151,
-            "dividends": 0.424
+            "earningsReports": 0.6139,
+            "dividends": 0.43079999999999996
         },
         "sector": {
             "innovativeness": 0.5,
@@ -82,10 +82,10 @@
     },
     "events": [
         {
-            "eventType": "Price Crosses Moving Average",
+            "eventType": "Short-term KST",
             "pricePeriod": "D",
-            "tradingHorizon": "I",
-            "tradeType": "S",
+            "tradingHorizon": "S",
+            "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
             "startDate": 1714483800,
             "endDate": 1714483800
@@ -1210,7 +1210,7 @@
             "title": "8-K : Corporate Changes & Voting Matters",
             "description": "Current report filing",
             "filingDate": 1714521600000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000170569624000079/thumbnail.png",
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001920791/000170569624000079/thumbnail.png",
             "formType": "8-K"
         },
         {
@@ -1219,7 +1219,7 @@
             "title": "10-Q : Periodic Financial Reports",
             "description": "Quarterly report pursuant to Section 13 or 15(d)",
             "filingDate": 1714521600000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000170569624000080/thumbnail.png",
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001920791/000170569624000080/thumbnail.png",
             "formType": "10-Q"
         },
         {

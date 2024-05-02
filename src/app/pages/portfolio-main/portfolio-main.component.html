@@ -1,4 +1,4 @@
-<mat-expansion-panel [expanded]="true">
+<!-- <mat-expansion-panel [expanded]="true">
   <mat-expansion-panel-header>
     <mat-panel-title>
       <mat-icon>auto_graph</mat-icon>
@@ -6,17 +6,19 @@
     </mat-panel-title>
   </mat-expansion-panel-header>
   <stock-price-movement-charts />
-</mat-expansion-panel>
+</mat-expansion-panel> -->
 
-<mat-expansion-panel [expanded]="true">
+<section class="add-margin">
+  <stock-price-movement-charts />
+</section>
+
+<mat-expansion-panel [expanded]="false">
   <mat-expansion-panel-header>
     <mat-panel-title>
       <mat-icon>event</mat-icon>
       <span>Events</span>
     </mat-panel-title>
   </mat-expansion-panel-header>
-
-  <!-- <stock-ticker-buttons (selectedTicker)="filterEvents($event)" /> -->
 
   <section class="add-border main-section">
     <div class="corp-events-container">

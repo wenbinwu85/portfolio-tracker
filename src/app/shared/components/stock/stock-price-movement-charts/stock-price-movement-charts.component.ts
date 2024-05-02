@@ -64,19 +64,25 @@ export class StockPriceMovementChartsComponent {
         displayName: `${stock.longName} - ${stock.symbol} `
       });
 
-      if (!this.prefix.startsWith('pre')) { 
+      if (!this.prefix.startsWith('pre')) {
         this.priceChange += stock.regularMarketChange * position.sharesOwned;
+        this.priceChangeChartData.push({
+          name: stock.symbol,
+          value: stock.regularMarketChangePercent * 100 || 0,
+        })
+      } else {
+        this.priceChangeChartData.push({
+          name: stock.symbol,
+          value: stock.preMarketChangePercent * 100 || 0,
+        })
       }
+
       if (!this.prefix.startsWith('regular')) { 
         this.prePostMarketPriceChange += stock[this.prefix + 'Change'] * position.sharesOwned;
         this.prePostHourIcon = this.prefix.startsWith('pre') ? 'light_mode' : 'dark_mode';
         this.prePostHourText = this.prefix.startsWith('pre') ? 'Pre Market ' : 'Post Market ';
       }
 
-      this.priceChangeChartData.push({
-        name: stock.symbol,
-        value: stock.regularMarketChangePercent * 100 || 0,
-      });
       this.priceChangeChartData.sort((a: any, b: any) => a.value - b.value);
 
       this.priceRangeChartData.push({
@@ -125,8 +131,7 @@ export class StockPriceMovementChartsComponent {
   } 
 
   getPriceChangeChartColor = (symbol: any) => {
-    const prefix = this.toggleChecked ? this.prefix : 'regularMarket';
-    const prefixKey = prefix + 'ChangePercent';
+    const prefixKey = this.prefix + 'ChangePercent';
     const stock = this.portfolioData[symbol];
     return stock[prefixKey] > 0 ? "teal" : "chocolate";
   };
@@ -143,10 +148,12 @@ export class StockPriceMovementChartsComponent {
 
     this.dataService.portfolioSymbols?.forEach((symbol: any) => {
       const stock = this.portfolioData[symbol];
-      this.priceChangeChartData.push({
-        name: stock.symbol,
-        value: stock[prefixKey] * 100,
-      });
+      if (stock[prefixKey]) { 
+        this.priceChangeChartData.push({
+          name: stock.symbol,
+          value: stock[prefixKey] * 100,
+        });
+      }
     });
     this.priceChangeChartData.sort((a: any, b: any) => a.value - b.value);
   }

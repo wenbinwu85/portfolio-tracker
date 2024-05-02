@@ -13,7 +13,7 @@
   <div class="symbol-container">
     <mat-card-title class="stock-symbol">
       <span><b>{{ stock?.symbol }}</b></span>
-      <span class="stock-price">{{ price | currency }}</span>
+      <span class="stock-price" [ngStyle]="{'color': stock.regularMarketChange > 0 ? 'teal' : 'chocolate'}">{{ price | currency }}</span>
       <mat-card-subtitle [ngStyle]="{'color': stock.regularMarketChange > 0 ? 'teal' : 'chocolate'}">
         ({{ stock.regularMarketChangePercent | percent: '.2' }})
       </mat-card-subtitle>

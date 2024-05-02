@@ -19,8 +19,8 @@
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 4,
-                "scoreDescription": "Very Strong Bullish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bullish Evidence",
                 "sectorDirection": "Bullish",
                 "sectorScore": 2,
                 "sectorScoreDescription": "Bullish Evidence",
@@ -45,7 +45,7 @@
             "provider": "Trading Central",
             "support": 48.3101,
             "resistance": 52.64,
-            "stopLoss": 49.266814
+            "stopLoss": 46.227261
         },
         "valuation": {
             "color": 0.5,
@@ -61,8 +61,8 @@
             "hiring": 0.24710000000000001,
             "sustainability": 0.5588000000000001,
             "insiderSentiments": 0.7343999999999999,
-            "earningsReports": 0.7193,
-            "dividends": 0.39799999999999996
+            "earningsReports": 0.7314,
+            "dividends": 0.3948
         },
         "sector": {
             "innovativeness": 0.5,
@@ -105,7 +105,7 @@
     },
     "events": [
         {
-            "eventType": "Price Crosses Moving Average",
+            "eventType": "Momentum",
             "pricePeriod": "D",
             "tradingHorizon": "S",
             "tradeType": "S",
@@ -1745,15 +1745,6 @@
             "formType": "DEFA14A"
         },
         {
-            "id": "0001193125-23-115593_1090012",
-            "type": "Proxy Statements",
-            "title": "DEF 14A : Proxy Statements",
-            "description": "Definitive proxy statements",
-            "filingDate": 1682467200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001090012/000119312523115593/thumbnail.png",
-            "formType": "DEF 14A"
-        },
-        {
             "id": "0001193125-23-115615_1090012",
             "type": "Annual Report to Shareholders",
             "title": "ARS : Annual Report to Shareholders",
@@ -1761,6 +1752,15 @@
             "filingDate": 1682467200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001090012/000119312523115615/thumbnail.png",
             "formType": "ARS"
+        },
+        {
+            "id": "0001193125-23-115593_1090012",
+            "type": "Proxy Statements",
+            "title": "DEF 14A : Proxy Statements",
+            "description": "Definitive proxy statements",
+            "filingDate": 1682467200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001090012/000119312523115593/thumbnail.png",
+            "formType": "DEF 14A"
         },
         {
             "id": "0001193125-23-094042_1090012",

@@ -7,8 +7,8 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 1,
-                "scoreDescription": "Weak Bearish Evidence",
+                "score": 2,
+                "scoreDescription": "Bearish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 2,
                 "sectorScoreDescription": "Bearish Evidence",
@@ -45,12 +45,12 @@
             "provider": "Trading Central",
             "support": 26.425,
             "resistance": 29.045,
-            "stopLoss": 26.740167
+            "stopLoss": 26.914462
         },
         "valuation": {
             "color": 0.5,
             "description": "Near Fair Value",
-            "discount": "3%",
+            "discount": "4%",
             "provider": "Trading Central"
         }
     },
@@ -59,8 +59,8 @@
         "company": {
             "innovativeness": 0.2009,
             "insiderSentiments": 0.7968999999999999,
-            "earningsReports": 0.7719,
-            "dividends": 0.6751999999999999
+            "earningsReports": 0.7678,
+            "dividends": 0.6806
         },
         "sector": {
             "innovativeness": 0.5,
@@ -103,12 +103,12 @@
     },
     "events": [
         {
-            "eventType": "Double Top",
+            "eventType": "Long-term KST",
             "pricePeriod": "D",
-            "tradingHorizon": "I",
-            "tradeType": "S",
-            "imageUrl": "https://s.yimg.com/uc/fin/img/assets/bearish-double-top.svg",
-            "startDate": 1710250200,
+            "tradingHorizon": "L",
+            "tradeType": "L",
+            "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
+            "startDate": 1714483800,
             "endDate": 1714483800
         }
     ],

@@ -5,7 +5,7 @@
             "provider": "Trading Central",
             "sector": "Healthcare",
             "shortTermOutlook": {
-                "stateDescription": "Bearish events outweigh bullish events.",
+                "stateDescription": "Recent bearish events outweigh bullish events.",
                 "direction": "Bearish",
                 "score": 2,
                 "scoreDescription": "Bearish Evidence",
@@ -43,14 +43,14 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 67.67,
-            "resistance": 69.554,
-            "stopLoss": 64.911101
+            "resistance": 68.85,
+            "stopLoss": 46.052914
         },
         "valuation": {
-            "color": 0.5,
-            "description": "Near Fair Value",
-            "discount": "7%",
+            "color": 1.0,
+            "description": "Undervalued",
+            "discount": "11%",
+            "relativeValue": "Discount",
             "provider": "Trading Central"
         }
     },
@@ -61,8 +61,8 @@
             "hiring": 0.9893000000000001,
             "sustainability": 0.4359,
             "insiderSentiments": 0.4779,
-            "earningsReports": 0.8994,
-            "dividends": 0.821
+            "earningsReports": 0.9013,
+            "dividends": 0.8852
         },
         "sector": {
             "innovativeness": 0.5,
@@ -913,18 +913,6 @@
             ]
         },
         {
-            "id": "2877_Analyst Report_1620222189000",
-            "headHtml": "Analyst Report: CVS Health Corp",
-            "provider": "Argus Research",
-            "reportDate": "2021-05-05T13:43:09Z",
-            "reportTitle": "CVS Health Corp. operated 9,900 retail drugstores at the end of 2020, including over 1,700 locations in Target stores. The total number of locations exceeds 10,000 when we include a leading specialty pharmacy, Long Term Care pharmacies, Infusion Centers where cancer medicines, for example, are delivered through a needle. The combined company posted 2020 revenue of $269 billion, with about half in the PBM business, 30% in Retail/Long Term Care, and 20% in Health Care Benefits. Approximately 77% of the $91 billion in Retail and long-term care revenue came from prescriptions; 23% from over-the-counter medicines, Beauty and General Merchandise. The 2019 and 2020 results include Aetna, which was acquired at the end of 2018.\r\n\r\nCVS operated approximately 1,100 Minute Clinics, primarily within CVS pharmacy stores. The corporate headquarters is in Woonsocket, Rhode Island.",
-            "targetPrice": 95.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "CVS"
-            ]
-        },
-        {
             "id": "29807_Market Update_1620222189000",
             "headHtml": "Market Update: CVS, EL, SPGI, NOV, OKE, VZ, APO, CARR",
             "provider": "Argus Research",
@@ -939,6 +927,18 @@
                 "EL",
                 "OKE",
                 "SPGI"
+            ]
+        },
+        {
+            "id": "2877_Analyst Report_1620222189000",
+            "headHtml": "Analyst Report: CVS Health Corp",
+            "provider": "Argus Research",
+            "reportDate": "2021-05-05T13:43:09Z",
+            "reportTitle": "CVS Health Corp. operated 9,900 retail drugstores at the end of 2020, including over 1,700 locations in Target stores. The total number of locations exceeds 10,000 when we include a leading specialty pharmacy, Long Term Care pharmacies, Infusion Centers where cancer medicines, for example, are delivered through a needle. The combined company posted 2020 revenue of $269 billion, with about half in the PBM business, 30% in Retail/Long Term Care, and 20% in Health Care Benefits. Approximately 77% of the $91 billion in Retail and long-term care revenue came from prescriptions; 23% from over-the-counter medicines, Beauty and General Merchandise. The 2019 and 2020 results include Aetna, which was acquired at the end of 2018.\r\n\r\nCVS operated approximately 1,100 Minute Clinics, primarily within CVS pharmacy stores. The corporate headquarters is in Woonsocket, Rhode Island.",
+            "targetPrice": 95.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "CVS"
             ]
         },
         {
@@ -1902,15 +1902,6 @@
             "formType": "10-Q"
         },
         {
-            "id": "0000947871-23-000807_64803",
-            "type": "Offering Registrations",
-            "title": "S-8 : Offering Registrations",
-            "description": "Initial registration statement for securities to be offered to employees pursuant to employee benefit plans",
-            "filingDate": 1690934400000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000094787123000807/thumbnail.png",
-            "formType": "S-8"
-        },
-        {
             "id": "0000064803-23-000032_64803",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -1918,6 +1909,15 @@
             "filingDate": 1690934400000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000006480323000032/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0000947871-23-000807_64803",
+            "type": "Offering Registrations",
+            "title": "S-8 : Offering Registrations",
+            "description": "Initial registration statement for securities to be offered to employees pursuant to employee benefit plans",
+            "filingDate": 1690934400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000094787123000807/thumbnail.png",
+            "formType": "S-8"
         },
         {
             "id": "0000947871-23-000769_64803",
@@ -1956,15 +1956,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0000064803-23-000021_64803",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1684972800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000006480323000021/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
             "id": "0000947871-23-000633_64803",
             "type": "Offering Registrations",
             "title": "S-3ASR : Offering Registrations",
@@ -1972,6 +1963,15 @@
             "filingDate": 1684972800000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000094787123000633/thumbnail.png",
             "formType": "S-3ASR"
+        },
+        {
+            "id": "0000064803-23-000021_64803",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1684972800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000006480323000021/thumbnail.png",
+            "formType": "8-K"
         },
         {
             "id": "0000064803-23-000019_64803",
@@ -2109,15 +2109,6 @@
             "formType": "10-K"
         },
         {
-            "id": "0000064803-23-000008_64803",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1675814400000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000006480323000008/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
             "id": "0000947871-23-000137_64803",
             "type": "Proxy Statements",
             "title": "DFAN14A : Proxy Statements",
@@ -2125,6 +2116,15 @@
             "filingDate": 1675814400000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001564406/000094787123000137/thumbnail.png",
             "formType": "DFAN14A"
+        },
+        {
+            "id": "0000064803-23-000008_64803",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1675814400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000006480323000008/thumbnail.png",
+            "formType": "8-K"
         },
         {
             "id": "0000947871-23-000080_64803",

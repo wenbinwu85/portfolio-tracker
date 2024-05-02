@@ -7,7 +7,6 @@ import { InfoCardComponent } from "../../shared/components/info-card/info-card.c
 import { StockPriceMovementChartsComponent } from "../../shared/components/stock/stock-price-movement-charts/stock-price-movement-charts.component";
 import { StockTickerButtonsComponent } from "../../shared/components/stock/stock-ticker-buttons/stock-ticker-buttons.component";
 import { DataService } from "../../shared/services/data.service";
-import { HelperService } from "../../shared/services/helper.service";
 
 @Component({
   selector: "app-portfolio-main",
@@ -35,7 +34,7 @@ export class PortfolioMainComponent implements OnInit {
   gradingEvents: any = [];
   selectedDate!: Date | null;
 
-  constructor(private dataService: DataService, private helper: HelperService) {}
+  constructor(private dataService: DataService) {}
 
   ngOnInit() {
     Object.values(this.dataService.portfolioData)

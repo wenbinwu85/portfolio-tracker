@@ -1,6 +1,6 @@
 <section *ngIf="priceChangeChartData.length > 0" class="add-border">
     <div class="add-flex">
-        <div *ngIf="priceChangeChartData" class="title">
+        <div class="title">
             <span>Portfolio Value Change</span>
         </div>    
         <mat-chip-listbox [ngStyle]="{'padding-right': '1.25rem'}">
@@ -10,7 +10,7 @@
     </div>
 
     <div class="return-wrapper">
-        <div *ngIf="priceChange !== 0" class="add-flex">
+        <div *ngIf="!prefix.startsWith('pre')" class="add-flex">
             <span>Regular Market </span>
             <mat-icon>schedule</mat-icon>
             <span [ngStyle]="{ color: getDayPriceChangeColor() }">
@@ -21,7 +21,7 @@
             </span>
         </div>
 
-        <div *ngIf="prePostMarketPriceChange !== 0" class="add-flex">
+        <div *ngIf="!prefix.startsWith('regular')" class="add-flex">
             <span>{{ prePostHourText }}</span>
             <mat-icon>{{ prePostHourIcon }}</mat-icon>
             <span [ngStyle]="{ color: getPrePostPriceChangeColor() }">
@@ -32,8 +32,8 @@
             </span>
         </div>
 
-        <mat-slide-toggle *ngIf="!prefix.startsWith('regular')" (toggleChange)="changeChart()">
-            <span>Pre/Post Market Chart</span>
+        <mat-slide-toggle *ngIf="!prefix.startsWith('pre')" (toggleChange)="changeChart()">
+            <span>Post Market Chart</span>
         </mat-slide-toggle>
     </div>
 

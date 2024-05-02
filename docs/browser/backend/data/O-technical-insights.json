@@ -44,8 +44,8 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 52.815,
-            "resistance": 53.73,
-            "stopLoss": 51.355916
+            "resistance": 61.0311,
+            "stopLoss": 51.800307
         },
         "valuation": {
             "color": 0.0,
@@ -62,8 +62,8 @@
             "hiring": 0.5634,
             "sustainability": 0.6531,
             "insiderSentiments": 0.3889,
-            "earningsReports": 0.8981,
-            "dividends": 0.3996
+            "earningsReports": 0.8983,
+            "dividends": 0.4191
         },
         "sector": {
             "innovativeness": 0.5,
@@ -106,10 +106,10 @@
     },
     "events": [
         {
-            "eventType": "Commodity Channel Index",
+            "eventType": "Price Crosses Moving Average",
             "pricePeriod": "D",
-            "tradingHorizon": "S",
-            "tradeType": "U",
+            "tradingHorizon": "L",
+            "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
             "startDate": 1714483800,
             "endDate": 1714483800

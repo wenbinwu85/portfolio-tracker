@@ -5,10 +5,10 @@
             "provider": "Trading Central",
             "sector": "Healthcare",
             "shortTermOutlook": {
-                "stateDescription": "Recent bearish events outweigh bullish events.",
-                "direction": "Bearish",
-                "score": 2,
-                "scoreDescription": "Bearish Evidence",
+                "stateDescription": "Recent bullish events outweigh bearish events.",
+                "direction": "Bullish",
+                "score": 4,
+                "scoreDescription": "Very Strong Bullish Evidence",
                 "sectorDirection": "Bullish",
                 "sectorScore": 3,
                 "sectorScoreDescription": "Strong Bullish Evidence",
@@ -17,10 +17,10 @@
                 "indexScoreDescription": "Strong Bearish Evidence"
             },
             "intermediateTermOutlook": {
-                "stateDescription": "There is one bearish event.",
-                "direction": "Bearish",
-                "score": 1,
-                "scoreDescription": "Weak Bearish Evidence",
+                "stateDescription": "There is one bullish event.",
+                "direction": "Bullish",
+                "score": 2,
+                "scoreDescription": "Bullish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 4,
                 "sectorScoreDescription": "Very Strong Bearish Evidence",
@@ -43,14 +43,14 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 25.23,
+            "support": 27.17,
             "resistance": 27.6,
-            "stopLoss": 23.716975
+            "stopLoss": 22.167793
         },
         "valuation": {
             "color": 1.0,
             "description": "Undervalued",
-            "discount": "66%",
+            "discount": "64%",
             "relativeValue": "Discount",
             "provider": "Trading Central"
         }
@@ -62,8 +62,8 @@
             "hiring": 0.9109999999999999,
             "sustainability": 0.6751999999999999,
             "insiderSentiments": 0.7123,
-            "earningsReports": 0.9788,
-            "dividends": 0.9486
+            "earningsReports": 0.9789,
+            "dividends": 0.9426000000000001
         },
         "sector": {
             "innovativeness": 0.5,
@@ -2146,15 +2146,6 @@
             "formType": "SC 13D/A"
         },
         {
-            "id": "0000078003-24-000006_78003",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1704844800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000078003/000007800324000006/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
             "id": "0000078003-24-000004_78003",
             "type": "Tender Offer/Acquisition Reports",
             "title": "SC 13D/A : Tender Offer/Acquisition Reports",
@@ -2162,6 +2153,15 @@
             "filingDate": 1704844800000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001832168/000007800324000004/thumbnail.png",
             "formType": "SC 13D/A"
+        },
+        {
+            "id": "0000078003-24-000006_78003",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1704844800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000078003/000007800324000006/thumbnail.png",
+            "formType": "8-K"
         },
         {
             "id": "0001193125-23-294930_78003",
