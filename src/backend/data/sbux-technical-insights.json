@@ -58,12 +58,12 @@
     "companySnapshot": {
         "sectorInfo": "Consumer Cyclical",
         "company": {
-            "innovativeness": 0.8987999999999999,
+            "innovativeness": 0.8986,
             "hiring": 0.8902,
-            "sustainability": 0.7461,
-            "insiderSentiments": 0.24530000000000002,
-            "earningsReports": 0.8292,
-            "dividends": 0.5711999999999999
+            "sustainability": 0.7448,
+            "insiderSentiments": 0.24609999999999999,
+            "earningsReports": 0.8259000000000001,
+            "dividends": 0.5626
         },
         "sector": {
             "innovativeness": 0.5,
@@ -105,10 +105,10 @@
     },
     "events": [
         {
-            "eventType": "Bollinger Bands",
+            "eventType": "Williams %R",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "L",
+            "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
             "startDate": 1714570200,
             "endDate": 1714570200
@@ -1912,21 +1912,21 @@
             "formType": "DEFA14A"
         },
         {
-            "id": "0001193125-24-038093_829224",
-            "type": "Proxy Statements",
-            "title": "DEFA14A : Proxy Statements",
-            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
-            "filingDate": 1708041600000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000829224/000119312524038093/thumbnail.png",
-            "formType": "DEFA14A"
-        },
-        {
             "id": "0001193125-24-038595_829224",
             "type": "Proxy Statements",
             "title": "DEFA14A : Proxy Statements",
             "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
             "filingDate": 1708041600000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000829224/000119312524038595/thumbnail.png",
+            "formType": "DEFA14A"
+        },
+        {
+            "id": "0001193125-24-038093_829224",
+            "type": "Proxy Statements",
+            "title": "DEFA14A : Proxy Statements",
+            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
+            "filingDate": 1708041600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000829224/000119312524038093/thumbnail.png",
             "formType": "DEFA14A"
         },
         {

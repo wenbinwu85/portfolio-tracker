@@ -74,7 +74,6 @@ export class StockDataSheetComponent implements OnInit {
     const data = this.dataService.portfolioData;
     this.stock = data[this.symbol];
     this.position = this.dataService.portfolioHoldings[this.symbol];
-    console.log(this.position);
     let exchange = this.stock?.exchangeName || "NasdaqGS";
     exchange === "NasdaqGS" ? "Nasdaq" : exchange;
     this.externalLinks = [

@@ -69,19 +69,24 @@ export class StockPriceMovementChartsComponent {
         this.priceChange += stock.regularMarketChange * position.sharesOwned;
         this.priceChangeChartData.push({
           name: stock.symbol,
-          value: stock.regularMarketChangePercent * 100 || 0,
+          value: stock.regularMarketChangePercent * 100,
         })
       } else {
-        this.priceChangeChartData.push({
-          name: stock.symbol,
-          value: stock.preMarketChangePercent * 100 || 0,
-        })
+        if (stock.preMarketChangePercent) { 
+          this.priceChangeChartData.push({
+            name: stock.symbol,
+            value: stock.preMarketChangePercent * 100,
+          })
+        }
       }
 
       if (!this.prefix.startsWith('regular')) { 
-        this.prePostMarketPriceChange += stock[this.prefix + 'Change'] * position.sharesOwned;
-        this.prePostHourIcon = this.prefix.startsWith('pre') ? 'light_mode' : 'dark_mode';
-        this.prePostHourText = this.prefix.startsWith('pre') ? 'Pre Market ' : 'Post Market ';
+        const prefixKey = this.prefix + 'Change'
+        if (stock[prefixKey]) { 
+          this.prePostMarketPriceChange += stock[prefixKey] * position.sharesOwned;
+          this.prePostHourIcon = this.prefix.startsWith('pre') ? 'light_mode' : 'dark_mode';
+          this.prePostHourText = this.prefix.startsWith('pre') ? 'Pre Market ' : 'Post Market ';
+        }
       }
 
       this.priceChangeChartData.sort((a: any, b: any) => a.value - b.value);
@@ -132,7 +137,12 @@ export class StockPriceMovementChartsComponent {
   } 
 
   getPriceChangeChartColor = (symbol: any) => {
-    const prefixKey = this.toggleChecked ? this.prefix + 'ChangePercent' : 'regularMarketChangePercent';
+    let prefixKey = '';
+    if (this.prefix.startsWith('pre')) {
+      prefixKey = 'preMarketChangePercent'
+    } else { 
+      prefixKey = this.toggleChecked ? 'postMarketChangePercent' : 'regularMarketChangePercent';
+    }
     const stock = this.portfolioData[symbol];
     return stock[prefixKey] > 0 ? "teal" : "chocolate";
   };

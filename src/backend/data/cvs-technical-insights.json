@@ -60,9 +60,9 @@
             "innovativeness": 0.8924,
             "hiring": 0.9893000000000001,
             "sustainability": 0.4359,
-            "insiderSentiments": 0.4779,
-            "earningsReports": 0.9012,
-            "dividends": 0.8852
+            "insiderSentiments": 0.47869999999999996,
+            "earningsReports": 0.9022,
+            "dividends": 0.8914
         },
         "sector": {
             "innovativeness": 0.5,
@@ -105,10 +105,10 @@
     },
     "events": [
         {
-            "eventType": "Commodity Channel Index",
+            "eventType": "Bollinger Bands",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "S",
+            "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
             "startDate": 1714570200,
             "endDate": 1714570200
@@ -1956,15 +1956,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0000947871-23-000633_64803",
-            "type": "Offering Registrations",
-            "title": "S-3ASR : Offering Registrations",
-            "description": "Automatic shelf registration statement of securities of well-known seasoned issuers",
-            "filingDate": 1684972800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000094787123000633/thumbnail.png",
-            "formType": "S-3ASR"
-        },
-        {
             "id": "0000064803-23-000021_64803",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -1972,6 +1963,15 @@
             "filingDate": 1684972800000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000006480323000021/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0000947871-23-000633_64803",
+            "type": "Offering Registrations",
+            "title": "S-3ASR : Offering Registrations",
+            "description": "Automatic shelf registration statement of securities of well-known seasoned issuers",
+            "filingDate": 1684972800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000064803/000094787123000633/thumbnail.png",
+            "formType": "S-3ASR"
         },
         {
             "id": "0000064803-23-000019_64803",

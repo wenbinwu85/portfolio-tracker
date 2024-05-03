@@ -100,8 +100,6 @@ export class PortfolioMainComponent implements OnInit {
               color: "steelblue",
               detail: estimate,
             });
-
-            console.log(stock.symbol, earnings.earningsDate)
           }
         }
 
