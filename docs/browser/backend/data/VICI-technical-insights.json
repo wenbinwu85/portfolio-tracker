@@ -10,11 +10,11 @@
                 "score": 4,
                 "scoreDescription": "Very Strong Bullish Evidence",
                 "sectorDirection": "Bullish",
-                "sectorScore": 1,
-                "sectorScoreDescription": "Weak Bullish Evidence",
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bullish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
+                "indexScore": 1,
+                "indexScoreDescription": "Weak Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
@@ -22,8 +22,8 @@
                 "score": 3,
                 "scoreDescription": "Strong Bearish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bearish Evidence",
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bearish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 4,
                 "indexScoreDescription": "Very Strong Bearish Evidence"
@@ -44,8 +44,8 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 28.725,
-            "resistance": 31.0679,
-            "stopLoss": 27.399754
+            "resistance": 29.685,
+            "stopLoss": 27.439463
         },
         "valuation": {
             "color": 1.0,
@@ -60,8 +60,8 @@
         "company": {
             "innovativeness": 0.0898,
             "insiderSentiments": 0.679,
-            "earningsReports": 0.6139,
-            "dividends": 0.4314
+            "earningsReports": 0.626,
+            "dividends": 0.4371
         },
         "sector": {
             "innovativeness": 0.5,
@@ -77,10 +77,10 @@
     },
     "events": [
         {
-            "eventType": "Triple Moving Average Crossover",
+            "eventType": "Price Crosses Moving Average",
             "pricePeriod": "D",
-            "tradingHorizon": "S",
-            "tradeType": "L",
+            "tradingHorizon": "I",
+            "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
             "startDate": 1714483800,
             "endDate": 1714483800
@@ -1236,15 +1236,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0001104659-24-034510_1705696",
-            "type": "Proxy Statements",
-            "title": "DEF 14A : Proxy Statements",
-            "description": "Definitive proxy statements",
-            "filingDate": 1710374400000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000110465924034510/thumbnail.png",
-            "formType": "DEF 14A"
-        },
-        {
             "id": "0001104659-24-034512_1705696",
             "type": "Proxy Statements",
             "title": "DEFA14A : Proxy Statements",
@@ -1252,6 +1243,15 @@
             "filingDate": 1710374400000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000110465924034512/thumbnail.png",
             "formType": "DEFA14A"
+        },
+        {
+            "id": "0001104659-24-034510_1705696",
+            "type": "Proxy Statements",
+            "title": "DEF 14A : Proxy Statements",
+            "description": "Definitive proxy statements",
+            "filingDate": 1710374400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000110465924034510/thumbnail.png",
+            "formType": "DEF 14A"
         },
         {
             "id": "0001104659-24-034504_1705696",
@@ -1416,15 +1416,6 @@
             "formType": "SC 13G/A"
         },
         {
-            "id": "0001422848-23-000139_1705696",
-            "type": "Tender Offer/Acquisition Reports",
-            "title": "SC 13G : Tender Offer/Acquisition Reports",
-            "description": "Schedule filed to report acquisition of beneficial ownership of 5% or more of a class of equity securities by passive investors and certain institutions",
-            "filingDate": 1676246400000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000142284823000139/thumbnail.png",
-            "formType": "SC 13G"
-        },
-        {
             "id": "0001562230-23-000103_1705696",
             "type": "Tender Offer/Acquisition Reports",
             "title": "SC 13G/A : Tender Offer/Acquisition Reports",
@@ -1432,6 +1423,15 @@
             "filingDate": 1676246400000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000156223023000103/thumbnail.png",
             "formType": "SC 13G/A"
+        },
+        {
+            "id": "0001422848-23-000139_1705696",
+            "type": "Tender Offer/Acquisition Reports",
+            "title": "SC 13G : Tender Offer/Acquisition Reports",
+            "description": "Schedule filed to report acquisition of beneficial ownership of 5% or more of a class of equity securities by passive investors and certain institutions",
+            "filingDate": 1676246400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000142284823000139/thumbnail.png",
+            "formType": "SC 13G"
         },
         {
             "id": "0001422849-23-000134_1705696",
@@ -1488,15 +1488,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0001705696-22-000130_1705696",
-            "type": "Periodic Financial Reports",
-            "title": "10-Q : Periodic Financial Reports",
-            "description": "Quarterly report pursuant to Section 13 or 15(d)",
-            "filingDate": 1666828800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001920791/000170569622000130/thumbnail.png",
-            "formType": "10-Q"
-        },
-        {
             "id": "0001705696-22-000129_1705696",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -1504,6 +1495,15 @@
             "filingDate": 1666828800000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001920791/000170569622000129/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0001705696-22-000130_1705696",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1666828800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001920791/000170569622000130/thumbnail.png",
+            "formType": "10-Q"
         },
         {
             "id": "0001705696-22-000111_1705696",

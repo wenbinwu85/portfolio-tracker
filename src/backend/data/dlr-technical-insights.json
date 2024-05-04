@@ -5,16 +5,16 @@
             "provider": "Trading Central",
             "sector": "Real Estate",
             "shortTermOutlook": {
-                "stateDescription": "Recent bearish events outweigh bullish events.",
-                "direction": "Bearish",
-                "score": 1,
-                "scoreDescription": "Weak Bearish Evidence",
+                "stateDescription": "Recent bullish events outweigh bearish events.",
+                "direction": "Bullish",
+                "score": 2,
+                "scoreDescription": "Bullish Evidence",
                 "sectorDirection": "Bullish",
-                "sectorScore": 1,
-                "sectorScoreDescription": "Weak Bullish Evidence",
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bullish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
+                "indexScore": 1,
+                "indexScoreDescription": "Weak Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
@@ -22,8 +22,8 @@
                 "score": 2,
                 "scoreDescription": "Bearish Evidence",
                 "sectorDirection": "Bearish",
-                "sectorScore": 3,
-                "sectorScoreDescription": "Strong Bearish Evidence",
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bearish Evidence",
                 "indexDirection": "Bearish",
                 "indexScore": 4,
                 "indexScoreDescription": "Very Strong Bearish Evidence"
@@ -44,8 +44,8 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 135.94,
-            "resistance": 138.37,
-            "stopLoss": 132.179143
+            "resistance": 144.035,
+            "stopLoss": 128.277641
         },
         "valuation": {
             "color": 0.0,
@@ -61,8 +61,8 @@
             "innovativeness": 0.5117,
             "sustainability": 0.4082,
             "insiderSentiments": 0.46909999999999996,
-            "earningsReports": 0.9167000000000001,
-            "dividends": 0.1751
+            "earningsReports": 0.8915000000000001,
+            "dividends": 0.17989999999999998
         },
         "sector": {
             "innovativeness": 0.5,
@@ -90,7 +90,7 @@
             "Technological advances will allow aggregate data needs to be met with less physical space and power and fewer direct connections, reducing data center needs."
         ],
         "companyName": "Digital Realty Trust, Inc.",
-        "msBullishBearishSummariesPublishDate": 1708100937000,
+        "msBullishBearishSummariesPublishDate": 1714720593000,
         "upsellReportType": "MORNINGSTAR_ANALYST"
     },
     "upsellSearchDD": {
@@ -108,10 +108,10 @@
             "eventType": "Price Crosses Moving Average",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "S",
+            "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1714483800,
-            "endDate": 1714483800
+            "startDate": 1714656600,
+            "endDate": 1714656600
         }
     ],
     "reports": [
@@ -1608,6 +1608,15 @@
     ],
     "secReports": [
         {
+            "id": "0001558370-24-006671_1297996",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1714694400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001297996/000155837024006671/thumbnail.png",
+            "formType": "10-Q"
+        },
+        {
             "id": "0001558370-24-006558_1297996",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -2046,15 +2055,6 @@
             "description": "Current report filing",
             "filingDate": 1658966400000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001297996/000155837022011281/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
-            "id": "0001558370-22-009813_1297996",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1654646400000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001297996/000155837022009813/thumbnail.png",
             "formType": "8-K"
         }
     ]

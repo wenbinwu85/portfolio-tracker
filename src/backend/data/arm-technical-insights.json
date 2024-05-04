@@ -5,16 +5,16 @@
             "provider": "Trading Central",
             "sector": "Technology",
             "shortTermOutlook": {
-                "stateDescription": "Bullish events outweigh bearish events.",
-                "direction": "Bullish",
-                "score": 1,
-                "scoreDescription": "Weak Bullish Evidence",
-                "sectorDirection": "Bearish",
-                "sectorScore": 1,
-                "sectorScoreDescription": "Weak Bearish Evidence",
+                "stateDescription": "The bullish and bearish events are balanced.",
+                "direction": "Neutral",
+                "score": 0,
+                "scoreDescription": "Neutral Evidence",
+                "sectorDirection": "Bullish",
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bullish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
+                "indexScore": 1,
+                "indexScoreDescription": "Weak Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
@@ -43,12 +43,12 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "stopLoss": 70.608807
+            "stopLoss": 82.554784
         },
         "valuation": {
             "color": 0.0,
             "description": "Overvalued",
-            "discount": "16%",
+            "discount": "15%",
             "relativeValue": "Premium",
             "provider": "Trading Central"
         }
@@ -56,7 +56,7 @@
     "companySnapshot": {
         "sectorInfo": "Technology",
         "company": {
-            "earningsReports": 0.9948999999999999
+            "earningsReports": 0.9963
         },
         "sector": {
             "innovativeness": 0.5,

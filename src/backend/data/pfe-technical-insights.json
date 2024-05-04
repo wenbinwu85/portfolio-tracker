@@ -13,11 +13,11 @@
                 "sectorScore": 3,
                 "sectorScoreDescription": "Strong Bullish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
+                "indexScore": 1,
+                "indexScoreDescription": "Weak Bearish Evidence"
             },
             "intermediateTermOutlook": {
-                "stateDescription": "There is one bullish event.",
+                "stateDescription": "All events are bullish.",
                 "direction": "Bullish",
                 "score": 2,
                 "scoreDescription": "Bullish Evidence",
@@ -43,9 +43,9 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 27.17,
-            "resistance": 27.6,
-            "stopLoss": 22.167793
+            "support": 27.6,
+            "resistance": 27.725,
+            "stopLoss": 24.034629
         },
         "valuation": {
             "color": 1.0,
@@ -58,12 +58,12 @@
     "companySnapshot": {
         "sectorInfo": "Healthcare",
         "company": {
-            "innovativeness": 0.8826,
+            "innovativeness": 0.8825,
             "hiring": 0.9109999999999999,
             "sustainability": 0.6751999999999999,
             "insiderSentiments": 0.7128,
-            "earningsReports": 0.9783,
-            "dividends": 0.9384999999999999
+            "earningsReports": 0.005699999999999999,
+            "dividends": 0.9389
         },
         "sector": {
             "innovativeness": 0.5,
@@ -105,7 +105,7 @@
     },
     "events": [
         {
-            "eventType": "Momentum",
+            "eventType": "Short-term KST",
             "pricePeriod": "D",
             "tradingHorizon": "S",
             "tradeType": "L",
@@ -770,6 +770,18 @@
             ]
         },
         {
+            "id": "3305_Analyst Report_1660239464000",
+            "headHtml": "Analyst Report: Pfizer Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2022-08-11T17:37:44Z",
+            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
+            "targetPrice": 65.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "PFE"
+            ]
+        },
+        {
             "id": "33789_Market Update_1660239464000",
             "headHtml": "Market Update: CENT, EBAY, PFE, VMC, RKT",
             "provider": "Argus Research",
@@ -780,18 +792,6 @@
                 "CENT",
                 "RKT",
                 "VMC",
-                "PFE"
-            ]
-        },
-        {
-            "id": "3305_Analyst Report_1660239464000",
-            "headHtml": "Analyst Report: Pfizer Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2022-08-11T17:37:44Z",
-            "reportTitle": "Pfizer is a leading global developer and manufacturer of pharmaceuticals and biotech drugs. Its products include oncology and immunology drugs, treatments for rare diseases, and vaccines.",
-            "targetPrice": 65.0,
-            "investmentRating": "Bullish",
-            "tickers": [
                 "PFE"
             ]
         },

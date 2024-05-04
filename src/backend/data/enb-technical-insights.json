@@ -13,8 +13,8 @@
                 "sectorScore": 2,
                 "sectorScoreDescription": "Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
+                "indexScore": 1,
+                "indexScoreDescription": "Weak Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bullish events outweigh bearish events.",
@@ -43,9 +43,9 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 35.36,
-            "resistance": 35.945,
-            "stopLoss": 34.107098
+            "support": 35.945,
+            "resistance": 36.751,
+            "stopLoss": 33.141066
         },
         "valuation": {
             "color": 0.0,
@@ -61,7 +61,7 @@
             "innovativeness": 0.5514,
             "sustainability": 0.0882,
             "insiderSentiments": 0.2407,
-            "dividends": 0.6667000000000001
+            "dividends": 0.6627
         },
         "sector": {
             "innovativeness": 0.5,
@@ -104,13 +104,13 @@
     },
     "events": [
         {
-            "eventType": "Triple Moving Average Crossover",
+            "eventType": "Commodity Channel Index",
             "pricePeriod": "D",
             "tradingHorizon": "S",
             "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1714397400,
-            "endDate": 1714397400
+            "startDate": 1714656600,
+            "endDate": 1714656600
         }
     ],
     "reports": [
@@ -1485,6 +1485,18 @@
             ]
         },
         {
+            "id": "3799_Analyst Report_1628086520000",
+            "headHtml": "Analyst Report: Enbridge Inc",
+            "provider": "Argus Research",
+            "reportDate": "2021-08-04T14:15:20Z",
+            "reportTitle": "Enbridge Inc. is North America's largest energy infrastructure company. Enbridge has six operating segments: Liquids Pipelines, Gas Transmission & Midstream, Gas Distribution, Renewable Power Generation & Transmission, Energy Services, and Eliminations & Other. According to the company's most recent 10-K, Enbridge delivers over three million barrels of crude oil per day, and transports 62% of all U.S.-bound Canadian crude exports. The company also transports 18% of the natural gas used in the U.S. Its regulated utilities serve approximately 3.7 million retail customers.",
+            "targetPrice": 43.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "ENB"
+            ]
+        },
+        {
             "id": "30553_Market Update_1628086520000",
             "headHtml": "Market Update: ENB, CVX, LHX, JCI, VFC, NOW, CARR",
             "provider": "Argus Research",
@@ -1498,18 +1510,6 @@
                 "NOW",
                 "ENB",
                 "LHX"
-            ]
-        },
-        {
-            "id": "3799_Analyst Report_1628086520000",
-            "headHtml": "Analyst Report: Enbridge Inc",
-            "provider": "Argus Research",
-            "reportDate": "2021-08-04T14:15:20Z",
-            "reportTitle": "Enbridge Inc. is North America's largest energy infrastructure company. Enbridge has six operating segments: Liquids Pipelines, Gas Transmission & Midstream, Gas Distribution, Renewable Power Generation & Transmission, Energy Services, and Eliminations & Other. According to the company's most recent 10-K, Enbridge delivers over three million barrels of crude oil per day, and transports 62% of all U.S.-bound Canadian crude exports. The company also transports 18% of the natural gas used in the U.S. Its regulated utilities serve approximately 3.7 million retail customers.",
-            "targetPrice": 43.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "ENB"
             ]
         },
         {
@@ -2303,15 +2303,6 @@
             "formType": "10-Q"
         },
         {
-            "id": "0000895728-23-000024_895728",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1691107200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000895728/000089572823000024/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
             "id": "0001193125-23-203941_895728",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K/A : Corporate Changes & Voting Matters",
@@ -2319,6 +2310,15 @@
             "filingDate": 1691107200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000895728/000119312523203941/thumbnail.png",
             "formType": "8-K/A"
+        },
+        {
+            "id": "0000895728-23-000024_895728",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1691107200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000895728/000089572823000024/thumbnail.png",
+            "formType": "8-K"
         },
         {
             "id": "0001193125-23-197747_895728",
@@ -2456,15 +2456,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0000895728-22-000033_895728",
-            "type": "Periodic Financial Reports",
-            "title": "10-Q : Periodic Financial Reports",
-            "description": "Quarterly report pursuant to Section 13 or 15(d)",
-            "filingDate": 1667520000000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000895728/000089572822000033/thumbnail.png",
-            "formType": "10-Q"
-        },
-        {
             "id": "0000895728-22-000032_895728",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -2472,6 +2463,15 @@
             "filingDate": 1667520000000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000895728/000089572822000032/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0000895728-22-000033_895728",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1667520000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000895728/000089572822000033/thumbnail.png",
+            "formType": "10-Q"
         },
         {
             "id": "0001193125-22-257129_895728",
@@ -2519,15 +2519,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0000895728-22-000019_895728",
-            "type": "Periodic Financial Reports",
-            "title": "10-Q : Periodic Financial Reports",
-            "description": "Quarterly report pursuant to Section 13 or 15(d)",
-            "filingDate": 1651795200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000895728/000089572822000019/thumbnail.png",
-            "formType": "10-Q"
-        },
-        {
             "id": "0000895728-22-000017_895728",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -2535,6 +2526,15 @@
             "filingDate": 1651795200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000895728/000089572822000017/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0000895728-22-000019_895728",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1651795200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000895728/000089572822000019/thumbnail.png",
+            "formType": "10-Q"
         },
         {
             "id": "0001193125-22-142488_895728",

@@ -13,8 +13,8 @@
                 "sectorScore": 2,
                 "sectorScoreDescription": "Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
+                "indexScore": 1,
+                "indexScoreDescription": "Weak Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
@@ -43,9 +43,9 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 13.885,
-            "resistance": 15.775,
-            "stopLoss": 14.511461
+            "support": 12.8512,
+            "resistance": 15.85,
+            "stopLoss": 15.167473
         },
         "valuation": {
             "color": 1.0,
@@ -62,7 +62,7 @@
             "sustainability": 0.9265000000000001,
             "insiderSentiments": 0.8984000000000001,
             "earningsReports": 0.8439,
-            "dividends": 0.7262000000000001
+            "dividends": 0.7206
         },
         "sector": {
             "innovativeness": 0.5,
@@ -100,13 +100,13 @@
     },
     "events": [
         {
-            "eventType": "MACD",
+            "eventType": "Price Crosses Moving Average",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "S",
+            "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1714570200,
-            "endDate": 1714570200
+            "startDate": 1714656600,
+            "endDate": 1714656600
         }
     ],
     "sigDevs": [

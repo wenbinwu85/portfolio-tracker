@@ -5,16 +5,16 @@
             "provider": "Trading Central",
             "sector": "Technology",
             "shortTermOutlook": {
-                "stateDescription": "Recent bullish events outweigh bearish events.",
-                "direction": "Bullish",
-                "score": 1,
-                "scoreDescription": "Weak Bullish Evidence",
-                "sectorDirection": "Bearish",
-                "sectorScore": 1,
-                "sectorScoreDescription": "Weak Bearish Evidence",
+                "stateDescription": "Recent bearish events outweigh bullish events.",
+                "direction": "Bearish",
+                "score": 3,
+                "scoreDescription": "Strong Bearish Evidence",
+                "sectorDirection": "Bullish",
+                "sectorScore": 2,
+                "sectorScoreDescription": "Bullish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 3,
-                "indexScoreDescription": "Strong Bearish Evidence"
+                "indexScore": 1,
+                "indexScoreDescription": "Weak Bearish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
@@ -43,14 +43,14 @@
         },
         "keyTechnicals": {
             "provider": "Trading Central",
-            "support": 107.93,
+            "support": 75.48,
             "resistance": 174.22,
-            "stopLoss": 131.642075
+            "stopLoss": 128.206998
         },
         "valuation": {
             "color": 0.0,
             "description": "Overvalued",
-            "discount": "2%",
+            "discount": "7%",
             "relativeValue": "Premium",
             "provider": "Trading Central"
         }
@@ -58,10 +58,10 @@
     "companySnapshot": {
         "sectorInfo": "Technology",
         "company": {
-            "innovativeness": 0.7825,
+            "innovativeness": 0.7748,
             "hiring": 0.8539,
             "insiderSentiments": 0.0987,
-            "earningsReports": 0.9803000000000001
+            "earningsReports": 0.9802
         },
         "sector": {
             "innovativeness": 0.5,
@@ -94,26 +94,46 @@
     },
     "upsellSearchDD": {
         "researchReports": {
-            "reportId": "MS_0P0000006A_AnalystReport_1714546709000",
-            "provider": "Morningstar",
-            "title": "AMD Earnings: Maintaining $145 Valuation as AI GPU Sales Met Our Expectations",
-            "reportDate": "2024-05-01T06:58:29Z",
-            "summary": "Advanced Micro Devices designs a variety of digital semiconductors for markets such as PCs, gaming consoles, data centers, industrial, and automotive applications, among others. AMD\u2019s traditional strength was in central processing units, CPUs, and graphics processing units, or GPUs, used in PCs and data centers. Additionally, the firm supplies the chips found in prominent game consoles such as the Sony PlayStation and Microsoft Xbox. In 2022, the firm acquired field-programmable gate array, or FPGA, leader Xilinx to diversify its business and augment its opportunities in key end markets such as the data center and automotive. ",
-            "investmentRating": "Neutral"
+            "reportId": "ARGUS_2707_AnalystReport_1714734228000",
+            "provider": "Argus",
+            "title": "Data Center, Client growth; reiterate BUY",
+            "reportDate": "2024-05-03T11:03:48Z",
+            "summary": "Advanced Micro Devices is the number-two player in x86-based microprocessors, behind Intel, and -- with the 2008 acquisition of ATI -- a top player in graphic processors. In 2021, Advanced Micro Devices acquired Xilinx, expanding its presence in embedded computing and data center.",
+            "investmentRating": "Bullish"
         }
     },
     "events": [
         {
-            "eventType": "Gap Down",
+            "eventType": "MACD",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "U",
+            "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1714483800,
-            "endDate": 1714570200
+            "startDate": 1714656600,
+            "endDate": 1714656600
         }
     ],
     "reports": [
+        {
+            "id": "39894_Market Summary_1714733328000",
+            "headHtml": "Market Digest: AMD, PARA, IP, MAR, PKG, WY, PM, SMCI, KKR, LEA, ALTM",
+            "provider": "Argus Research",
+            "reportDate": "2024-05-03T10:48:48Z",
+            "reportTitle": "U.S. stocks rose on Thursday ahead of the April jobs report due out on Friday. Apple (AAPL) rose 6% after hours when it announced a $110 billion stock buyback plan. The two-year Treasury yield fell to 4.889% while the 10-year yield was down to 4.58%. The Dow was up 0.9%, the S&P 500 gained 0.9% and the Nasdaq rose 1.5%. Crude oil traded above $79 per barrel and gold rose $3 to $2313 per ounce.",
+            "tickers": [
+                "WY",
+                "KKR",
+                "PARA",
+                "SMCI",
+                "IP",
+                "AMD",
+                "LEA",
+                "ALTM",
+                "PKG",
+                "PM",
+                "MAR"
+            ]
+        },
         {
             "id": "39672_Portfolio Ideas_1712833314000",
             "headHtml": "Solid 1Q Leads into 2Q Uncertainty",
@@ -343,18 +363,6 @@
             ]
         },
         {
-            "id": "2707_Analyst Report_1698921146000",
-            "headHtml": "Analyst Report: Advanced Micro Devices Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2023-11-02T10:32:26Z",
-            "reportTitle": "Advanced Micro Devices is the number-two player in x86-based microprocessors, behind Intel, and -- with the 2008 acquisition of ATI -- a top player in graphic processors. In 2021, Advanced Micro Devices acquired Xilinx, expanding its presence in embedded computing and data center.",
-            "targetPrice": 170.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "AMD"
-            ]
-        },
-        {
             "id": "38162_Market Summary_1698921146000",
             "headHtml": "Market Digest: AMD, DHR, ETR, MRK, NI, RJF, STX, OSTK, WRB, AGNC, NOW",
             "provider": "Argus Research",
@@ -372,6 +380,18 @@
                 "OSTK",
                 "DHR",
                 "RJF"
+            ]
+        },
+        {
+            "id": "2707_Analyst Report_1698921146000",
+            "headHtml": "Analyst Report: Advanced Micro Devices Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2023-11-02T10:32:26Z",
+            "reportTitle": "Advanced Micro Devices is the number-two player in x86-based microprocessors, behind Intel, and -- with the 2008 acquisition of ATI -- a top player in graphic processors. In 2021, Advanced Micro Devices acquired Xilinx, expanding its presence in embedded computing and data center.",
+            "targetPrice": 170.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "AMD"
             ]
         },
         {
@@ -1639,18 +1659,6 @@
             ]
         },
         {
-            "id": "2707_Analyst Report_1580342400000",
-            "headHtml": "Analyst Report: Advanced Micro Devices Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2020-01-30T00:00:00Z",
-            "reportTitle": "Advanced Micro Devices is the number-two player in x86-based microprocessors, behind Intel, and -- with the 2008 acquisition of ATI -- a top player in graphic processors. In 2009, Advanced Micro Devices spun off its foundry operations into a joint venture called Global Foundries. In mid-2014, AMD underwent an internal reorganization, aligning businesses along functional lines and creating a single internal infrastructure.",
-            "targetPrice": 60.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "AMD"
-            ]
-        },
-        {
             "id": "26072_Market Update_1580342400000",
             "headHtml": "Market Update: AMD, EAT, GS, HOG, HCA, PYPL, PFE, URI, NEE",
             "provider": "Argus Research",
@@ -1704,15 +1712,6 @@
             "formType": "DEF 14A"
         },
         {
-            "id": "0001193125-24-076535_2488",
-            "type": "Annual Report to Shareholders",
-            "title": "ARS : Annual Report to Shareholders",
-            "description": "Annual report to security holders",
-            "filingDate": 1711324800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000119312524076535/thumbnail.png",
-            "formType": "ARS"
-        },
-        {
             "id": "0001193125-24-076521_2488",
             "type": "Proxy Statements",
             "title": "DEFA14A : Proxy Statements",
@@ -1720,6 +1719,15 @@
             "filingDate": 1711324800000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000119312524076521/thumbnail.png",
             "formType": "DEFA14A"
+        },
+        {
+            "id": "0001193125-24-076535_2488",
+            "type": "Annual Report to Shareholders",
+            "title": "ARS : Annual Report to Shareholders",
+            "description": "Annual report to security holders",
+            "filingDate": 1711324800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000119312524076535/thumbnail.png",
+            "formType": "ARS"
         },
         {
             "id": "0001628280-24-005593_2488",
@@ -1857,15 +1865,6 @@
             "formType": "10-K"
         },
         {
-            "id": "0000002488-23-000042_2488",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K/A : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1676937600000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000000248823000042/thumbnail.png",
-            "formType": "8-K/A"
-        },
-        {
             "id": "0000002488-23-000040_2488",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -1873,6 +1872,15 @@
             "filingDate": 1676937600000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000000248823000040/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0000002488-23-000042_2488",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K/A : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1676937600000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000002488/000000248823000042/thumbnail.png",
+            "formType": "8-K/A"
         },
         {
             "id": "0001104659-23-015209_2488",
