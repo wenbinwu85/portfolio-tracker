@@ -1,18 +1,14 @@
 import os
 import pickle
-# import queue
-# from concurrent.futures import ThreadPoolExecutor
-# from multiprocessing import Pool, Process, cpu_count
 from yahooquery import Ticker
 from helpers.funcs import load_data_from, dump_data_to
 
 BACKEND_PATH = os.path.abspath(os.path.dirname(__file__))
 DATA_PATH = os.path.join(BACKEND_PATH, 'data')
-HOLDINGS_DATA_PATH = os.path.join(DATA_PATH, 'holdings.csv')
+HOLDINGS_CSV_PATH = os.path.join(DATA_PATH, 'holdings.csv')
 HOLDINGS_JSON_PATH = os.path.join(DATA_PATH, 'holdings.json')
-
-# total_cpu = cpu_count()
-# parallel_method = 'thread'
+PORTFOLIO_DATA_PATH = os.path.join(DATA_PATH, 'portfolio-data.json')
+PORTFOLIO_PICKLE_PATH = os.path.join(DATA_PATH, 'portfolio-data.pickle')
 
 yq_modules = [
     'assetProfile',  # Information related to the company's location, operations, and officers.
@@ -38,37 +34,6 @@ yq_modules = [
 ]
 
 
-# def parallelize(method):
-#     def wrapper(func):
-#         def multiprocess(*args, **kwargs):
-#             processes = queue.Queue()
-#             for i in args[0]:
-#                 p = Process(target=func, args=(i,))
-#                 processes.put(p)
-#                 p.start()
-#             while not processes.empty():
-#                 p = processes.get()
-#                 p.join()
-
-#         def multipool(*args, **kwargs):
-#             with Pool(cpu_count()) as pool:
-#                 return pool.map(func, *args, **kwargs)
-
-#         def multithread(*args, **kwargs):
-#             with ThreadPoolExecutor() as executor:
-#                 return executor.map(func, *args, **kwargs)
-
-#         funcs = {'thread': multithread, 'process': multiprocess, 'pool': multipool}
-#         return funcs[method]
-
-#     return wrapper
-
-
-# def parallel_run(func, *args, **kwargs):
-#     p_func = parallelize(parallel_method)(func)
-#     p_func(*args, **kwargs)
-
-
 def round_string_value(value, digit=2):
     return round(float(value), digit)
 
@@ -77,57 +42,97 @@ def get_file_path(file_name, ext='json'):
     return os.path.join(DATA_PATH, f'{file_name}.{ext}')
 
 
-def clean(data):
-    shit_pile = [
-        'algorithm',
-        'ask',
-        'askSize',
-        'bid',
-        'bidSize',
-        'category',
-        'coinMarketCapLink',
-        'cryptoTradeable',
-        'currency',
-        'currencySymbol',
-        'esgPopulated',
-        'exchangeDataDelayedBy',
-        'exchangeTimezoneName',
-        'exchangeTimezoneShortName',
-        'fromCurrency',
-        'fundFamily',
-        'gmtOffSetMilliseconds',
-        'language',
-        'lastMarket',
-        'lastSplitDate',
-        'lastSplitFactor',
-        'legalType',
-        'market',
-        'marketState',
-        'maxAge',
-        'messageBoardId',
-        'postMarketSource',
-        'postMarketTime',
-        'preMarketSource',
-        'priceHint',
-        'quoteSourceName',
-        'region',
-        'regularMarketSource',
-        'regularMarketTime',
-        'sourceInterval',
-        'toCurrency',
-        'tradeable',
-        'triggerable',
-        'underlyingSymbol',
-    ]
-    for shit in shit_pile:
-        try:
-            del data[shit]
-        except KeyError:
-            continue
+def get_tickers(symbols):
+    return Ticker(symbols, asynchronous=True, progress=True)
+
+
+def dump_tickers_data(tickers_data):
+    dump_data_to(tickers_data, PORTFOLIO_DATA_PATH)
+    with open(PORTFOLIO_PICKLE_PATH, 'wb') as portfolio_pickle:
+        pickle.dump(tickers_data, portfolio_pickle)
+
+    for symbol, data in tickers_data.items():
+        path = get_file_path(symbol.lower(), 'json')
+        dump_data_to(data, path)
+
+
+def map_stock_data(yq_modules_data):
+    mapped_yq_data = {}
+    for symbol, data in yq_modules_data.items():
+        mapped_symbol_data = {}
+        mapped_symbol_data.update(data['price'])
+        mapped_symbol_data.update(data['summaryDetail'])
+        mapped_symbol_data.update(data['defaultKeyStatistics'])
+        if data['price']['quoteType'] == 'EQUITY':
+            mapped_symbol_data.update(data['financialData'])
+            mapped_symbol_data['profile'] = data['assetProfile']
+            mapped_symbol_data['calendarEvents'] = data['calendarEvents']
+            mapped_symbol_data['earnings'] = data['earnings']
+            mapped_symbol_data['earnings'].update(data['earningsHistory'])
+            mapped_symbol_data['earnings'].update(data['earningsTrend'])
+            mapped_symbol_data['indexTrend'] = data['indexTrend']
+            mapped_symbol_data['insiderTransactions'] = data.get('insiderTransactions', {}).get('transactions', {})
+            mapped_symbol_data['recommendationTrend'] = data['recommendationTrend']['trend']
+            mapped_symbol_data['shareholders'] = {}
+            mapped_symbol_data['shareholders']['fundOwnership'] = data['fundOwnership']['ownershipList']
+            mapped_symbol_data['shareholders']['insiderHolders'] = data['insiderHolders']['holders']
+            mapped_symbol_data['shareholders']['institutionOwnership'] = data['institutionOwnership']['ownershipList']
+            mapped_symbol_data['shareholders']['majorHolders'] = data.get('majorHoldersBreakdown', {})
+            mapped_symbol_data['upgradeDowngradeHistory'] = data['upgradeDowngradeHistory']['history'][:10]
+            try:
+                mapped_symbol_data['freeCashflowPerShare'] = mapped_symbol_data['freeCashflow'] / mapped_symbol_data['sharesOutstanding']
+                mapped_symbol_data['freeCashflowYield'] = mapped_symbol_data['freeCashflow'] / mapped_symbol_data['marketCap']
+                if mapped_symbol_data['freeCashflowPerShare'] != 0:
+                    mapped_symbol_data['freeCashflowPayoutRatio'] = mapped_symbol_data['dividendRate'] / mapped_symbol_data['freeCashflowPerShare']  
+                else:
+                    mapped_symbol_data['freeCashflowPayoutRatio'] = 0
+            except KeyError:
+                mapped_symbol_data['freeCashflowPerShare'] = 0
+                mapped_symbol_data['freeCashflowYield'] = 0
+                mapped_symbol_data['freeCashflowPayoutRatio'] = 0
+        else:
+            mapped_symbol_data['profile'] = data['assetProfile']
+            mapped_symbol_data['profile'].update(data['fundProfile'])
+            mapped_symbol_data['dividendRate'] = data['summaryDetail']['yield'] * data['price']['regularMarketPrice']
+            mapped_symbol_data['dividendYield'] = data['summaryDetail']['yield']
+            mapped_symbol_data['topHoldings'] = data['topHoldings']
+            mapped_symbol_data['fundPerformance'] = data['fundPerformance']
+        mapped_yq_data[symbol] = mapped_symbol_data
+    return mapped_yq_data
+
+
+def yq_stock_data(symbols):
+    try:
+        modules_data = get_tickers(symbols).get_modules(yq_modules)
+        return map_stock_data(modules_data)
+    except Exception as e:
+        print(symbols, 'failed to fetch ticker data:', e)
+
+
+def yq_dividend_history(symbol, start_date):
+    try:
+        return get_tickers(symbol).dividend_history(start=start_date)
+    except Exception as e:
+        print(symbol, 'failed to fetch dividend history:', e)
+
+
+def yq_technical_insights(symbol):
+    try:
+        return get_tickers(symbol).technical_insights
+    except Exception as e:
+        print(symbol, 'failed to fetch technical insights:', e)
+
+
+def yq_corporate_events(symbol):
+    try:
+        return get_tickers(symbol).corporate_events
+    except Exception as e:
+        print(symbol, 'failed to fetch corporate events:', e)
 
 
 def generate_holdings_data():
     holdings = {}
+
     holdings.update({'portfolioPositions': 0})
     holdings.update({'portfolioMarketValue': 0})
     holdings.update({'portfolioTotalInvestment': 0})
@@ -135,142 +140,63 @@ def generate_holdings_data():
     holdings.update({'portfolioUnrealizedGain': 0})
     holdings.update({'portfolioUnrealizedGainPercent': 0})
 
-    holdings_data = load_data_from(HOLDINGS_DATA_PATH)
+    holdings_data = load_data_from(HOLDINGS_CSV_PATH)
     for symbol, shares, cost_avg, _ in list(holdings_data):
-        stock_holding = holdings.get(symbol, {})
-        stock_data_path = get_file_path(symbol.lower())
+        shares = float(shares)
+        cost_avg = float(cost_avg)
+        stock_holding = {}
+
         try:
+            stock_data_path = get_file_path(symbol.lower())
             stock_data = load_data_from(stock_data_path)
         except FileNotFoundError:
             stock_data = yq_stock_data(symbol)
-            dump_data_to(stock_data[symbol], stock_data_path)
-        shares = float(shares)
-        cost_avg = float(cost_avg)
+            path = get_file_path(symbol.lower(), 'json')
+            print('saving', symbol, 'to', path)
+            dump_data_to(stock_data[symbol.upper()], path)
+
+        stock_holding['symbol'] = symbol
         stock_holding['sharesOwned'] = shares
         stock_holding['costAverage'] = cost_avg
-        stock_holding['totalCost'] = round_string_value(cost_avg * shares, 4)
-        stock_holding['symbol'] = symbol
+        stock_holding['totalCost'] = cost_avg * shares
         stock_holding['marketPrice'] = stock_data.get('regularMarketPrice', 0)
-        stock_holding['marketValue'] = stock_holding['marketPrice'] * shares
-        total_cost = stock_holding['totalCost']
-        stock_holding['unrealizedGain'] = stock_holding['marketValue'] - total_cost
-        stock_holding['unrealizedGainPercent'] = stock_holding['unrealizedGain'] / total_cost
-        stock_holding['dividendIncome'] = stock_data.get('dividendRate', 0) * stock_holding['sharesOwned']
-        stock_holding['yieldOnCost'] = stock_holding['dividendIncome'] / total_cost
-        holdings['portfolioMarketValue'] += stock_holding['marketValue']
-        holdings['portfolioTotalInvestment'] += stock_holding['totalCost']
-        holdings['portfolioDividendIncome'] += stock_holding['dividendIncome']
-        holdings['portfolioUnrealizedGain'] += stock_holding['unrealizedGain']
-        holdings[symbol] = stock_holding
+        stock_holding['marketValue'] = stock_holding.get('marketPrice', 0) * shares
+        total_cost = stock_holding.get('totalCost', 0)
+        stock_holding['unrealizedGain'] = stock_holding.get('marketValue', 0) - total_cost
+        stock_holding['unrealizedGainPercent'] = stock_holding.get('unrealizedGain', 0) / total_cost
+        stock_holding['dividendRate'] = stock_data.get('dividendRate', 0)
+        stock_holding['dividendIncome'] = stock_data.get('dividendRate', 0) * shares
+        stock_holding['yieldOnCost'] = stock_holding.get('dividendIncome', 0) / total_cost
+
+        holdings['portfolioMarketValue'] += stock_holding.get('marketValue')
+        holdings['portfolioTotalInvestment'] += stock_holding.get('totalCost')
+        holdings['portfolioDividendIncome'] += stock_holding.get('dividendIncome')
+        holdings['portfolioUnrealizedGain'] += stock_holding.get('unrealizedGain')
+
+        for k, v in stock_holding.items():
+            if not type(v) is str:
+                stock_holding[k] = round(float(v), 4)
+
+        holdings[symbol.lower()] = stock_holding
 
     for position in [v for v in holdings.values() if isinstance(v, dict)]:
         holdings['portfolioPositions'] += 1
-        position['portfolioPercent'] = position['marketValue'] / holdings['portfolioMarketValue']
+        position['portfolioPercent'] = position.get('marketValue') / holdings.get('portfolioMarketValue')
         holdings[position['symbol']] = position
 
-    holdings['portfolioUnrealizedGainPercent'] = holdings['portfolioUnrealizedGain'] / holdings['portfolioTotalInvestment']
-    holdings['portfolioYieldOnCost'] = holdings['portfolioDividendIncome'] / holdings['portfolioTotalInvestment']
-    holdings['portfolioYield'] = holdings['portfolioDividendIncome'] / holdings['portfolioMarketValue']
+    holdings['portfolioUnrealizedGainPercent'] = holdings.get('portfolioUnrealizedGain') / holdings.get('portfolioTotalInvestment')
+    holdings['portfolioYieldOnCost'] = holdings.get('portfolioDividendIncome') / holdings.get('portfolioTotalInvestment')
+    holdings['portfolioYield'] = holdings.get('portfolioDividendIncome') / holdings.get('portfolioMarketValue')
 
+    print('saving holdings data to', HOLDINGS_JSON_PATH)
     dump_data_to(holdings, HOLDINGS_JSON_PATH)
-    with open(get_file_path('holdings', 'pickle'), 'wb') as holdings_pickle:
-        pickle.dump(holdings, holdings_pickle)
     return holdings
 
 
-def map_stock_data(yq_modules_data):
-    mapped_yq_data = {}
-    for symbol, data in yq_modules_data.items():
-        mapped_data = {}
-        mapped_data.update(data['price'])
-        mapped_data.update(data['summaryDetail'])
-        mapped_data.update(data['defaultKeyStatistics'])
-        if data['price']['quoteType'] == 'EQUITY':
-            mapped_data.update(data['financialData'])
-            mapped_data['profile'] = data['assetProfile']
-            mapped_data['calendarEvents'] = data['calendarEvents']
-            mapped_data['earnings'] = data['earnings']
-            mapped_data['earnings'].update(data['earningsHistory'])
-            mapped_data['earnings'].update(data['earningsTrend'])
-            mapped_data['indexTrend'] = data['indexTrend']
-            mapped_data['insiderTransactions'] = data.get('insiderTransactions', {}).get('transactions', {})
-            mapped_data['recommendationTrend'] = data['recommendationTrend']['trend']
-            mapped_data['shareholders'] = {}
-            mapped_data['shareholders']['fundOwnership'] = data['fundOwnership']['ownershipList']
-            mapped_data['shareholders']['insiderHolders'] = data['insiderHolders']['holders']
-            mapped_data['shareholders']['institutionOwnership'] = data['institutionOwnership']['ownershipList']
-            mapped_data['shareholders']['majorHolders'] = data.get('majorHoldersBreakdown', {})
-            mapped_data['upgradeDowngradeHistory'] = data['upgradeDowngradeHistory']['history'][:5]
-            try:
-                mapped_data['fcfPerShare'] = mapped_data['freeCashflow'] / mapped_data['sharesOutstanding']
-                mapped_data['fcfYield'] = mapped_data['freeCashflow'] / mapped_data['marketCap']
-                if mapped_data['fcfPerShare'] != 0:
-                    mapped_data['fcfPayoutRatio'] = mapped_data['dividendRate'] / mapped_data['fcfPerShare']  
-                else:
-                    mapped_data['fcfPayoutRatio'] = 0
-            except KeyError:
-                mapped_data['fcfPerShare'] = 0
-                mapped_data['fcfYield'] = 0
-                mapped_data['fcfPayoutRatio'] = 0
-        else:
-            mapped_data['profile'] = data['assetProfile']
-            mapped_data['profile'].update(data['fundProfile'])
-            mapped_data['dividendRate'] = data['summaryDetail']['yield'] * data['price']['regularMarketPrice']
-            mapped_data['dividendYield'] = data['summaryDetail']['yield']
-            mapped_data['topHoldings'] = data['topHoldings']
-            mapped_data['fundPerformance'] = data['fundPerformance']
-        mapped_yq_data[symbol] = mapped_data
-
-    for _, v in mapped_yq_data.items():
-        clean(v)
-    return mapped_yq_data
+def load_portfolio_symbols():
+    holdings_data = load_data_from(HOLDINGS_CSV_PATH)
+    return [row[0] for row in list(holdings_data)]
 
 
-def yq_stock_data(symbols=None):
-    if symbols is None:
-        holdings = generate_holdings_data()
-        symbols = [k for k, v in holdings.items() if isinstance(v, dict)]
-    ticker = Ticker(symbols, asynchronous=True, progress=True)
-    modules_data = ticker.get_modules(yq_modules)
-    mapped_data = map_stock_data(modules_data)
-
-    path = get_file_path('portfolio', 'json')
-    dump_data_to(mapped_data, path)
-    with open(get_file_path('portfolio', 'pickle'), 'wb') as portfolio_pickle:
-        pickle.dump(mapped_data, portfolio_pickle)
-    for symbol in mapped_data:
-        path = get_file_path(symbol.lower(), 'json')
-        dump_data_to(mapped_data[symbol], path)
-    return mapped_data
-
-
-def yq_dividend_history(symbol, start_date):
-    try:
-        ticker = Ticker(symbol, asynchronous=True, progress=True)
-        return ticker.dividend_history(start=start_date)
-    except Exception as e:
-        print(symbol, 'failed to fetch dividend history:', e)
-
-
-def yq_technical_insights(symbol):
-    try:
-        ticker = Ticker(symbol, asynchronous=True, progress=True)
-        return ticker.technical_insights
-    except Exception as e:
-        print(symbol, 'failed to fetch technical insights:', e)
-
-
-def yq_corporate_events(symbol):
-    try:
-        ticker = Ticker(symbol, asynchronous=True, progress=True)
-        return ticker.corporate_events
-    except Exception as e:
-        print(symbol, 'failed to fetch corporate events:', e)
-
-
-# def yq_recommendations(symbol):
-#     try:
-#         ticker = Ticker(symbol, asynchronous=True, progress=True)
-#         return ticker.recommendations
-#     except Exception as e:
-#         print(symbol, 'failed to fetch recommendations:', e)
+if __name__ == '__main__':
+    generate_holdings_data()

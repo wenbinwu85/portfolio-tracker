@@ -5,8 +5,10 @@ from quart import Quart, jsonify, request
 from quart_cors import cors
 from helpers.funcs import dump_data_to
 from yq import DATA_PATH
-from yq import generate_holdings_data, yq_stock_data, yq_dividend_history
-from yq import yq_technical_insights, yq_corporate_events
+from yq import generate_holdings_data, load_portfolio_symbols, yq_stock_data
+from yq import yq_technical_insights, yq_corporate_events, yq_dividend_history
+from yq import dump_tickers_data
+
 
 setting_options = {'true': True, 'false': False}
 
@@ -23,17 +25,12 @@ def index():
     return '<h1>Portfolio Tracker Backend Running</h1>'
 
 
-@app.route('/test')
-def test_get():
-    return '<h1>Testing 123</h1>'
-
-
 # fetch single stock data
 @app.route('/fetch/stock/<symbol>')
 def fetch_stock_data(symbol):
-    path = get_file_path(symbol, 'json')
     symbol_data = yq_stock_data(symbol)
-    dump_data_to(symbol_data[symbol], path)
+    path = get_file_path(symbol, 'json')
+    dump_data_to(symbol_data[symbol.lower()], path)
     return jsonify(symbol_data)
 
 
@@ -45,6 +42,7 @@ def fetch_stocks_data(symbols):
     for symbol in symbols_data:
         path = get_file_path(symbol.lower(), 'json')
         dump_data_to(symbols_data[symbol], path)
+    dump_tickers_data(symbols_data)
     return jsonify(symbols_data)
 
 
@@ -104,14 +102,16 @@ def get_portfolio_holdings():
 
 @app.route('/fetch/portfolio/symbols')
 def get_portfolio_symbols():
-    data = generate_holdings_data()
-    keys = [k for k, v in data.items() if isinstance(v, dict)]
-    return jsonify(keys)
+    symbols = load_portfolio_symbols()
+    return jsonify(symbols)
 
 
 @app.route('/fetch/portfolio/data')
 def fetch_portfolio_data():
-    return jsonify(yq_stock_data())
+    symbols = load_portfolio_symbols()
+    yq_data = yq_stock_data(symbols)
+    dump_tickers_data(yq_data)
+    return jsonify(yq_data)
 
 
 @app.route('/fetch/portfolio/technical-insights')

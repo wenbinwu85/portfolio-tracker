@@ -121,7 +121,7 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
     "trailingAnnualDividendYield",
     "fiveYearAvgDividendYield",
     "payoutRatio",
-    "fcfPayoutRatio",
+    "freeCashflowPayoutRatio",
     "lastDividendValue",
     "exDividendDate",
     "dividendDate",
@@ -138,8 +138,8 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
     (stock: any) => `${(stock.fiveYearAvgDividendYield || 0).toFixed(2)}%`,
     (stock: any) => `${(stock.payoutRatio * 100 || 0).toFixed(2)}%`,
     (stock: any) =>
-      stock.quoteType === "EQUITY" && stock.fcfPayoutRatio !== 0
-        ? `${(stock.fcfPayoutRatio * 100).toFixed(2)}%`
+      stock.quoteType === "EQUITY" && stock.freeCashflowPayoutRatio !== 0
+        ? `${(stock.freeCashflowPayoutRatio * 100).toFixed(2)}%`
         : "N/A",
     (stock: any) => `$${stock.lastDividendValue?.toFixed(2) || 0}`,
     (stock: any) =>

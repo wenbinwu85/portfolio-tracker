@@ -43,6 +43,11 @@ table {
     align-self: normal;
 }
 
+.expanded-stock-detail {
+    border: 1px solid slategrey;
+    border-radius: 0.5rem;
+}
+
 .title {
     display: flex;
     padding: 1rem;
@@ -78,9 +83,4 @@ table {
 
 .add-margin {
     margin: 1rem;
-}
-
-.expanded-stock-detail {
-    border: 1px solid slategrey;
-    border-radius: 0.5rem;
 }

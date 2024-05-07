@@ -62,7 +62,7 @@
             "hiring": 0.8169,
             "sustainability": 0.2895,
             "insiderSentiments": 0.4146,
-            "earningsReports": 0.9531000000000001,
+            "earningsReports": 0.9497,
             "dividends": 0.0716
         },
         "sector": {
@@ -106,16 +106,27 @@
     },
     "events": [
         {
-            "eventType": "Momentum",
+            "eventType": "Double Moving Average Crossover",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "L",
+            "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
             "startDate": 1714656600,
             "endDate": 1714656600
         }
     ],
     "reports": [
+        {
+            "id": "39907_Technical Analysis_1714992969000",
+            "headHtml": "Technical Assessment: Neutral in the Intermediate-Term",
+            "provider": "Argus Research",
+            "reportDate": "2024-05-06T10:56:09Z",
+            "reportTitle": "Last week was volatile for stocks, with the indices hit on Tuesday and Wednesday but then rebounding on Thursday and Friday. The S&P 500 (SPX) rose 2.2% on the last two days of the week, with the Nasdaq ripping higher by 3.5%, and the Nasdaq 100 (QQQ) popping 3.3%. The SPX stopped right at the underside of its 50-day moving average, the QQQ is about a point below the 50-day, and the only major index to leapfrog the 50-day was the Nasdaq. The index lost its 50-day on April 15, so it spent a modest 14 days below the average.",
+            "tickers": [
+                "META",
+                "DIS"
+            ]
+        },
         {
             "id": "39684_Technical Analysis_1712919746000",
             "headHtml": "Technical Assessment: Neutral in the Intermediate-Term",
@@ -1100,18 +1111,6 @@
             ]
         },
         {
-            "id": "2894_Analyst Report_1588896000000",
-            "headHtml": "Analyst Report: Walt Disney Co (The)",
-            "provider": "Argus Research",
-            "reportDate": "2020-05-08T00:00:00Z",
-            "reportTitle": "Walt Disney Co. is a global entertainment company. The company owns and leverages well-known brands, ranging from Mickey Mouse and 'Frozen' to ESPN and ABC. Disney acquired the animated movie producer Pixar Animation Studios in 2006, comic book and movie producer Marvel Entertainment in 2010, 'Star Wars' originator Lucasfilm in 2012, a 75% interest in streaming video technology platform BAMTech (now Disney Streaming Services) in 2017, the assets of 21st Century Fox in March 2019, and Hulu in May 2019. Disney derives 24% of its revenue from outside of North America and 12% from Europe.",
-            "targetPrice": 130.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "DIS"
-            ]
-        },
-        {
             "id": "26890_Market Update_1588896000000",
             "headHtml": "Market Update: REGN, AMP, BDN, K, OXY, DIS, EIX",
             "provider": "Argus Research",
@@ -1124,6 +1123,18 @@
                 "K",
                 "REGN",
                 "BDN",
+                "DIS"
+            ]
+        },
+        {
+            "id": "2894_Analyst Report_1588896000000",
+            "headHtml": "Analyst Report: Walt Disney Co (The)",
+            "provider": "Argus Research",
+            "reportDate": "2020-05-08T00:00:00Z",
+            "reportTitle": "Walt Disney Co. is a global entertainment company. The company owns and leverages well-known brands, ranging from Mickey Mouse and 'Frozen' to ESPN and ABC. Disney acquired the animated movie producer Pixar Animation Studios in 2006, comic book and movie producer Marvel Entertainment in 2010, 'Star Wars' originator Lucasfilm in 2012, a 75% interest in streaming video technology platform BAMTech (now Disney Streaming Services) in 2017, the assets of 21st Century Fox in March 2019, and Hulu in May 2019. Disney derives 24% of its revenue from outside of North America and 12% from Europe.",
+            "targetPrice": 130.0,
+            "investmentRating": "Bullish",
+            "tickers": [
                 "DIS"
             ]
         },
@@ -1168,18 +1179,6 @@
             ]
         },
         {
-            "id": "2894_Analyst Report_1586761958000",
-            "headHtml": "Analyst Report: Walt Disney Co (The)",
-            "provider": "Argus Research",
-            "reportDate": "2020-04-13T07:12:38Z",
-            "reportTitle": "Walt Disney Co. is a global entertainment company. The company owns and leverages well-known brands, ranging from Mickey Mouse and 'Frozen' to ESPN and ABC. Disney acquired the animated movie producer Pixar Animation Studios in 2006, comic book and movie producer Marvel Entertainment in 2010, 'Star Wars' originator Lucasfilm in 2012, a 75% interest in streaming video technology platform BAMTech (now Disney Streaming Services) in 2017, the assets of 21st Century Fox in March 2019, and Hulu in May 2019. Disney derives 24% of its revenue from outside of North America and 12% of its revenue from Europe.",
-            "targetPrice": 130.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "DIS"
-            ]
-        },
-        {
             "id": "26661_Market Summary_1586761958000",
             "headHtml": "Market Digest: SO, CTSH, DIS, XLNX, THO, SRE",
             "provider": "Argus Research",
@@ -1191,6 +1190,18 @@
                 "CTSH",
                 "THO",
                 "SO",
+                "DIS"
+            ]
+        },
+        {
+            "id": "2894_Analyst Report_1586761958000",
+            "headHtml": "Analyst Report: Walt Disney Co (The)",
+            "provider": "Argus Research",
+            "reportDate": "2020-04-13T07:12:38Z",
+            "reportTitle": "Walt Disney Co. is a global entertainment company. The company owns and leverages well-known brands, ranging from Mickey Mouse and 'Frozen' to ESPN and ABC. Disney acquired the animated movie producer Pixar Animation Studios in 2006, comic book and movie producer Marvel Entertainment in 2010, 'Star Wars' originator Lucasfilm in 2012, a 75% interest in streaming video technology platform BAMTech (now Disney Streaming Services) in 2017, the assets of 21st Century Fox in March 2019, and Hulu in May 2019. Disney derives 24% of its revenue from outside of North America and 12% of its revenue from Europe.",
+            "targetPrice": 130.0,
+            "investmentRating": "Bullish",
+            "tickers": [
                 "DIS"
             ]
         },
@@ -1324,18 +1335,6 @@
             ]
         },
         {
-            "id": "26424_Market Summary_1584057600000",
-            "headHtml": "Market Digest: DIS, W, CCEP",
-            "provider": "Argus Research",
-            "reportDate": "2020-03-13T00:00:00Z",
-            "reportTitle": "Stocks plummeted in a record selloff on Thursday, ending the long-running bull market as investors passed judgment on President Trump's travel ban and overall handling of the coronavirus crisis. Meanwhile, states and cities continued to struggle with a lack of adequate testing, and imposed new restrictions on public gatherings in an effort to slow the spread of the virus. The markets briefly pared losses after the Fed announced $1.5 trillion in liquidity operations, but soon plunged again. Volatility soared, with the VIX rising more than 35% to 73.08. The Dow fell 9.99%, the S&P 9.51%, and the Nasdaq 9.43%. Crude oil fell nearly 6% to $31 per barrel, while gold fell $74 to $1569 per ounce.",
-            "tickers": [
-                "CCEP",
-                "W",
-                "DIS"
-            ]
-        },
-        {
             "id": "2894_Analyst Report_1584057600000",
             "headHtml": "Analyst Report: Walt Disney Co (The)",
             "provider": "Argus Research",
@@ -1344,6 +1343,18 @@
             "targetPrice": 130.0,
             "investmentRating": "Bullish",
             "tickers": [
+                "DIS"
+            ]
+        },
+        {
+            "id": "26424_Market Summary_1584057600000",
+            "headHtml": "Market Digest: DIS, W, CCEP",
+            "provider": "Argus Research",
+            "reportDate": "2020-03-13T00:00:00Z",
+            "reportTitle": "Stocks plummeted in a record selloff on Thursday, ending the long-running bull market as investors passed judgment on President Trump's travel ban and overall handling of the coronavirus crisis. Meanwhile, states and cities continued to struggle with a lack of adequate testing, and imposed new restrictions on public gatherings in an effort to slow the spread of the virus. The markets briefly pared losses after the Fed announced $1.5 trillion in liquidity operations, but soon plunged again. Volatility soared, with the VIX rising more than 35% to 73.08. The Dow fell 9.99%, the S&P 9.51%, and the Nasdaq 9.43%. Crude oil fell nearly 6% to $31 per barrel, while gold fell $74 to $1569 per ounce.",
+            "tickers": [
+                "CCEP",
+                "W",
                 "DIS"
             ]
         },
@@ -1413,18 +1424,6 @@
             ]
         },
         {
-            "id": "2894_Analyst Report_1580947200000",
-            "headHtml": "Analyst Report: Walt Disney Company",
-            "provider": "Argus Research",
-            "reportDate": "2020-02-06T00:00:00Z",
-            "reportTitle": "Walt Disney Co. is a global entertainment company. The company owns and leverages well-known brands, ranging from Mickey Mouse and 'Frozen' to ESPN and ABC. Disney acquired the animated movie producer Pixar Animation Studios in 2006, comic book and movie producer Marvel Entertainment in 2010, 'Star Wars' originator Lucasfilm in 2012, a 75% interest in streaming video technology platform BAMTech (now Disney Streaming Services) in 2017, the assets of 21st Century Fox in March 2019, and Hulu in May 2019. Disney derives 24% of its revenue from outside of North America and 12% of its revenue from Europe.",
-            "targetPrice": 160.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "DIS"
-            ]
-        },
-        {
             "id": "26123_Market Summary_1580947200000",
             "headHtml": "Market Digest: AMGN, APO, PCAR, RCL, STX, VIAV, VSH, DIS, VLO, NJR",
             "provider": "Argus Research",
@@ -1440,6 +1439,18 @@
                 "RCL",
                 "VSH",
                 "AMGN",
+                "DIS"
+            ]
+        },
+        {
+            "id": "2894_Analyst Report_1580947200000",
+            "headHtml": "Analyst Report: Walt Disney Company",
+            "provider": "Argus Research",
+            "reportDate": "2020-02-06T00:00:00Z",
+            "reportTitle": "Walt Disney Co. is a global entertainment company. The company owns and leverages well-known brands, ranging from Mickey Mouse and 'Frozen' to ESPN and ABC. Disney acquired the animated movie producer Pixar Animation Studios in 2006, comic book and movie producer Marvel Entertainment in 2010, 'Star Wars' originator Lucasfilm in 2012, a 75% interest in streaming video technology platform BAMTech (now Disney Streaming Services) in 2017, the assets of 21st Century Fox in March 2019, and Hulu in May 2019. Disney derives 24% of its revenue from outside of North America and 12% of its revenue from Europe.",
+            "targetPrice": 160.0,
+            "investmentRating": "Bullish",
+            "tickers": [
                 "DIS"
             ]
         },
@@ -1602,25 +1613,6 @@
             ]
         },
         {
-            "id": "25430_Market Summary_1573457626000",
-            "headHtml": "Market Digest: W, LHX, ABBV, EL, PRU, STX, DIS, GSK, OXY, EIX",
-            "provider": "Argus Research",
-            "reportDate": "2019-11-11T07:33:46Z",
-            "reportTitle": "Stocks finished flat to slightly higher on Friday, aided by optimism over a phase I trade deal with China and the potential delay of upcoming tariffs. The Dow Jones Industrial Average was flat, while the Nasdaq Composite rose 0.5% and the S&P 500 added 0.3%, closing at a record high. As third-quarter earnings announcements began to wind down in a better-than-expected fashion, stocks also maintained momentum for the week, leading to a fifth consecutive rise. The Dow was up 1.2%, the Nasdaq added 1.1%, and the S&P 500 rose 0.9%. Year-to-date gains are now 18.7% for the Dow, 27.7% for the Nasdaq and 23.4% for the S&P 500.  ",
-            "tickers": [
-                "OXY",
-                "PRU",
-                "EIX",
-                "STX",
-                "EL",
-                "W",
-                "ABBV",
-                "LHX",
-                "GSK",
-                "DIS"
-            ]
-        },
-        {
             "id": "2894_Analyst Report_1573457626000",
             "headHtml": "Analyst Report: Walt Disney Company",
             "provider": "Argus Research",
@@ -1633,10 +1625,10 @@
             ]
         },
         {
-            "id": "25430_Market Summary_1573430400000",
+            "id": "25430_Market Summary_1573457626000",
             "headHtml": "Market Digest: W, LHX, ABBV, EL, PRU, STX, DIS, GSK, OXY, EIX",
             "provider": "Argus Research",
-            "reportDate": "2019-11-11T00:00:00Z",
+            "reportDate": "2019-11-11T07:33:46Z",
             "reportTitle": "Stocks finished flat to slightly higher on Friday, aided by optimism over a phase I trade deal with China and the potential delay of upcoming tariffs. The Dow Jones Industrial Average was flat, while the Nasdaq Composite rose 0.5% and the S&P 500 added 0.3%, closing at a record high. As third-quarter earnings announcements began to wind down in a better-than-expected fashion, stocks also maintained momentum for the week, leading to a fifth consecutive rise. The Dow was up 1.2%, the Nasdaq added 1.1%, and the S&P 500 rose 0.9%. Year-to-date gains are now 18.7% for the Dow, 27.7% for the Nasdaq and 23.4% for the S&P 500.  ",
             "tickers": [
                 "OXY",
@@ -1664,6 +1656,25 @@
             ]
         },
         {
+            "id": "25430_Market Summary_1573430400000",
+            "headHtml": "Market Digest: W, LHX, ABBV, EL, PRU, STX, DIS, GSK, OXY, EIX",
+            "provider": "Argus Research",
+            "reportDate": "2019-11-11T00:00:00Z",
+            "reportTitle": "Stocks finished flat to slightly higher on Friday, aided by optimism over a phase I trade deal with China and the potential delay of upcoming tariffs. The Dow Jones Industrial Average was flat, while the Nasdaq Composite rose 0.5% and the S&P 500 added 0.3%, closing at a record high. As third-quarter earnings announcements began to wind down in a better-than-expected fashion, stocks also maintained momentum for the week, leading to a fifth consecutive rise. The Dow was up 1.2%, the Nasdaq added 1.1%, and the S&P 500 rose 0.9%. Year-to-date gains are now 18.7% for the Dow, 27.7% for the Nasdaq and 23.4% for the S&P 500.  ",
+            "tickers": [
+                "OXY",
+                "PRU",
+                "EIX",
+                "STX",
+                "EL",
+                "W",
+                "ABBV",
+                "LHX",
+                "GSK",
+                "DIS"
+            ]
+        },
+        {
             "id": "25155_Technical Analysis_1570516873000",
             "headHtml": "Technical Assessment: Bullish in the Intermediate-Term",
             "provider": "Argus Research",
@@ -1684,51 +1695,12 @@
                 "SCHW",
                 "DIS"
             ]
-        },
-        {
-            "id": "24759_Thematic Portfolio_1566299934000",
-            "headHtml": "The Argus Min Vol Model Portfolio",
-            "provider": "Argus Research",
-            "reportDate": "2019-08-20T11:18:54Z",
-            "reportTitle": "As the stock market was racing to new highs earlier this year, most investors were either looking to get on board or stay aboard the galloping bull. But below the surface as many joined the party, the market was being driven higher primarily by Consumer and Information Technology stocks -- and investors likely became over-allocated to a couple of these high-risk/high-reward sectors. Even while riding the rally (and the recent ups and downs, as reflected in the elevated levels of volatility shown in our chart), some investors have started to investigate end-of-rally strategies. Minimum Volatility, or Min Vol, often falls into that defensive category. Argus believes that Min Vol is an all-weather strategy that is timely in any investing climate and that serves well as a complement to a core holdings strategy. Academic literature and (more to the point) returns history indicates that Min Vol can deliver market-matching returns on an absolute basis and superior returns on a risk-adjusted basis across the market cycle.",
-            "tickers": [
-                "ALL",
-                "JNJ",
-                "MRK",
-                "COST",
-                "T",
-                "SBUX",
-                "WM",
-                "LLY",
-                "TRV",
-                "MDT",
-                "LHX",
-                "NOC",
-                "TJX",
-                "HON",
-                "EL",
-                "AMT",
-                "AEP",
-                "ES",
-                "DIS",
-                "ECL",
-                "NEE",
-                "LMT",
-                "ROP",
-                "SYY",
-                "CMCSA",
-                "PEG",
-                "WEC",
-                "PAYX",
-                "PEP",
-                "XEL"
-            ]
         }
     ],
     "sigDevs": [
         {
-            "headline": "NBA Has Agreed To General Framework Of Deals With Disney & Amazon That Are Worth $2.6 Bln & $1.8 Bln A Year, Respectively- Bloomberg News",
-            "date": "2024-05-02"
+            "headline": "ABC News President Kim Godwin Is Stepping Down- WSJ",
+            "date": "2024-05-06"
         }
     ],
     "secReports": [
@@ -1814,21 +1786,21 @@
             "formType": "DEFA14A"
         },
         {
-            "id": "0000950157-24-000519_1744489",
-            "type": "Proxy Statements",
-            "title": "DEFA14A : Proxy Statements",
-            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
-            "filingDate": 1711324800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000519/thumbnail.png",
-            "formType": "DEFA14A"
-        },
-        {
             "id": "0000950157-24-000521_1744489",
             "type": "Proxy Statements",
             "title": "DEFA14A : Proxy Statements",
             "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
             "filingDate": 1711324800000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000521/thumbnail.png",
+            "formType": "DEFA14A"
+        },
+        {
+            "id": "0000950157-24-000519_1744489",
+            "type": "Proxy Statements",
+            "title": "DEFA14A : Proxy Statements",
+            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
+            "filingDate": 1711324800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000519/thumbnail.png",
             "formType": "DEFA14A"
         },
         {
@@ -1886,21 +1858,21 @@
             "formType": "DEFA14A"
         },
         {
-            "id": "0000950157-24-000458_1744489",
-            "type": "Proxy Statements",
-            "title": "DEFA14A : Proxy Statements",
-            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
-            "filingDate": 1710979200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000458/thumbnail.png",
-            "formType": "DEFA14A"
-        },
-        {
             "id": "0000950157-24-000461_1744489",
             "type": "Proxy Statements",
             "title": "DEFA14A : Proxy Statements",
             "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
             "filingDate": 1710979200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000461/thumbnail.png",
+            "formType": "DEFA14A"
+        },
+        {
+            "id": "0000950157-24-000458_1744489",
+            "type": "Proxy Statements",
+            "title": "DEFA14A : Proxy Statements",
+            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
+            "filingDate": 1710979200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000458/thumbnail.png",
             "formType": "DEFA14A"
         },
         {
@@ -1940,21 +1912,21 @@
             "formType": "DEFA14A"
         },
         {
-            "id": "0000950157-24-000402_1744489",
-            "type": "Proxy Statements",
-            "title": "DEFA14A : Proxy Statements",
-            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
-            "filingDate": 1710288000000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000402/thumbnail.png",
-            "formType": "DEFA14A"
-        },
-        {
             "id": "0000950157-24-000390_1744489",
             "type": "Proxy Statements",
             "title": "DEFA14A : Proxy Statements",
             "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
             "filingDate": 1710288000000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000390/thumbnail.png",
+            "formType": "DEFA14A"
+        },
+        {
+            "id": "0000950157-24-000402_1744489",
+            "type": "Proxy Statements",
+            "title": "DEFA14A : Proxy Statements",
+            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
+            "filingDate": 1710288000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000402/thumbnail.png",
             "formType": "DEFA14A"
         },
         {
@@ -2030,15 +2002,6 @@
             "formType": "DEFA14A"
         },
         {
-            "id": "0000950157-24-000319_1744489",
-            "type": "Proxy Statements",
-            "title": "DEFA14A : Proxy Statements",
-            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
-            "filingDate": 1709510400000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000319/thumbnail.png",
-            "formType": "DEFA14A"
-        },
-        {
             "id": "0001193125-24-057958_1744489",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -2046,6 +2009,15 @@
             "filingDate": 1709510400000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000119312524057958/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0000950157-24-000319_1744489",
+            "type": "Proxy Statements",
+            "title": "DEFA14A : Proxy Statements",
+            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
+            "filingDate": 1709510400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000319/thumbnail.png",
+            "formType": "DEFA14A"
         },
         {
             "id": "0000950157-24-000312_1744489",
@@ -2156,21 +2128,21 @@
             "formType": "DEFA14A"
         },
         {
-            "id": "0000950157-24-000224_1744489",
-            "type": "Proxy Statements",
-            "title": "DEFA14A : Proxy Statements",
-            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
-            "filingDate": 1707868800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000224/thumbnail.png",
-            "formType": "DEFA14A"
-        },
-        {
             "id": "0000950157-24-000229_1744489",
             "type": "Proxy Statements",
             "title": "DEFA14A : Proxy Statements",
             "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
             "filingDate": 1707868800000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000229/thumbnail.png",
+            "formType": "DEFA14A"
+        },
+        {
+            "id": "0000950157-24-000224_1744489",
+            "type": "Proxy Statements",
+            "title": "DEFA14A : Proxy Statements",
+            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
+            "filingDate": 1707868800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001744489/000095015724000224/thumbnail.png",
             "formType": "DEFA14A"
         },
         {

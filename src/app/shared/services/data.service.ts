@@ -201,7 +201,7 @@ export class DataService {
    */
   public getPortfolioData(fromLocal: boolean = false): Observable<JSON> {
     if (fromLocal) {
-      const localPath = `${this.backendDataPath}/portfolio.json`;
+      const localPath = `${this.backendDataPath}/portfolio-data.json`;
       const options = { ...this.httpOptions, responseType: "json" };
       return this.wrapHttpCall(localPath, options);
     }
