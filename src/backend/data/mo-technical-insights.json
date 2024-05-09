@@ -7,14 +7,14 @@
             "shortTermOutlook": {
                 "stateDescription": "Bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 4,
-                "scoreDescription": "Very Strong Bullish Evidence",
+                "score": 3,
+                "scoreDescription": "Strong Bullish Evidence",
                 "sectorDirection": "Bullish",
                 "sectorScore": 1,
                 "sectorScoreDescription": "Weak Bullish Evidence",
-                "indexDirection": "Bearish",
-                "indexScore": 1,
-                "indexScoreDescription": "Weak Bearish Evidence"
+                "indexDirection": "Bullish",
+                "indexScore": 4,
+                "indexScoreDescription": "Very Strong Bullish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "All events are bullish.",
@@ -25,8 +25,8 @@
                 "sectorScore": 3,
                 "sectorScoreDescription": "Strong Bullish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 4,
-                "indexScoreDescription": "Very Strong Bearish Evidence"
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "longTermOutlook": {
                 "stateDescription": "Recent bullish events outweigh bearish events.",
@@ -44,8 +44,8 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 41.38,
-            "resistance": 45.45,
-            "stopLoss": 41.981815
+            "resistance": 44.1154,
+            "stopLoss": 42.058413
         },
         "valuation": {
             "color": 0.5,
@@ -61,7 +61,7 @@
             "hiring": 0.6476000000000001,
             "sustainability": 0.8525,
             "insiderSentiments": 0.7737,
-            "earningsReports": 0.7131000000000001,
+            "earningsReports": 0.7206,
             "dividends": 0.9709
         },
         "sector": {
@@ -104,13 +104,13 @@
     },
     "events": [
         {
-            "eventType": "Price Crosses Moving Average",
-            "pricePeriod": "W",
-            "tradingHorizon": "L",
-            "tradeType": "L",
+            "eventType": "Commodity Channel Index",
+            "pricePeriod": "D",
+            "tradingHorizon": "S",
+            "tradeType": "U",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1714138200,
-            "endDate": 1714138200
+            "startDate": 1714743000,
+            "endDate": 1714743000
         }
     ],
     "reports": [
@@ -123,7 +123,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, founded in 1822, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and  abroad. Its wholly owned subsidiaries include Philip Morris USA Inc. and John Middleton Co., a leading U.S. cigar manufacturer. Its smoke-free  portfolio includes ownership of U.S. Smokeless Tobacco Company LLC and Helix Innovations LLC, a manufacturer of oral nicotine pouches. \r\n\r\nThe company has a majority-owned joint venture, Horizon Innovations LLC (Horizon), for the U.S. marketing and commercialization of heated  tobacco stick products. Altria also has equity investments in Anheuser-Busch InBev SA/NV and Cronos Group Inc., a Canadian cannabinoid  company. The company's brands include Marlboro, Black & Mild, Copenhagen, on! and Skoal. The shares are a component of the S&P 500."
         },
         {
             "id": "39183_Market Summary_1708602904000",
@@ -143,7 +144,8 @@
                 "ECL",
                 "PANW",
                 "ROK"
-            ]
+            ],
+            "title": "Bumps in the Soft Landing"
         },
         {
             "id": "3203_Analyst Report_1700073339000",
@@ -154,7 +156,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, founded in 1822, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its wholly owned subsidiaries include Philip Morris USA Inc. and John Middleton Co., a leading U.S. cigar manufacturer. Its smoke-free portfolio includes ownership of U.S. Smokeless Tobacco Company LLC and Helix Innovations LLC, a manufacturer of oral nicotine pouches. \r\n\r\nThe company has a majority-owned joint venture, Horizon Innovations LLC (Horizon), for the U.S. marketing and commercialization of heated tobacco stick products. Altria also has equity investments in Anheuser-Busch InBev SA/NV and Cronos Group Inc., a Canadian cannabinoid company. The company's brands include Marlboro, Black & Mild, Copenhagen, on! and Skoal. The shares are a component of the S&P 500."
         },
         {
             "id": "38284_Market Update_1700072439000",
@@ -171,7 +174,8 @@
                 "EMR",
                 "K",
                 "ETN"
-            ]
+            ],
+            "title": "Stocks rose again on Wednesday morning as investors weighed new retail sales and producer price data, along with strong earnings from Target. The Commerce Department said that U.S. retail sales fell 0.1% in October after a revised 0.9% increase in September. The Reuters consensus forecast had called for a decline of 0.3%. Meanwhile, producer prices pointed to continued progress on inflation. The Labor Department said that its producer price index for final demand fell 0.5% in October, the largest decrease since April 2020, after a 0.4% increase a month earlier. The Dow rose 0.3%, the S&P 0.2%, and the Nasdaq 0.2%. Crude oil fell nearly 2% to $77 per barrel, while gold traded near $1965 per ounce."
         },
         {
             "id": "37646_Market Summary_1694602872000",
@@ -185,7 +189,8 @@
                 "RY",
                 "MRNA",
                 "TSN"
-            ]
+            ],
+            "title": "As of the close on September 11, the S&P 500 (SPX), the Nasdaq, and the Nasdaq 100 (QQQ) had all regained their 50-day averages. All three lost the 50-day in mid-August and again last week, so it is encouraging that these major indices are putting up a stand around the key average. At the same time, the three majors remain above their August lows and the pullback has turned into a sideways battle, with a lower high and a higher low in place.  "
         },
         {
             "id": "3203_Analyst Report_1694602872000",
@@ -196,7 +201,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, originally founded in 1822, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its wholly owned subsidiaries include Philip Morris USA Inc. and John Middleton Co., a leading U.S. cigar manufacturer. Its smoke-free portfolio includes ownership of U.S. Smokeless Tobacco Company LLC and Helix Innovations LLC, a manufacturer of oral nicotine pouches. \r\n\r\nThe company has a majority-owned joint venture, Horizon Innovations LLC (Horizon), for the U.S. marketing and commercialization of heated tobacco stick products. Altria also has equity investments in Anheuser-Busch InBev SA/NV and Cronos Group Inc., a Canadian cannabinoid company. The brand portfolios of its tobacco operating companies include Marlboro, Black & Mild, Copenhagen, on! and Skoal. The shares are a component of the S&P 500."
         },
         {
             "id": "3203_Analyst Report_1685724977000",
@@ -207,7 +213,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, originally founded in 1822, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its wholly owned subsidiaries include Philip Morris USA Inc. and John Middleton Co., a leading U.S. cigar manufacturer. Its smoke-free portfolio includes ownership of U.S. Smokeless Tobacco Company LLC and Helix Innovations LLC, a manufacturer of oral nicotine pouches. \r\n\r\nThe company has a majority-owned joint venture, Horizon Innovations LLC (Horizon), for the U.S. marketing and commercialization of heated tobacco stick products. Altria also has equity investments in Anheuser-Busch InBev SA/NV and Cronos Group Inc., a Canadian cannabinoid company. The brand portfolios of its tobacco operating companies include Marlboro, Black & Mild, Copenhagen, on! and Skoal."
         },
         {
             "id": "36659_Market Update_1685724077000",
@@ -221,7 +228,8 @@
                 "LH",
                 "PSA",
                 "CRM"
-            ]
+            ],
+            "title": "Stocks rallied on Friday morning following the passage of the debt ceiling bill in the Senate late Thursday and a stronger-than-expected May employment report. The Labor Department said that the U.S. economy added 339,000 nonfarm payroll jobs last month, up from a revised 294,000 in April and well above the Reuters consensus forecast of 190,000. However, the unemployment rate rose to 3.7% from 3.4%, and growth in average hourly earnings slowed slightly from April. The Dow rose 1.5%, the S&P 1.2%, and the Nasdaq 0.9%. Crude oil rose 2% to $71.50 per barrel, while gold fell $13 to $1983 per ounce."
         },
         {
             "id": "3203_Analyst Report_1675686868000",
@@ -232,7 +240,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, founded in 1919, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its wholly owned subsidiaries include Philip Morris USA Inc. and John Middleton Co., a leading U.S. cigar manufacturer. Its smoke-free portfolio includes ownership of U.S. Smokeless Tobacco Company LLC and Helix Innovations LLC, a manufacturer of oral nicotine pouches. \r\n\r\nThe company has a majority-owned joint venture, Horizon Innovations LLC (Horizon), for the U.S. marketing and commercialization of heated tobacco stick products. Altria also has equity investments in Anheuser-Busch InBev SA/NV and Cronos Group Inc. The brand portfolios of its tobacco operating companies include Marlboro, Black & Mild, Copenhagen, on! and Skoal. Philip Morris Capital Corporation completed the wind-down of its portfolio of finance assets in 2022 and had no finance assets remaining at December 31, 2022."
         },
         {
             "id": "35495_Market Summary_1675686868000",
@@ -253,7 +262,8 @@
                 "AMGN",
                 "PFE",
                 "APTV"
-            ]
+            ],
+            "title": "Monday Tee Up: Heavy on Earnings, Light on the Economy"
         },
         {
             "id": "3203_Analyst Report_1668773722000",
@@ -264,7 +274,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, founded in 1919, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its wholly owned subsidiaries include Philip Morris USA Inc. and John Middleton Co., a leading U.S. cigar manufacturer. Its smoke-free portfolio includes ownership of U.S. Smokeless Tobacco Company LLC and Helix Innovations LLC, a manufacturer of oral nicotine pouches. The company has a majority-owned joint venture, Horizon Innovations LLC (Horizon), for the U.S. marketing and commercialization of heated tobacco stick products. Altria also owns equity investments in Anheuser-Busch InBev SA/NV and Cronos Group Inc. The brand portfolios of its tobacco operating companies include Marlboro, Black & Mild, Copenhagen, on! and Skoal."
         },
         {
             "id": "34765_Market Summary_1668772822000",
@@ -277,7 +288,8 @@
                 "MO",
                 "CSCO",
                 "ALB"
-            ]
+            ],
+            "title": "Stocks pared early losses on Thursday, but still finished in negative territory. Investors weighed earnings reports from major retailers and tech companies, along with new housing market and employment data. Housing starts fell a sharp 4.2% to an annualized 1.425 million in October, but topped the consensus forecast. Building permits fell 2.4% to 1.526 million, also above consensus. On the employment front, first-time claims for state unemployment benefits rose by 4,000 to 222,000 for the week ended November 12, below the consensus forecast. Continuing claims rose slightly from the prior week to 1.507 million. The Dow fell 0.02%, the S&P 0.31%, and the Nasdaq 0.35%. Crude oil fell 4% to $82 per barrel, while gold fell $13 to $1763 per ounce."
         },
         {
             "id": "3203_Analyst Report_1659545917000",
@@ -288,7 +300,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, founded in 1919, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its wholly owned subsidiaries include Philip Morris USA Inc. and John Middleton Co., a leading U.S. cigar manufacturer. Its smoke-free portfolio includes ownership of U.S. Smokeless Tobacco Company LLC and Helix Innovations LLC, a manufacturer of oral nicotine pouches. Altria has a 35% stake in JUUL Labs, Inc. and also owns equity investments in Anheuser-Busch InBev SA/NV and Cronos Group Inc. The brand portfolios of its tobacco operating companies include Marlboro, Black & Mild, Copenhagen, on! and Skoal."
         },
         {
             "id": "33700_Market Update_1659545017000",
@@ -307,7 +320,8 @@
                 "ADM",
                 "VSH",
                 "MAS"
-            ]
+            ],
+            "title": "Stocks rose strongly on Wednesday morning as investors weighed earnings reports from AMD, Starbucks, and CVS along with new U.S. service sector data. The Institute for Supply Management said that its nonmanufacturing index rose to 56.7 in July, up from 55.3 in June and above the Reuters consensus forecast of 53.5. The reading marked the first increase after three straight monthly declines. The Dow rose 0.9%, the S&P 0.9%, and the Nasdaq 1.8%. Crude oil fell 2% to $92 per barrel, while gold fell $19 to $1771 per ounce."
         },
         {
             "id": "3203_Analyst Report_1655211738000",
@@ -318,7 +332,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, founded in 1919, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its wholly owned subsidiaries include Philip Morris USA Inc. and John Middleton Co., a leading U.S. cigar manufacturer. Its smoke-free portfolio includes ownership of U.S. Smokeless Tobacco Company LLC and Helix Innovations LLC, a manufacturer of oral nicotine pouches. Altria has a 35% stake in JUUL Labs, Inc. and also owns equity investments in Anheuser-Busch InBev SA/NV and Cronos Group Inc. The brand portfolios of its tobacco operating companies include Marlboro, Black & Mild, Copenhagen, on! and Skoal."
         },
         {
             "id": "33219_Market Update_1655210838000",
@@ -328,7 +343,8 @@
             "reportTitle": "Stocks were mixed on Tuesday morning. Cryptos are lower, with Bitcoin down 5.54% over the last 24 hours and Ethereum down 2.24%. Markets are increasingly expecting a 75 basis point hike from the conclusion of the Fed meeting tomorrow. The Producer Price Index was in line with estimates with a monthly rise of 0.8% as prices moderated on a year-over-year basis to a rate of 10.8%. The Dow fell 0.4%, the S&P fell 0.1%, and the Nasdaq rose 0.3%. Crude oil rose to $123 per barrel, while gold fell $17 to $1814 per ounce.",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Stocks were mixed on Tuesday morning. Cryptos are lower, with Bitcoin down 5.54% over the last 24 hours and Ethereum down 2.24%. Markets are increasingly expecting a 75 basis point hike from the conclusion of the Fed meeting tomorrow. The Producer Price Index was in line with estimates with a monthly rise of 0.8% as prices moderated on a year-over-year basis to a rate of 10.8%. The Dow fell 0.4%, the S&P fell 0.1%, and the Nasdaq rose 0.3%. Crude oil rose to $123 per barrel, while gold fell $17 to $1814 per ounce."
         },
         {
             "id": "32226_Technical Analysis_1645686913000",
@@ -339,7 +355,8 @@
             "tickers": [
                 "GOLD",
                 "MO"
-            ]
+            ],
+            "title": "The stock market continues to be battered and we have finally reached the white-knuckle point of the decline, with Russia's actions in Ukraine adding to the mix. While there was little evidence of panic on Wednesday (such as we saw in the latter part of January), results for NYSE decliners versus advancers and NYSE up volume versus total volume were well ahead the levels of just a few weeks ago. Based on the charts of the indices, we could get another dose of \"throw in the towel\" trading action."
         },
         {
             "id": "3203_Analyst Report_1643376565000",
@@ -350,7 +367,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, founded in 1919, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its cigarette brands include Marlboro, Virginia Slims, Parliament, Benson & Hedges, Basic, Merit, Chesterfield and L&M. The company acquired the U.S. Smokeless Tobacco Company in 2009, adding the Copenhagen, Skoal, Red Seal, and Husky brands to its portfolio. The company also spun off its international operations as Philip Morris International in 2008. Altria retains the Philip Morris USA segment, which focuses on the U.S. market and includes various cigar, pipe tobacco, e-cigarette, wine, and beer brands. The company also manages a portfolio of leveraged leases in land transportation, aircraft, electric power, real estate, and manufacturing. Altria has 7,300 employees."
         },
         {
             "id": "32003_Market Update_1643375665000",
@@ -367,7 +385,8 @@
                 "IVZ",
                 "DOW",
                 "PSA"
-            ]
+            ],
+            "title": "Stocks rose strongly on Friday morning, led by the Technology and Communication Services sectors, after recovering from sharp early losses. But there were more signs of accelerating inflation. The Commerce Department said that its personal consumption expenditures index rose 5.8% from the prior year in December, up from 5.7% growth in November and in line with the Bloomberg consensus forecast. The Dow rose 0.5%, the S&P 1.2%, and the Nasdaq 2.0%. Crude oil rose more than 1% to $88 per barrel, while gold traded near $1786 per ounce."
         },
         {
             "id": "3203_Analyst Report_1635924518000",
@@ -378,7 +397,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, founded in 1919, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its cigarette brands include Marlboro, Virginia Slims, Parliament, Benson & Hedges, Basic, Merit, Chesterfield and L&M. The company acquired the U.S. Smokeless Tobacco Company in 2009, adding the Copenhagen, Skoal, Red Seal, and Husky brands to its portfolio. The company also spun off its international operations as Philip Morris International in 2008. Altria retains the Philip Morris USA segment, which focuses on the U.S. market and includes various cigar, pipe tobacco, e-cigarette, wine, and beer brands. The company also manages a portfolio of leveraged leases in land transportation, aircraft, electric power, real estate, and manufacturing. Altria has 7,300 employees."
         },
         {
             "id": "31299_Market Summary_1635924518000",
@@ -395,7 +415,8 @@
                 "EL",
                 "CHD",
                 "CLX"
-            ]
+            ],
+            "title": "The market ain't afraida' no ghosts, and stocks sailed into Halloween weekend flying high on a witch's broom. The S&P 500, assigned to Dracula's coffin in September, rose up to reach an all-time intra-day high at 4,608 on October 29 before finishing the session an all-time closing high of 4,605. "
         },
         {
             "id": "30542_Market Update_1627998900000",
@@ -414,7 +435,8 @@
                 "MCO",
                 "SPGI",
                 "NSC"
-            ]
+            ],
+            "title": "Stocks were mixed on Tuesday morning amid uncertainty about the economic impact of the Delta variant. Factory order data showed slower growth but still topped the consensus forecast. The Commerce Department said that U.S. factory orders rose 1.5% in June, above the Reuters consensus of 1.0% but down from 2.3% growth in May. The Dow rose 0.2%, the S&P fell 0.1%, and the Nasdaq fell 0.6%. Crude oil traded near $70 per barrel, while gold fell $8 to $1814 per ounce."
         },
         {
             "id": "3203_Analyst Report_1627998900000",
@@ -425,7 +447,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, founded in 1919, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its cigarette brands include Marlboro, Virginia Slims, Parliament, Benson & Hedges, Basic, Merit, Chesterfield and L&M. The company acquired the U.S. Smokeless Tobacco Company in 2009, adding the Copenhagen, Skoal, Red Seal, and Husky brands to its portfolio. The company also spun off its international operations as Philip Morris International in 2008. Altria retains the Philip Morris USA segment, which focuses on the U.S. market and includes various cigar, pipe tobacco, e-cigarette, wine, and beer brands. The company also manages a portfolio of leveraged leases in land transportation, aircraft, electric power, real estate, and manufacturing. Altria has 7,300 employees."
         },
         {
             "id": "3203_Analyst Report_1620199154000",
@@ -436,7 +459,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, founded in 1919, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its cigarette brands include Marlboro, Virginia Slims, Parliament, Benson & Hedges, Basic, Merit, Chesterfield and L&M. The company acquired the U.S. Smokeless Tobacco Company in 2009, adding the Copenhagen, Skoal, Red Seal, and Husky brands to its portfolio. The company also spun off its international operations as Philip Morris International in 2008. Altria retains the Philip Morris USA segment, which focuses on the U.S. market and includes various cigar, pipe tobacco, e-cigarette, wine, and beer brands. The company also manages a portfolio of leveraged leases in land transportation, aircraft, electric power, real estate, and manufacturing. Altria has 7,300 employees."
         },
         {
             "id": "29797_Market Summary_1620198254000",
@@ -455,7 +479,8 @@
                 "SANM",
                 "GT",
                 "ITW"
-            ]
+            ],
+            "title": "April 2021 lived up to its billing as the best stock month of the first half. During April, the S&P 500 appreciated 5.2%, better than any month so far this year; March was closest with a 4.2% gain. Through the end of the fourth month, the S&P 500 is up 11.3% year-to-date. "
         },
         {
             "id": "3203_Analyst Report_1612272796000",
@@ -467,7 +492,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, founded in 1919, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its cigarette brands include Marlboro, Virginia Slims, Parliament, Benson & Hedges, Basic, Merit, Chesterfield and L&M. The company acquired the U.S. Smokeless Tobacco Company in 2009, adding the Copenhagen, Skoal, Red Seal, and Husky brands to its portfolio. The company also spun off its international operations as Philip Morris International in 2008. Altria retains the Philip Morris USA segment, which focuses on the U.S. market and includes various cigar, pipe tobacco, e-cigarette, wine, and beer brands. The company also manages a portfolio of leveraged leases in land transportation, aircraft, electric power, real estate, and manufacturing. Altria has 7,300 employees."
         },
         {
             "id": "29044_Market Update_1612271896000",
@@ -482,7 +508,8 @@
                 "SWK",
                 "ANTM",
                 "PKG"
-            ]
+            ],
+            "title": "Stocks rallied strongly on Tuesday morning on signs that the Biden administration and Congressional Democrats would move forward quickly on their $1.9 trillion stimulus plan, rather than opt for a smaller plan like that proposed by Republican senators. On the earnings front, UPS shares rose after the company posted stronger-than-expected 4Q results. Investors also looked ahead to earnings from Alphabet and Amazon after the close. The Dow rose 2.0%, the S&P 1.7%, and the Nasdaq 1.4%. Crude oil traded near $55 per barrel, while gold fell $22 to $1840 per ounce."
         },
         {
             "id": "28857_Stock Picks_1610351328000",
@@ -500,7 +527,8 @@
                 "K",
                 "PKG",
                 "NFG"
-            ]
+            ],
+            "title": "Growth stocks outperformed value, again, in 2020. But in an environment of historically low interest rates (and with the coronavirus and a high unemployment rate seemingly poised to keep them low for a long time), many investors are searching for high levels of income, often be found in value stocks. During recent years, the performance record has favored growth. Since 2010, the Russell 1000 Growth Index has climbed more than 400%, compared to an advance of 200% for the Russell 1000 Value Index. In eight of the past 10 years, growth stocks topped value. That hasn't always been the case. In the previous decade, including the Great Recession, value stocks were better performers, advancing a low 8%, but still better than growth, which declined 15%. Value investors trace their roots to the famous \"Security Analysis\" textbook, written by Ben Graham, an economics professor at Columbia University. The tide may now be turning. Progress on COVID-19 vaccines has given a lift to some of the cyclical companies (energy companies and banks) that have lagged in recent quarters, and value stocks have kept pace with growth stocks in the past quarter. In any event, value is the place to achieve income. The current yield on the iShares Russell 1000 Value Index ETF is 2.5%, compared to the 1.0% current yield on the iShares Russell 1000 Growth Index ETF. This is not unimportant, as the current yield on the 10-year Treasury bond is 0.95%. For our list this week, we have screened our coverage universe for stocks that are BUY-rated by Argus Research analysts, have a Financial Strength rating of at least Medium, and have a yield of 3.0% or higher."
         },
         {
             "id": "28728_Thematic Portfolio_1608633108000",
@@ -539,7 +567,8 @@
                 "ENB",
                 "GPC",
                 "MET"
-            ]
+            ],
+            "title": "Growth stocks may be outperforming value, again, in 2020. But in an environment of historically low interest rates (and with the coronavirus and economic shutdown seemingly poised to keep them low for a long time), many investors are still searching for high levels of income, which can often be found in value stocks. Progress on COVID-19 vaccines has given a lift to some of the cyclical companies (energy companies and regional banks) that have lagged in recent quarters, and value stocks have kept up the pace with growth stocks in the past quarter. The current yield on the iShares Russell 1000 Value Index ETF is 2.5%, compared to the 1.0% current yield on the iShares Russell 1000 Growth Index ETF.  This is not unimportant, as the current yield on the 10-year Treasury bond is 0.95%."
         },
         {
             "id": "3203_Analyst Report_1604494786000",
@@ -551,7 +580,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, founded in 1919, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its cigarette brands include Marlboro, Virginia Slims, Parliament, Benson & Hedges, Basic, Merit, Chesterfield and L&M. The company acquired the U.S. Smokeless Tobacco Company in 2009, adding the Copenhagen, Skoal, Red Seal, and Husky brands to its portfolio. The company also spun off its international operations as Philip Morris International in 2008. Altria retains the Philip Morris USA segment, which focuses on the U.S. market and includes various cigar, pipe tobacco, e-cigarette, wine, and beer brands. The company also manages a portfolio of leveraged leases in land transportation, aircraft, electric power, real estate, and manufacturing. Altria has 7,300 employees."
         },
         {
             "id": "28345_Market Update_1604493886000",
@@ -569,7 +599,8 @@
                 "VSH",
                 "SWKS",
                 "ADP"
-            ]
+            ],
+            "title": "Stocks rose strongly on Wednesday morning despite the still uncertain outcome of a much closer-than-expected presidential election. Still, by mid-morning, Joe Biden had opened narrow leads in the swing states of Michigan and Wisconsin and stood to benefit from as yet uncounted mail-in ballots in these and other key states. Wall Street also focused on the Senate, where Republicans were likely to remain in control with a narrow majority. The Dow rose 2.1%, the S&P 2.6%, and the Nasdaq 3.7%. Crude oil traded near $39 per barrel, while gold fell $8 to $1903 per ounce."
         },
         {
             "id": "28026_Market Outlook_1601018014000",
@@ -579,7 +610,8 @@
             "reportTitle": "Everything looked so good at the end of August. Economists were anticipating a sharp recovery in GDP in 3Q, after the 30%-plus plunge in 2Q. Analysts were convinced they had seen the worst of the earnings decline. News was breaking daily on COVID-19 vaccine developments. Stock investors, who look ahead, lifted equity indices to all-time highs. But at those all-time highs, stocks were priced for perfection and not for disappointment, which is what September has delivered. In a sense, the problems started when the month began and students headed back to school. The lack of a nationwide COVID-19 testing program quickly became apparent, and new coronavirus hotspots emerged across the country. Meanwhile, in Washington, politicians were pushing for a fast-track vaccine, while scientists were pushing back to ensure safety. What looked like a 4Q20 solution now may be a summer 2021 solution. The nation's political machinery moved into high gear, as it typically does after Labor Day in an election year, and the already-tense political environment ratcheted even higher after the death of Ruth Bader Ginsberg, which created a vacancy at the Supreme Court. As investors have sold shares in September, the VIX Volatility Index has started to climb again. We expect elevated levels at least into November. In this environment, we recommend investors focus on high-quality stocks, with strong balance sheets and experienced management.",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Everything looked so good at the end of August. Economists were anticipating a sharp recovery in GDP in 3Q, after the 30%-plus plunge in 2Q. Analysts were convinced they had seen the worst of the earnings decline. News was breaking daily on COVID-19 vaccine developments. Stock investors, who look ahead, lifted equity indices to all-time highs. But at those all-time highs, stocks were priced for perfection and not for disappointment, which is what September has delivered. In a sense, the problems started when the month began and students headed back to school. The lack of a nationwide COVID-19 testing program quickly became apparent, and new coronavirus hotspots emerged across the country. Meanwhile, in Washington, politicians were pushing for a fast-track vaccine, while scientists were pushing back to ensure safety. What looked like a 4Q20 solution now may be a summer 2021 solution. The nation's political machinery moved into high gear, as it typically does after Labor Day in an election year, and the already-tense political environment ratcheted even higher after the death of Ruth Bader Ginsberg, which created a vacancy at the Supreme Court. As investors have sold shares in September, the VIX Volatility Index has started to climb again. We expect elevated levels at least into November. In this environment, we recommend investors focus on high-quality stocks, with strong balance sheets and experienced management."
         },
         {
             "id": "28026_Market Outlook_1600992000000",
@@ -589,7 +621,8 @@
             "reportTitle": "Everything looked so good at the end of August. Economists were anticipating a sharp recovery in GDP in 3Q, after the 30%-plus plunge in 2Q. Analysts were convinced they had seen the worst of the earnings decline. News was breaking daily on COVID-19 vaccine developments. Stock investors, who look ahead, lifted equity indices to all-time highs. But at those all-time highs, stocks were priced for perfection and not for disappointment, which is what September has delivered. In a sense, the problems started when the month began and students headed back to school. The lack of a nationwide COVID-19 testing program quickly became apparent, and new coronavirus hotspots emerged across the country. Meanwhile, in Washington, politicians were pushing for a fast-track vaccine, while scientists were pushing back to ensure safety. What looked like a 4Q20 solution now may be a summer 2021 solution. The nation's political machinery moved into high gear, as it typically does after Labor Day in an election year, and the already-tense political environment ratcheted even higher after the death of Ruth Bader Ginsberg, which created a vacancy at the Supreme Court. As investors have sold shares in September, the VIX Volatility Index has started to climb again. We expect elevated levels at least into November. In this environment, we recommend investors focus on high-quality stocks, with strong balance sheets and experienced management.",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Everything looked so good at the end of August. Economists were anticipating a sharp recovery in GDP in 3Q, after the 30%-plus plunge in 2Q. Analysts were convinced they had seen the worst of the earnings decline. News was breaking daily on COVID-19 vaccine developments. Stock investors, who look ahead, lifted equity indices to all-time highs. But at those all-time highs, stocks were priced for perfection and not for disappointment, which is what September has delivered. In a sense, the problems started when the month began and students headed back to school. The lack of a nationwide COVID-19 testing program quickly became apparent, and new coronavirus hotspots emerged across the country. Meanwhile, in Washington, politicians were pushing for a fast-track vaccine, while scientists were pushing back to ensure safety. What looked like a 4Q20 solution now may be a summer 2021 solution. The nation's political machinery moved into high gear, as it typically does after Labor Day in an election year, and the already-tense political environment ratcheted even higher after the death of Ruth Bader Ginsberg, which created a vacancy at the Supreme Court. As investors have sold shares in September, the VIX Volatility Index has started to climb again. We expect elevated levels at least into November. In this environment, we recommend investors focus on high-quality stocks, with strong balance sheets and experienced management."
         },
         {
             "id": "3203_Analyst Report_1597237012000",
@@ -601,7 +634,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, founded in 1919, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its cigarette brands include Marlboro, Virginia Slims, Parliament, Benson & Hedges, Basic, Merit, Chesterfield and L&M. The company acquired the U.S. Smokeless Tobacco Company in 2009, adding the Copenhagen, Skoal, Red Seal, and Husky brands to its portfolio. The company also spun off its international operations as Philip Morris International in 2008. Altria retains the Philip Morris USA segment, which focuses on the U.S. market and includes various cigar, pipe tobacco, e-cigarette, wine, and beer brands. The company also manages a portfolio of leveraged leases in land transportation, aircraft, electric power, real estate, and manufacturing. Altria has 7,300 employees."
         },
         {
             "id": "27663_Market Update_1597236112000",
@@ -618,7 +652,21 @@
                 "ZTS",
                 "CLS",
                 "BKNG"
-            ]
+            ],
+            "title": "Stocks rose on Wednesday morning, rebounding from a late-day selloff on Tuesday despite the continued fiscal stimulus stalemate in Washington. The Labor Department reported that consumer prices rose 0.6% in July, unchanged from the prior month but above the Reuters consensus forecast of 0.3% growth. Prices also rose 1.0% from the prior year, above the consensus of 0.8%. Moderna shares rose on news that the company had won a $1.5 billion vaccine supply contract with the U.S. government. The Dow rose 1.0%, the S&P 1.3%, and the Nasdaq 2.0%. Crude oil traded near $42 per barrel, while gold rose $3 to $1949 per ounce."
+        },
+        {
+            "id": "3203_Analyst Report_1597190400000",
+            "headHtml": "Analyst Report: Altria Group Inc.",
+            "provider": "Argus Research",
+            "reportDate": "2020-08-12T00:00:00Z",
+            "reportTitle": "Altria Group, founded in 1919, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its cigarette brands include Marlboro, Virginia Slims, Parliament, Benson & Hedges, Basic, Merit, Chesterfield and L&M. The company acquired the U.S. Smokeless Tobacco Company in 2009, adding the Copenhagen, Skoal, Red Seal, and Husky brands to its portfolio. The company also spun off its international operations as Philip Morris International in 2008. Altria retains the Philip Morris USA segment, which focuses on the U.S. market and includes various cigar, pipe tobacco, e-cigarette, wine, and beer brands. The company also manages a portfolio of leveraged leases in land transportation, aircraft, electric power, real estate, and manufacturing. Altria has 7,300 employees.",
+            "targetPrice": 54.0,
+            "investmentRating": "Bullish",
+            "tickers": [
+                "MO"
+            ],
+            "title": "Altria Group, founded in 1919, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its cigarette brands include Marlboro, Virginia Slims, Parliament, Benson & Hedges, Basic, Merit, Chesterfield and L&M. The company acquired the U.S. Smokeless Tobacco Company in 2009, adding the Copenhagen, Skoal, Red Seal, and Husky brands to its portfolio. The company also spun off its international operations as Philip Morris International in 2008. Altria retains the Philip Morris USA segment, which focuses on the U.S. market and includes various cigar, pipe tobacco, e-cigarette, wine, and beer brands. The company also manages a portfolio of leveraged leases in land transportation, aircraft, electric power, real estate, and manufacturing. Altria has 7,300 employees."
         },
         {
             "id": "27663_Market Update_1597190400000",
@@ -635,19 +683,8 @@
                 "ZTS",
                 "CLS",
                 "BKNG"
-            ]
-        },
-        {
-            "id": "3203_Analyst Report_1597190400000",
-            "headHtml": "Analyst Report: Altria Group Inc.",
-            "provider": "Argus Research",
-            "reportDate": "2020-08-12T00:00:00Z",
-            "reportTitle": "Altria Group, founded in 1919, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its cigarette brands include Marlboro, Virginia Slims, Parliament, Benson & Hedges, Basic, Merit, Chesterfield and L&M. The company acquired the U.S. Smokeless Tobacco Company in 2009, adding the Copenhagen, Skoal, Red Seal, and Husky brands to its portfolio. The company also spun off its international operations as Philip Morris International in 2008. Altria retains the Philip Morris USA segment, which focuses on the U.S. market and includes various cigar, pipe tobacco, e-cigarette, wine, and beer brands. The company also manages a portfolio of leveraged leases in land transportation, aircraft, electric power, real estate, and manufacturing. Altria has 7,300 employees.",
-            "targetPrice": 54.0,
-            "investmentRating": "Bullish",
-            "tickers": [
-                "MO"
-            ]
+            ],
+            "title": "Stocks rose on Wednesday morning, rebounding from a late-day selloff on Tuesday despite the continued fiscal stimulus stalemate in Washington. The Labor Department reported that consumer prices rose 0.6% in July, unchanged from the prior month but above the Reuters consensus forecast of 0.3% growth. Prices also rose 1.0% from the prior year, above the consensus of 0.8%. Moderna shares rose on news that the company had won a $1.5 billion vaccine supply contract with the U.S. government. The Dow rose 1.0%, the S&P 1.3%, and the Nasdaq 2.0%. Crude oil traded near $42 per barrel, while gold rose $3 to $1949 per ounce."
         },
         {
             "id": "3203_Analyst Report_1590045740000",
@@ -659,7 +696,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, founded in 1919, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its cigarette brands include Marlboro, Virginia Slims, Parliament, Benson & Hedges, Basic, Merit, Chesterfield and L&M. The company acquired the U.S. Smokeless Tobacco Company in 2009, adding the Copenhagen, Skoal, Red Seal, and Husky brands to its portfolio. The company also spun off its international operations as Philip Morris International in 2008. Altria retains the Philip Morris USA segment, which focuses on the U.S. market and includes various cigar, pipe tobacco, e-cigarette, wine, and beer brands. The company also manages a portfolio of leveraged leases in land transportation, aircraft, electric power, real estate, and manufacturing."
         },
         {
             "id": "26992_Market Summary_1590044840000",
@@ -676,7 +714,8 @@
                 "IART",
                 "PXD",
                 "MAR"
-            ]
+            ],
+            "title": "Back to...New Beginnings?"
         },
         {
             "id": "26992_Market Summary_1590019200000",
@@ -693,7 +732,8 @@
                 "IART",
                 "PXD",
                 "MAR"
-            ]
+            ],
+            "title": "Back to...New Beginnings?"
         },
         {
             "id": "3203_Analyst Report_1590019200000",
@@ -705,7 +745,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, founded in 1919, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its cigarette brands include Marlboro, Virginia Slims, Parliament, Benson & Hedges, Basic, Merit, Chesterfield and L&M. The company acquired the U.S. Smokeless Tobacco Company in 2009, adding the Copenhagen, Skoal, Red Seal, and Husky brands to its portfolio. The company also spun off its international operations as Philip Morris International in 2008. Altria retains the Philip Morris USA segment, which focuses on the U.S. market and includes various cigar, pipe tobacco, e-cigarette, wine, and beer brands. The company also manages a portfolio of leveraged leases in land transportation, aircraft, electric power, real estate, and manufacturing."
         },
         {
             "id": "26748_Thematic Portfolio_1587540212000",
@@ -749,7 +790,8 @@
                 "MET",
                 "PM",
                 "ETN"
-            ]
+            ],
+            "title": "Growth stocks may be outperforming value, again, in 2020. But in an environment of historically low interest rates (and with the coronavirus and economic shutdown seemingly poised to keep them low for a long time), many investors are still searching for high levels of income, which can often be found in value stocks. When we look for attractive high-yield/value stocks at Argus, we look for low valuations on metrics such as price/earnings, price/sales, price/book, yield and price/cash flow. But we also look for companies with clean balance sheets, high levels of profitability, cash-flow generation, and an experienced management teams. We seek to avoid companies in industries that are in secular decline, or with dividend yields that are so high that the payout is clearly at risk. To us, right now, that level is 8%-9%-plus. That said, many value companies may face a substantial near-term industry problem. Based on numerous requests from clients, we have designed a portfolio of companies followed by Argus Research analysts that are BUY-rated on a long-term (five-year) basis, have a Financial Strength rating of at least Medium, and have a yield of 3.5% or higher."
         },
         {
             "id": "26748_Thematic Portfolio_1587539312000",
@@ -793,7 +835,8 @@
                 "MET",
                 "PM",
                 "ETN"
-            ]
+            ],
+            "title": "Growth stocks may be outperforming value, again, in 2020. But in an environment of historically low interest rates (and with the coronavirus and economic shutdown seemingly poised to keep them low for a long time), many investors are still searching for high levels of income, which can often be found in value stocks. When we look for attractive high-yield/value stocks at Argus, we look for low valuations on metrics such as price/earnings, price/sales, price/book, yield and price/cash flow. But we also look for companies with clean balance sheets, high levels of profitability, cash-flow generation, and an experienced management teams. We seek to avoid companies in industries that are in secular decline, or with dividend yields that are so high that the payout is clearly at risk. To us, right now, that level is 8%-9%-plus. That said, many value companies may face a substantial near-term industry problem. Based on numerous requests from clients, we have designed a portfolio of companies followed by Argus Research analysts that are BUY-rated on a long-term (five-year) basis, have a Financial Strength rating of at least Medium, and have a yield of 3.5% or higher."
         },
         {
             "id": "26748_Thematic Portfolio_1587513600000",
@@ -837,7 +880,8 @@
                 "MET",
                 "PM",
                 "ETN"
-            ]
+            ],
+            "title": "Growth stocks may be outperforming value, again, in 2020. But in an environment of historically low interest rates (and with the coronavirus and economic shutdown seemingly poised to keep them low for a long time), many investors are still searching for high levels of income, which can often be found in value stocks. When we look for attractive high-yield/value stocks at Argus, we look for low valuations on metrics such as price/earnings, price/sales, price/book, yield and price/cash flow. But we also look for companies with clean balance sheets, high levels of profitability, cash-flow generation, and an experienced management teams. We seek to avoid companies in industries that are in secular decline, or with dividend yields that are so high that the payout is clearly at risk. To us, right now, that level is 8%-9%-plus. That said, many value companies may face a substantial near-term industry problem. Based on numerous requests from clients, we have designed a portfolio of companies followed by Argus Research analysts that are BUY-rated on a long-term (five-year) basis, have a Financial Strength rating of at least Medium, and have a yield of 3.5% or higher."
         },
         {
             "id": "3203_Analyst Report_1580455216000",
@@ -849,7 +893,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, founded in 1919, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its cigarette brands include Marlboro, Virginia Slims, Parliament, Benson & Hedges, Basic, Merit, Chesterfield and L&M. The company acquired the U.S. Smokeless Tobacco Company in 2009, adding the Copenhagen, Skoal, Red Seal, and Husky brands to its portfolio. The company also spun off its international operations as Philip Morris International in 2008. Altria retains the Philip Morris USA segment, which focuses on the U.S. market and includes various cigar, pipe tobacco, e-cigarette, wine, and beer brands. The company also manages a portfolio of leveraged leases in land transportation, aircraft, electric power, real estate, and manufacturing."
         },
         {
             "id": "26076_Market Summary_1580454316000",
@@ -866,7 +911,8 @@
                 "XLNX",
                 "LVS",
                 "PKG"
-            ]
+            ],
+            "title": "Stocks finished in positive territory on Thursday afternoon after trading lower for most of the day on continued coronavirus fears. Investors weighed earnings reports from a range of major companies, including Facebook, Microsoft, and Tesla, and new GDP and employment data. The Commerce Department said that the U.S. economy expanded at a 2.3% rate in 2019, down from 2.9% in 2018. GDP rose at a 2.1% rate in 4Q, in line with the third quarter and the Reuters consensus forecast. On the employment front, the Labor Department said that first-time unemployment benefit claims fell by 7,000 to a seasonally adjusted 216,000 for the week ended January 25. The Dow rose 0.43%, the S&P 0.31%, and the Nasdaq 0.26%. Crude oil fell 1% to about $53 per barrel, while gold rose $6.50 to $1583 per ounce."
         },
         {
             "id": "3203_Analyst Report_1580428800000",
@@ -878,7 +924,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, founded in 1919, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its cigarette brands include Marlboro, Virginia Slims, Parliament, Benson & Hedges, Basic, Merit, Chesterfield and L&M. The company acquired the U.S. Smokeless Tobacco Company in 2009, adding the Copenhagen, Skoal, Red Seal, and Husky brands to its portfolio. The company also spun off its international operations as Philip Morris International in 2008. Altria retains the Philip Morris USA segment, which focuses on the U.S. market and includes various cigar, pipe tobacco, e-cigarette, wine, and beer brands. The company also manages a portfolio of leveraged leases in land transportation, aircraft, electric power, real estate, and manufacturing."
         },
         {
             "id": "26076_Market Summary_1580428800000",
@@ -895,7 +942,8 @@
                 "XLNX",
                 "LVS",
                 "PKG"
-            ]
+            ],
+            "title": "Stocks finished in positive territory on Thursday afternoon after trading lower for most of the day on continued coronavirus fears. Investors weighed earnings reports from a range of major companies, including Facebook, Microsoft, and Tesla, and new GDP and employment data. The Commerce Department said that the U.S. economy expanded at a 2.3% rate in 2019, down from 2.9% in 2018. GDP rose at a 2.1% rate in 4Q, in line with the third quarter and the Reuters consensus forecast. On the employment front, the Labor Department said that first-time unemployment benefit claims fell by 7,000 to a seasonally adjusted 216,000 for the week ended January 25. The Dow rose 0.43%, the S&P 0.31%, and the Nasdaq 0.26%. Crude oil fell 1% to about $53 per barrel, while gold rose $6.50 to $1583 per ounce."
         },
         {
             "id": "25560_Market Outlook_1574751424000",
@@ -905,7 +953,8 @@
             "reportTitle": "We always look for bubbles. After all, the last two bear markets were caused, in part, by burst bubbles (the Tech bubble in 2000 and the housing bubble in 2006-07). So where are the bubbles today (aside from the low yields on the 10-year T-bond)?  The S&P 500 has more-than quadrupled since touching bottom at 678 back in March 2009, but earnings have grown as well, and interest rates are low, supporting valuations. The Tech sector accounts for approximately 23% of the S&P 500; that's high, but well below the 35% reached in 2000. As well, Tech fans can argue today that many IT companies now compete in consumer, telco and even healthcare. As for housing, starts are now at a 1.27 million annual rate, which is about 60% of the 2.1 million rate in 2005.  And oil prices are less than half the price set at the last cycle high in the summer of 2008. The VIX Volatility Index has eased 40% in the past three months to the 12 range, implying an extraordinary level of complacency that historically has not lasted (particularly ahead of an election year). Despite the low level of VIX and the seeming absence of bubbles, we recommend that investors remain diversified and focus on high-quality stocks.",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "We always look for bubbles. After all, the last two bear markets were caused, in part, by burst bubbles (the Tech bubble in 2000 and the housing bubble in 2006-07). So where are the bubbles today (aside from the low yields on the 10-year T-bond)?  The S&P 500 has more-than quadrupled since touching bottom at 678 back in March 2009, but earnings have grown as well, and interest rates are low, supporting valuations. The Tech sector accounts for approximately 23% of the S&P 500; that's high, but well below the 35% reached in 2000. As well, Tech fans can argue today that many IT companies now compete in consumer, telco and even healthcare. As for housing, starts are now at a 1.27 million annual rate, which is about 60% of the 2.1 million rate in 2005.  And oil prices are less than half the price set at the last cycle high in the summer of 2008. The VIX Volatility Index has eased 40% in the past three months to the 12 range, implying an extraordinary level of complacency that historically has not lasted (particularly ahead of an election year). Despite the low level of VIX and the seeming absence of bubbles, we recommend that investors remain diversified and focus on high-quality stocks."
         },
         {
             "id": "25560_Market Outlook_1574726400000",
@@ -915,7 +964,8 @@
             "reportTitle": "We always look for bubbles. After all, the last two bear markets were caused, in part, by burst bubbles (the Tech bubble in 2000 and the housing bubble in 2006-07). So where are the bubbles today (aside from the low yields on the 10-year T-bond)?  The S&P 500 has more-than quadrupled since touching bottom at 678 back in March 2009, but earnings have grown as well, and interest rates are low, supporting valuations. The Tech sector accounts for approximately 23% of the S&P 500; that's high, but well below the 35% reached in 2000. As well, Tech fans can argue today that many IT companies now compete in consumer, telco and even healthcare. As for housing, starts are now at a 1.27 million annual rate, which is about 60% of the 2.1 million rate in 2005.  And oil prices are less than half the price set at the last cycle high in the summer of 2008. The VIX Volatility Index has eased 40% in the past three months to the 12 range, implying an extraordinary level of complacency that historically has not lasted (particularly ahead of an election year). Despite the low level of VIX and the seeming absence of bubbles, we recommend that investors remain diversified and focus on high-quality stocks.",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "We always look for bubbles. After all, the last two bear markets were caused, in part, by burst bubbles (the Tech bubble in 2000 and the housing bubble in 2006-07). So where are the bubbles today (aside from the low yields on the 10-year T-bond)?  The S&P 500 has more-than quadrupled since touching bottom at 678 back in March 2009, but earnings have grown as well, and interest rates are low, supporting valuations. The Tech sector accounts for approximately 23% of the S&P 500; that's high, but well below the 35% reached in 2000. As well, Tech fans can argue today that many IT companies now compete in consumer, telco and even healthcare. As for housing, starts are now at a 1.27 million annual rate, which is about 60% of the 2.1 million rate in 2005.  And oil prices are less than half the price set at the last cycle high in the summer of 2008. The VIX Volatility Index has eased 40% in the past three months to the 12 range, implying an extraordinary level of complacency that historically has not lasted (particularly ahead of an election year). Despite the low level of VIX and the seeming absence of bubbles, we recommend that investors remain diversified and focus on high-quality stocks."
         },
         {
             "id": "3203_Analyst Report_1572615755000",
@@ -927,7 +977,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, founded in 1919, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its cigarette brands include Marlboro, Virginia Slims, Parliament, Benson & Hedges, Basic, Merit, Chesterfield and L&M. The company acquired the U.S. Smokeless Tobacco Company in 2009, adding the Copenhagen, Skoal, Red Seal, and Husky brands to its portfolio. The company also spun off its international operations as Philip Morris International in 2008. Altria retains the Philip Morris USA segment, which focuses on the U.S. market and includes various cigar, pipe tobacco, e-cigarette, wine, and beer brands. The company also manages a portfolio of leveraged leases in land transportation, aircraft, electric power, real estate, and manufacturing."
         },
         {
             "id": "25368_Market Update_1572614855000",
@@ -944,7 +995,8 @@
                 "IP",
                 "DNKN",
                 "MET"
-            ]
+            ],
+            "title": "Stocks rose on Friday morning following a better-than-expected October employment report. The Labor Department said that the U.S. economy added 128,000 payroll jobs last month, partly reflecting the impact of the GM strike. This was down from a revised 180,000 in September but above the Reuters consensus forecast of 89,000. The official unemployment rate rose to 3.6% from 3.5%. Average hourly wages rose 3.0% on an annualized basis, in line with the consensus estimate. The S&P rose 0.8%, the Dow 1.0%, and the Nasdaq 0.8%. Crude oil rose more than 2% to $55 per barrel, while gold fell $4 to $1511 per ounce."
         },
         {
             "id": "3203_Analyst Report_1572566400000",
@@ -956,7 +1008,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, founded in 1919, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its cigarette brands include Marlboro, Virginia Slims, Parliament, Benson & Hedges, Basic, Merit, Chesterfield and L&M. The company acquired the U.S. Smokeless Tobacco Company in 2009, adding the Copenhagen, Skoal, Red Seal, and Husky brands to its portfolio. The company also spun off its international operations as Philip Morris International in 2008. Altria retains the Philip Morris USA segment, which focuses on the U.S. market and includes various cigar, pipe tobacco, e-cigarette, wine, and beer brands. The company also manages a portfolio of leveraged leases in land transportation, aircraft, electric power, real estate, and manufacturing."
         },
         {
             "id": "25368_Market Update_1572566400000",
@@ -973,7 +1026,8 @@
                 "IP",
                 "DNKN",
                 "MET"
-            ]
+            ],
+            "title": "Stocks rose on Friday morning following a better-than-expected October employment report. The Labor Department said that the U.S. economy added 128,000 payroll jobs last month, partly reflecting the impact of the GM strike. This was down from a revised 180,000 in September but above the Reuters consensus forecast of 89,000. The official unemployment rate rose to 3.6% from 3.5%. Average hourly wages rose 3.0% on an annualized basis, in line with the consensus estimate. The S&P rose 0.8%, the Dow 1.0%, and the Nasdaq 0.8%. Crude oil rose more than 2% to $55 per barrel, while gold fell $4 to $1511 per ounce."
         },
         {
             "id": "3203_Analyst Report_1570690400000",
@@ -985,7 +1039,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, founded in 1919, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its cigarette brands include Marlboro, Virginia Slims, Parliament, Benson & Hedges, Basic, Merit, Chesterfield and L&M. The company acquired the U.S. Smokeless Tobacco Company in 2009, adding the Copenhagen, Skoal, Red Seal, and Husky brands to its portfolio. The company also spun off its international operations as Philip Morris International in 2008. Altria retains the Philip Morris USA segment, which focuses on the U.S. market and includes various cigar, pipe tobacco, e-cigarette, wine, and beer brands. The company also manages a portfolio of leveraged leases in land transportation, aircraft, electric power, real estate, and manufacturing."
         },
         {
             "id": "25178_Market Summary_1570690400000",
@@ -997,7 +1052,8 @@
                 "MO",
                 "T",
                 "KSS"
-            ]
+            ],
+            "title": "Market Environment and Outlook for 2019"
         },
         {
             "id": "3203_Analyst Report_1570665600000",
@@ -1009,7 +1065,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, founded in 1919, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its cigarette brands include Marlboro, Virginia Slims, Parliament, Benson & Hedges, Basic, Merit, Chesterfield and L&M. The company acquired the U.S. Smokeless Tobacco Company in 2009, adding the Copenhagen, Skoal, Red Seal, and Husky brands to its portfolio. The company also spun off its international operations as Philip Morris International in 2008. Altria retains the Philip Morris USA segment, which focuses on the U.S. market and includes various cigar, pipe tobacco, e-cigarette, wine, and beer brands. The company also manages a portfolio of leveraged leases in land transportation, aircraft, electric power, real estate, and manufacturing."
         },
         {
             "id": "25178_Market Summary_1570665600000",
@@ -1021,7 +1078,8 @@
                 "MO",
                 "T",
                 "KSS"
-            ]
+            ],
+            "title": "Market Environment and Outlook for 2019"
         },
         {
             "id": "3203_Analyst Report_1564579573000",
@@ -1033,7 +1091,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, founded in 1919, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its cigarette brands include Marlboro, Virginia Slims, Parliament, Benson & Hedges, Basic, Merit, Chesterfield and L&M. The company acquired the U.S. Smokeless Tobacco Company in 2009, adding the Copenhagen, Skoal, Red Seal, and Husky brands to its portfolio. The company also spun off its international operations as Philip Morris International in 2008. Altria retains the Philip Morris USA segment, which focuses on the U.S. market and includes various cigar, pipe tobacco, e-cigarette, wine, and beer brands. The company also manages a portfolio of leveraged leases in land transportation, aircraft, electric power, real estate, and manufacturing."
         },
         {
             "id": "24597_Market Update_1564578673000",
@@ -1049,7 +1108,8 @@
                 "BYD",
                 "BP",
                 "PFE"
-            ]
+            ],
+            "title": "Stocks edged higher on Wednesday morning as investors awaited a widely expected interest rate cut by the Federal Reserve, along with comments from Fed Chair Jerome Powell. On the earnings front, Apple shares rose more than 4% after the company posted better-than-expected fiscal 3Q results and provided positive sales guidance for fiscal 4Q. The Dow rose 0.1%, the S&P 0.1%, and the Nasdaq 0.3%. Crude oil rose slightly to about $58 per barrel, while gold fell $2 to $1440 per ounce."
         },
         {
             "id": "24597_Market Update_1564531200000",
@@ -1065,7 +1125,8 @@
                 "BYD",
                 "BP",
                 "PFE"
-            ]
+            ],
+            "title": "Stocks edged higher on Wednesday morning as investors awaited a widely expected interest rate cut by the Federal Reserve, along with comments from Fed Chair Jerome Powell. On the earnings front, Apple shares rose more than 4% after the company posted better-than-expected fiscal 3Q results and provided positive sales guidance for fiscal 4Q. The Dow rose 0.1%, the S&P 0.1%, and the Nasdaq 0.3%. Crude oil rose slightly to about $58 per barrel, while gold fell $2 to $1440 per ounce."
         },
         {
             "id": "3203_Analyst Report_1564531200000",
@@ -1077,7 +1138,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, founded in 1919, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its cigarette brands include Marlboro, Virginia Slims, Parliament, Benson & Hedges, Basic, Merit, Chesterfield and L&M. The company acquired the U.S. Smokeless Tobacco Company in 2009, adding the Copenhagen, Skoal, Red Seal, and Husky brands to its portfolio. The company also spun off its international operations as Philip Morris International in 2008. Altria retains the Philip Morris USA segment, which focuses on the U.S. market and includes various cigar, pipe tobacco, e-cigarette, wine, and beer brands. The company also manages a portfolio of leveraged leases in land transportation, aircraft, electric power, real estate, and manufacturing."
         },
         {
             "id": "24518_Stock Picks_1563793119000",
@@ -1096,7 +1158,8 @@
                 "M",
                 "BP",
                 "KIM"
-            ]
+            ],
+            "title": "Growth stocks may be outperforming, again, in 2019. But in an environment of historically low interest rates (and with the Federal Reserve seemingly poised to cut again), many investors are still searching for high levels of income, which can often be found in value stocks. Over the years, the performance record has favored growth. Since 2003, the Russell 1000 Growth Index has climbed 457%, compared to an advance of 289% for the Russell 1000 Value Index. In 11 of the 16 years of this period, growth stocks have topped value stocks. Still, value is the place to achieve income. The current yield on the iShares Russell 1000 Value Index ETF is 2.9%, compared to the 1.4% current yield on the iShares Russell 1000 Growth Index ETF. As well, sometimes the risk profile favors value. For the past five years, the standard deviation of monthly returns for value stocks has been 3.5%, compared to the 3.7% standard deviation of monthly returns for growth stocks. Based on numerous requests from clients, we have designed a portfolio of companies followed by Argus Research that are BUY- or HOLD-rated on a long-term (five-year) basis and have an average yield of 4.0% or higher. The portfolio includes 40 stocks and representation in all 11 sectors. Not surprisingly, the weights of the sectors are different from the current weights in the S&P 500. As an example, the Argus High-Yield Portfolio has a 15% weighting in Energy, 13% in Consumer Staples and 8% in both Real Estate and Utilities. These are all Over-Weights compared to the broad market. Under-Weighted sectors include Technology (only 3% of the Argus High-Yield Portfolio) and Industrial (5%). The average yield for the portfolio is 4.97%, compared to 1.85% for the S&P 500. The average beta is a sub-market 0.89. Here are the Top 10 Yield Stocks in the Argus High-Yield Portfolio."
         },
         {
             "id": "24518_Stock Picks_1563753600000",
@@ -1115,7 +1178,8 @@
                 "M",
                 "BP",
                 "KIM"
-            ]
+            ],
+            "title": "Growth stocks may be outperforming, again, in 2019. But in an environment of historically low interest rates (and with the Federal Reserve seemingly poised to cut again), many investors are still searching for high levels of income, which can often be found in value stocks. Over the years, the performance record has favored growth. Since 2003, the Russell 1000 Growth Index has climbed 457%, compared to an advance of 289% for the Russell 1000 Value Index. In 11 of the 16 years of this period, growth stocks have topped value stocks. Still, value is the place to achieve income. The current yield on the iShares Russell 1000 Value Index ETF is 2.9%, compared to the 1.4% current yield on the iShares Russell 1000 Growth Index ETF. As well, sometimes the risk profile favors value. For the past five years, the standard deviation of monthly returns for value stocks has been 3.5%, compared to the 3.7% standard deviation of monthly returns for growth stocks. Based on numerous requests from clients, we have designed a portfolio of companies followed by Argus Research that are BUY- or HOLD-rated on a long-term (five-year) basis and have an average yield of 4.0% or higher. The portfolio includes 40 stocks and representation in all 11 sectors. Not surprisingly, the weights of the sectors are different from the current weights in the S&P 500. As an example, the Argus High-Yield Portfolio has a 15% weighting in Energy, 13% in Consumer Staples and 8% in both Real Estate and Utilities. These are all Over-Weights compared to the broad market. Under-Weighted sectors include Technology (only 3% of the Argus High-Yield Portfolio) and Industrial (5%). The average yield for the portfolio is 4.97%, compared to 1.85% for the S&P 500. The average beta is a sub-market 0.89. Here are the Top 10 Yield Stocks in the Argus High-Yield Portfolio."
         },
         {
             "id": "24482_Thematic Portfolio_1563343414000",
@@ -1164,7 +1228,8 @@
                 "EAT",
                 "PM",
                 "ETN"
-            ]
+            ],
+            "title": "Growth stocks may be outperforming, again, in 2019. But in an environment of historically low interest rates (and with the Federal Reserve seemingly poised to cut again), many investors are still searching for high levels of income, which can often be found in value stocks. When we look for attractive high-yield/value stocks at Argus, we look for low valuations on metrics such as price/earnings, price/sales, price/book, yield and price/cash flow. But we also look for companies with clean balance sheets, high levels of profitability, cash-flow generation, and an experienced management teams. We seek to avoid companies in industries that are in secular decline, or with dividend yields that are so high that the payout is clearly at risk. That said, many value companies may face a substantial near-term industry problem. That might be a retailer fending off Amazon.com; or an energy company tied to the uncertain long-term outlook for demand for fossil fuels; or a newspaper company in the digital advertising age. Some value companies, such as tobacco companies, may face ongoing legal or regulatory risks. And others may be facing problems such as over-aggressive acquisitions, patent expirations or recent earnings stumbles. Based on requests from clients, we have designed a portfolio of companies followed by Argus Research that are BUY- or HOLD-rated on a long-term (five-year) basis and have an average yield of 4.0% or higher."
         },
         {
             "id": "24482_Thematic Portfolio_1563321600000",
@@ -1213,7 +1278,8 @@
                 "EAT",
                 "PM",
                 "ETN"
-            ]
+            ],
+            "title": "Growth stocks may be outperforming, again, in 2019. But in an environment of historically low interest rates (and with the Federal Reserve seemingly poised to cut again), many investors are still searching for high levels of income, which can often be found in value stocks. When we look for attractive high-yield/value stocks at Argus, we look for low valuations on metrics such as price/earnings, price/sales, price/book, yield and price/cash flow. But we also look for companies with clean balance sheets, high levels of profitability, cash-flow generation, and an experienced management teams. We seek to avoid companies in industries that are in secular decline, or with dividend yields that are so high that the payout is clearly at risk. That said, many value companies may face a substantial near-term industry problem. That might be a retailer fending off Amazon.com; or an energy company tied to the uncertain long-term outlook for demand for fossil fuels; or a newspaper company in the digital advertising age. Some value companies, such as tobacco companies, may face ongoing legal or regulatory risks. And others may be facing problems such as over-aggressive acquisitions, patent expirations or recent earnings stumbles. Based on requests from clients, we have designed a portfolio of companies followed by Argus Research that are BUY- or HOLD-rated on a long-term (five-year) basis and have an average yield of 4.0% or higher."
         },
         {
             "id": "3203_Analyst Report_1556263479000",
@@ -1225,7 +1291,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, founded in 1919, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its cigarette brands include Marlboro, Virginia Slims, Parliament, Benson & Hedges, Basic, Merit, Chesterfield and L&M. The company acquired the U.S. Smokeless Tobacco Company in 2009, adding the Copenhagen, Skoal, Red Seal, and Husky brands to its portfolio. The company also spun off its international operations as Philip Morris International in 2008. Altria retains the Philip Morris USA segment, which focuses on the U.S. market and includes various cigar, pipe tobacco, e-cigarette, wine, and beer brands. The company also manages a portfolio of leveraged leases in land transportation, aircraft, electric power, real estate, and manufacturing."
         },
         {
             "id": "23815_Market Summary_1556263479000",
@@ -1247,7 +1314,8 @@
                 "NEM",
                 "FCX",
                 "FE"
-            ]
+            ],
+            "title": "Stocks finished mixed on Thursday afternoon, with solid gains in Healthcare and Communication Services and sharp losses in the Industrials, Materials and Consumer Staples sectors. Facebook shares rose nearly 6%, despite a $3 billion reserve for an expected fine from the FTC, after the company posted strong 1Q growth in advertising revenue. 3M shares fell nearly 13% after management announced a major layoff and cut its 2019 earnings guidance. On the employment front, the Labor Department reported that first-time claims for unemployment benefits rose by 37,000 to 230,000 for the week ended April 20, above the Reuters consensus estimate of 200,000. The Dow fell 0.04%, the S&P fell 0.51%, and the Nasdaq rose 0.21%. Crude oil fell more than 1% to $65 per barrel, while gold fell slightly to $1279 per ounce."
         },
         {
             "id": "23815_Market Summary_1556236800000",
@@ -1269,7 +1337,8 @@
                 "FCX",
                 "FB",
                 "FE"
-            ]
+            ],
+            "title": "Stocks finished mixed on Thursday afternoon, with solid gains in Healthcare and Communication Services and sharp losses in the Industrials, Materials and Consumer Staples sectors. Facebook shares rose nearly 6%, despite a $3 billion reserve for an expected fine from the FTC, after the company posted strong 1Q growth in advertising revenue. 3M shares fell nearly 13% after management announced a major layoff and cut its 2019 earnings guidance. On the employment front, the Labor Department reported that first-time claims for unemployment benefits rose by 37,000 to 230,000 for the week ended April 20, above the Reuters consensus estimate of 200,000. The Dow fell 0.04%, the S&P fell 0.51%, and the Nasdaq rose 0.21%. Crude oil fell more than 1% to $65 per barrel, while gold fell slightly to $1279 per ounce."
         },
         {
             "id": "3203_Analyst Report_1556236800000",
@@ -1281,7 +1350,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, founded in 1919, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its cigarette brands include Marlboro, Virginia Slims, Parliament, Benson & Hedges, Basic, Merit, Chesterfield and L&M. The company acquired the U.S. Smokeless Tobacco Company in 2009, adding the Copenhagen, Skoal, Red Seal, and Husky brands to its portfolio. The company also spun off its international operations as Philip Morris International in 2008. Altria retains the Philip Morris USA segment, which focuses on the U.S. market and includes various cigar, pipe tobacco, e-cigarette, wine, and beer brands. The company also manages a portfolio of leveraged leases in land transportation, aircraft, electric power, real estate, and manufacturing."
         },
         {
             "id": "3203_Analyst Report_1549028743000",
@@ -1293,7 +1363,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, founded in 1919, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its cigarette brands include Marlboro, Virginia Slims, Parliament, Benson & Hedges, Basic, Merit, Chesterfield and L&M. The company acquired the U.S. Smokeless Tobacco Company in 2009, adding the Copenhagen, Skoal, Red Seal, and Husky brands to its portfolio. The company also spun off its international operations as Philip Morris International in 2008. Altria retains the Philip Morris USA segment, which focuses on the U.S. market and includes various cigar, pipe tobacco, e-cigarette, wine, and beer brands. The company also manages a portfolio of leveraged leases in land transportation, aircraft, electric power, real estate, and manufacturing."
         },
         {
             "id": "23130_Market Update_1549027843000",
@@ -1308,7 +1379,8 @@
                 "EAT",
                 "NFG",
                 "HSY"
-            ]
+            ],
+            "title": "Stocks rose modestly on Friday morning following a better-than-expected January employment report. The Labor Department said that the U.S. economy added 304,000 payroll jobs last month, up from a revised 222,000 in December and above the consensus forecast of 165,000. The official unemployment rate rose to 4.0% from 3.9%, while average hourly wages rose 0.1% from the prior month and 3.2% from the prior year. The S&P rose 0.2%, the Dow rose 0.4%, and the Nasdaq was flat. Crude oil rose 1.6% to near $55 per barrel, while gold fell $4 to $1321 per ounce."
         },
         {
             "id": "3203_Analyst Report_1548979200000",
@@ -1320,7 +1392,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, founded in 1919, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its cigarette brands include Marlboro, Virginia Slims, Parliament, Benson & Hedges, Basic, Merit, Chesterfield and L&M. The company acquired the U.S. Smokeless Tobacco Company in 2009, adding the Copenhagen, Skoal, Red Seal, and Husky brands to its portfolio. The company also spun off its international operations as Philip Morris International in 2008. Altria retains the Philip Morris USA segment, which focuses on the U.S. market and includes various cigar, pipe tobacco, e-cigarette, wine, and beer brands. The company also manages a portfolio of leveraged leases in land transportation, aircraft, electric power, real estate, and manufacturing."
         },
         {
             "id": "23130_Market Update_1548979200000",
@@ -1335,7 +1408,8 @@
                 "EAT",
                 "NFG",
                 "HSY"
-            ]
+            ],
+            "title": "Stocks rose modestly on Friday morning following a better-than-expected January employment report. The Labor Department said that the U.S. economy added 304,000 payroll jobs last month, up from a revised 222,000 in December and above the consensus forecast of 165,000. The official unemployment rate rose to 4.0% from 3.9%, while average hourly wages rose 0.1% from the prior month and 3.2% from the prior year. The S&P rose 0.2%, the Dow rose 0.4%, and the Nasdaq was flat. Crude oil rose 1.6% to near $55 per barrel, while gold fell $4 to $1321 per ounce."
         },
         {
             "id": "3203_Analyst Report_1544189632000",
@@ -1347,7 +1421,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, founded in 1919, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its cigarette brands include Marlboro, Virginia Slims, Parliament, Benson & Hedges, Basic, Merit, Chesterfield and L&M. The company acquired the U.S. Smokeless Tobacco Company in 2009, adding the Copenhagen, Skoal, Red Seal, and Husky brands to its portfolio. The company also spun off its international operations as Philip Morris International in 2008. Altria retains the Philip Morris USA segment, which focuses on the U.S. market and includes various cigar, pipe tobacco, e-cigarette, wine, and beer brands. The company also manages a portfolio of leveraged leases in land transportation, aircraft, electric power, real estate, and manufacturing."
         },
         {
             "id": "22695_Market Update_1544189632000",
@@ -1358,7 +1433,8 @@
             "tickers": [
                 "MO",
                 "D"
-            ]
+            ],
+            "title": "Stocks fell again on Friday morning following a mixed November employment report amid continued concerns about slowing economic growth and trade tensions with China. The Labor Department said that the U.S. economy added 155,000 payroll jobs last month, down from a revised 237,000 in October and below the Reuters consensus forecast of 200,000. The official unemployment rate held steady at 3.7%, while average hourly wages rose 0.2% from the prior month and 3.1% from the prior year. The S&P fell 1.0%, the Dow 1.0%, and the Nasdaq 1.3%. Crude oil rose $2 to $53.50 per barrel, while gold rose $7 to $1251 per ounce."
         },
         {
             "id": "3203_Analyst Report_1544140800000",
@@ -1370,7 +1446,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, founded in 1919, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its cigarette brands include Marlboro, Virginia Slims, Parliament, Benson & Hedges, Basic, Merit, Chesterfield and L&M. The company acquired the U.S. Smokeless Tobacco Company in 2009, adding the Copenhagen, Skoal, Red Seal, and Husky brands to its portfolio. The company also spun off its international operations as Philip Morris International in 2008. Altria retains the Philip Morris USA segment, which focuses on the U.S. market and includes various cigar, pipe tobacco, e-cigarette, wine, and beer brands. The company also manages a portfolio of leveraged leases in land transportation, aircraft, electric power, real estate, and manufacturing."
         },
         {
             "id": "22695_Market Update_1544140800000",
@@ -1381,7 +1458,8 @@
             "tickers": [
                 "MO",
                 "D"
-            ]
+            ],
+            "title": "Stocks fell again on Friday morning following a mixed November employment report amid continued concerns about slowing economic growth and trade tensions with China. The Labor Department said that the U.S. economy added 155,000 payroll jobs last month, down from a revised 237,000 in October and below the Reuters consensus forecast of 200,000. The official unemployment rate held steady at 3.7%, while average hourly wages rose 0.2% from the prior month and 3.1% from the prior year. The S&P fell 1.0%, the Dow 1.0%, and the Nasdaq 1.3%. Crude oil rose $2 to $53.50 per barrel, while gold rose $7 to $1251 per ounce."
         },
         {
             "id": "3203_Analyst Report_1540797837000",
@@ -1393,7 +1471,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, founded in 1919, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its cigarette brands include Marlboro, Virginia Slims, Parliament, Benson & Hedges, Basic, Merit, Chesterfield and L&M. The company acquired the U.S. Smokeless Tobacco Company in 2009, adding the Copenhagen, Skoal, Red Seal, and Husky brands to its portfolio. The company also spun off its international operations as Philip Morris International in 2008. Altria retains the Philip Morris USA segment, which focuses on the U.S. market and includes various cigar, pipe tobacco, e-cigarette, wine, and beer brands. The company also manages a portfolio of leveraged leases in land transportation, aircraft, electric power, real estate, and manufacturing."
         },
         {
             "id": "22373_Market Summary_1540797837000",
@@ -1419,7 +1498,8 @@
                 "GILD",
                 "LDOS",
                 "ODFL"
-            ]
+            ],
+            "title": "Stocks attempted to rally following early selling on Friday, but reversed course as the day wore on and finished sharply lower on the day. The Nasdaq Composite fared the worst as light guidance from large-cap technology stocks led to heavy selling pressure particularly for Amazon and Alphabet, leaving the index down 2.1% for the day. The S&P 500 fell 1.7%, while a strong performance for Intel enabled the Dow Jones Industrial Average to hold up a bit better with a 1.2% decline. Uncharacteristically weak guidance led to poor performance for many individual stocks last week, resulting in losses of 3.9% for the S&P 500, 3.8% for the Nasdaq and 3.0% for the Dow. Those performances pushed both the S&P 500 and Dow into negative territory for the year, with declines of 0.6% and 0.1%, respectively, while the Nasdaq is clinging to a 3.8% year-to-date gain.  "
         },
         {
             "id": "3203_Analyst Report_1540771200000",
@@ -1431,7 +1511,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "Altria Group, founded in 1919, manufactures and sells cigarettes, smokeless tobacco products, and alcoholic beverages in the United States and abroad. Its cigarette brands include Marlboro, Virginia Slims, Parliament, Benson & Hedges, Basic, Merit, Chesterfield and L&M. The company acquired the U.S. Smokeless Tobacco Company in 2009, adding the Copenhagen, Skoal, Red Seal, and Husky brands to its portfolio. The company also spun off its international operations as Philip Morris International in 2008. Altria retains the Philip Morris USA segment, which focuses on the U.S. market and includes various cigar, pipe tobacco, e-cigarette, wine, and beer brands. The company also manages a portfolio of leveraged leases in land transportation, aircraft, electric power, real estate, and manufacturing."
         },
         {
             "id": "22373_Market Summary_1540771200000",
@@ -1457,7 +1538,8 @@
                 "GILD",
                 "LDOS",
                 "ODFL"
-            ]
+            ],
+            "title": "Stocks attempted to rally following early selling on Friday, but reversed course as the day wore on and finished sharply lower on the day. The Nasdaq Composite fared the worst as light guidance from large-cap technology stocks led to heavy selling pressure particularly for Amazon and Alphabet, leaving the index down 2.1% for the day. The S&P 500 fell 1.7%, while a strong performance for Intel enabled the Dow Jones Industrial Average to hold up a bit better with a 1.2% decline. Uncharacteristically weak guidance led to poor performance for many individual stocks last week, resulting in losses of 3.9% for the S&P 500, 3.8% for the Nasdaq and 3.0% for the Dow. Those performances pushed both the S&P 500 and Dow into negative territory for the year, with declines of 0.6% and 0.1%, respectively, while the Nasdaq is clinging to a 3.8% year-to-date gain.  "
         },
         {
             "id": "22269_Market Outlook_1539330310000",
@@ -1467,7 +1549,8 @@
             "reportTitle": "The VIX Volatility Index has soared in the past week, after settling down for most of the past five months. For the first four months of the year, the VIX averaged over 17 -- far from the 11 average in 2017. Investors were reacting to trade rhetoric and Fed rate hikes, among other factors. From May through September, the average reading was 12, as investors focused on solid GDP growth in the U.S. and strong corporate earnings. But in the past two weeks, the VIX has more than doubled, again on concerns over interest rates and trade. The current bull market is now 115 months old -- one of the oldest on record. A study by Butler, Philbrick, Gordillo & Associates concluded the average bull market since 1871 lasted 72 months. More recently, bull markets have been longer and more profitable. Measuring the period from 1940 to the present, we find the average bull market has lasted 96 months.  Compared against this data, the current bull may be tired -- but solid fundamentals remain intact. During this bull market, a doubling in the VIX has been a buy signal.",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "The VIX Volatility Index has soared in the past week, after settling down for most of the past five months. For the first four months of the year, the VIX averaged over 17 -- far from the 11 average in 2017. Investors were reacting to trade rhetoric and Fed rate hikes, among other factors. From May through September, the average reading was 12, as investors focused on solid GDP growth in the U.S. and strong corporate earnings. But in the past two weeks, the VIX has more than doubled, again on concerns over interest rates and trade. The current bull market is now 115 months old -- one of the oldest on record. A study by Butler, Philbrick, Gordillo & Associates concluded the average bull market since 1871 lasted 72 months. More recently, bull markets have been longer and more profitable. Measuring the period from 1940 to the present, we find the average bull market has lasted 96 months.  Compared against this data, the current bull may be tired -- but solid fundamentals remain intact. During this bull market, a doubling in the VIX has been a buy signal."
         },
         {
             "id": "22269_Market Outlook_1539302400000",
@@ -1477,7 +1560,8 @@
             "reportTitle": "The VIX Volatility Index has soared in the past week, after settling down for most of the past five months. For the first four months of the year, the VIX averaged over 17 -- far from the 11 average in 2017. Investors were reacting to trade rhetoric and Fed rate hikes, among other factors. From May through September, the average reading was 12, as investors focused on solid GDP growth in the U.S. and strong corporate earnings. But in the past two weeks, the VIX has more than doubled, again on concerns over interest rates and trade. The current bull market is now 115 months old -- one of the oldest on record. A study by Butler, Philbrick, Gordillo & Associates concluded the average bull market since 1871 lasted 72 months. More recently, bull markets have been longer and more profitable. Measuring the period from 1940 to the present, we find the average bull market has lasted 96 months.  Compared against this data, the current bull may be tired -- but solid fundamentals remain intact. During this bull market, a doubling in the VIX has been a buy signal.",
             "tickers": [
                 "MO"
-            ]
+            ],
+            "title": "The VIX Volatility Index has soared in the past week, after settling down for most of the past five months. For the first four months of the year, the VIX averaged over 17 -- far from the 11 average in 2017. Investors were reacting to trade rhetoric and Fed rate hikes, among other factors. From May through September, the average reading was 12, as investors focused on solid GDP growth in the U.S. and strong corporate earnings. But in the past two weeks, the VIX has more than doubled, again on concerns over interest rates and trade. The current bull market is now 115 months old -- one of the oldest on record. A study by Butler, Philbrick, Gordillo & Associates concluded the average bull market since 1871 lasted 72 months. More recently, bull markets have been longer and more profitable. Measuring the period from 1940 to the present, we find the average bull market has lasted 96 months.  Compared against this data, the current bull may be tired -- but solid fundamentals remain intact. During this bull market, a doubling in the VIX has been a buy signal."
         },
         {
             "id": "21950_Thematic Portfolio_1535137924000",
@@ -1525,7 +1609,8 @@
                 "PM",
                 "ETN",
                 "KEY"
-            ]
+            ],
+            "title": "Growth stocks may be outperforming in 2018 -- but in an environment of historically low interest rates, many investors are still searching for high levels of income, which can often be found in Value stocks. Over the years, the performance record has favored Growth. Since 2003, the Russell 1000 Growth Index has climbed 423%, compared to an advance of 278% for the Russell 1000 Value Index. In 10 of the 15 years of this period, Growth stocks have topped Value stocks. Still, Value is the place to achieve income. The current yield on the iShares Russell 1000 Value Index ETF is 2.2%, compared to the current yield on the iShares Russell 1000 Growth Index ETF of 1.1%. As well, sometimes the risk profile favors Value. For the past five years, the standard deviation of monthly returns for Value stocks has been 2.83%, compared to the standard deviation of monthly returns for Growth stocks of 2.93%. When we look for Value at Argus, we look for low valuations on metrics such as price/earnings, price/sales, price/book, yield and price/cash flow. But we also look for companies with clean balance sheets, high levels of profitability and cash flow generation capability, and experienced management teams."
         },
         {
             "id": "21950_Thematic Portfolio_1535068800000",
@@ -1574,7 +1659,8 @@
                 "PM",
                 "ETN",
                 "KEY"
-            ]
+            ],
+            "title": "Growth stocks may be outperforming in 2018 -- but in an environment of historically low interest rates, many investors are still searching for high levels of income, which can often be found in Value stocks. Over the years, the performance record has favored Growth. Since 2003, the Russell 1000 Growth Index has climbed 423%, compared to an advance of 278% for the Russell 1000 Value Index. In 10 of the 15 years of this period, Growth stocks have topped Value stocks. Still, Value is the place to achieve income. The current yield on the iShares Russell 1000 Value Index ETF is 2.2%, compared to the current yield on the iShares Russell 1000 Growth Index ETF of 1.1%. As well, sometimes the risk profile favors Value. For the past five years, the standard deviation of monthly returns for Value stocks has been 2.83%, compared to the standard deviation of monthly returns for Growth stocks of 2.93%. When we look for Value at Argus, we look for low valuations on metrics such as price/earnings, price/sales, price/book, yield and price/cash flow. But we also look for companies with clean balance sheets, high levels of profitability and cash flow generation capability, and experienced management teams."
         }
     ],
     "sigDevs": [

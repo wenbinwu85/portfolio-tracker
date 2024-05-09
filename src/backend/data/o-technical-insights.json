@@ -10,29 +10,29 @@
                 "score": 4,
                 "scoreDescription": "Very Strong Bullish Evidence",
                 "sectorDirection": "Bullish",
-                "sectorScore": 2,
-                "sectorScoreDescription": "Bullish Evidence",
-                "indexDirection": "Bearish",
-                "indexScore": 1,
-                "indexScoreDescription": "Weak Bearish Evidence"
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bullish Evidence",
+                "indexDirection": "Bullish",
+                "indexScore": 4,
+                "indexScoreDescription": "Very Strong Bullish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 3,
-                "scoreDescription": "Strong Bullish Evidence",
+                "score": 4,
+                "scoreDescription": "Very Strong Bullish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 2,
                 "sectorScoreDescription": "Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 4,
-                "indexScoreDescription": "Very Strong Bearish Evidence"
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "longTermOutlook": {
-                "stateDescription": "Bearish events outweigh bullish events.",
-                "direction": "Bearish",
-                "score": 1,
-                "scoreDescription": "Weak Bearish Evidence",
+                "stateDescription": "Recent bullish events outweigh bearish events.",
+                "direction": "Bullish",
+                "score": 2,
+                "scoreDescription": "Bullish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 3,
                 "sectorScoreDescription": "Strong Bearish Evidence",
@@ -45,7 +45,7 @@
             "provider": "Trading Central",
             "support": 52.815,
             "resistance": 61.0311,
-            "stopLoss": 51.058423
+            "stopLoss": 51.491639
         },
         "valuation": {
             "color": 0.0,
@@ -58,12 +58,12 @@
     "companySnapshot": {
         "sectorInfo": "Real Estate",
         "company": {
-            "innovativeness": 0.7422,
+            "innovativeness": 0.7412000000000001,
             "hiring": 0.5634,
             "sustainability": 0.6531,
             "insiderSentiments": 0.4012,
-            "earningsReports": 0.9105,
-            "dividends": 0.4103
+            "earningsReports": 0.915,
+            "dividends": 0.42
         },
         "sector": {
             "innovativeness": 0.5,
@@ -75,7 +75,7 @@
         }
     },
     "recommendation": {
-        "targetPrice": 46.0,
+        "targetPrice": 47.0,
         "provider": "Argus Research",
         "rating": "SELL"
     },
@@ -91,28 +91,28 @@
             "Rising interest rates reduce the spread between acquisition cap rates and financing costs, sapping management of its ability to create value through continued external growth."
         ],
         "companyName": "Realty Income Corporation",
-        "msBullishBearishSummariesPublishDate": 1711490993000,
+        "msBullishBearishSummariesPublishDate": 1715103273000,
         "upsellReportType": "MORNINGSTAR_ANALYST"
     },
     "upsellSearchDD": {
         "researchReports": {
-            "reportId": "MS_0P000004M1_AnalystReport_1711490993000",
+            "reportId": "MS_0P000004M1_AnalystReport_1715103273000",
             "provider": "Morningstar",
-            "title": "Following Two Years of Rising Interest Rates, We Believe REITs Are Trading at Significant Discounts",
-            "reportDate": "2024-03-26T22:09:53Z",
+            "title": "Realty Income Earnings: Invests Over $300 Million in Europe at Average 8.2% Cap Rate",
+            "reportDate": "2024-05-07T17:34:33Z",
             "summary": "Realty Income owns roughly 13,400 properties, most of which are freestanding, single-tenant, triple-net-leased retail properties. Its properties are located in 49 states and Puerto Rico and are leased to 250 tenants from 47 industries. Recent acquisitions have added industrial, gaming, office, manufacturing, and distribution properties, which make up roughly 17% of revenue. ",
             "investmentRating": "Bullish"
         }
     },
     "events": [
         {
-            "eventType": "Commodity Channel Index",
-            "pricePeriod": "D",
-            "tradingHorizon": "S",
+            "eventType": "Price Crosses Moving Average",
+            "pricePeriod": "W",
+            "tradingHorizon": "L",
             "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1714656600,
-            "endDate": 1714656600
+            "startDate": 1714743000,
+            "endDate": 1714743000
         }
     ],
     "reports": [
@@ -126,7 +126,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $46.000000; an Industry Subrating of Low; a Management Subrating of Low; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1713916800000",
@@ -138,7 +139,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $46.000000; an Industry Subrating of Low; a Management Subrating of Low; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1713312000000",
@@ -150,7 +152,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $45.000000; an Industry Subrating of Low; a Management Subrating of Low; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1712707200000",
@@ -162,7 +165,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $45.000000; an Industry Subrating of Low; a Management Subrating of Low; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1712102400000",
@@ -174,7 +178,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $45.000000; an Industry Subrating of Low; a Management Subrating of Low; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1711497600000",
@@ -186,7 +191,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $45.000000; an Industry Subrating of Low; a Management Subrating of Low; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1710892800000",
@@ -198,7 +204,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $47.000000; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1710288000000",
@@ -210,7 +217,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $48.000000; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1709683200000",
@@ -222,7 +230,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $47.000000; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1709164800000",
@@ -234,7 +243,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $47.000000; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1708473600000",
@@ -246,7 +256,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $42.000000; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1707868800000",
@@ -258,7 +269,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $46.000000; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1707264000000",
@@ -270,7 +282,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $47.000000; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1706659200000",
@@ -282,7 +295,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $50.000000; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1706054400000",
@@ -294,7 +308,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $50.000000; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1705449600000",
@@ -306,7 +321,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $50.000000; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of High."
         },
         {
             "id": "3273_Quantitative Report_1704844800000",
@@ -318,7 +334,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $50.000000; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of High."
         },
         {
             "id": "3273_Quantitative Report_1704240000000",
@@ -330,7 +347,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $50.000000; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of High."
         },
         {
             "id": "3273_Quantitative Report_1703635200000",
@@ -342,7 +360,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $50.000000; an Industry Subrating of Low; a Management Subrating of Low; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of High."
         },
         {
             "id": "3273_Quantitative Report_1703030400000",
@@ -354,7 +373,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $50.000000; an Industry Subrating of Low; a Management Subrating of Low; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of High."
         },
         {
             "id": "3273_Quantitative Report_1702425600000",
@@ -366,7 +386,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $57.000000; an Industry Subrating of Low; a Management Subrating of Low; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of High."
         },
         {
             "id": "3273_Quantitative Report_1701820800000",
@@ -378,7 +399,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $58.000000; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of High."
         },
         {
             "id": "3273_Quantitative Report_1701216000000",
@@ -390,7 +412,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $57.000000; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of High."
         },
         {
             "id": "3273_Quantitative Report_1700611200000",
@@ -402,7 +425,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $56.000000; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of High."
         },
         {
             "id": "3273_Quantitative Report_1700006400000",
@@ -414,7 +438,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $55.000000; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of High."
         },
         {
             "id": "3273_Quantitative Report_1699401600000",
@@ -426,7 +451,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $54.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of High."
         },
         {
             "id": "3273_Quantitative Report_1698796800000",
@@ -438,7 +464,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $50.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of High."
         },
         {
             "id": "3273_Quantitative Report_1698192000000",
@@ -450,7 +477,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $52.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of High."
         },
         {
             "id": "3273_Quantitative Report_1697587200000",
@@ -462,7 +490,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $54.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of High."
         },
         {
             "id": "3273_Quantitative Report_1697068800000",
@@ -474,7 +503,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $45.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of High."
         },
         {
             "id": "3273_Quantitative Report_1696377600000",
@@ -486,7 +516,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $39.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of High."
         },
         {
             "id": "3273_Quantitative Report_1695772800000",
@@ -498,7 +529,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $40.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of High."
         },
         {
             "id": "3273_Quantitative Report_1695168000000",
@@ -510,7 +542,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $43.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Low."
         },
         {
             "id": "3273_Quantitative Report_1694563200000",
@@ -522,7 +555,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $50.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Low."
         },
         {
             "id": "3273_Quantitative Report_1693353600000",
@@ -534,7 +568,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $45.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1692748800000",
@@ -546,7 +581,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $45.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1692144000000",
@@ -558,7 +594,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $46.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1691539200000",
@@ -570,7 +607,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $48.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1690934400000",
@@ -582,7 +620,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $48.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1690329600000",
@@ -594,7 +633,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $57.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1689638400000",
@@ -606,7 +646,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $49.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1689120000000",
@@ -618,7 +659,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of SELL; a target price of $64.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1688515200000",
@@ -630,7 +672,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $64.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1687910400000",
@@ -642,7 +685,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $63.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1687392000000",
@@ -654,7 +698,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $63.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1686700800000",
@@ -666,7 +711,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $65.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1686096000000",
@@ -678,7 +724,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $64.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1685491200000",
@@ -690,7 +737,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $62.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1684886400000",
@@ -702,7 +750,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $63.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1684281600000",
@@ -714,7 +763,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $63.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1683676800000",
@@ -726,7 +776,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $65.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1683072000000",
@@ -738,7 +789,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $65.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1682553600000",
@@ -750,7 +802,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $64.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1681862400000",
@@ -762,7 +815,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $65.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1681257600000",
@@ -774,7 +828,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $66.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1680652800000",
@@ -786,7 +841,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $66.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1680048000000",
@@ -798,7 +854,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $65.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1679443200000",
@@ -810,7 +867,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $62.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1678838400000",
@@ -822,7 +880,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $66.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1678233600000",
@@ -834,7 +893,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $68.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1677628800000",
@@ -846,7 +906,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $66.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1677024000000",
@@ -858,7 +919,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $70.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1676419200000",
@@ -870,7 +932,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $69.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1675814400000",
@@ -882,7 +945,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $70.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1675209600000",
@@ -894,7 +958,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $70.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1674604800000",
@@ -906,7 +971,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $70.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1674000000000",
@@ -918,7 +984,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $69.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1673395200000",
@@ -930,7 +997,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $68.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1672790400000",
@@ -942,7 +1010,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $68.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1672185600000",
@@ -954,7 +1023,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $67.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1671580800000",
@@ -966,7 +1036,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $68.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1670371200000",
@@ -978,7 +1049,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $67.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1669766400000",
@@ -990,7 +1062,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $65.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "3273_Quantitative Report_1669161600000",
@@ -1002,7 +1075,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $68.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Low."
         },
         {
             "id": "3273_Quantitative Report_1668556800000",
@@ -1014,7 +1088,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $68.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Low."
         },
         {
             "id": "3273_Quantitative Report_1667952000000",
@@ -1026,7 +1101,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $67.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Low."
         },
         {
             "id": "3273_Quantitative Report_1667347200000",
@@ -1038,7 +1114,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $64.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Low."
         },
         {
             "id": "3273_Quantitative Report_1666742400000",
@@ -1050,7 +1127,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $64.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Low."
         },
         {
             "id": "3273_Quantitative Report_1666137600000",
@@ -1062,7 +1140,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $60.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Low."
         },
         {
             "id": "3273_Quantitative Report_1665532800000",
@@ -1074,7 +1153,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $61.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Low."
         },
         {
             "id": "3273_Quantitative Report_1664928000000",
@@ -1086,7 +1166,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $63.000000; an Industry Subrating of Medium; a Management Subrating of High; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Low."
         },
         {
             "id": "3273_Quantitative Report_1664323200000",
@@ -1098,7 +1179,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $63.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Low."
         },
         {
             "id": "3273_Quantitative Report_1663718400000",
@@ -1110,7 +1192,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $67.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Low."
         },
         {
             "id": "3273_Quantitative Report_1663113600000",
@@ -1122,7 +1205,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $69.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Low."
         },
         {
             "id": "3273_Quantitative Report_1662508800000",
@@ -1134,7 +1218,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $71.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Low."
         },
         {
             "id": "3273_Quantitative Report_1661904000000",
@@ -1146,7 +1231,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $72.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Low."
         },
         {
             "id": "3273_Quantitative Report_1661299200000",
@@ -1158,7 +1244,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $74.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Low."
         },
         {
             "id": "3273_Quantitative Report_1660089600000",
@@ -1170,7 +1257,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $78.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Low."
         },
         {
             "id": "3273_Quantitative Report_1659484800000",
@@ -1182,7 +1270,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $77.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Low."
         },
         {
             "id": "3273_Quantitative Report_1658275200000",
@@ -1194,7 +1283,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $74.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Low."
         },
         {
             "id": "3273_Quantitative Report_1657670400000",
@@ -1206,7 +1296,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $72.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Low."
         },
         {
             "id": "3273_Quantitative Report_1656460800000",
@@ -1218,7 +1309,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $73.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Low."
         },
         {
             "id": "3273_Quantitative Report_1655856000000",
@@ -1230,7 +1322,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $70.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Low."
         },
         {
             "id": "3273_Quantitative Report_1655251200000",
@@ -1242,7 +1335,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $68.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Low."
         },
         {
             "id": "3273_Quantitative Report_1654646400000",
@@ -1254,7 +1348,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $71.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Low."
         },
         {
             "id": "3273_Quantitative Report_1654041600000",
@@ -1266,7 +1361,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $71.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Low."
         },
         {
             "id": "3273_Quantitative Report_1653436800000",
@@ -1278,7 +1374,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $72.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Low."
         },
         {
             "id": "3273_Quantitative Report_1652832000000",
@@ -1290,7 +1387,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $72.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Low."
         },
         {
             "id": "3273_Quantitative Report_1652227200000",
@@ -1302,7 +1400,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $67.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Low."
         },
         {
             "id": "3273_Quantitative Report_1651622400000",
@@ -1314,7 +1413,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "O"
-            ]
+            ],
+            "title": "REALTY INCOME CORP has an Investment Rating of HOLD; a target price of $71.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Low."
         }
     ],
     "sigDevs": [
@@ -1324,6 +1424,15 @@
         }
     ],
     "secReports": [
+        {
+            "id": "0000726728-24-000077_726728",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1715040000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000726728/000072672824000077/thumbnail.png",
+            "formType": "10-Q"
+        },
         {
             "id": "0000726728-24-000072_726728",
             "type": "Corporate Changes & Voting Matters",
@@ -1568,21 +1677,21 @@
             "formType": "8-K"
         },
         {
-            "id": "0001104659-23-121255_726728",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1701043200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000726728/000110465923121255/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
             "id": "0001104659-23-121259_726728",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
             "description": "Current report filing",
             "filingDate": 1701043200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000726728/000110465923121259/thumbnail.png",
+            "formType": "8-K"
+        },
+        {
+            "id": "0001104659-23-121255_726728",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1701043200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000726728/000110465923121255/thumbnail.png",
             "formType": "8-K"
         },
         {
@@ -1727,15 +1836,6 @@
             "description": "Current report filing",
             "filingDate": 1681430400000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000726728/000110465923045565/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
-            "id": "0001104659-23-042363_726728",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1680739200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0000726728/000110465923042363/thumbnail.png",
             "formType": "8-K"
         }
     ]

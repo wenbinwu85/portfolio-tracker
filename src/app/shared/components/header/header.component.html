@@ -1,13 +1,13 @@
-<section class="main-title-container">
+<div class="main-title-container">
   <h1 class="header-title">
     <span>Ben's Awesome Investment Tracker </span>
     <span class="version">v2.1</span>
   </h1>
   <tv-tickers-widget [tape]="true" />
-</section>
+</div>
 
 <div *ngIf="showProgressBar" class="progress-bar-container">
-  <h1 class="progress-bar-message">Loading new data...</h1>
+  <h1 class="progress-bar-message">Loading data...</h1>
   <mat-progress-bar color="warn" mode="query" />
 </div>
 
@@ -21,6 +21,7 @@
   >
     {{ link.label }}
   </a>
+
   <button
     mat-button
     color="primary"
@@ -30,5 +31,8 @@
     <mat-icon>cloud_sync</mat-icon>
     <span>Refresh Data</span>
   </button>
+
+  <input type="file" accept="text/csv" (change)="handleOpenFile($event)" />
 </nav>
+
 <mat-tab-nav-panel #tabPanel />

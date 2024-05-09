@@ -1,10 +1,11 @@
+import { DOCUMENT } from "@angular/common";
 import {
   HttpClient,
   HttpErrorResponse,
   HttpHeaders,
   HttpParams,
 } from "@angular/common/http";
-import { Injectable } from "@angular/core";
+import { Inject, Injectable } from "@angular/core";
 import {
   BehaviorSubject,
   catchError,
@@ -25,6 +26,7 @@ export class DataService {
   };
   private backendDataPath = "../../../backend/data";
   private backendUrl = "http://127.0.0.1:5000";
+  public localStorage: Storage | undefined;
   public portfolioHoldings: any = {};
   public portfolioSymbols: any = [];
   public portfolioData: any = {};
@@ -32,7 +34,10 @@ export class DataService {
   public portfolioDividendHistory: any = {};
   public isLoadingData = new BehaviorSubject(false);
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, @Inject(DOCUMENT) private document: Document) {
+    this.localStorage = this.document.defaultView?.localStorage;
+    this.localStorage?.clear();
+
     this.updatePortfolioData(true);
     this.updatePortfolioTechnicalInsights(true);
     this.updatePortfolioDividendHistory(true);
@@ -72,6 +77,12 @@ export class DataService {
       this.portfolioData = data;
       this.portfolioHoldings = holdings;
       this.portfolioSymbols = Object.keys(this.portfolioData);
+
+      Object.entries(this.portfolioData).forEach(([symbol, data]) => { 
+        this.localStorage?.setItem(symbol, JSON.stringify(data));
+      })
+      const portfolioHoldingsJson = JSON.stringify(this.portfolioHoldings);
+      this.localStorage?.setItem('holdings', portfolioHoldingsJson);
 
       this.isLoadingData.next(false);
 
@@ -132,7 +143,7 @@ export class DataService {
     this.portfolioSymbols.forEach((symbol: string) => {
       this.getTechnicalInsights(symbol, fromLocal).subscribe((data) => {
         this.portfolioTechnicalInsights[symbol] = data;
-        if ( Object.keys(this.portfolioTechnicalInsights).length === this.portfolioSymbols.length) {
+        if (Object.keys(this.portfolioTechnicalInsights).length === this.portfolioSymbols.length) {
           this.isLoadingData.next(false);
 
           console.log(
@@ -161,6 +172,9 @@ export class DataService {
       this.getDividendHistory(symbol, 10, fromLocal).subscribe((divHis: any) => {
         this.portfolioDividendHistory[symbol] = divHis;
         if (Object.keys(this.portfolioDividendHistory).length === this.portfolioSymbols.length) {
+          const portfolioDividendJson = JSON.stringify(this.portfolioDividendHistory);
+          this.localStorage?.setItem('dividendHistory', portfolioDividendJson);
+
           this.isLoadingData.next(false);
 
           console.log(
@@ -286,5 +300,14 @@ export class DataService {
     }
     const apiPath = `${this.backendUrl}/fetch/events/${symbol}`;
     return this.wrapHttpCall(apiPath);
+  }
+
+  calculateHoldings() {
+    this.portfolioSymbols.forEach((symbol: string) => { 
+      let holding = this.localStorage?.getItem(symbol + 'Holding') as any;
+      holding = JSON.parse(holding);
+      holding['totalCost'] = (holding['shares'] * holding['costAverage']).toFixed(4);
+      this.localStorage?.setItem(symbol + 'Holding', JSON.stringify(holding));
+    })
   }
 }

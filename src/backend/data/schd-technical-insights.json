@@ -6,11 +6,11 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 2,
-                "scoreDescription": "Bullish Evidence",
-                "indexDirection": "Bearish",
-                "indexScore": 1,
-                "indexScoreDescription": "Weak Bearish Evidence"
+                "score": 3,
+                "scoreDescription": "Strong Bullish Evidence",
+                "indexDirection": "Bullish",
+                "indexScore": 4,
+                "indexScoreDescription": "Very Strong Bullish Evidence"
             },
             "intermediateTermOutlook": {
                 "stateDescription": "Recent bearish events outweigh bullish events.",
@@ -18,14 +18,14 @@
                 "score": 3,
                 "scoreDescription": "Strong Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 4,
-                "indexScoreDescription": "Very Strong Bearish Evidence"
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "longTermOutlook": {
                 "stateDescription": "All events are bullish.",
                 "direction": "Bullish",
-                "score": 2,
-                "scoreDescription": "Bullish Evidence",
+                "score": 1,
+                "scoreDescription": "Weak Bullish Evidence",
                 "indexDirection": "Bullish",
                 "indexScore": 1,
                 "indexScoreDescription": "Weak Bullish Evidence"
@@ -34,8 +34,8 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 76.61,
-            "resistance": 77.535,
-            "stopLoss": 75.367651
+            "resistance": 78.8593,
+            "stopLoss": 74.643994
         },
         "valuation": {
             "provider": "Trading Central"
@@ -43,13 +43,13 @@
     },
     "events": [
         {
-            "eventType": "Inside Bar (Bullish)",
+            "eventType": "Intermediate-term KST",
             "pricePeriod": "D",
-            "tradingHorizon": "S",
-            "tradeType": "L",
+            "tradingHorizon": "I",
+            "tradeType": "S",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1714570200,
-            "endDate": 1714656600
+            "startDate": 1714743000,
+            "endDate": 1714743000
         }
     ],
     "sigDevs": []

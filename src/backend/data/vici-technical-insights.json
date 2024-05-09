@@ -10,23 +10,23 @@
                 "score": 4,
                 "scoreDescription": "Very Strong Bullish Evidence",
                 "sectorDirection": "Bullish",
-                "sectorScore": 2,
-                "sectorScoreDescription": "Bullish Evidence",
-                "indexDirection": "Bearish",
-                "indexScore": 1,
-                "indexScoreDescription": "Weak Bearish Evidence"
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bullish Evidence",
+                "indexDirection": "Bullish",
+                "indexScore": 4,
+                "indexScoreDescription": "Very Strong Bullish Evidence"
             },
             "intermediateTermOutlook": {
-                "stateDescription": "Recent bearish events outweigh bullish events.",
+                "stateDescription": "Bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 3,
-                "scoreDescription": "Strong Bearish Evidence",
+                "score": 1,
+                "scoreDescription": "Weak Bearish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 2,
                 "sectorScoreDescription": "Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 4,
-                "indexScoreDescription": "Very Strong Bearish Evidence"
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "longTermOutlook": {
                 "stateDescription": "All events are bearish.",
@@ -45,7 +45,7 @@
             "provider": "Trading Central",
             "support": 28.725,
             "resistance": 29.685,
-            "stopLoss": 27.439463
+            "stopLoss": 26.54928
         },
         "valuation": {
             "color": 1.0,
@@ -58,10 +58,10 @@
     "companySnapshot": {
         "sectorInfo": "Real Estate",
         "company": {
-            "innovativeness": 0.0898,
+            "innovativeness": 0.0902,
             "insiderSentiments": 0.6914,
-            "earningsReports": 0.6109,
-            "dividends": 0.4384
+            "earningsReports": 0.6107,
+            "dividends": 0.4403
         },
         "sector": {
             "innovativeness": 0.5,
@@ -72,18 +72,23 @@
             "dividends": 0.5
         }
     },
+    "recommendation": {
+        "targetPrice": 27.0,
+        "provider": "Argus Research",
+        "rating": "SELL"
+    },
     "upsell": {
         "companyName": "VICI Properties Inc."
     },
     "events": [
         {
-            "eventType": "Short-term KST",
+            "eventType": "Price Crosses Moving Average",
             "pricePeriod": "D",
-            "tradingHorizon": "S",
+            "tradingHorizon": "I",
             "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1714483800,
-            "endDate": 1714483800
+            "startDate": 1715002200,
+            "endDate": 1715002200
         }
     ],
     "reports": [
@@ -97,7 +102,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of SELL; a target price of $26.000000; an Industry Subrating of Low; a Management Subrating of Low; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1713312000000",
@@ -109,7 +115,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of SELL; a target price of $24.000000; an Industry Subrating of Low; a Management Subrating of Low; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1712707200000",
@@ -121,7 +128,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of SELL; a target price of $27.000000; an Industry Subrating of Low; a Management Subrating of Low; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1712102400000",
@@ -133,7 +141,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of SELL; a target price of $27.000000; an Industry Subrating of Low; a Management Subrating of Low; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1711497600000",
@@ -145,7 +154,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of SELL; a target price of $26.000000; an Industry Subrating of Low; a Management Subrating of Low; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1710892800000",
@@ -157,7 +167,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of SELL; a target price of $30.000000; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1710288000000",
@@ -169,7 +180,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $31.000000; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1709683200000",
@@ -181,7 +193,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $30.000000; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1709164800000",
@@ -193,7 +206,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $31.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1708473600000",
@@ -205,7 +219,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $31.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1707868800000",
@@ -217,7 +232,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $31.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1707264000000",
@@ -229,7 +245,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $31.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1706659200000",
@@ -241,7 +258,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $24.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1706054400000",
@@ -253,7 +271,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of SELL; a target price of $25.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1705449600000",
@@ -265,7 +284,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of SELL; a target price of $25.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1704844800000",
@@ -277,7 +297,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of SELL; a target price of $25.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1704240000000",
@@ -289,7 +310,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of SELL; a target price of $26.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1703635200000",
@@ -301,7 +323,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of SELL; a target price of $25.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Low."
         },
         {
             "id": "6054_Quantitative Report_1703030400000",
@@ -313,7 +336,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of SELL; a target price of $25.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Low."
         },
         {
             "id": "6054_Quantitative Report_1702425600000",
@@ -325,7 +349,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of SELL; a target price of $25.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Low."
         },
         {
             "id": "6054_Quantitative Report_1701820800000",
@@ -337,7 +362,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of SELL; a target price of $24.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Low."
         },
         {
             "id": "6054_Quantitative Report_1701216000000",
@@ -349,7 +375,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of SELL; a target price of $23.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Low."
         },
         {
             "id": "6054_Quantitative Report_1700006400000",
@@ -361,7 +388,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of SELL; a target price of $23.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Low."
         },
         {
             "id": "6054_Quantitative Report_1699401600000",
@@ -373,7 +401,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of SELL; a target price of $23.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Low."
         },
         {
             "id": "6054_Quantitative Report_1698796800000",
@@ -385,7 +414,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of SELL; a target price of $22.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Low; and a Value Subrating of Low."
         },
         {
             "id": "6054_Quantitative Report_1698192000000",
@@ -397,7 +427,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of SELL; a target price of $22.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Low."
         },
         {
             "id": "6054_Quantitative Report_1697587200000",
@@ -409,7 +440,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of SELL; a target price of $23.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Low."
         },
         {
             "id": "6054_Quantitative Report_1697068800000",
@@ -421,7 +453,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of SELL; a target price of $23.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Low."
         },
         {
             "id": "6054_Quantitative Report_1696377600000",
@@ -433,7 +466,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of SELL; a target price of $22.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Low."
         },
         {
             "id": "6054_Quantitative Report_1695772800000",
@@ -445,7 +479,8 @@
             "investmentRating": "Bearish",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of SELL; a target price of $31.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Low."
         },
         {
             "id": "6054_Quantitative Report_1695168000000",
@@ -457,7 +492,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $32.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Low."
         },
         {
             "id": "6054_Quantitative Report_1694563200000",
@@ -469,7 +505,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $34.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Low; a Growth Subrating of Low; and a Value Subrating of Low."
         },
         {
             "id": "6054_Quantitative Report_1693353600000",
@@ -481,7 +518,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of BUY; a target price of $34.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "6054_Quantitative Report_1692748800000",
@@ -493,7 +531,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of BUY; a target price of $34.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "6054_Quantitative Report_1692144000000",
@@ -505,7 +544,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of BUY; a target price of $33.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "6054_Quantitative Report_1691539200000",
@@ -517,7 +557,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of BUY; a target price of $34.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "6054_Quantitative Report_1690934400000",
@@ -529,7 +570,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of BUY; a target price of $35.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "6054_Quantitative Report_1690329600000",
@@ -541,7 +583,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of BUY; a target price of $36.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "6054_Quantitative Report_1689638400000",
@@ -553,7 +596,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of BUY; a target price of $34.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "6054_Quantitative Report_1689120000000",
@@ -565,7 +609,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of BUY; a target price of $34.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "6054_Quantitative Report_1688515200000",
@@ -577,7 +622,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $33.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "6054_Quantitative Report_1687910400000",
@@ -589,7 +635,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $32.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "6054_Quantitative Report_1687392000000",
@@ -601,7 +648,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $33.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "6054_Quantitative Report_1686700800000",
@@ -613,7 +661,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $34.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1686096000000",
@@ -625,7 +674,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $34.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1685491200000",
@@ -637,7 +687,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $32.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1684886400000",
@@ -649,7 +700,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $32.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1684281600000",
@@ -661,7 +713,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $33.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1683676800000",
@@ -673,7 +726,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $34.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1683072000000",
@@ -685,7 +739,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $34.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1682553600000",
@@ -697,7 +752,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $34.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1681862400000",
@@ -709,7 +765,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $35.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1681257600000",
@@ -721,7 +778,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $35.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of High; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1680652800000",
@@ -733,7 +791,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $34.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of High; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1680048000000",
@@ -745,7 +804,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $34.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of High; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1679443200000",
@@ -757,7 +817,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $32.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1678838400000",
@@ -769,7 +830,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $33.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1678233600000",
@@ -781,7 +843,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $35.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1677628800000",
@@ -793,7 +856,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $35.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1677024000000",
@@ -805,7 +869,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $35.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1676419200000",
@@ -817,7 +882,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $36.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1675814400000",
@@ -829,7 +895,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $36.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1675209600000",
@@ -841,7 +908,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $36.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1674604800000",
@@ -853,7 +921,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $35.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1674000000000",
@@ -865,7 +934,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $35.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1673395200000",
@@ -877,7 +947,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $35.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1672790400000",
@@ -889,7 +960,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $34.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1672185600000",
@@ -901,7 +973,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $34.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1671580800000",
@@ -913,7 +986,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $35.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1670371200000",
@@ -925,7 +999,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $35.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1669766400000",
@@ -937,7 +1012,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $35.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1669161600000",
@@ -949,7 +1025,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $35.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1668556800000",
@@ -961,7 +1038,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $33.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1667952000000",
@@ -973,7 +1051,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $33.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1667347200000",
@@ -985,7 +1064,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $34.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1666742400000",
@@ -997,7 +1077,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $32.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1666137600000",
@@ -1009,7 +1090,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $31.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1665532800000",
@@ -1021,7 +1103,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $32.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1664928000000",
@@ -1033,7 +1116,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $33.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1664323200000",
@@ -1045,7 +1129,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $32.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1663718400000",
@@ -1057,7 +1142,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $34.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1663113600000",
@@ -1069,7 +1155,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $35.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1662508800000",
@@ -1081,7 +1168,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $35.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1661904000000",
@@ -1093,7 +1181,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $35.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1661299200000",
@@ -1105,7 +1194,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $36.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1660089600000",
@@ -1117,7 +1207,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $37.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1659484800000",
@@ -1129,7 +1220,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $36.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1658275200000",
@@ -1141,7 +1233,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $35.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1657670400000",
@@ -1153,7 +1246,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $33.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1656460800000",
@@ -1165,7 +1259,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $31.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1655856000000",
@@ -1177,7 +1272,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $31.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "6054_Quantitative Report_1655251200000",
@@ -1189,7 +1285,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "VICI"
-            ]
+            ],
+            "title": "VICI PROPERTIES INC has an Investment Rating of HOLD; a target price of $30.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Medium; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         }
     ],
     "sigDevs": [
@@ -1205,7 +1302,7 @@
             "title": "8-K : Corporate Changes & Voting Matters",
             "description": "Current report filing",
             "filingDate": 1714953600000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000110465924057547/thumbnail.png",
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001920791/000110465924057547/thumbnail.png",
             "formType": "8-K"
         },
         {
@@ -1245,15 +1342,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0001104659-24-034512_1705696",
-            "type": "Proxy Statements",
-            "title": "DEFA14A : Proxy Statements",
-            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
-            "filingDate": 1710374400000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000110465924034512/thumbnail.png",
-            "formType": "DEFA14A"
-        },
-        {
             "id": "0001104659-24-034510_1705696",
             "type": "Proxy Statements",
             "title": "DEF 14A : Proxy Statements",
@@ -1261,6 +1349,15 @@
             "filingDate": 1710374400000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000110465924034510/thumbnail.png",
             "formType": "DEF 14A"
+        },
+        {
+            "id": "0001104659-24-034512_1705696",
+            "type": "Proxy Statements",
+            "title": "DEFA14A : Proxy Statements",
+            "description": "Definitive additional proxy soliciting materials including Rule 14(a)(12) material. Note: Submission type DEFA14A can be filed as part of Form 8-K. For filers subject to 8-K filing requirements we recommend the use of the 8-K combined form type as the easiest method for fulfilling your filing requirement for both forms",
+            "filingDate": 1710374400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000110465924034512/thumbnail.png",
+            "formType": "DEFA14A"
         },
         {
             "id": "0001104659-24-034504_1705696",
@@ -1335,15 +1432,6 @@
             "formType": "10-Q"
         },
         {
-            "id": "0001705696-23-000072_1705696",
-            "type": "Periodic Financial Reports",
-            "title": "10-Q : Periodic Financial Reports",
-            "description": "Quarterly report pursuant to Section 13 or 15(d)",
-            "filingDate": 1682899200000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000170569623000072/thumbnail.png",
-            "formType": "10-Q"
-        },
-        {
             "id": "0001705696-23-000071_1705696",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -1351,6 +1439,15 @@
             "filingDate": 1682899200000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000170569623000071/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0001705696-23-000072_1705696",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1682899200000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001705696/000170569623000072/thumbnail.png",
+            "formType": "10-Q"
         },
         {
             "id": "0001705696-23-000065_1705696",
@@ -1497,15 +1594,6 @@
             "formType": "8-K"
         },
         {
-            "id": "0001705696-22-000130_1705696",
-            "type": "Periodic Financial Reports",
-            "title": "10-Q : Periodic Financial Reports",
-            "description": "Quarterly report pursuant to Section 13 or 15(d)",
-            "filingDate": 1666828800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001920791/000170569622000130/thumbnail.png",
-            "formType": "10-Q"
-        },
-        {
             "id": "0001705696-22-000129_1705696",
             "type": "Corporate Changes & Voting Matters",
             "title": "8-K : Corporate Changes & Voting Matters",
@@ -1513,6 +1601,15 @@
             "filingDate": 1666828800000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001920791/000170569622000129/thumbnail.png",
             "formType": "8-K"
+        },
+        {
+            "id": "0001705696-22-000130_1705696",
+            "type": "Periodic Financial Reports",
+            "title": "10-Q : Periodic Financial Reports",
+            "description": "Quarterly report pursuant to Section 13 or 15(d)",
+            "filingDate": 1666828800000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001920791/000170569622000130/thumbnail.png",
+            "formType": "10-Q"
         },
         {
             "id": "0001705696-22-000111_1705696",

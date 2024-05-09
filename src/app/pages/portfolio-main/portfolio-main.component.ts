@@ -103,12 +103,12 @@ export class PortfolioMainComponent implements OnInit {
           }
         }
 
-        this.dataService
-          .getCorporateEvents(stock.symbol, true)
-          .subscribe((events: any) => {
-            this.corporateEvents.push(...events[stock.symbol]);
-            this.corporateEvents = this.corporateEvents.sort((a: any, b: any) => b.time - a.time).slice(0, 25);
-          });
+        // this.dataService
+        //   .getCorporateEvents(stock.symbol, true)
+        //   .subscribe((events: any) => {
+        //     this.corporateEvents.push(...events[stock.symbol]);
+        //     this.corporateEvents = this.corporateEvents.sort((a: any, b: any) => b.time - a.time).slice(0, 25);
+        //   });
       });
     this.gradingEvents = this.gradingEvents.sort((a: any, b: any) => {
         const date1 = new Date(b.date).valueOf();

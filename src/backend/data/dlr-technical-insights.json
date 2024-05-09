@@ -7,26 +7,26 @@
             "shortTermOutlook": {
                 "stateDescription": "Recent bullish events outweigh bearish events.",
                 "direction": "Bullish",
-                "score": 2,
-                "scoreDescription": "Bullish Evidence",
+                "score": 4,
+                "scoreDescription": "Very Strong Bullish Evidence",
                 "sectorDirection": "Bullish",
-                "sectorScore": 2,
-                "sectorScoreDescription": "Bullish Evidence",
-                "indexDirection": "Bearish",
-                "indexScore": 1,
-                "indexScoreDescription": "Weak Bearish Evidence"
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bullish Evidence",
+                "indexDirection": "Bullish",
+                "indexScore": 4,
+                "indexScoreDescription": "Very Strong Bullish Evidence"
             },
             "intermediateTermOutlook": {
-                "stateDescription": "Recent bearish events outweigh bullish events.",
-                "direction": "Bearish",
-                "score": 2,
-                "scoreDescription": "Bearish Evidence",
+                "stateDescription": "Recent bullish events outweigh bearish events.",
+                "direction": "Bullish",
+                "score": 3,
+                "scoreDescription": "Strong Bullish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 2,
                 "sectorScoreDescription": "Bearish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 4,
-                "indexScoreDescription": "Very Strong Bearish Evidence"
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "longTermOutlook": {
                 "stateDescription": "Bullish events outweigh bearish events.",
@@ -45,7 +45,7 @@
             "provider": "Trading Central",
             "support": 135.94,
             "resistance": 144.035,
-            "stopLoss": 128.277641
+            "stopLoss": 129.293807
         },
         "valuation": {
             "color": 0.0,
@@ -58,11 +58,11 @@
     "companySnapshot": {
         "sectorInfo": "Real Estate",
         "company": {
-            "innovativeness": 0.5117,
+            "innovativeness": 0.5136999999999999,
             "sustainability": 0.4082,
             "insiderSentiments": 0.4753,
-            "earningsReports": 0.8948999999999999,
-            "dividends": 0.1726
+            "earningsReports": 0.8834000000000001,
+            "dividends": 0.1775
         },
         "sector": {
             "innovativeness": 0.5,
@@ -105,13 +105,13 @@
     },
     "events": [
         {
-            "eventType": "Price Crosses Moving Average",
+            "eventType": "Gap Up",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "L",
+            "tradeType": "U",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
             "startDate": 1714656600,
-            "endDate": 1714656600
+            "endDate": 1714743000
         }
     ],
     "reports": [
@@ -125,7 +125,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Digital Realty Trust is a real estate investment trust focusing on cloud and carrier-neutral interconnected data centers, with a market cap of $41 billion. It also develops data center platforms for businesses involved in cloud software, financial services, social media, and mobile services. Digital Realty helps customers develop secure networks and cloud-neutral data center platforms, and is at the forefront of the secular transition from on-premises data centers to cloud colocation centers. It continues to expand through M&A, joint ventures, and new development projects, while also recycling capital through asset sales. \r\n\r\nDLR is based in Austin, Texas, and operates over 300 data centers in 27 countries and over 50 global metropolitan markets. About 60% of annual rents are from data centers greater than 1 megawatt and about one-fourth of revenue is from tenant reimbursements for expenses and utilities. The company must manage foreign exchange issues as only about half of revenues are in U.S. dollars. Recent acquisitions have included data center companies in Europe and Africa. The shares are a component of the S&P 500."
         },
         {
             "id": "39195_Market Update_1708627201000",
@@ -139,7 +140,8 @@
                 "AZN",
                 "DLR",
                 "HD"
-            ]
+            ],
+            "title": "U.S. markets rallied on Thursday morning on stellar Nvidia results. On the housing front, existing home sales rose 3.1% to an annual rate of 4 million, this up from 3.8 million in December. The median home sales price was $379,100, 5.1% higher than a year ago, but down from $381,400 in December. As for economic trends, S&P Global's flash readings for February's PMI show expansion in both services and manufacturing. Services activity slowed to 51.3, down from 52.5 in January, but remained in expansion territory. Manufacturing PMI expanded more quickly in February with a reading of 51.7, up from 50.7 in January. The tech heavy Nasdaq rose 2.6%, the S&P 500 was up $1.8% and the Dow gained 0.8%"
         },
         {
             "id": "38393_Thematic Portfolio_1701197712000",
@@ -178,7 +180,8 @@
                 "MRVL",
                 "CRM",
                 "WMT"
-            ]
+            ],
+            "title": "Sustainable Impact Investing, or ESG investing, is gaining traction not only with Argus Research clients but also with the global investment community. BlackRock CEO Lawrence Fink, who oversees approximately $9 trillion in assets, announced in January 2020 that his firm would be investing in companies that are making progress on sustainability. He doubled down in his January 2021 letter, calling on company managements to disclose their plans for making their businesses \"compatible with a net-zero economy\" by 2050. As assets have flowed in over the past 40 years, Sustainable Impact Investing has evolved. The discipline, originally known as Socially Responsible Investing, focused at first on excluding companies that conducted business in South Africa, or participated in industries such as tobacco, alcohol, and firearms. Performance of these initial strategies lagged, and the approach has been modified. Now, instead of merely identifying industries to avoid, the discipline promotes \"sustainable\" business practices across all industries that can have an \"impact\" on global issues such as climate, hunger, poverty, disease, shelter, and workers' rights."
         },
         {
             "id": "38393_Thematic Portfolio_1701196812000",
@@ -217,7 +220,8 @@
                 "MRVL",
                 "CRM",
                 "WMT"
-            ]
+            ],
+            "title": "Sustainable Impact Investing, or ESG investing, is gaining traction not only with Argus Research clients but also with the global investment community. BlackRock CEO Lawrence Fink, who oversees approximately $9 trillion in assets, announced in January 2020 that his firm would be investing in companies that are making progress on sustainability. He doubled down in his January 2021 letter, calling on company managements to disclose their plans for making their businesses \"compatible with a net-zero economy\" by 2050. As assets have flowed in over the past 40 years, Sustainable Impact Investing has evolved. The discipline, originally known as Socially Responsible Investing, focused at first on excluding companies that conducted business in South Africa, or participated in industries such as tobacco, alcohol, and firearms. Performance of these initial strategies lagged, and the approach has been modified. Now, instead of merely identifying industries to avoid, the discipline promotes \"sustainable\" business practices across all industries that can have an \"impact\" on global issues such as climate, hunger, poverty, disease, shelter, and workers' rights."
         },
         {
             "id": "4555_Analyst Report_1698859730000",
@@ -229,7 +233,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Digital Realty Trust is a real estate investment trust focusing on cloud and carrier-neutral interconnected data centers, with a market cap of $37 billion. It also develops data center platforms for businesses involved in cloud software, financial services, social media, and mobile services. Digital Realty helps customers develop secure networks and cloud-neutral data center platforms, and is at the forefront of the secular transition from on-premises data centers to cloud colocation centers. It continues to expand through M&A, joint ventures, and new development projects, while also recycling capital through asset sales. \r\n\r\nDLR is based in Austin, Texas, and operates over 300 data centers in 27 countries. Domestic assets are concentrated in 50 metropolitan markets. About 60% of annual rents are from data centers greater than 1 megawatt and about one-fourth of revenue is from tenant reimbursements for expenses and utilities. The company must manage foreign exchange issues as only about half of revenues are in U.S. dollars. Recent acquisitions have included data center companies in Europe and Africa. The shares are a component of the S&P 500."
         },
         {
             "id": "38154_Market Update_1698858830000",
@@ -242,7 +247,8 @@
                 "IGT",
                 "WDC",
                 "DLR"
-            ]
+            ],
+            "title": "Stocks rose on Wednesday morning as investors awaited the Fed's afternoon policy statement and follow-up comments from Chairman Jerome Powell. Given the impact of previous rate hikes and high Treasury yields, the Fed is widely expected to hold rates steady while leaving open the possibility of a further increase in December or in early 2024. The Dow rose 0.4%, the S&P 0.5%, and the Nasdaq 0.6%. Crude oil rose nearly 3% to $83 per barrel, while gold traded near $1994 per ounce."
         },
         {
             "id": "4555_Analyst Report_1690909441000",
@@ -254,7 +260,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers, with a market cap of $36 billion. It also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. Digital Realty helps customers develop secure networks and cloud-neutral data center platforms, and is at the forefront of the secular transition from on-premises data centers to cloud colocation centers. It continues to expand through M&A, joint ventures, and new development projects, while also recycling capital through asset sales. \r\n\r\nDLR is based in Austin, Texas, and operates 314 data centers in 27 countries. Domestic assets are concentrated in 50 metropolitan markets. About 60% of annual rents are from data centers greater than 1 megawatt and about one-fourth of revenue is from tenant reimbursements for expenses and utilities. Recent acquisitions have included data center companies in Europe and Africa. The shares are a component of the S&P 500."
         },
         {
             "id": "37232_Market Update_1690908541000",
@@ -268,7 +275,8 @@
                 "AGNC",
                 "VLO",
                 "DLR"
-            ]
+            ],
+            "title": "Stocks turned lower on Tuesday morning, led by sharp declines in the Energy and Consumer Discretionary sectors. On the earnings front, Caterpillar shares rose more than 7% after the company posted much better than expected 2Q earnings, despite warning of sequentially lower revenue in 3Q. Pfizer reported sharply lower sales and earnings due to weaker demand for COVID products, though EPS topped the consensus forecast. The Dow was flat, the S&P fell 0.3%, and the Nasdaq fell 0.4%. Crude oil fell nearly 1% to $81 per barrel, while gold traded near $1981 per ounce."
         },
         {
             "id": "4555_Analyst Report_1683136732000",
@@ -280,7 +288,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers, with a market cap of $27 billion. It also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. Digital Realty helps customers develop secure networks and cloud-neutral data center platforms, and is at the forefront of the secular transition from on-premises data centers to cloud colocation centers. Given its substantial global presence, the company faces exchange rate risk. It continues to expand through M&A, joint ventures, and new development projects, while also recycling capital through asset sales. \r\n\r\nDLR is based in Austin, Texas, and operates 314 data centers in 27 countries. Domestic assets are concentrated in 50 metropolitan markets. About 60% of annual rents are from data centers greater than 1 megawatt. Recent acquisitions have included data center companies in Europe and Africa. The shares are a component of the S&P 500."
         },
         {
             "id": "36356_Market Update_1683135832000",
@@ -298,7 +307,8 @@
                 "AMD",
                 "X",
                 "DLR"
-            ]
+            ],
+            "title": "Stocks were little changed on Wednesday morning as investors awaited the Fed's interest rate announcement and follow-up comments from Fed Chair Jerome Powell. Employment data was strong. Payroll provider ADP said that U.S. companies added 296,000 jobs in April, up from 142,000 in March and above the Reuters consensus forecast of 148,000. The Dow fell 0.2%, the S&P was flat, and the Nasdaq fell 0.3%. Crude oil traded near $69 per barrel, while gold rose $7 to $2031 per ounce."
         },
         {
             "id": "4555_Analyst Report_1677608553000",
@@ -310,7 +320,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. It also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. Digital Realty helps customers develop secure networks and cloud-neutral data center platforms, and is at the forefront of the secular transition from on-premises data centers to cloud colocation centers. Given its substantial global presence, foreign exchange rates can affect earnings growth. The company continues to expand through M&A, joint ventures, and new development projects, while also recycling capital through asset sales. \r\n\r\nRecent acquisitions have included data center companies in Europe and Africa. The company purchased a majority interest in Teraco, a data center and colocation service provider in South Africa, in August 2022.\r\n\r\nDLR is based in Austin, Texas, and operates approximately 300 data centers in 27 countries. Domestic assets are concentrated in 50 metropolitan markets. About 60% of annual rents are from data centers greater than 1 megawatt."
         },
         {
             "id": "35723_Market Update_1677607653000",
@@ -323,7 +334,8 @@
                 "ETSY",
                 "DLR",
                 "PXD"
-            ]
+            ],
+            "title": "Stocks were mixed on Tuesday morning as investors weighed new housing market and consumer confidence data. S&P Case-Shiller said that growth in U.S. home prices continued to slow. Prices rose 5.8% from the prior year in December, down from 7.6% growth in November and the smallest year-over-year gain since mid-2020. Consumer confidence fell. The Conference Board said that its consumer confidence index fell to 102.9 in February, down from 106.0 in January and below the Reuters consensus forecast of 108.5. On the earnings front, Target posted stronger-than-expected fiscal 4Q results but offered cautious full-year guidance. The Dow fell 0.3%, the S&P rose 0.1%, and the Nasdaq rose 0.2%. Crude oil rose 2% to $77 per barrel, while gold traded near $1832 per ounce."
         },
         {
             "id": "4555_Analyst Report_1667216353000",
@@ -335,7 +347,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. It also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. Digital Realty helps customers develop secure networks and cloud-neutral data center platforms, and is at the forefront of the secular transition from on-premises data centers to cloud colocation centers. Given its substantial global presence, foreign exchange rates can affect earnings growth. The company continues to expand through M&A, joint ventures, and new development projects, while also recycling capital through asset sales. \r\n\r\nRecent acquisitions have included data center companies in Europe and Africa. The company purchased a majority interest in Teraco, a data center and colocation service provider in South Africa, in August 2022. \r\n\r\nDLR is based in Austin, Texas, and operates approximately 300 data centers in 27 countries. Domestic assets are concentrated in 50 metropolitan markets. About 60% of annual rents are from data centers greater than 1 megawatt."
         },
         {
             "id": "34571_Market Summary_1667215453000",
@@ -360,7 +373,8 @@
                 "PINS",
                 "AMZN",
                 "GE"
-            ]
+            ],
+            "title": "Monday Tee Up: The Fed, Jobs, Earnings Roll On"
         },
         {
             "id": "34168_Top/Bottom Insider Activity_1663669268000",
@@ -379,7 +393,8 @@
                 "DLR",
                 "OKTA",
                 "WISH"
-            ]
+            ],
+            "title": "The Vickers Top Buyers & Sellers is a daily report that identifies the five companies the largest insider purchase transactions based on the dollar value of the transactions as well as the five companies the largest insider sales transactions based on the dollar value of the transactions."
         },
         {
             "id": "33863_Thematic Portfolio_1660853633000",
@@ -419,7 +434,8 @@
                 "XOM",
                 "ENB",
                 "GILD"
-            ]
+            ],
+            "title": "Value stocks -- a market segment that includes high-yield stocks -- are outperforming growth stocks in 2022 for the first time since 2016. Indeed, for the past decade, the performance record has favored growth. In nine of the past 10 years, growth stocks have topped value stocks. But the tide may be turning. The rollout of COVID-19 vaccines has given a lift to some of the cyclical companies (energy companies and regional banks) that have lagged in recent quarters, and value stocks have kept up the pace with growth stocks in the past year. Now, the Federal Reserve lifting interest rates to fend off inflation, which will likely cap multiple expansion for growth companies. Regardless, the value sector is the place to achieve income. The current yield on the iShares Russell 1000 Value Index ETF is 2.1%, compared to the 0.8% current yield on the iShares Russell 1000 Growth Index ETF.  For our High-Yield Theme Model Portfolio, we are seeking stocks with yields of at least 3.0%.  This moves us deep into the value segment of the market."
         },
         {
             "id": "4555_Analyst Report_1659979090000",
@@ -431,7 +447,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. The REIT also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. Digital Realty helps customers develop secure networks and cloud-neutral data center platforms, and is at the forefront of the secular transition from on-premises data centers to cloud colocation centers. With its global presence, foreign exchange rates can affect earnings growth. The company continues to expand through M&A, joint ventures, and new development projects, while also recycling capital through asset sales. \r\n\r\nRecent acquisitions have included data center companies in Europe and Africa, including the purchase of a majority interest in Teraco, a data center and colocation service provider in South Africa, in August 2022. The company is based in Austin, Texas, and operates approximately 300 data centers in 27 countries. Domestic assets are concentrated in 50 metropolitan markets."
         },
         {
             "id": "33741_Market Update_1659978190000",
@@ -444,7 +461,8 @@
                 "WDC",
                 "ENB",
                 "DLR"
-            ]
+            ],
+            "title": "Stocks rose on Monday morning as investors awaited key inflation data later in the week, including the July consumer price index on Wednesday. The current Bloomberg consensus calls for a year-over-year increase of 8.7% in the CPI, down from 9.1% in June due in part to lower gas prices. On the earnings front, Tyson shares fell more than 9% after the company reported below-consensus fiscal 3Q earnings, hurt by higher feed costs and the impact of rising meat prices on consumer spending. The Dow rose 0.8%, the S&P 0.8%, and the Nasdaq 1.1%. Crude oil fell slightly to $88.50 per barrel, while gold rose $13 to $1804 per ounce."
         },
         {
             "id": "33083_Top/Bottom Insider Activity_1654063681000",
@@ -463,7 +481,8 @@
                 "DLR",
                 "CMG",
                 "CB"
-            ]
+            ],
+            "title": "The Vickers Top Buyers & Sellers is a daily report that identifies the five companies the largest insider purchase transactions based on the dollar value of the transactions as well as the five companies the largest insider sales transactions based on the dollar value of the transactions."
         },
         {
             "id": "32997_Top/Bottom Insider Activity_1653288544000",
@@ -481,7 +500,8 @@
                 "K",
                 "CMG",
                 "ATEC"
-            ]
+            ],
+            "title": "The Vickers Top Buyers & Sellers is a daily report that identifies the five companies the largest insider purchase transactions based on the dollar value of the transactions as well as the five companies the largest insider sales transactions based on the dollar value of the transactions."
         },
         {
             "id": "4555_Analyst Report_1651649068000",
@@ -493,7 +513,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. The REIT also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. Digital Realty helps customers develop secure networks and cloud-neutral data center platforms, and is at the forefront of the secular transition from on-premises data centers to cloud colocation centers. With its global presence, foreign exchange rates can affect earnings growth. The company continues to expand through M&A, joint ventures, and new development projects, while also recycling capital through asset sales. The company is based in Austin, Texas, and operates in more than 42 metropolitan markets on five continents. Recent expansions have focused on Africa and Asia."
         },
         {
             "id": "32810_Market Summary_1651648168000",
@@ -512,7 +533,8 @@
                 "ITW",
                 "CLX",
                 "KIM"
-            ]
+            ],
+            "title": "April was a brutal month for stocks, with few equities escaping unscathed. The S&P 500 fell almost 11%, the Nasdaq and the QQQs both plummeted 15.6%, the DJIA fell 7%, the Russell 2000 tumbled 12.6%, and the S&P MidCap 400 dropped 10%. It was the worst month for the Nasdaq and QQQs since October 2008.  "
         },
         {
             "id": "4555_Analyst Report_1645709895000",
@@ -524,7 +546,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company is based in Austin, Texas, and operates in more than 42 metropolitan markets on five continents. Recent expansions have focused on Africa and Asia."
         },
         {
             "id": "32233_Market Update_1645709895000",
@@ -538,7 +561,8 @@
                 "DLR",
                 "AMGN",
                 "CMI"
-            ]
+            ],
+            "title": "Stocks fell on Thursday morning, but pared sharper early losses, as investors continued to watch the unfolding crisis in Ukraine. Russia launched a large-scale military attack on the country early Thursday morning, with shelling of the Ukrainian capital and other major cities. The attack ended weeks of diplomatic efforts to end the standoff. The U.S. and other Western countries are expected to announce additional sanctions on Russia later today. The Dow fell 1.8%, the S&P fell 0.9%, and the Nasdaq was flat. Crude oil jumped more than 6% to $98 per barrel, while gold rose $28 to $1939 per ounce."
         },
         {
             "id": "31685_Stock Picks_1639985968000",
@@ -558,7 +582,8 @@
                 "EQIX",
                 "AMZN",
                 "MRVL"
-            ]
+            ],
+            "title": "Explosive growth in mobile and fixed-line traffic is driving demand for robust data centers that are enabled for artificial intelligence (AI) and can manage rising and increasingly-complex traffic flow. Two-thirds of the world will have internet access by 2023, while the number of connected devices is expected to grow to three-times the global population. IoT (machine to machine or M2M) connections are expected to grow at a 30% CAGR. Security is a top need, as \"denial of service\" attacks are set to double by 2023. To handle the challenges of managing, storing, and securing data amid this explosive traffic growth, data centers will need to harness the power of artificial intelligence. AI enhances data center capabilities though the power of machine learning, inference, and deep learning, all in an application-accelerated environment. The AI data center also makes use of non-traditional and emerging technologies that provide more computing power than traditional CPU-based architectures. These include GPU Compute from NVidia and Tensor cores from Google/Alphabet. As of mid-year 2021, about 600 hyperscale data centers were in operation around the world, up from about 500 at year-end 2019 and double the number from five years ago. The bulk of data center construction is by hyperscale providers including AWS from Amazon.com, Microsoft Azure, Google Cloud from Alphabet, as well as with Chinese companies including Baidu and Alibaba. Co-location companies are another major data center driver, including Equinix and Digital Realty Trust. International Business Machines is providing hybrid cloud services that bridge public and private clouds. Other data center suppliers include semiconductor companies Broadcom, Marvell Technology, Intel, and Advanced Micro Devices. Stocks on the Argus Research BUY list that are in position to benefit include the following."
         },
         {
             "id": "31551_Top/Bottom Insider Activity_1638513005000",
@@ -577,7 +602,8 @@
                 "DNUT",
                 "DOV",
                 "DLR"
-            ]
+            ],
+            "title": "The Vickers Top Buyers & Sellers is a daily report that identifies the five companies the largest insider purchase transactions based on the dollar value of the transactions as well as the five companies the largest insider sales transactions based on the dollar value of the transactions."
         },
         {
             "id": "4555_Analyst Report_1635752351000",
@@ -589,7 +615,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 36 metropolitan markets on five continents. It is based in Austin, Texas."
         },
         {
             "id": "31276_Market Summary_1635752351000",
@@ -609,7 +636,8 @@
                 "GD",
                 "BA",
                 "BMY"
-            ]
+            ],
+            "title": "The stock market moved higher last week during the busiest days of earnings season. Tech stocks far outperformed blue chips, though a portion of the outperformance was attributable to Tesla, as its stock is included in the S&P 500 and Nasdaq Composite, but not the DJIA. During Friday's session, the Dow Jones Industrial Average increased 89 points, or 0.25%. The S&P 500 was up 0.19%, and the Nasdaq Composite was up 0.33%. For the week, the DJIA was up 143 points, or 0.40%, the S&P 500 was up 1.33%, and the Nasdaq Composite was up 2.70%. For the YTD, the DJIA is up 17.03%, the S&P 500 is up 22.61%, and the Nasdaq Composite is up 20.25%."
         },
         {
             "id": "30806_Top/Bottom Insider Activity_1630653775000",
@@ -628,7 +656,8 @@
                 "VMC",
                 "EVER",
                 "CB"
-            ]
+            ],
+            "title": "The Vickers Top Buyers & Sellers is a daily report that identifies the five companies the largest insider purchase transactions based on the dollar value of the transactions as well as the five companies the largest insider sales transactions based on the dollar value of the transactions."
         },
         {
             "id": "4555_Analyst Report_1628666343000",
@@ -640,7 +669,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 36 metropolitan markets on five continents. It is based in Austin, Texas."
         },
         {
             "id": "30601_Market Summary_1628665443000",
@@ -656,7 +686,8 @@
                 "CHTR",
                 "EOG",
                 "VNT"
-            ]
+            ],
+            "title": "Year-to-date sector leadership remains with the rotation favorites of early 2021. With the long bond spiking from 0.9% at year-end 2020 to 1.75% by the end of the first quarter, growth favorites retreated. But investors wanted to remain invested in equities in a reopening economy, and rotational favorites filled the void."
         },
         {
             "id": "4555_Analyst Report_1622638715000",
@@ -668,7 +699,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 36 metropolitan markets on five continents. It is based in Austin, Texas."
         },
         {
             "id": "30035_Market Update_1622637815000",
@@ -680,7 +712,8 @@
                 "DLR",
                 "CPRI",
                 "TUP"
-            ]
+            ],
+            "title": "Stocks rose modestly on Wednesday morning, led by the Technology and Energy sectors, as investors awaited the Fed's Beige Book report this afternoon and new employment data on Thursday and Friday. Meat producer JBS said that most of its beef, pork, and poultry plants would be operational on Wednesday after some production was stopped by a ransomware attack earlier in the week. The Dow rose 0.3%, the S&P 0.3%, and the Nasdaq 0.2%. Crude oil traded near $68 per barrel, while gold rose slightly to $1906 per ounce."
         },
         {
             "id": "29819_Top/Bottom Insider Activity_1620371466000",
@@ -699,7 +732,8 @@
                 "FHN",
                 "CYCN",
                 "ATGE"
-            ]
+            ],
+            "title": "The Vickers Top Buyers & Sellers is a daily report that identifies the five companies the largest insider purchase transactions based on the dollar value of the transactions as well as the five companies the largest insider sales transactions based on the dollar value of the transactions."
         },
         {
             "id": "29339_Top/Bottom Insider Activity_1615360505000",
@@ -717,7 +751,8 @@
                 "VNDA",
                 "BLI",
                 "AMCX"
-            ]
+            ],
+            "title": "The Vickers Top Buyers & Sellers is a daily report that identifies the five companies the largest insider purchase transactions based on the dollar value of the transactions as well as the five companies the largest insider sales transactions based on the dollar value of the transactions."
         },
         {
             "id": "29266_Top/Bottom Insider Activity_1614667148000",
@@ -736,7 +771,8 @@
                 "SATS",
                 "EVER",
                 "KFY"
-            ]
+            ],
+            "title": "The Vickers Top Buyers & Sellers is a daily report that identifies the five companies the largest insider purchase transactions based on the dollar value of the transactions as well as the five companies the largest insider sales transactions based on the dollar value of the transactions."
         },
         {
             "id": "4555_Analyst Report_1614065104000",
@@ -748,7 +784,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 36 metropolitan markets on five continents. The company is headquartered in Austin, TX after relocating from San Francisco, CA in January 2021."
         },
         {
             "id": "29208_Market Summary_1614064204000",
@@ -766,7 +803,8 @@
                 "DLR",
                 "ATO",
                 "LGF-A"
-            ]
+            ],
+            "title": "Insider sentiment continues to suggest a reasonable degree of caution. As we have said for several weeks now, this caution does not mean that a major correction is bound to occur. But it does suggest that there are few near-term catalysts that insiders see as likely to drive stock prices (around all-time highs already) quickly higher.  "
         },
         {
             "id": "4555_Analyst Report_1605078153000",
@@ -778,7 +816,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 36 metropolitan markets on five continents."
         },
         {
             "id": "28394_Market Summary_1605078153000",
@@ -796,7 +835,8 @@
                 "PRGO",
                 "AIG",
                 "HSY"
-            ]
+            ],
+            "title": "A new era (kinda, sorta) has started, as Joe Biden has been declared the winner of the U.S. presidential election. The market responded positively to expected gridlock, with a Democratic president and the Republican senate forecast to relive the stalemate of the Obama years."
         },
         {
             "id": "4555_Analyst Report_1597044849000",
@@ -808,7 +848,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 36 metropolitan markets on five continents."
         },
         {
             "id": "27630_Market Summary_1597044849000",
@@ -827,7 +868,8 @@
                 "DLR",
                 "CPRI",
                 "TSCO"
-            ]
+            ],
+            "title": "Stocks were mixed on Friday, capping a strong week for the major indices. This week's rally favored value names over growth names, with blue chips outperforming tech stocks. On Friday, The Dow Jones Industrial Average gained 47 points, or 0.2%. The S&P 500 added 0.1% while the Nasdaq Composite fell 0.9%. For the full week, the Dow gained 3.8%. The S&P 500 and the Nasdaq were both up 2.5%. For the year-to-date, the Dow is down 3.9%, while the S&P is up 3.7% and the Nasdaq is up 22.7%. Over the past 52 weeks, the Dow is up 4.4%, the S&P 14.8%, and the Nasdaq 38.3%. "
         },
         {
             "id": "27630_Market Summary_1597017600000",
@@ -846,7 +888,8 @@
                 "DLR",
                 "CPRI",
                 "TSCO"
-            ]
+            ],
+            "title": "Stocks were mixed on Friday, capping a strong week for the major indices. This week's rally favored value names over growth names, with blue chips outperforming tech stocks. On Friday, The Dow Jones Industrial Average gained 47 points, or 0.2%. The S&P 500 added 0.1% while the Nasdaq Composite fell 0.9%. For the full week, the Dow gained 3.8%. The S&P 500 and the Nasdaq were both up 2.5%. For the year-to-date, the Dow is down 3.9%, while the S&P is up 3.7% and the Nasdaq is up 22.7%. Over the past 52 weeks, the Dow is up 4.4%, the S&P 14.8%, and the Nasdaq 38.3%. "
         },
         {
             "id": "4555_Analyst Report_1597017600000",
@@ -858,7 +901,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 36 metropolitan markets on five continents."
         },
         {
             "id": "27519_Thematic Portfolio_1595603604000",
@@ -897,7 +941,8 @@
                 "AMZN",
                 "ODFL",
                 "CRM"
-            ]
+            ],
+            "title": "Innovation may be hard to define but, to borrow from former U.S. Supreme Court Justice Potter Stewart, you know it when you see it. The United States economy is full of innovation. It has to be. Manufacturing industries that dominated the economy decades ago - textiles, televisions, even automobiles, to a large degree - have moved overseas, where costs are lower. Yet the U.S. economy, prior to the pandemic, had expanded to record levels. And now the U.S. Healthcare industry is mobilizing to improve COVID-19 testing, treatments and, ultimately, a vaccine. If U.S. corporations weren't innovating, creating new products and services and moving into new markets and applications, the domestic economy would not have recently completed a 10-year expansion phase before the coronavirus hit, and capital would not be flooding into the country. A couple of statistics should help illustrate our point. Consider that U.S. GDP was approximately $1 trillion in 1930 but nearly $22 trillion in 2019. That's growth of 22-times. Meanwhile, the U.S. population has grown less than 3-times during that time span, to 320 million from 120 million. The delta between GDP growth and population growth has been driven in large part by innovation. In addition, the value of listed corporations on U.S. stock exchanges at the end of 2018 was approximately $32 trillion, representing 41% of global equity market capitalization, while U.S. GDP represented only 25% of global GDP."
         },
         {
             "id": "27519_Thematic Portfolio_1595548800000",
@@ -936,7 +981,8 @@
                 "AMZN",
                 "ODFL",
                 "CRM"
-            ]
+            ],
+            "title": "Innovation may be hard to define but, to borrow from former U.S. Supreme Court Justice Potter Stewart, you know it when you see it. The United States economy is full of innovation. It has to be. Manufacturing industries that dominated the economy decades ago - textiles, televisions, even automobiles, to a large degree - have moved overseas, where costs are lower. Yet the U.S. economy, prior to the pandemic, had expanded to record levels. And now the U.S. Healthcare industry is mobilizing to improve COVID-19 testing, treatments and, ultimately, a vaccine. If U.S. corporations weren't innovating, creating new products and services and moving into new markets and applications, the domestic economy would not have recently completed a 10-year expansion phase before the coronavirus hit, and capital would not be flooding into the country. A couple of statistics should help illustrate our point. Consider that U.S. GDP was approximately $1 trillion in 1930 but nearly $22 trillion in 2019. That's growth of 22-times. Meanwhile, the U.S. population has grown less than 3-times during that time span, to 320 million from 120 million. The delta between GDP growth and population growth has been driven in large part by innovation. In addition, the value of listed corporations on U.S. stock exchanges at the end of 2018 was approximately $32 trillion, representing 41% of global equity market capitalization, while U.S. GDP represented only 25% of global GDP."
         },
         {
             "id": "4555_Analyst Report_1594214547000",
@@ -948,7 +994,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 35 metropolitan markets on five continents."
         },
         {
             "id": "27375_Market Update_1594213647000",
@@ -958,7 +1005,8 @@
             "reportTitle": "Stocks gave up early gains on Wednesday morning as coronavirus cases continued to surge. In all, new cases in the U.S. topped the 3 million mark, as several states set new daily records. On a positive note, Biogen shares rose nearly 5% after the company submitted its application for Alzheimer's drug aducanumab to the FDA. The Dow fell 0.2%, the S&P fell 0.2%, and the Nasdaq rose 0.1%. Crude oil traded near $41 per barrel, while gold rose $12 to $1882 per ounce.",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Stocks gave up early gains on Wednesday morning as coronavirus cases continued to surge. In all, new cases in the U.S. topped the 3 million mark, as several states set new daily records. On a positive note, Biogen shares rose nearly 5% after the company submitted its application for Alzheimer's drug aducanumab to the FDA. The Dow fell 0.2%, the S&P fell 0.2%, and the Nasdaq rose 0.1%. Crude oil traded near $41 per barrel, while gold rose $12 to $1882 per ounce."
         },
         {
             "id": "27375_Market Update_1594166400000",
@@ -968,7 +1016,8 @@
             "reportTitle": "Stocks gave up early gains on Wednesday morning as coronavirus cases continued to surge. In all, new cases in the U.S. topped the 3 million mark, as several states set new daily records. On a positive note, Biogen shares rose nearly 5% after the company submitted its application for Alzheimer's drug aducanumab to the FDA. The Dow fell 0.2%, the S&P fell 0.2%, and the Nasdaq rose 0.1%. Crude oil traded near $41 per barrel, while gold rose $12 to $1882 per ounce.",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Stocks gave up early gains on Wednesday morning as coronavirus cases continued to surge. In all, new cases in the U.S. topped the 3 million mark, as several states set new daily records. On a positive note, Biogen shares rose nearly 5% after the company submitted its application for Alzheimer's drug aducanumab to the FDA. The Dow fell 0.2%, the S&P fell 0.2%, and the Nasdaq rose 0.1%. Crude oil traded near $41 per barrel, while gold rose $12 to $1882 per ounce."
         },
         {
             "id": "4555_Analyst Report_1594166400000",
@@ -980,7 +1029,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 35 metropolitan markets on five continents."
         },
         {
             "id": "4555_Analyst Report_1585897454000",
@@ -992,7 +1042,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 35 metropolitan markets on five continents."
         },
         {
             "id": "26591_Market Summary_1585896554000",
@@ -1004,7 +1055,8 @@
                 "ADI",
                 "J",
                 "DLR"
-            ]
+            ],
+            "title": "Stocks rose on Thursday as higher oil prices, helped by expectations for a production cut by Russia and Saudi Arabia, outweighed skyrocketing first-time jobless claims. The run-up in crude oil came after President Trump tweeted that he had spoken to the leaders of Russia and Saudi Arabia and expected both countries to announce production cuts. The Labor Department said that first-time unemployment benefit claims soared to 6.648 million for the week ended March 28, up from 3.307 million a week earlier and well above the consensus estimate of 3.5 million. The data came ahead of the government's March employment report on Friday morning. The consensus calls for a loss of 100,000 payroll jobs last month after a gain of 273,000 in February, and an unemployment rate of 3.8%. However, the report is based on data collected earlier in the month and does not capture the accelerating impact of the coronavirus. The Dow rose 2.24%, the S&P 2.28%, and the Nasdaq 1.72%. Crude oil rose to nearly $25 per barrel, while gold rose $47 to $1639 per ounce."
         },
         {
             "id": "26591_Market Summary_1585872000000",
@@ -1016,7 +1068,8 @@
                 "ADI",
                 "J",
                 "DLR"
-            ]
+            ],
+            "title": "Stocks rose on Thursday as higher oil prices, helped by expectations for a production cut by Russia and Saudi Arabia, outweighed skyrocketing first-time jobless claims. The run-up in crude oil came after President Trump tweeted that he had spoken to the leaders of Russia and Saudi Arabia and expected both countries to announce production cuts. The Labor Department said that first-time unemployment benefit claims soared to 6.648 million for the week ended March 28, up from 3.307 million a week earlier and well above the consensus estimate of 3.5 million. The data came ahead of the government's March employment report on Friday morning. The consensus calls for a loss of 100,000 payroll jobs last month after a gain of 273,000 in February, and an unemployment rate of 3.8%. However, the report is based on data collected earlier in the month and does not capture the accelerating impact of the coronavirus. The Dow rose 2.24%, the S&P 2.28%, and the Nasdaq 1.72%. Crude oil rose to nearly $25 per barrel, while gold rose $47 to $1639 per ounce."
         },
         {
             "id": "4555_Analyst Report_1585872000000",
@@ -1028,7 +1081,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 35 metropolitan markets on five continents."
         },
         {
             "id": "26413_Technical Analysis_1583996656000",
@@ -1039,7 +1093,8 @@
             "tickers": [
                 "LLY",
                 "DLR"
-            ]
+            ],
+            "title": "The S&P 500 fell 4.9% on Wednesday, and undercut its recent lows on an intraday basis. The index rallied late in the day, closing near key support in the 2,730/2,740 region. The index has gone from all-time highs to down 19% in 15 days. The 14-day RSI cycled into extreme oversold condition in late February and is now working on a potential bullish divergence."
         },
         {
             "id": "26413_Technical Analysis_1583971200000",
@@ -1050,7 +1105,8 @@
             "tickers": [
                 "LLY",
                 "DLR"
-            ]
+            ],
+            "title": "The S&P 500 fell 4.9% on Wednesday, and undercut its recent lows on an intraday basis. The index rallied late in the day, closing near key support in the 2,730/2,740 region. The index has gone from all-time highs to down 19% in 15 days. The 14-day RSI cycled into extreme oversold condition in late February and is now working on a potential bullish divergence."
         },
         {
             "id": "4555_Analyst Report_1574752283000",
@@ -1062,7 +1118,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 35 metropolitan markets on five continents."
         },
         {
             "id": "25559_Market Summary_1574751383000",
@@ -1072,7 +1129,8 @@
             "reportTitle": "Earnings season has come and gone, and the volume of insider transactions is not just back to normal -- it is exceeding recent patterns. This gives increased significance to any sentiment trends that come from trades made by corporate executives, directors and beneficial owners. This week, some 1661 insider transactions met the criteria for inclusion in Vickers Weekly Insider Report. The last time we saw this level of trading volume was back in May -- so transaction activity is brisk. That said, what is this activity telling us?",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Earnings season has come and gone, and the volume of insider transactions is not just back to normal -- it is exceeding recent patterns. This gives increased significance to any sentiment trends that come from trades made by corporate executives, directors and beneficial owners. This week, some 1661 insider transactions met the criteria for inclusion in Vickers Weekly Insider Report. The last time we saw this level of trading volume was back in May -- so transaction activity is brisk. That said, what is this activity telling us?"
         },
         {
             "id": "25559_Market Summary_1574726400000",
@@ -1083,7 +1141,8 @@
             "tickers": [
                 "ARNC",
                 "DLR"
-            ]
+            ],
+            "title": "Earnings season has come and gone, and the volume of insider transactions is not just back to normal -- it is exceeding recent patterns. This gives increased significance to any sentiment trends that come from trades made by corporate executives, directors and beneficial owners. This week, some 1661 insider transactions met the criteria for inclusion in Vickers Weekly Insider Report. The last time we saw this level of trading volume was back in May -- so transaction activity is brisk. That said, what is this activity telling us?"
         },
         {
             "id": "4555_Analyst Report_1574726400000",
@@ -1095,7 +1154,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 35 metropolitan markets on five continents."
         },
         {
             "id": "25263_Technical Analysis_1571641657000",
@@ -1106,7 +1166,8 @@
             "tickers": [
                 "VIAV",
                 "DLR"
-            ]
+            ],
+            "title": "Approach, retreat; approach, retreat. The minuet around the 3,000 level for the S&P 500 continues. When the index approached 3,000 for the first time in mid-July, we reminded investors that first-time crossovers at key millennial marks frequently are followed by retracements. The S&P 500 briefly reclaimed the 3,000 summit in mid-September but could not keep its footing. Here in mid-October, stocks spent a maddening week again flirting with 3,000 but not quite crossing the threshold."
         },
         {
             "id": "25247_Thematic Portfolio_1571323196000",
@@ -1145,7 +1206,8 @@
                 "PGR",
                 "AMZN",
                 "CRM"
-            ]
+            ],
+            "title": "Innovation may be hard to define but, to borrow from former U.S. Supreme Court Justice Potter Stewart, you know it when you see it. The United States economy is full of innovation. It has to be. Manufacturing industries that dominated the economy decades ago - textiles, televisions, even automobiles, to a large degree - have moved overseas, where costs are lower. Yet the U.S. economy has expanded to record levels and is still growing. If U.S. corporations weren't innovating, creating new products and services and moving into new markets and applications, the domestic economy would be contracting, not expanding, and capital would not be flooding into the country. A couple of statistics should help illustrate our point: Consider that U.S. GDP was approximately $1 trillion in 1930 but nearly $20.7 trillion in 2018. That's growth of 21x. Meanwhile, the U.S. population has grown less than 3x during that time span, to 320 million from 120 million. The delta between GDP growth and population growth has been driven in large part by innovation. In addition, the value of listed corporations on U.S. stock exchanges at the end of 2018 was approximately $31 trillion, representing 41% of global equity market capitalization, while U.S. GDP represented only 15% of global GDP."
         },
         {
             "id": "4555_Analyst Report_1570107791000",
@@ -1157,7 +1219,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 35 metropolitan markets on five continents."
         },
         {
             "id": "25125_Market Update_1570106891000",
@@ -1167,7 +1230,8 @@
             "reportTitle": "Stocks recovered from early losses on Thursday morning, led by the Real Estate and Consumer Staples sectors, though economic data was weak. The Institute for Supply Management said that its U.S. nonmanufacturing index fell 3.8 points to 52.6 in September, below the Reuters consensus estimate of 55.0 and the lowest reading since August 2016. The Commerce Department also reported that factory orders fell 0.1% in August, slightly better than the consensus forecast, but down sharply from 1.4% growth in July. Orders for core capital goods also fell 0.4% in August, down from a previously reported 0.2% decline. The Dow rose 0.1%, the S&P 0.3%, and the Nasdaq 0.5%. Crude oil traded near $52 per barrel, while gold rose $9 to trade near $1517 per ounce",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Stocks recovered from early losses on Thursday morning, led by the Real Estate and Consumer Staples sectors, though economic data was weak. The Institute for Supply Management said that its U.S. nonmanufacturing index fell 3.8 points to 52.6 in September, below the Reuters consensus estimate of 55.0 and the lowest reading since August 2016. The Commerce Department also reported that factory orders fell 0.1% in August, slightly better than the consensus forecast, but down sharply from 1.4% growth in July. Orders for core capital goods also fell 0.4% in August, down from a previously reported 0.2% decline. The Dow rose 0.1%, the S&P 0.3%, and the Nasdaq 0.5%. Crude oil traded near $52 per barrel, while gold rose $9 to trade near $1517 per ounce"
         },
         {
             "id": "25125_Market Update_1570060800000",
@@ -1177,7 +1241,8 @@
             "reportTitle": "Stocks recovered from early losses on Thursday morning, led by the Real Estate and Consumer Staples sectors, though economic data was weak. The Institute for Supply Management said that its U.S. nonmanufacturing index fell 3.8 points to 52.6 in September, below the Reuters consensus estimate of 55.0 and the lowest reading since August 2016. The Commerce Department also reported that factory orders fell 0.1% in August, slightly better than the consensus forecast, but down sharply from 1.4% growth in July. Orders for core capital goods also fell 0.4% in August, down from a previously reported 0.2% decline. The Dow rose 0.1%, the S&P 0.3%, and the Nasdaq 0.5%. Crude oil traded near $52 per barrel, while gold rose $9 to trade near $1517 per ounce",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Stocks recovered from early losses on Thursday morning, led by the Real Estate and Consumer Staples sectors, though economic data was weak. The Institute for Supply Management said that its U.S. nonmanufacturing index fell 3.8 points to 52.6 in September, below the Reuters consensus estimate of 55.0 and the lowest reading since August 2016. The Commerce Department also reported that factory orders fell 0.1% in August, slightly better than the consensus forecast, but down sharply from 1.4% growth in July. Orders for core capital goods also fell 0.4% in August, down from a previously reported 0.2% decline. The Dow rose 0.1%, the S&P 0.3%, and the Nasdaq 0.5%. Crude oil traded near $52 per barrel, while gold rose $9 to trade near $1517 per ounce"
         },
         {
             "id": "4555_Analyst Report_1570060800000",
@@ -1189,7 +1254,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 35 metropolitan markets on five continents."
         },
         {
             "id": "24806_Stock Picks_1566829108000",
@@ -1203,7 +1269,8 @@
                 "PGR",
                 "DLR",
                 "LHX"
-            ]
+            ],
+            "title": "Innovation may be hard to define but, to borrow from former U.S. Supreme Court Justice Potter Stewart, you know it when you see it.  The United States economy is full of innovation. It has to be. Manufacturing industries that dominated the economy decades ago - textiles, televisions, even automobiles, to a large degree - have moved overseas, where costs are lower. Yet the U.S. economy is at its largest point in history and still growing.  If U.S. corporations weren't innovating, creating new products and services and moving into new markets and applications, the domestic economy would be contracting, not expanding, and capital would not be flooding into the country. Particularly at this juncture of the market and economic cycles, when tension is high due to trade wars and uncertainty over the Federal Reserve, we look to innovative companies to successfully navigate the challenges. At Argus, an 80-year-old independent research firm that has innovated a time or two in its long history, we have focused on four types of innovative companies: Industry Disruptors; First to Market; New Product Specialists; and Product & Process Perfectors. The following innovative, BUY-rated stocks were recently added to our Growth Model Portfolio, our new Innovative Growth Separately Managed Account and our Modern Innovators UIT.  The full list of stocks can also be found in our Innovation Theme Model Portfolio."
         },
         {
             "id": "24806_Stock Picks_1566777600000",
@@ -1217,7 +1284,8 @@
                 "DLR",
                 "FB",
                 "LHX"
-            ]
+            ],
+            "title": "Innovation may be hard to define but, to borrow from former U.S. Supreme Court Justice Potter Stewart, you know it when you see it.  The United States economy is full of innovation. It has to be. Manufacturing industries that dominated the economy decades ago - textiles, televisions, even automobiles, to a large degree - have moved overseas, where costs are lower. Yet the U.S. economy is at its largest point in history and still growing.  If U.S. corporations weren't innovating, creating new products and services and moving into new markets and applications, the domestic economy would be contracting, not expanding, and capital would not be flooding into the country. Particularly at this juncture of the market and economic cycles, when tension is high due to trade wars and uncertainty over the Federal Reserve, we look to innovative companies to successfully navigate the challenges. At Argus, an 80-year-old independent research firm that has innovated a time or two in its long history, we have focused on four types of innovative companies: Industry Disruptors; First to Market; New Product Specialists; and Product & Process Perfectors. The following innovative, BUY-rated stocks were recently added to our Growth Model Portfolio, our new Innovative Growth Separately Managed Account and our Modern Innovators UIT.  The full list of stocks can also be found in our Innovation Theme Model Portfolio."
         },
         {
             "id": "4555_Analyst Report_1562136676000",
@@ -1229,7 +1297,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 35 metropolitan markets on five continents."
         },
         {
             "id": "24368_Market Summary_1562135776000",
@@ -1239,7 +1308,8 @@
             "reportTitle": "Investors went into the final weekend in June fretting about the G-20 gathering. President Trump's meeting with President Putin could shape the narrative around the 2020 election, while his meeting with Xi Jinping could set the trade agenda and influence the economy for years to come. Much of that fear is gone this morning, it seems.",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Investors went into the final weekend in June fretting about the G-20 gathering. President Trump's meeting with President Putin could shape the narrative around the 2020 election, while his meeting with Xi Jinping could set the trade agenda and influence the economy for years to come. Much of that fear is gone this morning, it seems."
         },
         {
             "id": "4555_Analyst Report_1562112000000",
@@ -1251,7 +1321,8 @@
             "investmentRating": "Bullish",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Digital Realty Trust is a real estate investment trust focusing on interconnected data centers. Digital Realty Trust also develops data center platforms for businesses involved in cloud software, IT, financial services, social media, and mobile services. The company operates in more than 35 metropolitan markets on five continents."
         },
         {
             "id": "24368_Market Summary_1562112000000",
@@ -1261,7 +1332,8 @@
             "reportTitle": "Investors went into the final weekend in June fretting about the G-20 gathering. President Trump's meeting with President Putin could shape the narrative around the 2020 election, while his meeting with Xi Jinping could set the trade agenda and influence the economy for years to come. Much of that fear is gone this morning, it seems.",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "Investors went into the final weekend in June fretting about the G-20 gathering. President Trump's meeting with President Putin could shape the narrative around the 2020 election, while his meeting with Xi Jinping could set the trade agenda and influence the economy for years to come. Much of that fear is gone this morning, it seems."
         },
         {
             "id": "4555_Quantitative Report_1561593600000",
@@ -1273,7 +1345,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "DIGITAL REALTY TRUST INC has an Investment Rating of HOLD; a target price of $123.000000; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Low; a Financial Strength Subrating of N/A; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "4555_Quantitative Report_1560902400000",
@@ -1285,7 +1358,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "DIGITAL REALTY TRUST INC has an Investment Rating of HOLD; a target price of $130.00; an Industry Subrating of Medium; a Management Subrating of Medium; a Safety Subrating of Low; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "4555_Quantitative Report_1560297600000",
@@ -1297,7 +1371,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "DIGITAL REALTY TRUST INC has an Investment Rating of HOLD; a target price of $125.00; an Industry Subrating of High; a Management Subrating of Medium; a Safety Subrating of Low; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "4555_Quantitative Report_1559692800000",
@@ -1309,7 +1384,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "DIGITAL REALTY TRUST INC has an Investment Rating of HOLD; a target price of $121.00; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Low; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of Medium."
         },
         {
             "id": "4555_Quantitative Report_1559001600000",
@@ -1321,7 +1397,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "DIGITAL REALTY TRUST INC has an Investment Rating of HOLD; a target price of $123.00; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Low; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "4555_Quantitative Report_1558483200000",
@@ -1333,7 +1410,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "DIGITAL REALTY TRUST INC has an Investment Rating of HOLD; a target price of $124.00; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Low; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "4555_Quantitative Report_1557878400000",
@@ -1345,7 +1423,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "DIGITAL REALTY TRUST INC has an Investment Rating of HOLD; a target price of $124.00; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Low; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "4555_Quantitative Report_1557360000000",
@@ -1357,7 +1436,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "DIGITAL REALTY TRUST INC has an Investment Rating of HOLD; a target price of $123.00; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Low; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "4555_Quantitative Report_1556668800000",
@@ -1369,7 +1449,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "DIGITAL REALTY TRUST INC has an Investment Rating of HOLD; a target price of $124.00; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Low; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "4555_Quantitative Report_1556064000000",
@@ -1381,7 +1462,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "DIGITAL REALTY TRUST INC has an Investment Rating of HOLD; a target price of $125.00; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Low; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "4555_Quantitative Report_1555459200000",
@@ -1393,7 +1475,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "DIGITAL REALTY TRUST INC has an Investment Rating of HOLD; a target price of $125.00; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Low; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "4555_Quantitative Report_1554854400000",
@@ -1405,7 +1488,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "DIGITAL REALTY TRUST INC has an Investment Rating of HOLD; a target price of $128.00; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Low; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "4555_Quantitative Report_1554249600000",
@@ -1417,7 +1501,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "DIGITAL REALTY TRUST INC has an Investment Rating of HOLD; a target price of $128.00; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Low; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "4555_Quantitative Report_1553040000000",
@@ -1429,7 +1514,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "DIGITAL REALTY TRUST INC has an Investment Rating of HOLD; a target price of $122.00; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Low; a Financial Strength Subrating of Low; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "4555_Quantitative Report_1552435200000",
@@ -1441,7 +1527,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "DIGITAL REALTY TRUST INC has an Investment Rating of HOLD; a target price of $122.00; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Low; a Financial Strength Subrating of Low; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "4555_Quantitative Report_1551830400000",
@@ -1453,7 +1540,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "DIGITAL REALTY TRUST INC has an Investment Rating of HOLD; a target price of $119.00; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Low; a Financial Strength Subrating of Low; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "4555_Quantitative Report_1551225600000",
@@ -1465,7 +1553,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "DIGITAL REALTY TRUST INC has an Investment Rating of HOLD; a target price of $121.00; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Low; a Financial Strength Subrating of Low; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "4555_Quantitative Report_1550620800000",
@@ -1477,7 +1566,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "DIGITAL REALTY TRUST INC has an Investment Rating of HOLD; a target price of $124.00; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Low; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "4555_Quantitative Report_1550016000000",
@@ -1489,7 +1579,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "DIGITAL REALTY TRUST INC has an Investment Rating of HOLD; a target price of $118.00; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Low; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "4555_Quantitative Report_1549411200000",
@@ -1501,7 +1592,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "DIGITAL REALTY TRUST INC has an Investment Rating of HOLD; a target price of $113.00; an Industry Subrating of N/A; a Management Subrating of N/A; a Safety Subrating of Low; a Financial Strength Subrating of N/A; a Growth Subrating of N/A; and a Value Subrating of N/A."
         },
         {
             "id": "4555_Quantitative Report_1548806400000",
@@ -1513,7 +1605,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "DIGITAL REALTY TRUST INC has an Investment Rating of HOLD; a target price of $113.00; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Low; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "4555_Quantitative Report_1548201600000",
@@ -1525,7 +1618,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "DIGITAL REALTY TRUST INC has an Investment Rating of HOLD; a target price of $109.00; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Low; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "4555_Quantitative Report_1547596800000",
@@ -1537,7 +1631,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "DIGITAL REALTY TRUST INC has an Investment Rating of HOLD; a target price of $112.00; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Low; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "4555_Quantitative Report_1547078400000",
@@ -1549,7 +1644,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "DIGITAL REALTY TRUST INC has an Investment Rating of HOLD; a target price of $107.00; an Industry Subrating of N/A; a Management Subrating of N/A; a Safety Subrating of Low; a Financial Strength Subrating of N/A; a Growth Subrating of N/A; and a Value Subrating of N/A."
         },
         {
             "id": "4555_Quantitative Report_1546387200000",
@@ -1561,7 +1657,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "DIGITAL REALTY TRUST INC has an Investment Rating of HOLD; a target price of $112.00; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Low; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "4555_Quantitative Report_1545782400000",
@@ -1573,7 +1670,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "DIGITAL REALTY TRUST INC has an Investment Rating of HOLD; a target price of $110.00; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Low; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "4555_Quantitative Report_1545177600000",
@@ -1585,7 +1683,8 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "DIGITAL REALTY TRUST INC has an Investment Rating of HOLD; a target price of $114.00; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Low; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of High."
         },
         {
             "id": "4555_Quantitative Report_1544572800000",
@@ -1597,16 +1696,26 @@
             "investmentRating": "Neutral",
             "tickers": [
                 "DLR"
-            ]
+            ],
+            "title": "DIGITAL REALTY TRUST INC has an Investment Rating of HOLD; a target price of $121.00; an Industry Subrating of Low; a Management Subrating of Medium; a Safety Subrating of Low; a Financial Strength Subrating of Medium; a Growth Subrating of Medium; and a Value Subrating of High."
         }
     ],
     "sigDevs": [
         {
-            "headline": "Digital Realty Trust Q1 Adjusted FFO Per Share USD 1.67",
-            "date": "2024-05-02"
+            "headline": "Digital Realty Prices Common Stock Offering",
+            "date": "2024-05-08"
         }
     ],
     "secReports": [
+        {
+            "id": "0001193125-24-133294_1297996",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1715040000000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001297996/000119312524133294/thumbnail.png",
+            "formType": "8-K"
+        },
         {
             "id": "0001558370-24-006671_1297996",
             "type": "Periodic Financial Reports",
@@ -2046,15 +2155,6 @@
             "description": "Current report filing",
             "filingDate": 1659052800000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001494877/000155837022011371/thumbnail.png",
-            "formType": "8-K"
-        },
-        {
-            "id": "0001558370-22-011281_1297996",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1658966400000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001297996/000155837022011281/thumbnail.png",
             "formType": "8-K"
         }
     ]

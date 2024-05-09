@@ -5,28 +5,28 @@
             "provider": "Trading Central",
             "sector": "Energy",
             "shortTermOutlook": {
-                "stateDescription": "Recent bearish events outweigh bullish events.",
-                "direction": "Bearish",
-                "score": 1,
-                "scoreDescription": "Weak Bearish Evidence",
+                "stateDescription": "Recent bullish events outweigh bearish events.",
+                "direction": "Bullish",
+                "score": 3,
+                "scoreDescription": "Strong Bullish Evidence",
                 "sectorDirection": "Bearish",
                 "sectorScore": 2,
                 "sectorScoreDescription": "Bearish Evidence",
-                "indexDirection": "Bearish",
-                "indexScore": 1,
-                "indexScoreDescription": "Weak Bearish Evidence"
+                "indexDirection": "Bullish",
+                "indexScore": 4,
+                "indexScoreDescription": "Very Strong Bullish Evidence"
             },
             "intermediateTermOutlook": {
-                "stateDescription": "Recent bearish events outweigh bullish events.",
+                "stateDescription": "Bearish events outweigh bullish events.",
                 "direction": "Bearish",
-                "score": 3,
-                "scoreDescription": "Strong Bearish Evidence",
+                "score": 2,
+                "scoreDescription": "Bearish Evidence",
                 "sectorDirection": "Bullish",
-                "sectorScore": 2,
-                "sectorScoreDescription": "Bullish Evidence",
+                "sectorScore": 3,
+                "sectorScoreDescription": "Strong Bullish Evidence",
                 "indexDirection": "Bearish",
-                "indexScore": 4,
-                "indexScoreDescription": "Very Strong Bearish Evidence"
+                "indexScore": 2,
+                "indexScoreDescription": "Bearish Evidence"
             },
             "longTermOutlook": {
                 "stateDescription": "All events are bullish.",
@@ -44,13 +44,13 @@
         "keyTechnicals": {
             "provider": "Trading Central",
             "support": 12.8512,
-            "resistance": 15.85,
-            "stopLoss": 15.167473
+            "resistance": 16.07,
+            "stopLoss": 15.559109
         },
         "valuation": {
             "color": 1.0,
             "description": "Undervalued",
-            "discount": "27%",
+            "discount": "26%",
             "relativeValue": "Discount",
             "provider": "Trading Central"
         }
@@ -58,11 +58,11 @@
     "companySnapshot": {
         "sectorInfo": "Energy",
         "company": {
-            "innovativeness": 0.2607,
-            "sustainability": 0.9254000000000001,
+            "innovativeness": 0.2594,
+            "sustainability": 0.9242,
             "insiderSentiments": 0.904,
-            "earningsReports": 0.8443999999999999,
-            "dividends": 0.7262000000000001
+            "earningsReports": 0.8381000000000001,
+            "dividends": 0.7278
         },
         "sector": {
             "innovativeness": 0.5,
@@ -100,22 +100,31 @@
     },
     "events": [
         {
-            "eventType": "Slow Stochastic",
+            "eventType": "Short-term KST",
             "pricePeriod": "D",
             "tradingHorizon": "S",
-            "tradeType": "S",
+            "tradeType": "L",
             "imageUrl": "https://s.yimg.com/uc/fin/img/assets/generic.svg",
-            "startDate": 1714656600,
-            "endDate": 1714656600
+            "startDate": 1715002200,
+            "endDate": 1715002200
         }
     ],
     "sigDevs": [
         {
-            "headline": "Sunoco Announces Private Offering Of Senior Notes Due 2029 In Amount Of $750 Million And Senior Notes Due 2032 In An Aggregate Principal Amount Of $750 Million",
-            "date": "2024-04-16"
+            "headline": "Energy Transfer Q1 Revenue USD 21,629 Million",
+            "date": "2024-05-08"
         }
     ],
     "secReports": [
+        {
+            "id": "0001276187-24-000035_1276187",
+            "type": "Corporate Changes & Voting Matters",
+            "title": "8-K : Corporate Changes & Voting Matters",
+            "description": "Current report filing",
+            "filingDate": 1715126400000,
+            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001276187/000127618724000035/thumbnail.png",
+            "formType": "8-K"
+        },
         {
             "id": "0001276187-24-000030_1276187",
             "type": "Corporate Changes & Voting Matters",
@@ -502,15 +511,6 @@
             "filingDate": 1667433600000,
             "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001276187/000127618722000072/thumbnail.png",
             "formType": "10-Q"
-        },
-        {
-            "id": "0001276187-22-000068_1276187",
-            "type": "Corporate Changes & Voting Matters",
-            "title": "8-K : Corporate Changes & Voting Matters",
-            "description": "Current report filing",
-            "filingDate": 1667260800000,
-            "snapshotUrl": "https://cdn.yahoofinance.com/prod/sec-reports-thumbnails/0001276187/000127618722000068/thumbnail.png",
-            "formType": "8-K"
         }
     ]
 }
