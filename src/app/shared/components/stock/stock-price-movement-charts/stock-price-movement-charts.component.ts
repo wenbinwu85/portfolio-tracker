@@ -66,16 +66,16 @@ export class StockPriceMovementChartsComponent {
       });
 
       if (!this.prefix.startsWith('pre')) {
-        this.priceChange += stock.regularMarketChange * position.sharesOwned;
+        this.priceChange += stock.regularMarketChange.raw * position.shares;
         this.priceChangeChartData.push({
           name: stock.symbol,
-          value: stock.regularMarketChangePercent * 100,
+          value: stock.regularMarketChangePercent.raw * 100,
         })
       } else {
         if (stock.preMarketChangePercent) { 
           this.priceChangeChartData.push({
             name: stock.symbol,
-            value: stock.preMarketChangePercent * 100,
+            value: stock.preMarketChangePercent.raw * 100,
           })
         }
       }
@@ -83,7 +83,7 @@ export class StockPriceMovementChartsComponent {
       if (!this.prefix.startsWith('regular')) { 
         const prefixKey = this.prefix + 'Change'
         if (stock[prefixKey]) { 
-          this.prePostMarketPriceChange += stock[prefixKey] * position.sharesOwned;
+          this.prePostMarketPriceChange += stock[prefixKey] * position.shares;
           this.prePostHourIcon = this.prefix.startsWith('pre') ? 'light_mode' : 'dark_mode';
           this.prePostHourText = this.prefix.startsWith('pre') ? 'Pre Market ' : 'Post Market ';
         }
@@ -96,11 +96,11 @@ export class StockPriceMovementChartsComponent {
         series: [
           {
             name: `Low Range`,
-            value: stock.regularMarketPrice - stock.regularMarketDayLow,
+            value: stock.regularMarketPrice.raw - stock.regularMarketDayLow.raw,
           },
           {
             name: `High Range`,
-            value: stock.regularMarketDayHigh - stock.regularMarketPrice,
+            value: stock.regularMarketDayHigh.raw - stock.regularMarketPrice.raw,
           },
         ],
       });
@@ -120,8 +120,8 @@ export class StockPriceMovementChartsComponent {
       }
     });
     this.stockNames.sort((a: any, b: any) => {
-      const val1 = this.portfolioData[a.name].regularMarketChangePercent;
-      const val2 = this.portfolioData[b.name].regularMarketChangePercent;
+      const val1 = this.portfolioData[a.name].regularMarketChangePercent.raw;
+      const val2 = this.portfolioData[b.name].regularMarketChangePercent.raw;
       return val1 - val2;
     });
 

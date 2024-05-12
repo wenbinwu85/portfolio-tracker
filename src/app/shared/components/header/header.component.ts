@@ -63,30 +63,18 @@ export class HeaderComponent implements OnInit {
 
   refreshData() {
     this.showProgressBar = true;
-    this.dataService.updatePortfolioData(false);
-    setTimeout(() => this.dataService.updatePortfolioTechnicalInsights(false),2000);
-    setTimeout(() => this.dataService.updatePortfolioDividendHistory(false), 2000);
   }
 
   handleOpenFile(event: any) { 
-    this.dataService.isLoadingData.next(true);
     const selectedFile = event.target.files[0];
     const reader = new FileReader();
     reader.onload = (e) => {
       const fileContent = (reader.result as string).split('\n');
-      fileContent.forEach((line) => { 
-        const [symbol, shares, costAverage] = line.split(',');
-        const symbolHolding = {
-          shares: +shares,
-          costAverage: +costAverage
-        }
-        this.dataService.portfolioSymbols.push(symbol);
-        this.dataService.portfolioHoldings[symbol] = symbolHolding;
-        this.dataService.localStorage?.setItem(symbol + 'Holding', JSON.stringify(symbolHolding))
-      })
-      this.dataService.calculateHoldings();
-      this.dataService.isLoadingData.next(false);
+      this.dataService.fetchPortfolioData(fileContent);
     };
     reader.readAsText(selectedFile);
+  }
+
+  fetchTickerData() { 
   }
 }
