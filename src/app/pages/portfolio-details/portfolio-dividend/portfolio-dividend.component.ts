@@ -146,24 +146,24 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
     (stock: any) => "",
     (stock: any) => `$${stock.dividendIncome.toFixed(2)}`,
     (stock: any) => `${(stock.yieldOnCost * 100).toFixed(2)}%`,
-    (stock: any) => "$" + stock.dividendRate.fmt,
-    (stock: any) => "$" + stock.trailingAnnualDividendRate.fmt,
-    (stock: any) => stock.dividendYield.fmt,
-    (stock: any) => stock.trailingAnnualDividendYield.fmt,
-    (stock: any) => stock.fiveYearAvgDividendYield.fmt,
-    (stock: any) => stock.payoutRatio.fmt,
+    (stock: any) => '$' + (stock.dividendRate?.fmt || stock.dividendRate.toFixed(2)),
+    (stock: any) => stock.trailingAnnualDividendRate?.fmt || 'N/A',
+    (stock: any) => stock.dividendYield?.fmt || stock.dividendYield * 100 + '%', 
+    (stock: any) => stock.trailingAnnualDividendYield?.fmt || 'N/A',
+    (stock: any) => stock.fiveYearAvgDividendYield?.fmt || 'N/A',
+    (stock: any) => stock.payoutRatio?.fmt || 'N/A',
     (stock: any) =>
       stock.quoteType === "EQUITY" && stock.freeCashflowPayoutRatio !== 0
         ? `${(stock.freeCashflowPayoutRatio * 100).toFixed(2)}%`
         : "N/A",
-    (stock: any) => stock.lastDividendValue?.fmt,
+    (stock: any) => stock.lastDividendValue?.fmt || 'N/A',
     (stock: any) =>
       stock.calendarEvents?.exDividendDate
-        ? new Date(stock.calendarEvents.exDividendDate.fmt).toDateString()
+        ? new Date(stock.calendarEvents.exDividendDate?.fmt).toDateString()
         : "N/A",
     (stock: any) =>
       stock.calendarEvents?.dividendDate
-        ? new Date(stock.calendarEvents.dividendDate.fmt).toDateString()
+        ? new Date(stock.calendarEvents.dividendDate?.fmt).toDateString()
         : "N/A",
   ];
 
@@ -173,7 +173,7 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
     this.portfolioHoldings = this.dataService.portfolioHoldings;
     this.portfolioData = this.dataService.portfolioData;
     this.dataSource.data = Object.values(this.portfolioData)
-      .filter((stock: any) => stock.dividendYield?.raw > 0)
+      .filter((stock: any) => (stock.dividendYield?.raw > 0) || (stock.dividendYield > 0))
       .map((stock: any) => {
         return {
           ...this.portfolioHoldings[stock.symbol],
@@ -202,7 +202,8 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
       this.dividendPayoutMonths[stock.symbol.toUpperCase()].forEach(
         (month: number, _: any, arr: any[]) => {
           const idx = month - 1;
-          const divAmount = stock.dividendRate.raw / arr.length;
+          const divRate = stock.dividendRate?.raw || stock.dividendRate;
+          const divAmount = divRate / arr.length;
           this.dividendProjectionChartData[idx].series.push({
             name: `${stock.symbol} | ${stock.shortName}`,
             value: stock.shares * divAmount,

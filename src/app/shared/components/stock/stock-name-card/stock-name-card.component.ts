@@ -12,6 +12,7 @@ import {
   MatDialog,
   MatDialogModule,
   MatDialogRef,
+  MatDialogTitle
 } from "@angular/material/dialog";
 import { HelperService } from "../../../services/helper.service";
 import { StockDataSheetComponent } from "../stock-data-sheet/stock-data-sheet.component";
@@ -58,7 +59,11 @@ export class StockNameCardComponent {
       height: "100%",
       minWidth: "100%",
       closeOnNavigation: true,
-      data: { symbol: this.stock.symbol },
+      data: {
+        symbol: this.stock.symbol,
+        longName: this.stock.longName,
+
+      },
     });
 
     dialogRef.afterClosed().subscribe((result) => {
@@ -69,20 +74,24 @@ export class StockNameCardComponent {
 
 @Component({
   selector: "info-sheet",
-  template: `<mat-dialog-actions align="end">
-      <button mat-button mat-dialog-close>X</button>
-    </mat-dialog-actions>
+  template: `
+    <div [ngStyle]="{display: 'flex', 'justify-content': 'space-between', 'margin-right': '1rem'}">
+      <h1 mat-dialog-title>{{ data.longName }}</h1>
+      <mat-dialog-actions align="end">
+        <button mat-button mat-dialog-close>X</button>
+      </mat-dialog-actions>
+    </div>
     <mat-dialog-content class="mat-typography">
       <stock-data-sheet [symbol]="data.symbol" />
     </mat-dialog-content>`,
   standalone: true,
-  imports: [MatDialogModule, MatButtonModule, StockDataSheetComponent],
+  imports: [MatDialogModule, MatButtonModule, MatDialogTitle, StockDataSheetComponent, NgStyle],
 })
 export class InfoSheetDialog {
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,
     public dialogRef: MatDialogRef<any>
   ) {
-    this.dialogRef.updateSize("95%", "90%");
+    this.dialogRef.updateSize("100%", "100%");
   }
 }

@@ -8,6 +8,7 @@ import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { ActivatedRoute } from "@angular/router";
 import { DataService } from "../../../services/data.service";
 import { WallmineChartComponent } from "../../charts/wallmine-chart/wallmine-chart.component";
+import { ContainerCardComponent } from "../../container-card/container-card.component";
 import { InfoCardComponent } from "../../info-card/info-card.component";
 import { TvAdvancedChartWidgetComponent } from "../../tradingview/tv-advanced-chart-widget/tv-advanced-chart-widget.component";
 import { TvFinancialsWidgetComponent } from "../../tradingview/tv-financials-widget/tv-financials-widget.component";
@@ -24,6 +25,7 @@ import { StockRecommendationTrendsComponent } from "../stock-recommendation-tren
   standalone: true,
   imports: [
     CommonModule,
+    ContainerCardComponent,
     InfoCardComponent,
     MatButtonToggleModule,
     MatChipsModule,
@@ -71,7 +73,7 @@ export class StockDataSheetComponent implements OnInit {
         ? this.symbol.toUpperCase()
         : this.activatedRoute.snapshot.params["symbol"].toUpperCase();
     });
-    this.stock =  this.dataService.portfolioData[this.symbol];
+    this.stock = this.dataService.portfolioData[this.symbol];
     this.position = this.dataService.portfolioHoldings[this.symbol];
     let exchange = this.stock?.exchangeName || "NasdaqGS";
     exchange === "NasdaqGS" ? "Nasdaq" : exchange;
@@ -111,8 +113,10 @@ export class StockDataSheetComponent implements OnInit {
       },
     ];
 
-    this.below50DayAverage = this.stock.fiftyDayAverage > this.stock.previousClose;
-    this.below200DayAverage =  this.stock.twoHundredDayAverage > this.stock.previousClose;
+    this.below50DayAverage =
+      this.stock.fiftyDayAverage > this.stock.previousClose;
+    this.below200DayAverage =
+      this.stock.twoHundredDayAverage > this.stock.previousClose;
   }
 
   selectChart(chatId: number) {

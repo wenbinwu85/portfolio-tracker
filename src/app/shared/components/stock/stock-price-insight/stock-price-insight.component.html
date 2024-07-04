@@ -95,7 +95,7 @@
 
     <mat-divider />
 
-    <div *ngIf="stockData" class="add-margin">
+    <div *ngIf="stockData">
         <!-- <ng-container *ngComponentOutlet="getWidget.widget; inputs:{symbol: selectedSymbol};" /> -->
         <h3>{{ stockData.symbol }} Day Range vs 52 Week Range</h3>
         <stock-day-price-range 
