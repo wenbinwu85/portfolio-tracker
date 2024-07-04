@@ -1,52 +1,52 @@
 <section class="summary-cards-container">
   <info-card
     icon="numbers"
-    [value]="portfolioHoldings?.portfolioPositions"
+    [value]="portfolioHoldings?.positionsHeld"
     subtitle="Total Positions"
   />
   <info-card
     icon="payments"
-    [value]="portfolioHoldings?.portfolioTotalInvestment"
+    [value]="portfolioHoldings?.totalAmountInvested"
     valueType="currency"
     subtitle="Total Investment"
   />
   <info-card
     icon="payments"
-    [value]="portfolioHoldings?.portfolioMarketValue"
+    [value]="portfolioHoldings?.marketValue"
     valueType="currency"
     subtitle="Market Value"
   />
   <info-card
     icon="payments"
-    [value]="portfolioHoldings?.portfolioUnrealizedGain"
+    [value]="portfolioHoldings?.unrealizedGain"
     subtitle="Unrealized Gain"
     valueType="currency"
-    [color]="portfolioHoldings?.portfolioUnrealizedGain > 0 ? 'teal' : 'chocolate'"
-    [accentColor]="portfolioHoldings?.portfolioUnrealizedGain > 0 ? 'teal' : 'chocolate'"
+    [color]="portfolioHoldings?.unrealizedGain > 0 ? 'teal' : 'chocolate'"
+    [accentColor]="portfolioHoldings?.unrealizedGain > 0 ? 'teal' : 'chocolate'"
   />
   <info-card
     icon="percentage"
-    [value]="portfolioHoldings?.portfolioUnrealizedGainPercent"
+    [value]="portfolioHoldings?.unrealizedGainPercent"
     valueType="percentage"
-    subtitle="Unrealized Gain %"
-    [color]="portfolioHoldings?.portfolioUnrealizedGainPercent > 0 ? 'teal' : 'chocolate'"
-    [accentColor]="portfolioHoldings?.portfolioUnrealizedGain > 0 ? 'teal' : 'chocolate'"
+    subtitle="Unrealized Gain Percent"
+    [color]="portfolioHoldings?.unrealizedGainPercent > 0 ? 'teal' : 'chocolate'"
+    [accentColor]="portfolioHoldings?.unrealizedGain > 0 ? 'teal' : 'chocolate'"
   />
   <info-card
     icon="payments"
-    [value]="portfolioHoldings?.portfolioDividendIncome"
+    [value]="portfolioHoldings?.dividendIncome"
     valueType="currency"
     subtitle="Projected Annual Income"
   />
   <info-card
     icon="percentage"
-    [value]="portfolioHoldings?.portfolioYield"
+    [value]="portfolioHoldings?.yield"
     valueType="percentage"
     subtitle="Portfolio Yield"
   />
   <info-card
     icon="percentage"
-    [value]="portfolioHoldings?.portfolioYieldOnCost"
+    [value]="portfolioHoldings?.yieldOnCost"
     valueType="percentage"
     subtitle="Portfolio YOC"
     color="teal"
@@ -56,11 +56,15 @@
 
 <mat-divider />
 
-<section class="add-border">
-  <div class="title">
-    <span>Portfolio Allocation</span>
-  </div>
-  <button 
+<ng-template #portfolioAllocationsTitleRef>
+  <mat-chip-listbox>
+      <mat-chip-option selected (click)="changeChartStyle('pie')">Doughnut Pie</mat-chip-option>
+      <mat-chip-option (click)="changeChartStyle('grid')">Pie Grid</mat-chip-option>
+  </mat-chip-listbox>
+</ng-template>
+
+<ng-template #portfolioAllocationsRef>
+  <button
     *ngIf="showResetButton" 
     mat-mini-fab 
     color="warn" 
@@ -71,47 +75,62 @@
   </button> 
 
   <div class="add-flex">
-    <div class="chart-container">
+    <div *ngIf="pieChartStyle === 'pie'" class="chart-container">
+      <ngx-charts-pie-chart
+        [scheme]="'picnic'"
+        [animations]="true"
+        [results]="sectorsData"
+        [doughnut]="true"
+        [arcWidth]="0.5"
+        [labels]="true"
+        [title]="'Sector Allocations'"
+        [maxLabelLength]="100"
+        (select)="filterBySector($event)"
+      />
+    </div>
+    <div *ngIf="pieChartStyle === 'grid'" class="chart-container">
       <ngx-charts-pie-grid
         [scheme]="'picnic'"
         [animations]="true"
         [results]="sectorsData"
         [label]="'Dollars Invested'"
+        [title]="'Sector Allocations'"
         (select)="filterBySector($event)"
       />
     </div>
     <div class="chart-container">
       <ngx-charts-bar-vertical
-        [scheme]="portfolioPercentBarChartColorScheme"
+        [scheme]="barChartColorScheme"
         [results]="portfolioPercentBarChartData"
         [animations]="true"
         [xAxis]="true"
         [yAxis]="true"
         [showXAxisLabel]="true"
         [showYAxisLabel]="true"
-        [yAxisLabel]="'Portfolio %'"
+        [yAxisLabel]="'Holding Allocations'"
       />
     </div>
   </div>
-</section>
+</ng-template>
 
-<section class="add-border">
+<container-card 
+  title="Portfolio Allocations"
+  [titleContentRef]="portfolioAllocationsTitleRef"
+  [mainContentRef]="portfolioAllocationsRef"
+/>
+
+<ng-template #portfolioValueRef>
   <div class="goal-container">
-    <h1>
-      <span>Portfolio Value Goal:</span>
-      <span class="goal-title">{{ portfolioValueGoalPercentage | percent : ".2" }}</span>
-    </h1>
-  
     <mat-slider
       [min]="0"
       [max]="portfolioValueTarget"
       [step]="1000"
-      [showTickMarks]="true"
+      [showTickMarks]="true"      
       [color]="'accent'"
     >
       <input
         matSliderThumb
-        [value]="portfolioHoldings?.portfolioMarketValue"
+        [value]="portfolioHoldings?.marketValue"
         [matTooltip]="getTooltip('investment')"
         matTooltipPosition="above"
       />
@@ -126,45 +145,45 @@
     <mat-expansion-panel-header>
       <mat-panel-title>
         <mat-icon class="">payment</mat-icon>
-        <span>Portfolio Value</span>
+        <span>Portfolio</span>
       </mat-panel-title>
     </mat-expansion-panel-header>
     <div class="add-flex">
       <div class="chart-container">
         <ngx-charts-bar-vertical-stacked
-          [scheme]="'picnic'"
+          [scheme]="stackedBarChartColorScheme"
           [results]="marketValueBarChartData"
           [animations]="true"
           [xAxis]="true"
           [yAxis]="true"
           [showXAxisLabel]="true"
           [showYAxisLabel]="true"
-          [yAxisLabel]="'Market Value $'"
+          [yAxisLabel]="'Cost Basis & Unrealized Gain'"
         />
       </div>
       <div class="chart-container">
         <ngx-charts-bar-vertical
-          [scheme]="'picnic'"
+          [scheme]="barChartColorScheme"
           [results]="unrealizedGainBarChartData"
           [animations]="true"
           [xAxis]="true"
           [yAxis]="true"
           [showXAxisLabel]="true"
           [showYAxisLabel]="true"
-          [yAxisLabel]="'Unrealized Gain %'"
+          [yAxisLabel]="'Unrealized Gain Percent'"
         />
       </div>
     </div>
   </mat-expansion-panel>
-</section>
+</ng-template>
 
-<section class="add-border">
+<container-card 
+  title="Portfolio Value Goal"
+  [mainContentRef]="portfolioValueRef"
+/>
+
+<ng-template #dividendIncomeRef>
   <div class="goal-container">
-    <h1>
-      <span>Passive Income Goal:</span>
-      <span class="goal-title">{{ passiveIncomeGoalPercentage | percent : ".2" }}</span>
-    </h1>
-  
     <mat-slider
       [min]="0"
       [max]="passiveIncomeTarget"
@@ -174,7 +193,7 @@
     >
       <input
         matSliderThumb
-        [value]="portfolioHoldings?.portfolioDividendIncome"
+        [value]="portfolioHoldings?.dividendIncome"
         [matTooltip]="getTooltip('passive')"
         matTooltipPosition="above"
       />
@@ -189,34 +208,39 @@
     <mat-expansion-panel-header>
       <mat-panel-title>
         <mat-icon class="">local_fire_department</mat-icon>
-        <span>Passive Income</span>
+        <span>Dividends</span>
       </mat-panel-title>
     </mat-expansion-panel-header>
     <div class="add-flex">
       <div class="chart-container">
         <ngx-charts-bar-vertical
-          [scheme]="'natural'"
+          [scheme]="barChartColorScheme"
           [results]="dividendBarChartData"
           [animations]="true"
           [xAxis]="true"
           [yAxis]="true"
           [showXAxisLabel]="true"
           [showYAxisLabel]="true"
-          [yAxisLabel]="'Dividend Income $'"
+          [yAxisLabel]="'Dividend Income'"
         />
       </div>
       <div class="chart-container">
         <ngx-charts-bar-vertical
-          [scheme]="'natural'"
+          [scheme]="barChartColorScheme"
           [results]="yocBarChartData"
           [animations]="true"
           [xAxis]="true"
           [yAxis]="true"
           [showXAxisLabel]="true"
           [showYAxisLabel]="true"
-          [yAxisLabel]="'Yield On Cost %'"
+          [yAxisLabel]="'Yield On Cost Percent'"
         />
       </div>
     </div>
   </mat-expansion-panel>
-</section>
+</ng-template>
+
+<container-card 
+  title="Dividend Income Goal"
+  [mainContentRef]="dividendIncomeRef"
+/>

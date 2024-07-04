@@ -1,6 +1,9 @@
-<mat-chip class="ticker-chip" (click)="openInfoSheet()">
+<mat-chip class="ticker-chip">
     <span>{{ stock.symbol }}</span>
-    <span [ngStyle]="{'color': stock.regularMarketChangePercent > 0 ? 'teal' : 'chocolate'}">
-        {{ stock.regularMarketChangePercent | percent: '.2' }}
+    <span [ngStyle]="{'color': helperService.getStockPriceColor(stock.symbol)}">
+        {{ (stock[priceKeyPrefix + 'Price']?.fmt | currency) || (stock.regularMarketPrice.fmt | currency) }}
+    </span>
+    <span [ngStyle]="{'color': helperService.getStockPriceColor(stock.symbol)}">
+        {{ stock[priceKeyPrefix + 'ChangePercent']?.fmt || stock.regularMarketChangePercent.fmt }}
     </span>
 </mat-chip>

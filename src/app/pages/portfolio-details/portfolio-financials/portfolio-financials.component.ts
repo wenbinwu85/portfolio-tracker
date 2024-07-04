@@ -13,8 +13,7 @@ import {
   MatTableDataSource,
   MatTableModule,
 } from "@angular/material/table";
-import { EChartsOption } from "echarts";
-import { EchartsVerticalBarChartComponent } from "../../../shared/components/charts/echart/echarts-vertical-bar-chart/echarts-vertical-bar-chart.component";
+import { ContainerCardComponent } from "../../../shared/components/container-card/container-card.component";
 import { StockNameCardComponent } from "../../../shared/components/stock/stock-name-card/stock-name-card.component";
 import { DataService } from "../../../shared/services/data.service";
 
@@ -24,8 +23,8 @@ import { DataService } from "../../../shared/services/data.service";
   styleUrls: ["./portfolio-financials.component.css"],
   standalone: true,
   imports: [
+    ContainerCardComponent,
     CurrencyPipe,
-    EchartsVerticalBarChartComponent,
     MatDividerModule,
     MatSortModule,
     MatTableModule,
@@ -39,19 +38,12 @@ export class PortfolioFinancialsComponent implements OnInit, AfterViewInit {
   @Input() transactions = "portfolio";
   @ViewChild(MatTable) table!: MatTable<any>;
   @ViewChild(MatSort) sort!: MatSort;
-  echartOptions!: EChartsOption;
-  echartUpdateOptions: any = {
-    yAxis: {},
-    xAxis: { data: [] },
-    series: [{ data: [] }],
-  };
-  xAxisLabel: any = "";
   dataSource = new MatTableDataSource<any>();
   sortedEtfs: any[] = [];
   headers = [
     "Symbol",
     "Debt To Equity (MRQ)",
-    "Current Ratio (MRQ",
+    "Current Ratio (MRQ)",
     "Earnings Growth (YOY)",
     "Quarterly Revenue Growth (YOY)",
     "Profit Margins",
@@ -91,7 +83,6 @@ export class PortfolioFinancialsComponent implements OnInit, AfterViewInit {
     "Expense Ratio",
     "Nav Price",
     "Trailing PE",
-    "Trailing EPS",
     "YTD Return",
     "1 Month Return",
     "3 month Return",
@@ -107,7 +98,6 @@ export class PortfolioFinancialsComponent implements OnInit, AfterViewInit {
     "annualReportExpenseRatio",
     "navPrice",
     "trailingPE",
-    "epsTrailingTwelveMonths",
     "ytdReturn",
     "1monthReturn",
     "3monthReturn",
@@ -121,52 +111,38 @@ export class PortfolioFinancialsComponent implements OnInit, AfterViewInit {
 
   cells: Function[] = [
     (stock: any) => "",
-    (stock: any) => `${stock.debtToEquity?.toFixed(2)}%` || 0,
-    (stock: any) => stock.currentRatio?.toFixed(2) || 0,
-    (stock: any) =>
-      stock.earningsQuarterlyGrowth
-        ? `${(stock.earningsQuarterlyGrowth * 100).toFixed(2)}%`
-        : "0%",
-    (stock: any) => `${(stock.revenueGrowth * 100).toFixed(2)}%` || 0,
-    (stock: any) => `${(stock.profitMargins * 100).toFixed(2)}%` || 0,
-    (stock: any) => stock.forwardPE.toFixed(2) || 0,
-    (stock: any) => stock.forwardEps.toFixed(2) || 0,
-    (stock: any) => stock.pegRatio || 0,
-    (stock: any) => `$${stock.totalCashPerShare}` || 0,
-    (stock: any) => `$${stock.revenuePerShare}` || 0,
+    (stock: any) => stock.debtToEquity.fmt || 0,
+    (stock: any) => stock.currentRatio.fmt || 0,
+    (stock: any) => stock.earningsQuarterlyGrowth?.fmt || 0,
+    (stock: any) => stock.revenueGrowth.fmt || 0,
+    (stock: any) => stock.profitMargins.fmt|| 0,
+    (stock: any) => stock.forwardPE.fmt || 0,
+    (stock: any) => stock.forwardEps.fmt || 0,
+    (stock: any) => stock.pegRatio.fmt || 0,
+    (stock: any) => stock.totalCashPerShare.fmt || 0,
+    (stock: any) => stock.revenuePerShare.fmt || 0,
     (stock: any) => `${(stock.freeCashflowYield * 100).toFixed(2)}%` || 0,
     (stock: any) => `$${stock.freeCashflowPerShare.toFixed(2)}` || 0,
-    (stock: any) => `${(stock.returnOnAssets * 100).toFixed(2)}%` || 0,
-    (stock: any) => `${(stock.returnOnEquity * 100).toFixed(2)}%` || 0,
-    (stock: any) => stock.enterpriseToEbitda || 0,
-    (stock: any) => stock.enterpriseToRevenue || 0,
+    (stock: any) => stock.returnOnAssets.fmt || 0,
+    (stock: any) => stock.returnOnEquity.fmt || 0,
+    (stock: any) => stock.enterpriseToEbitda.fmt || 0,
+    (stock: any) => stock.enterpriseToRevenue.fmt || 0,
   ];
 
   etfCells: Function[] = [
     (etf: any) => "",
-    (etf: any) =>
-      (
-        etf.profile.feesExpensesInvestment.annualReportExpenseRatio * 100
-      ).toFixed(2) + "%",
-    (etf: any) => `$${etf.navPrice.toFixed(2)}`,
-    (etf: any) => etf.trailingPE.toFixed(2),
-    (etf: any) => etf.epsTrailingTwelveMonths?.toFixed(2) || "N/A",
-    (etf: any) =>
-      (etf.fundPerformance.trailingReturns.ytd * 100).toFixed(2) + "%",
-    (etf: any) =>
-      (etf.fundPerformance.trailingReturns.oneMonth * 100).toFixed(2) + "%",
-    (etf: any) =>
-      (etf.fundPerformance.trailingReturns.threeMonth * 100).toFixed(2) + "%",
-    (etf: any) =>
-      (etf.fundPerformance.trailingReturns.oneYear * 100).toFixed(2) + "%",
-    (etf: any) =>
-      (etf.fundPerformance.trailingReturns.threeYear * 100).toFixed(2) + "%",
-    (etf: any) =>
-      (etf.fundPerformance.trailingReturns.fiveYear * 100).toFixed(2) + "%",
-    (etf: any) =>
-      (etf.fundPerformance.trailingReturns.tenYear * 100).toFixed(2) + "%",
-    (etf: any) => etf.beta3Year,
-    (etf: any) => etf.totalAssets,
+    (etf: any) => etf.profile.feesExpensesInvestment.annualReportExpenseRatio.fmt,
+    (etf: any) => etf.navPrice.fmt,
+    (etf: any) => etf.trailingPE.fmt,
+    (etf: any) => etf.fundPerformance.trailingReturns.ytd.fmt,
+    (etf: any) => etf.fundPerformance.trailingReturns.oneMonth.fmt,
+    (etf: any) => etf.fundPerformance.trailingReturns.threeMonth.fmt,
+    (etf: any) => etf.fundPerformance.trailingReturns.oneYear.fmt,
+    (etf: any) => etf.fundPerformance.trailingReturns.threeYear.fmt,
+    (etf: any) => etf.fundPerformance.trailingReturns.fiveYear.fmt,
+    (etf: any) => etf.fundPerformance.trailingReturns.tenYear.fmt,
+    (etf: any) => etf.beta3Year.raw,
+    (etf: any) => etf.totalAssets.fmt,
   ];
 
   constructor(private dataService: DataService) {}
@@ -175,71 +151,36 @@ export class PortfolioFinancialsComponent implements OnInit, AfterViewInit {
     const stocks = Object.values(this.dataService.portfolioData).filter(
       (stock: any) => stock.quoteType === "EQUITY"
     );
-    this.dataSource.data = stocks.sort(
-      (a: any, b: any) => a["52WeekChange"] - b["52WeekChange"]
-    );
     const etfs = Object.values(this.dataService.portfolioData).filter(
       (stock: any) => stock.quoteType === "ETF"
     );
-    this.sortedEtfs = etfs.sort(
-      (a: any, b: any) => a["ytdReturn"] - b["ytdReturn"]
-    );
-    this.setChartData(1);
+    this.dataSource.data = stocks.map(
+      (stock: any) => {
+        const holding = this.dataService.portfolioHoldings[stock.symbol];
+        return {
+          ...stock,
+          ...holding
+        }
+      });
+    this.sortedEtfs = etfs
+      .map((etf: any) => { 
+        const holding = this.dataService.portfolioHoldings[etf.symbol];
+        return {
+          ...etf,
+          ...holding
+        }
+      })
+      .sort(
+        (a: any, b: any) => a["ytdReturn"].raw - b["ytdReturn"].raw
+      );
   }
 
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
   }
 
-  setChartData(index: number) {
-    let options: any = {
-      title: {
-        text: "",
-      },
-      legend: {
-        data: [this.headers[index]],
-      },
-      tooltip: {},
-      xAxis: {
-        data: [],
-        splitLine: {
-          show: true,
-        },
-      },
-      yAxis: {},
-      series: [
-        {
-          name: this.headers[index],
-          type: "bar",
-          data: [],
-          emphasis: {
-            focus: "series",
-          },
-          animationDelay: function (idx: any) {
-            return idx * 10;
-          },
-        },
-      ],
-      animationEasing: "elasticOut",
-      animationDelayUpdate: function (idx: any) {
-        return idx * 5;
-      },
-    };
-    this.xAxisLabel = this.headers[index];
-    const dataPoint = this.columnDefs[index];
-    this.dataSource.data
-      .sort((a: any, b: any) => a[dataPoint] - b[dataPoint])
-      .forEach((stock: any) => {
-        options.xAxis.data.push(stock.symbol);
-        options.series[0].data.push(stock[dataPoint] || 0);
-      });
-    this.echartOptions = options;
-  }
-
   getCellColor(index: number, stock: any) {
     const value = this.cells[index](stock);
-    return value < 0 || value[0] === "-" || value[1] === "-"
-      ? "chocolate"
-      : "";
+    return value < 0 || value[0] === "-" || value[1] === "-" ? "chocolate" : "";
   }
 }

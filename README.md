@@ -13,7 +13,7 @@ To run the app
 1. cd to ./src/backend
 then use the following commands to run the python backend
 ```
-export QUART_APP=backend_v2:app
+export QUART_APP=backend_v3:app
 quart run --reload
 ```
 3. run the angular frontend with:

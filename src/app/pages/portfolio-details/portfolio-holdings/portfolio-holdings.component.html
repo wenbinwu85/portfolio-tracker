@@ -1,8 +1,4 @@
-<section class="add-border">
-  <div class="title">
-    <span>Cost Basis</span>
-  </div>
-
+<ng-template #costBasisRef>
   <div class="add-flex">
     <div class="chart-container">
       <ngx-charts-pie-grid 
@@ -13,7 +9,12 @@
       />
     </div>
   </div>
-</section>
+</ng-template>
+
+<container-card
+  title="Cost Basis"
+  [mainContentRef]="costBasisRef"
+/>
 
 <div class="table-actions">
   <mat-slide-toggle (toggleChange)="tradingviewWidgetToggleHandler()">
@@ -46,7 +47,7 @@
       <div *ngIf="cidx === 1; else elseBlock" (click)="expandRow(stock)">
         <div class="cost-average">
           <span disabled value="costAverage">${{ portfolioHoldings[stock.symbol].costAverage }}</span>
-          <span disabled value="shares">x {{ portfolioHoldings[stock.symbol].sharesOwned }}</span>
+          <span disabled value="shares"> x {{ portfolioHoldings[stock.symbol].shares }}</span>
         </div>
       </div>
 

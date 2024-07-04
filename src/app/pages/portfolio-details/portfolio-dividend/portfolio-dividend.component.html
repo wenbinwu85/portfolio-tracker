@@ -13,12 +13,7 @@
 
 <mat-divider />
 
-<section class="add-border">
-  <div class="add-flex">
-    <div class="title">
-      <span>Dividend Income Projection</span>
-    </div>
-  </div>
+<ng-template #dividendIncomeProjectionRef>
   <div class="add-flex">
     <div class="chart-container dividend-income">
       <ngx-charts-bar-vertical-stacked
@@ -49,14 +44,14 @@
       />
     </div>
   </div>
-</section>
+</ng-template>
 
-<section *ngIf="browser === 'Safari'" class="add-border">
-  <div class="add-flex">
-    <div class="title">
-      <span>Dividend History</span>
-    </div>
-  </div>
+<container-card 
+  title="Dividend Income Projection"
+  [mainContentRef]="dividendIncomeProjectionRef"
+/>
+
+<!-- <ng-template *ngIf="browser === 'Safari'" #dividendHistoryRef>
   <div class="safari-charts-container">
     <echarts-vertical-bar-chart [options]="echartOptions" />
     <div class="chart-container dividend-pie">
@@ -74,15 +69,10 @@
       />
     </div>
   </div>
-</section>
+</ng-template> -->
 
-<section *ngIf="browser !== 'Safari'" class="add-border">
-  <div class="add-flex">
-    <div class="title">
-      <span>Dividend History</span>
-    </div>
-  </div>
-
+<!-- *ngIf="browser !== 'Safari'" -->
+<ng-template #dividendHistoryRef>
   <div class="add-flex">
     <div *ngIf="dividendLineChartData" class="chart-container dividend-chart">
       <ngx-charts-area-chart
@@ -116,7 +106,12 @@
       />
     </div>
   </div>
-</section>
+</ng-template>
+
+<container-card 
+  title="Dividend History"
+  [mainContentRef]="dividendHistoryRef"
+/>
 
 <table
   mat-table

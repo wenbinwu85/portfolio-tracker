@@ -15,6 +15,7 @@ import {
 } from "@angular/material/dialog";
 import { HelperService } from "../../../services/helper.service";
 import { StockDataSheetComponent } from "../stock-data-sheet/stock-data-sheet.component";
+import { StockPriceColorsEnum } from "../../../model/colors.model";
 
 @Component({
   selector: "stock-name-card",
@@ -32,23 +33,24 @@ import { StockDataSheetComponent } from "../stock-data-sheet/stock-data-sheet.co
 })
 export class StockNameCardComponent {
   @Input({ required: true }) stock!: any;
-  price = 0;
+  currentPrice: any;
+  changePercent: any;
+
   borderLeftStyle = '';
 
-  constructor(public dialog: MatDialog, private helperService: HelperService) {}
+  constructor(public dialog: MatDialog, public helperService: HelperService) {}
 
   ngOnInit() {
-    const priceKeyPrefix = this.helperService.getPriceKeyPrefix();
-    this.price = this.stock[priceKeyPrefix + "Price"];
-    this.borderLeftStyle = '0.3rem solid ' + (this.stock.unrealizedGain > 0 ? 'teal' : 'chocolate');
-  }
-
-  getLogoSource(stock: any) {
-    return `/assets/ticker-logos/${stock.symbol}.png`;
-  }
-
-  getColor() {
-    return this.helperService.getStockPriceColor(this.stock.symbol);
+    const prefix = this.helperService.getPriceKeyPrefix();
+    this.currentPrice = this.stock[prefix + "Price"];
+    this.changePercent = this.stock[prefix + "ChangePercent"]
+    if (typeof this.currentPrice !== "number") { 
+      this.currentPrice = this.currentPrice.raw;
+    }
+    if (typeof this.changePercent !== "number") { 
+      this.changePercent = this.changePercent.raw;
+    }
+    this.borderLeftStyle = '0.3rem solid ' + (this.stock.unrealizedGain > 0 ? StockPriceColorsEnum.Gain : StockPriceColorsEnum.Lost);
   }
 
   openInfoSheet() {

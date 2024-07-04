@@ -1,5 +1,6 @@
 .main-title-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -17,7 +18,6 @@
 
 tv-tickers-widget {
   width: 100%;
-  padding: 0 1rem 0 1rem;
 }
 
 ::ng-deep .mat-mdc-tab-links {

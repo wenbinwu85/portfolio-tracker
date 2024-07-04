@@ -39,32 +39,32 @@ export class PortfolioDetailsComponent implements OnInit {
     {
       label: "Portfolio Summary",
       route: "summary",
-      icon: "summarize"
+      icon: "summarize",
     },
     {
       label: "Portfolio Holdings",
       route: "holdings",
-      icon: "list_alt"
+      icon: "list_alt",
     },
     {
       label: "Price Insights",
       route: "price-insights",
-      icon: "price_change"
+      icon: "price_change",
     },
     {
       label: "Dividend Tracker",
       route: "dividend",
-      icon: "paid"
+      icon: "paid",
     },
     {
       label: "Financial Metrics",
       route: "financials",
-      icon: "query_stats"
+      icon: "query_stats",
     },
     {
       label: "Analysis",
       route: "analysis",
-      icon: "calculate"
+      icon: "calculate",
     },
   ];
   activeLink = this.navLinks[0];

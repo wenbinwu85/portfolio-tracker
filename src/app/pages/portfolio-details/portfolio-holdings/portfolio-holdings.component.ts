@@ -4,38 +4,32 @@ import {
   style,
   transition,
   trigger,
-} from '@angular/animations';
+} from "@angular/animations";
 import {
   CurrencyPipe,
   NgFor,
   NgIf,
   NgStyle,
   TitleCasePipe,
-} from '@angular/common';
-import {
-  AfterViewInit,
-  Component,
-  OnInit,
-  ViewChild,
-} from '@angular/core';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatIconModule } from '@angular/material/icon';
-import { MatInputModule } from '@angular/material/input';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import {
-  MatSort,
-  MatSortModule,
-} from '@angular/material/sort';
+} from "@angular/common";
+import { AfterViewInit, Component, OnInit, ViewChild } from "@angular/core";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatIconModule } from "@angular/material/icon";
+import { MatInputModule } from "@angular/material/input";
+import { MatSlideToggleModule } from "@angular/material/slide-toggle";
+import { MatSort, MatSortModule } from "@angular/material/sort";
 import {
   MatTable,
   MatTableDataSource,
   MatTableModule,
-} from '@angular/material/table';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
-import { ExpandedRowComponent } from '../../../shared/components/expanded-row/expanded-row.component';
-import { StockNameCardComponent } from '../../../shared/components/stock/stock-name-card/stock-name-card.component';
-import { TvSingleQuoteWidgetComponent } from '../../../shared/components/tradingview/tv-single-quote-widget/tv-single-quote-widget.component';
-import { DataService } from '../../../shared/services/data.service';
+} from "@angular/material/table";
+import { NgxChartsModule } from "@swimlane/ngx-charts";
+import { ContainerCardComponent } from "../../../shared/components/container-card/container-card.component";
+import { ExpandedRowComponent } from "../../../shared/components/expanded-row/expanded-row.component";
+import { StockNameCardComponent } from "../../../shared/components/stock/stock-name-card/stock-name-card.component";
+import { TvSingleQuoteWidgetComponent } from "../../../shared/components/tradingview/tv-single-quote-widget/tv-single-quote-widget.component";
+import { StockPriceColorsEnum } from "../../../shared/model/colors.model";
+import { DataService } from "../../../shared/services/data.service";
 
 @Component({
   selector: "portfolio-holdings",
@@ -53,6 +47,7 @@ import { DataService } from '../../../shared/services/data.service';
   ],
   standalone: true,
   imports: [
+    ContainerCardComponent,
     CurrencyPipe,
     ExpandedRowComponent,
     MatFormFieldModule,
@@ -126,15 +121,15 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     (stock: any) => "",
   ];
   footerRow: Function[] = [
+    () => `Total Holdings: ${this.portfolioHoldings.positionsHeld}`,
     () => "",
+    () => `$${this.portfolioHoldings.totalAmountInvested.toFixed(2)}`,
+    () => `$${this.portfolioHoldings.marketValue.toFixed(2)}`,
     () => "",
-    () => `$${this.portfolioHoldings.portfolioTotalInvestment.toFixed(2)}`,
-    () => `$${this.portfolioHoldings.portfolioMarketValue.toFixed(2)}`,
+    () => `$${this.portfolioHoldings.unrealizedGain.toFixed(2)}`,
     () => "",
-    () => `$${this.portfolioHoldings.portfolioUnrealizedGain.toFixed(2)}`,
-    () => "",
-    () => `$${this.portfolioHoldings.portfolioDividendIncome.toFixed(2)}`,
-    () => `${(this.portfolioHoldings.portfolioYieldOnCost * 100).toFixed(2)}%`,
+    () => `$${this.portfolioHoldings.dividendIncome.toFixed(2)}`,
+    () => `${(this.portfolioHoldings.yieldOnCost * 100).toFixed(2)}%`,
     () => "",
     () => "",
   ];
@@ -142,17 +137,19 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    this.portfolioHoldings = this.dataService.portfolioHoldings;
     this.portfolioData = this.dataService.portfolioData;
-    this.dataSource.data = Object.values(this.portfolioData).map(
-      (stock: any) => {
-        this.allTotalCostChartData.push({
+    this.portfolioHoldings = this.dataService.portfolioHoldings;
+    this.dataSource.data = this.dataService.portfolioSymbols.map(
+      (symbol: any) => {
+        const stock = this.portfolioData[symbol];
+        const stockInfo = {
           name: stock.symbol,
           value: this.portfolioHoldings[stock.symbol].totalCost,
           sector: stock.profile?.sector || "ETF",
           shortName: stock.shortName,
           longName: stock.longName,
-        });
+        };
+        this.allTotalCostChartData.push(stockInfo);
 
         return {
           ...this.portfolioHoldings[stock.symbol],
@@ -162,15 +159,16 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
           longName: stock.longName,
           shortName: stock.shortName,
           quoteType: stock.quoteType,
-          fiftyTwoWeekLow: stock.fiftyTwoWeekLow,
-          regularMarketPrice: stock.regularMarketPrice,
-          regularMarketChange: stock.regularMarketChange,
-          regularMarketChangePercent: stock.regularMarketChangePercent,
-          preMarketPrice: stock.preMarketPrice,
-          postMarketPrice: stock.postMarketPrice,
+          fiftyTwoWeekLow: stock.fiftyTwoWeekLow.raw,
+          regularMarketPrice: stock.regularMarketPrice.raw,
+          regularMarketChange: stock.regularMarketChange.raw,
+          regularMarketChangePercent: stock.regularMarketChangePercent.raw,
+          preMarketPrice: stock.preMarketPrice.raw,
+          preMarketChangePercent: stock.preMarketChangePercent?.raw || 0,
+          postMarketPrice: stock.postMarketPrice.raw,
+          postMarketChangePercent: stock.postMarketChangePercent?.raw || 0,
         };
-      }
-    );
+      });
     this.dataSource.filterPredicate = (data: any, filter: string) => {
       const dataStrings = [
         data.symbol,
@@ -217,12 +215,12 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
       case 5:
       case 6:
         return this.portfolioHoldings[stock.symbol].unrealizedGain > 0
-          ? "teal"
-          : "chocolate";
+          ? StockPriceColorsEnum.Gain
+          : StockPriceColorsEnum.Lost;
       case 7:
         return this.portfolioHoldings[stock.symbol].dividendIncome > 0
-          ? "teal"
-          : "chocolate";
+          ? StockPriceColorsEnum.Gain
+          : StockPriceColorsEnum.Lost;
       case 10:
         return stock.rating === "buy" ? "teal" : "black";
       default:
@@ -233,7 +231,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
   expandRow(row: any) {
     this.expandedRow = this.expandedRow === row ? null : row;
   }
-  
+
   tradingviewWidgetToggleHandler() {
     this.displayTradingviewWidgets = !this.displayTradingviewWidgets;
   }

@@ -6,14 +6,14 @@
         [tabPanel]="tabPanel"
     >
         <a
-            *ngFor="let link of navLinks; let i = index"
+            *ngFor="let link of navLinks"
             mat-tab-link
             (click)="activeLink = link"
             [active]="activeLink == link"
             [routerLink]="link.route"
         >
-            <mat-icon class="">{{ link.icon }}</mat-icon>
             <span>{{ link.label }}</span>
+            <mat-icon>{{ link.icon }}</mat-icon>
         </a>
     </nav>
 

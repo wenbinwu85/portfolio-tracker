@@ -1,9 +1,10 @@
+<tv-tickers-widget [tape]="true" />
+
 <div class="main-title-container">
   <h1 class="header-title">
-    <span>Ben's Awesome Investment Tracker </span>
+    <span>{{ appName | titlecase }}</span>
     <span class="version">v2.1</span>
   </h1>
-  <tv-tickers-widget [tape]="true" />
 </div>
 
 <div *ngIf="showProgressBar" class="progress-bar-container">
@@ -26,13 +27,13 @@
     mat-button
     color="primary"
     class="refresh-button"
-    (click)="refreshData()"
+    (click)="clearData()"
   >
     <mat-icon>cloud_sync</mat-icon>
-    <span>Refresh Data</span>
+    <span>Clear Cache</span>
   </button>
-
-  <input type="file" accept="text/csv" (change)="handleOpenFile($event)" />
 </nav>
+
+<mat-divider />
 
 <mat-tab-nav-panel #tabPanel />

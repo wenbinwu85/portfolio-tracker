@@ -4,7 +4,7 @@
   [ngStyle]="{'border-left': borderLeftStyle}"
 >
   <img 
-    [src]="getLogoSource(stock)" 
+    [src]="helperService.getTickerLogo(stock.symbol)" 
     alt="Logo" 
     width="auto" 
     height="35" 
@@ -13,9 +13,9 @@
   <div class="symbol-container">
     <mat-card-title class="stock-symbol">
       <span><b>{{ stock?.symbol }}</b></span>
-      <span class="stock-price" [ngStyle]="{'color': stock.regularMarketChange > 0 ? 'teal' : 'chocolate'}">{{ price | currency }}</span>
-      <mat-card-subtitle [ngStyle]="{'color': stock.regularMarketChange > 0 ? 'teal' : 'chocolate'}">
-        ({{ stock.regularMarketChangePercent | percent: '.2' }})
+      <span class="stock-price" [ngStyle]="{'color': helperService.getStockPriceColor(stock.symbol)}">{{ currentPrice | currency }}</span>
+      <mat-card-subtitle [ngStyle]="{'color': helperService.getStockPriceColor(stock.symbol)}">
+        ({{ changePercent | percent: '.2' }})
       </mat-card-subtitle>
     </mat-card-title>
     <mat-card-subtitle class="stock-name">{{ stock?.shortName }}</mat-card-subtitle>

@@ -6,7 +6,7 @@
         (click)="emitSelectedTicker(stock.symbol)"
     >
         <img
-            [src]="getLogoSource(stock)" 
+            [src]="helperService.getTickerLogo(stock.symbol)" 
             alt="Logo" 
             width="auto" 
             height="35"
@@ -21,7 +21,7 @@
             (click)="emitSelectedTicker(etf.symbol)"
         >
             <img
-                [src]="getLogoSource(etf)" 
+                [src]="helperService.getTickerLogo(etf.symbol)" 
                 alt="Logo" 
                 width="auto" 
                 height="35" 

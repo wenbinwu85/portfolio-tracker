@@ -35,7 +35,6 @@ import { StockTickerChipComponent } from "../stock-ticker-chip/stock-ticker-chip
 })
 export class StockPriceInsightComponent implements OnInit {
   @Input({ required: true }) symbol!: string;
-  @Input() showBorder: boolean = false;
   technicalInsights!: any;
   stockData: any;
 
@@ -58,11 +57,8 @@ export class StockPriceInsightComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    this.technicalInsights =
-      this.dataService.portfolioTechnicalInsights[this.symbol];
-    this.stockData = Object.values(this.dataService.portfolioData).filter(
-      (stock: any) => stock.symbol === this.symbol
-    )[0] as any;
+    this.technicalInsights = this.dataService.portfolioTechnicalInsights[this.symbol];
+    this.stockData = this.dataService.portfolioData[this.symbol];
   }
 
   getTableDataSource() {

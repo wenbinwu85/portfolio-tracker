@@ -1,13 +1,13 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { PortfolioDetailsComponent } from "./portfolio-details.component";
+import { mainGuardGuard } from "../../shared/guards/main-guard.guard";
 
 const routes: Routes = [
   {
     path: "",
-    // redirectTo: '/portfolio/price-insights',
-    // pathMatch: 'full',
     component: PortfolioDetailsComponent,
+    canActivateChild: [mainGuardGuard],
     children: [
       {
         path: 'summary',
@@ -52,11 +52,11 @@ const routes: Routes = [
           ),
       },
     ],
-  },
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
 export class PortfolioDetailsRoutingModule {}

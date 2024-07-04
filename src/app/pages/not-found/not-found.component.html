@@ -1,5 +1,14 @@
-<div class="not-found">
-  <div class="error">404</div>
-  <div class="error">Shit, how the hell did you get here?</div>
-  <div class="shrug">¯\_(ツ)_/¯</div>
-</div>
+<ng-template #fourOhFourRef>
+  <div class="not-found">
+    <div class="shrug">¯\_(ツ)_/¯</div>
+    <div class="error">404</div>
+    <div class="error">Shit, how the hell did you get here?</div>
+  </div>
+</ng-template>
+
+<section class="add-margin">
+  <container-card 
+    title="Serious User Error"
+    [mainContentRef]="fourOhFourRef"
+  />
+</section>

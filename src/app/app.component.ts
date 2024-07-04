@@ -11,5 +11,5 @@ import { HeaderComponent } from "./shared/components/header/header.component";
   styleUrl: "./app.component.css",
 })
 export class AppComponent {
-  title = "Ben's Amazing Investment Tracker";
+  title = "Ben's Incredibly Great Financial Assets Report & Tracker";
 }

@@ -14,34 +14,35 @@ export class HelperService {
 
   public getPriceKeyPrefix() {
     const preMarketStart = new Date().setHours(4, 0, 0);
+    const preMarketEnd = new Date().setHours(9, 29, 59)
     const regularMarketStart = new Date().setHours(9, 30, 0);
     const regularMarketClose = new Date().setHours(16, 0, 0);
+    const postMarketStart = new Date().setHours(16, 0, 1);
     const postMarketEnd = new Date().setHours(20, 0, 0);
-    const now = new Date().getTime();
+    const ghostHourStart = new Date().setHours(20, 0, 1);
+    const ghostHourEnd = new Date().setHours(3, 59, 59)
+    const timeNow = new Date().getTime();
 
-    console.log("%c ----- Sanity Check -----", 'background: teal; color: white');
-    const thing = new Date(now).toLocaleTimeString();
-    console.log("time now:", thing);
-    console.log('%c ------------------------', 'background: teal; color: white');
-
-    if (preMarketStart < now && now < regularMarketStart) {
-      console.log("currently in pre-market time");
+    if (preMarketStart <= timeNow && timeNow <= preMarketEnd) {
       return "preMarket";
-    } else if (now > regularMarketStart && now < regularMarketClose) {
-      console.log("currently in regular market time");
+    } else if (regularMarketStart <= timeNow && timeNow <= regularMarketClose) {
       return "regularMarket";
-    } else if (now > regularMarketClose && now < postMarketEnd) {
-      console.log("currently in post market time");
+    } else if (postMarketStart <= timeNow && timeNow <= postMarketEnd) {
       return "postMarket";
-    } else { 
-      console.log("currently in ghost hours")
-      return "postMarket"
+    } else if (ghostHourStart <= timeNow) { 
+      return "postMarket";
+    } else {
+      return 'What the hell?!'
     }
   }
 
   public getStockPriceColor(symbol: string): string { 
     const priceKeyPrefix = this.getPriceKeyPrefix();
-    const price = +this.portfolioData[symbol][priceKeyPrefix + "ChangePercent"];
-    return price > 0 ? StockPriceColorsEnum.Gain : StockPriceColorsEnum.Lost;
+    const priceChangePercent = this.portfolioData[symbol][priceKeyPrefix + "ChangePercent"].raw;
+    return priceChangePercent > 0 ? StockPriceColorsEnum.Gain : StockPriceColorsEnum.Lost;
+  }
+
+  public getTickerLogo(symbol: string) { 
+    return `/assets/ticker-logos/${symbol}.png`;
   }
 }

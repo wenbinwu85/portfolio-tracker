@@ -1,10 +1,11 @@
-import { NgFor, NgIf } from "@angular/common";
+import { NgFor, NgIf, TitleCasePipe } from "@angular/common";
 import { Component, OnInit } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
+import { MatDividerModule } from "@angular/material/divider";
 import { MatIconModule } from "@angular/material/icon";
 import { MatProgressBarModule } from "@angular/material/progress-bar";
 import { MatTabsModule } from "@angular/material/tabs";
-import { RouterLink, RouterOutlet } from "@angular/router";
+import { Router, RouterLink, RouterOutlet } from "@angular/router";
 import { PortfolioDetailsComponent } from "../../../pages/portfolio-details/portfolio-details.component";
 import { PortfolioMainComponent } from "../../../pages/portfolio-main/portfolio-main.component";
 import { ToolboxComponent } from "../../../pages/toolbox/toolbox.component";
@@ -18,6 +19,7 @@ import { TvTickersWidgetComponent } from "../tradingview/tv-tickers-widget/tv-ti
   standalone: true,
   imports: [
     MatButtonModule,
+    MatDividerModule,
     MatIconModule,
     MatProgressBarModule,
     MatTabsModule,
@@ -27,11 +29,13 @@ import { TvTickersWidgetComponent } from "../tradingview/tv-tickers-widget/tv-ti
     PortfolioMainComponent,
     RouterLink,
     RouterOutlet,
+    TitleCasePipe,
     ToolboxComponent,
     TvTickersWidgetComponent,
   ],
 })
 export class HeaderComponent implements OnInit {
+  appName = "Ben's Incredibly Great Financial Assets Report & Tracker";
   navLinks = [
     {
       label: "Home",
@@ -42,10 +46,6 @@ export class HeaderComponent implements OnInit {
       route: "/portfolio",
     },
     {
-      label: "Watchlists",
-      route: "/watchlists",
-    },
-    {
       label: "Toolbox",
       route: "/toolbox",
     },
@@ -53,28 +53,27 @@ export class HeaderComponent implements OnInit {
   activeLink = this.navLinks[0];
   showProgressBar = false;
 
-  constructor(private dataService: DataService) {}
+  constructor(
+    private dataService: DataService,
+    private router: Router,
+  ) { }
 
   ngOnInit() {
     this.dataService.isLoadingData.subscribe((isLoading) => {
       this.showProgressBar = isLoading;
     });
+    if (this.dataService.portfolioSymbols.length > 0 &&
+      Object.keys(this.dataService.portfolioData).length === this.dataService.portfolioSymbols.length
+    ) {
+      this.router.navigateByUrl("/main");
+    }
   }
 
-  refreshData() {
-    this.showProgressBar = true;
-  }
-
-  handleOpenFile(event: any) { 
-    const selectedFile = event.target.files[0];
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      const fileContent = (reader.result as string).split('\n');
-      this.dataService.fetchPortfolioData(fileContent);
-    };
-    reader.readAsText(selectedFile);
-  }
-
-  fetchTickerData() { 
+  clearData() {
+    this.router.navigate(['/'])
+    this.dataService.localStorage?.clear();
+    setTimeout(() => { 
+      window.location.reload();
+    }, 500)
   }
 }

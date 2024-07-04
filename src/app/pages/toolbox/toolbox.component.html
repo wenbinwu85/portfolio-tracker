@@ -5,7 +5,13 @@
       <span>Advanced Chart</span>
     </mat-panel-title>
   </mat-expansion-panel-header>
-  <tv-advanced-chart-widget symbol="SCHD" [showWatchlist]="true" [watchlist]="symbols" />
+  <ng-template #tvChartRef>
+    <tv-advanced-chart-widget symbol="SCHD" [showWatchlist]="true" [watchlist]="symbols" />
+  </ng-template>
+  <container-card 
+    title=""
+    [mainContentRef]="tvChartRef"
+  />
 </mat-expansion-panel>
 
 <mat-expansion-panel [expanded]="false">
@@ -16,42 +22,6 @@
     </mat-panel-title>
   </mat-expansion-panel-header>
   <tv-heatmap-widget />
-</mat-expansion-panel>
-
-<mat-expansion-panel [expanded]="false">
-  <mat-expansion-panel-header>
-    <mat-panel-title>
-      <mat-icon class="">candlestick_chart</mat-icon>
-      <span>Market Charts</span>
-    </mat-panel-title>
-  </mat-expansion-panel-header>
-  <div class="title">
-    <mat-icon>stacked_line_chart</mat-icon>
-    <span>Indices</span>
-  </div>
-  <wallmine-chart [symbol]="'INDEX:GSPC'" [width]="'33.33%'" />
-  <wallmine-chart [symbol]="'INDEX:DJI'" [width]="'33.33%'" />
-  <wallmine-chart [symbol]="'INDEX:IXIC'" [width]="'33.33%'" />
-  
-  <mat-divider />
-  
-  <div class="title">
-    <mat-icon>currency_bitcoin</mat-icon>
-    <span>Cryptos</span>
-  </div>
-  <wallmine-chart [symbol]="'CRYPTO:BTC'" [width]="'33.33%'" />
-  <wallmine-chart [symbol]="'CRYPTO:ETH'" [width]="'33.33%'" />
-  <wallmine-chart [symbol]="'CRYPTO:DOGE'" [width]="'33.33%'" />
-  
-  <mat-divider />
-  
-  <div class="title">
-    <mat-icon>currency_exchange</mat-icon>
-    <span>Forex</span>
-  </div>
-  <wallmine-chart [symbol]="'FOREX:USDCNY'" [width]="'33.33%'" />
-  <wallmine-chart [symbol]="'FOREX:USDJPY'" [width]="'33.33%'" />
-  <wallmine-chart [symbol]="'FOREX:USDEUR'" [width]="'33.33%'" />
 </mat-expansion-panel>
 
 <mat-expansion-panel [expanded]="false">

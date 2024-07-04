@@ -12,7 +12,7 @@ app = cors(app)
 
 
 """
---------- Yahooquery Functions ----------
+--------- Yahooquery ----------
 """
 
 YQ_MODULES = [
@@ -174,13 +174,13 @@ def yq_corporate_events(symbol):
 
 
 """
---------- Quart App Functions ----------
+--------- Quart ----------
 """
 
 
 @app.route('/')
 def index():
-    return '<h1>Portfolio Tracker Backend</h1>'
+    return '<h1>Shoo! Nothing to see here. Go away!</h1>'
 
 
 @app.route('/fetch/stock/<symbol>')
@@ -256,9 +256,10 @@ if __name__ == '__main__':
     # data = yq_corporate_events(symbol) # returns pandas.DataFrame
     # print(data)
 
-    # symbols = ['T', 'vz']
+    symbols = ['T', 'vz']
     # data = fetch_stock_data(symbols)
-    # data = yq_dividend_history(symbols, start_date='05-01-2020') # returns pandas.DataFrame
+    data = yq_dividend_history(symbols, start_date='05-01-2020') # returns pandas.DataFrame
+    data_json = data.to_json()
     # data = yq_technical_insights(symbols)
     # data = yq_corporate_events(symbols) # returns pandas.DataFrame
     # print(data)

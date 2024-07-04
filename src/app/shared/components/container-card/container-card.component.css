@@ -1,0 +1,28 @@
+.container {
+    border: 1px solid slategrey;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    min-height: 4rem;
+}
+
+.container-title {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-footer {
+    padding: 0.5rem 1rem 0.25rem 1rem;
+}
+
+.footer-divider,
+.footer-divider.mat-divider-horizontal {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+mat-card-header {
+    margin-bottom: 0.5rem;
+}

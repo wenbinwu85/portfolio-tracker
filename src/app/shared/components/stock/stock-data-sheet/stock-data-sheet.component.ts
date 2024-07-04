@@ -49,7 +49,7 @@ export class StockDataSheetComponent implements OnInit {
   wallmineLink = "https://wallmine.com/";
   finvizLink = "https://finviz.com/quote.ashx?t=";
   yahooLink = "https://finance.yahoo.com/quote/";
-  seekingalphaLink = "https://seekingalpha.com/symbol/";
+  seekingAlphaLink = "https://seekingalpha.com/symbol/";
   etfdbLink = "https://etfdb.com/etf/";
   etfcomLink = "https://www.etf.com/";
   stockAnalysisLink = "https://www.stockanalysis.com/stocks/";
@@ -71,8 +71,7 @@ export class StockDataSheetComponent implements OnInit {
         ? this.symbol.toUpperCase()
         : this.activatedRoute.snapshot.params["symbol"].toUpperCase();
     });
-    const data = this.dataService.portfolioData;
-    this.stock = data[this.symbol];
+    this.stock =  this.dataService.portfolioData[this.symbol];
     this.position = this.dataService.portfolioHoldings[this.symbol];
     let exchange = this.stock?.exchangeName || "NasdaqGS";
     exchange === "NasdaqGS" ? "Nasdaq" : exchange;
@@ -86,7 +85,7 @@ export class StockDataSheetComponent implements OnInit {
       },
       {
         label: "Seekingalpha",
-        url: this.seekingalphaLink + this.stock.symbol,
+        url: this.seekingAlphaLink + this.stock.symbol,
       },
       {
         label: "Yahoo Finance",
@@ -112,10 +111,8 @@ export class StockDataSheetComponent implements OnInit {
       },
     ];
 
-    this.below50DayAverage =
-      this.stock.fiftyDayAverage > this.stock.previousClose;
-    this.below200DayAverage =
-      this.stock.twoHundredDayAverage > this.stock.previousClose;
+    this.below50DayAverage = this.stock.fiftyDayAverage > this.stock.previousClose;
+    this.below200DayAverage =  this.stock.twoHundredDayAverage > this.stock.previousClose;
   }
 
   selectChart(chatId: number) {

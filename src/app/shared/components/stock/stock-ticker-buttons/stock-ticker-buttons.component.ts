@@ -1,7 +1,17 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { DataService } from '../../../services/data.service';
-import { NgFor, NgIf } from '@angular/common';
+import {
+  NgFor,
+  NgIf,
+} from '@angular/common';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+} from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { DataService } from '../../../services/data.service';
+import { HelperService } from '../../../services/helper.service';
 
 @Component({
   selector: 'stock-ticker-buttons',
@@ -20,22 +30,21 @@ export class StockTickerButtonsComponent implements OnInit {
   sortedStocks: any[] = [];
   sortedEtfs: any[] = [];
 
-  constructor(private dataService: DataService) { }
+  constructor(
+    private dataService: DataService,
+    public helperService: HelperService,
+  ) { }
   
   ngOnInit() { 
     this.sortedStocks = Object.values(this.dataService.portfolioData)
       .filter((a: any) => a.quoteType === "EQUITY")
-      .sort((a: any, b: any) => a["52WeekChange"] - b["52WeekChange"]);
+      .sort((a: any, b: any) => a["52WeekChange"].raw - b["52WeekChange"].raw);
     this.sortedEtfs = Object.values(this.dataService.portfolioData)
       .filter((a: any) => a.quoteType === "ETF")
-      .sort((a: any, b: any) => a["ytdReturn"] - b["ytdReturn"]);
+      .sort((a: any, b: any) => a["ytdReturn"].raw - b["ytdReturn"].raw);
   }
 
-  emitSelectedTicker(ticker: string) {
-    this.selectedTicker.emit(ticker);
-  }
-
-  getLogoSource(ticker: any) {
-    return `/assets/ticker-logos/${ticker.symbol}.png`;
+  emitSelectedTicker(symbol: string) {
+    this.selectedTicker.emit(symbol);
   }
 }

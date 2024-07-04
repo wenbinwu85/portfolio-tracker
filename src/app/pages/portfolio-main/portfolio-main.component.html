@@ -1,79 +1,39 @@
+<ng-template #titleContentRef>
+  <div class="add-flex">
+      <mat-chip-listbox>
+          <mat-chip-option selected (click)="displayChart(1)">Indices</mat-chip-option>
+          <mat-chip-option (click)="displayChart(2)">Cryptos</mat-chip-option>
+          <mat-chip-option (click)="displayChart(3)">Forex</mat-chip-option>
+      </mat-chip-listbox>
+  </div>
+</ng-template>
+
+<ng-template #indexCharts>
+  <div *ngIf="selectedChart === 1">
+    <wallmine-chart [symbol]="'INDEX:GSPC'" [width]="'33.33%'" />
+    <wallmine-chart [symbol]="'INDEX:DJI'" [width]="'33.33%'" />
+    <wallmine-chart [symbol]="'INDEX:IXIC'" [width]="'33.33%'" />
+  </div>
+  <div *ngIf="selectedChart === 2">
+    <wallmine-chart [symbol]="'CRYPTO:BTC'" [width]="'33.33%'" />
+    <wallmine-chart [symbol]="'CRYPTO:ETH'" [width]="'33.33%'" />
+    <wallmine-chart [symbol]="'CRYPTO:DOGE'" [width]="'33.33%'" />
+  </div>
+  <div *ngIf="selectedChart === 3">
+    <wallmine-chart [symbol]="'FOREX:USDCNY'" [width]="'33.33%'" />
+    <wallmine-chart [symbol]="'FOREX:USDJPY'" [width]="'33.33%'" />
+    <wallmine-chart [symbol]="'FOREX:USDEUR'" [width]="'33.33%'" />
+  </div>
+</ng-template>
+
+<section class="add-margin">
+  <container-card
+    title="Market Charts"
+    [mainContentRef]="indexCharts"
+    [titleContentRef]="titleContentRef"
+  />
+</section>
+
 <section class="add-margin">
   <stock-price-movement-charts [expandQuotes]="true"/>
 </section>
-
-<!-- <section class="add-border add-margin">
-  <div>
-    <span class="title">Happening Today</span>
-  </div>
-</section> -->
-
-<mat-expansion-panel [expanded]="false">
-  <mat-expansion-panel-header>
-    <mat-panel-title>
-      <mat-icon>event</mat-icon>
-      <span>Events</span>
-    </mat-panel-title>
-  </mat-expansion-panel-header>
-
-  <section class="add-border main-section">
-    <div class="corp-events-container">
-      <div class="title">Corporate</div>
-      <div *ngFor="let article of corporateEvents" class="add-margin">
-        <info-card 
-          [icon]="'article'" 
-          [value]="article.title"
-          [subtitle]="article.symbol"
-          [date]="article.displayTime"
-          [fontSize]="'1rem'"
-          [color]="'steelblue'"
-          [accentColor]="'steelblue'"
-          [subtitleChip]="true"
-        />
-      </div>
-    </div>
-
-    <mat-divider vertical />
-
-    <div class="grading-events-container">
-      <div class="title">Gradings</div>
-      <div *ngFor="let grading of gradingEvents" class="add-margin">
-        <info-card
-          [icon]="'thumbs_up_down'"
-          [value]="grading.fromGrade + ' --> ' + grading.toGrade"
-          [subtitle]="grading.symbol"
-          [additionalInfo]="grading.firm"
-          [date]="grading.date"
-          [fontSize]="'1rem'"
-          [color]="grading.color"
-          [accentColor]="grading.color"
-          [subtitleChip]="true"
-        />
-      </div>
-    </div>
-
-    <mat-divider vertical />
-
-    <div class="calendar-events-container">
-      <div class="title">Calendar</div>
-      <div class="add-margin day-container">
-        <ng-container *ngFor="let calendarDay of mappedEvents; let i = index">
-          <div class="event-date">{{ calendarDay[0] | date: 'MMMM d, EEEE' }}</div>
-          <div class="event-container">
-            <ng-container *ngFor="let event of calendarDay[1]">
-              <info-card
-                [icon]="event.icon" 
-                [value]="event.name"
-                [subtitle]="event.event"
-                [additionalInfo]="event.detail"
-                [fontSize]="'1rem'" 
-                [color]="event.color"
-                [accentColor]="event.color"
-              />
-            </ng-container>
-          </div>
-        </ng-container>
-      </div>
-    </div>
-  </section>
-</mat-expansion-panel>
