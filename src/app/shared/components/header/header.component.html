@@ -1,10 +1,12 @@
 <tv-tickers-widget [tape]="true" />
 
 <div class="main-title-container">
-  <h1 class="header-title">
-    <span>{{ appName | titlecase }}</span>
-    <span class="version">v2.1</span>
-  </h1>
+  <div class="header-title">
+    <button mat-button (click)="switchAppName()">
+      {{ appName }}
+    </button>
+    <span class="version">v2</span>
+  </div>
 </div>
 
 @if (showProgressBar) {

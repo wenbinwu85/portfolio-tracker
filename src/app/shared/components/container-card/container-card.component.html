@@ -13,7 +13,9 @@
         }
     </mat-card-header>
 
-    <mat-divider></mat-divider>
+    @if (title || titleContentRef) {
+        <mat-divider />
+    }
 
     <mat-card-content>
         <ng-container [ngTemplateOutlet]="mainContentRef" />

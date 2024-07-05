@@ -16,7 +16,7 @@ import { MatDivider } from '@angular/material/divider';
   styleUrl: './container-card.component.css'
 })
 export class ContainerCardComponent {
-  @Input({ required: true }) title: string = 'Card Title';
+  @Input() title?: string;
   @Input({ required: true }) mainContentRef!: TemplateRef<any>;
   @Input() titleContentRef?: TemplateRef<any>;
   @Input() subContentRef?: TemplateRef<any>;
