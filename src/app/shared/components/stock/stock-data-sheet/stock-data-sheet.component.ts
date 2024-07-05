@@ -1,4 +1,4 @@
-import { CommonModule, NgFor, NgIf } from "@angular/common";
+import { CommonModule } from "@angular/common";
 import { Component, Input, OnInit } from "@angular/core";
 import { MatButtonToggleModule } from "@angular/material/button-toggle";
 import { MatChipsModule } from "@angular/material/chips";
@@ -32,8 +32,6 @@ import { StockRecommendationTrendsComponent } from "../stock-recommendation-tren
     MatDividerModule,
     MatIconModule,
     MatSlideToggleModule,
-    NgFor,
-    NgIf,
     StockPriceInsightComponent,
     StockRecommendationTrendsComponent,
     TvAdvancedChartWidgetComponent,

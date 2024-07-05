@@ -1,4 +1,4 @@
-import { CommonModule, NgFor, NgIf } from "@angular/common";
+import { CommonModule } from "@angular/common";
 import { Component, OnInit } from "@angular/core";
 import { MatDividerModule } from "@angular/material/divider";
 import { MatExpansionModule } from "@angular/material/expansion";
@@ -21,8 +21,6 @@ import { DataService } from "../../shared/services/data.service";
     MatExpansionModule,
     MatIconModule,
     MatSlideToggleModule,
-    NgFor,
-    NgIf,
     TvAdvancedChartWidgetComponent,
     TvHeatmapWidgetComponent,
     TvSingleQuoteWidgetComponent,

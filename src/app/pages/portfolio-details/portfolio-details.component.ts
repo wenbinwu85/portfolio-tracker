@@ -1,4 +1,4 @@
-import { CommonModule, NgFor } from "@angular/common";
+import { CommonModule } from "@angular/common";
 import { Component, OnInit } from "@angular/core";
 import { MatDividerModule } from "@angular/material/divider";
 import { MatExpansionModule } from "@angular/material/expansion";
@@ -21,7 +21,6 @@ import { PortfolioSummaryComponent } from "./portfolio-summary/portfolio-summary
     MatExpansionModule,
     MatIconModule,
     MatTabsModule,
-    NgFor,
     NgxChartsModule,
     PortfolioDividendComponent,
     PortfolioFinancialsComponent,

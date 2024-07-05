@@ -9,21 +9,21 @@
 </ng-template>
 
 <ng-template #indexCharts>
-  <div *ngIf="selectedChart === 1">
+  @if (selectedChart === 1) {
     <wallmine-chart [symbol]="'INDEX:GSPC'" [width]="'33.33%'" />
     <wallmine-chart [symbol]="'INDEX:DJI'" [width]="'33.33%'" />
     <wallmine-chart [symbol]="'INDEX:IXIC'" [width]="'33.33%'" />
-  </div>
-  <div *ngIf="selectedChart === 2">
+  }
+  @if (selectedChart === 2) {
     <wallmine-chart [symbol]="'CRYPTO:BTC'" [width]="'33.33%'" />
     <wallmine-chart [symbol]="'CRYPTO:ETH'" [width]="'33.33%'" />
     <wallmine-chart [symbol]="'CRYPTO:DOGE'" [width]="'33.33%'" />
-  </div>
-  <div *ngIf="selectedChart === 3">
+  }
+  @if (selectedChart === 3) {
     <wallmine-chart [symbol]="'FOREX:USDCNY'" [width]="'33.33%'" />
     <wallmine-chart [symbol]="'FOREX:USDJPY'" [width]="'33.33%'" />
     <wallmine-chart [symbol]="'FOREX:USDEUR'" [width]="'33.33%'" />
-  </div>
+  }
 </ng-template>
 
 <section class="add-margin">

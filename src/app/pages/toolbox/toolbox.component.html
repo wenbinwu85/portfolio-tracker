@@ -32,7 +32,9 @@
     </mat-panel-title>
   </mat-expansion-panel-header>
   <div class="wallmine-chart-container">
-    <wallmine-chart *ngFor="let symbol of symbols" [symbol]="symbol" class="wallmine-chart" />
+    @for (symbol of symbols; track $index) {
+      <wallmine-chart [symbol]="symbol" class="wallmine-chart" />
+    }
   </div>
 </mat-expansion-panel>
 
@@ -44,6 +46,8 @@
     </mat-panel-title>
   </mat-expansion-panel-header>
   <div class="wallmine-chart-container">
-    <tv-single-quote-widget *ngFor="let symbol of symbols" [symbol]="symbol" />
+    @for (symbol of symbols; track $index) {
+      <tv-single-quote-widget [symbol]="symbol" />
+    }
   </div>
 </mat-expansion-panel>

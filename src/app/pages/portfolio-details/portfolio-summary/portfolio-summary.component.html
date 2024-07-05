@@ -64,40 +64,45 @@
 </ng-template>
 
 <ng-template #portfolioAllocationsRef>
-  <button
-    *ngIf="showResetButton" 
-    mat-mini-fab 
-    color="warn" 
-    class="reset-button" 
-    (click)="filterBySector({name: 'all'})"
-  >
-    <mat-icon>restart_alt</mat-icon>
-  </button> 
+  @if (showResetButton) {
+    <button
+      mat-mini-fab 
+      color="warn" 
+      class="reset-button" 
+      (click)="filterBySector({name: 'all'})"
+    >
+      <mat-icon>restart_alt</mat-icon>
+    </button> 
+  }
 
   <div class="add-flex">
-    <div *ngIf="pieChartStyle === 'pie'" class="chart-container">
-      <ngx-charts-pie-chart
-        [scheme]="'picnic'"
-        [animations]="true"
-        [results]="sectorsData"
-        [doughnut]="true"
-        [arcWidth]="0.5"
-        [labels]="true"
-        [title]="'Sector Allocations'"
-        [maxLabelLength]="100"
-        (select)="filterBySector($event)"
-      />
-    </div>
-    <div *ngIf="pieChartStyle === 'grid'" class="chart-container">
-      <ngx-charts-pie-grid
-        [scheme]="'picnic'"
-        [animations]="true"
-        [results]="sectorsData"
-        [label]="'Dollars Invested'"
-        [title]="'Sector Allocations'"
-        (select)="filterBySector($event)"
-      />
-    </div>
+    @if (pieChartStyle === 'pie') {
+      <div class="chart-container">
+        <ngx-charts-pie-chart
+          [scheme]="'picnic'"
+          [animations]="true"
+          [results]="sectorsData"
+          [doughnut]="true"
+          [arcWidth]="0.5"
+          [labels]="true"
+          [title]="'Sector Allocations'"
+          [maxLabelLength]="100"
+          (select)="filterBySector($event)"
+        />
+      </div>
+    }
+    @if (pieChartStyle === 'grid') {
+      <div class="chart-container">
+        <ngx-charts-pie-grid
+          [scheme]="'picnic'"
+          [animations]="true"
+          [results]="sectorsData"
+          [label]="'Dollars Invested'"
+          [title]="'Sector Allocations'"
+          (select)="filterBySector($event)"
+        />
+      </div>
+    }
     <div class="chart-container">
       <ngx-charts-bar-vertical
         [scheme]="barChartColorScheme"

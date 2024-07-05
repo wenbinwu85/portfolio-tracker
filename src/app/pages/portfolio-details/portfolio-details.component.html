@@ -5,16 +5,17 @@
         mat-align-tabs="end"
         [tabPanel]="tabPanel"
     >
-        <a
-            *ngFor="let link of navLinks"
-            mat-tab-link
-            (click)="activeLink = link"
-            [active]="activeLink == link"
-            [routerLink]="link.route"
-        >
+        @for (link of navLinks; track link.route;) {
+            <a
+                mat-tab-link
+                (click)="activeLink = link"
+                [active]="activeLink == link"
+                [routerLink]="link.route"
+            >
             <span>{{ link.label }}</span>
             <mat-icon>{{ link.icon }}</mat-icon>
         </a>
+        }
     </nav>
 
     <mat-tab-nav-panel #tabPanel />

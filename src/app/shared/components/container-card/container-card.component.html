@@ -2,14 +2,15 @@
     <mat-card-header>
         <mat-card-title class="container-title">
             {{ title | titlecase }}
-            <ng-container
-                *ngIf="titleContentRef"
-                [ngTemplateOutlet]="titleContentRef"
-            />
+            @if (titleContentRef) {
+                <ng-container [ngTemplateOutlet]="titleContentRef"/>
+            }
         </mat-card-title>
-        <mat-card-subtitle *ngIf="subContentRef">
-            <ng-container [ngTemplateOutlet]="subContentRef" />
-        </mat-card-subtitle>
+        @if (subContentRef) {
+            <mat-card-subtitle>
+                <ng-container [ngTemplateOutlet]="subContentRef" />
+            </mat-card-subtitle>
+        }
     </mat-card-header>
 
     <mat-divider></mat-divider>
@@ -18,8 +19,10 @@
         <ng-container [ngTemplateOutlet]="mainContentRef" />
     </mat-card-content>
 
-    <mat-card-footer *ngIf="footerContentRef" class="container-footer">
-        <mat-divider class="footer-divider" />
-        <ng-container [ngTemplateOutlet]="footerContentRef" />
-    </mat-card-footer>
+    @if (footerContentRef) {
+        <mat-card-footer class="container-footer">
+            <mat-divider class="footer-divider" />
+            <ng-container [ngTemplateOutlet]="footerContentRef" />
+        </mat-card-footer>
+    }
 </mat-card>

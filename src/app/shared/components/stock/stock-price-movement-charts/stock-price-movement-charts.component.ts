@@ -63,6 +63,9 @@ export class StockPriceMovementChartsComponent {
       toggleText: "Post Market Chart",
       priceChange: "postMarketChange",
       priceChangePercent: "postMarketChangePercent",
+    },
+    regularMarket: {
+      text: "Regular Market",
     }
   } as any;
 

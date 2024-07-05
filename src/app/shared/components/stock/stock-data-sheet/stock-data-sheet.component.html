@@ -45,20 +45,22 @@
       [color]="position.unrealizedGain > 0 ? 'teal' : 'chocolate'"
       [accentColor]="position.unrealizedGain > 0 ? 'teal' : 'chocolate'"
     />
-    <info-card
-      *ngIf="position.dividendIncome"
-      icon="payments"
-      [value]="position.dividendIncome"
-      valueType="currency"
-      subtitle="Dividend Income"
-    />
-    <info-card
-      *ngIf="position.yieldOnCost"
-      icon="percentage"
-      [value]="position.yieldOnCost"
-      valueType="percentage"
-      subtitle="Yield On Cost"
-    />
+    @if (position.dividendIncome) {
+      <info-card
+        icon="payments"
+        [value]="position.dividendIncome"
+        valueType="currency"
+        subtitle="Dividend Income"
+      />
+    }
+    @if (position.yieldOnCost) {
+      <info-card
+        icon="percentage"
+        [value]="position.yieldOnCost"
+        valueType="percentage"
+        subtitle="Yield On Cost"
+      />
+    }
   </div>
 </ng-template>
 
@@ -70,37 +72,37 @@
 <ng-template #linkButtonsRef>
   <div class="heading">
     <mat-button-toggle-group class="links">
-      <mat-button-toggle *ngIf="stock.quoteType === 'EQUITY'" value="">
-        <mat-icon>public</mat-icon>
-        <a href="{{ stock.profile.website }}" target="_blank">{{ stock.profile.website }}</a>
-      </mat-button-toggle>
-      <ng-container *ngFor="let link of externalLinks">
+      @if (stock.quoteType === 'EQUITY') {
+        <mat-button-toggle value="">
+          <mat-icon>public</mat-icon>
+          <a href="{{ stock.profile.website }}" target="_blank">{{ stock.profile.website }}</a>
+        </mat-button-toggle>
+      }
+      @for (link of externalLinks; track $index) {
         <mat-button-toggle value="">
           <mat-icon>public</mat-icon>
           <a href="{{ link.url }}" target="_blank"> {{ link.label }}</a>
         </mat-button-toggle>
-      </ng-container>
-  
-      <ng-container *ngIf="stock.quoteType === 'ETF'">
-        <ng-container *ngFor="let link of etfLinks">
+      }
+      @if (stock.quoteType === 'ETF') {
+        @for (link of etfLinks; track $index) {
           <mat-button-toggle value="">
             <mat-icon>public</mat-icon>
             <a href="{{ link.url }}" target="_blank"> {{ link.label }}</a>
           </mat-button-toggle>
-        </ng-container>
-      </ng-container>
+        }
+      }
     </mat-button-toggle-group>
   </div>
 </ng-template>
 
-<ng-template #infoSheetRef>  
-  <div *ngIf="stock">
-    <wallmine-chart *ngIf="selectedChart === 1" [symbol]="stock.symbol" />
-    <tv-advanced-chart-widget
-      *ngIf="selectedChart === 2"
-      [symbol]="stock.symbol"
-      [showWatchlist]="false"
-    />
+<ng-template #infoSheetRef>
+  @if (stock) {
+    @if (selectedChart === 1) {
+      <wallmine-chart [symbol]="stock.symbol" />
+    } @else {
+      <tv-advanced-chart-widget [symbol]="stock.symbol" [showWatchlist]="false" />
+    }
 
     <mat-divider class="divider"/>
 
@@ -113,13 +115,15 @@
       height="484"
       displayMode="compact"
     />
-  </div>
+  }
 
   <mat-divider class="divider"/>
 
-  <div *ngIf="stock.quoteType === 'EQUITY'" class="rec-trends">
-    <stock-recommendation-trends [symbol]="stock.symbol"/>
-  </div>
+  @if (stock.quoteType === 'EQUITY') {
+    <div class="rec-trends">
+      <stock-recommendation-trends [symbol]="stock.symbol"/>
+    </div>
+  }
 </ng-template>
 
 <ng-template #chartToggleRef>

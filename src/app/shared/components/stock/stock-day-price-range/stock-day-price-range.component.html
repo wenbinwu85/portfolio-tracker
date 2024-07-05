@@ -6,8 +6,10 @@
       class="line"
       #line
     ></div>
-    <div *ngIf="showThumbs" class="dot" #startThumb></div>
-    <div *ngIf="showThumbs" class="dot" #endThumb></div>
+    @if (showThumbs) {
+      <div class="dot" #startThumb></div>
+      <div class="dot" #endThumb></div>
+    }
   </div>
   <div class="label-wrapper">
     <mat-chip>${{ min }}</mat-chip>

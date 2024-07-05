@@ -10,7 +10,6 @@ import {
 import {
   StockPriceMovementChartsComponent,
 } from '../../shared/components/stock/stock-price-movement-charts/stock-price-movement-charts.component';
-import { NgIf } from '@angular/common';
 
 @Component({
   selector: "app-portfolio-main",
@@ -20,7 +19,6 @@ import { NgIf } from '@angular/common';
   imports: [
     ContainerCardComponent,
     MatChipsModule,
-    NgIf,
     StockPriceMovementChartsComponent,
     WallmineChartComponent,
   ],

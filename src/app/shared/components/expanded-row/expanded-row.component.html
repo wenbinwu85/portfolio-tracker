@@ -3,9 +3,11 @@
         <div class="widget-container">
             <wallmine-chart [symbol]="stock.symbol" class="chart" />
             <tv-technical-analysis-widget [symbol]="stock.symbol" />
-            <div *ngIf="stock.quoteType === 'EQUITY'" class="rec-trends">
-                <stock-recommendation-trends [symbol]="stock.symbol" />
-            </div>
+            @if (stock.quoteType === 'EQUITY') {
+                <div class="rec-trends">
+                    <stock-recommendation-trends [symbol]="stock.symbol" />
+                </div>
+            }
         </div>
     </mat-tab>
 

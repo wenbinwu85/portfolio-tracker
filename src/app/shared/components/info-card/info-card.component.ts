@@ -1,7 +1,6 @@
 import {
   CommonModule,
   CurrencyPipe,
-  NgIf,
   NgStyle,
   PercentPipe,
 } from '@angular/common';
@@ -25,7 +24,6 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatDividerModule,
     MatIconModule,
     MatTooltipModule,
-    NgIf,
     NgStyle,
     PercentPipe,
     StockTickerChipComponent,

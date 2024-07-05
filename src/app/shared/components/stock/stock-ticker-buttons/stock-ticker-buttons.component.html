@@ -1,32 +1,34 @@
 <div class="logos-container">
-    <button
-        *ngFor="let stock of sortedStocks" 
-        mat-button 
-        class="ticker-button" 
-        (click)="emitSelectedTicker(stock.symbol)"
-    >
-        <img
-            [src]="helperService.getTickerLogo(stock.symbol)" 
-            alt="Logo" 
-            width="auto" 
-            height="35"
-        />
-        <div>{{ stock.symbol }}</div>
-    </button>
-    <ng-container *ngIf="showETF">
+    @for (stock of sortedStocks; track $index) {
         <button
-            *ngFor="let etf of sortedEtfs" 
             mat-button 
             class="ticker-button" 
-            (click)="emitSelectedTicker(etf.symbol)"
+            (click)="emitSelectedTicker(stock.symbol)"
         >
             <img
-                [src]="helperService.getTickerLogo(etf.symbol)" 
+                [src]="helperService.getTickerLogo(stock.symbol)" 
                 alt="Logo" 
                 width="auto" 
-                height="35" 
+                height="35"
             />
-            <div>{{ etf.symbol }}</div>
+            <div>{{ stock.symbol }}</div>
         </button>
-    </ng-container>
+    }
+    @if (showETF) {
+        @for (etf of sortedEtfs; track $index) {
+            <button
+                mat-button 
+                class="ticker-button"
+                (click)="emitSelectedTicker(etf.symbol)"
+            >
+                <img
+                    [src]="helperService.getTickerLogo(etf.symbol)" 
+                    alt="Logo" 
+                    width="auto" 
+                    height="35" 
+                />
+                <div>{{ etf.symbol }}</div>
+            </button>
+        }
+    }
 </div>

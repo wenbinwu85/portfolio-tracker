@@ -7,8 +7,6 @@ import {
 } from "@angular/animations";
 import {
   CurrencyPipe,
-  NgFor,
-  NgIf,
   NgStyle,
   TitleCasePipe,
 } from "@angular/common";
@@ -56,8 +54,6 @@ import { DataService } from "../../../shared/services/data.service";
     MatSlideToggleModule,
     MatSortModule,
     MatTableModule,
-    NgFor,
-    NgIf,
     NgStyle,
     NgxChartsModule,
     StockNameCardComponent,

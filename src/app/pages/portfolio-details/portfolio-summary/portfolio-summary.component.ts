@@ -1,4 +1,4 @@
-import { CurrencyPipe, NgIf, PercentPipe } from "@angular/common";
+import { CurrencyPipe, PercentPipe } from "@angular/common";
 import { Component, OnInit } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
 import { MatChipsModule } from "@angular/material/chips";
@@ -28,7 +28,6 @@ import { DataService } from "../../../shared/services/data.service";
     MatIconModule,
     MatSliderModule,
     MatTooltipModule,
-    NgIf,
     NgxChartsModule,
     PercentPipe,
   ],

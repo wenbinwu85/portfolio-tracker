@@ -1,4 +1,3 @@
-import { NgFor, NgIf } from "@angular/common";
 import { AfterViewInit, Component, OnInit, ViewChild } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
 import { MatDividerModule } from "@angular/material/divider";
@@ -31,8 +30,6 @@ import { DataService } from "../../../shared/services/data.service";
     MatIconModule,
     MatSortModule,
     MatTableModule,
-    NgFor,
-    NgIf,
     NgxChartsModule,
     StockNameCardComponent,
   ],

@@ -1,4 +1,4 @@
-import { NgIf, CommonModule } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import {
   AfterViewInit,
   Component,
@@ -16,7 +16,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   templateUrl: './stock-day-price-range.component.html',
   styleUrls: ['./stock-day-price-range.component.css'],
   standalone: true,
-  imports: [CommonModule, MatTooltipModule, NgIf, MatChipsModule],
+  imports: [CommonModule, MatTooltipModule, MatChipsModule],
 })
 export class StockDayPriceRangeComponent implements OnInit, AfterViewInit {
   @Input({ required: true }) min!: number;

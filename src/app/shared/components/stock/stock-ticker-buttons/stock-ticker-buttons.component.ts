@@ -1,8 +1,4 @@
 import {
-  NgFor,
-  NgIf,
-} from '@angular/common';
-import {
   Component,
   EventEmitter,
   Input,
@@ -16,11 +12,7 @@ import { HelperService } from '../../../services/helper.service';
 @Component({
   selector: 'stock-ticker-buttons',
   standalone: true,
-  imports: [
-    NgFor,
-    NgIf,
-    MatButtonModule,
-  ],
+  imports: [MatButtonModule],
   templateUrl: './stock-ticker-buttons.component.html',
   styleUrl: './stock-ticker-buttons.component.css'
 })

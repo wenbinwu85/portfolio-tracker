@@ -1,7 +1,6 @@
 import {
   AsyncPipe,
   CurrencyPipe,
-  NgIf,
   NgStyle,
   PercentPipe,
 } from "@angular/common";
@@ -24,7 +23,6 @@ import { StockTickerChipComponent } from "../stock-ticker-chip/stock-ticker-chip
     MatDividerModule,
     MatIconModule,
     MatTableModule,
-    NgIf,
     NgStyle,
     PercentPipe,
     StockDayPriceRangeComponent,

@@ -1,4 +1,4 @@
-import { NgFor, NgIf, TitleCasePipe } from "@angular/common";
+import { TitleCasePipe } from "@angular/common";
 import { Component, OnInit } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
 import { MatDividerModule } from "@angular/material/divider";
@@ -23,8 +23,6 @@ import { TvTickersWidgetComponent } from "../tradingview/tv-tickers-widget/tv-ti
     MatIconModule,
     MatProgressBarModule,
     MatTabsModule,
-    NgFor,
-    NgIf,
     PortfolioDetailsComponent,
     PortfolioMainComponent,
     RouterLink,

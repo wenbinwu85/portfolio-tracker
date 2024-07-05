@@ -1,4 +1,4 @@
-import { CurrencyPipe, NgFor, NgIf, NgStyle } from "@angular/common";
+import { CurrencyPipe, NgStyle } from "@angular/common";
 import {
   AfterViewInit,
   Component,
@@ -28,8 +28,6 @@ import { DataService } from "../../../shared/services/data.service";
     MatDividerModule,
     MatSortModule,
     MatTableModule,
-    NgFor,
-    NgIf,
     NgStyle,
     StockNameCardComponent,
   ],

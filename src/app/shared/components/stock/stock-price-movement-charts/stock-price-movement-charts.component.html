@@ -9,93 +9,100 @@
 
 <ng-template #subContentRef>    
     <div class="subcontent-wrapper">
-        <div *ngIf="!prefix.startsWith('pre')" class="add-flex">
-            <span>Regular Market </span>
-            <mat-icon>schedule</mat-icon>
-            <span [ngStyle]="{ color: getDayPriceChangeColor() }">
-                {{ priceChange | currency }}
-            </span>
-            <span [ngStyle]="{ color: getDayPriceChangeColor() }">
-                ({{ priceChange / portfolioMarketValue | percent: '.4' }})
-            </span>
-        </div>
-
-        <div *ngIf="!prefix.startsWith('regular')" class="add-flex">
-            <span>{{ prePostHourText }}</span>
-            <mat-icon>{{ prePostHourIcon }}</mat-icon>
-            <span [ngStyle]="{ color: getPrePostPriceChangeColor() }">
-                {{ prePostPriceChange | currency }}
-            </span>
-            <span [ngStyle]="{ color: getPrePostPriceChangeColor() }">
-                ({{ prePostPriceChange / portfolioMarketValue | percent: '.4' }})
-            </span>
-        </div>
-
-        <mat-slide-toggle *ngIf="prefix.startsWith('pre')" (toggleChange)="changeChart()">
-            <span>{{ chartConfigs.preMarket.toggleText }}</span>
-        </mat-slide-toggle>
-
-        <mat-slide-toggle *ngIf="prefix.startsWith('post')" (toggleChange)="changeChart()">
-            <span>{{ chartConfigs.postMarket.toggleText }}</span>
-        </mat-slide-toggle>
+        @if (!prefix.startsWith('pre')) {
+            <div class="add-flex">
+                <span>Regular Market </span>
+                <mat-icon>schedule</mat-icon>
+                <span [ngStyle]="{ color: getDayPriceChangeColor() }">
+                    {{ priceChange | currency }}
+                </span>
+                <span [ngStyle]="{ color: getDayPriceChangeColor() }">
+                    ({{ priceChange / portfolioMarketValue | percent: '.4' }})
+                </span>
+            </div>
+        }
+        @if (!prefix.startsWith('regular')) {
+            <div class="add-flex">
+                <span>{{ prePostHourText }}</span>
+                <mat-icon>{{ prePostHourIcon }}</mat-icon>
+                <span [ngStyle]="{ color: getPrePostPriceChangeColor() }">
+                    {{ prePostPriceChange | currency }}
+                </span>
+                <span [ngStyle]="{ color: getPrePostPriceChangeColor() }">
+                    ({{ prePostPriceChange / portfolioMarketValue | percent: '.4' }})
+                </span>
+            </div>
+        }
+        @if (prefix.startsWith('pre')) {
+            <mat-slide-toggle (toggleChange)="changeChart()">
+                <span>{{ chartConfigs.preMarket.toggleText }}</span>
+            </mat-slide-toggle>
+        }
+        @if (prefix.startsWith('post')) {
+            <mat-slide-toggle (toggleChange)="changeChart()">
+                <span>{{ chartConfigs.postMarket.toggleText }}</span>
+            </mat-slide-toggle>
+        }
     </div>
 </ng-template>
 
 <ng-template #ValueChangeRef>
-    <div *ngIf="selectedChart === 1" class="add-flex">
-        <div class="chart-container">
-            <ngx-charts-bar-vertical
-                [results]="priceChangeChartData"
-                [xAxis]="true"
-                [yAxis]="true"
-                [showXAxisLabel]="true"
-                [showYAxisLabel]="true"
-                [rotateXAxisTicks]="true"
-                [animations]="true"
-                [showDataLabel]="true"
-                [yAxisLabel]="'Price Change %'"
-                [customColors]="getPriceChangeChartColor"
-            >
-                <ng-template #tooltipTemplate let-model="model">
-                    <tv-mini-chart-widget [symbol]="model.name" [theme]="'dark'"/>
-                    <mat-divider style="margin: none; border-top-color: slategrey"/>
-                    <span>{{ chartConfigs[prefix].text }} : {{ model.name }} </span>
-                    <span>{{ model.value.toFixed(2) }}%</span>
-                </ng-template>
-            </ngx-charts-bar-vertical>
+    @if (selectedChart === 1) {
+        <div class="add-flex">
+            <div class="chart-container">
+                <ngx-charts-bar-vertical
+                    [results]="priceChangeChartData"
+                    [xAxis]="true"
+                    [yAxis]="true"
+                    [showXAxisLabel]="true"
+                    [showYAxisLabel]="true"
+                    [rotateXAxisTicks]="true"
+                    [animations]="true"
+                    [showDataLabel]="true"
+                    [yAxisLabel]="'Price Change %'"
+                    [customColors]="getPriceChangeChartColor"
+                >
+                    <ng-template #tooltipTemplate let-model="model">
+                        <tv-mini-chart-widget [symbol]="model.name" [theme]="'dark'"/>
+                        <mat-divider style="margin: none; border-top-color: slategrey"/>
+                        <span>{{ chartConfigs[prefix].text }} : {{ model.name }} </span>
+                        <span>{{ model.value.toFixed(2) }}%</span>
+                    </ng-template>
+                </ngx-charts-bar-vertical>
+            </div>
+            <div class="chart-container">
+                <ngx-charts-bar-vertical-stacked
+                    [scheme]="priceRangeColorScheme"
+                    [results]="priceRangeChartData"
+                    [xAxis]="true"
+                    [yAxis]="true"
+                    [showXAxisLabel]="true"
+                    [showYAxisLabel]="true"
+                    [rotateXAxisTicks]="true"
+                    [animations]="true"
+                    [yAxisLabel]="'Market Day Price Range $'"
+                />
+            </div>
         </div>
-        <div class="chart-container">
-            <ngx-charts-bar-vertical-stacked
-                [scheme]="priceRangeColorScheme"
-                [results]="priceRangeChartData"
-                [xAxis]="true"
-                [yAxis]="true"
-                [showXAxisLabel]="true"
-                [showYAxisLabel]="true"
-                [rotateXAxisTicks]="true"
-                [animations]="true"
-                [yAxisLabel]="'Market Day Price Range $'"
-            />
+    }
+    @if (selectedChart === 2) {
+        <div class="add-flex">
+            <div class="chart-container">
+                <ngx-charts-bar-vertical
+                    [scheme]="betaColorScheme"
+                    [schemeType]="scaleType.Linear"
+                    [results]="betaChartData"
+                    [xAxis]="true"
+                    [yAxis]="true"
+                    [showXAxisLabel]="true"
+                    [showYAxisLabel]="true"
+                    [rotateXAxisTicks]="true"
+                    [animations]="true"
+                    [yAxisLabel]="'Beta'"
+                />
+            </div>
         </div>
-    </div>
-
-    <div *ngIf="selectedChart === 2" class="add-flex">
-        <div class="chart-container">
-            <ngx-charts-bar-vertical
-                [scheme]="betaColorScheme"
-                [schemeType]="scaleType.Linear"
-                [results]="betaChartData"
-                [xAxis]="true"
-                [yAxis]="true"
-                [showXAxisLabel]="true"
-                [showYAxisLabel]="true"
-                [rotateXAxisTicks]="true"
-                [animations]="true"
-                [yAxisLabel]="'Beta'"
-            />
-        </div>
-    </div>
-
+    }
     <mat-expansion-panel [expanded]="expandQuotes">
         <mat-expansion-panel-header>
             <mat-panel-title>
