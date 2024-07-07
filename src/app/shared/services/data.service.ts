@@ -30,8 +30,8 @@ export class DataService {
   };
   private backendUrl = "http://127.0.0.1:5000";
   public localStorage: Storage | undefined;
-  public portfolioHoldings: any = {};
   public portfolioSymbols: any = [];
+  public portfolioHoldings: any = {};
   public portfolioData: any = {};
   public portfolioTechnicalInsights: any = {};
   public portfolioDividendHistory: any = {};
@@ -66,6 +66,7 @@ export class DataService {
       "background: teal; color: white"
     );
     console.log("Symbols:", this.portfolioSymbols);
+    console.log("Holdings:", this.portfolioSymbols.length);
     let thing = Object.keys(this.portfolioData).length === this.portfolioSymbols.length;
     console.log("Portfolio data length equal to symbols length:", thing);
     thing = Object.keys(this.portfolioTechnicalInsights).length === this.portfolioSymbols.length;
@@ -110,6 +111,8 @@ export class DataService {
 
   public generatePortfolioData(fileContent: string[]) {
     this.isLoadingData.next(true);
+
+    this.setItem('fileContent', fileContent);
 
     this.portfolioHoldings.positionsHeld = 0;
     this.portfolioHoldings.marketValue = 0;
@@ -178,10 +181,25 @@ export class DataService {
       this.getPortfolioDividendHistory();
       this.isLoadingData.next(false);
       this.sanityCheck();
-      if (this.portfolioHoldings && this.portfolioData && this.portfolioTechnicalInsights && this.portfolioDividendHistory) { 
-        this.router.navigate(['/main']);
+      if (this.portfolioSymbols.length > 0 &&
+        Object.keys(this.portfolioData).length === this.portfolioSymbols.length &&
+        Object.keys(this.portfolioTechnicalInsights).length === this.portfolioSymbols.length
+      ) {
+        this.router.navigateByUrl("/main");
       }
     });
+  }
+
+  refreshPortfolioData() {
+    this.portfolioSymbols = [];
+    this.portfolioHoldings = {};
+    this.portfolioData = {};
+    this.portfolioTechnicalInsights = {};
+    this.portfolioDividendHistory = {};
+
+    const fileContentCache = this.getItem('fileContent');
+    this.localStorage?.clear();
+    this.generatePortfolioData(fileContentCache);
   }
 
   public getHasPortfolioData(): boolean { 

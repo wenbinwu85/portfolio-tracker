@@ -29,9 +29,14 @@ tv-tickers-widget {
   align-items: center;
 }
 
-.refresh-button {
-  margin-right: 1.5rem;
+.action-button {
+  margin-right: 1rem;
+
+  .mat-icon {
+    margin-right: 0;
+  }
 }
+
 
 .progress-bar-container {
   margin: 1.5rem;

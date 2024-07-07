@@ -63,7 +63,8 @@ export class HeaderComponent implements OnInit {
       this.showProgressBar = isLoading;
     });
     if (this.dataService.portfolioSymbols.length > 0 &&
-      Object.keys(this.dataService.portfolioData).length === this.dataService.portfolioSymbols.length
+      Object.keys(this.dataService.portfolioData).length === this.dataService.portfolioSymbols.length &&
+      Object.keys(this.dataService.portfolioTechnicalInsights).length === this.dataService.portfolioSymbols.length
     ) {
       this.router.navigateByUrl("/main");
     }
@@ -79,5 +80,9 @@ export class HeaderComponent implements OnInit {
     setTimeout(() => { 
       window.location.reload();
     }, 500)
+  }
+
+  refreshData() {
+    this.dataService.refreshPortfolioData();
   }
 }

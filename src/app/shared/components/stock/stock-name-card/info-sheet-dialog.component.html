@@ -1,0 +1,14 @@
+<div>
+    <h1 mat-dialog-title>{{ data.longName }}</h1>
+    <mat-dialog-actions align="end">
+        <button mat-button mat-dialog-close>
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-dialog-actions>
+</div>
+
+<mat-divider />
+
+<mat-dialog-content class="mat-typography">
+    <stock-data-sheet [symbol]="data.symbol" />
+</mat-dialog-content>

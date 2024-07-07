@@ -19,7 +19,8 @@ export class PortfolioFileLoaderComponent {
     private router: Router,
   ) {
     if (this.dataService.portfolioSymbols.length > 0 &&
-      Object.keys(this.dataService.portfolioData).length === this.dataService.portfolioSymbols.length
+      Object.keys(this.dataService.portfolioData).length === this.dataService.portfolioSymbols.length &&
+      Object.keys(this.dataService.portfolioTechnicalInsights).length === this.dataService.portfolioSymbols.length
     ) {
       this.router.navigateByUrl("/main");
     }

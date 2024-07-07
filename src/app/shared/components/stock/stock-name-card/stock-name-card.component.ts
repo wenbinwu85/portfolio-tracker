@@ -1,3 +1,4 @@
+import { MatIconModule } from '@angular/material/icon';
 import {
   CommonModule,
   CurrencyPipe,
@@ -17,6 +18,7 @@ import {
 import { HelperService } from "../../../services/helper.service";
 import { StockDataSheetComponent } from "../stock-data-sheet/stock-data-sheet.component";
 import { StockPriceColorsEnum } from "../../../model/colors.model";
+import { MatDividerModule } from '@angular/material/divider';
 
 @Component({
   selector: "stock-name-card",
@@ -73,19 +75,19 @@ export class StockNameCardComponent {
 }
 
 @Component({
-  selector: "info-sheet",
-  template: `
-    <div [ngStyle]="{display: 'flex', 'justify-content': 'space-between', 'margin-right': '1rem'}">
-      <h1 mat-dialog-title>{{ data.longName }}</h1>
-      <mat-dialog-actions align="end">
-        <button mat-button mat-dialog-close>X</button>
-      </mat-dialog-actions>
-    </div>
-    <mat-dialog-content class="mat-typography">
-      <stock-data-sheet [symbol]="data.symbol" />
-    </mat-dialog-content>`,
+  selector: "info-sheet-dialog",
+  styleUrl: "./info-sheet-dialog.component.css",
+  templateUrl: "./info-sheet-dialog.component.html",
   standalone: true,
-  imports: [MatDialogModule, MatButtonModule, MatDialogTitle, StockDataSheetComponent, NgStyle],
+  imports: [
+    MatButtonModule,
+    MatDialogModule,
+    MatDividerModule,
+    MatDialogTitle,
+    MatIconModule,
+    NgStyle,
+    StockDataSheetComponent,
+  ],
 })
 export class InfoSheetDialog {
   constructor(

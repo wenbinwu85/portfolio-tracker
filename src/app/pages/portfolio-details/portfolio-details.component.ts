@@ -36,12 +36,12 @@ import { PortfolioSummaryComponent } from "./portfolio-summary/portfolio-summary
 export class PortfolioDetailsComponent implements OnInit {
   navLinks = [
     {
-      label: "Portfolio Summary",
+      label: "Summary",
       route: "summary",
       icon: "summarize",
     },
     {
-      label: "Portfolio Holdings",
+      label: "Holdings",
       route: "holdings",
       icon: "list_alt",
     },
@@ -56,7 +56,7 @@ export class PortfolioDetailsComponent implements OnInit {
       icon: "paid",
     },
     {
-      label: "Financial Metrics",
+      label: "Financial Stats",
       route: "financials",
       icon: "query_stats",
     },
