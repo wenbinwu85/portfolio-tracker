@@ -1,10 +1,10 @@
 <mat-card [ngStyle]="{'border': borderStyle, 'border-left': borderLeftStyle}">
     <div class="flex-between">
-        @if (icon) {
-            <mat-icon>{{ icon }}</mat-icon>
-        }
         @if (subtitle && !subtitleChip) {
             <mat-card-subtitle>{{ subtitle }}</mat-card-subtitle>
+        }
+        @if (icon) {
+            <mat-icon>{{ icon }}</mat-icon>
         }
         @if (subtitle && subtitleChip) {
             <stock-ticker-chip 

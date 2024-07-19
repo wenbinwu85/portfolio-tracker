@@ -48,7 +48,7 @@ export class PortfolioSummaryComponent implements OnInit {
   allYocData: any[] = [];
   portfolioPercentBarChartData: any = [];
   barChartColorScheme = { domain: ["slategrey"] } as Color;
-  stackedBarChartColorScheme = { domain: ["slategrey", "skyblue"] } as Color;
+  stackedBarChartColorScheme = { domain: ["slategrey", "chocolate"] } as Color;
   marketValueBarChartData: any[] = [];
   unrealizedGainBarChartData: any[] = [];
   dividendBarChartData: any[] = [];
@@ -63,7 +63,7 @@ export class PortfolioSummaryComponent implements OnInit {
     this.portfolioHoldings = this.dataService.portfolioHoldings;
     this.portfolioData = this.dataService.portfolioData;
     this.passiveIncomeGoalPercentage = this.portfolioHoldings.dividendIncome / this.passiveIncomeTarget;
-    this.portfolioValueTarget = this.passiveIncomeTarget / this.portfolioHoldings?.yieldOnCost;
+    this.portfolioValueTarget = this.passiveIncomeTarget / this.portfolioHoldings.yieldOnCost;
     this.portfolioValueGoalPercentage = this.portfolioHoldings.marketValue / this.portfolioValueTarget;
 
     let market_sectors: any = {};

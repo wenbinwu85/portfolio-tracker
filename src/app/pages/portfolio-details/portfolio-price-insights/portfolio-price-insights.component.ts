@@ -82,6 +82,9 @@ export class PortfolioPriceInsightsComponent implements OnInit {
     this.sp500FiftyTwoWeekChange = this.sortedStocks[0].SandP52WeekChange.raw;
     this.selectedStock = this.dataService.portfolioData[this.selectedSymbol];
 
+    console.dir(this.sortedStocks)
+    console.log(this.sortedStocks)
+
     this.sortedStocks.forEach((stock: any) => {
       this.fiftyDayMAChartData.push({
         name: stock.symbol,

@@ -4,12 +4,16 @@
   [ngStyle]="{'border-left': borderLeftStyle}"
 >
   <img 
-    [src]="helperService.getTickerLogo(stock.symbol)" 
+    [src]="helperService.getTickerLogo(stock.symbol)"
     alt="Logo"
     width="auto"
     height="35"
     class="stock-logo"
   />
+  <!-- <img 
+    [src]="getLogoUrl(stock)"
+    class="stock-logo"
+  /> -->
   <div class="symbol-container">
     <mat-card-title class="stock-symbol">
       <span><b>{{ stock?.symbol }}</b></span>

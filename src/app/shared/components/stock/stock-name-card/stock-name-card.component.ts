@@ -56,6 +56,14 @@ export class StockNameCardComponent {
     this.borderLeftStyle = '0.3rem solid ' + (this.stock.unrealizedGain > 0 ? StockPriceColorsEnum.Gain : StockPriceColorsEnum.Lost);
   }
 
+  getLogoUrl(stock: any) { 
+    const api_base_url = 'https://img.logo.dev/';
+    const stock_website = stock.website.substring(8);
+    const api_token_param = '?token=pk_GM6P82BASrydQzJSS_Yc8g&size=35&format=png';
+    const logo_url = api_base_url + stock_website + api_token_param;
+    return logo_url;
+  }
+
   openInfoSheet() {
     const dialogRef: MatDialogRef<any> = this.dialog.open(InfoSheetDialog, {
       height: "100%",

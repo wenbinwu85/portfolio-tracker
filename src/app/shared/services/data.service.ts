@@ -47,6 +47,22 @@ export class DataService {
     this.generatePortfolioDataFromLocalStorage();
   }
 
+  get marketState(): string { 
+    return this.portfolioData['AAPL']?.marketState;
+  }
+
+  get portfolioDataArray(): any[] { 
+    return Object.values(this.portfolioData);
+  }
+
+  get portfolioHoldingsArray(): any[] { 
+    return Object.values(this.portfolioHoldings);
+  }
+
+  get portfolioDividendHistoryArray(): any[] { 
+    return Object.values(this.portfolioDividendHistory);
+  }
+
   private error(error: HttpErrorResponse): Observable<any> {
     let errorMessage =
       error.error instanceof ErrorEvent

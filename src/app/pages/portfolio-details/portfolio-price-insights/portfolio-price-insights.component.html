@@ -50,23 +50,6 @@
                 >
                 </ngx-charts-bar-vertical>
             </div> 
-            <div class="chart-container">
-                <ngx-charts-bar-vertical
-                    [scheme]="performanceChartColorScheme"
-                    [results]="fiftyTwoWeekChangeChartData"
-                    [animations]="true"
-                    [xAxis]="true"
-                    [yAxis]="true"
-                    [showXAxisLabel]="true"
-                    [showYAxisLabel]="true"
-                    [legend]="false"
-                    [rotateXAxisTicks]="true"
-                    [yAxisLabel]="'52 Week Change %'"
-                    [activeEntries]="['S&P 500']"
-                    [customColors]="[selectedSymbolColor, {name:'S&P 500', value: 'gold'}]"
-                >
-                </ngx-charts-bar-vertical>
-            </div>
         </div>
         <div class="add-flex">
             <div class="chart-container">
@@ -84,7 +67,7 @@
                     [customColors]="[selectedSymbolColor]"
                 >
                 </ngx-charts-bar-vertical>
-            </div> 
+            </div>
             <div class="chart-container">
                 <ngx-charts-bar-vertical
                     [scheme]="fiftyTwoWeekChartColorScheme"
@@ -98,6 +81,25 @@
                     [rotateXAxisTicks]="true"
                     [yAxisLabel]="'Price % below 52 week high'"
                     [customColors]="[selectedSymbolColor]"
+                >
+                </ngx-charts-bar-vertical>
+            </div>
+        </div>
+        <div class="add-flex">
+            <div class="chart-container">
+                <ngx-charts-bar-vertical
+                    [scheme]="performanceChartColorScheme"
+                    [results]="fiftyTwoWeekChangeChartData"
+                    [animations]="true"
+                    [xAxis]="true"
+                    [yAxis]="true"
+                    [showXAxisLabel]="true"
+                    [showYAxisLabel]="true"
+                    [legend]="false"
+                    [rotateXAxisTicks]="true"
+                    [yAxisLabel]="'52 Week Change %'"
+                    [activeEntries]="['S&P 500']"
+                    [customColors]="[selectedSymbolColor, {name:'S&P 500', value: 'gold'}]"
                 >
                 </ngx-charts-bar-vertical>
             </div>

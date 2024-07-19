@@ -155,6 +155,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
           longName: stock.longName,
           shortName: stock.shortName,
           quoteType: stock.quoteType,
+          website: stock.profile?.website || '',
           fiftyTwoWeekLow: stock.fiftyTwoWeekLow.raw,
           regularMarketPrice: stock.regularMarketPrice.raw,
           regularMarketChange: stock.regularMarketChange.raw,

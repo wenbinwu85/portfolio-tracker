@@ -37,7 +37,7 @@ export class InfoCardComponent implements OnInit {
   @Input() date?: Date | string;
   @Input() additionalInfo?: string | number;
   @Input() valueType?: string = 'number';
-  @Input() color?: string = 'steel';
+  @Input() color?: string;
   @Input() accentColor?: string;
   @Input() fontSize?: string = '2rem';
   borderStyle = ''
@@ -48,7 +48,8 @@ export class InfoCardComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
-    this.borderLeftStyle = '0.3rem solid ' + (this.accentColor ? this.accentColor : 'steelblue');
+    this.borderStyle = '1px solid gainsboro';
+    this.borderLeftStyle = '0.5rem solid ' + (this.accentColor ? this.accentColor : 'slategrey');
     if (this.subtitleChip) { 
       this.stock = this.dataService.portfolioData[this.subtitle];
       this.tickerChipTooltip = 'Fwd PE: ' + this.stock.forwardPE.toFixed(2) + ' Fwd EPS:' + this.stock.forwardEps.toFixed(2);
@@ -57,7 +58,7 @@ export class InfoCardComponent implements OnInit {
 
   getStyle() {
     return {
-      color: this.color,
+      color: this.color || 'slategrey',
       'font-size': this.fontSize,
     };
   }
