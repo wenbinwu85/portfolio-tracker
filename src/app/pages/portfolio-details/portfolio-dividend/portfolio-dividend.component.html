@@ -13,8 +13,6 @@
   </section>
 }
 
-<mat-divider />
-
 <ng-template #dividendIncomeProjectionRef>
   <div class="add-flex">
     <div class="chart-container dividend-income">
@@ -114,31 +112,38 @@
   [mainContentRef]="dividendHistoryRef"
 />
 
-<table
-  mat-table
-  matSort
-  matSortActive="yieldOnCost"
-  matSortDirection="desc"
-  [dataSource]="dataSource"
->
-  @for (column of columnDefs; track column; let cidx = $index) {
-    <div [matColumnDef]="column">
-      <th *matHeaderCellDef mat-header-cell mat-sort-header>
-        {{ headers[cidx] }}
-      </th>
-      <td mat-cell *matCellDef="let stock">
-        @if (cidx === 0) {
-          <div class="table-col-0">
-            <stock-name-card [stock]="stock" />
-          </div>
-        } @else {
-          <span (click)="updateChart(stock.symbol)">
-            {{ cells[cidx](stock) }}
-          </span>
-        }
-      </td>
-    </div>
-  }
-  <tr mat-header-row *matHeaderRowDef="columnDefs; sticky: true"></tr>
-  <tr mat-row *matRowDef="let row; columns: columnDefs"></tr>
-</table>
+<ng-template #dividendTableRef>
+  <table
+    mat-table
+    matSort
+    matSortActive="yieldOnCost"
+    matSortDirection="desc"
+    [dataSource]="dataSource"
+  >
+    @for (column of columnDefs; track column; let cidx = $index) {
+      <div [matColumnDef]="column">
+        <th *matHeaderCellDef mat-header-cell mat-sort-header>
+          {{ headers[cidx] }}
+        </th>
+        <td mat-cell *matCellDef="let stock">
+          @if (cidx === 0) {
+            <div class="table-col-0">
+              <stock-name-card [stock]="stock" />
+            </div>
+          } @else {
+            <span (click)="updateChart(stock.symbol)">
+              {{ cells[cidx](stock) }}
+            </span>
+          }
+        </td>
+      </div>
+    }
+    <tr mat-header-row *matHeaderRowDef="columnDefs; sticky: true"></tr>
+    <tr mat-row *matRowDef="let row; columns: columnDefs"></tr>
+  </table>
+</ng-template>
+
+<container-card
+  title="Dividend Details"
+  [mainContentRef]="dividendTableRef"
+/>

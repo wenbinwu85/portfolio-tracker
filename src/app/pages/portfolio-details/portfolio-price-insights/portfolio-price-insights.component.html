@@ -148,8 +148,18 @@
 
 <ng-template #performanceChartsTitleRef>
     <mat-chip-listbox>
-        <mat-chip-option selected (click)="changePerformanceChart(1)">Stocks</mat-chip-option>
-        <mat-chip-option (click)="changePerformanceChart(2)">ETFs</mat-chip-option>
+        <mat-chip-option 
+            [selected] = "selectedPerformanceChart === 1"
+            (click)="changePerformanceChart(1)"
+        >
+            Stocks
+        </mat-chip-option>
+        <mat-chip-option 
+            [selected] = "selectedPerformanceChart === 2"
+            (click)="changePerformanceChart(2)"
+        >
+            ETFs
+        </mat-chip-option>
     </mat-chip-listbox>
 </ng-template>
 

@@ -68,6 +68,7 @@ export class StockPriceMovementChartsComponent {
       text: "Regular Market",
     }
   } as any;
+  marketState: string = '';
 
   constructor(
     private dataService: DataService,
@@ -75,6 +76,7 @@ export class StockPriceMovementChartsComponent {
   ) {}
 
   ngOnInit() {
+    this.marketState = this.dataService.marketState;
     this.prefix = this.helper.getPriceKeyPrefix();
     this.portfolioMarketValue = this.dataService.portfolioHoldings.marketValue;
     this.prePostHourIcon = this.prefix.startsWith("pre") ? "sunny" : "bedtime";

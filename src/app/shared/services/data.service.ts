@@ -48,7 +48,7 @@ export class DataService {
   }
 
   get marketState(): string { 
-    return this.portfolioData['AAPL']?.marketState;
+    return this.portfolioDataArray[0].marketState;
   }
 
   get portfolioDataArray(): any[] { 

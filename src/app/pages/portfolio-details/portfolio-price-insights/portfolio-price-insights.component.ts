@@ -60,9 +60,9 @@ export class PortfolioPriceInsightsComponent implements OnInit {
   etfPerformanceChartData: any = [];
   sp500 = "S&P 500";
   selectedPerformanceChart = 1;
-  selectedSymbol: any = "SCHD";
+  selectedSymbol: any = "AAPL";
   selectedStock: any;
-  selectedSymbolColor: any = { name: "SCHD", value: "teal" };
+  selectedSymbolColor: any = { name: "AAPL", value: "chocolate" };
   performanceChartColorScheme = { domain: ["slategrey"] } as Color;
   fiftyTwoWeekChartColorScheme = { domain: ["slategrey"] } as Color;
   targetPriceChartColorScheme = { domain: ["slategrey"] } as Color;
@@ -165,5 +165,10 @@ export class PortfolioPriceInsightsComponent implements OnInit {
     this.selectedSymbol = symbol;
     this.selectedSymbolColor = { name: symbol, value: "chocolate" };
     this.selectedStock = [this.dataService.portfolioData[symbol]];
+    if (this.selectedStock[0].quoteType === "ETF") {
+      this.changePerformanceChart(2);
+    } else { 
+      this.changePerformanceChart(1);
+    }
   }
 }

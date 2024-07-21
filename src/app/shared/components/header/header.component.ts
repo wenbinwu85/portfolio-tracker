@@ -42,7 +42,7 @@ export class HeaderComponent implements OnInit {
       route: "",
     },
     {
-      label: "Portfolio Details",
+      label: "Portfolio",
       route: "/portfolio",
     },
     {

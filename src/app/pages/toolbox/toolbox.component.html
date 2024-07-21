@@ -5,13 +5,7 @@
       <span>Advanced Chart</span>
     </mat-panel-title>
   </mat-expansion-panel-header>
-  <ng-template #tvChartRef>
-    <tv-advanced-chart-widget symbol="SCHD" [showWatchlist]="true" [watchlist]="symbols" />
-  </ng-template>
-  <container-card 
-    title=""
-    [mainContentRef]="tvChartRef"
-  />
+  <tv-advanced-chart-widget symbol="SCHD" [showWatchlist]="true" [watchlist]="symbols" />
 </mat-expansion-panel>
 
 <mat-expansion-panel [expanded]="false">
