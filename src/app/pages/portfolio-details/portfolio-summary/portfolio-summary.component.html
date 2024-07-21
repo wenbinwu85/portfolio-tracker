@@ -62,17 +62,6 @@
 </ng-template>
 
 <ng-template #portfolioAllocationsRef>
-  @if (showResetButton) {
-    <button
-      mat-mini-fab 
-      color="warn" 
-      class="reset-button" 
-      (click)="filterBySector({name: 'all'})"
-    >
-      <mat-icon>restart_alt</mat-icon>
-    </button> 
-  }
-
   <div class="add-flex">
     @if (pieChartStyle === 'pie') {
       <div class="chart-container">
@@ -85,7 +74,6 @@
           [labels]="true"
           [title]="'Sector Allocations'"
           [maxLabelLength]="100"
-          (select)="filterBySector($event)"
         />
       </div>
     }
@@ -97,14 +85,13 @@
           [results]="sectorsData"
           [label]="'Dollars Invested'"
           [title]="'Sector Allocations'"
-          (select)="filterBySector($event)"
         />
       </div>
     }
     <div class="chart-container">
       <ngx-charts-bar-vertical
         [scheme]="barChartColorScheme"
-        [results]="portfolioPercentBarChartData"
+        [results]="portfolioPercentData"
         [animations]="true"
         [xAxis]="true"
         [yAxis]="true"
@@ -125,12 +112,11 @@
 <ng-template #portfolioValueRef>
   <div class="goal-container">
     <mat-slider
-      disabled
       [min]="0"
       [max]="portfolioValueTarget"
       [step]="1000"
       [showTickMarks]="true"      
-      [color]="'accent'"
+      [color]="'primary'"
     >
       <input
         matSliderThumb
@@ -140,8 +126,8 @@
       />
     </mat-slider>
     <div class="goal-labels">
-      <h1>{{ "0" | currency }}</h1>
-      <h1>{{ portfolioValueTarget | currency }}</h1>
+      <mat-chip>{{ "0" | currency }}</mat-chip>
+      <mat-chip>{{ portfolioValueTarget | currency }}</mat-chip>
     </div>
   </div>
 
@@ -149,14 +135,14 @@
     <mat-expansion-panel-header>
       <mat-panel-title>
         <mat-icon class="">payment</mat-icon>
-        <span>Portfolio</span>
+        <span>Portfolio Value Charts</span>
       </mat-panel-title>
     </mat-expansion-panel-header>
     <div class="add-flex">
       <div class="chart-container">
         <ngx-charts-bar-vertical-stacked
           [scheme]="stackedBarChartColorScheme"
-          [results]="marketValueBarChartData"
+          [results]="marketValueData"
           [animations]="true"
           [xAxis]="true"
           [yAxis]="true"
@@ -168,7 +154,7 @@
       <div class="chart-container">
         <ngx-charts-bar-vertical
           [scheme]="barChartColorScheme"
-          [results]="unrealizedGainBarChartData"
+          [results]="unrealizedGainData"
           [animations]="true"
           [xAxis]="true"
           [yAxis]="true"
@@ -189,12 +175,11 @@
 <ng-template #dividendIncomeRef>
   <div class="goal-container">
     <mat-slider
-      disabled
       [min]="0"
       [max]="passiveIncomeTarget"
       [step]="120"
       [showTickMarks]="true"
-      [color]="'accent'"
+      [color]="'primary'"
     >
       <input
         matSliderThumb
@@ -204,8 +189,8 @@
       />
     </mat-slider>
     <div class="goal-labels">
-      <h1>{{ "0" | currency }}</h1>
-      <h1>{{ passiveIncomeTarget | currency }}</h1>
+      <mat-chip>{{ "0" | currency }}</mat-chip>
+      <mat-chip>{{ passiveIncomeTarget | currency }}</mat-chip>
     </div>
   </div>
 
@@ -213,14 +198,14 @@
     <mat-expansion-panel-header>
       <mat-panel-title>
         <mat-icon class="">local_fire_department</mat-icon>
-        <span>Dividends</span>
+        <span>Dividends Income Charts</span>
       </mat-panel-title>
     </mat-expansion-panel-header>
     <div class="add-flex">
       <div class="chart-container">
         <ngx-charts-bar-vertical
           [scheme]="barChartColorScheme"
-          [results]="dividendBarChartData"
+          [results]="dividendData"
           [animations]="true"
           [xAxis]="true"
           [yAxis]="true"
@@ -232,7 +217,7 @@
       <div class="chart-container">
         <ngx-charts-bar-vertical
           [scheme]="barChartColorScheme"
-          [results]="yocBarChartData"
+          [results]="yocData"
           [animations]="true"
           [xAxis]="true"
           [yAxis]="true"

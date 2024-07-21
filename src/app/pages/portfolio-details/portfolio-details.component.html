@@ -12,12 +12,12 @@
                 [active]="activeLink == link"
                 [routerLink]="link.route"
             >
-            <span>{{ link.label }}</span>
-            <mat-icon>{{ link.icon }}</mat-icon>
-        </a>
+                <mat-icon>{{ link.icon }}</mat-icon>
+                <span>{{ link.label }}</span>
+            </a>
         }
     </nav>
-
     <mat-tab-nav-panel #tabPanel />
+    <mat-divider inset />
     <router-outlet />
 </section>

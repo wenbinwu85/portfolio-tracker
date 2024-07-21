@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { MatChipsModule } from '@angular/material/chips';
-
 import {
   WallmineChartComponent,
 } from '../../shared/components/charts/wallmine-chart/wallmine-chart.component';
