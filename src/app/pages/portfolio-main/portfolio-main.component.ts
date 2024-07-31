@@ -9,6 +9,7 @@ import {
 import {
   StockPriceMovementChartsComponent,
 } from '../../shared/components/stock/stock-price-movement-charts/stock-price-movement-charts.component';
+import { AlpacaApiService } from '../../shared/services/alpaca-api.service';
 
 @Component({
   selector: "app-portfolio-main",
@@ -24,6 +25,14 @@ import {
 })
 export class PortfolioMainComponent {
   selectedChart = 1;
+
+  constructor(private alpacaApiService: AlpacaApiService) { }
+
+  // ngOnInit() { 
+  //   this.alpacaApiService.getNews(['O', 'VICI'], '2024-01-01', '2024-02-01', 20).subscribe((news: any) => { 
+  //     console.log(JSON.parse(news));
+  //   });
+  // }
 
   displayChart(chartId: number) { 
     this.selectedChart = chartId;

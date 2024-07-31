@@ -28,7 +28,7 @@ export class DataService {
       .set("content-type", "application/json")
       .set("Access-Control-Allow-Origin", "*"),
   };
-  private backendUrl = "http://127.0.0.1:5000";
+  private backendUrl = "https://portfolio-tracker-backend-5ys2.onrender.com";
   public localStorage: Storage | undefined;
   public portfolioSymbols: any = [];
   public portfolioHoldings: any = {};
@@ -71,7 +71,7 @@ export class DataService {
     return of({ data: [], message: errorMessage, status: 500 });
   }
 
-  private wrapHttpCall(path: string, options = this.httpOptions): Observable<any> {
+  public wrapHttpCall(path: string, options = this.httpOptions): Observable<any> {
     const call = this.http.get<any>(path, options);
     return call.pipe(retry<any>(2), catchError(this.error));
   }
