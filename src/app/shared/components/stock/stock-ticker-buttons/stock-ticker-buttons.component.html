@@ -5,12 +5,12 @@
             class="ticker-button" 
             (click)="emitSelectedTicker(stock.symbol)"
         >
-            <img
+            <!-- <img
                 [src]="helperService.getTickerLogo(stock.symbol)" 
                 alt="Logo" 
                 width="auto" 
                 height="35"
-            />
+            /> -->
             <div>{{ stock.symbol }}</div>
         </button>
     }
@@ -21,12 +21,12 @@
                 class="ticker-button"
                 (click)="emitSelectedTicker(etf.symbol)"
             >
-                <img
+                <!-- <img
                     [src]="helperService.getTickerLogo(etf.symbol)" 
                     alt="Logo" 
                     width="auto" 
                     height="35" 
-                />
+                /> -->
                 <div>{{ etf.symbol }}</div>
             </button>
         }

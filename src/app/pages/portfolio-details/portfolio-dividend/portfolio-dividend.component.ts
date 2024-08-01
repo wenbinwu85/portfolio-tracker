@@ -209,15 +209,16 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
       );
     });
 
-    this.dividendIncomeChartData.forEach(
-      (month, idx) => (month.name = this.monthStrings[idx])
-    );
-    this.dividendIncomeChartData = this.dividendIncomeChartData.filter(
-      (month) => month.series.length > 0
-    );
-    this.dividendProjectionChartData.forEach(
-      (month, idx) => (month.name = this.monthStrings[idx])
-    );
+    // this.dividendIncomeChartData.forEach(
+    //   (month, idx) => (month.name = this.monthStrings[idx])
+    // );
+    // this.dividendIncomeChartData = this.dividendIncomeChartData.filter(
+    //   (month) => month.series.length > 0
+    // );
+    // this.dividendProjectionChartData.forEach(
+    //   (month, idx) => (month.name = this.monthStrings[idx])
+    // );
+
     this.dividendIncome = this.portfolioHoldings.dividendIncome;
     this.portfolioYieldOnCost = this.portfolioHoldings.yieldOnCost;
     this.browser = this.getBrowserName();
