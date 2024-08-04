@@ -2,10 +2,10 @@
     <nav 
         mat-tab-nav-bar
         mat-stretch-tabs="false" 
-        mat-align-tabs="end"
+        mat-align-tabs="start"
         [tabPanel]="tabPanel"
     >
-        @for (link of navLinks; track link.route;) {
+        @for (link of navLinks; track link.route) {
             <a
                 mat-tab-link
                 (click)="activeLink = link"
@@ -18,6 +18,6 @@
         }
     </nav>
     <mat-tab-nav-panel #tabPanel />
-    <mat-divider inset />
+    <mat-divider />
     <router-outlet />
 </section>

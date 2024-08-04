@@ -11,17 +11,10 @@ import { DataService } from "../../../shared/services/data.service";
   styleUrl: "./portfolio-file-loader.component.css",
 })
 export class PortfolioFileLoaderComponent {
-  fileInputText = "Open Portfolio Holdings Data*:";
   footerText = "*Supported file formats: .csv";
 
-  constructor(
-    private dataService: DataService,
-    private router: Router,
-  ) {
-    if (this.dataService.portfolioSymbols.length > 0 &&
-      Object.keys(this.dataService.portfolioData).length === this.dataService.portfolioSymbols.length &&
-      Object.keys(this.dataService.portfolioTechnicalInsights).length === this.dataService.portfolioSymbols.length
-    ) {
+  constructor(private dataService: DataService, private router: Router) { 
+    if (!!this.dataService.sanityCheck()) {
       this.router.navigateByUrl("/main");
     }
   }
@@ -31,7 +24,7 @@ export class PortfolioFileLoaderComponent {
     const reader = new FileReader();
     reader.onload = (e) => {
       const fileContent = (reader.result as string).split("\n");
-      this.dataService.generatePortfolioData(fileContent);   
+      this.dataService.generatePortfolioData(fileContent);
     };
     reader.readAsText(selectedFile);
   }

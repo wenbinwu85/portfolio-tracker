@@ -1,19 +1,18 @@
 <ng-template #fileInputRef>
-    <div class="file-input-container">
-        <label class="custom-file-upload">
-            <span>{{ fileInputText }}</span>
-            <input type="file" accept="text/csv" (change)="handleOpenFile($event)" class="file-input"/>
-        </label>
+    <div class="file-input">
+        <input type="file" accept="text/csv" (change)="handleOpenFile($event)" />
     </div>
 </ng-template>
 
 <ng-template #footerRef>
-    <span class="footer-text">{{ footerText }}</span>
+    <div class="footer-text">
+        <span>{{ footerText }}</span>
+    </div>
 </ng-template>
 
 <section class="add-margin">
     <container-card
-        title="Open Portfolio Data"
+        title="Open Portfolio Data*"
         [mainContentRef]="fileInputRef"
         [footerContentRef]="footerRef"
     />

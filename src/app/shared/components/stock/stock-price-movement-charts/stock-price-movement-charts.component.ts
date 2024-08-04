@@ -35,7 +35,7 @@ import { TvTickersWidgetComponent } from "../../tradingview/tv-tickers-widget/tv
 })
 export class StockPriceMovementChartsComponent {
   @Input() showTickers = true;
-  @Input({ required: true }) expandQuotes!: boolean;
+  @Input({ required: true }) expandWidget!: boolean;
   priceChange = 0;
   prePostPriceChange = 0;
   prePostHourIcon: any;

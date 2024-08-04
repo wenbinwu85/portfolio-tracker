@@ -90,7 +90,7 @@
     }
     <div class="chart-container">
       <ngx-charts-bar-vertical
-        [scheme]="barChartColorScheme"
+        [scheme]="allocationsBarChartColorScheme"
         [results]="portfolioPercentData"
         [animations]="true"
         [xAxis]="true"
@@ -116,7 +116,7 @@
       [max]="portfolioValueTarget"
       [step]="1000"
       [showTickMarks]="true"      
-      [color]="'primary'"
+      [color]="'accent'"
     >
       <input
         matSliderThumb
@@ -153,7 +153,7 @@
       </div>
       <div class="chart-container">
         <ngx-charts-bar-vertical
-          [scheme]="barChartColorScheme"
+          [scheme]="valueBarChartColorScheme"
           [results]="unrealizedGainData"
           [animations]="true"
           [xAxis]="true"
@@ -179,7 +179,7 @@
       [max]="passiveIncomeTarget"
       [step]="120"
       [showTickMarks]="true"
-      [color]="'primary'"
+      [color]="'accent'"
     >
       <input
         matSliderThumb
@@ -204,7 +204,7 @@
     <div class="add-flex">
       <div class="chart-container">
         <ngx-charts-bar-vertical
-          [scheme]="barChartColorScheme"
+          [scheme]="dividendBarChartColorScheme"
           [results]="dividendData"
           [animations]="true"
           [xAxis]="true"
@@ -216,7 +216,7 @@
       </div>
       <div class="chart-container">
         <ngx-charts-bar-vertical
-          [scheme]="barChartColorScheme"
+          [scheme]="dividendBarChartColorScheme"
           [results]="yocData"
           [animations]="true"
           [xAxis]="true"

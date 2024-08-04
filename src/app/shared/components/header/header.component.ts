@@ -75,7 +75,7 @@ export class HeaderComponent implements OnInit {
   }
 
   clearData() {
-    this.router.navigate(['/'])
+    this.router.navigate([''])
     this.dataService.localStorage?.clear();
     setTimeout(() => { 
       window.location.reload();

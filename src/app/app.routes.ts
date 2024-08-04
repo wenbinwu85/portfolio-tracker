@@ -33,14 +33,6 @@ export const routes: Routes = [
       ),
   },
   {
-    path: "stock/:symbol",
-    canActivate: [mainGuardGuard],
-    loadComponent: () =>
-      import("./shared/components/stock/stock-data-sheet/stock-data-sheet.component").then(
-        (c) => c.StockDataSheetComponent
-      ),
-  },
-  {
     path: "**",
     loadComponent: () =>
       import("./pages/not-found/not-found.component").then(

@@ -1,9 +1,9 @@
 <ng-template #titleContentRef>
   <div class="add-flex">
       <mat-chip-listbox>
-          <mat-chip-option selected (click)="displayChart(1)">Indices</mat-chip-option>
-          <mat-chip-option (click)="displayChart(2)">Cryptos</mat-chip-option>
-          <mat-chip-option (click)="displayChart(3)">Forex</mat-chip-option>
+          <mat-chip-option selected (click)="selectChart(1)">Indices</mat-chip-option>
+          <mat-chip-option (click)="selectChart(2)">Cryptos</mat-chip-option>
+          <mat-chip-option (click)="selectChart(3)">Forex</mat-chip-option>
       </mat-chip-listbox>
   </div>
 </ng-template>
@@ -35,5 +35,5 @@
 </section>
 
 <section class="add-margin">
-  <stock-price-movement-charts [expandQuotes]="true"/>
+  <stock-price-movement-charts [expandWidget]="true"/>
 </section>

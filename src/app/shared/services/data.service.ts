@@ -63,6 +63,10 @@ export class DataService {
     return Object.values(this.portfolioDividendHistory);
   }
 
+  get portfolioTechnicalInsightsArray(): any[] { 
+    return Object.values(this.portfolioTechnicalInsights);
+  }
+
   private error(error: HttpErrorResponse): Observable<any> {
     let errorMessage =
       error.error instanceof ErrorEvent
@@ -76,23 +80,34 @@ export class DataService {
     return call.pipe(retry<any>(2), catchError(this.error));
   }
 
-  private sanityCheck() { 
+  public sanityCheck() { 
     console.log(
       "%c ----- Sanity Check -----",
       "background: teal; color: white"
     );
+    const check1 = this.portfolioSymbols.length > 0 && this.portfolioSymbols.length === this.portfolioDataArray.length;
+    const check2 = this.portfolioHoldingsArray.length === this.portfolioSymbols.length + 8;
+    const check3 = this.portfolioTechnicalInsightsArray.length === this.portfolioSymbols.length;
+    const check4 = this.portfolioDividendHistory != null;
     console.log("Symbols:", this.portfolioSymbols);
     console.log("Holdings:", this.portfolioSymbols.length);
-    let thing = Object.keys(this.portfolioData).length === this.portfolioSymbols.length;
-    console.log("Portfolio data length equal to symbols length:", thing);
-    thing = Object.keys(this.portfolioTechnicalInsights).length === this.portfolioSymbols.length;
-    console.log("Technical insights length equal to symbols.length:", thing);
-    thing = this.portfolioDividendHistory != null;
-    console.log("Dividend history data is not empty:", thing)
+    console.log("Portfolio data length = number of symbols:", check1);
+    console.log("Holdings length is = number of symbols + 8:", check2);
+    console.log("Technical insights length = number of symbols:", check3);
+    console.log("Dividend history data is not empty:", check4)
+
     console.log(
       "%c ------------------------",
       "background: teal; color: white"
     );
+
+    if (check1 && check2 && check3) {
+      console.log('Sanity Check Passed!')
+      return true;
+    } else {
+      console.log('Sanity Check Failed!')
+      return false;
+    }
   }
 
   public getItem(item: string) {
@@ -196,11 +211,7 @@ export class DataService {
 
       this.getPortfolioDividendHistory();
       this.isLoadingData.next(false);
-      this.sanityCheck();
-      if (this.portfolioSymbols.length > 0 &&
-        Object.keys(this.portfolioData).length === this.portfolioSymbols.length &&
-        Object.keys(this.portfolioTechnicalInsights).length === this.portfolioSymbols.length
-      ) {
+      if (!!this.sanityCheck()) {
         this.router.navigateByUrl("/main");
       }
     });
