@@ -1,5 +1,5 @@
 @if (technicalInsights; as ti) {
-    <section>
+    <section class="price-insight">
         <table mat-table [dataSource]="getTableDataSource()">
             <ng-container matColumnDef="symbol">
                 <th mat-header-cell *matHeaderCellDef>Symbol</th>
@@ -113,8 +113,8 @@
             <stock-day-price-range 
                 [min]="stockData.fiftyTwoWeekLow.raw" 
                 [max]="stockData.fiftyTwoWeekHigh.raw"
-                [lowThumbValue]="stockData.dayLow.raw" 
-                [highThumbValue]="stockData.dayHigh.raw" 
+                [lowThumbValue]="stockData.dayLow.raw"
+                [highThumbValue]="stockData.dayHigh.raw"
                 [showThumbs]="false" 
             />
         }

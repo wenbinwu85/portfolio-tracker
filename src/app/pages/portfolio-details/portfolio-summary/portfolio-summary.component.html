@@ -32,26 +32,28 @@
     [color]="portfolioHoldings?.unrealizedGainPercent > 0 ? 'teal' : 'chocolate'"
     [accentColor]="portfolioHoldings?.unrealizedGain > 0 ? 'teal' : 'chocolate'"
   />
-  <info-card
-    icon="payments"
-    [value]="portfolioHoldings?.dividendIncome"
-    valueType="currency"
-    subtitle="Projected Annual Income"
-  />
-  <info-card
-    icon="percentage"
-    [value]="portfolioHoldings?.yield"
-    valueType="percentage"
-    subtitle="Portfolio Yield"
-  />
-  <info-card
-    icon="percentage"
-    [value]="portfolioHoldings?.yieldOnCost"
-    valueType="percentage"
-    subtitle="Portfolio YOC"
-    color="teal"
-    accentColor="teal"
-  />
+  @if (portfolioHoldings.dividendIncome > 0) {
+    <info-card
+      icon="payments"
+      [value]="portfolioHoldings?.dividendIncome"
+      valueType="currency"
+      subtitle="Projected Annual Income"
+    />
+    <info-card
+      icon="percentage"
+      [value]="portfolioHoldings?.yield"
+      valueType="percentage"
+      subtitle="Portfolio Yield"
+    />
+    <info-card
+      icon="percentage"
+      [value]="portfolioHoldings?.yieldOnCost"
+      valueType="percentage"
+      subtitle="Portfolio YOC"
+      color="teal"
+      accentColor="teal"
+    />
+  }
 </section>
 
 <ng-template #portfolioAllocationsTitleRef>
@@ -167,10 +169,12 @@
   </mat-expansion-panel>
 </ng-template>
 
-<container-card 
+@if (portfolioHoldings.dividendIncome > 0) {
+  <container-card 
   title="Portfolio Value Goal"
   [mainContentRef]="portfolioValueRef"
 />
+}
 
 <ng-template #dividendIncomeRef>
   <div class="goal-container">
@@ -230,7 +234,9 @@
   </mat-expansion-panel>
 </ng-template>
 
-<container-card 
+@if (portfolioHoldings.dividendIncome > 0) {
+  <container-card 
   title="Dividend Income Goal"
   [mainContentRef]="dividendIncomeRef"
 />
+}

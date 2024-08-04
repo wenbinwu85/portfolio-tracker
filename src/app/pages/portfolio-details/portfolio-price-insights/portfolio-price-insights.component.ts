@@ -60,40 +60,45 @@ export class PortfolioPriceInsightsComponent implements OnInit {
   etfPerformanceChartData: any = [];
   sp500 = "S&P 500";
   selectedPerformanceChart = 1;
-  selectedSymbol: any = "AAPL";
+  selectedSymbol: any;
   selectedStock: any;
-  selectedSymbolColor: any = { name: "AAPL", value: "chocolate" };
+  selectedSymbolColor: any;
   performanceChartColorScheme = { domain: ["slategrey"] } as Color;
   fiftyTwoWeekChartColorScheme = { domain: ["slategrey"] } as Color;
   targetPriceChartColorScheme = { domain: ["slategrey"] } as Color;
 
   constructor(
     private dataService: DataService,
-    private cdr: ChangeDetectorRef,
+    private cdr: ChangeDetectorRef
   ) {}
 
   ngOnInit(): void {
-    this.sortedStocks = Object.values(this.dataService.portfolioData)
+    this.sortedStocks = this.dataService.portfolioDataArray
       .filter((a: any) => a.quoteType === "EQUITY")
       .sort((a: any, b: any) => a["52WeekChange"].raw - b["52WeekChange"].raw);
-    this.sortedEtfs = Object.values(this.dataService.portfolioData)
+    this.sortedEtfs = this.dataService.portfolioDataArray
       .filter((a: any) => a.quoteType === "ETF")
       .sort((a: any, b: any) => a["ytdReturn"].raw - b["ytdReturn"].raw);
     this.sp500FiftyTwoWeekChange = this.sortedStocks[0].SandP52WeekChange.raw;
+    this.selectedSymbol = this.sortedStocks[0].symbol || this.sortedEtfs[0].symbol;
     this.selectedStock = this.dataService.portfolioData[this.selectedSymbol];
-
-    console.dir(this.sortedStocks)
-    console.log(this.sortedStocks)
+    this.selectedSymbolColor = { name: this.selectedSymbol, value: "chocolate" }
 
     this.sortedStocks.forEach((stock: any) => {
       this.fiftyDayMAChartData.push({
         name: stock.symbol,
-        value: ((stock.regularMarketPrice.raw - stock.fiftyDayAverage.raw) / stock.fiftyDayAverage.raw) * 100,
+        value:
+          ((stock.regularMarketPrice.raw - stock.fiftyDayAverage.raw) /
+            stock.fiftyDayAverage.raw) *
+          100,
       });
 
       this.twoHundredDayMAChartData.push({
         name: stock.symbol,
-        value: ((stock.regularMarketPrice.raw - stock.twoHundredDayAverage.raw) / stock.twoHundredDayAverage.raw) * 100,
+        value:
+          ((stock.regularMarketPrice.raw - stock.twoHundredDayAverage.raw) /
+            stock.twoHundredDayAverage.raw) *
+          100,
       });
 
       this.fiftyTwoWeekChangeChartData.push({
@@ -103,18 +108,27 @@ export class PortfolioPriceInsightsComponent implements OnInit {
 
       this.fiftyTwoWeekLowChartData.push({
         name: stock.symbol,
-        value: ((stock.regularMarketPrice.raw - stock.fiftyTwoWeekLow.raw) / stock.fiftyTwoWeekLow.raw) * 100,
+        value:
+          ((stock.regularMarketPrice.raw - stock.fiftyTwoWeekLow.raw) /
+            stock.fiftyTwoWeekLow.raw) *
+          100,
       });
 
       this.fiftyTwoWeekHighChartData.push({
         name: stock.symbol,
-        value: ((stock.regularMarketPrice.raw - stock.fiftyTwoWeekHigh.raw) / stock.fiftyTwoWeekHigh.raw) * 100,
+        value:
+          ((stock.regularMarketPrice.raw - stock.fiftyTwoWeekHigh.raw) /
+            stock.fiftyTwoWeekHigh.raw) *
+          100,
       });
 
       if (stock.targetMeanPrice.raw) {
         this.discountChartData.push({
           name: stock.symbol,
-          value: ((stock.regularMarketPrice.raw - stock.targetMeanPrice.raw) / stock.targetMeanPrice.raw) * 100,
+          value:
+            ((stock.regularMarketPrice.raw - stock.targetMeanPrice.raw) /
+              stock.targetMeanPrice.raw) *
+            100,
         });
       }
     });
@@ -126,7 +140,9 @@ export class PortfolioPriceInsightsComponent implements OnInit {
 
     this.fiftyDayMAChartData.sort((a: any, b: any) => a.value - b.value);
     this.twoHundredDayMAChartData.sort((a: any, b: any) => a.value - b.value);
-    this.fiftyTwoWeekChangeChartData.sort((a: any, b: any) => a.value - b.value);
+    this.fiftyTwoWeekChangeChartData.sort(
+      (a: any, b: any) => a.value - b.value
+    );
     this.fiftyTwoWeekLowChartData.sort((a: any, b: any) => a.value - b.value);
     this.fiftyTwoWeekHighChartData.sort((a: any, b: any) => a.value - b.value);
     this.discountChartData.sort((a: any, b: any) => a.value - b.value);
@@ -167,7 +183,7 @@ export class PortfolioPriceInsightsComponent implements OnInit {
     this.selectedStock = [this.dataService.portfolioData[symbol]];
     if (this.selectedStock[0].quoteType === "ETF") {
       this.changePerformanceChart(2);
-    } else { 
+    } else {
       this.changePerformanceChart(1);
     }
   }

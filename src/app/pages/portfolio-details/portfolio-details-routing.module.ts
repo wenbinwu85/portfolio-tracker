@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { PortfolioDetailsComponent } from "./portfolio-details.component";
 import { mainGuardGuard } from "../../shared/guards/main-guard.guard";
+import { dividendTrackerGuard } from "../../shared/guards/dividend-tracker.guard";
 
 const routes: Routes = [
   {
@@ -32,6 +33,7 @@ const routes: Routes = [
       },
       {
         path: "dividend",
+        canActivate: [dividendTrackerGuard],
         loadComponent: () =>
           import("./portfolio-dividend/portfolio-dividend.component").then(
             (c) => c.PortfolioDividendComponent

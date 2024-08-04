@@ -54,7 +54,9 @@
   </table>
 </ng-template>
 
-<container-card
-  title="Exchange Traded Funds"
-  [mainContentRef]="etfsRef"
-/>
+@if (sortedEtfs.length > 0) {
+  <container-card
+    title="Exchange Traded Funds"
+    [mainContentRef]="etfsRef"
+  />
+}

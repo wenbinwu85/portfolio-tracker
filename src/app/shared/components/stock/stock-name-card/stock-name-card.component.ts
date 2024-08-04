@@ -53,7 +53,7 @@ export class StockNameCardComponent {
     if (typeof this.changePercent !== "number") { 
       this.changePercent = this.changePercent.raw;
     }
-    this.borderLeftStyle = '0.3rem solid ' + (this.stock.unrealizedGain > 0 ? StockPriceColorsEnum.Gain : StockPriceColorsEnum.Lost);
+    this.borderLeftStyle = '0.5rem solid ' + (this.stock.unrealizedGain > 0 ? StockPriceColorsEnum.Gain : StockPriceColorsEnum.Lost);
   }
 
   getLogoUrl(stock: any) { 

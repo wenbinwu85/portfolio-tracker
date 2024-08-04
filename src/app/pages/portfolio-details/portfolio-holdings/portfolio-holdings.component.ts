@@ -5,11 +5,7 @@ import {
   transition,
   trigger,
 } from "@angular/animations";
-import {
-  CurrencyPipe,
-  NgStyle,
-  TitleCasePipe,
-} from "@angular/common";
+import { CurrencyPipe, NgStyle, TitleCasePipe } from "@angular/common";
 import { AfterViewInit, Component, OnInit, ViewChild } from "@angular/core";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatIconModule } from "@angular/material/icon";
@@ -64,7 +60,7 @@ import { DataService } from "../../../shared/services/data.service";
 export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
   @ViewChild(MatTable) table!: MatTable<any>;
   @ViewChild(MatSort) sort!: MatSort;
-  displayTradingviewWidgets = false;
+  showTradingviewWidgets = false;
   portfolioHoldings: any = {};
   portfolioData: any = {};
   totalCostChartData: any = [];
@@ -101,18 +97,12 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     (stock: any) => "",
     (stock: any) => "",
     (stock: any) => `$${this.portfolioHoldings[stock.symbol].totalCost}`,
-    (stock: any) =>
-      `$${this.portfolioHoldings[stock.symbol].marketValue.toFixed(2)}`,
-    (stock: any) =>
-      `${(this.portfolioHoldings[stock.symbol].portfolioPercent * 100).toFixed(2)}%`,
-    (stock: any) =>
-      `$${this.portfolioHoldings[stock.symbol].unrealizedGain.toFixed(2)}`,
-    (stock: any) =>
-      `${(this.portfolioHoldings[stock.symbol].unrealizedGainPercent * 100).toFixed(2)}%`,
-    (stock: any) =>
-      `$${this.portfolioHoldings[stock.symbol].dividendIncome.toFixed(2)}`,
-    (stock: any) =>
-      (this.portfolioHoldings[stock.symbol].yieldOnCost * 100).toFixed(2) + "%",
+    (stock: any) => `$${this.portfolioHoldings[stock.symbol].marketValue.toFixed(2)}`,
+    (stock: any) => `${(this.portfolioHoldings[stock.symbol].portfolioPercent * 100).toFixed(2)}%`,
+    (stock: any) => `$${this.portfolioHoldings[stock.symbol].unrealizedGain.toFixed(2)}`,
+    (stock: any) => `${(this.portfolioHoldings[stock.symbol].unrealizedGainPercent * 100).toFixed(2)}%`,
+    (stock: any) => `$${this.portfolioHoldings[stock.symbol].dividendIncome.toFixed(2)}`,
+    (stock: any) => (this.portfolioHoldings[stock.symbol].yieldOnCost * 100).toFixed(2) + "%",
     (stock: any) => stock.sector || "ETF",
     (stock: any) => "",
   ];
@@ -155,7 +145,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
           longName: stock.longName,
           shortName: stock.shortName,
           quoteType: stock.quoteType,
-          website: stock.profile?.website || '',
+          website: stock.profile?.website || "",
           fiftyTwoWeekLow: stock.fiftyTwoWeekLow.raw,
           regularMarketPrice: stock.regularMarketPrice.raw,
           regularMarketChange: stock.regularMarketChange.raw,
@@ -165,7 +155,8 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
           postMarketPrice: stock.postMarketPrice.raw,
           postMarketChangePercent: stock.postMarketChangePercent?.raw || 0,
         };
-      });
+      }
+    );
     this.dataSource.filterPredicate = (data: any, filter: string) => {
       const dataStrings = [
         data.symbol,
@@ -229,7 +220,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     this.expandedRow = this.expandedRow === row ? null : row;
   }
 
-  tradingviewWidgetToggleHandler() {
-    this.displayTradingviewWidgets = !this.displayTradingviewWidgets;
+  showWidgets() {
+    this.showTradingviewWidgets = !this.showTradingviewWidgets;
   }
 }

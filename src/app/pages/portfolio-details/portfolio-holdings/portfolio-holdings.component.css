@@ -17,8 +17,8 @@ tr.expanded-stock-row {
 .table-actions {
   display: flex;
   justify-content: right;
-  align-items: center;
-  margin-top: 1.5rem;
+  align-items: baseline;
+  /* margin-top: 1.5rem; */
 }
 
 .table-col-0 {
@@ -48,4 +48,29 @@ td.mat-mdc-cell:first-of-type td.mat-mdc-footer-cell:first-of-type {
   display: flex;
   align-items: center;
   width: max-content;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+  font-weight: bold;
+  border-top: 1px solid slategrey;
+  border-bottom: 1px solid slategrey;
+}
+
+.row-clicked {
+  font-weight: bold;
+  background-color: ghostwhite;
+}
+
+.subcontent-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.subcontent-info {
+  display: flex;
+  align-items: center;
+}
+
+.mat-mdc-form-field {
+  flex-direction: row;
 }

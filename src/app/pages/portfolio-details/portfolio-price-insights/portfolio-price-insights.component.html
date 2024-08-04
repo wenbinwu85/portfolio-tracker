@@ -2,7 +2,6 @@
 
 <ng-template #priceInsightsRef>
     <stock-ticker-buttons (selectedTicker)="updateSelectedStock($event)" />
-    <mat-divider />
     @if (selectedSymbol) {
         <stock-price-insight [symbol]="selectedSymbol" />
     }
@@ -148,23 +147,27 @@
 
 <ng-template #performanceChartsTitleRef>
     <mat-chip-listbox>
-        <mat-chip-option 
-            [selected] = "selectedPerformanceChart === 1"
-            (click)="changePerformanceChart(1)"
-        >
-            Stocks
-        </mat-chip-option>
-        <mat-chip-option 
-            [selected] = "selectedPerformanceChart === 2"
-            (click)="changePerformanceChart(2)"
-        >
-            ETFs
-        </mat-chip-option>
+        @if (sortedStocks.length > 0) {
+            <mat-chip-option 
+                [selected] = "selectedPerformanceChart === 1"
+                (click)="changePerformanceChart(1)"
+            >
+                Stocks
+            </mat-chip-option>
+        }
+        @if (sortedEtfs.length > 0) {
+            <mat-chip-option 
+                [selected] = "selectedPerformanceChart === 2"
+                (click)="changePerformanceChart(2)"
+            >
+                ETFs
+            </mat-chip-option>
+        }
     </mat-chip-listbox>
 </ng-template>
 
 <container-card 
-    title="Performace Charts"
+    title="Performance Charts"
     [mainContentRef]="performanceChartsRef"
     [titleContentRef]="performanceChartsTitleRef"
 />
