@@ -169,7 +169,7 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     this.portfolioHoldings = this.dataService.portfolioHoldings;
     this.portfolioData = this.dataService.portfolioData;
-    this.dataSource.data = Object.values(this.portfolioData)
+    this.dataSource.data = this.dataService.portfolioDataArray
       .filter((stock: any) => (stock.dividendYield?.raw > 0) || (stock.dividendYield > 0))
       .map((stock: any) => {
         return {
@@ -370,13 +370,13 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
       ${stock.profile?.industry || "ETF"}
     `;
 
-    if (scroll) {
-      window.scroll({
-        top: 800,
-        left: 0,
-        behavior: "smooth",
-      });
-    }
+    // if (scroll) {
+    //   window.scroll({
+    //     top: 800,
+    //     left: 0,
+    //     behavior: "smooth",
+    //   });
+    // }
   }
 
   onSelect(data: any): void {
