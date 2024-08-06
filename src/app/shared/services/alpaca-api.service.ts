@@ -3,6 +3,7 @@ import {
   HttpErrorResponse,
   HttpHeaders,
   HttpParams,
+  HttpRequest,
 } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { catchError, of, retry } from "rxjs";
@@ -13,16 +14,14 @@ import { DataService } from "./data.service";
   providedIn: "root",
 })
 export class AlpacaApiService {
-  private httpOptions: any = {
-    headers: new HttpHeaders()
-      .set("content-type", "application/json")
-      .set("Access-Control-Allow-Origin", "*"),
-  };
-  private backendUrl = "http://127.0.0.1:5000";
-
-  private readonly api_key = "PK3OKOYQHL2RVL2DZ2UC";
-  private readonly secret_key = "I5LdfklL2g6shWULe4XMkXdeMlUQ7cNvHQBJBwTD";
-  api_base_url = "https://data.alpaca.markets/v1beta1";
+  private readonly apiBaseUrl = 'https://data.alpaca.markets';
+  private readonly apiKey = "PK41CNLBVKS2CHYHD6FQ";
+  private readonly secretKey = "hOurdDodVN23wnjowMOyXYjeaobsmIbXtqhOwSbE";
+  private httpHeaders = new HttpHeaders()
+    // .set("content-type", "application/json")
+    // .set("Access-Control-Allow-Origin", "*")
+    .set("APCA-API-KEY-ID", this.apiKey)
+    .set("APCA-API-SECRET-KEY", this.secretKey)
 
   constructor(private http: HttpClient, private dataService: DataService) {}
 
@@ -35,11 +34,22 @@ export class AlpacaApiService {
   }
 
   public wrapHttpCall(
-    path: string,
-    options = this.httpOptions
+    url: string,
+    options: any
   ): Observable<any> {
-    const call = this.http.get<any>(path, options);
+    const call = this.http.get<any>(url, options);
     return call.pipe(retry<any>(2), catchError(this.error));
+  }
+
+  public getLatestBars(): Observable<any> {
+    const symbols = this.dataService.portfolioSymbols;
+    const apiUrl = this.apiBaseUrl + '/v2/stocks/bars/latest';
+    const params = new HttpParams().appendAll({
+      symbols: symbols.join(','),
+      feed: 'iex'
+    })
+    const options = { headers: this.httpHeaders, params };
+    return this.wrapHttpCall(apiUrl, options);
   }
 
   public getNews(
@@ -48,14 +58,14 @@ export class AlpacaApiService {
     end: string,
     limit: number
   ): Observable<any> {
-    const apiPath = `${this.backendUrl}/alpaca/fetch/news/`;
+    const apiUrl = this.apiBaseUrl + '/v1beta1/alpaca/fetch/news/';
     const params = new HttpParams().appendAll({
       symbols: symbols.join(","),
       start,
       end,
       limit,
     });
-    const apiOptions = { ...this.httpOptions, params };
-    return this.wrapHttpCall(apiPath, apiOptions);
+    const options = { headers: this.httpHeaders, params };
+    return this.wrapHttpCall(apiUrl, options);
   }
 }
