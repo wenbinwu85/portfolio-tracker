@@ -121,7 +121,7 @@ export class StockPriceMovementChartsComponent {
         }
       }
 
-      if (stock.quoteType === "EQUITY") {
+      if (stock.quoteType === "EQUITY" && stock.beta.raw) {
         this.betaChartData.push({
           name: stock.symbol,
           value: stock.beta.raw || 0,

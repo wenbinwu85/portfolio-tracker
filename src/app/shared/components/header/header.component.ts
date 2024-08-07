@@ -36,21 +36,6 @@ export class HeaderComponent implements OnInit {
   appLongName = "Ben's Incredibly Great Financial Assets Report & Tracker";
   appShortName = "B.I.G.F.A.R.T";
   appName = this.appLongName;
-  navLinks = [
-    {
-      label: "Home",
-      route: "",
-    },
-    {
-      label: "Portfolio",
-      route: "/portfolio",
-    },
-    {
-      label: "Toolbox",
-      route: "/toolbox",
-    },
-  ];
-  activeLink = this.navLinks[0];
   showProgressBar = false;
 
   constructor(
@@ -72,17 +57,5 @@ export class HeaderComponent implements OnInit {
 
   switchAppName() {
     this.appName = this.appName === this.appShortName ? this.appLongName : this.appShortName;
-  }
-
-  clearData() {
-    this.router.navigate([''])
-    this.dataService.localStorage?.clear();
-    setTimeout(() => { 
-      window.location.reload();
-    }, 500)
-  }
-
-  refreshData() {
-    this.dataService.refreshPortfolioData();
   }
 }
