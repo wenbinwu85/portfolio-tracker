@@ -30,18 +30,16 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   ],
 })
 export class InfoCardComponent implements OnInit {
-  @Input({ required: true }) icon: string = '';
   @Input({ required: true }) value: number | string = 0;
   @Input({ required: true }) subtitle: string = '';
+  @Input() icon?: string = '';
   @Input() subtitleChip?: boolean = false;
   @Input() date?: Date | string;
   @Input() additionalInfo?: string | number;
   @Input() valueType?: string = 'number';
   @Input() color?: string;
-  @Input() accentColor?: string;
-  @Input() fontSize?: string = '2rem';
+  @Input() fontSize?: string = '1.5rem';
   borderStyle = ''
-  borderLeftStyle = '';
   stock: any;
   tickerChipTooltip = '';
 
@@ -49,7 +47,6 @@ export class InfoCardComponent implements OnInit {
 
   ngOnInit(): void {
     this.borderStyle = '1px solid ghostwhite';
-    this.borderLeftStyle = '0.5rem solid ' + (this.accentColor ? this.accentColor : 'slategrey');
     if (this.subtitleChip) { 
       this.stock = this.dataService.portfolioData[this.subtitle];
       this.tickerChipTooltip = 'Fwd PE: ' + this.stock.forwardPE.toFixed(2) + ' Fwd EPS:' + this.stock.forwardEps.toFixed(2);

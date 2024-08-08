@@ -35,7 +35,6 @@
       valueType="currency"
       subtitle="Unrealized Gain "
       [color]="position.unrealizedGain > 0 ? 'teal' : 'chocolate'"
-      [accentColor]="position.unrealizedGain > 0 ? 'teal' : 'chocolate'"
     />
     <info-card
       icon="percentage"
@@ -43,7 +42,6 @@
       valueType="percentage"
       subtitle="Unrealized Gain %"
       [color]="position.unrealizedGain > 0 ? 'teal' : 'chocolate'"
-      [accentColor]="position.unrealizedGain > 0 ? 'teal' : 'chocolate'"
     />
     @if (position.dividendIncome) {
       <info-card

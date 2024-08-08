@@ -46,13 +46,6 @@ const routes: Routes = [
             (c) => c.PortfolioFinancialsComponent
           ),
       },
-      {
-        path: "analysis",
-        loadComponent: () =>
-          import("./portfolio-analysis/portfolio-analysis.component").then(
-            (c) => c.PortfolioAnalysisComponent
-          ),
-      },
     ],
   }
 ];

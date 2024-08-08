@@ -1,4 +1,4 @@
-<mat-card [ngStyle]="{'border': borderStyle, 'border-left': borderLeftStyle}">
+<mat-card [ngStyle]="{'border': borderStyle }">
     <div class="flex-between">
         @if (subtitle && !subtitleChip) {
             <mat-card-subtitle>{{ subtitle }}</mat-card-subtitle>
@@ -14,7 +14,7 @@
             />
         }
     </div>
-    <mat-divider />
+    <mat-divider  />
     @if (value) {
         <mat-card-title [ngStyle]="getStyle()">
             @switch (valueType) {

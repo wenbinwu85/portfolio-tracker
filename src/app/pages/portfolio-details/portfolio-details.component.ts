@@ -7,11 +7,6 @@ import { MatTabsModule } from "@angular/material/tabs";
 import { Router, RouterLink, RouterOutlet } from "@angular/router";
 import { NgxChartsModule } from "@swimlane/ngx-charts";
 import { DataService } from "../../shared/services/data.service";
-import { PortfolioDividendComponent } from "../portfolio-details/portfolio-dividend/portfolio-dividend.component";
-import { PortfolioFinancialsComponent } from "../portfolio-details/portfolio-financials/portfolio-financials.component";
-import { PortfolioHoldingsComponent } from "../portfolio-details/portfolio-holdings/portfolio-holdings.component";
-import { PortfolioPriceInsightsComponent } from "./portfolio-price-insights/portfolio-price-insights.component";
-import { PortfolioSummaryComponent } from "./portfolio-summary/portfolio-summary.component";
 
 @Component({
   selector: "portfolio-details",
@@ -23,11 +18,6 @@ import { PortfolioSummaryComponent } from "./portfolio-summary/portfolio-summary
     MatIconModule,
     MatTabsModule,
     NgxChartsModule,
-    PortfolioDividendComponent,
-    PortfolioFinancialsComponent,
-    PortfolioHoldingsComponent,
-    PortfolioPriceInsightsComponent,
-    PortfolioSummaryComponent,
     RouterLink,
     RouterOutlet,
   ],
@@ -68,12 +58,7 @@ export class PortfolioDetailsComponent implements OnInit {
         label: "Financial Stats",
         route: "financials",
         icon: "query_stats",
-      },
-      {
-        label: "Analysis",
-        route: "analysis",
-        icon: "calculate",
-      },
+      }
     )
     this.activeLink = this.navLinks[0];
   }

@@ -48,8 +48,8 @@ export class StockPriceInsightComponent implements OnInit {
     "targetLowPrice",
     "targetMedianPrice",
     "targetHighPrice",
-    "argusTarget",
-    "tradingCentral",
+    // "argusTarget",
+    // "tradingCentral",
   ];
 
   constructor(private dataService: DataService) {}

@@ -2,9 +2,9 @@
   <div class="add-flex">
       <mat-chip-listbox>
           <mat-chip-option selected (click)="selectChart(1)">Indices</mat-chip-option>
-          <mat-chip-option (click)="selectChart(2)">Cryptos</mat-chip-option>
-          <mat-chip-option (click)="selectChart(3)">Forex</mat-chip-option>
-          <mat-chip-option (click)="selectChart(4)">VIX</mat-chip-option>
+          <mat-chip-option (click)="selectChart(2)">VIX</mat-chip-option>
+          <mat-chip-option (click)="selectChart(3)">Cryptos</mat-chip-option>
+          <mat-chip-option (click)="selectChart(4)">Forex</mat-chip-option>
       </mat-chip-listbox>
   </div>
 </ng-template>
@@ -16,17 +16,17 @@
     <wallmine-chart [symbol]="'INDEX:IXIC'" [width]="'33.33%'" />
   }
   @if (selectedChart === 2) {
+    <wallmine-chart [symbol]="'INDEX:VIX'" />
+  }
+  @if (selectedChart === 3) {
     <wallmine-chart [symbol]="'CRYPTO:BTC'" [width]="'33.33%'" />
     <wallmine-chart [symbol]="'CRYPTO:ETH'" [width]="'33.33%'" />
     <wallmine-chart [symbol]="'CRYPTO:DOGE'" [width]="'33.33%'" />
   }
-  @if (selectedChart === 3) {
+  @if (selectedChart === 4) {
     <wallmine-chart [symbol]="'FOREX:USDCNY'" [width]="'33.33%'" />
     <wallmine-chart [symbol]="'FOREX:USDJPY'" [width]="'33.33%'" />
     <wallmine-chart [symbol]="'FOREX:USDEUR'" [width]="'33.33%'" />
-  }
-  @if (selectedChart === 4) {
-    <wallmine-chart [symbol]="'INDEX:VIX'" />
   }
 </ng-template>
 

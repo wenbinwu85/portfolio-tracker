@@ -43,6 +43,11 @@ export class AppComponent {
       icon: "ballot",
     },
     {
+      label: "Analysis",
+      route: "/analysis",
+      icon: "calculate",
+    },
+    {
       label: "Toolbox",
       route: "/toolbox",
       icon: "handyman",

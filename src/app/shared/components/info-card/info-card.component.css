@@ -4,7 +4,7 @@ mat-icon {
 }
 
 .mat-mdc-card {
-  border-radius: 0 .75rem .75rem 0;
+  border-radius: 0;
 }
 
 .mat-mdc-card-title {
@@ -29,4 +29,7 @@ mat-icon {
 
 mat-divider {
   padding-bottom: 0 !important;
+  border-top-color: ghostwhite;
+  border-top-width: 0.125rem;
+  width: 80%
 }

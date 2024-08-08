@@ -10,6 +10,6 @@
     }
 }
 
-mat-icon {
-    margin-left: 0.25rem;
+::ng-deep .mat-expansion-panel-body {
+    padding: 0 !important;
 }

@@ -4,11 +4,9 @@ import { MatDividerModule } from "@angular/material/divider";
 import { MatExpansionModule } from "@angular/material/expansion";
 import { MatIconModule } from "@angular/material/icon";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
-import { WallmineChartComponent } from "../../shared/components/charts/wallmine-chart/wallmine-chart.component";
 import { ContainerCardComponent } from "../../shared/components/container-card/container-card.component";
 import { TvAdvancedChartWidgetComponent } from "../../shared/components/tradingview/tv-advanced-chart-widget/tv-advanced-chart-widget.component";
 import { TvHeatmapWidgetComponent } from "../../shared/components/tradingview/tv-heatmap-widget/tv-heatmap-widget.component";
-import { TvSingleQuoteWidgetComponent } from "../../shared/components/tradingview/tv-single-quote-widget/tv-single-quote-widget.component";
 import { DataService } from "../../shared/services/data.service";
 
 @Component({
@@ -23,8 +21,6 @@ import { DataService } from "../../shared/services/data.service";
     MatSlideToggleModule,
     TvAdvancedChartWidgetComponent,
     TvHeatmapWidgetComponent,
-    TvSingleQuoteWidgetComponent,
-    WallmineChartComponent,
   ],
   templateUrl: "./toolbox.component.html",
   styleUrls: ["./toolbox.component.css"],
