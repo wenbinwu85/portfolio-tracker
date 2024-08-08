@@ -78,7 +78,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     "Dividend Income",
     "Yield on Cost",
     "Sector",
-    "Recommendation",
+    // "Recommendation",
   ];
   columnDefs = [
     "symbol",
@@ -91,7 +91,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     "dividendIncome",
     "yieldOnCost",
     "sector",
-    "rating",
+    // "rating",
   ];
   cells: Function[] = [
     (stock: any) => "",
@@ -104,7 +104,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     (stock: any) => `$${this.portfolioHoldings[stock.symbol].dividendIncome.toFixed(2)}`,
     (stock: any) => (this.portfolioHoldings[stock.symbol].yieldOnCost * 100).toFixed(2) + "%",
     (stock: any) => stock.sector || "ETF",
-    (stock: any) => "",
+    // (stock: any) => "",
   ];
   footerRow: Function[] = [
     () => `Total Holdings: ${this.portfolioHoldings.positionsHeld}`,
@@ -117,7 +117,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     () => `$${this.portfolioHoldings.dividendIncome.toFixed(2)}`,
     () => `${(this.portfolioHoldings.yieldOnCost * 100).toFixed(2)}%`,
     () => "",
-    () => "",
+    // () => "",
   ];
 
   constructor(private dataService: DataService) {}

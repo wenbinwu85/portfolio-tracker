@@ -1,14 +1,18 @@
 <mat-tab-group mat-align-tabs="center">
-    <mat-tab label="Chart & Technical Analysis">
+
+    <mat-tab label="Chart">
+        <wallmine-chart [symbol]="stock.symbol" />
+    </mat-tab>
+
+    <mat-tab label="Analysis & Recommedations">
         <div class="widget-container">
-            <wallmine-chart [symbol]="stock.symbol" class="chart" />
             <tv-technical-analysis-widget [symbol]="stock.symbol" />
             @if (stock.quoteType === 'EQUITY') {
                 <div class="rec-trends">
                     <stock-recommendation-trends [symbol]="stock.symbol" />
                 </div>
             }
-        </div>
+        </div> 
     </mat-tab>
 
     <mat-tab label="Financials">
