@@ -55,7 +55,7 @@ export class PortfolioDetailsComponent implements OnInit {
     }
     this.navLinks.push(
       {
-        label: "Financial Stats",
+        label: "Financials",
         route: "financials",
         icon: "query_stats",
       }

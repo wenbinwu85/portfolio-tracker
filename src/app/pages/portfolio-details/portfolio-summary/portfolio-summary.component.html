@@ -1,7 +1,7 @@
 <section class="summary-cards-container">
   <info-card
     [value]="portfolioHoldings?.positionsHeld"
-    subtitle="Total Positions"
+    subtitle="Holdings"
   />
   <info-card
     [value]="portfolioHoldings?.totalAmountInvested"
@@ -25,9 +25,8 @@
     subtitle="Unrealized Gain Percent"
     [color]="portfolioHoldings?.unrealizedGainPercent > 0 ? 'teal' : 'chocolate'"
   />
-</section>
-@if (portfolioHoldings.dividendIncome > 0) {
-  <section class="summary-cards-container">
+
+  @if (portfolioHoldings.dividendIncome > 0) {
     <info-card
       [value]="portfolioHoldings?.dividendIncome"
       valueType="currency"
@@ -44,8 +43,8 @@
       subtitle="Portfolio YOC"
       color="teal"
     />
-  </section>
-}
+  }
+</section>
 
 <ng-template #portfolioAllocationsTitleRef>
   <mat-chip-listbox>

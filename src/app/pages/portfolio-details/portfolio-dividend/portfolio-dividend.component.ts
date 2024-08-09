@@ -51,36 +51,36 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
     "November",
     "December",
   ];
-  dividendPayoutMonths: any = {
-    AAPL: [2, 5, 8, 11],
-    ABBV: [1, 4, 7, 10],
-    ARCC: [3, 6, 9, 12],
-    CVS: [1, 4, 7, 10],
-    DIS: [7, 12],
-    DLR: [3, 6, 9, 12],
-    DVN: [3, 6, 9, 12],
-    ENB: [2, 5, 8, 11],
-    EPD: [1, 4, 7, 10],
-    ET: [2, 5, 8, 10],
-    GILD: [3, 6, 9, 12],
-    MO: [3, 6, 9, 12],
-    MSFT: [2, 5, 8, 11],
-    NKE: [3, 6, 9, 12],
-    O: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-    PFE: [5, 7, 11, 1],
-    SBUX: [2, 5, 8, 11],
-    SCHD: [3, 6, 9, 12],
-    SPG: [3, 6, 9, 12],
-    TPVG: [3, 6, 9, 12],
-    VICI: [3, 6, 9, 12],
-    VYM: [3, 6, 9, 12],
-  };
+  // dividendPayoutMonths: any = {
+  //   AAPL: [2, 5, 8, 11],
+  //   ABBV: [1, 4, 7, 10],
+  //   ARCC: [3, 6, 9, 12],
+  //   CVS: [1, 4, 7, 10],
+  //   DIS: [7, 12],
+  //   DLR: [3, 6, 9, 12],
+  //   DVN: [3, 6, 9, 12],
+  //   ENB: [2, 5, 8, 11],
+  //   EPD: [1, 4, 7, 10],
+  //   ET: [2, 5, 8, 10],
+  //   GILD: [3, 6, 9, 12],
+  //   MO: [3, 6, 9, 12],
+  //   MSFT: [2, 5, 8, 11],
+  //   NKE: [3, 6, 9, 12],
+  //   O: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+  //   PFE: [5, 7, 11, 1],
+  //   SBUX: [2, 5, 8, 11],
+  //   SCHD: [3, 6, 9, 12],
+  //   SPG: [3, 6, 9, 12],
+  //   TPVG: [3, 6, 9, 12],
+  //   VICI: [3, 6, 9, 12],
+  //   VYM: [3, 6, 9, 12],
+  // };
   portfolioHoldings: any;
   portfolioData: any;
   browser = "";
   dividendIncome = 0;
   portfolioYieldOnCost = 0;
-  selectedSymbol = "O";
+  selectedSymbol: any;
   selectedSymbolLabel = "";
   infoCards: any[] = [];
   dividendLineChartData: any = [];
@@ -145,7 +145,7 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
     (stock: any) => `${(stock.yieldOnCost * 100).toFixed(2)}%`,
     (stock: any) => '$' + (stock.dividendRate?.fmt || stock.dividendRate.toFixed(2)),
     (stock: any) => stock.trailingAnnualDividendRate?.fmt || 'N/A',
-    (stock: any) => stock.dividendYield?.fmt || stock.dividendYield * 100 + '%', 
+    (stock: any) => stock.dividendYield?.fmt || (stock.dividendYield * 100).toFixed(2) + '%', 
     (stock: any) => stock.trailingAnnualDividendYield?.fmt || 'N/A',
     (stock: any) => stock.fiveYearAvgDividendYield?.fmt || 'N/A',
     (stock: any) => stock.payoutRatio?.fmt || 'N/A',
@@ -177,7 +177,8 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
           ...stock,
         };
       });
-
+    this.selectedSymbol = this.dataSource.data[0].symbol;
+    
     this.dataSource.data.forEach((stock: any) => {
       this.pieChartData.push({
         name: stock.symbol,
@@ -196,25 +197,25 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
         }
       }
 
-      this.dividendPayoutMonths[stock.symbol.toUpperCase()].forEach(
-        (month: number, _: any, arr: any[]) => {
-          const idx = month - 1;
-          const divRate = stock.dividendRate?.raw || stock.dividendRate;
-          const divAmount = divRate / arr.length;
-          this.dividendProjectionChartData[idx].series.push({
-            name: `${stock.symbol} | ${stock.shortName}`,
-            value: stock.shares * divAmount,
-          });
-        }
-      );
+      // this.dividendPayoutMonths[stock.symbol.toUpperCase()].forEach(
+      //   (month: number, _: any, arr: any[]) => {
+      //     const idx = month - 1;
+      //     const divRate = stock.dividendRate?.raw || stock.dividendRate;
+      //     const divAmount = divRate / arr.length;
+      //     this.dividendProjectionChartData[idx].series.push({
+      //       name: `${stock.symbol} | ${stock.shortName}`,
+      //       value: stock.shares * divAmount,
+      //     });
+      //   }
+      // );
     });
 
-    // this.dividendIncomeChartData.forEach(
-    //   (month, idx) => (month.name = this.monthStrings[idx])
-    // );
-    // this.dividendIncomeChartData = this.dividendIncomeChartData.filter(
-    //   (month) => month.series.length > 0
-    // );
+    this.dividendIncomeChartData.forEach(
+      (month, idx) => (month.name = this.monthStrings[idx])
+    );
+    this.dividendIncomeChartData = this.dividendIncomeChartData.filter(
+      (month) => month.series.length > 0
+    );
     // this.dividendProjectionChartData.forEach(
     //   (month, idx) => (month.name = this.monthStrings[idx])
     // );
