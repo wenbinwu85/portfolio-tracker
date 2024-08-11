@@ -84,39 +84,21 @@
                     }
                 </td>
             </ng-container>
-            <!-- <ng-container matColumnDef="argusTarget">
-                <th mat-header-cell *matHeaderCellDef>Argus Research Target</th>
-                <td mat-cell *matCellDef="let element">
-                    <span>{{ ti?.recommendation?.targetPrice | currency }}</span>
-                    @if (stockData.quoteType === 'EQUITY') {
-                        <span> ({{ ti?.recommendation?.rating }})</span>
-                    }
-                </td>
-            </ng-container>
-            <ng-container matColumnDef="tradingCentral">
-                <th mat-header-cell *matHeaderCellDef>Trading Central Valuation</th>
-                <td mat-cell *matCellDef="let element">
-                    <span>{{ ti?.instrumentInfo?.valuation.description }}</span>
-                    @if (stockData.quoteType === 'EQUITY') {
-                        <span> ({{ ti?.instrumentInfo?.valuation.discount }})</span>
-                    }
-                </td>
-            </ng-container> -->
             <tr mat-header-row *matHeaderRowDef="tableColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: tableColumns;"></tr>
         </table>
     
-        <mat-divider />
-    
         @if (stockData) {
-            <h3>Day Range vs 52 Week Range</h3>
-            <stock-day-price-range 
-                [min]="stockData.fiftyTwoWeekLow.raw" 
-                [max]="stockData.fiftyTwoWeekHigh.raw"
-                [lowThumbValue]="stockData.dayLow.raw"
-                [highThumbValue]="stockData.dayHigh.raw"
-                [showThumbs]="false" 
-            />
+            <div class="range-container">
+                <h3>Day Range vs 52 Week Range</h3>
+                <stock-day-price-range 
+                    [min]="stockData.fiftyTwoWeekLow.raw" 
+                    [max]="stockData.fiftyTwoWeekHigh.raw"
+                    [lowThumbValue]="stockData.dayLow.raw"
+                    [highThumbValue]="stockData.dayHigh.raw"
+                    [showThumbs]="false" 
+                />
+            </div>
         }
     </section>
 }

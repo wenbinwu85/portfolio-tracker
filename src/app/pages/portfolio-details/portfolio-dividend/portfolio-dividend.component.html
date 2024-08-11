@@ -2,7 +2,6 @@
   <section class="dividend-cards-container">
     @for (card of infoCards; track card.value) {
       <info-card
-        [icon]="card.icon"
         [value]="card.value"
         [valueType]="card.valueType"
         [subtitle]="card.subtitle"
@@ -12,81 +11,9 @@
   </section>
 }
 
-<ng-template #dividendIncomeProjectionRef>
-  <div class="chart-flex">
-    <div class="chart-container dividend-income">
-      <ngx-charts-bar-vertical-stacked
-        [scheme]="'natural'"
-        [results]="dividendIncomeChartData"
-        [animations]="true"
-        [xAxis]="true"
-        [yAxis]="true"
-        [showXAxisLabel]="true"
-        [showYAxisLabel]="true"
-        [yAxisLabel]="'Scheduled Dividend Payments $'"
-        [noBarWhenZero]="true"
-        [showDataLabel]="true"
-      />
-    </div>
-    <div class="chart-container dividend-pie">
-      <ngx-charts-pie-chart
-        [scheme]="'picnic'"
-        [results]="pieChartData"
-        [animations]="true"
-        [explodeSlices]="true"
-        [labels]="true"
-        [legend]="true"
-        [legendTitle]="'Tickers'"
-        [arcWidth]="0.75"
-        (select)="onSelect($event)"
-        (activate)="onActivate($event)"
-        (deactivate)="onDeactivate($event)"
-      />
-    </div>
-    <!-- <div class="chart-container projected-dividend-income">
-      <ngx-charts-bar-horizontal-stacked
-        [scheme]="'natural'"
-        [results]="dividendProjectionChartData"
-        [animations]="true"
-        [xAxis]="true"
-        [yAxis]="true"
-        [showXAxisLabel]="true"
-        [showYAxisLabel]="true"
-        [yAxisLabel]="'Estimated Monthly Dividend Income $'"
-        [noBarWhenZero]="true"
-        [showDataLabel]="true"
-      />
-    </div> -->
-  </div>
-</ng-template>
-
-<container-card 
-  title="Dividend Income Projection"
-  [mainContentRef]="dividendIncomeProjectionRef"
-/>
-
-<!-- <ng-template *ngIf="browser === 'Safari'" #dividendHistoryRef>
-  <div class="safari-charts-container">
-    <echarts-vertical-bar-chart [options]="echartOptions" />
-    <div class="chart-container dividend-pie">
-      <ngx-charts-pie-chart
-        [scheme]="'picnic'"
-        [results]="pieChartData"
-        [animations]="true"
-        [explodeSlices]="true"
-        [labels]="true"
-        [legend]="true"
-        [arcWidth]="0.75"
-        (select)="onSelect($event)"
-        (activate)="onActivate($event)"
-        (deactivate)="onDeactivate($event)"
-      />
-    </div>
-  </div>
-</ng-template> -->
-
 <ng-template #dividendHistoryRef>
-  <div class="add-flex">
+  <div class="add-flex" [style.flex-direction]="'column'">
+    <stock-ticker-buttons (selectedTicker)="onSelect($event)" />
     <div class="chart-container dividend-chart">
       <ngx-charts-area-chart
         [scheme]="dividendChartColorScheme"
@@ -103,21 +30,6 @@
         [yScaleMin]="0"
       />
     </div>
-    <!-- <div class="chart-container dividend-pie">
-      <ngx-charts-pie-chart
-        [scheme]="'picnic'"
-        [results]="pieChartData"
-        [animations]="true"
-        [explodeSlices]="true"
-        [labels]="true"
-        [legend]="true"
-        [legendTitle]="'Tickers'"
-        [arcWidth]="0.75"
-        (select)="onSelect($event)"
-        (activate)="onActivate($event)"
-        (deactivate)="onDeactivate($event)"
-      />
-    </div> -->
   </div>
 </ng-template>
 

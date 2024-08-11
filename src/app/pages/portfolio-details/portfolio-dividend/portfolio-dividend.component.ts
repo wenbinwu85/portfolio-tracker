@@ -14,6 +14,7 @@ import { EchartsVerticalBarChartComponent } from "../../../shared/components/cha
 import { ContainerCardComponent } from "../../../shared/components/container-card/container-card.component";
 import { InfoCardComponent } from "../../../shared/components/info-card/info-card.component";
 import { StockNameCardComponent } from "../../../shared/components/stock/stock-name-card/stock-name-card.component";
+import { StockTickerButtonsComponent } from "../../../shared/components/stock/stock-ticker-buttons/stock-ticker-buttons.component";
 import { DataService } from "../../../shared/services/data.service";
 
 @Component({
@@ -32,6 +33,7 @@ import { DataService } from "../../../shared/services/data.service";
     MatTableModule,
     NgxChartsModule,
     StockNameCardComponent,
+    StockTickerButtonsComponent,
   ],
 })
 export class PortfolioDividendComponent implements OnInit, AfterViewInit {
@@ -51,30 +53,6 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
     "November",
     "December",
   ];
-  // dividendPayoutMonths: any = {
-  //   AAPL: [2, 5, 8, 11],
-  //   ABBV: [1, 4, 7, 10],
-  //   ARCC: [3, 6, 9, 12],
-  //   CVS: [1, 4, 7, 10],
-  //   DIS: [7, 12],
-  //   DLR: [3, 6, 9, 12],
-  //   DVN: [3, 6, 9, 12],
-  //   ENB: [2, 5, 8, 11],
-  //   EPD: [1, 4, 7, 10],
-  //   ET: [2, 5, 8, 10],
-  //   GILD: [3, 6, 9, 12],
-  //   MO: [3, 6, 9, 12],
-  //   MSFT: [2, 5, 8, 11],
-  //   NKE: [3, 6, 9, 12],
-  //   O: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-  //   PFE: [5, 7, 11, 1],
-  //   SBUX: [2, 5, 8, 11],
-  //   SCHD: [3, 6, 9, 12],
-  //   SPG: [3, 6, 9, 12],
-  //   TPVG: [3, 6, 9, 12],
-  //   VICI: [3, 6, 9, 12],
-  //   VYM: [3, 6, 9, 12],
-  // };
   portfolioHoldings: any;
   portfolioData: any;
   browser = "";
@@ -84,23 +62,8 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
   selectedSymbolLabel = "";
   infoCards: any[] = [];
   dividendLineChartData: any = [];
-  dividendChartColorScheme = { domain: ["teal"] } as Color;
+  dividendChartColorScheme = { domain: ["steelblue"] } as Color;
   currentMonth = new Date().getMonth();
-  dividendIncomeChartData: any[] = Array.from({ length: 12 }, (_, index) => {
-    return {
-      name: index,
-      series: [],
-    };
-  });
-  dividendProjectionChartData: any[] = Array.from(
-    { length: 12 },
-    (_, index) => {
-      return {
-        name: index,
-        series: [],
-      };
-    }
-  );
   pieChartData: any = [];
   echartOptions!: EChartsOption;
   echartUpdateOptions: any = {
@@ -143,17 +106,19 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
     (stock: any) => "",
     (stock: any) => `$${stock.dividendIncome.toFixed(2)}`,
     (stock: any) => `${(stock.yieldOnCost * 100).toFixed(2)}%`,
-    (stock: any) => '$' + (stock.dividendRate?.fmt || stock.dividendRate.toFixed(2)),
-    (stock: any) => stock.trailingAnnualDividendRate?.fmt || 'N/A',
-    (stock: any) => stock.dividendYield?.fmt || (stock.dividendYield * 100).toFixed(2) + '%', 
-    (stock: any) => stock.trailingAnnualDividendYield?.fmt || 'N/A',
-    (stock: any) => stock.fiveYearAvgDividendYield?.fmt || 'N/A',
-    (stock: any) => stock.payoutRatio?.fmt || 'N/A',
+    (stock: any) =>
+      "$" + (stock.dividendRate?.fmt || stock.dividendRate.toFixed(2)),
+    (stock: any) => stock.trailingAnnualDividendRate?.fmt || "N/A",
+    (stock: any) =>
+      stock.dividendYield?.fmt || (stock.dividendYield * 100).toFixed(2) + "%",
+    (stock: any) => stock.trailingAnnualDividendYield?.fmt || "N/A",
+    (stock: any) => stock.fiveYearAvgDividendYield?.fmt || "N/A",
+    (stock: any) => stock.payoutRatio?.fmt || "N/A",
     (stock: any) =>
       stock.quoteType === "EQUITY" && stock.freeCashflowPayoutRatio !== 0
         ? `${(stock.freeCashflowPayoutRatio * 100).toFixed(2)}%`
         : "N/A",
-    (stock: any) => stock.lastDividendValue?.fmt || 'N/A',
+    (stock: any) => stock.lastDividendValue?.fmt || "N/A",
     (stock: any) =>
       stock.calendarEvents?.exDividendDate
         ? new Date(stock.calendarEvents.exDividendDate?.fmt).toDateString()
@@ -170,7 +135,9 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
     this.portfolioHoldings = this.dataService.portfolioHoldings;
     this.portfolioData = this.dataService.portfolioData;
     this.dataSource.data = this.dataService.portfolioDataArray
-      .filter((stock: any) => (stock.dividendYield?.raw > 0) || (stock.dividendYield > 0))
+      .filter(
+        (stock: any) => stock.dividendYield?.raw > 0 || stock.dividendYield > 0
+      )
       .map((stock: any) => {
         return {
           ...this.portfolioHoldings[stock.symbol],
@@ -178,48 +145,13 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
         };
       });
     this.selectedSymbol = this.dataSource.data[0].symbol;
-    
+
     this.dataSource.data.forEach((stock: any) => {
       this.pieChartData.push({
         name: stock.symbol,
         value: stock.dividendIncome,
       });
-
-      if (stock.calendarEvents?.dividendDate) {
-        const calEvents = stock.calendarEvents;
-        const divDate = new Date(calEvents.dividendDate.fmt);
-        const month = divDate.getMonth();
-        if (month >= new Date().getMonth()) {
-          this.dividendIncomeChartData[month].series.push({
-            name: `${stock.symbol} | ${divDate.toDateString()}`,
-            value: stock.lastDividendValue?.raw * stock.shares,
-          });
-        }
-      }
-
-      // this.dividendPayoutMonths[stock.symbol.toUpperCase()].forEach(
-      //   (month: number, _: any, arr: any[]) => {
-      //     const idx = month - 1;
-      //     const divRate = stock.dividendRate?.raw || stock.dividendRate;
-      //     const divAmount = divRate / arr.length;
-      //     this.dividendProjectionChartData[idx].series.push({
-      //       name: `${stock.symbol} | ${stock.shortName}`,
-      //       value: stock.shares * divAmount,
-      //     });
-      //   }
-      // );
     });
-
-    this.dividendIncomeChartData.forEach(
-      (month, idx) => (month.name = this.monthStrings[idx])
-    );
-    this.dividendIncomeChartData = this.dividendIncomeChartData.filter(
-      (month) => month.series.length > 0
-    );
-    // this.dividendProjectionChartData.forEach(
-    //   (month, idx) => (month.name = this.monthStrings[idx])
-    // );
-
     this.dividendIncome = this.portfolioHoldings.dividendIncome;
     this.portfolioYieldOnCost = this.portfolioHoldings.yieldOnCost;
     this.browser = this.getBrowserName();
@@ -255,49 +187,30 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
   setInfoCards() {
     this.infoCards = [
       {
-        icon: "payments",
         value: this.dividendIncome.toFixed(4),
         valueType: "currency",
         subtitle: "Projected Annual Income",
         color: null,
       },
       {
-        icon: "payments",
         value: (this.dividendIncome / 4).toFixed(4),
         valueType: "currency",
         subtitle: "Average Quarterly Income",
         color: null,
       },
       {
-        icon: "payments",
         value: (this.dividendIncome / 12).toFixed(4),
         valueType: "currency",
         subtitle: "Average Monthly Income",
         color: "teal",
       },
       {
-        icon: "payments",
         value: (this.dividendIncome / 365).toFixed(4),
         valueType: "currency",
         subtitle: "Average Daily Income",
         color: null,
       },
       {
-        icon: "payments",
-        value: (this.dividendIncome / 8765.81).toFixed(4),
-        valueType: "currency",
-        subtitle: "Average Hourly Income",
-        color: null,
-      },
-      {
-        icon: "payments",
-        value: (this.dividendIncome / 525948.766).toFixed(4),
-        valueType: "currency",
-        subtitle: "Average Income Per Minute",
-        color: null,
-      },
-      {
-        icon: "percent",
         value: this.portfolioYieldOnCost.toFixed(4),
         valueType: "percentage",
         subtitle: "Portfolio YOC",
@@ -370,22 +283,9 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
       ${stock.profile?.sector || "ETF"} |
       ${stock.profile?.industry || "ETF"}
     `;
-
-    // if (scroll) {
-    //   window.scroll({
-    //     top: 800,
-    //     left: 0,
-    //     behavior: "smooth",
-    //   });
-    // }
   }
 
-  onSelect(data: any): void {
-    const symbol = data.name || data;
+  onSelect(symbol: string): void {
     this.updateChart(symbol);
   }
-
-  onActivate(data: any): void {}
-
-  onDeactivate(data: any): void {}
 }
