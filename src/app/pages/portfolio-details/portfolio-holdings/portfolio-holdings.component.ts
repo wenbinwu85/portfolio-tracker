@@ -96,13 +96,13 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
   cells: Function[] = [
     (stock: any) => "",
     (stock: any) => "",
-    (stock: any) => `$${this.portfolioHoldings[stock.symbol].totalCost}`,
-    (stock: any) => `$${this.portfolioHoldings[stock.symbol].marketValue.toFixed(2)}`,
-    (stock: any) => `${(this.portfolioHoldings[stock.symbol].portfolioPercent * 100).toFixed(2)}%`,
-    (stock: any) => `$${this.portfolioHoldings[stock.symbol].unrealizedGain.toFixed(2)}`,
-    (stock: any) => `${(this.portfolioHoldings[stock.symbol].unrealizedGainPercent * 100).toFixed(2)}%`,
-    (stock: any) => `$${this.portfolioHoldings[stock.symbol].dividendIncome.toFixed(2)}`,
-    (stock: any) => (this.portfolioHoldings[stock.symbol].yieldOnCost * 100).toFixed(2) + "%",
+    (stock: any) => `$${stock.totalCost}`,
+    (stock: any) => `$${stock.marketValue.toFixed(2)}`,
+    (stock: any) => `${(stock.portfolioPercent * 100).toFixed(2)}%`,
+    (stock: any) => "",
+    (stock: any) => `${(stock.unrealizedGainPercent * 100).toFixed(2)}%`,
+    (stock: any) => `$${stock.dividendIncome.toFixed(2)}`,
+    (stock: any) => (stock.yieldOnCost * 100).toFixed(2) + "%",
     (stock: any) => stock.sector || "ETF",
     // (stock: any) => "",
   ];
@@ -202,11 +202,11 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     switch (index) {
       case 5:
       case 6:
-        return this.portfolioHoldings[stock.symbol].unrealizedGain > 0
+        return stock.unrealizedGain > 0
           ? StockPriceColorsEnum.Gain
           : StockPriceColorsEnum.Lost;
       case 7:
-        return this.portfolioHoldings[stock.symbol].dividendIncome > 0
+        return stock.dividendIncome > 0
           ? StockPriceColorsEnum.Gain
           : StockPriceColorsEnum.Lost;
       case 10:

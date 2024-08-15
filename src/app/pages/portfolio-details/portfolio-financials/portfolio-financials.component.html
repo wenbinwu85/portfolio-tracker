@@ -3,7 +3,7 @@
     @for (column of columnDefs; track column; let cidx = $index) {
       <div [matColumnDef]="column">
         <th *matHeaderCellDef mat-header-cell mat-sort-header>
-          {{ headers[cidx] }}
+          <span>{{ headers[cidx] }}</span>
         </th>
         <td mat-cell *matCellDef="let stock">
           @if (cidx === 0) {
@@ -11,7 +11,7 @@
               <stock-name-card [stock]="stock" />
             </div>
           } @else {
-            <span [ngStyle]="{ color: getCellColor(cidx, stock)}">{{ cells[cidx](stock) }}</span>
+            <span [ngStyle]="{ color: getCellColor(cidx, stock)}">{{ stock[column] }}</span>
           }
         </td>
       </div>
@@ -27,10 +27,10 @@
 />
 
 <ng-template #etfsRef>
-  <table mat-table matSort matSortActive="ytdReturn" matSortDirection="asc" [dataSource]="sortedEtfs">
+  <table mat-table [dataSource]="sortedEtfs">
     @for (column of etfColumnDefs; track column; let cidx = $index) {
       <div [matColumnDef]="column">
-        <th *matHeaderCellDef mat-header-cell mat-sort-header>
+        <th *matHeaderCellDef mat-header-cell>
           <span>{{ etfHeaders[cidx] }}</span>
         </th>
         <td mat-cell *matCellDef="let etf">
@@ -40,10 +40,10 @@
             </div>
           } @else {
             @if (cidx < 13) {
-              <span>{{ etfCells[cidx](etf) }}</span>
+              <span>{{ etf[column] }}</span>
             }
             @if (cidx === 13) {
-              <span>{{ etfCells[cidx](etf) | currency }}</span>
+              <span>{{ etf[column] | currency }}</span>
             }
           }
         </td>

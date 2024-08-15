@@ -33,7 +33,6 @@ import { DataService } from "../../../shared/services/data.service";
   ],
 })
 export class PortfolioFinancialsComponent implements OnInit, AfterViewInit {
-  @Input() transactions = "portfolio";
   @ViewChild(MatTable) table!: MatTable<any>;
   @ViewChild(MatSort) sort!: MatSort;
   dataSource = new MatTableDataSource<any>();
@@ -42,9 +41,9 @@ export class PortfolioFinancialsComponent implements OnInit, AfterViewInit {
     "Symbol",
     "Debt To Equity (MRQ)",
     "Current Ratio (MRQ)",
-    "Earnings Growth (YOY)",
-    "Quarterly Revenue Growth (YOY)",
-    "Profit Margins",
+    "Earnings Growth (QOQ) %",
+    "Quarterly Revenue Growth (YOY) %",
+    "Profit Margins %",
     "Forward PE",
     "Forward EPS",
     "PEG Ratio",
@@ -52,8 +51,8 @@ export class PortfolioFinancialsComponent implements OnInit, AfterViewInit {
     "Revenue / Share",
     "FCF Yield",
     "FCF / Share",
-    "Return On Assets",
-    "Return On Equity",
+    "Return On Assets %",
+    "Return On Equity %",
     "EV / EBITDA",
     "EV / Revenue",
   ];
@@ -61,7 +60,7 @@ export class PortfolioFinancialsComponent implements OnInit, AfterViewInit {
     "symbol",
     "debtToEquity",
     "currentRatio",
-    "earningsQuarterlyGrowth",
+    "earningsGrowth",
     "revenueGrowth",
     "profitMargins",
     "forwardPE",
@@ -107,70 +106,65 @@ export class PortfolioFinancialsComponent implements OnInit, AfterViewInit {
     "totalAssets",
   ];
 
-  cells: Function[] = [
-    (stock: any) => "",
-    (stock: any) => stock.debtToEquity.fmt || 0,
-    (stock: any) => stock.currentRatio.fmt || 0,
-    (stock: any) => stock.earningsQuarterlyGrowth?.fmt || 0,
-    (stock: any) => stock.revenueGrowth.fmt || 0,
-    (stock: any) => stock.profitMargins.fmt|| 0,
-    (stock: any) => stock.forwardPE.fmt || 0,
-    (stock: any) => stock.forwardEps.fmt || 0,
-    (stock: any) => stock.pegRatio.fmt || 0,
-    (stock: any) => stock.totalCashPerShare.fmt || 0,
-    (stock: any) => stock.revenuePerShare.fmt || 0,
-    (stock: any) => `${(stock.freeCashflowYield * 100).toFixed(2)}%` || 0,
-    (stock: any) => `$${stock.freeCashflowPerShare.toFixed(2)}` || 0,
-    (stock: any) => stock.returnOnAssets.fmt || 0,
-    (stock: any) => stock.returnOnEquity.fmt || 0,
-    (stock: any) => stock.enterpriseToEbitda.fmt || 0,
-    (stock: any) => stock.enterpriseToRevenue.fmt || 0,
-  ];
-
-  etfCells: Function[] = [
-    (etf: any) => "",
-    (etf: any) => etf.profile.feesExpensesInvestment.annualReportExpenseRatio.fmt,
-    (etf: any) => etf.navPrice.fmt,
-    (etf: any) => etf.trailingPE.fmt,
-    (etf: any) => etf.fundPerformance.trailingReturns.ytd.fmt,
-    (etf: any) => etf.fundPerformance.trailingReturns.oneMonth.fmt,
-    (etf: any) => etf.fundPerformance.trailingReturns.threeMonth.fmt,
-    (etf: any) => etf.fundPerformance.trailingReturns.oneYear.fmt,
-    (etf: any) => etf.fundPerformance.trailingReturns.threeYear.fmt,
-    (etf: any) => etf.fundPerformance.trailingReturns.fiveYear.fmt,
-    (etf: any) => etf.fundPerformance.trailingReturns.tenYear.fmt,
-    (etf: any) => etf.beta3Year.raw,
-    (etf: any) => etf.totalAssets.fmt,
-  ];
-
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    const stocks = Object.values(this.dataService.portfolioData).filter(
+    const stocks = this.dataService.portfolioDataArray.filter(
       (stock: any) => stock.quoteType === "EQUITY"
     );
-    const etfs = Object.values(this.dataService.portfolioData).filter(
+    const etfs = this.dataService.portfolioDataArray.filter(
       (stock: any) => stock.quoteType === "ETF"
     );
-    this.dataSource.data = stocks.map(
-      (stock: any) => {
+
+    this.dataSource.data = stocks
+      .map((stock: any) => {
         const holding = this.dataService.portfolioHoldings[stock.symbol];
         return {
           ...stock,
-          ...holding
-        }
-      });
+          ...holding,
+          symbol: stock.symbol,
+          debtToEquity: stock.debtToEquity.fmt || 0,
+          currentRatio: stock.currentRatio.fmt || 0,
+          earningsGrowth: +stock.earningsQuarterlyGrowth.fmt?.replace('%', '') || 0,
+          revenueGrowth: +stock.revenueGrowth.fmt?.replace('%', '') || 0,
+          profitMargins: +stock.profitMargins.fmt?.replace('%', '') || 0,
+          forwardPE: stock.forwardPE.fmt || 0,
+          forwardEps: stock.forwardEps.fmt || 0,
+          pegRatio: stock.pegRatio.fmt || 0,
+          totalCashPerShare: stock.totalCashPerShare.fmt || 0,
+          revenuePerShare: stock.revenuePerShare.fmt || 0,
+          freeCashflowYield: +(stock.freeCashflowYield * 100).toFixed(2) || 0,
+          freeCashflowPerShare: +(stock.freeCashflowPerShare.toFixed(2)) || 0,
+          returnOnAssets: +stock.returnOnAssets.fmt?.replace('%', '') || 0,
+          returnOnEquity: +stock.returnOnEquity.fmt?.replace('%', '') || 0,
+          enterpriseToEbitda: stock.enterpriseToEbitda.fmt || 0,
+          enterpriseToRevenue: stock.enterpriseToRevenue.fmt || 0,
+        };
+      })
+      .sort((a: any, b: any) => a.unrealizedGainPercent - b.unrealizedGainPercent);
+
     this.sortedEtfs = etfs
-      .map((etf: any) => { 
+      .map((etf: any) => {
         const holding = this.dataService.portfolioHoldings[etf.symbol];
         return {
           ...etf,
-          ...holding
-        }
+          ...holding,
+          symbol: etf.symbol,
+          annualReportExpenseRatio: etf.profile.feesExpensesInvestment.annualReportExpenseRatio.fmt,
+          navPrice: etf.navPrice.fmt,
+          trailingPE: etf.trailingPE.fmt,
+          ytdReturn: etf.fundPerformance.trailingReturns.ytd.fmt,
+          '1monthReturn': etf.fundPerformance.trailingReturns.oneMonth.fmt,
+          '3monthReturn': etf.fundPerformance.trailingReturns.threeMonth.fmt,
+          '1YearReturn': etf.fundPerformance.trailingReturns.oneYear.fmt,
+          threeYearReturn: etf.fundPerformance.trailingReturns.threeYear.fmt,
+          fiveYearReturn: etf.fundPerformance.trailingReturns.fiveYear.fmt,
+          tenYearReturn: etf.fundPerformance.trailingReturns.tenYear.fmt,
+          beta3Year: etf.beta3Year.raw,
+          totalAssets: etf.totalAssets.fmt,
+        };
       })
-      .sort(
-        (a: any, b: any) => a["ytdReturn"].raw - b["ytdReturn"].raw
-      );
+      .sort((a: any, b: any) => a.unrealizedGainPercent - b.unrealizedGainPercent);
   }
 
   ngAfterViewInit() {
@@ -178,7 +172,8 @@ export class PortfolioFinancialsComponent implements OnInit, AfterViewInit {
   }
 
   getCellColor(index: number, stock: any) {
-    const value = this.cells[index](stock);
+    const key = this.columnDefs[index];
+    const value = stock[key];
     return value < 0 || value[0] === "-" || value[1] === "-" ? "chocolate" : "";
   }
 }

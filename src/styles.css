@@ -94,3 +94,10 @@ table {
     height: auto !important;
     padding: 0.5rem 0.75rem !important;
 }
+
+.mat-mdc-row:hover .mat-mdc-cell {
+    font-weight: bold;
+    border-top: 1px solid steelblue;
+    border-bottom: 1px solid steelblue;
+    background-color: ghostwhite;
+}

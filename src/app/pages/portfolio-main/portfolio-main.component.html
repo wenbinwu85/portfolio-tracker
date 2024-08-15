@@ -1,29 +1,33 @@
 <ng-template #titleContentRef>
   <div class="add-flex">
       <mat-chip-listbox>
-          <mat-chip-option selected (click)="selectChart(1)">Indices</mat-chip-option>
-          <mat-chip-option (click)="selectChart(2)">VIX</mat-chip-option>
-          <mat-chip-option (click)="selectChart(3)">Cryptos</mat-chip-option>
-          <mat-chip-option (click)="selectChart(4)">Forex</mat-chip-option>
+          <mat-chip-option selected (click)="selectChart(1)">S&P | DJI</mat-chip-option>
+          <mat-chip-option (click)="selectChart(2)">Nasdaq | Russell</mat-chip-option>
+          <mat-chip-option (click)="selectChart(3)">VIX</mat-chip-option>
+          <mat-chip-option (click)="selectChart(4)">Cryptos</mat-chip-option>
+          <mat-chip-option (click)="selectChart(5)">Forex</mat-chip-option>
       </mat-chip-listbox>
   </div>
 </ng-template>
 
 <ng-template #indexCharts>
   @if (selectedChart === 1) {
-    <wallmine-chart [symbol]="'INDEX:GSPC'" [width]="'33.33%'" />
-    <wallmine-chart [symbol]="'INDEX:DJI'" [width]="'33.33%'" />
-    <wallmine-chart [symbol]="'INDEX:IXIC'" [width]="'33.33%'" />
+    <wallmine-chart [symbol]="'INDEX:GSPC'" [width]="'50%'" />
+    <wallmine-chart [symbol]="'INDEX:DJI'" [width]="'50%'" />
   }
   @if (selectedChart === 2) {
-    <wallmine-chart [symbol]="'INDEX:VIX'" />
+    <wallmine-chart [symbol]="'INDEX:IXIC'" [width]="'50%'" />
+    <wallmine-chart [symbol]="'INDEX:RUT'" [width]="'50%'" />
   }
   @if (selectedChart === 3) {
+    <wallmine-chart [symbol]="'INDEX:VIX'" />
+  }
+  @if (selectedChart === 4) {
     <wallmine-chart [symbol]="'CRYPTO:BTC'" [width]="'33.33%'" />
     <wallmine-chart [symbol]="'CRYPTO:ETH'" [width]="'33.33%'" />
     <wallmine-chart [symbol]="'CRYPTO:DOGE'" [width]="'33.33%'" />
   }
-  @if (selectedChart === 4) {
+  @if (selectedChart === 5) {
     <wallmine-chart [symbol]="'FOREX:USDCNY'" [width]="'33.33%'" />
     <wallmine-chart [symbol]="'FOREX:USDJPY'" [width]="'33.33%'" />
     <wallmine-chart [symbol]="'FOREX:USDEUR'" [width]="'33.33%'" />
