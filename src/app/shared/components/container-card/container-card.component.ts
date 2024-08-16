@@ -1,19 +1,14 @@
-import { CommonModule, TitleCasePipe } from '@angular/common';
-import { Component, Input, TemplateRef } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
-import { MatDivider } from '@angular/material/divider';
+import { CommonModule, TitleCasePipe } from "@angular/common";
+import { Component, Input, TemplateRef } from "@angular/core";
+import { MatCardModule } from "@angular/material/card";
+import { MatDivider } from "@angular/material/divider";
 
 @Component({
-  selector: 'container-card',
+  selector: "container-card",
   standalone: true,
-  imports: [
-    CommonModule,
-    MatCardModule,
-    TitleCasePipe,
-    MatDivider,
-  ],
-  templateUrl: './container-card.component.html',
-  styleUrl: './container-card.component.css'
+  imports: [CommonModule, MatCardModule, MatDivider, TitleCasePipe],
+  templateUrl: "./container-card.component.html",
+  styleUrl: "./container-card.component.css",
 })
 export class ContainerCardComponent {
   @Input() title?: string;

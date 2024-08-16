@@ -26,6 +26,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'analysis',
+    loadComponent: () =>
+      import("./pages/analysis/analysis.component").then(
+        (c) => c.AnalysisComponent
+      ),
+  },
+  {
     path: "toolbox",
     loadComponent: () =>
       import("./pages/toolbox/toolbox.component").then(
@@ -33,10 +40,10 @@ export const routes: Routes = [
       ),
   },
   {
-    path: 'analysis',
+    path: "streams",
     loadComponent: () =>
-      import("./pages/analysis/analysis.component").then(
-        (c) => c.AnalysisComponent
+      import("./pages/live-streams/live-streams.component").then(
+        (c) => c.LiveStreamsComponent
       ),
   },
   {

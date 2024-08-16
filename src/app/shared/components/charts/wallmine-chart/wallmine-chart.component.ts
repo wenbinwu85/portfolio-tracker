@@ -30,7 +30,8 @@ export class WallmineChartComponent implements OnInit {
   }
 
   getChartUrl(symbol: string) {
-    const url = 'https://wallmine.com/widgets/chart/' + symbol;
+    const wallmineChartBaseUrl = 'https://wallmine.com/widgets/chart/';
+    const url = wallmineChartBaseUrl + symbol;
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 }

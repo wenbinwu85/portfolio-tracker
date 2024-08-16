@@ -52,6 +52,11 @@ export class AppComponent {
       route: "/toolbox",
       icon: "handyman",
     },
+    {
+      label: "Live Streams",
+      route: "/streams",
+      icon: "live_tv",
+    }
   ];
   activeLink = this.navLinks[0];
   mobileQuery: MediaQueryList;
