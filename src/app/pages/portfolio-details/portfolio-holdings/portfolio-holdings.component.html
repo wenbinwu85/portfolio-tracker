@@ -48,8 +48,8 @@
             </div>
           } @else if (cidx === 5) {
             <span [ngStyle]="{ color: getCellColor(stock, cidx) }" (click)="expandRow(stock)">{{ stock[column] | currency }}</span>
-          } @else if (cidx === 10) {
-            <span [ngStyle]="{ color: getCellColor(stock, cidx) }" (click)="expandRow(stock)">{{ stock.rating | titlecase }}</span>
+          <!-- } @else if (cidx === 10) {
+            <span [ngStyle]="{ color: getCellColor(stock, cidx) }" (click)="expandRow(stock)">{{ stock.rating | titlecase }}</span> -->
           } @else {
             <span [ngStyle]="{ color: getCellColor(stock, cidx) }" (click)="expandRow(stock)">{{ cells[cidx](stock) }}</span>
           }

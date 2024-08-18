@@ -64,4 +64,8 @@ export class StockPriceInsightComponent implements OnInit {
     dataSource.data = [this.stockData];
     return dataSource;
   }
+
+  getTargetPriceColor(stock: any, key: string) { 
+    return stock.regularMarketPrice?.raw < stock[key].raw ? "teal" : "chocolate"
+  }
 }

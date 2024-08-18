@@ -3,15 +3,15 @@
         @if (subtitle && !subtitleChip) {
             <mat-card-subtitle>{{ subtitle }}</mat-card-subtitle>
         }
-        @if (icon) {
-            <mat-icon>{{ icon }}</mat-icon>
-        }
         @if (subtitle && subtitleChip) {
             <stock-ticker-chip 
                 [stock]="stock"
                 [matTooltip]="tickerChipTooltip"
                 [matTooltipPosition]="'above'"
             />
+        }
+        @if (icon) {
+            <mat-icon>{{ icon }}</mat-icon>
         }
     </div>
     <mat-divider  />

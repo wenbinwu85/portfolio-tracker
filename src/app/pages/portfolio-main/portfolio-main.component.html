@@ -42,6 +42,25 @@
   />
 </section>
 
-<section class="add-margin">
-  <stock-price-movement-charts [expandWidget]="true"/>
-</section>
+<mat-tab-group mat-align-tabs="center">
+  <mat-tab label="Portfolio News">
+    <section class="add-margin grading-history-container">
+      @for (item of gradingHistory; track item.epochGradeDate) {
+        <info-card
+          [value]="item.fromGrade + ' --> ' + item.toGrade"
+          [subtitle]="item.symbol"
+          [subtitleChip]="true"
+          [additionalInfo]="item.firm"
+          [date]="(item.epochGradeDate * 1000).toString()"
+          [icon]="item.icon"
+        />
+      }
+    </section>
+  </mat-tab>
+
+  <mat-tab label="Portfolio Price Change">
+    <section class="add-margin">
+      <stock-price-movement-charts [expandWidget]="true"/>
+    </section>
+  </mat-tab>
+</mat-tab-group>

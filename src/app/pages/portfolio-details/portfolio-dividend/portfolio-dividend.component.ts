@@ -56,6 +56,7 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
   portfolioHoldings: any;
   portfolioData: any;
   browser = "";
+  todayDate = new Date();
   dividendIncome = 0;
   portfolioYieldOnCost = 0;
   selectedSymbol: any;
@@ -108,25 +109,33 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
     (stock: any) => `${(stock.yieldOnCost * 100).toFixed(2)}%`,
     (stock: any) =>
       "$" + (stock.dividendRate?.fmt || stock.dividendRate.toFixed(2)),
-    (stock: any) => stock.trailingAnnualDividendRate?.fmt || "N/A",
+    (stock: any) => stock.trailingAnnualDividendRate?.fmt || "--",
     (stock: any) =>
       stock.dividendYield?.fmt || (stock.dividendYield * 100).toFixed(2) + "%",
-    (stock: any) => stock.trailingAnnualDividendYield?.fmt || "N/A",
-    (stock: any) => stock.fiveYearAvgDividendYield?.fmt || "N/A",
-    (stock: any) => stock.payoutRatio?.fmt || "N/A",
+    (stock: any) => stock.trailingAnnualDividendYield?.fmt || "--",
+    (stock: any) => stock.fiveYearAvgDividendYield?.fmt || "--",
+    (stock: any) => stock.payoutRatio.toFixed(2) + "%",
     (stock: any) =>
       stock.quoteType === "EQUITY" && stock.freeCashflowPayoutRatio !== 0
         ? `${(stock.freeCashflowPayoutRatio * 100).toFixed(2)}%`
-        : "N/A",
-    (stock: any) => stock.lastDividendValue?.fmt || "N/A",
-    (stock: any) =>
-      stock.calendarEvents?.exDividendDate
-        ? new Date(stock.calendarEvents.exDividendDate?.fmt).toDateString()
-        : "N/A",
-    (stock: any) =>
-      stock.calendarEvents?.dividendDate
-        ? new Date(stock.calendarEvents.dividendDate?.fmt).toDateString()
-        : "N/A",
+        : "--",
+    (stock: any) => stock.lastDividendValue?.fmt || "--",
+    (stock: any) => { 
+      const divDate = stock.calendarEvents?.exDividendDate;
+      if (divDate && divDate.raw * 1000 >= this.todayDate.valueOf()) {
+        return new Date(divDate.fmt).toDateString()
+      } else { 
+        return "--"
+      }
+    },
+    (stock: any) => { 
+      const divDate = stock.calendarEvents?.dividendDate;
+      if (divDate && divDate.raw * 1000 >= this.todayDate.valueOf()) {
+        return new Date(divDate.fmt).toDateString()
+      } else { 
+        return "--"
+      }
+    }
   ];
 
   constructor(private dataService: DataService) {}
@@ -142,6 +151,7 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
         return {
           ...this.portfolioHoldings[stock.symbol],
           ...stock,
+          payoutRatio: stock.payoutRatio?.raw * 100 || 0
         };
       });
     this.selectedSymbol = this.dataSource.data[0].symbol;
@@ -287,5 +297,20 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
 
   onSelect(symbol: string): void {
     this.updateChart(symbol);
+  }
+
+  getCellColor(stock: any, index: number) {
+    switch (index) {
+      case 8:
+        return stock.payoutRatio < 80
+          ? "teal"
+          : "chocolate";
+      case 9:
+        return  stock.freeCashflowPayoutRatio > 0 && stock.freeCashflowPayoutRatio < 1
+          ? "teal"
+          : "chocolate";
+      default:
+        return "black";
+    }
   }
 }

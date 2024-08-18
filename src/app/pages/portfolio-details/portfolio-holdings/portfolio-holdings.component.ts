@@ -78,6 +78,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     "Dividend Income",
     "Yield on Cost",
     "Sector",
+    "Industry"
     // "Recommendation",
   ];
   columnDefs = [
@@ -91,6 +92,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     "dividendIncome",
     "yieldOnCost",
     "sector",
+    "industry"
     // "rating",
   ];
   cells: Function[] = [
@@ -103,7 +105,8 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     (stock: any) => `${(stock.unrealizedGainPercent * 100).toFixed(2)}%`,
     (stock: any) => `$${stock.dividendIncome.toFixed(2)}`,
     (stock: any) => (stock.yieldOnCost * 100).toFixed(2) + "%",
-    (stock: any) => stock.sector || "ETF",
+    (stock: any) => stock.sector || "N/A",
+    (stock: any) => stock.industry || "N/A",
     // (stock: any) => "",
   ];
   footerRow: Function[] = [
@@ -116,6 +119,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     () => "",
     () => `$${this.portfolioHoldings.dividendIncome.toFixed(2)}`,
     () => `${(this.portfolioHoldings.yieldOnCost * 100).toFixed(2)}%`,
+    () => "",
     () => "",
     // () => "",
   ];
@@ -141,6 +145,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
           ...this.portfolioHoldings[stock.symbol],
           symbol: stock.symbol,
           sector: stock.profile.sector,
+          industry: stock.profile.industry,
           rating: stock.recommendationKey,
           longName: stock.longName,
           shortName: stock.shortName,
@@ -164,6 +169,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
         data.longName,
         data.quoteType,
         data.sector || "",
+        data.industry || "",
       ];
       for (const str of dataStrings) {
         if (str.toLowerCase().includes(filter.toLowerCase())) {
@@ -209,7 +215,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
         return stock.dividendIncome > 0
           ? StockPriceColorsEnum.Gain
           : StockPriceColorsEnum.Lost;
-      case 10:
+      case 11:
         return stock.rating === "buy" ? "teal" : "black";
       default:
         return "black";

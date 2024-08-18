@@ -57,7 +57,10 @@
               <stock-name-card [stock]="stock" />
             </div>
           } @else {
-            <span (click)="updateChart(stock.symbol)">
+            <span
+              [ngStyle]="{ color: getCellColor(stock, cidx) }"
+              (click)="updateChart(stock.symbol)"
+            >
               {{ cells[cidx](stock) }}
             </span>
           }
