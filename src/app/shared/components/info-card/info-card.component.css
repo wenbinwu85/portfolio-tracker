@@ -3,6 +3,17 @@ mat-icon {
   color: slategrey;
 }
 
+mat-divider {
+  padding-bottom: 0 !important;
+  border-top-color: ghostwhite;
+  border-top-width: 0.125rem;
+  width: 80%
+}
+
+stock-ticker-chip {
+  margin: 0.5rem;
+}
+
 .mat-mdc-card {
   border-radius: 0;
 }
@@ -25,11 +36,4 @@ mat-icon {
 .date {
   padding: 0.5rem;
   color: slategrey;
-}
-
-mat-divider {
-  padding-bottom: 0 !important;
-  border-top-color: ghostwhite;
-  border-top-width: 0.125rem;
-  width: 80%
 }

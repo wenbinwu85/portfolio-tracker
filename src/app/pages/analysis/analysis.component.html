@@ -1,26 +1,30 @@
-<mat-expansion-panel [expanded]="true">
-  <mat-expansion-panel-header>
-    <mat-panel-title>
-      <mat-icon>auto_graph</mat-icon>
-      <span>Analysis A</span>
-    </mat-panel-title>
-  </mat-expansion-panel-header>
-</mat-expansion-panel>
+<mat-tab-group mat-align-tabs="center">
+  <mat-tab label="Insider Activities">
+    <ng-template #insiderRef>
+      <stock-ticker-buttons (selectedTicker)="onSelect($event)" [showETF]="false"/>
+      @for(activity of selectedInsiderActivities; track activity.index) {
+        <info-card
+          [value]="activity.shares.fmt + ' shares. ' + activity.transactionText"
+          [subtitle]="selectedTicker"
+          [additionalInfo]="activity.filerName + ', ' + activity.filerRelation"
+          [date]="(activity.startDate.raw * 1000).toString()"
+          [icon]="activity.icon"
+          [color]="activity.color"
+        />
+      }
+    </ng-template>
+  
+    <section class="add-margin">
+      <container-card 
+      title="Insider Activities"
+      [mainContentRef]="insiderRef"
+    />
+    </section>
+  </mat-tab>
 
-<mat-expansion-panel [expanded]="false">
-  <mat-expansion-panel-header>
-    <mat-panel-title>
-      <mat-icon>auto_graph</mat-icon>
-      <span>Analysis B</span>
-    </mat-panel-title>
-  </mat-expansion-panel-header>
-</mat-expansion-panel>
+  <mat-tab label="Analysis B">
+  </mat-tab>
 
-<mat-expansion-panel [expanded]="false">
-  <mat-expansion-panel-header>
-    <mat-panel-title>
-      <mat-icon>auto_graph</mat-icon>
-      <span>Analysis C</span>
-    </mat-panel-title>
-  </mat-expansion-panel-header>
-</mat-expansion-panel>
+  <mat-tab label="Analysis C">
+  </mat-tab>
+</mat-tab-group>

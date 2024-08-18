@@ -119,6 +119,10 @@ export class DataService {
     this.localStorage?.setItem(itemName, JSON.stringify(item));
   }
 
+  public getTickerData(ticker: string) {
+    return this.portfolioData[ticker];
+  }
+
   public generatePortfolioDataFromLocalStorage() { 
     this.isLoadingData.next(true);
     const symbols = this.getItem('portfolioSymbols');

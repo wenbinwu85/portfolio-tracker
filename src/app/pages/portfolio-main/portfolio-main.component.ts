@@ -58,7 +58,6 @@ export class PortfolioMainComponent {
     });
     this.gradingHistory.sort((a, b) => b.epochGradeDate - a.epochGradeDate)
     this.gradingHistory = this.gradingHistory.slice(0, 50)
-    console.table(this.gradingHistory);
   }
 
   selectChart(chartId: number) {
