@@ -123,7 +123,7 @@ export class PortfolioFinancialsComponent implements OnInit, AfterViewInit {
           ...stock,
           ...holding,
           symbol: stock.symbol,
-          debtToEquity: stock.debtToEquity.fmt || 0,
+          debtToEquity: (stock.debtToEquity.raw / 100).toFixed(2) || 0,
           currentRatio: stock.currentRatio.fmt || 0,
           earningsGrowth: +stock.earningsQuarterlyGrowth.fmt?.replace('%', '') || 0,
           revenueGrowth: +stock.revenueGrowth.fmt?.replace('%', '') || 0,
