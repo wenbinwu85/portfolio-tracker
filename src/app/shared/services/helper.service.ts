@@ -46,7 +46,7 @@ export class HelperService {
 
   public getStockPriceColor(symbol: string): string { 
     const prefix = this.getPriceKeyPrefix();
-    const priceChangePercent = this.portfolioData[symbol][prefix + "ChangePercent"].raw;
+    const priceChangePercent = this.portfolioData[symbol][prefix + "ChangePercent"]?.raw;
     return priceChangePercent > 0 ? StockPriceColorsEnum.Gain : StockPriceColorsEnum.Lost;
   }
 
