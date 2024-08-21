@@ -13,8 +13,8 @@ import { EChartsOption } from "echarts";
 import { EchartsVerticalBarChartComponent } from "../../../shared/components/charts/echart/echarts-vertical-bar-chart/echarts-vertical-bar-chart.component";
 import { ContainerCardComponent } from "../../../shared/components/container-card/container-card.component";
 import { InfoCardComponent } from "../../../shared/components/info-card/info-card.component";
-import { StockNameCardComponent } from "../../../shared/components/stock/stock-name-card/stock-name-card.component";
-import { StockTickerButtonsComponent } from "../../../shared/components/stock/stock-ticker-buttons/stock-ticker-buttons.component";
+import { StockNameCardComponent } from "../../../shared/components/portfolio/stock-name-card/stock-name-card.component";
+import { PortfolioTickerButtonsComponent } from "../../../shared/components/portfolio/portfolio-ticker-buttons/portfolio-ticker-buttons.component";
 import { DataService } from "../../../shared/services/data.service";
 
 @Component({
@@ -33,7 +33,7 @@ import { DataService } from "../../../shared/services/data.service";
     MatTableModule,
     NgxChartsModule,
     StockNameCardComponent,
-    StockTickerButtonsComponent,
+    PortfolioTickerButtonsComponent,
   ],
 })
 export class PortfolioDividendComponent implements OnInit, AfterViewInit {

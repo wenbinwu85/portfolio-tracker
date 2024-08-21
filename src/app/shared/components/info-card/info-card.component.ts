@@ -16,7 +16,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { DataService } from '../../services/data.service';
 import {
   StockTickerChipComponent,
-} from '../stock/stock-ticker-chip/stock-ticker-chip.component';
+} from '../portfolio/stock-ticker-chip/stock-ticker-chip.component';
 
 @Component({
   selector: 'info-card',

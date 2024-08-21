@@ -13,7 +13,7 @@
 
 <ng-template #dividendHistoryRef>
   <div class="add-flex" [style.flex-direction]="'column'">
-    <stock-ticker-buttons (selectedTicker)="onSelect($event)" />
+    <portfolio-ticker-buttons (selectedTicker)="onSelect($event)" />
     <div class="chart-container dividend-chart">
       <ngx-charts-area-chart
         [scheme]="dividendChartColorScheme"

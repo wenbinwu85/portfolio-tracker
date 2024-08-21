@@ -1,25 +1,5 @@
 <mat-tab-group mat-align-tabs="center">
-  <mat-tab label="Insider Activities">
-    <ng-template #insiderRef>
-      <stock-ticker-buttons (selectedTicker)="onSelect($event)" [showETF]="false"/>
-      @for(activity of selectedInsiderActivities; track activity.index) {
-        <info-card
-          [value]="activity.shares.fmt + ' shares. ' + activity.transactionText"
-          [subtitle]="selectedTicker"
-          [additionalInfo]="activity.filerName + ', ' + activity.filerRelation"
-          [date]="(activity.startDate.raw * 1000).toString()"
-          [icon]="activity.icon"
-          [color]="activity.color"
-        />
-      }
-    </ng-template>
-  
-    <section class="add-margin">
-      <container-card 
-      title="Insider Activities"
-      [mainContentRef]="insiderRef"
-    />
-    </section>
+  <mat-tab label="Analysis A">
   </mat-tab>
 
   <mat-tab label="Analysis B">

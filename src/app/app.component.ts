@@ -38,7 +38,7 @@ export class AppComponent {
       icon: "home",
     },
     {
-      label: "Portfolio",
+      label: "My Portfolio",
       route: "/portfolio",
       icon: "ballot",
     },

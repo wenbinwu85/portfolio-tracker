@@ -14,7 +14,7 @@ import {
   MatTableModule,
 } from "@angular/material/table";
 import { ContainerCardComponent } from "../../../shared/components/container-card/container-card.component";
-import { StockNameCardComponent } from "../../../shared/components/stock/stock-name-card/stock-name-card.component";
+import { StockNameCardComponent } from "../../../shared/components/portfolio/stock-name-card/stock-name-card.component";
 import { DataService } from "../../../shared/services/data.service";
 
 @Component({

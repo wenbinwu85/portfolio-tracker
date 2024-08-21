@@ -10,10 +10,10 @@ import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { MatTabsModule } from "@angular/material/tabs";
 import { Color, NgxChartsModule } from "@swimlane/ngx-charts";
 import { ContainerCardComponent } from "../../../shared/components/container-card/container-card.component";
-import { StockDayPriceRangeComponent } from "../../../shared/components/stock/stock-day-price-range/stock-day-price-range.component";
-import { StockPriceInsightComponent } from "../../../shared/components/stock/stock-price-insight/stock-price-insight.component";
-import { StockPriceMovementChartsComponent } from "../../../shared/components/stock/stock-price-movement-charts/stock-price-movement-charts.component";
-import { StockTickerButtonsComponent } from "../../../shared/components/stock/stock-ticker-buttons/stock-ticker-buttons.component";
+import { StockDayPriceRangeComponent } from "../../../shared/components/portfolio/stock-day-price-range/stock-day-price-range.component";
+import { StockPriceInsightComponent } from "../../../shared/components/portfolio/stock-price-insight/stock-price-insight.component";
+import { PortfolioQuotesComponent } from "../../../shared/components/portfolio/portfolio-quotes/portfolio-quotes.component";
+import { PortfolioTickerButtonsComponent } from "../../../shared/components/portfolio/portfolio-ticker-buttons/portfolio-ticker-buttons.component";
 import { TvSymbolInfoWidgetComponent } from "../../../shared/components/tradingview/tv-symbol-info-widget/tv-symbol-info-widget.component";
 import { DataService } from "../../../shared/services/data.service";
 import { PortfolioDividendComponent } from "../portfolio-dividend/portfolio-dividend.component";
@@ -40,8 +40,8 @@ import { PortfolioHoldingsComponent } from "../portfolio-holdings/portfolio-hold
     PortfolioHoldingsComponent,
     StockDayPriceRangeComponent,
     StockPriceInsightComponent,
-    StockPriceMovementChartsComponent,
-    StockTickerButtonsComponent,
+    PortfolioQuotesComponent,
+    PortfolioTickerButtonsComponent,
     TvSymbolInfoWidgetComponent,
   ],
   templateUrl: "./portfolio-price-insights.component.html",
