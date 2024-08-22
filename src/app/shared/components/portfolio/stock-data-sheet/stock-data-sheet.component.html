@@ -62,7 +62,8 @@
   </div>
 </ng-template>
 
-<container-card 
+<container-card
+  [title]="'Holding'"
   [mainContentRef]="holdingRef"
 />
 
@@ -96,7 +97,10 @@
 <ng-template #infoSheetRef>
   @if (stock) {
     @if (selectedChart === 1) {
-      <wallmine-chart [symbol]="stock.symbol" />
+      <tv-symbol-overview-widget 
+        [company]="stock.shortName"
+        [symbol]="stock.symbol"
+      />
     } @else {
       <tv-advanced-chart-widget [symbol]="stock.symbol" [showWatchlist]="false" />
     }
@@ -130,8 +134,18 @@
   </mat-chip-listbox>
 </ng-template>
 
-<container-card 
+<ng-template #footerRef>
+  <div class="tradingview-widget-copyright">
+    <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+        <span class="blue-text">Track all markets on TradingView</span>
+    </a>
+  </div>
+</ng-template>
+
+<container-card
+  [title]="'Details'"
   [titleContentRef]="chartToggleRef"
   [mainContentRef]="infoSheetRef"
   [subContentRef]="linkButtonsRef"
+  [footerContentRef]="footerRef"
 />

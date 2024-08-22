@@ -2,9 +2,6 @@ import { Component } from '@angular/core';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatTabsModule } from '@angular/material/tabs';
 import {
-  WallmineChartComponent,
-} from '../../shared/components/charts/wallmine-chart/wallmine-chart.component';
-import {
   ContainerCardComponent,
 } from '../../shared/components/container-card/container-card.component';
 import {
@@ -16,6 +13,7 @@ import {
 import { AlpacaApiService } from '../../shared/services/alpaca-api.service';
 import { DataService } from '../../shared/services/data.service';
 import { TvMiniChartWidgetComponent } from '../../shared/components/tradingview/tv-mini-chart-widget/tv-mini-chart-widget.component';
+import { TvSymbolOverviewWidgetComponent } from '../../shared/components/tradingview/tv-symbol-overview-widget/tv-symbol-overview-widget.component';
 
 @Component({
   selector: "app-portfolio-main",
@@ -28,8 +26,8 @@ import { TvMiniChartWidgetComponent } from '../../shared/components/tradingview/
     MatChipsModule,
     MatTabsModule,
     PortfolioQuotesComponent,
-    WallmineChartComponent,
     TvMiniChartWidgetComponent,
+    TvSymbolOverviewWidgetComponent,
   ],
 })
 export class PortfolioMainComponent {

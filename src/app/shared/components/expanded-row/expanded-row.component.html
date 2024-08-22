@@ -1,6 +1,6 @@
 <mat-tab-group mat-align-tabs="center">
     <mat-tab label="Chart">
-        <wallmine-chart [symbol]="stock.symbol" />
+        <tv-symbol-overview-widget [company]="stock.shortName" [symbol]="stock.symbol" />
     </mat-tab>
 
     <mat-tab label="Analysis & Recommedations">
@@ -23,3 +23,8 @@
         <tv-profile-widget [symbol]="stock.symbol" width="100%" />
     </mat-tab>
 </mat-tab-group>
+<div class="tradingview-widget-copyright">
+    <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+        <span class="blue-text">Track all markets on TradingView</span>
+    </a>
+</div>

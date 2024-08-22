@@ -11,6 +11,7 @@ export enum SourceScripts {
   Screener = "https://s3.tradingview.com/external-embedding/embed-widget-screener.js",
   SingleQuote = "https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js",
   SymbolInfo = "https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js",
+  SymbolOverview = "https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js",
   SymbolProfile = "https://s3.tradingview.com/external-embedding/embed-widget-symbol-profile.js",
   TechnicalAnalysis = "https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js",
   TickerTape = "https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js",
@@ -128,6 +129,61 @@ export class TradingviewService {
       }
     `;
     return this.getScript(SourceScripts.SymbolProfile, params);
+  }
+
+  symbolOverviewWidget(
+    company: string,
+    symbol: string,
+    timeFrame: string = '1D'
+  ) { 
+    const params = `
+      {
+        "symbols": [
+          [
+            "${company}",
+            "${symbol}|${timeFrame}"
+          ]
+        ],
+        "chartOnly": false,
+        "width": "100%",
+        "height": "600",
+        "locale": "en",
+        "colorTheme": "light",
+        "autosize": true,
+        "showVolume": true,
+        "showMA": true,
+        "hideDateRanges": false,
+        "hideMarketStatus": false,
+        "hideSymbolLogo": false,
+        "scalePosition": "right",
+        "scaleMode": "Normal",
+        "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
+        "fontSize": "10",
+        "noTimeScale": false,
+        "valuesTracking": "1",
+        "changeMode": "price-and-percent",
+        "chartType": "area",
+        "maLineColor": "rgba(255, 152, 0, 1)",
+        "maLineWidth": 1,
+        "maLength": 14,
+        "headerFontSize": "medium",
+        "gridLineColor": "rgba(41, 98, 255, 0.74)",
+        "lineWidth": 2,
+        "lineType": 2,
+        "dateRanges": [
+          "1d|1",
+          "1w|60",
+          "1m|30",
+          "3m|60",
+          "ytd|1D",
+          "12m|1D",
+          "60m|1W",
+          "120m|1M",
+          "all|1M"
+        ]
+      }
+    `;
+    return this.getScript(SourceScripts.SymbolOverview, params);
   }
 
   // https://www.tradingview.com/widget-docs/widgets/symbol-details/fundamental-data/

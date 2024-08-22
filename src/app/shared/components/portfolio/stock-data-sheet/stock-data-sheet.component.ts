@@ -7,7 +7,6 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { ActivatedRoute } from "@angular/router";
 import { DataService } from "../../../services/data.service";
-import { WallmineChartComponent } from "../../charts/wallmine-chart/wallmine-chart.component";
 import { ContainerCardComponent } from "../../container-card/container-card.component";
 import { InfoCardComponent } from "../../info-card/info-card.component";
 import { TvAdvancedChartWidgetComponent } from "../../tradingview/tv-advanced-chart-widget/tv-advanced-chart-widget.component";
@@ -17,6 +16,7 @@ import { TvSymbolInfoWidgetComponent } from "../../tradingview/tv-symbol-info-wi
 import { TvTechnicalAnalysisWidgetComponent } from "../../tradingview/tv-technical-analysis-widget/tv-technical-analysis-widget.component";
 import { StockPriceInsightComponent } from "../stock-price-insight/stock-price-insight.component";
 import { StockRecommendationTrendsComponent } from "../stock-recommendation-trends/stock-recommendation-trends.component";
+import { TvSymbolOverviewWidgetComponent } from "../../tradingview/tv-symbol-overview-widget/tv-symbol-overview-widget.component";
 
 @Component({
   selector: "stock-data-sheet",
@@ -39,7 +39,7 @@ import { StockRecommendationTrendsComponent } from "../stock-recommendation-tren
     TvProfileWidgetComponent,
     TvSymbolInfoWidgetComponent,
     TvTechnicalAnalysisWidgetComponent,
-    WallmineChartComponent,
+    TvSymbolOverviewWidgetComponent
   ],
 })
 export class StockDataSheetComponent implements OnInit {
