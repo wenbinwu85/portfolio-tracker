@@ -1,5 +1,6 @@
 mat-icon {
-  padding: 0.5rem;
+  margin: 1rem;
+  padding: 0 !important;
   color: slategrey;
 }
 
@@ -11,7 +12,7 @@ mat-divider {
 }
 
 stock-ticker-chip {
-  margin: 0.5rem;
+  margin: 1rem;
 }
 
 .mat-mdc-card {
@@ -19,11 +20,11 @@ stock-ticker-chip {
 }
 
 .mat-mdc-card-title {
-  padding: 0 1rem 0.5rem 0.5rem;
+  padding: 0 1rem 0.5rem 1rem;
 }
 
 .mat-mdc-card-subtitle {
-  padding: 0.5rem;
+  padding: 1rem;
   color: slategrey;
 }
 
@@ -34,6 +35,6 @@ stock-ticker-chip {
 }
 
 .date {
-  padding: 0.5rem;
+  padding: 1rem;
   color: slategrey;
 }

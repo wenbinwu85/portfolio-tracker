@@ -1,34 +1,54 @@
-<div class="logos-container">
-    @for (stock of sortedStocks; track $index) {
-        <button
-            mat-button 
-            class="ticker-button" 
-            (click)="emitSelectedTicker(stock.symbol)"
-        >
-            <!-- <img
-                [src]="helperService.getTickerLogo(stock.symbol)" 
-                alt="Logo" 
-                width="auto" 
-                height="35"
-            /> -->
-            <div>{{ stock.symbol }}</div>
-        </button>
-    }
-    @if (showETF) {
-        @for (etf of sortedEtfs; track $index) {
+@if (dividendPayersOnly) {
+    <div class="logos-container">
+        @for (stock of dividendPayers; track $index) {
             <button
                 mat-button 
-                class="ticker-button"
-                (click)="emitSelectedTicker(etf.symbol)"
+                class="ticker-button" 
+                (click)="emitSelectedTicker(stock.symbol)"
             >
                 <!-- <img
-                    [src]="helperService.getTickerLogo(etf.symbol)" 
+                    [src]="helperService.getTickerLogo(stock.symbol)" 
                     alt="Logo" 
                     width="auto" 
-                    height="35" 
+                    height="35"
                 /> -->
-                <div>{{ etf.symbol }}</div>
+                <div>{{ stock.symbol }}</div>
             </button>
         }
-    }
-</div>
+    </div>
+} @else {
+    <div class="logos-container">
+        @for (stock of sortedStocks; track $index) {
+            <button
+                mat-button 
+                class="ticker-button" 
+                (click)="emitSelectedTicker(stock.symbol)"
+            >
+                <!-- <img
+                    [src]="helperService.getTickerLogo(stock.symbol)" 
+                    alt="Logo" 
+                    width="auto" 
+                    height="35"
+                /> -->
+                <div>{{ stock.symbol }}</div>
+            </button>
+        }
+        @if (showETF) {
+            @for (etf of sortedEtfs; track $index) {
+                <button
+                    mat-button 
+                    class="ticker-button"
+                    (click)="emitSelectedTicker(etf.symbol)"
+                >
+                    <!-- <img
+                        [src]="helperService.getTickerLogo(etf.symbol)" 
+                        alt="Logo" 
+                        width="auto" 
+                        height="35" 
+                    /> -->
+                    <div>{{ etf.symbol }}</div>
+                </button>
+            }
+        }
+    </div>
+}

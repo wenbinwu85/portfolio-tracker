@@ -1,7 +1,7 @@
 <ng-template #marketChartsRef>
   <tv-symbol-overview-widget 
     [company]="'VIX Volatility'" 
-    [symbol]="'EIGHTCAP:VIX'"
+    [symbol]="'VANTAGE:VIX'"
     [timeFrame]="'1m'"
   />
 </ng-template>
@@ -33,7 +33,7 @@
     <section class="add-margin">
       @for (item of gradingHistory; track item.epochGradeDate) {
         <info-card
-          [value]="item.fromGrade + ' --> ' + item.toGrade"
+          [value]="item.fromGrade + ' to ' + item.toGrade"
           [subtitle]="item.symbol"
           [subtitleChip]="true"
           [additionalInfo]="item.firm"

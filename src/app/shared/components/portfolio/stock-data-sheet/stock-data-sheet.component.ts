@@ -17,6 +17,7 @@ import { TvTechnicalAnalysisWidgetComponent } from "../../tradingview/tv-technic
 import { StockPriceInsightComponent } from "../stock-price-insight/stock-price-insight.component";
 import { StockRecommendationTrendsComponent } from "../stock-recommendation-trends/stock-recommendation-trends.component";
 import { TvSymbolOverviewWidgetComponent } from "../../tradingview/tv-symbol-overview-widget/tv-symbol-overview-widget.component";
+import { take } from "rxjs";
 
 @Component({
   selector: "stock-data-sheet",
@@ -66,7 +67,7 @@ export class StockDataSheetComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.activatedRoute.data.subscribe(() => {
+    this.activatedRoute.data.pipe(take(1)).subscribe(() => {
       this.symbol = this.symbol
         ? this.symbol.toUpperCase()
         : this.activatedRoute.snapshot.params["symbol"].toUpperCase();

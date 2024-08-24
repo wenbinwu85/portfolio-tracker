@@ -35,7 +35,7 @@ import { TvTickersWidgetComponent } from "../tradingview/tv-tickers-widget/tv-ti
 export class HeaderComponent implements OnInit {
   appLongName = "Ben's Incredibly Great Financial Assets Report & Tracker";
   appShortName = "B.I.G.F.A.R.T";
-  appName = this.appLongName;
+  appName = this.appShortName;
   showProgressBar = false;
 
   constructor(

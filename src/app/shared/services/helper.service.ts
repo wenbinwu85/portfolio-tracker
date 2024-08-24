@@ -51,7 +51,7 @@ export class HelperService {
   }
 
   public getTickerLogo(symbol: string) { 
-    return `/assets/ticker-logos/${symbol}.png`;
-    // return 'https://raw.githubusercontent.com/nvstly/icons/main/ticker_icons/' + symbol.toUpperCase() + '.png';
+    // return `/assets/ticker-logos/${symbol}.png`;
+    return 'https://raw.githubusercontent.com/nvstly/icons/main/ticker_icons/' + symbol.toUpperCase() + '.png';
   }
 }

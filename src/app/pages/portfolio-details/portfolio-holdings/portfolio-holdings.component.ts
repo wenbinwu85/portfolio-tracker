@@ -211,10 +211,6 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
         return stock.unrealizedGain > 0
           ? StockPriceColorsEnum.Gain
           : StockPriceColorsEnum.Lost;
-      case 7:
-        return stock.dividendIncome > 0
-          ? StockPriceColorsEnum.Gain
-          : StockPriceColorsEnum.Lost;
       case 11:
         return stock.rating === "buy" ? "teal" : "black";
       default:

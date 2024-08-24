@@ -82,7 +82,7 @@ export class PortfolioPriceInsightsComponent implements OnInit {
     this.sp500FiftyTwoWeekChange = this.sortedStocks[0].SandP52WeekChange.raw;
     this.selectedSymbol = this.sortedStocks[0].symbol || this.sortedEtfs[0].symbol;
     this.selectedStock = this.dataService.portfolioData[this.selectedSymbol];
-    this.selectedSymbolColor = { name: this.selectedSymbol, value: "chocolate" }
+    this.selectedSymbolColor = { name: this.selectedSymbol, value: "skyblue" }
 
     this.sortedStocks.forEach((stock: any) => {
       this.fiftyDayMAChartData.push({
@@ -179,7 +179,7 @@ export class PortfolioPriceInsightsComponent implements OnInit {
     this.selectedSymbol = null;
     this.cdr.detectChanges();
     this.selectedSymbol = symbol;
-    this.selectedSymbolColor = { name: symbol, value: "chocolate" };
+    this.selectedSymbolColor = { name: symbol, value: "skyblue" };
     this.selectedStock = [this.dataService.portfolioData[symbol]];
     if (this.selectedStock[0].quoteType === "ETF") {
       this.changePerformanceChart(2);

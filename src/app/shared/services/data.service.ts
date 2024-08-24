@@ -1,15 +1,12 @@
-import { DOCUMENT } from '@angular/common';
+import { DOCUMENT } from "@angular/common";
 import {
   HttpClient,
   HttpErrorResponse,
   HttpHeaders,
   HttpParams,
-} from '@angular/common/http';
-import {
-  Inject,
-  Injectable,
-} from '@angular/core';
-import { Router } from '@angular/router';
+} from "@angular/common/http";
+import { Inject, Injectable } from "@angular/core";
+import { Router } from "@angular/router";
 import {
   BehaviorSubject,
   catchError,
@@ -17,7 +14,8 @@ import {
   Observable,
   of,
   retry,
-} from 'rxjs';
+  take,
+} from "rxjs";
 
 @Injectable({
   providedIn: "root",
@@ -41,30 +39,46 @@ export class DataService {
   constructor(
     @Inject(DOCUMENT) private document: Document,
     private http: HttpClient,
-    private router: Router,
+    private router: Router
   ) {
     this.localStorage = this.document.defaultView?.localStorage;
     this.generatePortfolioDataFromLocalStorage();
   }
 
-  get marketState(): string { 
-    return this.portfolioDataArray[0].marketState;
+  get HasPortfolioData(): boolean {
+    return this.hasPortfolioData.getValue();
   }
 
-  get portfolioDataArray(): any[] { 
+  get portfolioDataArray(): any[] {
     return Object.values(this.portfolioData);
   }
 
-  get portfolioHoldingsArray(): any[] { 
+  get portfolioHoldingsArray(): any[] {
     return Object.values(this.portfolioHoldings);
   }
 
-  get portfolioDividendHistoryArray(): any[] { 
+  get portfolioTechnicalInsightsArray(): any[] {
+    return Object.values(this.portfolioTechnicalInsights);
+  }
+
+  get portfolioDividendHistoryArray(): any[] {
     return Object.values(this.portfolioDividendHistory);
   }
 
-  get portfolioTechnicalInsightsArray(): any[] { 
-    return Object.values(this.portfolioTechnicalInsights);
+  get portfolioStocks(): any[] { 
+    return this.portfolioDataArray.filter((stock: any) => stock.quoteType === "EQUITY")
+  }
+
+  get portfolioEtfs(): any[] { 
+    return this.portfolioDataArray.filter((stock: any) => stock.quoteType === "ETF")
+  }
+
+  get portfolioDividendPayers(): any[] { 
+    return this.portfolioDataArray.filter((stock: any) => stock.dividendRate?.raw > 0 || stock.dividendRate > 0);
+  }
+
+  get marketState(): string {
+    return this.portfolioDataArray[0]?.marketState;
   }
 
   private error(error: HttpErrorResponse): Observable<any> {
@@ -75,26 +89,33 @@ export class DataService {
     return of({ data: [], message: errorMessage, status: 500 });
   }
 
-  public wrapHttpCall(path: string, options = this.httpOptions): Observable<any> {
+  public wrapHttpCall(
+    path: string,
+    options = this.httpOptions
+  ): Observable<any> {
     const call = this.http.get<any>(path, options);
     return call.pipe(retry<any>(2), catchError(this.error));
   }
 
-  public sanityCheck() { 
+  public sanityCheck() {
     console.log(
       "%c ----- Sanity Check -----",
       "background: teal; color: white"
     );
-    const check1 = this.portfolioSymbols.length > 0 && this.portfolioSymbols.length === this.portfolioDataArray.length;
-    const check2 = this.portfolioHoldingsArray.length === this.portfolioSymbols.length + 8;
-    const check3 = this.portfolioTechnicalInsightsArray.length === this.portfolioSymbols.length;
+    const check1 =
+      this.portfolioSymbols.length > 0 &&
+      this.portfolioSymbols.length === this.portfolioDataArray.length;
+    const check2 =
+      this.portfolioHoldingsArray.length === this.portfolioSymbols.length + 8;
+    const check3 =
+      this.portfolioTechnicalInsightsArray.length === this.portfolioSymbols.length;
     const check4 = this.portfolioDividendHistory != null;
     console.log("Symbols:", this.portfolioSymbols);
     console.log("Holdings:", this.portfolioSymbols.length);
     console.log("Portfolio data length = number of symbols:", check1);
     console.log("Holdings length is = number of symbols + 8:", check2);
     console.log("Technical insights length = number of symbols:", check3);
-    console.log("Dividend history data is not empty:", check4)
+    console.log("Dividend history data is not empty:", check4);
 
     console.log(
       "%c ------------------------",
@@ -102,10 +123,10 @@ export class DataService {
     );
 
     if (check1 && check2 && check3) {
-      console.log('Sanity Check Passed!')
+      console.log("Sanity Check Passed!");
       return true;
     } else {
-      console.log('Sanity Check Failed!')
+      console.log("Sanity Check Failed!");
       return false;
     }
   }
@@ -119,24 +140,36 @@ export class DataService {
     this.localStorage?.setItem(itemName, JSON.stringify(item));
   }
 
-  public getTickerData(ticker: string) {
-    return this.portfolioData[ticker];
+  public getTickerData(symbol: string) {
+    return this.portfolioData[symbol];
   }
 
-  public generatePortfolioDataFromLocalStorage() { 
+  public getTickerHolding(symbol: string) { 
+    return this.portfolioHoldings[symbol];
+  }
+
+  public getTickerTechnicalInsights(symbol: string) { 
+    return this.portfolioTechnicalInsights[symbol];
+  }
+
+  public getTickerDividendHistory(symbol: string) { 
+    return this.getItem(symbol + "DividendHistory");
+  }
+
+  public generatePortfolioDataFromLocalStorage() {
     this.isLoadingData.next(true);
-    const symbols = this.getItem('portfolioSymbols');
-    const holdings = this.getItem('portfolioHoldings');
-    const techInsights = this.getItem('portfolioTechInsights');
+    const symbols = this.getItem("portfolioSymbols");
+    const holdings = this.getItem("portfolioHoldings");
+    const techInsights = this.getItem("portfolioTechInsights");
 
     if (!!symbols && !!holdings && !!techInsights) {
       this.portfolioSymbols = symbols;
       this.portfolioHoldings = holdings;
       this.portfolioTechnicalInsights = techInsights;
 
-      symbols.forEach((symbol: any) => { 
-        this.portfolioData[symbol] = this.getItem(symbol)
-        this.portfolioDividendHistory[symbol] = this.getItem(symbol + 'DividendHistory')
+      symbols.forEach((symbol: any) => {
+        this.portfolioData[symbol] = this.getItem(symbol);
+        this.portfolioDividendHistory[symbol] = this.getItem(symbol + "DividendHistory");
       });
       this.hasPortfolioData.next(true);
     }
@@ -146,9 +179,7 @@ export class DataService {
 
   public generatePortfolioData(fileContent: string[]) {
     this.isLoadingData.next(true);
-
-    this.setItem('fileContent', fileContent);
-
+    this.setItem("fileContent", fileContent);
     this.portfolioHoldings.positionsHeld = 0;
     this.portfolioHoldings.marketValue = 0;
     this.portfolioHoldings.totalAmountInvested = 0;
@@ -168,19 +199,17 @@ export class DataService {
       this.portfolioHoldings[symbol] = symbolHolding;
     });
 
-    this.setItem('portfolioSymbols', this.portfolioSymbols);
+    this.setItem("portfolioSymbols", this.portfolioSymbols);
     this.portfolioHoldings.positionsHeld = this.portfolioSymbols.length;
 
     forkJoin([
-      this.getPortfolioData(),
-      this.getPortfolioTechInsights(),
+      this.fetchPortfolioData(),
+      this.fetchPortfolioTechnicalInsights(),
     ]).subscribe(([portfolioData, techInsights]) => {
       this.portfolioData = portfolioData;
       this.portfolioTechnicalInsights = techInsights;
-      Object.entries(portfolioData).forEach(([symbol, stockData]) => {
-        this.setItem(symbol, stockData);
-      });
-      this.setItem('portfolioTechInsights', techInsights);
+      Object.entries(portfolioData).forEach(([symbol, stockData]) => { this.setItem(symbol, stockData) });
+      this.setItem("portfolioTechInsights", techInsights);
 
       this.portfolioSymbols.forEach((symbol: string) => {
         const data = this.portfolioData[symbol];
@@ -201,52 +230,55 @@ export class DataService {
         this.portfolioHoldings[symbol] = holding;
       });
 
-      Object.values(this.portfolioHoldings)
+      this.portfolioHoldingsArray
         .filter((prop: any) => !!prop.symbol)
         .forEach((holding: any) => {
           holding.portfolioPercent = holding.marketValue / this.portfolioHoldings.marketValue;
           this.setItem(holding.symbol + "Holding", holding);
         });
 
-      this.portfolioHoldings.unrealizedGainPercent = this.portfolioHoldings.unrealizedGain / this.portfolioHoldings.totalAmountInvested;
-      this.portfolioHoldings.yield = this.portfolioHoldings.dividendIncome / this.portfolioHoldings.marketValue;
-      this.portfolioHoldings.yieldOnCost = this.portfolioHoldings.dividendIncome / this.portfolioHoldings.totalAmountInvested;
+      this.portfolioHoldings.unrealizedGainPercent =
+        this.portfolioHoldings.unrealizedGain /
+        this.portfolioHoldings.totalAmountInvested;
+      this.portfolioHoldings.yield =
+        this.portfolioHoldings.dividendIncome /
+        this.portfolioHoldings.marketValue;
+      this.portfolioHoldings.yieldOnCost =
+        this.portfolioHoldings.dividendIncome /
+        this.portfolioHoldings.totalAmountInvested;
       this.setItem("portfolioHoldings", this.portfolioHoldings);
 
-      this.getPortfolioDividendHistory();
+      this.fetchPortfolioDividendHistory();
       this.isLoadingData.next(false);
+      this.hasPortfolioData.next(true);
       if (!!this.sanityCheck()) {
         this.router.navigateByUrl("/main");
       }
     });
   }
 
-  refreshPortfolioData() {
+  public refreshPortfolioData() {
     this.portfolioSymbols = [];
     this.portfolioHoldings = {};
     this.portfolioData = {};
     this.portfolioTechnicalInsights = {};
     this.portfolioDividendHistory = {};
 
-    const fileContentCache = this.getItem('fileContent');
+    const fileContentCache = this.getItem("fileContent");
     this.localStorage?.clear();
     this.generatePortfolioData(fileContentCache);
-  }
-
-  public getHasPortfolioData(): boolean { 
-    return this.hasPortfolioData.getValue();
   }
 
   /**
    * @param {string} symbol - Symbol of stock to retrieve data for
    * @returns {Observable} Stock data.
    */
-  public getStockData(symbol: string): Observable<JSON> {
+  public fetchTickerData(symbol: string): Observable<JSON> {
     const apiPath = `${this.backendUrl}/fetch/stock/${symbol}`;
     return this.wrapHttpCall(apiPath);
   }
 
-  public getPortfolioData(): Observable<JSON> {
+  public fetchPortfolioData(): Observable<JSON> {
     const symbols = this.portfolioSymbols.join(":");
     const apiPath = `${this.backendUrl}/fetch/portfolio/${symbols}`;
     return this.wrapHttpCall(apiPath);
@@ -256,12 +288,12 @@ export class DataService {
    * @param {string} symbol - Symbol of stock to retrieve data for
    * @returns {Observable} Technical insights of a stock.
    */
-  public getTechnicalInsights(symbol: string): Observable<JSON> {
+  public fetchTickerTechnicalInsight(symbol: string): Observable<JSON> {
     const apiPath = `${this.backendUrl}/fetch/technical-insights/${symbol}`;
     return this.wrapHttpCall(apiPath);
   }
 
-  public getPortfolioTechInsights(): Observable<JSON> {
+  public fetchPortfolioTechnicalInsights(): Observable<JSON> {
     const symbols = this.portfolioSymbols.join(":");
     const apiPath = `${this.backendUrl}/fetch/portfolio/technical-insights/${symbols}`;
     return this.wrapHttpCall(apiPath);
@@ -272,7 +304,7 @@ export class DataService {
    * @param {number} years - years of history to retrieve
    * @returns {Observable} Dividend history.
    */
-  public getDividendHistory(symbol: string, years = 10): Observable<any> {
+  public fetchTickerDividendHistory(symbol: string, years = 10): Observable<any> {
     const apiPath = `${this.backendUrl}/fetch/dividend-history/${symbol}`;
     const params = new HttpParams().set("years", years);
     const apiOptions = { ...this.httpOptions, params };
@@ -283,57 +315,58 @@ export class DataService {
    * @description Fetch portfolio dividend history
    * @returns
    */
-  public getPortfolioDividendHistory() {
+  public fetchPortfolioDividendHistory() {
+    this.isLoadingData.next(true);
     this.portfolioSymbols.forEach((symbol: string) => {
-      this.getDividendHistory(symbol, 10).subscribe((divHis: any) => {
+      this.fetchTickerDividendHistory(symbol, 10).pipe(take(1)).subscribe((divHis: any) => {
         this.portfolioDividendHistory[symbol] = divHis;
         this.setItem(symbol + "DividendHistory", divHis);
       });
+      if (this.portfolioDividendHistoryArray.length === this.portfolioDividendPayers.length) { 
+        this.isLoadingData.next(false);
+      }
     });
-    return
+    return;
   }
 
   /**
    * @param {string} symbol - Symbol of stock to retrieve data for
    * @returns {Observable} Corporate events of a stock.
    */
-  public getCorporateEvents(symbol: string): Observable<JSON> {
+  public fetchTickerCorporateEvents(symbol: string): Observable<JSON> {
     const apiPath = `${this.backendUrl}/fetch/events/${symbol}`;
     return this.wrapHttpCall(apiPath);
   }
+
+  /**
+   * @description Fetch portfolio corporate events
+   * @returns
+   */
+  fetchPortfolioCorporateEvents() {
+    this.isLoadingData.next(true);
+
+    let counter = 0;
+    this.portfolioStocks
+      .forEach((stock: any, _: any, arr: any[]) => {
+        this.fetchTickerCorporateEvents(stock.symbol).pipe(take(1)).subscribe(() => {
+          counter++;
+          if (counter === arr.length) {
+            this.isLoadingData.next(false);
+
+            console.log(
+              "%c ----- Sanity Check -----",
+              "background: teal; color: white"
+            );
+            console.log(
+              "counter equal portfolio symbols length:",
+              counter == this.portfolioStocks.length
+            );
+            console.log(
+              "%c ------------------------",
+              "background: teal; color: white"
+            );
+          }
+        });
+      });
+  }
 }
-
-// ----------------------------------------------------------------
-
-/**
- * @description Fetch portfolio corporate events
- * @returns
- */
-// updatePortfolioCorporateEvents() {
-//   this.isLoadingData.next(true);
-
-//   let counter = 0;
-//   Object.values(this.portfolioData)
-//     .filter((stock: any) => stock.quoteType === "EQUITY")
-//     .forEach((stock: any, _: any, arr: any[]) => {
-//       this.getCorporateEvents(stock.symbol).subscribe(() => {
-//         counter++;
-//         if (counter === arr.length) {
-//           this.isLoadingData.next(false);
-
-//           console.log(
-//             "%c ----- Sanity Check -----",
-//             "background: teal; color: white"
-//           );
-//           console.log(
-//             "counter equal portfolio symbols length:",
-//             counter == this.portfolioSymbols.length
-//           );
-//           console.log(
-//             "%c ------------------------",
-//             "background: teal; color: white"
-//           );
-//         }
-//       });
-//     });
-// }

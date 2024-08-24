@@ -54,7 +54,6 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
     "December",
   ];
   portfolioHoldings: any;
-  portfolioData: any;
   browser = "";
   todayDate = new Date();
   dividendIncome = 0;
@@ -142,11 +141,9 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.portfolioHoldings = this.dataService.portfolioHoldings;
-    this.portfolioData = this.dataService.portfolioData;
-    this.dataSource.data = this.dataService.portfolioDataArray
-      .filter(
-        (stock: any) => stock.dividendYield?.raw > 0 || stock.dividendYield > 0
-      )
+    this.dividendIncome = this.portfolioHoldings.dividendIncome;
+    this.portfolioYieldOnCost = this.portfolioHoldings.yieldOnCost;
+    this.dataSource.data = this.dataService.portfolioDividendPayers
       .map((stock: any) => {
         return {
           ...this.portfolioHoldings[stock.symbol],
@@ -162,8 +159,6 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
         value: stock.dividendIncome,
       });
     });
-    this.dividendIncome = this.portfolioHoldings.dividendIncome;
-    this.portfolioYieldOnCost = this.portfolioHoldings.yieldOnCost;
     this.browser = this.getBrowserName();
     this.setInfoCards();
     this.updateChart(this.selectedSymbol, false);
@@ -264,17 +259,12 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
       },
     };
 
-    const stock = this.dataSource.data.filter(
-      (stock: any) => stock.symbol === symbol
-    )[0];
-
+    const stock = this.dataSource.data.filter((stock: any) => stock.symbol === symbol)[0];
     let divData: any = {
       name: `${stock.symbol} | ${stock.shortName}`,
       series: [],
     };
-
-    const divHis = this.dataService.portfolioDividendHistory[stock.symbol];
-
+    const divHis = this.dataService.getTickerDividendHistory(stock.symbol);
     Object.entries(divHis).forEach((item: any) => {
       divData.series.push({
         name: new Date(item[0].split("-").join(" ")),

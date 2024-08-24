@@ -45,7 +45,7 @@ export class PortfolioQuotesComponent {
   betaChartData: any = [];
   stockNames: any = [];
   priceRangeColorScheme = { domain: ["steelblue", "skyblue"] } as Color;
-  betaColorScheme = { domain: ["palevioletred"] } as Color;
+  betaColorScheme = { domain: ["slategrey"] } as Color;
   scaleType = ScaleType;
   selectedChart = 1;
   prefix: any;

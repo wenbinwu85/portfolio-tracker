@@ -58,7 +58,7 @@
     @if (pieChartStyle === 'pie') {
       <div class="chart-container">
         <ngx-charts-pie-chart
-          [scheme]="'picnic'"
+          [scheme]="'air'"
           [animations]="true"
           [results]="sectorsData"
           [doughnut]="true"
@@ -72,7 +72,7 @@
     @if (pieChartStyle === 'grid') {
       <div class="chart-container">
         <ngx-charts-pie-grid
-          [scheme]="'picnic'"
+          [scheme]="'air'"
           [animations]="true"
           [results]="sectorsData"
           [label]="'Dollars Invested'"
@@ -107,8 +107,8 @@
       [min]="0"
       [max]="portfolioValueTarget"
       [step]="1000"
-      [showTickMarks]="true"      
-      [color]="'accent'"
+      [showTickMarks]="true"
+      disabled
     >
       <input
         matSliderThumb
@@ -173,7 +173,7 @@
       [max]="passiveIncomeTarget"
       [step]="120"
       [showTickMarks]="true"
-      [color]="'accent'"
+      disabled
     >
       <input
         matSliderThumb

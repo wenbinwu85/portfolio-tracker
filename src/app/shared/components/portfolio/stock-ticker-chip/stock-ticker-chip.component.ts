@@ -12,6 +12,7 @@ import { HelperService } from "../../../services/helper.service";
 })
 export class StockTickerChipComponent implements OnInit {
   @Input({ required: true }) stock!: any;
+  @Input() largeTicker?: boolean = false;
   priceKeyPrefix: any;
 
   constructor(public helperService: HelperService) {}

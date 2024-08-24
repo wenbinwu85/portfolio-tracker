@@ -18,9 +18,11 @@ import { HelperService } from '../../../services/helper.service';
 })
 export class PortfolioTickerButtonsComponent implements OnInit {
   @Input() showETF: boolean = true;
+  @Input() dividendPayersOnly: boolean = false;
   @Output() selectedTicker = new EventEmitter<string>();
   sortedStocks: any[] = [];
   sortedEtfs: any[] = [];
+  dividendPayers: any[] = [];
 
   constructor(
     private dataService: DataService,
@@ -28,12 +30,11 @@ export class PortfolioTickerButtonsComponent implements OnInit {
   ) { }
   
   ngOnInit() { 
-    this.sortedStocks = Object.values(this.dataService.portfolioData)
-      .filter((a: any) => a.quoteType === "EQUITY")
+    this.sortedStocks = this.dataService.portfolioStocks
       .sort((a: any, b: any) => a["52WeekChange"].raw - b["52WeekChange"].raw);
-    this.sortedEtfs = Object.values(this.dataService.portfolioData)
-      .filter((a: any) => a.quoteType === "ETF")
+    this.sortedEtfs = this.dataService.portfolioEtfs
       .sort((a: any, b: any) => a["ytdReturn"].raw - b["ytdReturn"].raw);
+    this.dividendPayers = this.dataService.portfolioDividendPayers;
   }
 
   emitSelectedTicker(symbol: string) {
