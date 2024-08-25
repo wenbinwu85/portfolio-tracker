@@ -109,12 +109,8 @@ export class PortfolioFinancialsComponent implements OnInit, AfterViewInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    const stocks = this.dataService.portfolioDataArray.filter(
-      (stock: any) => stock.quoteType === "EQUITY"
-    );
-    const etfs = this.dataService.portfolioDataArray.filter(
-      (stock: any) => stock.quoteType === "ETF"
-    );
+    const stocks = this.dataService.portfolioStocks;
+    const etfs = this.dataService.portfolioEtfs;
 
     this.dataSource.data = stocks
       .map((stock: any) => {

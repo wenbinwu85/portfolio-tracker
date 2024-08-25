@@ -46,7 +46,7 @@ export class PortfolioDetailsComponent implements OnInit {
         icon: "price_change",
       }
     ];
-    if (dataService.getItem('portfolioHoldings').dividendIncome > 0) { 
+    if (dataService.portfolioHoldings.dividendIncome > 0) { 
       this.navLinks.push({
         label: "Dividend Tracker",
         route: "dividend",

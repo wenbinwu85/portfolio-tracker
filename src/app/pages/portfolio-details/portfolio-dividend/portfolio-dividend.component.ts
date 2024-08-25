@@ -32,8 +32,8 @@ import { DataService } from "../../../shared/services/data.service";
     MatSortModule,
     MatTableModule,
     NgxChartsModule,
-    StockNameCardComponent,
     PortfolioTickerButtonsComponent,
+    StockNameCardComponent,
   ],
 })
 export class PortfolioDividendComponent implements OnInit, AfterViewInit {
@@ -145,21 +145,19 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
     this.portfolioYieldOnCost = this.portfolioHoldings.yieldOnCost;
     this.dataSource.data = this.dataService.portfolioDividendPayers
       .map((stock: any) => {
+        const holding = this.portfolioHoldings[stock.symbol];
+        this.pieChartData.push({
+          name: stock.symbol,
+          value: holding.dividendIncome,
+        });
         return {
-          ...this.portfolioHoldings[stock.symbol],
+          ...holding,
           ...stock,
           payoutRatio: stock.payoutRatio?.raw * 100 || 0
         };
       });
     this.selectedSymbol = this.dataSource.data[0].symbol;
-
-    this.dataSource.data.forEach((stock: any) => {
-      this.pieChartData.push({
-        name: stock.symbol,
-        value: stock.dividendIncome,
-      });
-    });
-    this.browser = this.getBrowserName();
+    // this.browser = this.getBrowserName();
     this.setInfoCards();
     this.updateChart(this.selectedSymbol, false);
   }
@@ -168,26 +166,26 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
     this.dataSource.sort = this.sort;
   }
 
-  getBrowserName(): string {
-    const agent = window?.navigator.userAgent.toLowerCase();
-    const browser =
-      agent.indexOf("edge") > -1
-        ? "Microsoft Edge"
-        : agent.indexOf("edg") > -1
-        ? "Chromium-based Edge"
-        : agent.indexOf("opr") > -1
-        ? "Opera"
-        : agent.indexOf("chrome") > -1
-        ? "Chrome"
-        : agent.indexOf("trident") > -1
-        ? "Internet Explorer"
-        : agent.indexOf("firefox") > -1
-        ? "Firefox"
-        : agent.indexOf("safari") > -1
-        ? "Safari"
-        : "other";
-    return browser;
-  }
+  // getBrowserName(): string {
+  //   const agent = window?.navigator.userAgent.toLowerCase();
+  //   const browser =
+  //     agent.indexOf("edge") > -1
+  //       ? "Microsoft Edge"
+  //       : agent.indexOf("edg") > -1
+  //       ? "Chromium-based Edge"
+  //       : agent.indexOf("opr") > -1
+  //       ? "Opera"
+  //       : agent.indexOf("chrome") > -1
+  //       ? "Chrome"
+  //       : agent.indexOf("trident") > -1
+  //       ? "Internet Explorer"
+  //       : agent.indexOf("firefox") > -1
+  //       ? "Firefox"
+  //       : agent.indexOf("safari") > -1
+  //       ? "Safari"
+  //       : "other";
+  //   return browser;
+  // }
 
   setInfoCards() {
     this.infoCards = [
@@ -274,7 +272,7 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
       options.series[0].data.push(+item[1]);
     });
 
-    this.echartOptions = options;
+    // this.echartOptions = options;
     this.dividendLineChartData = [divData];
     this.selectedSymbol = stock.symbol;
     this.selectedSymbolLabel = `
@@ -283,10 +281,18 @@ export class PortfolioDividendComponent implements OnInit, AfterViewInit {
       ${stock.profile?.sector || "ETF"} |
       ${stock.profile?.industry || "ETF"}
     `;
+
+    if (scroll) { 
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      })
+    }
   }
 
   onSelect(symbol: string): void {
-    this.updateChart(symbol);
+    this.updateChart(symbol, true);
   }
 
   getCellColor(stock: any, index: number) {

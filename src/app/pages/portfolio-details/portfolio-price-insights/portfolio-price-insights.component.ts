@@ -10,10 +10,10 @@ import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { MatTabsModule } from "@angular/material/tabs";
 import { Color, NgxChartsModule } from "@swimlane/ngx-charts";
 import { ContainerCardComponent } from "../../../shared/components/container-card/container-card.component";
-import { StockDayPriceRangeComponent } from "../../../shared/components/portfolio/stock-day-price-range/stock-day-price-range.component";
-import { StockPriceInsightComponent } from "../../../shared/components/portfolio/stock-price-insight/stock-price-insight.component";
 import { PortfolioQuotesComponent } from "../../../shared/components/portfolio/portfolio-quotes/portfolio-quotes.component";
 import { PortfolioTickerButtonsComponent } from "../../../shared/components/portfolio/portfolio-ticker-buttons/portfolio-ticker-buttons.component";
+import { StockDayPriceRangeComponent } from "../../../shared/components/portfolio/stock-day-price-range/stock-day-price-range.component";
+import { StockPriceInsightComponent } from "../../../shared/components/portfolio/stock-price-insight/stock-price-insight.component";
 import { TvSymbolInfoWidgetComponent } from "../../../shared/components/tradingview/tv-symbol-info-widget/tv-symbol-info-widget.component";
 import { DataService } from "../../../shared/services/data.service";
 import { PortfolioDividendComponent } from "../portfolio-dividend/portfolio-dividend.component";
@@ -38,10 +38,10 @@ import { PortfolioHoldingsComponent } from "../portfolio-holdings/portfolio-hold
     PortfolioDividendComponent,
     PortfolioFinancialsComponent,
     PortfolioHoldingsComponent,
-    StockDayPriceRangeComponent,
-    StockPriceInsightComponent,
     PortfolioQuotesComponent,
     PortfolioTickerButtonsComponent,
+    StockDayPriceRangeComponent,
+    StockPriceInsightComponent,
     TvSymbolInfoWidgetComponent,
   ],
   templateUrl: "./portfolio-price-insights.component.html",
@@ -73,16 +73,15 @@ export class PortfolioPriceInsightsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.sortedStocks = this.dataService.portfolioDataArray
-      .filter((a: any) => a.quoteType === "EQUITY")
+    this.sortedStocks = this.dataService.portfolioStocks
       .sort((a: any, b: any) => a["52WeekChange"].raw - b["52WeekChange"].raw);
-    this.sortedEtfs = this.dataService.portfolioDataArray
-      .filter((a: any) => a.quoteType === "ETF")
+    this.sortedEtfs = this.dataService.portfolioEtfs
       .sort((a: any, b: any) => a["ytdReturn"].raw - b["ytdReturn"].raw);
     this.sp500FiftyTwoWeekChange = this.sortedStocks[0].SandP52WeekChange.raw;
-    this.selectedSymbol = this.sortedStocks[0].symbol || this.sortedEtfs[0].symbol;
-    this.selectedStock = this.dataService.portfolioData[this.selectedSymbol];
-    this.selectedSymbolColor = { name: this.selectedSymbol, value: "skyblue" }
+    this.selectedSymbol =
+      this.sortedStocks[0].symbol || this.sortedEtfs[0].symbol;
+    this.selectedStock = this.dataService.getTickerData(this.selectedSymbol);
+    this.selectedSymbolColor = { name: this.selectedSymbol, value: "skyblue" };
 
     this.sortedStocks.forEach((stock: any) => {
       this.fiftyDayMAChartData.push({
@@ -140,9 +139,7 @@ export class PortfolioPriceInsightsComponent implements OnInit {
 
     this.fiftyDayMAChartData.sort((a: any, b: any) => a.value - b.value);
     this.twoHundredDayMAChartData.sort((a: any, b: any) => a.value - b.value);
-    this.fiftyTwoWeekChangeChartData.sort(
-      (a: any, b: any) => a.value - b.value
-    );
+    this.fiftyTwoWeekChangeChartData.sort((a: any, b: any) => a.value - b.value);
     this.fiftyTwoWeekLowChartData.sort((a: any, b: any) => a.value - b.value);
     this.fiftyTwoWeekHighChartData.sort((a: any, b: any) => a.value - b.value);
     this.discountChartData.sort((a: any, b: any) => a.value - b.value);
@@ -180,7 +177,7 @@ export class PortfolioPriceInsightsComponent implements OnInit {
     this.cdr.detectChanges();
     this.selectedSymbol = symbol;
     this.selectedSymbolColor = { name: symbol, value: "skyblue" };
-    this.selectedStock = [this.dataService.portfolioData[symbol]];
+    this.selectedStock = [this.dataService.getTickerData(symbol)];
     if (this.selectedStock[0].quoteType === "ETF") {
       this.changePerformanceChart(2);
     } else {

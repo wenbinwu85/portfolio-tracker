@@ -131,10 +131,11 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     this.portfolioHoldings = this.dataService.portfolioHoldings;
     this.dataSource.data = this.dataService.portfolioSymbols.map(
       (symbol: any) => {
+        const holding = this.portfolioHoldings[symbol];
         const stock = this.portfolioData[symbol];
         const stockInfo = {
           name: stock.symbol,
-          value: this.portfolioHoldings[stock.symbol].totalCost,
+          value: holding.totalCost,
           sector: stock.profile?.sector || "ETF",
           shortName: stock.shortName,
           longName: stock.longName,
@@ -142,7 +143,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
         this.allTotalCostChartData.push(stockInfo);
 
         return {
-          ...this.portfolioHoldings[stock.symbol],
+          ...holding,
           symbol: stock.symbol,
           sector: stock.profile.sector,
           industry: stock.profile.industry,
