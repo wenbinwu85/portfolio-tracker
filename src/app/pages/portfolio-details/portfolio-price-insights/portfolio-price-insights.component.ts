@@ -105,6 +105,8 @@ export class PortfolioPriceInsightsComponent implements OnInit {
         value: stock["52WeekChange"].raw * 100,
       });
 
+      console.log(stock.symbol, stock['52WeekChange'].raw)
+
       this.fiftyTwoWeekLowChartData.push({
         name: stock.symbol,
         value:

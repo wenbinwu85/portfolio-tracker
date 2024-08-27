@@ -1,27 +1,3 @@
-<ng-template #marketChartsRef>
-  <tv-symbol-overview-widget 
-    [company]="'VIX Volatility'" 
-    [symbol]="'VANTAGE:VIX'"
-    [timeFrame]="'1m'"
-  />
-</ng-template>
-
-<ng-template #marketChartsFooterRef>
-  <div class="tradingview-widget-copyright">
-    <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
-        <span class="blue-text">Track all markets on TradingView</span>
-    </a>
-  </div>
-</ng-template>
-
-<section class="add-margin">
-  <container-card
-    title="Volatility Index"
-    [mainContentRef]="marketChartsRef"
-    [footerContentRef]="marketChartsFooterRef"
-  />
-</section>
-
 <mat-tab-group mat-align-tabs="center">
   <mat-tab label="Quotes">
     <section class="add-margin">

@@ -49,6 +49,7 @@ export class PortfolioSummaryComponent implements OnInit {
   dividendBarChartColorScheme = { domain: ["slategrey"] } as Color;
   stackedBarChartColorScheme = { domain: ["slategrey", "lightskyblue"] } as Color;
   pieChartStyle = "pie";
+  selectedSectorColors: any[] = [];
 
   constructor(private dataService: DataService) {}
 
@@ -159,5 +160,18 @@ export class PortfolioSummaryComponent implements OnInit {
 
   changeChartStyle(style: string) {
     this.pieChartStyle = style;
+    this.selectedSectorColors = [];
+  }
+
+  onSelectSector(data: any) {
+    this.selectedSectorColors = [];
+    this.portfolioPercentData.forEach((ticker: any) => {
+      if (ticker.sector === data.name) {
+        this.selectedSectorColors.push({
+          name: ticker.name,
+          value: 'skyblue'
+        })
+      }
+    });
   }
 }

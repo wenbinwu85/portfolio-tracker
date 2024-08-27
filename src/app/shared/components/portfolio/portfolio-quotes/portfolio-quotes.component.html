@@ -3,6 +3,7 @@
         <mat-chip-listbox>
             <mat-chip-option selected (click)="displayChart(1)">Price Changes</mat-chip-option>
             <mat-chip-option (click)="displayChart(2)">Beta</mat-chip-option>
+            <mat-chip-option (click)="displayChart(3)">VIX</mat-chip-option>
         </mat-chip-listbox>
     </div>
 </ng-template>
@@ -63,6 +64,7 @@
                     [showDataLabel]="true"
                     [yAxisLabel]="'Price Change %'"
                     [customColors]="getPriceChangeChartColor"
+                    [roundEdges]="false"
                 >
                     <ng-template #tooltipTemplate let-model="model">
                         <tv-mini-chart-widget [symbol]="model.name" [theme]="'dark'"/>
@@ -101,9 +103,17 @@
                     [rotateXAxisTicks]="true"
                     [animations]="true"
                     [yAxisLabel]="'Beta'"
+                    [roundEdges]="false"
                 />
             </div>
         </div>
+    }
+    @if (selectedChart === 3) {
+        <tv-symbol-overview-widget 
+            [company]="'VIX Volatility'" 
+            [symbol]="'VANTAGE:VIX'"
+            [timeFrame]="'1m'"
+        />
     }
     <mat-expansion-panel [expanded]="expandWidget">
         <mat-expansion-panel-header>
@@ -116,9 +126,18 @@
     </mat-expansion-panel>
 </ng-template>
 
+<ng-template #quotesFooterRef>
+    <div class="tradingview-widget-copyright">
+        <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+            <span class="blue-text">Track all markets on TradingView</span>
+        </a>
+    </div>
+</ng-template>
+
 <container-card 
     title="Portfolio Quotes"
     [titleContentRef]="titleContentRef"
     [subContentRef]="subContentRef"
     [mainContentRef]="ValueChangeRef"
+    [footerContentRef]="(!!expandWidget || selectedChart === 3) ? quotesFooterRef : undefined"
 />

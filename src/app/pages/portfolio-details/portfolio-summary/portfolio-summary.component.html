@@ -66,6 +66,7 @@
           [labels]="true"
           [title]="'Sector Allocations'"
           [maxLabelLength]="100"
+          (select)="onSelectSector($event)"
         />
       </div>
     }
@@ -77,6 +78,7 @@
           [results]="sectorsData"
           [label]="'Dollars Invested'"
           [title]="'Sector Allocations'"
+          (select)="onSelectSector($event)"
         />
       </div>
     }
@@ -90,6 +92,8 @@
         [showXAxisLabel]="true"
         [showYAxisLabel]="true"
         [yAxisLabel]="'Holding Allocations'"
+        [roundEdges]="false"
+        [customColors]="selectedSectorColors"
       />
     </div>
   </div>
@@ -153,6 +157,8 @@
           [showXAxisLabel]="true"
           [showYAxisLabel]="true"
           [yAxisLabel]="'Unrealized Gain Percent'"
+          [roundEdges]="false"
+          [customColors]="selectedSectorColors"
         />
       </div>
     </div>
@@ -206,6 +212,8 @@
           [showXAxisLabel]="true"
           [showYAxisLabel]="true"
           [yAxisLabel]="'Dividend Income'"
+          [roundEdges]="false"
+          [customColors]="selectedSectorColors"
         />
       </div>
       <div class="chart-container">
@@ -218,6 +226,8 @@
           [showXAxisLabel]="true"
           [showYAxisLabel]="true"
           [yAxisLabel]="'Yield On Cost Percent'"
+          [roundEdges]="false"
+          [customColors]="selectedSectorColors"
         />
       </div>
     </div>

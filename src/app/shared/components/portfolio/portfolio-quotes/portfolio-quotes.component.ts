@@ -12,10 +12,11 @@ import { HelperService } from "../../../services/helper.service";
 import { ContainerCardComponent } from "../../container-card/container-card.component";
 import { TvMarketQuotesWidgetComponent } from "../../tradingview/tv-market-quotes-widget/tv-market-quotes-widget.component";
 import { TvMiniChartWidgetComponent } from "../../tradingview/tv-mini-chart-widget/tv-mini-chart-widget.component";
+import { TvSymbolOverviewWidgetComponent } from "../../tradingview/tv-symbol-overview-widget/tv-symbol-overview-widget.component";
 import { TvTickersWidgetComponent } from "../../tradingview/tv-tickers-widget/tv-tickers-widget.component";
 
 @Component({
-  selector: 'portfolio-quotes',
+  selector: "portfolio-quotes",
   standalone: true,
   imports: [
     CommonModule,
@@ -28,10 +29,11 @@ import { TvTickersWidgetComponent } from "../../tradingview/tv-tickers-widget/tv
     NgxChartsModule,
     TvMarketQuotesWidgetComponent,
     TvMiniChartWidgetComponent,
+    TvSymbolOverviewWidgetComponent,
     TvTickersWidgetComponent,
   ],
-  templateUrl: './portfolio-quotes.component.html',
-  styleUrls: ['./portfolio-quotes.component.css'],
+  templateUrl: "./portfolio-quotes.component.html",
+  styleUrls: ["./portfolio-quotes.component.css"],
 })
 export class PortfolioQuotesComponent {
   @Input() showTickers = true;
@@ -66,9 +68,9 @@ export class PortfolioQuotesComponent {
     },
     regularMarket: {
       text: "Regular Market",
-    }
+    },
   } as any;
-  marketState: string = '';
+  marketState: string = "";
 
   constructor(
     private dataService: DataService,
@@ -80,14 +82,18 @@ export class PortfolioQuotesComponent {
     this.prefix = this.helper.getPriceKeyPrefix();
     this.portfolioMarketValue = this.dataService.portfolioHoldings.marketValue;
     this.prePostHourIcon = this.prefix.startsWith("pre") ? "sunny" : "bedtime";
-    this.prePostHourText = this.prefix.startsWith("pre") ? "Pre Market " : "Post Market ";
+    this.prePostHourText = this.prefix.startsWith("pre")
+      ? "Pre Market "
+      : "Post Market ";
 
     this.dataService.portfolioSymbols.forEach((symbol: any) => {
       const position = this.dataService.portfolioHoldings[symbol];
       const stock = this.dataService.portfolioData[symbol];
       this.stockNames.push({
         name: stock.symbol,
-        displayName: `${stock.longName} - ${stock.profile.sector || stock.quoteType} - ${stock.symbol}`,
+        displayName: `${stock.longName} - ${
+          stock.profile.sector || stock.quoteType
+        } - ${stock.symbol}`,
       });
 
       this.priceChange += stock.regularMarketChange.raw * position.shares;
@@ -111,7 +117,10 @@ export class PortfolioQuotesComponent {
         ],
       });
       this.priceRangeChartData.sort(
-        (a: any, b: any) => a.series[0].value + a.series[1].value - (b.series[0].value + b.series[1].value)
+        (a: any, b: any) =>
+          a.series[0].value +
+          a.series[1].value -
+          (b.series[0].value + b.series[1].value)
       );
 
       if (!this.prefix.startsWith("regular")) {
@@ -130,8 +139,10 @@ export class PortfolioQuotesComponent {
     });
 
     this.stockNames.sort((a: any, b: any) => {
-      const val1 = this.dataService.portfolioData[a.name].regularMarketChangePercent.raw;
-      const val2 = this.dataService.portfolioData[b.name].regularMarketChangePercent.raw;
+      const val1 =
+        this.dataService.portfolioData[a.name].regularMarketChangePercent.raw;
+      const val2 =
+        this.dataService.portfolioData[b.name].regularMarketChangePercent.raw;
       return val1 - val2;
     });
 
@@ -139,17 +150,25 @@ export class PortfolioQuotesComponent {
   }
 
   getDayPriceChangeColor() {
-    return this.priceChange > 0 ? StockPriceColorsEnum.Gain : StockPriceColorsEnum.Lost;
+    return this.priceChange > 0
+      ? StockPriceColorsEnum.Gain
+      : StockPriceColorsEnum.Lost;
   }
 
   getPrePostPriceChangeColor() {
-    return this.prePostPriceChange > 0 ? StockPriceColorsEnum.Gain : StockPriceColorsEnum.Lost;
+    return this.prePostPriceChange > 0
+      ? StockPriceColorsEnum.Gain
+      : StockPriceColorsEnum.Lost;
   }
 
   getPriceChangeChartColor = (symbol: any) => {
-    const key = this.toggleChecked ? this.chartConfigs[this.prefix]?.priceChangePercent : 'regularMarketChangePercent'; 
+    const key = this.toggleChecked
+      ? this.chartConfigs[this.prefix]?.priceChangePercent
+      : "regularMarketChangePercent";
     const stock = this.dataService.portfolioData[symbol];
-    return stock[key].raw > 0 ? StockPriceColorsEnum.Gain : StockPriceColorsEnum.Lost;
+    return stock[key].raw > 0
+      ? StockPriceColorsEnum.Gain
+      : StockPriceColorsEnum.Lost;
   };
 
   displayChart(chartID: number) {
@@ -158,7 +177,9 @@ export class PortfolioQuotesComponent {
 
   changeChart() {
     this.toggleChecked = !this.toggleChecked;
-    const prefixKey = this.toggleChecked ? this.prefix + "ChangePercent" : "regularMarketChangePercent"; 
+    const prefixKey = this.toggleChecked
+      ? this.prefix + "ChangePercent"
+      : "regularMarketChangePercent";
     this.priceChangeChartData = [];
 
     this.dataService.portfolioSymbols?.forEach((symbol: any) => {

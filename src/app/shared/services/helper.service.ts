@@ -7,21 +7,22 @@ import { StockPriceColorsEnum } from "../model/colors.model";
 })
 export class HelperService {
   private portfolioData;
-  
+  today = new Date();
+
   constructor(private dataService: DataService) { 
     this.portfolioData = this.dataService.portfolioData;
   }
 
   public getPriceKeyPrefix() {
-    const dayOfTheWeek = new Date().getDay();
-    const timeNow = new Date().getTime();
-    const preMarketStart = new Date().setHours(4, 0, 0);
-    const preMarketEnd = new Date().setHours(9, 29, 59)
-    const regularMarketOpen = new Date().setHours(9, 30, 0);
-    const regularMarketClose = new Date().setHours(16, 0, 0);
-    const postMarketStart = new Date().setHours(16, 0, 1);
-    const postMarketEnd = new Date().setHours(20, 0, 0);
-    const ghostHourStart = new Date().setHours(20, 0, 1);
+    const dayOfTheWeek = this.today.getDay();
+    const timeNow = this.today.getTime();
+    const preMarketStart = this.today.setHours(4, 0, 0);
+    const preMarketEnd = this.today.setHours(9, 29, 59)
+    const regularMarketOpen = this.today.setHours(9, 30, 0);
+    const regularMarketClose = this.today.setHours(16, 0, 0);
+    const postMarketStart = this.today.setHours(16, 0, 1);
+    const postMarketEnd = this.today.setHours(20, 0, 0);
+    const ghostHourStart = this.today.setHours(20, 0, 1);
 
     // TODO: check these conditions on Monday
     if (
@@ -51,7 +52,6 @@ export class HelperService {
   }
 
   public getTickerLogo(symbol: string) { 
-    // return `/assets/ticker-logos/${symbol}.png`;
     return 'https://raw.githubusercontent.com/nvstly/icons/main/ticker_icons/' + symbol.toUpperCase() + '.png';
   }
 }

@@ -15,7 +15,7 @@
   <div class="add-flex" [style.flex-direction]="'column'">
     <portfolio-ticker-buttons [dividendPayersOnly]="true" (selectedTicker)="onSelect($event)" />
     <div class="chart-container dividend-chart">
-      <ngx-charts-area-chart
+      <ngx-charts-bar-vertical-2d
         [scheme]="dividendChartColorScheme"
         [results]="dividendLineChartData"
         [xAxisLabel]="selectedSymbolLabel"
@@ -24,10 +24,8 @@
         [showYAxisLabel]="true"
         [xAxis]="true"
         [yAxis]="true"
-        [autoScale]="true"
         [animations]="true"
-        [gradient]="true"
-        [yScaleMin]="0"
+        [roundEdges]="false"
       />
     </div>
   </div>
