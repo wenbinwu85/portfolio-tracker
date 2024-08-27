@@ -26,7 +26,7 @@
                     [showYAxisLabel]="true"
                     [legend]="false"
                     [rotateXAxisTicks]="true"
-                    [yAxisLabel]="'Price vs 50 Day MA %'"
+                    [xAxisLabel]="'Price vs 50 Day Moving Average %'"
                     [yScaleMin]="fiftyDayMAChartData[0].value - 5"
                     [customColors]="[selectedSymbolColor]"
                     [roundEdges]="false"
@@ -44,7 +44,7 @@
                     [showYAxisLabel]="true"
                     [legend]="false"
                     [rotateXAxisTicks]="true"
-                    [yAxisLabel]="'Price vs 200 Day MA %'"
+                    [xAxisLabel]="'Price vs 200 Day Moving Average %'"
                     [yScaleMin]="twoHundredDayMAChartData[0].value - 5"
                     [customColors]="[selectedSymbolColor]"
                     [roundEdges]="false"
@@ -52,6 +52,9 @@
                 </ngx-charts-bar-vertical>
             </div> 
         </div>
+
+        <mat-divider></mat-divider>
+
         <div class="add-flex">
             <div class="chart-container">
                 <ngx-charts-bar-vertical
@@ -64,7 +67,7 @@
                     [showYAxisLabel]="true"
                     [legend]="false"
                     [rotateXAxisTicks]="true"
-                    [yAxisLabel]="'Price % above 52 week low'"
+                    [xAxisLabel]="'Price above 52 week low %'"
                     [customColors]="[selectedSymbolColor]"
                     [roundEdges]="false"
                 >
@@ -81,14 +84,17 @@
                     [showYAxisLabel]="true"
                     [legend]="false"
                     [rotateXAxisTicks]="true"
-                    [yAxisLabel]="'Price % below 52 week high'"
+                    [xAxisLabel]="'Price below 52 week high %'"
                     [customColors]="[selectedSymbolColor]"
                     [roundEdges]="false"
                 >
                 </ngx-charts-bar-vertical>
             </div>
         </div>
-        <div class="add-flex">
+
+        <mat-divider></mat-divider>
+
+        <!-- <div class="add-flex">
             <div class="chart-container">
                 <ngx-charts-bar-vertical
                     [scheme]="performanceChartColorScheme"
@@ -100,7 +106,7 @@
                     [showYAxisLabel]="true"
                     [legend]="false"
                     [rotateXAxisTicks]="true"
-                    [yAxisLabel]="'52 Week Change %'"
+                    [xAxisLabel]="'52 Week Change %'"
                     [activeEntries]="['S&P 500']"
                     [customColors]="[selectedSymbolColor, {name:'S&P 500', value: 'gold'}]"
                     [roundEdges]="false"
@@ -110,7 +116,7 @@
             <div class="chart-container">
                 <ngx-charts-bar-vertical
                     [scheme]="targetPriceChartColorScheme"
-                    [results]="discountChartData"
+                    [results]="meanTargetPriceData"
                     [animations]="true"
                     [xAxis]="true"
                     [yAxis]="true"
@@ -119,7 +125,46 @@
                     [legend]="false"
                     [rotateXAxisTicks]="true"
                     [yScaleMin]="-5"
-                    [yAxisLabel]="'Price % vs mean target price'"
+                    [xAxisLabel]="'Price vs mean target price %'"
+                    [customColors]="[selectedSymbolColor]"
+                    [roundEdges]="false"
+                >
+                </ngx-charts-bar-vertical>
+            </div>
+        </div> -->
+
+        <div class="add-flex">
+            <div class="chart-container">
+                <ngx-charts-bar-vertical
+                    [scheme]="targetPriceChartColorScheme"
+                    [results]="lowTargetPriceData"
+                    [animations]="true"
+                    [xAxis]="true"
+                    [yAxis]="true"
+                    [showXAxisLabel]="true"
+                    [showYAxisLabel]="true"
+                    [legend]="false"
+                    [rotateXAxisTicks]="true"
+                    [yScaleMin]="-5"
+                    [xAxisLabel]="'Price vs low target price %'"
+                    [customColors]="[selectedSymbolColor]"
+                    [roundEdges]="false"
+                >
+                </ngx-charts-bar-vertical>
+            </div> 
+            <div class="chart-container">
+                <ngx-charts-bar-vertical
+                    [scheme]="targetPriceChartColorScheme"
+                    [results]="highTargetPriceData"
+                    [animations]="true"
+                    [xAxis]="true"
+                    [yAxis]="true"
+                    [showXAxisLabel]="true"
+                    [showYAxisLabel]="true"
+                    [legend]="false"
+                    [rotateXAxisTicks]="true"
+                    [yScaleMin]="-5"
+                    [xAxisLabel]="'Price vs high target price %'"
                     [customColors]="[selectedSymbolColor]"
                     [roundEdges]="false"
                 >
@@ -139,7 +184,7 @@
                 [legend]="false"
                 [showDataLabel]="true"
                 [rotateXAxisTicks]="true"
-                [yAxisLabel]="'ETF Performance %'"
+                [xAxisLabel]="'ETF Performance %'"
                 [customColors]="[
                     {name: 'SCHD', value: 'deepskyblue'},
                     {name: 'VYM', value: 'maroon'}, 

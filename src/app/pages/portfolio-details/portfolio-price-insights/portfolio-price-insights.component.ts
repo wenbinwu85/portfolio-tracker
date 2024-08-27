@@ -54,7 +54,9 @@ export class PortfolioPriceInsightsComponent implements OnInit {
   fiftyTwoWeekChangeChartData: any = [];
   fiftyTwoWeekLowChartData: any = [];
   fiftyTwoWeekHighChartData: any = [];
-  discountChartData: any = [];
+  meanTargetPriceData: any = [];
+  lowTargetPriceData: any = [];
+  highTargetPriceData: any = [];
   fiftyDayMAChartData: any = [];
   twoHundredDayMAChartData: any = [];
   etfPerformanceChartData: any = [];
@@ -105,8 +107,6 @@ export class PortfolioPriceInsightsComponent implements OnInit {
         value: stock["52WeekChange"].raw * 100,
       });
 
-      console.log(stock.symbol, stock['52WeekChange'].raw)
-
       this.fiftyTwoWeekLowChartData.push({
         name: stock.symbol,
         value:
@@ -124,11 +124,31 @@ export class PortfolioPriceInsightsComponent implements OnInit {
       });
 
       if (stock.targetMeanPrice.raw) {
-        this.discountChartData.push({
+        this.meanTargetPriceData.push({
           name: stock.symbol,
           value:
             ((stock.regularMarketPrice.raw - stock.targetMeanPrice.raw) /
               stock.targetMeanPrice.raw) *
+            100,
+        });
+      }
+
+      if (stock.targetLowPrice.raw) {
+        this.lowTargetPriceData.push({
+          name: stock.symbol,
+          value:
+            ((stock.regularMarketPrice.raw - stock.targetLowPrice.raw) /
+              stock.targetLowPrice.raw) *
+            100,
+        });
+      }
+
+      if (stock.targetHighPrice.raw) {
+        this.highTargetPriceData.push({
+          name: stock.symbol,
+          value:
+            ((stock.regularMarketPrice.raw - stock.targetHighPrice.raw) /
+              stock.targetHighPrice.raw) *
             100,
         });
       }
@@ -144,7 +164,9 @@ export class PortfolioPriceInsightsComponent implements OnInit {
     this.fiftyTwoWeekChangeChartData.sort((a: any, b: any) => a.value - b.value);
     this.fiftyTwoWeekLowChartData.sort((a: any, b: any) => a.value - b.value);
     this.fiftyTwoWeekHighChartData.sort((a: any, b: any) => a.value - b.value);
-    this.discountChartData.sort((a: any, b: any) => a.value - b.value);
+    this.meanTargetPriceData.sort((a: any, b: any) => a.value - b.value);
+    this.lowTargetPriceData.sort((a: any, b: any) => a.value - b.value);
+    this.highTargetPriceData.sort((a: any, b: any) => a.value - b.value);
 
     const keyLabelMapping: any = {
       ytd: "Year to Date",
@@ -155,6 +177,7 @@ export class PortfolioPriceInsightsComponent implements OnInit {
       fiveYear: "Five Year",
       tenYear: "Ten Year",
     };
+
     Object.keys(keyLabelMapping).forEach((key: any) => {
       let keyData: any = {
         name: keyLabelMapping[key],
