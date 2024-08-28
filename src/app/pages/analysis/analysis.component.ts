@@ -1,5 +1,5 @@
 import { CommonModule } from "@angular/common";
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { MatIconModule } from "@angular/material/icon";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { DataService } from "../../shared/services/data.service";
@@ -23,6 +23,13 @@ import { InfoCardComponent } from "../../shared/components/info-card/info-card.c
   templateUrl: './analysis.component.html',
   styleUrls: ['./analysis.component.css'],
 })
-export class AnalysisComponent {
+export class AnalysisComponent implements OnInit {
+  stocks: any;
   constructor(private dataService: DataService) { }
+
+  ngOnInit() {
+    this.stocks = this.dataService.portfolioStocks;
+    const earnings = this.dataService.getTickerData('AAPL')?.earnings;
+    console.dir(earnings.earningsChart);
+  }
 }

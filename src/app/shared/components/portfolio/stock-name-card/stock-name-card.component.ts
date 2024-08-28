@@ -44,8 +44,9 @@ export class StockNameCardComponent {
   constructor(public dialog: MatDialog, public helperService: HelperService) {}
 
   ngOnInit() {
-    const prefix = this.helperService.getPriceKeyPrefix();
+    const prefix = this.stock.marketState.toLowerCase() + 'Market';
     this.currentPrice = this.stock[prefix + "Price"];
+    this.changePercent = this.stock[prefix + "ChangePercent"];
     this.changePercent = this.stock[prefix + "ChangePercent"]
     if (typeof this.currentPrice !== "number") { 
       this.currentPrice = this.currentPrice.raw;

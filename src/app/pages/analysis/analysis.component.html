@@ -1,5 +1,16 @@
 <mat-tab-group mat-align-tabs="center">
-  <mat-tab label="Analysis A">
+  <mat-tab label="Earnings">
+    @for(stock of stocks; track stock.symbol) {
+      @let earningsChart = stock.earnings?.earningsChart;
+      <div>{{ stock.symbol }}</div>
+      <div>{{ earningsChart.currentQuarterEstimateDate }} EPS estimate:</div>
+      <div>{{ earningsChart.currentQuarterEstimate.fmt }}</div>
+      <span>Earnings Date: {{ earningsChart.earningsDate[0].fmt }}</span>
+      <div>
+        {{earningsChart | json }}
+      </div>
+    }
+
   </mat-tab>
 
   <mat-tab label="Analysis B">
