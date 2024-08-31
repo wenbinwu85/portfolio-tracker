@@ -44,16 +44,11 @@ export class StockNameCardComponent {
   constructor(public dialog: MatDialog, public helperService: HelperService) {}
 
   ngOnInit() {
-    const prefix = this.stock.marketState.toLowerCase() + 'Market';
+    const prefix = this.helperService.getPriceKeyPrefix();
     this.currentPrice = this.stock[prefix + "Price"];
     this.changePercent = this.stock[prefix + "ChangePercent"];
-    this.changePercent = this.stock[prefix + "ChangePercent"]
-    if (typeof this.currentPrice !== "number") { 
-      this.currentPrice = this.currentPrice.raw;
-    }
-    if (typeof this.changePercent !== "number") { 
-      this.changePercent = this.changePercent.raw;
-    }
+    console.log(this.stock.symbol)
+    console.log(this.stock)
     this.borderLeftStyle = '0.5rem solid ' + (this.stock.unrealizedGain > 0 ? StockPriceColorsEnum.Gain : StockPriceColorsEnum.Lost);
   }
 

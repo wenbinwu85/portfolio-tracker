@@ -135,6 +135,13 @@ export class PortfolioFinancialsComponent implements OnInit, AfterViewInit {
           returnOnEquity: +stock.returnOnEquity.fmt?.replace('%', '') || 0,
           enterpriseToEbitda: stock.enterpriseToEbitda.fmt || 0,
           enterpriseToRevenue: stock.enterpriseToRevenue.fmt || 0,
+          regularMarketPrice: stock.regularMarketPrice?.raw,
+          regularMarketChange: stock.regularMarketChange?.raw,
+          regularMarketChangePercent: stock.regularMarketChangePercent?.raw,
+          preMarketPrice: stock.preMarketPrice?.raw,
+          preMarketChangePercent: stock.preMarketChangePercent?.raw || 0,
+          postMarketPrice: stock.postMarketPrice?.raw,
+          postMarketChangePercent: stock.postMarketChangePercent?.raw || 0,
         };
       })
       .sort((a: any, b: any) => a.unrealizedGainPercent - b.unrealizedGainPercent);
@@ -158,6 +165,13 @@ export class PortfolioFinancialsComponent implements OnInit, AfterViewInit {
           tenYearReturn: etf.fundPerformance.trailingReturns.tenYear.fmt,
           beta3Year: etf.beta3Year.raw,
           totalAssets: etf.totalAssets.fmt,
+          regularMarketPrice: etf.regularMarketPrice?.raw,
+          regularMarketChange: etf.regularMarketChange?.raw,
+          regularMarketChangePercent: etf.regularMarketChangePercent?.raw,
+          preMarketPrice: etf.preMarketPrice?.raw,
+          preMarketChangePercent: etf.preMarketChangePercent?.raw || 0,
+          postMarketPrice: etf.postMarketPrice?.raw,
+          postMarketChangePercent: etf.postMarketChangePercent?.raw || 0,
         };
       })
       .sort((a: any, b: any) => a.unrealizedGainPercent - b.unrealizedGainPercent);
