@@ -13,7 +13,6 @@ declare const TradingView: any;
 })
 export class TvAdvancedChartWidgetComponent implements OnInit {
   @Input({ required: true }) symbol!: string;
-  @Input() showWatchlist?: boolean = false;
   @Input() watchlist?: string[];
   @Input() theme!: string;
   private widgetParams = {
@@ -43,24 +42,8 @@ export class TvAdvancedChartWidgetComponent implements OnInit {
 
   ngOnInit() {
     let params = {};
-    if (this.showWatchlist) {
-      if (this.watchlist) {
-        params = this.getWidgetParams(this.symbol, this.watchlist);
-      } else {
-        params = this.getWidgetParams(
-          this.symbol,
-          [
-            "AAPL",
-            "AMZN",
-            "GOOG",
-            "META",
-            "MSFT",
-            "NFLX",
-            "NVDA",
-            "TSLA",
-          ]
-        );
-      }
+    if (this.watchlist) {
+      params = this.getWidgetParams(this.symbol, this.watchlist);
     } else {
       params = this.getWidgetParams(
         this.symbol,

@@ -18,17 +18,26 @@ export class TvFinancialsWidgetComponent implements AfterViewInit {
   @Input() width?: string;
   @Input() height?: string;
   @Input() displayMode? = 'compact';
+  @Input() theme? = 'light';
   @ViewChild('symbolFinancialsWidget') symbolFinancialsWidget!: ElementRef;
+
+  params: any;
 
   constructor(private tradingviewService: TradingviewService) {}
 
   ngAfterViewInit(): void {
-    const financials = this.tradingviewService.symbolFinancialsWidget(
-      this.symbol,
-      this.width,
-      this.height,
-      this.displayMode
-    );
-    this.symbolFinancialsWidget.nativeElement.appendChild(financials);
+    this.params = {
+      symbol: this.symbol,
+      width: this.width,
+      height: this.height || '490',
+      displayMode: this.displayMode,
+      colorTheme: this.theme,
+      largeChartUrl: "",
+      isTransparent: false,
+      locale: "en"
+    }
+    this.params = JSON.stringify(this.params)
+    const widget = this.tradingviewService.symbolFinancialsWidget(this.params);
+    this.symbolFinancialsWidget.nativeElement.appendChild(widget);
   }
 }

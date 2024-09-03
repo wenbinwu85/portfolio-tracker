@@ -16,15 +16,27 @@ import { TradingviewService } from "../../../services/tradingview.service";
 export class TvTechnicalAnalysisWidgetComponent implements AfterViewInit {
   @Input({ required: true }) symbol!: string;
   @Input() height?: string;
+  @Input() theme?: string;
   @ViewChild("technicalAnalysisWidget") technicalAnalysisWidget!: ElementRef;
+
+  params: any;
 
   constructor(private tradingviewService: TradingviewService) {}
 
   ngAfterViewInit(): void {
-    const technicalAnalysis = this.tradingviewService.technicalAnalysisWidget(
-      this.symbol,
-      this.height
-    );
+    this.params = {
+      symbol: this.symbol,
+      height: this.height || '450',
+      colorTheme: this.theme || 'light',
+      interval: "1m",
+      width: "auto",
+      isTransparent: false,
+      showIntervalTabs: true,
+      locale: "en",
+      displayMode: "multiple"
+    };
+    this.params = JSON.stringify(this.params);
+    const technicalAnalysis = this.tradingviewService.technicalAnalysisWidget(this.params);
     this.technicalAnalysisWidget.nativeElement.appendChild(technicalAnalysis);
   }
 }

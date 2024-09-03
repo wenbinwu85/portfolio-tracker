@@ -127,42 +127,34 @@
     </div>
   </div>
 
-  <mat-expansion-panel [expanded]="false">
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        <mat-icon class="">payment</mat-icon>
-        <span>Portfolio Value Charts</span>
-      </mat-panel-title>
-    </mat-expansion-panel-header>
-    <div class="add-flex">
-      <div class="chart-container">
-        <ngx-charts-bar-vertical-stacked
-          [scheme]="stackedBarChartColorScheme"
-          [results]="marketValueData"
-          [animations]="true"
-          [xAxis]="true"
-          [yAxis]="true"
-          [showXAxisLabel]="true"
-          [showYAxisLabel]="true"
-          [xAxisLabel]="'Cost Basis & Unrealized Gain'"
-        />
-      </div>
-      <div class="chart-container">
-        <ngx-charts-bar-vertical
-          [scheme]="valueBarChartColorScheme"
-          [results]="unrealizedGainData"
-          [animations]="true"
-          [xAxis]="true"
-          [yAxis]="true"
-          [showXAxisLabel]="true"
-          [showYAxisLabel]="true"
-          [xAxisLabel]="'Unrealized Gain %'"
-          [roundEdges]="false"
-          [customColors]="selectedSectorColors"
-        />
-      </div>
+  <div class="add-flex">
+    <div class="chart-container">
+      <ngx-charts-bar-vertical-stacked
+        [scheme]="stackedBarChartColorScheme"
+        [results]="marketValueData"
+        [animations]="true"
+        [xAxis]="true"
+        [yAxis]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [xAxisLabel]="'Cost Basis & Unrealized Gain'"
+      />
     </div>
-  </mat-expansion-panel>
+    <div class="chart-container">
+      <ngx-charts-bar-vertical
+        [scheme]="valueBarChartColorScheme"
+        [results]="unrealizedGainData"
+        [animations]="true"
+        [xAxis]="true"
+        [yAxis]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [xAxisLabel]="'Unrealized Gain %'"
+        [roundEdges]="false"
+        [customColors]="selectedSectorColors"
+      />
+    </div>
+  </div>
 </ng-template>
 
 @if (portfolioHoldings.dividendIncome > 0) {
@@ -194,44 +186,36 @@
     </div>
   </div>
 
-  <mat-expansion-panel [expanded]="false">
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        <mat-icon class="">local_fire_department</mat-icon>
-        <span>Dividends Income Charts</span>
-      </mat-panel-title>
-    </mat-expansion-panel-header>
-    <div class="add-flex">
-      <div class="chart-container">
-        <ngx-charts-bar-vertical
-          [scheme]="dividendBarChartColorScheme"
-          [results]="dividendData"
-          [animations]="true"
-          [xAxis]="true"
-          [yAxis]="true"
-          [showXAxisLabel]="true"
-          [showYAxisLabel]="true"
-          [xAxisLabel]="'Dividend Income'"
-          [roundEdges]="false"
-          [customColors]="selectedSectorColors"
-        />
-      </div>
-      <div class="chart-container">
-        <ngx-charts-bar-vertical
-          [scheme]="dividendBarChartColorScheme"
-          [results]="yocData"
-          [animations]="true"
-          [xAxis]="true"
-          [yAxis]="true"
-          [showXAxisLabel]="true"
-          [showYAxisLabel]="true"
-          [xAxisLabel]="'Yield On Cost %'"
-          [roundEdges]="false"
-          [customColors]="selectedSectorColors"
-        />
-      </div>
+  <div class="add-flex">
+    <div class="chart-container">
+      <ngx-charts-bar-vertical
+        [scheme]="dividendBarChartColorScheme"
+        [results]="dividendData"
+        [animations]="true"
+        [xAxis]="true"
+        [yAxis]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [xAxisLabel]="'Dividend Income'"
+        [roundEdges]="false"
+        [customColors]="selectedSectorColors"
+      />
     </div>
-  </mat-expansion-panel>
+    <div class="chart-container">
+      <ngx-charts-bar-vertical
+        [scheme]="dividendBarChartColorScheme"
+        [results]="yocData"
+        [animations]="true"
+        [xAxis]="true"
+        [yAxis]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [xAxisLabel]="'Yield On Cost %'"
+        [roundEdges]="false"
+        [customColors]="selectedSectorColors"
+      />
+    </div>
+  </div>
 </ng-template>
 
 @if (portfolioHoldings.dividendIncome > 0) {

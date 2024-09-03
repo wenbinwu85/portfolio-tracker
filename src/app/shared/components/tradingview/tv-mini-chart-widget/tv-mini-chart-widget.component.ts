@@ -21,16 +21,26 @@ export class TvMiniChartWidgetComponent implements AfterViewInit {
   @Input() theme = "light";
   @ViewChild('miniChartWidget') miniChartWidget!: ElementRef;
 
+  params: any;
+
   constructor(private tradingviewService: TradingviewService) {}
 
   ngAfterViewInit(): void {
-    const miniChart = this.tradingviewService.miniChartWidget(
-      this.symbol,
-      this.width,
-      this.height,
-      this.range,
-      this.theme,
-    );
+    this.params = {
+      symbol: this.symbol,
+      dateRange: this.range,
+      width: this.width,
+      height: this.height,
+      colorTheme: this.theme,
+      autosize: true,
+      trendLineColor: "rgba(41, 98, 255, 1)",
+      underLineColor: "rgba(41, 98, 255, 0.3)",
+      underLineBottomColor: "rgba(41, 98, 255, 0)",
+      isTransparent: true,
+      locale: "en"
+    }
+    this.params = JSON.stringify(this.params);
+    const miniChart = this.tradingviewService.miniChartWidget(this.params);
     this.miniChartWidget.nativeElement.appendChild(miniChart);
   }
 }

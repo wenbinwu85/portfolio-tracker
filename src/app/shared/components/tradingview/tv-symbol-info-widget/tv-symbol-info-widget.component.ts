@@ -16,12 +16,23 @@ import { TradingviewService } from '../../../services/tradingview.service';
 export class TvSymbolInfoWidgetComponent implements AfterViewInit {
   @Input({ required: true }) symbol!: string;
   @Input() width = '100%';
+  @Input() theme?: string;
   @ViewChild('symbolInfoWidget') symbolInfoWidget!: ElementRef;
+
+  params: any;
 
   constructor(private tradingviewService: TradingviewService) {}
 
   ngAfterViewInit(): void {
-    const symbolInfo = this.tradingviewService.symbolInfoWidget(this.symbol, this.width);
+    this.params = {
+      symbol: this.symbol,
+      width: this.width|| '100%',
+      colorTheme: this.theme || 'light',
+      locale: "en",
+      isTransparent: false
+    }
+    this.params = JSON.stringify(this.params);
+    const symbolInfo = this.tradingviewService.symbolInfoWidget(this.params);
     this.symbolInfoWidget.nativeElement.appendChild(symbolInfo);
   }
 }

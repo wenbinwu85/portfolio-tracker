@@ -14,15 +14,17 @@ import { TradingviewService } from '../../../services/tradingview.service';
   standalone: true,
 })
 export class TvMarketQuotesWidgetComponent implements AfterViewInit {
-  @Input({ required: true }) stockNames: any;
+  @Input({ required: true }) stockNames!: any;
   @Input({ required: true }) height!: any 
   @ViewChild("marketQuotesWidget") marketQuotesWidget!: ElementRef;
+  
   params: any;
+
   constructor(private tradingviewService: TradingviewService) {}
 
-  ngOnInit() {
+  ngAfterViewInit(): void {
     this.params = {
-      width: '100%',
+      width: "100%",
       height: this.height,
       symbolsGroups: [
         {
@@ -36,10 +38,7 @@ export class TvMarketQuotesWidgetComponent implements AfterViewInit {
       locale: "en",
     };
     this.params = JSON.stringify(this.params);
-  }
-
-  ngAfterViewInit(): void {
-    const script = this.tradingviewService.marketQuotesWidget(this.params);
-    this.marketQuotesWidget.nativeElement.append(script);
+    const widget = this.tradingviewService.marketQuotesWidget(this.params);
+    this.marketQuotesWidget.nativeElement.append(widget);
   }
 }

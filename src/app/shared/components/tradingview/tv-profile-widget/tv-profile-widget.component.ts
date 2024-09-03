@@ -17,16 +17,24 @@ export class TvProfileWidgetComponent implements AfterViewInit {
   @Input({ required: true }) symbol!: string;
   @Input() width!: string;
   @Input() height!: string;
+  @Input() theme?: string;
   @ViewChild('profileWidget') profileWidget!: ElementRef;
+
+  params: any;
 
   constructor(private tradingviewService: TradingviewService) {}
 
   ngAfterViewInit(): void {
-    const profile = this.tradingviewService.symbolProfileWidget(
-      this.symbol,
-      this.width,
-      this.height
-    );
-    this.profileWidget.nativeElement.appendChild(profile);
+    this.params = {
+      symbol: this.symbol,
+      width: this.width || '100%',
+      height: this.height || 'auto',
+      colorTheme: this.theme || 'light',
+      isTransparent: false,
+      locale: "en"
+    }
+    this.params = JSON.stringify(this.params)
+    const widget = this.tradingviewService.symbolProfileWidget(this.params);
+    this.profileWidget.nativeElement.appendChild(widget);
   }
 }
