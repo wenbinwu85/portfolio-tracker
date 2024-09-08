@@ -11,6 +11,7 @@ import { DataService } from '../../../services/data.service';
 })
 export class StockRecommendationTrendsComponent implements OnInit, OnChanges {
   @Input({ required: true }) symbol: string = 'AAPL';
+  @Input() height?: number;
   stockData: any;
   recommendationTrends: any;
   recommendationTrendChartData: any;

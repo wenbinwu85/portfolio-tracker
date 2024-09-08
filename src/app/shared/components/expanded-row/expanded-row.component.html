@@ -8,7 +8,7 @@
             <tv-technical-analysis-widget [symbol]="stock.symbol" />
             @if (stock.quoteType === 'EQUITY') {
                 <div class="rec-trends">
-                    <stock-recommendation-trends [symbol]="stock.symbol" />
+                    <stock-recommendation-trends [symbol]="stock.symbol" [height]="400"/>
                 </div>
             }
         </div> 

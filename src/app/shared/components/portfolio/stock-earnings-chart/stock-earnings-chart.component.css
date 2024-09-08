@@ -1,0 +1,9 @@
+.earnings-container {
+    display: flex;
+    padding: 0.5rem;
+}
+
+::ng-deep ul.legend-labels {
+    width: min-content !important;
+    background: none !important;
+}
