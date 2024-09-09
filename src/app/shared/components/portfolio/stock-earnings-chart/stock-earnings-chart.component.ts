@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from "@angular/core";
 import { NgxChartsModule } from "@swimlane/ngx-charts";
 import { StockTickerChipComponent } from "../stock-ticker-chip/stock-ticker-chip.component";
 import { ContainerCardComponent } from "../../container-card/container-card.component";
+import { StockRecommendationTrendsComponent } from "../stock-recommendation-trends/stock-recommendation-trends.component";
+
 @Component({
   selector: "stock-earnings-chart",
   standalone: true,
@@ -9,6 +11,7 @@ import { ContainerCardComponent } from "../../container-card/container-card.comp
     NgxChartsModule,
     StockTickerChipComponent,
     ContainerCardComponent,
+    StockRecommendationTrendsComponent
   ],
   templateUrl: "./stock-earnings-chart.component.html",
   styleUrl: "./stock-earnings-chart.component.css",
