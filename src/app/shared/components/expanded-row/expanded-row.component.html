@@ -2,22 +2,17 @@
     <mat-tab label="Chart">
         <tv-symbol-overview-widget [company]="stock.shortName" [symbol]="stock.symbol" />
     </mat-tab>
-
-    <mat-tab label="Analysis & Recommedations">
-        <div class="widget-container">
-            <tv-technical-analysis-widget [symbol]="stock.symbol" />
-            @if (stock.quoteType === 'EQUITY') {
-                <div class="rec-trends">
-                    <stock-recommendation-trends [symbol]="stock.symbol" [height]="400"/>
-                </div>
-            }
-        </div> 
-    </mat-tab>
-
+    @if (stock.quoteType === 'EQUITY') {
+        <mat-tab label="EPS & Analysis">
+            <div class="widget-container">
+                <stock-earnings-chart [stock]="stock" />
+                <stock-recommendation-trends [symbol]="stock.symbol" />
+            </div>
+        </mat-tab>
+    }
     <mat-tab label="Financials">
         <tv-financials-widget [symbol]="stock.symbol" width="100%" />
     </mat-tab>
-
     <mat-tab label="Profile">
         <tv-symbol-info-widget [symbol]="stock.symbol" />
         <tv-profile-widget [symbol]="stock.symbol" width="100%" />

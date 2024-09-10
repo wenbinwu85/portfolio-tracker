@@ -8,6 +8,7 @@ import { InfoCardComponent } from "../../shared/components/info-card/info-card.c
 import { PortfolioTickerButtonsComponent } from "../../shared/components/portfolio/portfolio-ticker-buttons/portfolio-ticker-buttons.component";
 import { StockEarningsChartComponent } from "../../shared/components/portfolio/stock-earnings-chart/stock-earnings-chart.component";
 import { DataService } from "../../shared/services/data.service";
+import { StockTickerChipComponent } from "../../shared/components/portfolio/stock-ticker-chip/stock-ticker-chip.component";
 
 @Component({
   selector: "app-analysis",
@@ -21,6 +22,7 @@ import { DataService } from "../../shared/services/data.service";
     MatTabsModule,
     PortfolioTickerButtonsComponent,
     StockEarningsChartComponent,
+    StockTickerChipComponent
   ],
   templateUrl: "./analysis.component.html",
   styleUrls: ["./analysis.component.css"],

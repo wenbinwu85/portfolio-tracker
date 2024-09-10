@@ -1,8 +1,36 @@
 <mat-tab-group mat-align-tabs="center">
-  <mat-tab label="Earnings">
-    @for(stock of stocks; track stock.symbol) {
-      <stock-earnings-chart [stock]="stock" />
-    }
+  <mat-tab label="Earnings Per Share">
+    <div class="chart-container">
+      @for(stock of stocks; track stock.symbol) {
+        <ng-template #earningsChartRef>
+          <stock-earnings-chart [stock]="stock" />
+        </ng-template>
+        
+        <ng-template #titleContentRef>
+            <stock-ticker-chip [stock]="stock" />
+        </ng-template>
+        
+        <ng-template #subRef>
+            <!-- <div>
+                <span> {{ currentQuarter }} earnings date: {{ earningsDate }}</span>
+                <span> {{ currentQuarter }} EPS estimate: </span>
+                <span>{{ currentQuarterEstimate }}</span>
+            </div> -->
+            <div>
+              {{ stock.longName }} | {{ stock.profile.sector }}
+            </div>
+        </ng-template>
+        
+        <section class="add-margin">
+          <container-card
+              [title]="stock.symbol"
+              [titleContentRef]="titleContentRef"
+              [mainContentRef]="earningsChartRef"
+              [subContentRef]="subRef"
+          />
+        </section>
+      }
+    </div>
   </mat-tab>
 
   <mat-tab label="Analysis B">

@@ -161,6 +161,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
           preMarketChangePercent: stock.preMarketChangePercent?.raw || 0,
           postMarketPrice: stock.postMarketPrice.raw,
           postMarketChangePercent: stock.postMarketChangePercent?.raw || 0,
+          earnings: stock.earnings,
         };
       }
     );

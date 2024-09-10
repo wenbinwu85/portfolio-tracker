@@ -1,35 +1,13 @@
-<ng-template #earningsChartRef>
-    <div class="earnings-container">
-        <ngx-charts-bubble-chart
-            [view]="view"
-            [scheme]="colorScheme"
-            [results]="earningsChartData"
-            [xAxis]="true"
-            [yAxis]="true"
-            [legend]="true"
-            [animations]="true"
-            [legendTitle]="''"
-        >
-        </ngx-charts-bubble-chart>
-        <stock-recommendation-trends [symbol]="stock.symbol" [height]="200" />
-    </div>
-</ng-template>
-
-<ng-template #titleContentRef>
-    <stock-ticker-chip [stock]="stock" />
-</ng-template>
-
-<ng-template #subRef>
-    <div>
-        <span> {{ currentQuarter }} earnings date: {{ earningsDate }}</span>
-        <span> {{ currentQuarter }} EPS estimate: </span>
-        <span>{{ currentQuarterEstimate }}</span>
-    </div>
-</ng-template>
-
-<container-card
-    [title]="stock.longName + ' Earnings Per Share'"
-    [mainContentRef]="earningsChartRef"
-    [titleContentRef]="titleContentRef"
-    [subContentRef]="subRef"
-/>
+<div class="earnings-container">
+    <ngx-charts-bubble-chart
+        [view]="view"
+        [scheme]="colorScheme"
+        [results]="earningsChartData"
+        [xAxis]="true"
+        [yAxis]="true"
+        [legend]="true"
+        [animations]="true"
+        [legendTitle]="''"
+    >
+    </ngx-charts-bubble-chart>
+</div>
