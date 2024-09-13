@@ -11,14 +11,7 @@ const routes: Routes = [
     canActivateChild: [mainGuardGuard],
     children: [
       {
-        path: 'summary',
-        loadComponent: () =>
-          import("./portfolio-summary/portfolio-summary.component").then(
-            (c) => c.PortfolioSummaryComponent
-          ),
-      },
-      {
-        path: "holdings",
+        path: "portfolio",
         loadComponent: () =>
           import("./portfolio-holdings/portfolio-holdings.component").then(
             (c) => c.PortfolioHoldingsComponent

@@ -10,10 +10,13 @@ import { MatChipsModule } from '@angular/material/chips';
   styleUrl: './live-streams.component.css'
 })
 export class LiveStreamsComponent {
-  selectedStream = 1;
+  // selectedStream = 1;
 
-  switchStream(stream: number) { 
-    this.selectedStream = stream;
-  }
+  // switchStream(stream: number) {
+  //   this.selectedStream = stream;
+  // }
+  sizeFactor = 47;
+  videoWidth = (16 * this.sizeFactor).toString();
+  videoHeight = (9 * this.sizeFactor).toString();
 }
 

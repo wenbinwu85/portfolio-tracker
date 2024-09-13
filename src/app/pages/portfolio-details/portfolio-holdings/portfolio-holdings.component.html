@@ -1,20 +1,225 @@
-<ng-template #costBasisRef>
-  <div class="add-flex">
-    <div class="chart-container">
-      <ngx-charts-pie-grid 
-        [scheme]="'forest'"
-        [animations]="true" 
-        [results]="totalCostChartData" 
-        [label]="'Dollars Invested'" 
+<section class="summary-cards-container">
+  <info-card
+    [value]="portfolioHoldings?.positionsHeld"
+    subtitle="Holdings"
+  />
+  <info-card
+    [value]="portfolioHoldings?.totalAmountInvested"
+    valueType="currency"
+    subtitle="Total Investment"
+  />
+  <info-card
+    [value]="portfolioHoldings?.marketValue"
+    valueType="currency"
+    subtitle="Market Value"
+  />
+  <info-card
+    [value]="portfolioHoldings?.unrealizedGain"
+    subtitle="Unrealized Gain"
+    valueType="currency"
+    [color]="portfolioHoldings?.unrealizedGain > 0 ? 'teal' : 'chocolate'"
+  />
+  <info-card
+    [value]="portfolioHoldings?.unrealizedGainPercent"
+    valueType="percentage"
+    subtitle="Unrealized Gain Percent"
+    [color]="portfolioHoldings?.unrealizedGainPercent > 0 ? 'teal' : 'chocolate'"
+  />
+
+  @if (portfolioHoldings.dividendIncome > 0) {
+    <info-card
+      [value]="portfolioHoldings?.dividendIncome"
+      valueType="currency"
+      subtitle="Projected Annual Income"
+    />
+    <info-card
+      [value]="portfolioHoldings?.yield"
+      valueType="percentage"
+      subtitle="Portfolio Yield"
+    />
+    <info-card
+      [value]="portfolioHoldings?.yieldOnCost"
+      valueType="percentage"
+      subtitle="Portfolio YOC"
+      color="teal"
+    />
+  }
+</section>
+
+<ng-template #portfolioDetailsTitleRef>
+  <mat-chip-listbox>
+      <mat-chip-option selected (click)="selectTab('allocations')">Allocations</mat-chip-option>
+      <mat-chip-option (click)="selectTab('cost-basis')">Cost Basis</mat-chip-option>
+      <mat-chip-option (click)="selectTab('performance')">Performance</mat-chip-option>
+      <mat-chip-option (click)="selectTab('dividends')">Dividend Income</mat-chip-option>
+  </mat-chip-listbox>
+</ng-template>
+
+<ng-template #portfolioDetailsRef>
+  @if (selectedTab === 'allocations') {
+    <div class="add-flex">
+      <div class="chart-container">
+        <ngx-charts-pie-chart
+          [scheme]="'air'"
+          [animations]="true"
+          [results]="sectorsData"
+          [doughnut]="true"
+          [arcWidth]="0.5"
+          [labels]="true"
+          [title]="'Sector Allocations'"
+          [maxLabelLength]="100"
+          (select)="onSelectSector($event)"
+        />
+      </div>
+      <div class="chart-container">
+        <ngx-charts-bar-vertical
+          [scheme]="allocationsBarChartColorScheme"
+          [results]="portfolioPercentData"
+          [animations]="true"
+          [xAxis]="true"
+          [yAxis]="true"
+          [showXAxisLabel]="true"
+          [showYAxisLabel]="true"
+          [xAxisLabel]="'Holding Allocations %'"
+          [roundEdges]="false"
+          [customColors]="selectedSectorColors"
+        />
+      </div>
+    </div>
+  }
+  @if (selectedTab === 'cost-basis') {
+    <div class="add-flex">
+      <div class="chart-container">
+        <ngx-charts-pie-grid 
+          [scheme]="'forest'"
+          [animations]="true" 
+          [results]="totalCostChartData" 
+          [label]="'Dollars Invested'" 
+        />
+      </div>
+    </div>
+  }
+  @if ( selectedTab === 'performance') {
+    <div class="add-flex">
+      <div class="chart-container">
+        <ngx-charts-bar-vertical-stacked
+          [scheme]="stackedBarChartColorScheme"
+          [results]="marketValueData"
+          [animations]="true"
+          [xAxis]="true"
+          [yAxis]="true"
+          [showXAxisLabel]="true"
+          [showYAxisLabel]="true"
+          [xAxisLabel]="'Cost Basis & Unrealized Gain'"
+        />
+      </div>
+      <div class="chart-container">
+        <ngx-charts-bar-vertical
+          [scheme]="valueBarChartColorScheme"
+          [results]="unrealizedGainData"
+          [animations]="true"
+          [xAxis]="true"
+          [yAxis]="true"
+          [showXAxisLabel]="true"
+          [showYAxisLabel]="true"
+          [xAxisLabel]="'Unrealized Gain %'"
+          [roundEdges]="false"
+          [customColors]="selectedSectorColors"
+        />
+      </div>
+    </div>
+  }
+  @if (selectedTab === 'dividends') {
+    <div class="add-flex">
+      <div class="chart-container">
+        <ngx-charts-bar-vertical
+          [scheme]="dividendBarChartColorScheme"
+          [results]="dividendData"
+          [animations]="true"
+          [xAxis]="true"
+          [yAxis]="true"
+          [showXAxisLabel]="true"
+          [showYAxisLabel]="true"
+          [xAxisLabel]="'Dividend Income'"
+          [roundEdges]="false"
+          [customColors]="selectedSectorColors"
+        />
+      </div>
+      <div class="chart-container">
+        <ngx-charts-bar-vertical
+          [scheme]="dividendBarChartColorScheme"
+          [results]="yocData"
+          [animations]="true"
+          [xAxis]="true"
+          [yAxis]="true"
+          [showXAxisLabel]="true"
+          [showYAxisLabel]="true"
+          [xAxisLabel]="'Yield On Cost %'"
+          [roundEdges]="false"
+          [customColors]="selectedSectorColors"
+        />
+      </div>
+    </div>
+  }
+</ng-template>
+
+<container-card 
+  title="Portfolio Details"
+  [titleContentRef]="portfolioDetailsTitleRef"
+  [mainContentRef]="portfolioDetailsRef"
+/>
+
+<ng-template #goalsRef>
+  <div><h3>Dividend Income</h3></div>
+  <div class="goal-container">
+    <mat-slider
+      [min]="0"
+      [max]="passiveIncomeTarget"
+      [step]="120"
+      [showTickMarks]="true"
+      disabled
+    >
+      <input
+        matSliderThumb
+        [value]="portfolioHoldings?.dividendIncome"
+        [matTooltip]="getTooltip('passive')"
+        matTooltipPosition="above"
       />
+    </mat-slider>
+    <div class="goal-labels">
+      <mat-chip>{{ "0" | currency }}</mat-chip>
+      <mat-chip>{{ passiveIncomeTarget | currency }}</mat-chip>
+    </div>
+  </div>
+  <div><h3>Portfolio Value</h3></div>
+  <div class="goal-container">
+    <mat-slider
+      [min]="0"
+      [max]="portfolioValueTarget"
+      [step]="1000"
+      [showTickMarks]="true"
+      disabled
+    >
+      <input
+        matSliderThumb
+        [value]="portfolioHoldings?.marketValue"
+        [matTooltip]="getTooltip('investment')"
+        matTooltipPosition="above"
+      />
+    </mat-slider>
+    <div class="goal-labels">
+      <mat-chip>{{ "0" | currency }}</mat-chip>
+      <mat-chip>{{ portfolioValueTarget | currency }}</mat-chip>
     </div>
   </div>
 </ng-template>
 
-<container-card
-  title="Cost Basis"
-  [mainContentRef]="costBasisRef"
-/>
+@if (portfolioHoldings.dividendIncome > 0) {
+  <container-card 
+    title="Portfolio Goals"
+    [mainContentRef]="goalsRef"
+  />
+}
 
 <ng-template #tableRef>
   <table 
@@ -126,7 +331,7 @@
 </ng-template>
 
 <container-card 
-  title="My Holdings"
+  title="Portfolio Holdings"
   [mainContentRef]="tableRef"
   [subContentRef]="tableSubcontentRef"
 />

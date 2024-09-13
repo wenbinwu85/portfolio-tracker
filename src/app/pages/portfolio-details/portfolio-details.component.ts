@@ -31,13 +31,8 @@ export class PortfolioDetailsComponent implements OnInit {
   constructor(private dataService: DataService, private router: Router) {
     this.navLinks = [
       {
-        label: "Summary",
-        route: "summary",
-        icon: "summarize",
-      },
-      {
-        label: "Holdings",
-        route: "holdings",
+        label: "My Portfolio",
+        route: "portfolio",
         icon: "list_alt",
       },
       {
