@@ -1,6 +1,7 @@
 import { MediaMatcher } from "@angular/cdk/layout";
 import { ChangeDetectorRef, Component } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
+import { MatDividerModule } from "@angular/material/divider";
 import { MatIconModule } from "@angular/material/icon";
 import { MatListModule } from "@angular/material/list";
 import { MatSidenavModule } from "@angular/material/sidenav";
@@ -40,6 +41,7 @@ import { DataService } from "./shared/services/data.service";
     FooterComponent,
     HeaderComponent,
     MatButtonModule,
+    MatDividerModule,
     MatIconModule,
     MatListModule,
     MatSidenavModule,
@@ -60,7 +62,7 @@ export class AppComponent {
       icon: "home",
     },
     {
-      label: "My Portfolio",
+      label: "Portfolio",
       route: "/portfolio",
       icon: "ballot",
     },
@@ -78,7 +80,7 @@ export class AppComponent {
       label: "Live Streams",
       route: "/streams",
       icon: "live_tv",
-    }
+    },
   ];
   activeLink = this.navLinks[0];
   mobileQuery: MediaQueryList;
@@ -105,9 +107,5 @@ export class AppComponent {
     setTimeout(() => {
       window.location.reload();
     }, 500);
-  }
-
-  refreshData() {
-    this.dataService.refreshPortfolioData();
   }
 }
