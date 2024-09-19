@@ -21,13 +21,14 @@ import {
   providedIn: "root",
 })
 export class DataService {
+  // private backendUrl = 'http://127.0.0.1:5000';
+  private backendUrl = "https://portfolio-tracker-backend-5ys2.onrender.com";
   private httpOptions: any = {
     headers: new HttpHeaders()
       .set("content-type", "application/json")
       .set("Access-Control-Allow-Origin", "*"),
   };
-  private backendUrl = "https://portfolio-tracker-backend-5ys2.onrender.com";
-  public localStorage: Storage | undefined;
+  public localStorage: Storage;
   public portfolioSymbols: any = [];
   public portfolioHoldings: any = {};
   public portfolioData: any = {};
@@ -41,7 +42,7 @@ export class DataService {
     private http: HttpClient,
     private router: Router
   ) {
-    this.localStorage = this.document.defaultView?.localStorage;
+    this.localStorage = this.document.defaultView!.localStorage;
     this.generatePortfolioDataFromLocalStorage();
   }
 
@@ -65,16 +66,22 @@ export class DataService {
     return Object.values(this.portfolioDividendHistory);
   }
 
-  get portfolioStocks(): any[] { 
-    return this.portfolioDataArray.filter((stock: any) => stock.quoteType === "EQUITY")
+  get portfolioStocks(): any[] {
+    return this.portfolioDataArray.filter(
+      (stock: any) => stock.quoteType === "EQUITY"
+    );
   }
 
-  get portfolioEtfs(): any[] { 
-    return this.portfolioDataArray.filter((stock: any) => stock.quoteType === "ETF")
+  get portfolioEtfs(): any[] {
+    return this.portfolioDataArray.filter(
+      (stock: any) => stock.quoteType === "ETF"
+    );
   }
 
-  get portfolioDividendPayers(): any[] { 
-    return this.portfolioDataArray.filter((stock: any) => stock.dividendRate?.raw > 0 || stock.dividendRate > 0);
+  get portfolioDividendPayers(): any[] {
+    return this.portfolioDataArray.filter(
+      (stock: any) => stock.dividendRate?.raw > 0 || stock.dividendRate > 0
+    );
   }
 
   get marketState(): string {
@@ -85,11 +92,11 @@ export class DataService {
     let errorMessage =
       error.error instanceof ErrorEvent
         ? error.error.message
-        : `Error Code: ${error.status} Message: ${error.message}`;
+        : `Error Code: ${ error.status } Message: ${ error.message }`;
     return of({ data: [], message: errorMessage, status: 500 });
   }
 
-  public wrapHttpCall(
+  private wrapHttpCall(
     path: string,
     options = this.httpOptions
   ): Observable<any> {
@@ -108,7 +115,8 @@ export class DataService {
     const check2 =
       this.portfolioHoldingsArray.length === this.portfolioSymbols.length + 8;
     const check3 =
-      this.portfolioTechnicalInsightsArray.length === this.portfolioSymbols.length;
+      this.portfolioTechnicalInsightsArray.length ===
+      this.portfolioSymbols.length;
     const check4 = this.portfolioDividendHistory != null;
     console.log("Symbols:", this.portfolioSymbols);
     console.log("Holdings:", this.portfolioSymbols.length);
@@ -144,15 +152,15 @@ export class DataService {
     return this.portfolioData[symbol];
   }
 
-  public getTickerHolding(symbol: string) { 
+  public getTickerHolding(symbol: string) {
     return this.portfolioHoldings[symbol];
   }
 
-  public getTickerTechnicalInsights(symbol: string) { 
+  public getTickerTechnicalInsights(symbol: string) {
     return this.portfolioTechnicalInsights[symbol];
   }
 
-  public getTickerDividendHistory(symbol: string) { 
+  public getTickerDividendHistory(symbol: string) {
     return this.getItem(symbol + "DividendHistory");
   }
 
@@ -169,7 +177,9 @@ export class DataService {
 
       symbols.forEach((symbol: any) => {
         this.portfolioData[symbol] = this.getItem(symbol);
-        this.portfolioDividendHistory[symbol] = this.getItem(symbol + "DividendHistory");
+        this.portfolioDividendHistory[symbol] = this.getItem(
+          symbol + "DividendHistory"
+        );
       });
       this.hasPortfolioData.next(true);
     }
@@ -208,7 +218,9 @@ export class DataService {
     ]).subscribe(([portfolioData, techInsights]) => {
       this.portfolioData = portfolioData;
       this.portfolioTechnicalInsights = techInsights;
-      Object.entries(portfolioData).forEach(([symbol, stockData]) => { this.setItem(symbol, stockData) });
+      Object.entries(portfolioData).forEach(([symbol, stockData]) => {
+        this.setItem(symbol, stockData);
+      });
       this.setItem("portfolioTechInsights", techInsights);
 
       this.portfolioSymbols.forEach((symbol: string) => {
@@ -220,8 +232,10 @@ export class DataService {
         holding.totalCost = +(shares * costAvg).toFixed(2);
         holding.marketValue = data.regularMarketPrice.raw * shares;
         holding.unrealizedGain = holding.marketValue - holding.totalCost;
-        holding.unrealizedGainPercent = holding.unrealizedGain / holding.totalCost;
-        holding.dividendIncome = data.dividendRate?.raw * shares || data.dividendRate * shares || 0;
+        holding.unrealizedGainPercent =
+          holding.unrealizedGain / holding.totalCost;
+        holding.dividendIncome =
+          data.dividendRate?.raw * shares || data.dividendRate * shares || 0;
         holding.yieldOnCost = holding.dividendIncome / holding.totalCost;
         this.portfolioHoldings.marketValue += holding.marketValue;
         this.portfolioHoldings.totalAmountInvested += holding.totalCost;
@@ -233,7 +247,8 @@ export class DataService {
       this.portfolioHoldingsArray
         .filter((prop: any) => !!prop.symbol)
         .forEach((holding: any) => {
-          holding.portfolioPercent = holding.marketValue / this.portfolioHoldings.marketValue;
+          holding.portfolioPercent =
+            holding.marketValue / this.portfolioHoldings.marketValue;
           this.setItem(holding.symbol + "Holding", holding);
         });
 
@@ -304,7 +319,10 @@ export class DataService {
    * @param {number} years - years of history to retrieve
    * @returns {Observable} Dividend history.
    */
-  public fetchTickerDividendHistory(symbol: string, years = 10): Observable<any> {
+  public fetchTickerDividendHistory(
+    symbol: string,
+    years = 10
+  ): Observable<any> {
     const apiPath = `${this.backendUrl}/fetch/dividend-history/${symbol}`;
     const params = new HttpParams().set("years", years);
     const apiOptions = { ...this.httpOptions, params };
@@ -318,11 +336,16 @@ export class DataService {
   public fetchPortfolioDividendHistory() {
     this.isLoadingData.next(true);
     this.portfolioSymbols.forEach((symbol: string) => {
-      this.fetchTickerDividendHistory(symbol, 10).pipe(take(1)).subscribe((divHis: any) => {
-        this.portfolioDividendHistory[symbol] = divHis;
-        this.setItem(symbol + "DividendHistory", divHis);
-      });
-      if (this.portfolioDividendHistoryArray.length === this.portfolioDividendPayers.length) { 
+      this.fetchTickerDividendHistory(symbol, 10)
+        .pipe(take(1))
+        .subscribe((divHis: any) => {
+          this.portfolioDividendHistory[symbol] = divHis;
+          this.setItem(symbol + "DividendHistory", divHis);
+        });
+      if (
+        this.portfolioDividendHistoryArray.length ===
+        this.portfolioDividendPayers.length
+      ) {
         this.isLoadingData.next(false);
       }
     });
@@ -346,9 +369,10 @@ export class DataService {
     this.isLoadingData.next(true);
 
     let counter = 0;
-    this.portfolioStocks
-      .forEach((stock: any, _: any, arr: any[]) => {
-        this.fetchTickerCorporateEvents(stock.symbol).pipe(take(1)).subscribe(() => {
+    this.portfolioStocks.forEach((stock: any, _: any, arr: any[]) => {
+      this.fetchTickerCorporateEvents(stock.symbol)
+        .pipe(take(1))
+        .subscribe(() => {
           counter++;
           if (counter === arr.length) {
             this.isLoadingData.next(false);
@@ -367,6 +391,6 @@ export class DataService {
             );
           }
         });
-      });
+    });
   }
 }

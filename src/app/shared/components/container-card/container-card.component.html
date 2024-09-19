@@ -1,7 +1,11 @@
 <mat-card class="container">
     <mat-card-header>
         <mat-card-title class="container-title">
-            {{ title | titlecase }}
+            @if (isTitleTicker) {
+                <stock-ticker-chip [stock]="stock" [largeTicker]="true"/>
+            } @else {
+                {{ title | titlecase }}
+            }
             @if (titleContentRef) {
                 <ng-container [ngTemplateOutlet]="titleContentRef"/>
             }

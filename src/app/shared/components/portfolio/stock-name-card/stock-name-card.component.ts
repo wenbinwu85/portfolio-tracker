@@ -47,8 +47,6 @@ export class StockNameCardComponent {
     const prefix = this.helperService.getPriceKeyPrefix();
     this.currentPrice = this.stock[prefix + "Price"];
     this.changePercent = this.stock[prefix + "ChangePercent"];
-    console.log(this.stock.symbol)
-    console.log(this.stock)
     this.borderLeftStyle = '0.5rem solid ' + (this.stock.unrealizedGain > 0 ? StockPriceColorsEnum.Gain : StockPriceColorsEnum.Lost);
   }
 

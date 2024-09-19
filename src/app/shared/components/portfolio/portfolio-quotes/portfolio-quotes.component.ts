@@ -91,9 +91,7 @@ export class PortfolioQuotesComponent {
       const stock = this.dataService.portfolioData[symbol];
       this.stockNames.push({
         name: stock.symbol,
-        displayName: `${stock.longName} - ${
-          stock.profile.sector || stock.quoteType
-        } - ${stock.symbol}`,
+        displayName: `${stock.symbol} - ${stock.longName}`,
       });
 
       this.priceChange += stock.regularMarketChange.raw * position.shares;

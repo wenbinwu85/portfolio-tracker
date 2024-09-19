@@ -21,7 +21,7 @@ export class StockEarningsChartComponent implements OnInit {
   currentQuarterYear: string = "";
   currentQuarterEstimate: number = 0;
   earningsDate: string = "";
-  view: any = [400, 200];
+  view: any = [0, 200];
   colorScheme: any = {
     domain: ["skyblue", "slategrey"],
   };
