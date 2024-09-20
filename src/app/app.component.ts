@@ -77,7 +77,7 @@ export class AppComponent {
       icon: "handyman",
     },
     {
-      label: "Live Streams",
+      label: "Live",
       route: "/streams",
       icon: "live_tv",
     },

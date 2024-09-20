@@ -11,4 +11,6 @@ import { MatIconModule } from "@angular/material/icon";
   standalone: true,
   imports: [MatListModule, MatChipsModule, MatDividerModule, MatIconModule],
 })
-export class FooterComponent {}
+export class FooterComponent {
+  buffetQuoteLink = 'https://www.berkshirehathaway.com/letters/1986.html';
+}

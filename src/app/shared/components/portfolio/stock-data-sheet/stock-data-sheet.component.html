@@ -1,71 +1,55 @@
-<ng-template #holdingRef>
-  <div class="position">
+<div class="position">
+  <info-card
+    [value]="position.costAverage"
+    valueType="currency"
+    subtitle="Cost Average"
+  />
+  <info-card
+    [value]="position.shares"
+    subtitle="Shares Owned"
+  />
+  <info-card
+    [value]="position.totalCost"
+    valueType="currency"
+    subtitle="Total Invested"
+  />
+  <info-card
+    [value]="position.marketValue"
+    valueType="currency"
+    subtitle="Market value"
+  />
+  <info-card
+    [value]="position.portfolioPercent"
+    valueType="percentage"
+    subtitle="Portfolio %"
+  />
+  <info-card
+    [value]="position.unrealizedGain"
+    valueType="currency"
+    subtitle="Unrealized Gain "
+    [color]="position.unrealizedGain > 0 ? 'teal' : 'chocolate'"
+  />
+  <info-card
+    [value]="position.unrealizedGainPercent"
+    valueType="percentage"
+    subtitle="Unrealized Gain %"
+    [color]="position.unrealizedGain > 0 ? 'teal' : 'chocolate'"
+  />
+  @if (position.dividendIncome) {
     <info-card
-      icon="payments"
-      [value]="position.costAverage"
+      [value]="position.dividendIncome"
       valueType="currency"
-      subtitle="Cost Average"
+      subtitle="Dividend Income"
     />
+  }
+  @if (position.yieldOnCost) {
     <info-card
-      icon="numbers"
-      [value]="position.shares"
-      subtitle="Shares Owned"
-    />
-    <info-card
-      icon="payments"
-      [value]="position.totalCost"
-      valueType="currency"
-      subtitle="Total Invested"
-    />
-    <info-card
-      icon="payments"
-      [value]="position.marketValue"
-      valueType="currency"
-      subtitle="Market value"
-    />
-    <info-card
-      icon="percentage"
-      [value]="position.portfolioPercent"
+      [value]="position.yieldOnCost"
       valueType="percentage"
-      subtitle="Portfolio %"
+      subtitle="Yield On Cost"
     />
-    <info-card
-      icon="payments"
-      [value]="position.unrealizedGain"
-      valueType="currency"
-      subtitle="Unrealized Gain "
-      [color]="position.unrealizedGain > 0 ? 'teal' : 'chocolate'"
-    />
-    <info-card
-      icon="percentage"
-      [value]="position.unrealizedGainPercent"
-      valueType="percentage"
-      subtitle="Unrealized Gain %"
-      [color]="position.unrealizedGain > 0 ? 'teal' : 'chocolate'"
-    />
-    @if (position.dividendIncome) {
-      <info-card
-        icon="payments"
-        [value]="position.dividendIncome"
-        valueType="currency"
-        subtitle="Dividend Income"
-      />
-    }
-    @if (position.yieldOnCost) {
-      <info-card
-        icon="percentage"
-        [value]="position.yieldOnCost"
-        valueType="percentage"
-        subtitle="Yield On Cost"
-      />
-    }
-  </div>
-</ng-template>
-
-<container-card
-  [title]="'Holding'"
-  [mainContentRef]="holdingRef"
-/>
+  }
+</div>
 
 <ng-template #linkButtonsRef>
   <div class="heading">
@@ -121,7 +105,8 @@
   <mat-divider class="divider"/>
 
   @if (stock.quoteType === 'EQUITY') {
-    <div class="rec-trends">
+    <div class="analysis">
+      <stock-earnings-chart [stock]="stock" />
       <stock-recommendation-trends [symbol]="stock.symbol"/>
     </div>
   }

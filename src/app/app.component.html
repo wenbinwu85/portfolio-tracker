@@ -1,7 +1,7 @@
 <div class="main-container" [class.is-mobile]="mobileQuery.matches">
     <mat-toolbar class="toolbar">
         <button mat-icon-button (click)="sideNav.toggle()">
-            <mat-icon>menu</mat-icon>
+            <mat-icon>{{ sideNav.opened ? 'menu_open' : 'menu' }}</mat-icon>
         </button>
         <tv-tickers-widget [tape]="true" />
     </mat-toolbar>
@@ -29,12 +29,10 @@
                     </button>
                 </a>
             }
-
             <mat-divider />
-
             <button mat-button color="warn" class="action-button" (click)="clearData()">
                 <mat-icon>delete_forever</mat-icon>
-                <span>Clear Data</span>
+                <span>clear Data</span>
             </button>
         </mat-nav-list>
         </mat-sidenav>

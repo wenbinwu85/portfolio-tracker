@@ -96,7 +96,7 @@ export class DataService {
     return of({ data: [], message: errorMessage, status: 500 });
   }
 
-  private wrapHttpCall(
+  public wrapHttpCall(
     path: string,
     options = this.httpOptions
   ): Observable<any> {

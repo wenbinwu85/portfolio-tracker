@@ -3,7 +3,7 @@
         <tv-symbol-overview-widget [company]="stock.shortName" [symbol]="stock.symbol" />
     </mat-tab>
     @if (stock.quoteType === 'EQUITY') {
-        <mat-tab label="EPS & Analysis">
+        <mat-tab label="EPS & Recommendations">
             <div class="widget-container">
                 <stock-earnings-chart [stock]="stock" />
                 <stock-recommendation-trends [symbol]="stock.symbol" />

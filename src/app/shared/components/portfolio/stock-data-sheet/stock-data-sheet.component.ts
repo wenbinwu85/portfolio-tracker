@@ -6,6 +6,7 @@ import { MatDividerModule } from "@angular/material/divider";
 import { MatIconModule } from "@angular/material/icon";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { ActivatedRoute } from "@angular/router";
+import { take } from "rxjs";
 import { DataService } from "../../../services/data.service";
 import { ContainerCardComponent } from "../../container-card/container-card.component";
 import { InfoCardComponent } from "../../info-card/info-card.component";
@@ -13,11 +14,11 @@ import { TvAdvancedChartWidgetComponent } from "../../tradingview/tv-advanced-ch
 import { TvFinancialsWidgetComponent } from "../../tradingview/tv-financials-widget/tv-financials-widget.component";
 import { TvProfileWidgetComponent } from "../../tradingview/tv-profile-widget/tv-profile-widget.component";
 import { TvSymbolInfoWidgetComponent } from "../../tradingview/tv-symbol-info-widget/tv-symbol-info-widget.component";
+import { TvSymbolOverviewWidgetComponent } from "../../tradingview/tv-symbol-overview-widget/tv-symbol-overview-widget.component";
 import { TvTechnicalAnalysisWidgetComponent } from "../../tradingview/tv-technical-analysis-widget/tv-technical-analysis-widget.component";
+import { StockEarningsChartComponent } from "../stock-earnings-chart/stock-earnings-chart.component";
 import { StockPriceInsightComponent } from "../stock-price-insight/stock-price-insight.component";
 import { StockRecommendationTrendsComponent } from "../stock-recommendation-trends/stock-recommendation-trends.component";
-import { TvSymbolOverviewWidgetComponent } from "../../tradingview/tv-symbol-overview-widget/tv-symbol-overview-widget.component";
-import { take } from "rxjs";
 
 @Component({
   selector: "stock-data-sheet",
@@ -33,14 +34,15 @@ import { take } from "rxjs";
     MatDividerModule,
     MatIconModule,
     MatSlideToggleModule,
+    StockEarningsChartComponent,
     StockPriceInsightComponent,
     StockRecommendationTrendsComponent,
     TvAdvancedChartWidgetComponent,
     TvFinancialsWidgetComponent,
     TvProfileWidgetComponent,
     TvSymbolInfoWidgetComponent,
+    TvSymbolOverviewWidgetComponent,
     TvTechnicalAnalysisWidgetComponent,
-    TvSymbolOverviewWidgetComponent
   ],
 })
 export class StockDataSheetComponent implements OnInit {

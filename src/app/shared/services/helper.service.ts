@@ -6,16 +6,12 @@ import { StockPriceColorsEnum } from "../model/colors.model";
   providedIn: "root",
 })
 export class HelperService {
-  private portfolioData;
   today = new Date();
 
-  constructor(private dataService: DataService) { 
-    this.portfolioData = this.dataService.portfolioData;
-  }
+  constructor(private dataService: DataService) { }
 
   public getPriceKeyPrefix() {
-    const marketState = this.dataService?.marketState;
-    switch (marketState) { 
+    switch (this.dataService.marketState) { 
       case 'PRE':
         return 'preMarket';
       case 'REGULAR':
@@ -29,7 +25,8 @@ export class HelperService {
 
   public getStockPriceColor(symbol: string): string { 
     const prefix = this.getPriceKeyPrefix();
-    const priceChangePercent = this.portfolioData[symbol][prefix + "ChangePercent"]?.raw;
+    const tickerData = this.dataService.getTickerData(symbol);
+    const priceChangePercent = tickerData[prefix + "ChangePercent"]?.raw;
     return priceChangePercent > 0 ? StockPriceColorsEnum.Gain : StockPriceColorsEnum.Lost;
   }
 

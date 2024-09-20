@@ -25,22 +25,6 @@ export class AlpacaApiService {
 
   constructor(private http: HttpClient, private dataService: DataService) {}
 
-  private error(error: HttpErrorResponse): Observable<any> {
-    let errorMessage =
-      error.error instanceof ErrorEvent
-        ? error.error.message
-        : `Error Code: ${error.status} Message: ${error.message}`;
-    return of({ data: [], message: errorMessage, status: 500 });
-  }
-
-  public wrapHttpCall(
-    url: string,
-    options: any
-  ): Observable<any> {
-    const call = this.http.get<any>(url, options);
-    return call.pipe(retry<any>(2), catchError(this.error));
-  }
-
   public getLatestBars(): Observable<any> {
     const symbols = this.dataService.portfolioSymbols;
     const apiUrl = this.apiBaseUrl + '/v2/stocks/bars/latest';
@@ -49,7 +33,7 @@ export class AlpacaApiService {
       feed: 'iex'
     })
     const options = { headers: this.httpHeaders, params };
-    return this.wrapHttpCall(apiUrl, options);
+    return this.dataService.wrapHttpCall(apiUrl, options);
   }
 
   public getNews(
@@ -66,6 +50,6 @@ export class AlpacaApiService {
       limit,
     });
     const options = { headers: this.httpHeaders, params };
-    return this.wrapHttpCall(apiUrl, options);
+    return this.dataService.wrapHttpCall(apiUrl, options);
   }
 }

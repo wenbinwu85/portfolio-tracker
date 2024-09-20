@@ -46,6 +46,58 @@
   }
 </section>
 
+<ng-template #goalsRef>
+  <div><h3>Dividend Income</h3></div>
+  <div class="goal-container">
+    <mat-slider
+      [min]="0"
+      [max]="passiveIncomeTarget"
+      [step]="120"
+      [showTickMarks]="true"
+      disabled
+    >
+      <input
+        matSliderThumb
+        [value]="portfolioHoldings?.dividendIncome"
+        [matTooltip]="getTooltip('passive')"
+        matTooltipPosition="above"
+      />
+    </mat-slider>
+    <div class="goal-labels">
+      <mat-chip>{{ "0" | currency }}</mat-chip>
+      <mat-chip>{{ passiveIncomeTarget | currency }}</mat-chip>
+    </div>
+  </div>
+  <div><h3>Portfolio Value</h3></div>
+  <div class="goal-container">
+    <mat-slider
+      [min]="0"
+      [max]="portfolioValueTarget"
+      [step]="1000"
+      [showTickMarks]="true"
+      disabled
+    >
+      <input
+        matSliderThumb
+        [value]="portfolioHoldings?.marketValue"
+        [matTooltip]="getTooltip('investment')"
+        matTooltipPosition="above"
+      />
+    </mat-slider>
+    <div class="goal-labels">
+      <mat-chip>{{ "0" | currency }}</mat-chip>
+      <mat-chip>{{ portfolioValueTarget | currency }}</mat-chip>
+    </div>
+  </div>
+</ng-template>
+
+@if (portfolioHoldings.dividendIncome > 0) {
+  <container-card 
+    title="Portfolio Goals"
+    [mainContentRef]="goalsRef"
+  />
+}
+
 <ng-template #portfolioDetailsTitleRef>
   <mat-chip-listbox>
       <mat-chip-option selected (click)="selectTab('allocations')">Allocations</mat-chip-option>
@@ -168,58 +220,6 @@
   [titleContentRef]="portfolioDetailsTitleRef"
   [mainContentRef]="portfolioDetailsRef"
 />
-
-<ng-template #goalsRef>
-  <div><h3>Dividend Income</h3></div>
-  <div class="goal-container">
-    <mat-slider
-      [min]="0"
-      [max]="passiveIncomeTarget"
-      [step]="120"
-      [showTickMarks]="true"
-      disabled
-    >
-      <input
-        matSliderThumb
-        [value]="portfolioHoldings?.dividendIncome"
-        [matTooltip]="getTooltip('passive')"
-        matTooltipPosition="above"
-      />
-    </mat-slider>
-    <div class="goal-labels">
-      <mat-chip>{{ "0" | currency }}</mat-chip>
-      <mat-chip>{{ passiveIncomeTarget | currency }}</mat-chip>
-    </div>
-  </div>
-  <div><h3>Portfolio Value</h3></div>
-  <div class="goal-container">
-    <mat-slider
-      [min]="0"
-      [max]="portfolioValueTarget"
-      [step]="1000"
-      [showTickMarks]="true"
-      disabled
-    >
-      <input
-        matSliderThumb
-        [value]="portfolioHoldings?.marketValue"
-        [matTooltip]="getTooltip('investment')"
-        matTooltipPosition="above"
-      />
-    </mat-slider>
-    <div class="goal-labels">
-      <mat-chip>{{ "0" | currency }}</mat-chip>
-      <mat-chip>{{ portfolioValueTarget | currency }}</mat-chip>
-    </div>
-  </div>
-</ng-template>
-
-@if (portfolioHoldings.dividendIncome > 0) {
-  <container-card 
-    title="Portfolio Goals"
-    [mainContentRef]="goalsRef"
-  />
-}
 
 <ng-template #tableRef>
   <table 
