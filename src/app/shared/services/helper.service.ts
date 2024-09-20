@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { DataService } from "./data.service";
 import { StockPriceColorsEnum } from "../model/colors.model";
+import { MarketStates } from "../model/data-enums.model";
 
 @Injectable({
   providedIn: "root",
@@ -12,11 +13,11 @@ export class HelperService {
 
   public getPriceKeyPrefix() {
     switch (this.dataService.marketState) { 
-      case 'PRE':
+      case MarketStates.PRE:
         return 'preMarket';
-      case 'REGULAR':
+      case MarketStates.REGULAR:
         return 'regularMarket';
-      case 'POST':
+      case MarketStates.POST:
         return 'postMarket';
       default:
         return 'regularMarket';

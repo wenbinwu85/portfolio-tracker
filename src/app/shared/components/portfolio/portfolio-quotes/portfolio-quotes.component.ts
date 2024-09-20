@@ -14,6 +14,7 @@ import { TvMarketQuotesWidgetComponent } from "../../tradingview/tv-market-quote
 import { TvMiniChartWidgetComponent } from "../../tradingview/tv-mini-chart-widget/tv-mini-chart-widget.component";
 import { TvSymbolOverviewWidgetComponent } from "../../tradingview/tv-symbol-overview-widget/tv-symbol-overview-widget.component";
 import { TvTickersWidgetComponent } from "../../tradingview/tv-tickers-widget/tv-tickers-widget.component";
+import { MarketStates } from "../../../model/data-enums.model";
 
 @Component({
   selector: "portfolio-quotes",
@@ -82,13 +83,11 @@ export class PortfolioQuotesComponent {
     this.prefix = this.helper.getPriceKeyPrefix();
     this.portfolioMarketValue = this.dataService.portfolioHoldings.marketValue;
     this.prePostHourIcon = this.prefix.startsWith("pre") ? "sunny" : "bedtime";
-    this.prePostHourText = this.prefix.startsWith("pre")
-      ? "Pre Market "
-      : "Post Market ";
+    this.prePostHourText = this.prefix.startsWith("pre") ? "Pre Market " : "Post Market ";
 
     this.dataService.portfolioSymbols.forEach((symbol: any) => {
-      const position = this.dataService.portfolioHoldings[symbol];
-      const stock = this.dataService.portfolioData[symbol];
+      const position = this.dataService.getTickerHolding(symbol);
+      const stock = this.dataService.getTickerData(symbol);
       this.stockNames.push({
         name: stock.symbol,
         displayName: `${stock.symbol} - ${stock.longName}`,

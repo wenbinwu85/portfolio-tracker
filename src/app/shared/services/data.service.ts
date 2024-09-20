@@ -16,6 +16,7 @@ import {
   retry,
   take,
 } from "rxjs";
+import { MarketStates } from "../model/data-enums.model";
 
 @Injectable({
   providedIn: "root",
@@ -84,7 +85,7 @@ export class DataService {
     );
   }
 
-  get marketState(): string {
+  get marketState(): MarketStates {
     return this.portfolioDataArray[0]?.marketState;
   }
 
