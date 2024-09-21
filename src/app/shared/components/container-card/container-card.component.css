@@ -1,3 +1,10 @@
+mat-card-header {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    background-color: ghostwhite;
+    border-radius: 1rem 1rem 0 0;
+}
+
 .container {
     border: 1px solid ghostwhite;
     border-radius: 1rem 1rem 0 1rem;
@@ -21,11 +28,4 @@
 .footer-divider.mat-divider-horizontal {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
-}
-
-mat-card-header {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    background-color: ghostwhite;
-    border-radius: 1rem 1rem 0 0;
 }

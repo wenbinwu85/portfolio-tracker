@@ -21,12 +21,17 @@
   color: steelblue;
 }
 
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .progress-bar-container {
   margin: 1rem;
-  border: 1px solid steelblue;
-  border-left: 0.3rem solid steelblue;
+  border: 1px solid chocolate;
+  border-left: 0.5rem solid chocolate;
   border-radius: 0.5rem;
-  max-width: 100%;
+  width: 30%;
 }
 
 .progress-bar-message {
@@ -35,5 +40,5 @@
 
 mat-progress-bar {
   margin: 1rem;
-  max-width: 97%;
+  width: 90%;
 }

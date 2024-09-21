@@ -8,7 +8,7 @@
     </div>
 </ng-template>
 
-<ng-template #subContentRef>    
+<ng-template #subtitleContentRef>    
     @if (marketState !== 'CLOSED') {
         <div class="subcontent-wrapper">
             @if (!prefix.startsWith('pre')) {
@@ -137,7 +137,7 @@
 <container-card 
     title="Portfolio Quotes"
     [titleContentRef]="titleContentRef"
-    [subContentRef]="subContentRef"
+    [subtitleContentRef]="subtitleContentRef"
     [mainContentRef]="ValueChangeRef"
     [footerContentRef]="(!!expandWidget || selectedChart === 3) ? quotesFooterRef : undefined"
 />

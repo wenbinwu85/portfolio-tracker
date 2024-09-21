@@ -3,13 +3,15 @@
     <button mat-button (click)="switchAppName()">
       {{ appName }}
     </button>
-    <span class="version">v2</span>
+    <span class="version">{{ appVersion }}</span>
   </div>
 </div>
 
 @if (showProgressBar) {
-  <div class="progress-bar-container">
-    <h1 class="progress-bar-message">Loading data...</h1>
-    <mat-progress-bar color="warn" mode="query" />
+  <div class="wrapper">
+    <div class="progress-bar-container">
+      <h1 class="progress-bar-message">Fetching data...</h1>
+      <mat-progress-bar color="warn" mode="query" />
+    </div>
   </div>
 }

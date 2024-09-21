@@ -35,27 +35,24 @@ import { TvTickersWidgetComponent } from "../tradingview/tv-tickers-widget/tv-ti
 export class HeaderComponent implements OnInit {
   appLongName = "Ben's Incredibly Great Financial Assets Report & Tracker";
   appShortName = "B.I.G.F.A.R.T";
+  appVersion = 'V2.1'
   appName = this.appShortName;
   showProgressBar = false;
 
-  constructor(
-    private dataService: DataService,
-    private router: Router,
-  ) { }
+  constructor(private dataService: DataService, private router: Router) {}
 
   ngOnInit() {
     this.dataService.isLoadingData.subscribe((isLoading) => {
       this.showProgressBar = isLoading;
     });
-    if (this.dataService.portfolioSymbols.length > 0 &&
-      Object.keys(this.dataService.portfolioData).length === this.dataService.portfolioSymbols.length &&
-      Object.keys(this.dataService.portfolioTechnicalInsights).length === this.dataService.portfolioSymbols.length
-    ) {
+    if (this.dataService.sanityCheck()) {
       this.router.navigateByUrl("/main");
     }
   }
 
   switchAppName() {
-    this.appName = this.appName === this.appShortName ? this.appLongName : this.appShortName;
+    this.appName = this.appName === this.appShortName
+      ? this.appLongName
+      : this.appShortName;
   }
 }

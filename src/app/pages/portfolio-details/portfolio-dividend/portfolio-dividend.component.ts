@@ -10,7 +10,6 @@ import {
 } from "@angular/material/table";
 import { Color, NgxChartsModule } from "@swimlane/ngx-charts";
 import { EChartsOption } from "echarts";
-import { EchartsVerticalBarChartComponent } from "../../../shared/components/charts/echart/echarts-vertical-bar-chart/echarts-vertical-bar-chart.component";
 import { ContainerCardComponent } from "../../../shared/components/container-card/container-card.component";
 import { InfoCardComponent } from "../../../shared/components/info-card/info-card.component";
 import { StockNameCardComponent } from "../../../shared/components/portfolio/stock-name-card/stock-name-card.component";
@@ -24,7 +23,6 @@ import { DataService } from "../../../shared/services/data.service";
   standalone: true,
   imports: [
     ContainerCardComponent,
-    EchartsVerticalBarChartComponent,
     InfoCardComponent,
     MatButtonModule,
     MatDividerModule,
