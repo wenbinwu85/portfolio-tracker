@@ -2,6 +2,9 @@
     <mat-tab label="Chart">
         <tv-symbol-overview-widget [company]="stock.shortName" [symbol]="stock.symbol" />
     </mat-tab>
+    <mat-tab label="Financials">
+        <tv-financials-widget [symbol]="stock.symbol" width="100%" />
+    </mat-tab>
     @if (stock.quoteType === 'EQUITY') {
         <mat-tab label="EPS & Recommendations">
             <div class="widget-container">
@@ -10,9 +13,6 @@
             </div>
         </mat-tab>
     }
-    <mat-tab label="Financials">
-        <tv-financials-widget [symbol]="stock.symbol" width="100%" />
-    </mat-tab>
     <mat-tab label="Profile">
         <tv-symbol-info-widget [symbol]="stock.symbol" />
         <tv-profile-widget [symbol]="stock.symbol" width="100%" />

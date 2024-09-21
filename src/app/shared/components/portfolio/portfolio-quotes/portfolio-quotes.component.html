@@ -118,7 +118,16 @@
         <mat-expansion-panel-header>
             <mat-panel-title>
                 <mat-icon>price_change</mat-icon>
-                <span>Quotes</span>
+                <span>Market Quotes</span>
+            </mat-panel-title>
+            </mat-expansion-panel-header>
+        <tv-market-quotes-widget />
+    </mat-expansion-panel>
+    <mat-expansion-panel [expanded]="false">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <mat-icon>price_change</mat-icon>
+                <span>Portfolio Quotes</span>
             </mat-panel-title>
             </mat-expansion-panel-header>
         <tv-market-quotes-widget [stockNames]="stockNames" [height]="stockNames.length * 35 + 100" />
@@ -134,7 +143,7 @@
 </ng-template>
 
 <container-card 
-    title="Portfolio Quotes"
+    title="Quotes"
     [titleContentRef]="titleContentRef"
     [subtitleContentRef]="subtitleContentRef"
     [mainContentRef]="ValueChangeRef"

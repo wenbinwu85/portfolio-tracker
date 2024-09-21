@@ -385,7 +385,6 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
   }
 
   getGainLostColor = (symbol: any) => { 
-    const stock = this.dataService.getTickerData(symbol);
     const unrealizedGainPercent = this.portfolioHoldings[symbol].unrealizedGainPercent;
     return unrealizedGainPercent > 0 ? 'teal' : 'chocolate';
   }

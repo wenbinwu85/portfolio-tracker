@@ -12,8 +12,31 @@
   <mat-expansion-panel-header>
     <mat-panel-title>
       <mat-icon class="">analytics</mat-icon>
-      <span>Heatmap</span>
+      <span>Heatmaps</span>
     </mat-panel-title>
   </mat-expansion-panel-header>
-  <tv-heatmap-widget />
+  <mat-chip-listbox>
+    <mat-chip-option selected (click)="selectHeatMap('stock')">Stock</mat-chip-option>
+    <mat-chip-option (click)="selectHeatMap('etf')">ETF</mat-chip-option>
+    <mat-chip-option (click)="selectHeatMap('crypto')">Crypto</mat-chip-option>
+  </mat-chip-listbox>
+  @if (heatMapType == 'stock') {
+    <tv-heatmap-widget [type]="'stock'"/>
+  }
+  @if (heatMapType == 'etf') {
+    <tv-heatmap-widget [type]="'etf'"/>
+  }
+  @if (heatMapType == 'crypto') {
+    <tv-heatmap-widget [type]="'crypto'"/>
+  }
+</mat-expansion-panel>
+
+<mat-expansion-panel [expanded]="false">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <mat-icon class="">candlestick_chart</mat-icon>
+      <span>Stock Screener</span>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <tv-screener-widget />
 </mat-expansion-panel>

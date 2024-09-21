@@ -1,22 +1,26 @@
 import { Injectable, Renderer2, RendererFactory2 } from "@angular/core";
 
+export const TradingviewApiBaseUrl = "https://s3.tradingview.com/external-embedding/";
+
 export enum SourceScripts {
-  EconomicEvents = "https://s3.tradingview.com/external-embedding/embed-widget-events.js",
-  Financials = "https://s3.tradingview.com/external-embedding/embed-widget-financials.js",
-  Heatmap = "https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js",
-  HotLists = "https://s3.tradingview.com/external-embedding/embed-widget-hotlists.js",
-  MarketOverview = "https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js",
-  MarketQuotes = "https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js",
-  MiniSymbolOverview = "https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js",
-  Screener = "https://s3.tradingview.com/external-embedding/embed-widget-screener.js",
-  SingleQuote = "https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js",
-  SymbolInfo = "https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js",
-  SymbolOverview = "https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js",
-  SymbolProfile = "https://s3.tradingview.com/external-embedding/embed-widget-symbol-profile.js",
-  TechnicalAnalysis = "https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js",
-  TickerTape = "https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js",
-  Tickers = "https://s3.tradingview.com/external-embedding/embed-widget-tickers.js",
-  Timeline = "https://s3.tradingview.com/external-embedding/embed-widget-timeline.js",
+  EconomicEvents = TradingviewApiBaseUrl + "embed-widget-events.js",
+  Financials = TradingviewApiBaseUrl + "embed-widget-financials.js",
+  Heatmap = TradingviewApiBaseUrl + "embed-widget-stock-heatmap.js",
+  EtfHeatmap = TradingviewApiBaseUrl + "embed-widget-etf-heatmap.js",
+  CryptoHeatmap = TradingviewApiBaseUrl + "embed-widget-crypto-coins-heatmap.js",
+  HotLists = TradingviewApiBaseUrl + "embed-widget-hotlists.js",
+  MarketOverview = TradingviewApiBaseUrl + "embed-widget-market-overview.js",
+  MarketQuotes = TradingviewApiBaseUrl + "embed-widget-market-quotes.js",
+  MiniSymbolOverview = TradingviewApiBaseUrl + "embed-widget-mini-symbol-overview.js",
+  Screener = TradingviewApiBaseUrl + "embed-widget-screener.js",
+  SingleQuote = TradingviewApiBaseUrl + "embed-widget-single-quote.js",
+  SymbolInfo = TradingviewApiBaseUrl + "embed-widget-symbol-info.js",
+  SymbolOverview = TradingviewApiBaseUrl + "embed-widget-symbol-overview.js",
+  SymbolProfile = TradingviewApiBaseUrl + "embed-widget-symbol-profile.js",
+  TechnicalAnalysis = TradingviewApiBaseUrl + "embed-widget-technical-analysis.js",
+  TickerTape = TradingviewApiBaseUrl + "embed-widget-ticker-tape.js",
+  Tickers = TradingviewApiBaseUrl + "embed-widget-tickers.js",
+  Timeline = TradingviewApiBaseUrl + "embed-widget-timeline.js",
 }
 
 @Injectable({
@@ -87,5 +91,20 @@ export class TradingviewService {
   // https://www.tradingview.com/widget-docs/widgets/heatmaps/stock-heatmap/
   heatMapWidget(params: string) {
     return this.getScript(SourceScripts.Heatmap, params);
+  }
+
+  // https://www.tradingview.com/widget-docs/widgets/heatmaps/etf-heatmap/
+  etfHeatMapWidget(params: string) { 
+    return this.getScript(SourceScripts.EtfHeatmap, params);
+  }
+
+  //https://www.tradingview.com/widget-docs/widgets/heatmaps/crypto-heatmap/
+  cryptoHeatMapWidget(params: string) { 
+    return this.getScript(SourceScripts.CryptoHeatmap, params);
+  }
+
+  // https://www.tradingview.com/widget-docs/widgets/screeners/screener/
+  screenerWidget(params: string) { 
+    return this.getScript(SourceScripts.Screener, params);
   }
 }
