@@ -13,27 +13,19 @@ body {
 mat-divider {
     padding-top: 0.5rem !important;
     padding-bottom: 0.5rem !important;
-    color: ghostwhite;
+    color: ghostwhite !important;
 }
 
 mat-icon {
     padding-right: 0.5rem;
 }
 
-mat-chip {
-    background-color: ghostwhite !important;
-}
-
-mat-chip span {
-    font-size: 0.75rem;
-}
-
 table {
     margin-top: 1rem;
 }
 
-.mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
-    line-height: 1.5rem;
+.mat-mdc-dialog-surface {
+    border-radius: 0 !important;
 }
 
 .mat-mdc-dialog-content {
@@ -95,9 +87,15 @@ table {
     padding: 0.5rem 0.75rem !important;
 }
 
-.mat-mdc-row:hover .mat-mdc-cell {
+.mat-mdc-row,
+.mat-mdc-header-row,
+.mat-mdc-footer-row {
+    background-color: white !important;
+}
+
+.mat-mdc-row:hover {
     font-weight: bold;
     border-top: 1px solid steelblue;
     border-bottom: 1px solid steelblue;
-    background-color: ghostwhite;
+    background-color: ghostwhite !important;
 }

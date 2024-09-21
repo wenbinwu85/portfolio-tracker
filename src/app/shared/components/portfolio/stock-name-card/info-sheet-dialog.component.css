@@ -1,23 +1,17 @@
 div {
     display: flex;
     justify-content: space-between;
-    margin-right: 1rem;
+    margin-top: 1rem;
 
     h1 {
-        font-weight: 1000;
-        font-size: 4rem;
-        margin-top: 1rem;
+        font-weight: 500;
+        font-size: 3rem;
     }
 }
 
 button > .mat-icon {
     padding-right: 0;
     margin-right: 0;
-}
-
-.mat-divider {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */

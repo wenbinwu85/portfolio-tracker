@@ -59,7 +59,7 @@ export class InfoCardComponent implements OnInit {
 
   getStyle() {
     return {
-      color: this.color || "slategrey",
+      color: this.color || "",
       "font-size": this.fontSize,
     };
   }

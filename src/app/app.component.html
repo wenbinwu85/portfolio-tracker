@@ -16,25 +16,25 @@
             [mode]="mobileQuery.matches ? 'over' : 'side'"
             [fixedInViewport]="mobileQuery.matches" fixedTopGap="56"
         >
-        <mat-nav-list>
-            @for (link of navLinks; track $index) {
-                <a
-                    (click)="activeLink = link"
-                    [routerLink]="link.route"
-                    class="side-nav-link"
-                >
-                    <button mat-button color="primary">
-                        <mat-icon>{{ link.icon }}</mat-icon>
-                        <span>{{ link.label }}</span>
-                    </button>
-                </a>
-            }
-            <mat-divider />
-            <button mat-button color="warn" class="action-button" (click)="clearData()">
-                <mat-icon>delete_forever</mat-icon>
-                <span>Clear Data</span>
-            </button>
-        </mat-nav-list>
+            <mat-nav-list>
+                @for (link of navLinks; track $index) {
+                    <a
+                        (click)="activeLink = link"
+                        [routerLink]="link.route"
+                        class="side-nav-link"
+                    >
+                        <button mat-button color="primary">
+                            <mat-icon>{{ link.icon }}</mat-icon>
+                            <span>{{ link.label }}</span>
+                        </button>
+                    </a>
+                }
+                <mat-divider />
+                <button mat-button color="warn" class="action-button" (click)="clearData()">
+                    <mat-icon>delete_forever</mat-icon>
+                    <span>Clear Data</span>
+                </button>
+            </mat-nav-list>
         </mat-sidenav>
 
         <mat-sidenav-content>

@@ -38,6 +38,16 @@ h1.example-app-name {
     flex: 1 0 auto;
 }
 
+mat-sidenav {
+    width: max-content;
+    background-color: white;
+    border-radius: 0;
+}
+
+mat-sidenav-content {
+    background-color: whitesmoke;
+}
+
 .side-nav-link {
     text-decoration: none;
 }

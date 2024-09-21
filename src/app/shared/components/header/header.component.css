@@ -8,16 +8,17 @@
 .header-title {
   font-size: 2rem;
   text-wrap: nowrap;
-  padding: 1rem 1rem 0 1rem;
+  padding: 1rem 0 0 1rem;
   width: min-content;
 
   .mat-mdc-button {
     font-size: 2rem;
+    color: slategrey
   }
 }
 
 .version {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: steelblue;
 }
 

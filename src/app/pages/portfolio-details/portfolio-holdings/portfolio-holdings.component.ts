@@ -11,7 +11,7 @@ import {
   PercentPipe,
   TitleCasePipe,
 } from "@angular/common";
-import { AfterViewInit, Component, OnInit, ViewChild } from "@angular/core";
+import { AfterViewInit, ChangeDetectorRef, Component, OnInit, ViewChild } from "@angular/core";
 import { MatChipsModule } from "@angular/material/chips";
 import { MatDividerModule } from "@angular/material/divider";
 import { MatExpansionModule } from "@angular/material/expansion";
@@ -159,7 +159,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     // () => "",
   ];
 
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
     this.portfolioSymbols = this.dataService.portfolioSymbols;
@@ -382,5 +382,11 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
         })
       }
     });
+  }
+
+  getGainLostColor = (symbol: any) => { 
+    const stock = this.dataService.getTickerData(symbol);
+    const unrealizedGainPercent = this.portfolioHoldings[symbol].unrealizedGainPercent;
+    return unrealizedGainPercent > 0 ? 'teal' : 'chocolate';
   }
 }

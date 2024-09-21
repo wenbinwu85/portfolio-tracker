@@ -47,14 +47,14 @@
 </section>
 
 <ng-template #goalsRef>
-  <div><h3>Dividend Income</h3></div>
+  <div><h6>Dividend Income</h6></div>
   <div class="goal-container">
     <mat-slider
       [min]="0"
       [max]="passiveIncomeTarget"
       [step]="120"
       [showTickMarks]="true"
-      disabled
+      [color]="'primary'"
     >
       <input
         matSliderThumb
@@ -68,14 +68,14 @@
       <mat-chip>{{ passiveIncomeTarget | currency }}</mat-chip>
     </div>
   </div>
-  <div><h3>Portfolio Value</h3></div>
+  <div><h6>Portfolio Value</h6></div>
   <div class="goal-container">
     <mat-slider
       [min]="0"
       [max]="portfolioValueTarget"
       [step]="1000"
       [showTickMarks]="true"
-      disabled
+      [color]="'primary'"
     >
       <input
         matSliderThumb
@@ -167,7 +167,6 @@
       </div>
       <div class="chart-container">
         <ngx-charts-bar-vertical
-          [scheme]="valueBarChartColorScheme"
           [results]="unrealizedGainData"
           [animations]="true"
           [xAxis]="true"
@@ -176,7 +175,7 @@
           [showYAxisLabel]="true"
           [yAxisLabel]="'Unrealized Gain %'"
           [roundEdges]="false"
-          [customColors]="selectedSectorColors"
+          [customColors]="getGainLostColor"
         />
       </div>
     </div>
@@ -300,17 +299,17 @@
   </table>
 </ng-template>
 
-<ng-template #tableActionsRef>
+<!-- <ng-template #tableActionsRef>
   <div class="table-actions">
     <mat-slide-toggle (toggleChange)="showWidgets()">
-      <span>Show Widgets</span>
+      <span>Widgets</span>
     </mat-slide-toggle>
     <mat-form-field appearance="outline">
       <mat-label>Filter</mat-label>
       <input matInput (keyup)="applyFilter($event)" #input />
     </mat-form-field>
   </div>
-</ng-template>
+</ng-template> -->
 
 <ng-template #tableSubcontentRef>
   <div class="subcontent-container">
@@ -320,7 +319,7 @@
     </div>
     <div class="table-actions">
       <mat-slide-toggle (toggleChange)="showWidgets()">
-        <span>Show Widgets</span>
+        <span>{{ showTradingviewWidgets? 'Hide Widgets' : 'Show Widgets' }}</span>
       </mat-slide-toggle>
       <mat-form-field appearance="outline">
         <mat-label>Filter</mat-label>

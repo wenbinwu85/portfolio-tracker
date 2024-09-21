@@ -162,11 +162,17 @@ export class PortfolioQuotesComponent {
     const key = this.toggleChecked
       ? this.chartConfigs[this.prefix]?.priceChangePercent
       : "regularMarketChangePercent";
-    const stock = this.dataService.portfolioData[symbol];
+    const stock = this.dataService.getTickerData(symbol);
     return stock[key].raw > 0
       ? StockPriceColorsEnum.Gain
       : StockPriceColorsEnum.Lost;
   };
+
+  getBetaColor = (symbol: any) => {
+    const stock = this.dataService.getTickerData(symbol);
+    const beta = stock.beta?.raw || 0;
+    return beta > 1 ? 'chocolate' : 'slategrey';
+  }
 
   displayChart(chartID: number) {
     this.selectedChart = chartID;
@@ -180,7 +186,7 @@ export class PortfolioQuotesComponent {
     this.priceChangeChartData = [];
 
     this.dataService.portfolioSymbols?.forEach((symbol: any) => {
-      const stock = this.dataService.portfolioData[symbol];
+      const stock = this.dataService.getTickerData(symbol);
       if (stock[prefixKey].raw) {
         this.priceChangeChartData.push({
           name: stock.symbol,

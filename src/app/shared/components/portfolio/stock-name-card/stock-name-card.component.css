@@ -1,6 +1,8 @@
 .container {
   display: flex;
   flex-direction: row;
+  border-radius: 0;
+  background-color: white;
   align-items: center;
   padding: .5rem;
   overflow: hidden;
@@ -16,6 +18,7 @@
 
 .container:hover {
   height: max-content;
+  background-color: ghostwhite;
   .expand-section {
     width: max-content;
     height: max-content;
@@ -55,6 +58,7 @@
 
 .mat-mdc-card {
   box-shadow: none;
+  background-color: none;
 }
 
 .expand-section {
