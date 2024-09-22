@@ -15,6 +15,7 @@ mat-card-header {
 
 .container-title {
     font-size: 2rem;
+    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -30,6 +31,7 @@ mat-card-header {
 
 .footer-divider,
 .footer-divider.mat-divider-horizontal {
+    border-top-color: slategrey;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
 }

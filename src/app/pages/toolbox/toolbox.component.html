@@ -5,7 +5,9 @@
       <span>Advanced Chart</span>
     </mat-panel-title>
   </mat-expansion-panel-header>
-  <tv-advanced-chart-widget symbol="VANTAGE:VIX" [watchlist]="symbols" />
+  <ng-template matExpansionPanelContent> 
+    <tv-advanced-chart-widget symbol="VANTAGE:VIX" [watchlist]="symbols" />
+  </ng-template>
 </mat-expansion-panel>
 
 <mat-expansion-panel [expanded]="false">
@@ -15,20 +17,22 @@
       <span>Heatmaps</span>
     </mat-panel-title>
   </mat-expansion-panel-header>
-  <mat-chip-listbox>
-    <mat-chip-option selected (click)="selectHeatMap('stock')">Stock</mat-chip-option>
-    <mat-chip-option (click)="selectHeatMap('etf')">ETF</mat-chip-option>
-    <mat-chip-option (click)="selectHeatMap('crypto')">Crypto</mat-chip-option>
-  </mat-chip-listbox>
-  @if (heatMapType == 'stock') {
-    <tv-heatmap-widget [type]="'stock'"/>
-  }
-  @if (heatMapType == 'etf') {
-    <tv-heatmap-widget [type]="'etf'"/>
-  }
-  @if (heatMapType == 'crypto') {
-    <tv-heatmap-widget [type]="'crypto'"/>
-  }
+  <ng-template matExpansionPanelContent> 
+    <mat-chip-listbox>
+      <mat-chip-option selected (click)="selectHeatMap('stock')">Stock</mat-chip-option>
+      <mat-chip-option (click)="selectHeatMap('etf')">ETF</mat-chip-option>
+      <mat-chip-option (click)="selectHeatMap('crypto')">Crypto</mat-chip-option>
+    </mat-chip-listbox>
+    @if (heatMapType == 'stock') {
+      <tv-heatmap-widget [type]="'stock'"/>
+    }
+    @if (heatMapType == 'etf') {
+      <tv-heatmap-widget [type]="'etf'"/>
+    }
+    @if (heatMapType == 'crypto') {
+      <tv-heatmap-widget [type]="'crypto'"/>
+    }
+  </ng-template>
 </mat-expansion-panel>
 
 <mat-expansion-panel [expanded]="false">
@@ -38,5 +42,7 @@
       <span>Stock Screener</span>
     </mat-panel-title>
   </mat-expansion-panel-header>
-  <tv-screener-widget />
+  <ng-template matExpansionPanelContent> 
+    <tv-screener-widget />
+  </ng-template>
 </mat-expansion-panel>

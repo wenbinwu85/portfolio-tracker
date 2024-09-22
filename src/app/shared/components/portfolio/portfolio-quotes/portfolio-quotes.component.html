@@ -120,8 +120,10 @@
                 <mat-icon>price_change</mat-icon>
                 <span>Market Quotes</span>
             </mat-panel-title>
-            </mat-expansion-panel-header>
-        <tv-market-quotes-widget />
+        </mat-expansion-panel-header>
+        <ng-template matExpansionPanelContent> 
+            <tv-market-quotes-widget />
+        </ng-template>
     </mat-expansion-panel>
     <mat-expansion-panel [expanded]="false">
         <mat-expansion-panel-header>
@@ -129,8 +131,10 @@
                 <mat-icon>price_change</mat-icon>
                 <span>Portfolio Quotes</span>
             </mat-panel-title>
-            </mat-expansion-panel-header>
-        <tv-market-quotes-widget [stockNames]="stockNames" [height]="stockNames.length * 35 + 100" />
+        </mat-expansion-panel-header>
+        <ng-template matExpansionPanelContent> 
+            <tv-market-quotes-widget [stockNames]="stockNames" [height]="stockNames.length * 35 + 100" />
+        </ng-template>
     </mat-expansion-panel>
 </ng-template>
 

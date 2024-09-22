@@ -2,7 +2,7 @@
     <div class="logos-container">
         @for (stock of dividendPayers; track $index) {
             <button
-                mat-button 
+                mat-button
                 class="ticker-button" 
                 (click)="emitSelectedTicker(stock.symbol)"
             >
@@ -20,7 +20,7 @@
     <div class="logos-container">
         @for (stock of sortedStocks; track $index) {
             <button
-                mat-button 
+                mat-button
                 class="ticker-button" 
                 (click)="emitSelectedTicker(stock.symbol)"
             >

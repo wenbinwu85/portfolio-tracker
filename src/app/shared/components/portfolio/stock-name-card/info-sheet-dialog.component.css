@@ -1,6 +1,7 @@
 div {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
     margin-top: 1rem;
 
     h1 {
@@ -12,6 +13,11 @@ div {
 button > .mat-icon {
     padding-right: 0;
     margin-right: 0;
+}
+
+button {
+    background-color: ghostwhite;
+    color: chocolate;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */

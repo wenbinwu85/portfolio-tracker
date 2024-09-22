@@ -50,6 +50,7 @@ table {
     padding: 1rem;
     font-size: 2rem;
     align-items: center;
+    font-weight: 1000;
 }
 
 .title span {
@@ -98,4 +99,8 @@ table {
     border-top: 1px solid steelblue;
     border-bottom: 1px solid steelblue;
     background-color: ghostwhite !important;
+}
+
+.mat-mdc-standard-chip .mdc-evolution-chip__action--primary::before {
+    border: 1px solid whitesmoke !important;
 }

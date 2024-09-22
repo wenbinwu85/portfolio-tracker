@@ -1,16 +1,18 @@
-<div>
-  <div class="line-container">
-    <div
-      [matTooltip]="tooltip"
-      matTooltipPosition="above"
-      class="line"
-      #line
-    ></div>
-    @if (showThumbs) {
-      <div class="dot" #startThumb></div>
-      <div class="dot" #endThumb></div>
-    }
-  </div>
+<div
+  [matTooltip]="tooltip"
+  matTooltipPosition="above"
+>
+  <mat-slider 
+    [min]="min * 100" 
+    [max]="max * 100"
+    [showTickMarks]="true"
+    [step]="5"
+    class="slider"
+  >
+    <input [value]="lowThumbValue * 100" matSliderStartThumb>
+    <input [value]="highThumbValue * 100" matSliderEndThumb>
+  </mat-slider>
+  
   <div class="label-wrapper">
     <mat-chip>${{ min }}</mat-chip>
     <mat-chip>${{ max }}</mat-chip>
