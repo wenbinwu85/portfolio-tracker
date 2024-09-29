@@ -1,0 +1,326 @@
+<section class="summary-cards-container">
+  <info-card
+    [value]="portfolioHoldings?.positionsHeld"
+    subtitle="Holdings"
+  />
+  <info-card
+    [value]="portfolioHoldings?.totalAmountInvested"
+    valueType="currency"
+    subtitle="Total Investment"
+  />
+  <info-card
+    [value]="portfolioHoldings?.marketValue"
+    valueType="currency"
+    subtitle="Market Value"
+  />
+  <info-card
+    [value]="portfolioHoldings?.unrealizedGain"
+    subtitle="Unrealized Gain"
+    valueType="currency"
+    [color]="portfolioHoldings?.unrealizedGain > 0 ? 'teal' : 'chocolate'"
+  />
+  <info-card
+    [value]="portfolioHoldings?.unrealizedGainPercent"
+    valueType="percentage"
+    subtitle="Unrealized Gain Percent"
+    [color]="portfolioHoldings?.unrealizedGainPercent > 0 ? 'teal' : 'chocolate'"
+  />
+
+  @if (portfolioHoldings.dividendIncome > 0) {
+    <info-card
+      [value]="portfolioHoldings?.dividendIncome"
+      valueType="currency"
+      subtitle="Projected Annual Income"
+    />
+    <info-card
+      [value]="portfolioHoldings?.yield"
+      valueType="percentage"
+      subtitle="Portfolio Yield"
+    />
+    <info-card
+      [value]="portfolioHoldings?.yieldOnCost"
+      valueType="percentage"
+      subtitle="Portfolio YOC"
+      color="teal"
+    />
+  }
+</section>
+
+<ng-template #goalsRef>
+  <div><h6>Dividend Income</h6></div>
+  <div class="goal-container">
+    <mat-slider
+      [min]="0"
+      [max]="passiveIncomeTarget"
+      [step]="120"
+      [showTickMarks]="true"
+      [color]="'primary'"
+    >
+      <input
+        matSliderThumb
+        [value]="portfolioHoldings?.dividendIncome"
+        [matTooltip]="getTooltip('passive')"
+        matTooltipPosition="above"
+      />
+    </mat-slider>
+    <div class="goal-labels">
+      <mat-chip>{{ "0" | currency }}</mat-chip>
+      <mat-chip>{{ passiveIncomeTarget | currency }}</mat-chip>
+    </div>
+  </div>
+  <div><h6>Portfolio Value</h6></div>
+  <div class="goal-container">
+    <mat-slider
+      [min]="0"
+      [max]="portfolioValueTarget"
+      [step]="1000"
+      [showTickMarks]="true"
+      [color]="'primary'"
+    >
+      <input
+        matSliderThumb
+        [value]="portfolioHoldings?.marketValue"
+        [matTooltip]="getTooltip('investment')"
+        matTooltipPosition="above"
+      />
+    </mat-slider>
+    <div class="goal-labels">
+      <mat-chip>{{ "0" | currency }}</mat-chip>
+      <mat-chip>{{ portfolioValueTarget | currency }}</mat-chip>
+    </div>
+  </div>
+</ng-template>
+
+@if (portfolioHoldings.dividendIncome > 0) {
+  <container-card 
+    title="Portfolio Goals"
+    [mainContentRef]="goalsRef"
+  />
+}
+
+<ng-template #portfolioDetailsTitleRef>
+  <mat-chip-listbox>
+      <mat-chip-option selected (click)="selectTab('allocations')">Allocations</mat-chip-option>
+      <mat-chip-option (click)="selectTab('cost-basis')">Cost Basis</mat-chip-option>
+      <mat-chip-option (click)="selectTab('performance')">Performance</mat-chip-option>
+      @if(dividendData.length) {
+        <mat-chip-option (click)="selectTab('dividends')">Dividend Income</mat-chip-option>
+      }
+  </mat-chip-listbox>
+</ng-template>
+
+<ng-template #portfolioDetailsRef>
+  @if (selectedTab === 'allocations') {
+    <div class="add-flex">
+      <div class="chart-container">
+        <ngx-charts-pie-chart
+          [scheme]="'air'"
+          [animations]="true"
+          [results]="sectorsData"
+          [doughnut]="true"
+          [arcWidth]="0.5"
+          [labels]="true"
+          [title]="'Sector Allocations'"
+          [maxLabelLength]="100"
+          (select)="onSelectSector($event)"
+        />
+      </div>
+      <div class="chart-container">
+        <ngx-charts-bar-vertical
+          [scheme]="allocationsBarChartColorScheme"
+          [results]="portfolioPercentData"
+          [animations]="true"
+          [xAxis]="true"
+          [yAxis]="true"
+          [showXAxisLabel]="true"
+          [showYAxisLabel]="true"
+          [yAxisLabel]="'Holding Allocations %'"
+          [roundEdges]="false"
+          [customColors]="selectedSectorColors"
+        />
+      </div>
+    </div>
+  }
+  @if (selectedTab === 'cost-basis') {
+    <div class="add-flex">
+      <div class="chart-container">
+        <ngx-charts-pie-grid 
+          [scheme]="'picnic'"
+          [animations]="true" 
+          [results]="totalCostChartData" 
+          [label]="'Dollars Invested'" 
+        />
+      </div>
+    </div>
+  }
+  @if ( selectedTab === 'performance') {
+    <div class="add-flex">
+      <div class="chart-container">
+        <ngx-charts-bar-vertical-stacked
+          [scheme]="stackedBarChartColorScheme"
+          [results]="marketValueData"
+          [animations]="true"
+          [xAxis]="true"
+          [yAxis]="true"
+          [showXAxisLabel]="true"
+          [showYAxisLabel]="true"
+          [yAxisLabel]="'Cost Basis & Unrealized Gain'"
+        />
+      </div>
+      <div class="chart-container">
+        <ngx-charts-bar-vertical
+          [results]="unrealizedGainData"
+          [animations]="true"
+          [xAxis]="true"
+          [yAxis]="true"
+          [showXAxisLabel]="true"
+          [showYAxisLabel]="true"
+          [yAxisLabel]="'Unrealized Gain %'"
+          [roundEdges]="false"
+          [customColors]="getGainLostColor"
+        />
+      </div>
+    </div>
+  }
+  @if (selectedTab === 'dividends') {
+    <div class="add-flex">
+      <div class="chart-container">
+        <ngx-charts-bar-vertical
+          [scheme]="dividendBarChartColorScheme"
+          [results]="dividendData"
+          [animations]="true"
+          [xAxis]="true"
+          [yAxis]="true"
+          [showXAxisLabel]="true"
+          [showYAxisLabel]="true"
+          [yAxisLabel]="'Dividend Income'"
+          [roundEdges]="false"
+          [customColors]="selectedSectorColors"
+        />
+      </div>
+      <div class="chart-container">
+        <ngx-charts-bar-vertical
+          [scheme]="dividendBarChartColorScheme"
+          [results]="yocData"
+          [animations]="true"
+          [xAxis]="true"
+          [yAxis]="true"
+          [showXAxisLabel]="true"
+          [showYAxisLabel]="true"
+          [yAxisLabel]="'Yield On Cost %'"
+          [roundEdges]="false"
+          [customColors]="selectedSectorColors"
+        />
+      </div>
+    </div>
+  }
+</ng-template>
+
+<container-card 
+  title="Portfolio Details"
+  [titleContentRef]="portfolioDetailsTitleRef"
+  [mainContentRef]="portfolioDetailsRef"
+/>
+
+<ng-template #tableRef>
+  <table 
+    mat-table
+    matSort
+    matSortActive="unrealizedGainPercent"
+    matSortDirection="asc"
+    multiTemplateDataRows
+    [dataSource]="dataSource"
+  >
+    @for (column of columnDefs; track column; let cidx = $index) {
+      <div [matColumnDef]="column" [sticky]="cidx === 0">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>
+          <span>{{ headers[cidx] }}</span>
+        </th>
+        <td mat-cell *matCellDef="let stock">
+          @if (cidx === 0) {
+            <div class="table-col-0">
+              @if (!showTradingviewWidgets) {
+                <stock-name-card [stock]="stock" />
+              } @else {
+                <tv-single-quote-widget [symbol]="stock.symbol" class="single-quote-widget" />
+              }
+            </div>
+          } @else if (cidx === 1) {
+            <div (click)="expandRow(stock)">
+              <div class="cost-average">
+                <span disabled value="costAverage">{{ portfolioHoldings[stock.symbol].costAverage | currency }}</span>
+                <span disabled value="shares"> x {{ portfolioHoldings[stock.symbol].shares }}</span>
+              </div>
+            </div>
+          } @else if (cidx === 5) {
+            <span [ngStyle]="{ color: getCellColor(stock, cidx) }" (click)="expandRow(stock)">{{ stock[column] | currency }}</span>
+          <!-- } @else if (cidx === 10) {
+            <span [ngStyle]="{ color: getCellColor(stock, cidx) }" (click)="expandRow(stock)">{{ stock.rating | titlecase }}</span> -->
+          } @else {
+            <span [ngStyle]="{ color: getCellColor(stock, cidx) }" (click)="expandRow(stock)">{{ cells[cidx](stock) }}</span>
+          }
+        </td>
+    
+        <td mat-footer-cell *matFooterCellDef [ngStyle]="{ color: 'black' }">
+          <span>{{ footerRow[cidx]() }}</span>
+        </td>
+      </div>
+    }
+
+    <ng-container matColumnDef="expandedRow">
+      <td mat-cell *matCellDef="let stock" [attr.colspan]="columnDefs.length">
+        @if (expandedRow && expandedRow.symbol === stock.symbol) {
+          <div
+            class="expanded-stock-detail"
+            [@detailExpand]="stock === expandedRow ? 'expanded' : 'collapsed'"
+          >
+            <expanded-row [stock]="stock" />
+          </div>
+        }
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columnDefs; sticky: true"></tr>
+    <tr 
+      mat-row 
+      *matRowDef="let row; columns: columnDefs"
+      class="stock-row"
+      [class.expanded-stock-row]="expandedRow === row"
+      [class.row-clicked]="expandedRow === row"
+    ></tr>
+    <tr mat-row *matRowDef="let row; columns: ['expandedRow']" class="expanded-stock-row"></tr>
+    <tr mat-footer-row *matFooterRowDef="columnDefs; sticky: true"></tr>
+    <tr *matNoDataRow class="mat-row">
+      <td class="mat-cell" colspan="4">
+        <h1 class="no-match">
+          <mat-icon>sentiment_very_dissatisfied</mat-icon>
+          <span>Wow! Such amazing search, no results!</span>
+        </h1>
+      </td>
+    </tr>
+  </table>
+</ng-template>
+
+<ng-template #tableSubcontentRef>
+  <div class="subcontent-container">
+    <div class="subcontent-info">
+      <mat-icon>info</mat-icon>
+      <span>Click on a row to expand it. Click on a ticker symbol card to open the ticker data sheet</span>
+    </div>
+    <div class="table-actions">
+      <mat-slide-toggle (toggleChange)="showWidgets()">
+        <span>{{ showTradingviewWidgets? 'Hide Widgets' : 'Show Widgets' }}</span>
+      </mat-slide-toggle>
+      <mat-form-field appearance="outline">
+        <mat-label>Filter</mat-label>
+        <input matInput (keyup)="applyFilter($event)" #input />
+      </mat-form-field>
+    </div>
+  </div>
+</ng-template>
+
+<container-card 
+  title="Portfolio Holdings"
+  [mainContentRef]="tableRef"
+  [subtitleContentRef]="tableSubcontentRef"
+/>

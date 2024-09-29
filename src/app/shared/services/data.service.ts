@@ -17,6 +17,7 @@ import {
   take,
 } from "rxjs";
 import { MarketStates } from "../model/data-enums.model";
+import { FirebaseService } from "./firebase.service";
 
 @Injectable({
   providedIn: "root",
@@ -41,7 +42,8 @@ export class DataService {
   constructor(
     @Inject(DOCUMENT) private document: Document,
     private http: HttpClient,
-    private router: Router
+    private router: Router,
+    private firebaseService: FirebaseService
   ) {
     this.localStorage = this.document.defaultView!.localStorage;
     this.generatePortfolioDataFromLocalStorage();
@@ -93,7 +95,7 @@ export class DataService {
     let errorMessage =
       error.error instanceof ErrorEvent
         ? error.error.message
-        : `Error Code: ${ error.status } Message: ${ error.message }`;
+        : `Error Code: ${error.status} Message: ${error.message}`;
     return of({ data: [], message: errorMessage, status: 500 });
   }
 
@@ -219,10 +221,16 @@ export class DataService {
     ]).subscribe(([portfolioData, techInsights]) => {
       this.portfolioData = portfolioData;
       this.portfolioTechnicalInsights = techInsights;
+      this.setItem("portfolioTechInsights", techInsights);
       Object.entries(portfolioData).forEach(([symbol, stockData]) => {
         this.setItem(symbol, stockData);
+        this.firebaseService.setDocument(symbol, stockData);
       });
-      this.setItem("portfolioTechInsights", techInsights);
+      Object.entries(techInsights).forEach(([symbol, techInsight]) => {
+        console.log(symbol)
+        console.log(techInsight)
+        this.firebaseService.setDocument(symbol + 'TechnicalInsight', techInsight);
+      });
 
       this.portfolioSymbols.forEach((symbol: string) => {
         const data = this.portfolioData[symbol];
@@ -243,6 +251,11 @@ export class DataService {
         this.portfolioHoldings.unrealizedGain += holding.unrealizedGain;
         this.portfolioHoldings.dividendIncome += holding.dividendIncome;
         this.portfolioHoldings[symbol] = holding;
+
+        const holdingData: any = {};
+        const key = symbol;
+        holdingData[key] = holding;
+        this.firebaseService.updateDocument('holdings', holdingData);
       });
 
       this.portfolioHoldingsArray
@@ -342,6 +355,9 @@ export class DataService {
         .subscribe((divHis: any) => {
           this.portfolioDividendHistory[symbol] = divHis;
           this.setItem(symbol + "DividendHistory", divHis);
+          if (divHis.length) { 
+            this.firebaseService.setDocument(symbol + "DividendHistory", divHis);
+          }
         });
       if (
         this.portfolioDividendHistoryArray.length ===

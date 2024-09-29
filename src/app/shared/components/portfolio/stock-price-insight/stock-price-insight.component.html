@@ -62,7 +62,9 @@
                 <td mat-cell *matCellDef="let element">
                     @if (stockData.quoteType === 'EQUITY') {
                         <span> {{ element.targetLowPrice.raw }}</span>
-                        <span [ngStyle]="{color: getTargetPriceColor(stockData, 'targetLowPrice')}"> {{ (element.targetLowPrice?.raw - element.regularMarketPrice?.raw) / element.regularMarketPrice?.raw | percent: '.2' }}</span>
+                        <span [ngStyle]="{color: getTargetPriceColor(stockData, 'targetLowPrice')}">
+                            {{ (element.targetLowPrice?.raw - element.regularMarketPrice?.raw) / element.regularMarketPrice?.raw | percent: '.2' }}
+                        </span>
                     }
                 </td>
             </ng-container>
@@ -71,7 +73,9 @@
                 <td mat-cell *matCellDef="let element">
                     @if (stockData.quoteType === 'EQUITY') {
                         <span>{{ element.targetMedianPrice.raw }}</span>
-                        <span [ngStyle]="{color: getTargetPriceColor(stockData, 'targetMedianPrice')}"> {{ (element.targetMedianPrice?.raw - element.regularMarketPrice?.raw) / element.regularMarketPrice?.raw | percent: '.2' }}</span>
+                        <span [ngStyle]="{color: getTargetPriceColor(stockData, 'targetMedianPrice')}">
+                            {{ (element.targetMedianPrice?.raw - element.regularMarketPrice?.raw) / element.regularMarketPrice?.raw | percent: '.2' }}
+                        </span>
                     }
                 </td>
             </ng-container>
@@ -80,7 +84,9 @@
                 <td mat-cell *matCellDef="let element">
                     @if (stockData.quoteType === 'EQUITY') {
                         <span>{{ element.targetHighPrice.raw }}</span>
-                        <span [ngStyle]="{color: getTargetPriceColor(stockData, 'targetHighPrice')}"> {{ (element.targetHighPrice?.raw - element.regularMarketPrice?.raw) / element.regularMarketPrice?.raw | percent: '.2' }}</span>
+                        <span [ngStyle]="{color: getTargetPriceColor(stockData, 'targetHighPrice')}">
+                            {{ (element.targetHighPrice?.raw - element.regularMarketPrice?.raw) / element.regularMarketPrice?.raw | percent: '.2' }}
+                        </span>
                     }
                 </td>
             </ng-container>

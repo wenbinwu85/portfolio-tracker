@@ -5,24 +5,24 @@ export const routes: Routes = [
   {
     path: "",
     loadComponent: () =>
-      import("./pages/portfolio-main/portfolio-file-loader/portfolio-file-loader.component").then(
-        (c) => c.PortfolioFileLoaderComponent
+      import("./pages/homepage/homepage-landing/homepage-landing.component").then(
+        (c) => c.HomepageLandingComponent
       ),
   },
   {
     path: "main",
     canActivate: [mainGuardGuard],
     loadComponent: () =>
-      import("./pages/portfolio-main/portfolio-main.component").then(
-        (c) => c.PortfolioMainComponent
+      import("./pages/homepage/homepage.component").then(
+        (c) => c.HomepageComponent
       ),
   },
   {
     path: "portfolio",
     canActivate: [mainGuardGuard],
     loadChildren: () =>
-      import("./pages/portfolio-details/portfolio-details.module").then(
-        (m) => m.PortfolioDetailsModule
+      import("./pages/portfolio/portfolio.module").then(
+        (m) => m.PortfolioModule
       ),
   },
   {

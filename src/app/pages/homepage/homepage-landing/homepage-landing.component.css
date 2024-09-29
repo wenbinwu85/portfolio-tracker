@@ -1,0 +1,22 @@
+/* input[type="file"] {
+    display: none;
+} */
+
+.file-input {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+.subcontent {
+    display: flex;
+    align-items: center;
+    padding-top: 0.5rem;
+}
+
+.accordion .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 0;
+}

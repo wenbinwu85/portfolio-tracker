@@ -2,7 +2,9 @@
     <div class="add-flex">
         <mat-chip-listbox>
             <mat-chip-option selected (click)="displayChart(1)">Price Changes</mat-chip-option>
-            <mat-chip-option (click)="displayChart(2)">Beta</mat-chip-option>
+            @if (betaChartData.length) {
+                <mat-chip-option (click)="displayChart(2)">Beta</mat-chip-option>
+            }
             <mat-chip-option (click)="displayChart(3)">VIX</mat-chip-option>
         </mat-chip-listbox>
     </div>
@@ -114,28 +116,30 @@
             [timeFrame]="'1m'"
         />
     }
-    <mat-expansion-panel [expanded]="expandWidget">
-        <mat-expansion-panel-header>
-            <mat-panel-title>
-                <mat-icon>price_change</mat-icon>
-                <span>Market Quotes</span>
-            </mat-panel-title>
-        </mat-expansion-panel-header>
-        <ng-template matExpansionPanelContent> 
-            <tv-market-quotes-widget />
-        </ng-template>
-    </mat-expansion-panel>
-    <mat-expansion-panel [expanded]="false">
-        <mat-expansion-panel-header>
-            <mat-panel-title>
-                <mat-icon>price_change</mat-icon>
-                <span>Portfolio Quotes</span>
-            </mat-panel-title>
-        </mat-expansion-panel-header>
-        <ng-template matExpansionPanelContent> 
-            <tv-market-quotes-widget [stockNames]="stockNames" [height]="stockNames.length * 35 + 100" />
-        </ng-template>
-    </mat-expansion-panel>
+    <mat-accordion>
+        <mat-expansion-panel [expanded]="expandWidget">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <mat-icon>price_change</mat-icon>
+                    <span>Market Quotes</span>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ng-template matExpansionPanelContent> 
+                <tv-market-quotes-widget />
+            </ng-template>
+        </mat-expansion-panel>
+        <mat-expansion-panel [expanded]="false">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <mat-icon>price_change</mat-icon>
+                    <span>Portfolio Quotes</span>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ng-template matExpansionPanelContent> 
+                <tv-market-quotes-widget [stockNames]="stockNames" [height]="stockNames.length * 35 + 100" />
+            </ng-template>
+        </mat-expansion-panel>
+    </mat-accordion>
 </ng-template>
 
 <ng-template #quotesFooterRef>

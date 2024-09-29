@@ -12,14 +12,7 @@
 
 ::ng-deep .mat-mdc-slider 
 .mdc-slider__tick-marks 
-.mdc-slider__tick-mark--active {
-  background-color: chocolate;
-  height: 1rem;
-}
-
-::ng-deep .mat-mdc-slider 
-.mdc-slider__tick-marks 
 .mdc-slider__tick-mark--inactive {
- background-color: slategrey;
-  height: 1rem;
+  background-color: chocolate;
+  height: 0.25rem;
 }

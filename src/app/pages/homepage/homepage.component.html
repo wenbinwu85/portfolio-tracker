@@ -1,0 +1,44 @@
+<mat-tab-group mat-align-tabs="center">
+  <mat-tab label="Quotes">
+    <section class="add-margin">
+      <portfolio-quotes [expandWidget]="true"/>
+    </section>
+  </mat-tab>
+
+  @if(gradingHistory.length) {
+    <mat-tab label="Grading History">
+      <section class="add-margin">
+        @for (item of gradingHistory; track item.epochGradeDate) {
+          <info-card
+            [value]="item.fromGrade + ' to ' + item.toGrade"
+            [subtitle]="item.symbol"
+            [subtitleChip]="true"
+            [additionalInfo]="item.firm"
+            [date]="(item.epochGradeDate * 1000).toString()"
+            [icon]="item.icon"
+            [color]="item.color"
+          />
+          <div class="spacer"></div>
+        }
+      </section>
+    </mat-tab>
+  }
+  @if(insiderActivities.length) {
+    <mat-tab label="Insider Activities">
+      <section class="add-margin">
+        @for(activity of insiderActivities; track activity.index) {
+          <info-card
+            [value]="activity.shares.fmt + ' shares. ' + activity.transactionText"
+            [subtitle]="activity.symbol"
+            [subtitleChip]="true"
+            [additionalInfo]="activity.filerName + ', ' + activity.filerRelation"
+            [date]="(activity.startDate.raw * 1000).toString()"
+            [icon]="activity.icon"
+            [color]="activity.color"
+          />
+          <div class="spacer"></div>
+        }
+      </section>
+    </mat-tab>
+  }
+</mat-tab-group>

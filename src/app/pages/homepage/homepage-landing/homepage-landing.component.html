@@ -1,0 +1,47 @@
+<ng-template #landingPageRef>
+    <section>
+        <mat-accordion class="accordion">
+            <mat-expansion-panel [expanded]="step() === 0" (opened)="setStep(0)" hideToggle>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>Local</mat-panel-title>
+                    <mat-panel-description>
+                        Load portfolio data from a csv or txt file
+                        <mat-icon>upload</mat-icon>
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+    
+                <div class="file-input">
+                    <input type="file" accept="text/csv" (change)="handleOpenFile($event)" />
+                </div>
+    
+                <mat-action-row>
+                    <button mat-button (click)="nextStep()">Next</button>
+                </mat-action-row>
+            </mat-expansion-panel>
+    
+            <mat-expansion-panel [expanded]="step() === 1" (opened)="setStep(1)" hideToggle>
+                <mat-expansion-panel-header>
+                    <mat-panel-title> Sign In </mat-panel-title>
+                    <mat-panel-description>
+                        Sign in to your saved portfolio
+                        <mat-icon>login</mat-icon>
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+    
+                blah blah blah
+    
+                <mat-action-row>
+                    <button mat-button (click)="prevStep()">Previous</button>
+                    <button mat-button (click)="nextStep()">Next</button>
+                </mat-action-row>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </section>
+</ng-template>
+
+<section class="add-margin">
+    <container-card 
+        title="Choose your portfolio"
+        [mainContentRef]="landingPageRef"
+    />
+</section>

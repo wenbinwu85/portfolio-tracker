@@ -1,20 +1,22 @@
 <mat-tab-group mat-align-tabs="center">
-  <mat-tab label="Earnings Per Share">
-    <div class="chart-container">
-      @for(stock of stocks; track stock.symbol) {
-        <ng-template #earningsChartRef>
-          <stock-earnings-chart [stock]="stock" />
-        </ng-template>
-        
-        <section class="add-margin">
-          <container-card
-              [title]="stock.symbol"
-              [mainContentRef]="earningsChartRef"
-          />
-        </section>
-      }
-    </div>
-  </mat-tab>
+  @if(stocks.length) {
+    <mat-tab label="Earnings Per Share">
+      <div class="chart-container">
+        @for(stock of stocks; track stock.symbol) {
+          <ng-template #earningsChartRef>
+            <stock-earnings-chart [stock]="stock" />
+          </ng-template>
+          
+          <section class="add-margin">
+            <container-card
+                [title]="stock.symbol"
+                [mainContentRef]="earningsChartRef"
+            />
+          </section>
+        }
+      </div>
+    </mat-tab>
+  }
 
   <mat-tab label="Analysis B">
   </mat-tab>

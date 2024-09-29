@@ -31,7 +31,8 @@ export class HelperService {
     return priceChangePercent > 0 ? StockPriceColorsEnum.Gain : StockPriceColorsEnum.Lost;
   }
 
-  public getTickerLogo(symbol: string) { 
-    return 'https://raw.githubusercontent.com/nvstly/icons/main/ticker_icons/' + symbol.toUpperCase() + '.png';
+  public getTickerLogo(symbol: string) {
+    const iconGithubUrl = 'https://raw.githubusercontent.com/nvstly/icons/main/ticker_icons/'
+    return  iconGithubUrl + symbol.toUpperCase() + '.png';
   }
 }

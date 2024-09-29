@@ -6,8 +6,8 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatProgressBarModule } from "@angular/material/progress-bar";
 import { MatTabsModule } from "@angular/material/tabs";
 import { Router, RouterLink, RouterOutlet } from "@angular/router";
-import { PortfolioDetailsComponent } from "../../../pages/portfolio-details/portfolio-details.component";
-import { PortfolioMainComponent } from "../../../pages/portfolio-main/portfolio-main.component";
+import { PortfolioComponent } from "../../../pages/portfolio/portfolio.component";
+import { HomepageComponent } from "../../../pages/homepage/homepage.component";
 import { ToolboxComponent } from "../../../pages/toolbox/toolbox.component";
 import { DataService } from "../../services/data.service";
 import { TvTickersWidgetComponent } from "../tradingview/tv-tickers-widget/tv-tickers-widget.component";
@@ -23,8 +23,8 @@ import { TvTickersWidgetComponent } from "../tradingview/tv-tickers-widget/tv-ti
     MatIconModule,
     MatProgressBarModule,
     MatTabsModule,
-    PortfolioDetailsComponent,
-    PortfolioMainComponent,
+    PortfolioComponent,
+    HomepageComponent,
     RouterLink,
     RouterOutlet,
     TitleCasePipe,

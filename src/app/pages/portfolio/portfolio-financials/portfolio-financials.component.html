@@ -1,0 +1,64 @@
+@if(dataSource.data.length) {
+  <ng-template #stocksRef>
+    <table mat-table matSort matSortActive="earningsQuarterlyGrowth" matSortDirection="asc" [dataSource]="dataSource">
+      @for (column of columnDefs; track column; let cidx = $index) {
+        <div [matColumnDef]="column">
+          <th *matHeaderCellDef mat-header-cell mat-sort-header>
+            <span>{{ headers[cidx] }}</span>
+          </th>
+          <td mat-cell *matCellDef="let stock">
+            @if (cidx === 0) {
+              <div class="table-col-0">
+                <stock-name-card [stock]="stock" />
+              </div>
+            } @else {
+              <span [ngStyle]="{ color: getCellColor(cidx, stock)}">{{ stock[column] }}</span>
+            }
+          </td>
+        </div>
+      }
+      <tr mat-header-row *matHeaderRowDef="columnDefs; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: columnDefs"></tr>
+    </table>
+  </ng-template>
+  
+  <container-card
+    title="Stocks"
+    [mainContentRef]="stocksRef"
+  />
+}
+
+@if (sortedEtfs.length) {
+  <ng-template #etfsRef>
+    <table mat-table [dataSource]="sortedEtfs">
+      @for (column of etfColumnDefs; track column; let cidx = $index) {
+        <div [matColumnDef]="column">
+          <th *matHeaderCellDef mat-header-cell>
+            <span>{{ etfHeaders[cidx] }}</span>
+          </th>
+          <td mat-cell *matCellDef="let etf">
+            @if (cidx === 0) {
+              <div class="table-col-0">
+                <stock-name-card [stock]="etf" />
+              </div>
+            } @else {
+              @if (cidx < 13) {
+                <span>{{ etf[column] }}</span>
+              }
+              @if (cidx === 13) {
+                <span>{{ etf[column] | currency }}</span>
+              }
+            }
+          </td>
+        </div>
+      }
+      <tr mat-header-row *matHeaderRowDef="etfColumnDefs; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: etfColumnDefs"></tr>
+    </table>
+  </ng-template>
+
+  <container-card
+    title="Exchange Traded Funds"
+    [mainContentRef]="etfsRef"
+  />
+}
