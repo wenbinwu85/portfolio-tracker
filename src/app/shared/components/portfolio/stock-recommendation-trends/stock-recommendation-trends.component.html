@@ -1,17 +1,15 @@
 <div class="rec-trends">
     <ngx-charts-bar-vertical-stacked
-        [view]="[400, height || 200]"
+        [view]="[0, height || 200]"
         [scheme]="recommendationTrendChartColorScheme"
         [results]="recommendationTrendChartData"
         [xAxis]="true"
         [yAxis]="true"
-        [showXAxisLabel]="true"
+        [yAxisLabel]="'Analysts Opinions'"
         [showYAxisLabel]="true"
-        [rotateXAxisTicks]="true"
         [animations]="true"
         [legend]="true"
         [showDataLabel]="true"
         [legendTitle]="''"
-        [yAxisLabel]="'Analysts Opinions'"
     />
 </div>

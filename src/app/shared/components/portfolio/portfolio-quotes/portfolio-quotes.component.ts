@@ -171,7 +171,7 @@ export class PortfolioQuotesComponent {
   getBetaColor = (symbol: any) => {
     const stock = this.dataService.getTickerData(symbol);
     const beta = stock.beta?.raw || 0;
-    return beta > 1 ? 'chocolate' : 'slategrey';
+    return beta > 1 ? 'chocolate' : 'teal';
   }
 
   displayChart(chartID: number) {

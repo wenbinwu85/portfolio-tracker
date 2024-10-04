@@ -224,12 +224,12 @@ export class DataService {
       this.setItem("portfolioTechInsights", techInsights);
       Object.entries(portfolioData).forEach(([symbol, stockData]) => {
         this.setItem(symbol, stockData);
-        this.firebaseService.setDocument(symbol, stockData);
+        // this.firebaseService.setDocument(symbol, stockData);
       });
       Object.entries(techInsights).forEach(([symbol, techInsight]) => {
         console.log(symbol)
         console.log(techInsight)
-        this.firebaseService.setDocument(symbol + 'TechnicalInsight', techInsight);
+        // this.firebaseService.setDocument(symbol + 'TechnicalInsight', techInsight);
       });
 
       this.portfolioSymbols.forEach((symbol: string) => {
@@ -255,7 +255,7 @@ export class DataService {
         const holdingData: any = {};
         const key = symbol;
         holdingData[key] = holding;
-        this.firebaseService.updateDocument('holdings', holdingData);
+        // this.firebaseService.updateDocument('holdings', holdingData);
       });
 
       this.portfolioHoldingsArray
@@ -356,7 +356,7 @@ export class DataService {
           this.portfolioDividendHistory[symbol] = divHis;
           this.setItem(symbol + "DividendHistory", divHis);
           if (divHis.length) { 
-            this.firebaseService.setDocument(symbol + "DividendHistory", divHis);
+            // this.firebaseService.setDocument(symbol + "DividendHistory", divHis);
           }
         });
       if (

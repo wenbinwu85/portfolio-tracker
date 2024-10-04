@@ -99,7 +99,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
   allocationsBarChartColorScheme = { domain: ["slategrey"] } as Color;
   valueBarChartColorScheme = { domain: ["slategrey"] } as Color;
   dividendBarChartColorScheme = { domain: ["slategrey"] } as Color;
-  stackedBarChartColorScheme = { domain: ["slategrey", "lightskyblue"] } as Color;
+  stackedBarChartColorScheme = { domain: ["slategrey", "skyblue"] } as Color;
   totalCostChartData: any = [];
   allTotalCostChartData: any = [];
   dataSource = new MatTableDataSource<any>();
