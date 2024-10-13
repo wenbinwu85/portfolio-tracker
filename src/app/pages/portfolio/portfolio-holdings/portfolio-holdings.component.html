@@ -298,7 +298,11 @@
     <div class="subcontent-container">
       <div class="subcontent-info">
         <mat-icon>info</mat-icon>
-        <span>Click on a row to expand it. Click on a ticker symbol card to open the ticker data sheet</span>
+        @if (showPortfolioEditor) {
+          <span>Click on 'Update Portfolio' at the bottom right to save changes.</span>
+        } @else {
+          <span>Click on a row to expand it. Click on a ticker symbol card to open the ticker data sheet</span>
+        }
       </div>
       <div class="table-actions">
         <mat-slide-toggle (toggleChange)="openPortfolioEditor()">
@@ -328,7 +332,7 @@
 </ng-template>
 
 <container-card 
-  title="Portfolio Holdings"
-  [mainContentRef]=" showPortfolioEditor ? portfolioEditorRef : tableRef"
+  [title]="showPortfolioEditor ? 'Portfolio Editor' : 'Portfolio Holdings'"
+  [mainContentRef]="showPortfolioEditor ? portfolioEditorRef : tableRef"
   [subtitleContentRef]="tableSubcontentRef"
 />

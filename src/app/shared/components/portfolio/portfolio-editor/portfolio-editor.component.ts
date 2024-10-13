@@ -111,6 +111,10 @@ export class PortfolioEditorComponent {
     console.log(this.holdings)
   }
 
+  clearSelection() { 
+    this.holdingsControl.setValue([]);
+  }
+
   updatePortfolio() {
     this.symbols = this.holdings.map(holding => holding.symbol);
     console.log('latest symbols:', this.symbols);

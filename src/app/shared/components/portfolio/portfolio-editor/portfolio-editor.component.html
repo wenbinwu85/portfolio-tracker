@@ -34,6 +34,13 @@
         <div class="holding-list-actions">
             <button 
                 mat-button 
+                (click)="clearSelection()" 
+                [hidden]="selectedHoldings.length === 0"
+            >
+                clear Selected
+            </button>
+            <button 
+                mat-button 
                 class="delete-button" 
                 (click)="deleteHoldings()" 
                 [hidden]="selectedHoldings.length === 0"
@@ -45,9 +52,12 @@
     <mat-selection-list [multiple]="true" [formControl]="holdingsControl" #holdingsList>
         @for (holding of holdings; track holding.symbol; let idx = $index) {
             <mat-list-option [value]="holding.symbol">
-                <mat-label>{{idx + 1}}. </mat-label>
-                <mat-label>{{ holding.shares }} shares of {{ holding.symbol }} </mat-label>
-                <mat-label>with cost average of ${{ holding.costAverage }} dollars per share.</mat-label>
+                <mat-label>
+                    <span class="shares">{{ holding.shares }}</span> shares of <span class="symbol">{{ holding.symbol }} </span>
+                </mat-label>
+                <mat-label>
+                    with cost average of <span class="cost-average">${{ holding.costAverage }}</span> dollars per share.
+                </mat-label>
             </mat-list-option>
         }
     </mat-selection-list>
