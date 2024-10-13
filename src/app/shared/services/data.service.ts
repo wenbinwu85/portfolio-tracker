@@ -23,8 +23,8 @@ import { FirebaseService } from "./firebase.service";
   providedIn: "root",
 })
 export class DataService {
-  private backendUrl = 'http://127.0.0.1:5000';
-  // private backendUrl = "https://portfolio-tracker-backend-5ys2.onrender.com";
+  // private backendUrl = 'http://127.0.0.1:5000';
+  private backendUrl = "https://portfolio-tracker-backend-5ys2.onrender.com";
   private httpOptions: any = {
     headers: new HttpHeaders()
       .set("content-type", "application/json")
