@@ -46,58 +46,6 @@
   }
 </section>
 
-<ng-template #goalsRef>
-  <div><h6>Dividend Income</h6></div>
-  <div class="goal-container">
-    <mat-slider
-      [min]="0"
-      [max]="passiveIncomeTarget"
-      [step]="120"
-      [showTickMarks]="true"
-      [color]="'primary'"
-    >
-      <input
-        matSliderThumb
-        [value]="portfolioHoldings?.dividendIncome"
-        [matTooltip]="getTooltip('passive')"
-        matTooltipPosition="above"
-      />
-    </mat-slider>
-    <div class="goal-labels">
-      <mat-chip>{{ "0" | currency }}</mat-chip>
-      <mat-chip>{{ passiveIncomeTarget | currency }}</mat-chip>
-    </div>
-  </div>
-  <div><h6>Portfolio Value</h6></div>
-  <div class="goal-container">
-    <mat-slider
-      [min]="0"
-      [max]="portfolioValueTarget"
-      [step]="1000"
-      [showTickMarks]="true"
-      [color]="'primary'"
-    >
-      <input
-        matSliderThumb
-        [value]="portfolioHoldings?.marketValue"
-        [matTooltip]="getTooltip('investment')"
-        matTooltipPosition="above"
-      />
-    </mat-slider>
-    <div class="goal-labels">
-      <mat-chip>{{ "0" | currency }}</mat-chip>
-      <mat-chip>{{ portfolioValueTarget | currency }}</mat-chip>
-    </div>
-  </div>
-</ng-template>
-
-@if (portfolioHoldings.dividendIncome > 0) {
-  <container-card 
-    title="Portfolio Goals"
-    [mainContentRef]="goalsRef"
-  />
-}
-
 <ng-template #portfolioDetailsTitleRef>
   <mat-chip-listbox>
       <mat-chip-option selected (click)="selectTab('allocations')">Allocations</mat-chip-option>
@@ -110,6 +58,53 @@
 </ng-template>
 
 <ng-template #portfolioDetailsRef>
+  <section class="goals-container">
+    <div class="goal-container add-margin">
+      <h6>Dividend Income Target</h6>
+      <mat-slider
+        [min]="0"
+        [max]="passiveIncomeTarget"
+        [step]="120"
+        [showTickMarks]="true"
+        [color]="'primary'"
+      >
+        <input
+          matSliderThumb
+          [value]="portfolioHoldings?.dividendIncome"
+          [matTooltip]="getTooltip('passive')"
+          matTooltipPosition="above"
+        />
+      </mat-slider>
+      <div class="goal-labels">
+        <mat-chip>{{ "0" | currency }}</mat-chip>
+        <mat-chip>{{ passiveIncomeTarget | currency }}</mat-chip>
+      </div>
+    </div>
+    <div class="goal-container add-margin">
+      <h6>Portfolio Value Target</h6>
+      <mat-slider
+        [min]="0"
+        [max]="portfolioValueTarget"
+        [step]="1000"
+        [showTickMarks]="true"
+        [color]="'primary'"
+      >
+        <input
+          matSliderThumb
+          [value]="portfolioHoldings?.marketValue"
+          [matTooltip]="getTooltip('investment')"
+          matTooltipPosition="above"
+        />
+      </mat-slider>
+      <div class="goal-labels">
+        <mat-chip>{{ "0" | currency }}</mat-chip>
+        <mat-chip>{{ portfolioValueTarget | currency }}</mat-chip>
+      </div>
+    </div>
+  </section>
+
+  <mat-divider></mat-divider>
+
   @if (selectedTab === 'allocations') {
     <div class="add-flex">
       <div class="chart-container">
@@ -300,25 +295,40 @@
 </ng-template>
 
 <ng-template #tableSubcontentRef>
-  <div class="subcontent-container">
-    <div class="subcontent-info">
-      <mat-icon>info</mat-icon>
-      <span>Click on a row to expand it. Click on a ticker symbol card to open the ticker data sheet</span>
+    <div class="subcontent-container">
+      <div class="subcontent-info">
+        <mat-icon>info</mat-icon>
+        <span>Click on a row to expand it. Click on a ticker symbol card to open the ticker data sheet</span>
+      </div>
+      <div class="table-actions">
+        <mat-slide-toggle (toggleChange)="openPortfolioEditor()">
+          <span>{{ showPortfolioEditor ? 'Close Editor' : 'Manage Portfolio' }}</span>
+        </mat-slide-toggle>
+        @if (!showPortfolioEditor) {
+          <mat-slide-toggle (toggleChange)="showWidgets()">
+            <span>{{ showTradingviewWidgets? 'Hide Widgets' : 'Show Widgets' }}</span>
+          </mat-slide-toggle>
+          <mat-form-field appearance="outline">
+            <mat-label>Filter</mat-label>
+            <input matInput (keyup)="applyFilter($event)" #input />
+          </mat-form-field>
+          @if (showResetButton) {
+          <button mat-stroked-button (click)="resetTable()">
+            <mat-icon>restart_alt</mat-icon>
+            Reset
+          </button>
+          }
+        }
+      </div>
     </div>
-    <div class="table-actions">
-      <mat-slide-toggle (toggleChange)="showWidgets()">
-        <span>{{ showTradingviewWidgets? 'Hide Widgets' : 'Show Widgets' }}</span>
-      </mat-slide-toggle>
-      <mat-form-field appearance="outline">
-        <mat-label>Filter</mat-label>
-        <input matInput (keyup)="applyFilter($event)" #input />
-      </mat-form-field>
-    </div>
-  </div>
+</ng-template>
+
+<ng-template #portfolioEditorRef>
+  <portfolio-editor />
 </ng-template>
 
 <container-card 
   title="Portfolio Holdings"
-  [mainContentRef]="tableRef"
+  [mainContentRef]=" showPortfolioEditor ? portfolioEditorRef : tableRef"
   [subtitleContentRef]="tableSubcontentRef"
 />

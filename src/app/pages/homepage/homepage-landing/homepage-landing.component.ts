@@ -6,6 +6,7 @@ import { DataService } from "../../../shared/services/data.service";
 import { MatExpansionModule } from "@angular/material/expansion";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
+import { PortfolioEditorComponent } from "../../../shared/components/portfolio/portfolio-editor/portfolio-editor.component";
 
 @Component({
   selector: "app-homepage-landing",
@@ -16,6 +17,7 @@ import { MatInputModule } from "@angular/material/input";
     MatExpansionModule,
     MatFormFieldModule,
     MatInputModule,
+    PortfolioEditorComponent,
   ],
   templateUrl: "./homepage-landing.component.html",
   styleUrl: "./homepage-landing.component.css",

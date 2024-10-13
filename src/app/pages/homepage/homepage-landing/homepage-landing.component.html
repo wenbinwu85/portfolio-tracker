@@ -1,9 +1,9 @@
 <ng-template #landingPageRef>
     <section>
         <mat-accordion class="accordion">
-            <mat-expansion-panel [expanded]="step() === 0" (opened)="setStep(0)" hideToggle class="local">
+            <mat-expansion-panel [expanded]="step() === 0" (opened)="setStep(0)" hideToggle>
                 <mat-expansion-panel-header>
-                    <mat-panel-title>Upload</mat-panel-title>
+                    <mat-panel-title>Open File</mat-panel-title>
                     <mat-panel-description>
                         Load portfolio data from a csv or txt file
                         <mat-icon>upload</mat-icon>
@@ -14,12 +14,28 @@
                     <input type="file" accept="text/csv" (change)="handleOpenFile($event)" />
                 </div>
     
-                <mat-action-row>
+                <!-- <mat-action-row>
                     <button mat-button (click)="nextStep()">Next</button>
-                </mat-action-row>
+                </mat-action-row> -->
+            </mat-expansion-panel>
+
+            <mat-expansion-panel [expanded]="step() === 1" (opened)="setStep(1)" hideToggle>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>Portfolio Editor</mat-panel-title>
+                    <mat-panel-description>
+                        Manually enter your portfolio holdings
+                        <mat-icon>edit_note</mat-icon>
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                
+                <portfolio-editor />
+    
+                <!-- <mat-action-row>
+                    <button mat-button (click)="nextStep()">Next</button>
+                </mat-action-row> -->
             </mat-expansion-panel>
     
-            <mat-expansion-panel [expanded]="step() === 1" (opened)="setStep(1)" hideToggle class="signin">
+            <mat-expansion-panel [expanded]="step() === 2" (opened)="setStep(2)" hideToggle>
                 <mat-expansion-panel-header>
                     <mat-panel-title> Sign In </mat-panel-title>
                     <mat-panel-description>
@@ -30,10 +46,10 @@
     
                 blah blah blah
     
-                <mat-action-row>
+                <!-- <mat-action-row>
                     <button mat-button (click)="prevStep()">Previous</button>
                     <button mat-button (click)="nextStep()">Next</button>
-                </mat-action-row>
+                </mat-action-row> -->
             </mat-expansion-panel>
         </mat-accordion>
     </section>

@@ -7,6 +7,19 @@ mat-slider {
   margin-right: 1.5rem;
 }
 
+.mat-mdc-outlined-button {
+  max-width: min-content;
+  margin-left: 0.5rem;
+
+  .mat-icon {
+    margin: 0;
+  }
+}
+
+.goals-container {
+  display: flex;
+}
+
 ::ng-deep .goal-container mat-slider-visual-thumb.mdc-slider__thumb {
   height: 0px !important;
 }
@@ -20,6 +33,7 @@ mat-slider {
 }
 
 .goal-container {
+  width: 50%;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
@@ -54,7 +68,7 @@ tr.expanded-stock-row {
 .table-actions {
   display: flex;
   justify-content: right;
-  align-items: baseline;
+  align-items: center;
 }
 
 .table-col-0 {
@@ -96,6 +110,7 @@ td.mat-mdc-footer-cell:first-of-type {
 .subcontent-container {
   display: flex;
   justify-content: space-between;
+  margin-top: 0.5rem;
 }
 
 .subcontent-info {

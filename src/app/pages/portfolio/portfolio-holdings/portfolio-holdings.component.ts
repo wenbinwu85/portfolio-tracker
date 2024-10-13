@@ -29,12 +29,14 @@ import {
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { Color, NgxChartsModule } from "@swimlane/ngx-charts";
 import { ContainerCardComponent } from "../../../shared/components/container-card/container-card.component";
+import { DataService } from "../../../shared/services/data.service";
 import { ExpandedRowComponent } from "../../../shared/components/expanded-row/expanded-row.component";
 import { InfoCardComponent } from "../../../shared/components/info-card/info-card.component";
+import { MatButtonModule } from "@angular/material/button";
 import { StockNameCardComponent } from "../../../shared/components/portfolio/stock-name-card/stock-name-card.component";
-import { TvSingleQuoteWidgetComponent } from "../../../shared/components/tradingview/tv-single-quote-widget/tv-single-quote-widget.component";
 import { StockPriceColorsEnum } from "../../../shared/model/colors.model";
-import { DataService } from "../../../shared/services/data.service";
+import { TvSingleQuoteWidgetComponent } from "../../../shared/components/tradingview/tv-single-quote-widget/tv-single-quote-widget.component";
+import { PortfolioEditorComponent } from "../../../shared/components/portfolio/portfolio-editor/portfolio-editor.component";
 
 @Component({
   selector: "portfolio-holdings",
@@ -56,6 +58,7 @@ import { DataService } from "../../../shared/services/data.service";
     CurrencyPipe,
     ExpandedRowComponent,
     InfoCardComponent,
+    MatButtonModule,
     MatChipsModule,
     MatDividerModule,
     MatExpansionModule,
@@ -73,6 +76,7 @@ import { DataService } from "../../../shared/services/data.service";
     StockNameCardComponent,
     TitleCasePipe,
     TvSingleQuoteWidgetComponent,
+    PortfolioEditorComponent,
   ],
 })
 export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
@@ -83,6 +87,8 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
   portfolioHoldings: any = {};
   portfolioData: any = {};
 
+  showPortfolioEditor = false;
+  showResetButton = false;
   showTradingviewWidgets = false;
   selectedTab = "allocations";
   selectedSectorColors: any[] = [];
@@ -382,10 +388,21 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
         })
       }
     });
+    this.dataSource.filter = data.name;
+    this.showResetButton = true;
+  }
+
+  resetTable() { 
+    this.dataSource.filter = '';
+    this.showResetButton = false;
   }
 
   getGainLostColor = (symbol: any) => { 
     const unrealizedGainPercent = this.portfolioHoldings[symbol].unrealizedGainPercent;
     return unrealizedGainPercent > 0 ? 'teal' : 'chocolate';
+  }
+
+  openPortfolioEditor() { 
+    this.showPortfolioEditor = !this.showPortfolioEditor;
   }
 }

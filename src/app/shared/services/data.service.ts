@@ -23,15 +23,15 @@ import { FirebaseService } from "./firebase.service";
   providedIn: "root",
 })
 export class DataService {
-  // private backendUrl = 'http://127.0.0.1:5000';
-  private backendUrl = "https://portfolio-tracker-backend-5ys2.onrender.com";
+  private backendUrl = 'http://127.0.0.1:5000';
+  // private backendUrl = "https://portfolio-tracker-backend-5ys2.onrender.com";
   private httpOptions: any = {
     headers: new HttpHeaders()
       .set("content-type", "application/json")
       .set("Access-Control-Allow-Origin", "*"),
   };
   public localStorage: Storage;
-  public portfolioSymbols: any = [];
+  public portfolioSymbols: any = [];  // TODO: change to set?
   public portfolioHoldings: any = {};
   public portfolioData: any = {};
   public portfolioTechnicalInsights: any = {};
@@ -110,7 +110,7 @@ export class DataService {
   public sanityCheck() {
     console.log(
       "%c ----- Sanity Check -----",
-      "background: teal; color: white"
+      "background: steelblue; color: white"
     );
     const check1 =
       this.portfolioSymbols.length > 0 &&
@@ -128,16 +128,16 @@ export class DataService {
     console.log("Technical insights length = number of symbols:", check3);
     console.log("Dividend history data is not empty:", check4);
 
-    console.log(
-      "%c ------------------------",
-      "background: teal; color: white"
-    );
+    console.log(this.portfolioData);
+    console.table(this.portfolioHoldings);
+    console.log(this.portfolioTechnicalInsights);
+    console.log(this.portfolioDividendHistory);
 
     if (check1 && check2 && check3) {
-      console.log("Sanity Check Passed!");
+      console.log("%c Sanity Check Passed! ", "background: teal; color: white; line-height: 25px;");
       return true;
     } else {
-      console.log("Sanity Check Failed!");
+      console.log("%c Sanity Check failed! ", "background: chocolate; color: white; line-height: 25px;");
       return false;
     }
   }
@@ -149,6 +149,10 @@ export class DataService {
 
   public setItem(itemName: string, item: any) {
     this.localStorage?.setItem(itemName, JSON.stringify(item));
+  }
+
+  public removeItem(itemName: string) { 
+    this.localStorage?.removeItem(itemName);
   }
 
   public getTickerData(symbol: string) {
@@ -188,6 +192,190 @@ export class DataService {
     }
     this.isLoadingData.next(false);
     this.sanityCheck();
+  }
+
+  public updatePortfolioData(symbols: string[], holdings: any[]) { 
+    this.isLoadingData.next(true);
+    this.portfolioHoldings.positionsHeld = 0;
+    this.portfolioHoldings.marketValue = 0;
+    this.portfolioHoldings.totalAmountInvested = 0;
+    this.portfolioHoldings.dividendIncome = 0;
+    this.portfolioHoldings.unrealizedGain = 0;
+    this.portfolioHoldings.unrealizedGainPercent = 0;
+    this.portfolioHoldings.yieldOnCost = 0;
+    this.portfolioHoldings.yield = 0;
+    holdings.forEach(holding => { 
+      this.portfolioHoldings[holding.symbol] = {
+        shares: holding.shares,
+        costAverage: holding.costAverage,
+      }
+    });
+
+    const addedSymbols = symbols.filter((symbol: string) => !this.portfolioSymbols.includes(symbol));
+    const deletedSymbols = this.portfolioSymbols.filter((existingSymbol: string) => !symbols.includes(existingSymbol));
+    this.portfolioSymbols = symbols;
+    this.portfolioHoldings.positionsHeld = this.portfolioSymbols.length;
+
+    console.log('symbols:', symbols)
+    console.log('this.symbols:', this.portfolioSymbols)
+    console.log('added symbols:', addedSymbols)
+    console.log('deleted symbols:', deletedSymbols)
+
+    deletedSymbols.forEach((symbol: string) => {
+      delete this.portfolioHoldings[symbol];
+      delete this.portfolioData[symbol];
+      delete this.portfolioTechnicalInsights[symbol];
+      delete this.portfolioDividendHistory[symbol];
+      this.removeItem(symbol + 'Holding');
+      this.removeItem(symbol);
+      this.removeItem(symbol + 'DividendHistory');
+    });
+    this.setItem('portfolioSymbols', this.portfolioSymbols);
+    this.setItem('portfolioHolding', this.portfolioHoldings);
+    this.setItem('portfolioTechInsights', this.portfolioTechnicalInsights);
+
+    if (!addedSymbols.length) { 
+      this.portfolioSymbols.forEach((symbol: string) => {
+        const data = this.portfolioData[symbol];
+        const holding = this.portfolioHoldings[symbol];
+        const shares = holding.shares;
+        const costAvg = holding.costAverage;
+        holding.symbol = symbol;
+        holding.totalCost = +(shares * costAvg).toFixed(2);
+        holding.marketValue = data.regularMarketPrice.raw * shares;
+        holding.unrealizedGain = holding.marketValue - holding.totalCost;
+        holding.unrealizedGainPercent =
+          holding.unrealizedGain / holding.totalCost;
+        holding.dividendIncome =
+          data.dividendRate?.raw * shares || data.dividendRate * shares || 0;
+        holding.yieldOnCost = holding.dividendIncome / holding.totalCost;
+        this.portfolioHoldings.marketValue += holding.marketValue;
+        this.portfolioHoldings.totalAmountInvested += holding.totalCost;
+        this.portfolioHoldings.unrealizedGain += holding.unrealizedGain;
+        this.portfolioHoldings.dividendIncome += holding.dividendIncome;
+        this.portfolioHoldings[symbol] = holding;
+
+        const holdingData: any = {};
+        const key = symbol;
+        holdingData[key] = holding;
+        // this.firebaseService.updateDocument('holdings', holdingData);
+      });
+
+      this.portfolioHoldingsArray
+        .filter((prop: any) => !!prop.symbol)
+        .forEach((holding: any) => {
+          holding.portfolioPercent =
+            holding.marketValue / this.portfolioHoldings.marketValue;
+          this.setItem(holding.symbol + "Holding", holding);
+        });
+
+      this.portfolioHoldings.unrealizedGainPercent =
+        this.portfolioHoldings.unrealizedGain /
+        this.portfolioHoldings.totalAmountInvested;
+      this.portfolioHoldings.yield =
+        this.portfolioHoldings.dividendIncome /
+        this.portfolioHoldings.marketValue;
+      this.portfolioHoldings.yieldOnCost =
+        this.portfolioHoldings.dividendIncome /
+        this.portfolioHoldings.totalAmountInvested;
+      this.setItem("portfolioHoldings", this.portfolioHoldings);
+
+      this.isLoadingData.next(false);
+      this.hasPortfolioData.next(true);
+      if (!!this.sanityCheck()) {
+        this.router.navigateByUrl("/");
+      }
+      return;
+    }
+
+    const fetchNewSymbolsData$ = () => {
+      const param = addedSymbols.length === 1 ? addedSymbols[0] : addedSymbols.join(':');
+      const apiPath = `${this.backendUrl}/fetch/portfolio/${param}`;
+      return this.wrapHttpCall(apiPath) as Observable<JSON>;
+    }
+
+    const fetchNewSymbolsTechInsights$ = () => {
+      const param = addedSymbols.length === 1 ? addedSymbols[0] : addedSymbols.join(':');
+      const apiPath = `${this.backendUrl}/fetch/portfolio/technical-insights/${param}`;
+      return this.wrapHttpCall(apiPath) as Observable<JSON>;
+    }
+
+    forkJoin([
+      fetchNewSymbolsData$(),
+      fetchNewSymbolsTechInsights$(),
+    ]).subscribe(([newData, newTechInsights]) => {
+      this.portfolioData = {
+        ...this.portfolioData,
+        ...newData,
+      }
+      this.portfolioTechnicalInsights = {
+        ...this.portfolioTechnicalInsights,
+        ...newTechInsights,
+      }
+      this.setItem("portfolioTechInsights", this.portfolioTechnicalInsights);
+
+      Object.entries(newData).forEach(([symbol, stockData]) => {
+        this.setItem(symbol, stockData);
+        // this.firebaseService.setDocument(symbol, stockData);
+      });
+      Object.entries(newTechInsights).forEach(([symbol, techInsight]) => {
+        console.log(symbol)
+        console.log(techInsight)
+        // this.firebaseService.setDocument(symbol + 'TechnicalInsight', techInsight);
+      });
+
+      this.portfolioSymbols.forEach((symbol: string) => {
+        const data = this.portfolioData[symbol];
+        const holding = this.portfolioHoldings[symbol];
+        const shares = holding.shares;
+        const costAvg = holding.costAverage;
+        holding.symbol = symbol;
+        holding.totalCost = +(shares * costAvg).toFixed(2);
+        holding.marketValue = data.regularMarketPrice?.raw * shares;
+        holding.unrealizedGain = holding.marketValue - holding.totalCost;
+        holding.unrealizedGainPercent =
+          holding.unrealizedGain / holding.totalCost;
+        holding.dividendIncome =
+          data.dividendRate?.raw * shares || data.dividendRate * shares || 0;
+        holding.yieldOnCost = holding.dividendIncome / holding.totalCost;
+        this.portfolioHoldings.marketValue += holding.marketValue;
+        this.portfolioHoldings.totalAmountInvested += holding.totalCost;
+        this.portfolioHoldings.unrealizedGain += holding.unrealizedGain;
+        this.portfolioHoldings.dividendIncome += holding.dividendIncome;
+        this.portfolioHoldings[symbol] = holding;
+
+        const holdingData: any = {};
+        const key = symbol;
+        holdingData[key] = holding;
+        // this.firebaseService.updateDocument('holdings', holdingData);
+      });
+
+      this.portfolioHoldingsArray
+        .filter((prop: any) => !!prop.symbol)
+        .forEach((holding: any) => {
+          holding.portfolioPercent =
+            holding.marketValue / this.portfolioHoldings.marketValue;
+          this.setItem(holding.symbol + "Holding", holding);
+        });
+      
+      this.portfolioHoldings.unrealizedGainPercent =
+        this.portfolioHoldings.unrealizedGain /
+        this.portfolioHoldings.totalAmountInvested;
+      this.portfolioHoldings.yield =
+        this.portfolioHoldings.dividendIncome /
+        this.portfolioHoldings.marketValue;
+      this.portfolioHoldings.yieldOnCost =
+        this.portfolioHoldings.dividendIncome /
+        this.portfolioHoldings.totalAmountInvested;
+      this.setItem("portfolioHoldings", this.portfolioHoldings);
+
+      this.fetchPortfolioDividendHistory();
+      this.isLoadingData.next(false);
+      this.hasPortfolioData.next(true);
+      if (!!this.sanityCheck()) {
+        this.router.navigateByUrl("/main");
+      }
+    });
   }
 
   public generatePortfolioData(fileContent: string[]) {

@@ -1,0 +1,61 @@
+<div class="add-controls-container">
+    <mat-label>Add New Holding</mat-label>
+    <div class="add-holding-controls">
+        <mat-form-field class="control">
+            <mat-label>Ticker</mat-label>
+            <input matInput type="text" placeholder="Ex. AAPL" [formControl]="tickerControl">
+            <mat-hint align="end">Ticker symbol</mat-hint>
+        </mat-form-field>
+        <mat-form-field class="control">
+            <mat-label>Shares</mat-label>
+            <input matInput type="number" placeholder="Ex. 100" [formControl]="sharesControl">
+            <mat-hint align="end">Number of shares held</mat-hint>
+        </mat-form-field>
+        <mat-form-field class="control">
+            <mat-label>Cost</mat-label>
+            <input matInput type="number" placeholder="Ex. 123.45" [formControl]="costAverageControl">
+            <mat-hint align="end">Average cost for each share</mat-hint>
+        </mat-form-field>
+        <mat-radio-group class="radio" [(ngModel)]="updateOrAdd">
+            <mat-radio-button value="update">Add new holding or replace existing holding</mat-radio-button>
+            <mat-radio-button value="add">Add to existing holding</mat-radio-button>
+        </mat-radio-group>
+        <button mat-stroked-button class="save-button" (click)="saveHolding()">
+            <span>Save</span>
+        </button>
+    </div>
+</div>
+
+<mat-divider></mat-divider>
+
+@if (holdings.length) {
+    <div class="holding-list-header">
+        <mat-label>Holdings ({{ holdings.length }})</mat-label>
+        <div class="holding-list-actions">
+            <button 
+                mat-button 
+                class="delete-button" 
+                (click)="deleteHoldings()" 
+                [hidden]="selectedHoldings.length === 0"
+            >
+                Delete Selected: {{ selectedHoldings.length }}
+            </button>
+        </div>
+    </div>
+    <mat-selection-list [multiple]="true" [formControl]="holdingsControl" #holdingsList>
+        @for (holding of holdings; track holding.symbol; let idx = $index) {
+            <mat-list-option [value]="holding.symbol">
+                <mat-label>{{idx + 1}}. </mat-label>
+                <mat-label>{{ holding.shares }} shares of {{ holding.symbol }} </mat-label>
+                <mat-label>with cost average of ${{ holding.costAverage }} dollars per share.</mat-label>
+            </mat-list-option>
+        }
+    </mat-selection-list>
+    <mat-divider></mat-divider>
+
+    <button mat-stroked-button class="update-portfolio-button" (click)="updatePortfolio()">
+        <span>Update Portfolio</span>
+    </button>
+} @else {
+    <mat-label>Empty Portfolio</mat-label>
+}
