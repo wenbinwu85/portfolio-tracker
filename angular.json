@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "bens-awesome-investment-tracker": {
+    "big-fart": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -74,10 +74,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "bens-awesome-investment-tracker:build:production"
+              "buildTarget": "big-fart:build:production"
             },
             "development": {
-              "buildTarget": "bens-awesome-investment-tracker:build:development"
+              "buildTarget": "big-fart:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -85,7 +85,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "bens-awesome-investment-tracker:build"
+            "buildTarget": "big-fart:build"
           }
         },
         "test": {

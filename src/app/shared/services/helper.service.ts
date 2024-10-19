@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
-import { DataService } from "./data.service";
 import { StockPriceColorsEnum } from "../model/colors.model";
 import { MarketStates } from "../model/data-enums.model";
+import { DataService } from "./data.service";
 
 @Injectable({
   providedIn: "root",
@@ -33,6 +33,6 @@ export class HelperService {
 
   public getTickerLogo(symbol: string) {
     const iconGithubUrl = 'https://raw.githubusercontent.com/nvstly/icons/main/ticker_icons/'
-    return  iconGithubUrl + symbol.toUpperCase() + '.png';
+    return iconGithubUrl + symbol.toUpperCase() + '.png';
   }
 }

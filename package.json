@@ -1,5 +1,5 @@
 {
-  "name": "bens-awesome-investment-tracker",
+  "name": "big-fart",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,11 +7,10 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:bens-awesome-investment-tracker": "node dist/bens-awesome-investment-tracker/server/server.mjs"
+    "serve:ssr:big-fart": "node dist/big-fart/server/server.mjs"
   },
   "private": true,
   "dependencies": {
-    "@alpacahq/alpaca-trade-api": "^3.1.2",
     "@angular/animations": "^18.2.2",
     "@angular/cdk": "^18.2.2",
     "@angular/common": "^18.2.2",
@@ -33,6 +32,7 @@
     "echarts": "^5.4.3",
     "express": "^4.18.2",
     "firebase": "^10.13.1",
+    "firebaseui": "^6.1.0",
     "lightweight-charts": "^4.1.2",
     "ngx-echarts": "^18.0.0",
     "node": "^22.6.0",

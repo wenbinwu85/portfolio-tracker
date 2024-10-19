@@ -12,6 +12,7 @@ import {
   TitleCasePipe,
 } from "@angular/common";
 import { AfterViewInit, ChangeDetectorRef, Component, OnInit, ViewChild } from "@angular/core";
+import { MatButtonModule } from "@angular/material/button";
 import { MatChipsModule } from "@angular/material/chips";
 import { MatDividerModule } from "@angular/material/divider";
 import { MatExpansionModule } from "@angular/material/expansion";
@@ -29,14 +30,13 @@ import {
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { Color, NgxChartsModule } from "@swimlane/ngx-charts";
 import { ContainerCardComponent } from "../../../shared/components/container-card/container-card.component";
-import { DataService } from "../../../shared/services/data.service";
 import { ExpandedRowComponent } from "../../../shared/components/expanded-row/expanded-row.component";
 import { InfoCardComponent } from "../../../shared/components/info-card/info-card.component";
-import { MatButtonModule } from "@angular/material/button";
-import { StockNameCardComponent } from "../../../shared/components/portfolio/stock-name-card/stock-name-card.component";
-import { StockPriceColorsEnum } from "../../../shared/model/colors.model";
-import { TvSingleQuoteWidgetComponent } from "../../../shared/components/tradingview/tv-single-quote-widget/tv-single-quote-widget.component";
 import { PortfolioEditorComponent } from "../../../shared/components/portfolio/portfolio-editor/portfolio-editor.component";
+import { StockNameCardComponent } from "../../../shared/components/portfolio/stock-name-card/stock-name-card.component";
+import { TvSingleQuoteWidgetComponent } from "../../../shared/components/tradingview/tv-single-quote-widget/tv-single-quote-widget.component";
+import { StockPriceColorsEnum } from "../../../shared/model/colors.model";
+import { DataService } from "../../../shared/services/data.service";
 
 @Component({
   selector: "portfolio-holdings",
@@ -404,5 +404,20 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
 
   openPortfolioEditor() { 
     this.showPortfolioEditor = !this.showPortfolioEditor;
+  }
+
+  exportHoldings() {
+    const holdingsArrays: string[] = this.dataService.portfolioHoldingsArray
+      .filter(data => typeof data === 'object')
+      .map((data: any, index: number, array) => {
+        const holdingString = [data.symbol, data.shares, data.costAverage].join(',')
+        return index + 1 < array.length ? holdingString + '\n' : holdingString;
+      });
+    let link = document.createElement('a');
+    link.download = 'my_holdings';
+    let blob = new Blob(holdingsArrays, { type: 'text/csv' });
+    link.href = URL.createObjectURL(blob);
+    link.click();
+    URL.revokeObjectURL(link.href);
   }
 }

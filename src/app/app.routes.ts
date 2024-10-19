@@ -5,9 +5,9 @@ export const routes: Routes = [
   {
     path: "",
     loadComponent: () =>
-      import("./pages/homepage/homepage-landing/homepage-landing.component").then(
-        (c) => c.HomepageLandingComponent
-      ),
+      import(
+        "./pages/homepage/homepage-landing/homepage-landing.component"
+      ).then((c) => c.HomepageLandingComponent),
   },
   {
     path: "main",
@@ -26,11 +26,19 @@ export const routes: Routes = [
       ),
   },
   {
-    path: 'analysis',
+    path: "analysis",
     canActivate: [mainGuardGuard],
     loadComponent: () =>
       import("./pages/analysis/analysis.component").then(
         (c) => c.AnalysisComponent
+      ),
+  },
+  {
+    path: "watchlists",
+    canActivate: [mainGuardGuard],
+    loadComponent: () =>
+      import("./pages/watchlists/watchlists.component").then(
+        (c) => c.WatchlistsComponent
       ),
   },
   {

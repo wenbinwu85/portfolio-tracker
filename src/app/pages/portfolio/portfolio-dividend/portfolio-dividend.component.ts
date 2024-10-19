@@ -13,7 +13,7 @@ import { EChartsOption } from "echarts";
 import { ContainerCardComponent } from "../../../shared/components/container-card/container-card.component";
 import { InfoCardComponent } from "../../../shared/components/info-card/info-card.component";
 import { StockNameCardComponent } from "../../../shared/components/portfolio/stock-name-card/stock-name-card.component";
-import { PortfolioTickerButtonsComponent } from "../../../shared/components/portfolio/portfolio-ticker-buttons/portfolio-ticker-buttons.component";
+import { TickerButtonsComponent } from "../../../shared/components/ticker-buttons/ticker-buttons.component";
 import { DataService } from "../../../shared/services/data.service";
 
 @Component({
@@ -30,7 +30,7 @@ import { DataService } from "../../../shared/services/data.service";
     MatSortModule,
     MatTableModule,
     NgxChartsModule,
-    PortfolioTickerButtonsComponent,
+    TickerButtonsComponent,
     StockNameCardComponent,
   ],
 })

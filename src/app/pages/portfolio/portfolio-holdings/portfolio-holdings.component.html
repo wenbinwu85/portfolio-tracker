@@ -331,8 +331,16 @@
   <portfolio-editor />
 </ng-template>
 
+<ng-template #titleRef>
+  <button mat-button class="export-button" (click)="exportHoldings()">
+    <mat-icon>download</mat-icon>
+    Export
+  </button>
+</ng-template>
+
 <container-card 
   [title]="showPortfolioEditor ? 'Portfolio Editor' : 'Portfolio Holdings'"
   [mainContentRef]="showPortfolioEditor ? portfolioEditorRef : tableRef"
   [subtitleContentRef]="tableSubcontentRef"
+  [titleContentRef]="titleRef"
 />

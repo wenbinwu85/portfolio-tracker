@@ -15,7 +15,6 @@ import { MatRadioModule } from "@angular/material/radio";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { DataService } from "../../../services/data.service";
 import { ContainerCardComponent } from "../../container-card/container-card.component";
-import { tap } from "node:test/reporters";
 import { AsyncPipe } from "@angular/common";
 
 @Component({
@@ -24,7 +23,6 @@ import { AsyncPipe } from "@angular/common";
   imports: [
     AsyncPipe,
     ContainerCardComponent,
-    FormsModule,
     FormsModule,
     MatButtonModule,
     MatDividerModule,

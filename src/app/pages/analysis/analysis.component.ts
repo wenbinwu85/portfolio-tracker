@@ -5,7 +5,7 @@ import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { MatTabsModule } from "@angular/material/tabs";
 import { ContainerCardComponent } from "../../shared/components/container-card/container-card.component";
 import { InfoCardComponent } from "../../shared/components/info-card/info-card.component";
-import { PortfolioTickerButtonsComponent } from "../../shared/components/portfolio/portfolio-ticker-buttons/portfolio-ticker-buttons.component";
+import { TickerButtonsComponent } from "../../shared/components/ticker-buttons/ticker-buttons.component";
 import { StockEarningsChartComponent } from "../../shared/components/portfolio/stock-earnings-chart/stock-earnings-chart.component";
 import { DataService } from "../../shared/services/data.service";
 import { StockTickerChipComponent } from "../../shared/components/portfolio/stock-ticker-chip/stock-ticker-chip.component";
@@ -20,7 +20,7 @@ import { StockTickerChipComponent } from "../../shared/components/portfolio/stoc
     MatIconModule,
     MatSlideToggleModule,
     MatTabsModule,
-    PortfolioTickerButtonsComponent,
+    TickerButtonsComponent,
     StockEarningsChartComponent,
     StockTickerChipComponent
   ],

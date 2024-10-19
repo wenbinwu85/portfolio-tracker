@@ -13,9 +13,9 @@
 
 <ng-template #dividendHistoryRef>
   <div class="add-flex" [style.flex-direction]="'column'">
-    <portfolio-ticker-buttons [dividendPayersOnly]="true" (selectedTicker)="onSelect($event)" />
+    <ticker-buttons [dividendPayersOnly]="true" (selectedTicker)="onSelect($event)" />
     <div class="chart-container dividend-chart">
-      <ngx-charts-bar-vertical-2d
+      <ngx-charts-area-chart
         [scheme]="dividendChartColorScheme"
         [results]="dividendLineChartData"
         [xAxisLabel]="selectedSymbolLabel"
@@ -25,7 +25,8 @@
         [xAxis]="true"
         [yAxis]="true"
         [animations]="true"
-        [roundEdges]="false"
+        [autoScale]="true"
+        [gradient]="true"
       />
     </div>
   </div>

@@ -1,8 +1,5 @@
 import { MediaMatcher } from "@angular/cdk/layout";
-import {
-  ChangeDetectorRef,
-  Component,
-} from "@angular/core";
+import { ChangeDetectorRef, Component } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
 import { MatDividerModule } from "@angular/material/divider";
 import { MatIconModule } from "@angular/material/icon";
@@ -10,8 +7,8 @@ import { MatListModule } from "@angular/material/list";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { Router, RouterLink, RouterOutlet } from "@angular/router";
-import { FooterComponent } from "./shared/components/footer/footer.component";
-import { HeaderComponent } from "./shared/components/header/header.component";
+import { AppFooterComponent } from "./shared/components/app-footer/app-footer.component";
+import { AppHeaderComponent } from "./shared/components/app-header/app-header.component";
 import { TvTickersWidgetComponent } from "./shared/components/tradingview/tv-tickers-widget/tv-tickers-widget.component";
 import { DataService } from "./shared/services/data.service";
 
@@ -19,8 +16,8 @@ import { DataService } from "./shared/services/data.service";
   selector: "app-root",
   standalone: true,
   imports: [
-    FooterComponent,
-    HeaderComponent,
+    AppFooterComponent,
+    AppHeaderComponent,
     MatButtonModule,
     MatDividerModule,
     MatIconModule,
@@ -46,11 +43,19 @@ export class AppComponent {
       label: "Portfolio",
       route: "/portfolio",
       icon: "ballot",
+      needData: true,
     },
     {
       label: "Analysis",
       route: "/analysis",
       icon: "calculate",
+      needData: true,
+    },
+    {
+      label: "Watchlists",
+      route: "/watchlists",
+      icon: "list",
+      needData: true,
     },
     {
       label: "Toolbox",
@@ -65,6 +70,7 @@ export class AppComponent {
   ];
   activeLink = this.navLinks[0];
   mobileQuery: MediaQueryList;
+  hasData: any;
   private _mobileQueryListener: () => void;
 
   constructor(
@@ -76,6 +82,9 @@ export class AppComponent {
     this.mobileQuery = media.matchMedia("(max-width: 600px)");
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
+    this.dataService.hasPortfolioData$.subscribe(
+      (hasData) => this.hasData = hasData
+    );
   }
 
   ngOnDestroy(): void {

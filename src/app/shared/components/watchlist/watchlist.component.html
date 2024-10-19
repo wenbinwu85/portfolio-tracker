@@ -1,0 +1,16 @@
+<div class="add-controls-container">
+    <mat-label>Add Symbol</mat-label>
+    <div class="add-holding-controls">
+        <mat-form-field class="control">
+            <mat-label>Ticker</mat-label>
+            <input matInput type="text" placeholder="Ex. AAPL" [formControl]="tickerControl">
+            <mat-hint align="end">Ticker symbol</mat-hint>
+        </mat-form-field>
+        <button mat-stroked-button class="save-button">
+            <span>Add</span>
+        </button>
+    </div>
+</div>
+
+<mat-divider></mat-divider>
+

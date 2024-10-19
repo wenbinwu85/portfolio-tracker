@@ -1,13 +1,13 @@
 import { inject, Injectable } from "@angular/core";
 import {
-  CollectionReference,
-  DocumentReference,
-  Firestore,
   addDoc,
   collection,
   collectionData,
+  CollectionReference,
   deleteDoc,
   doc,
+  DocumentReference,
+  Firestore,
   serverTimestamp,
   setDoc,
   updateDoc,

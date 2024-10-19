@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  backendUrl: "backendUrl",
+  backendUrl: "https://portfolio-tracker-backend-5ys2.onrender.com/",
   firebaseConfig: {},
 };

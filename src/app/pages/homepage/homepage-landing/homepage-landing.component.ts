@@ -1,21 +1,23 @@
-import { MatIconModule } from "@angular/material/icon";
 import { ChangeDetectionStrategy, Component, signal } from "@angular/core";
-import { Router } from "@angular/router";
-import { ContainerCardComponent } from "../../../shared/components/container-card/container-card.component";
-import { DataService } from "../../../shared/services/data.service";
+import { MatButtonModule } from "@angular/material/button";
 import { MatExpansionModule } from "@angular/material/expansion";
 import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatIconModule } from "@angular/material/icon";
 import { MatInputModule } from "@angular/material/input";
+import { Router } from "@angular/router";
+import { ContainerCardComponent } from "../../../shared/components/container-card/container-card.component";
 import { PortfolioEditorComponent } from "../../../shared/components/portfolio/portfolio-editor/portfolio-editor.component";
+import { DataService } from "../../../shared/services/data.service";
 
 @Component({
   selector: "app-homepage-landing",
   standalone: true,
   imports: [
-    MatIconModule,
     ContainerCardComponent,
+    MatButtonModule,
     MatExpansionModule,
     MatFormFieldModule,
+    MatIconModule,
     MatInputModule,
     PortfolioEditorComponent,
   ],
@@ -49,7 +51,7 @@ export class HomepageLandingComponent {
     const reader = new FileReader();
     reader.onload = (e) => {
       const fileContent = (reader.result as string).split("\n");
-      this.dataService.generatePortfolioData(fileContent);
+      this.dataService.generatePortfolioDataFromUploadFile(fileContent);
     };
     reader.readAsText(selectedFile);
   }

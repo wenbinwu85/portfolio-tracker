@@ -1,7 +1,7 @@
 <portfolio-quotes [expandWidget]="false"/>
 
 <ng-template #priceInsightsRef>
-    <portfolio-ticker-buttons (selectedTicker)="updateSelectedStock($event)" />
+    <ticker-buttons (selectedTicker)="updateSelectedStock($event)" />
     @if (selectedSymbol) {
         <stock-price-insight [symbol]="selectedSymbol" />
     }

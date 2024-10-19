@@ -46,11 +46,11 @@ table {
 }
 
 .title {
-    display: flex;
-    padding: 1rem;
-    font-size: 2rem;
     align-items: center;
+    display: flex;
+    font-size: 2rem;
     font-weight: 1000;
+    padding: 1rem;
 }
 
 .title span {
@@ -62,8 +62,8 @@ table {
     display: flex;
     flex-wrap: wrap;
     height: 25rem;
-    width: 100%;
     min-width: 33%;
+    width: 100%;
 }
 
 .add-border {
@@ -95,10 +95,10 @@ table {
 }
 
 .mat-mdc-row:hover {
-    font-weight: bold;
-    border-top: 1px solid steelblue;
-    border-bottom: 1px solid steelblue;
     background-color: ghostwhite !important;
+    border-bottom: 1px solid steelblue;
+    border-top: 1px solid steelblue;
+    font-weight: bold;
 }
 
 .mat-mdc-standard-chip .mdc-evolution-chip__action--primary::before {

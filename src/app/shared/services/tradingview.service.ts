@@ -3,11 +3,11 @@ import { Injectable, Renderer2, RendererFactory2 } from "@angular/core";
 export const TradingviewApiBaseUrl = "https://s3.tradingview.com/external-embedding/";
 
 export enum SourceScripts {
+  CryptoHeatmap = TradingviewApiBaseUrl + "embed-widget-crypto-coins-heatmap.js",
   EconomicEvents = TradingviewApiBaseUrl + "embed-widget-events.js",
+  EtfHeatmap = TradingviewApiBaseUrl + "embed-widget-etf-heatmap.js",
   Financials = TradingviewApiBaseUrl + "embed-widget-financials.js",
   Heatmap = TradingviewApiBaseUrl + "embed-widget-stock-heatmap.js",
-  EtfHeatmap = TradingviewApiBaseUrl + "embed-widget-etf-heatmap.js",
-  CryptoHeatmap = TradingviewApiBaseUrl + "embed-widget-crypto-coins-heatmap.js",
   HotLists = TradingviewApiBaseUrl + "embed-widget-hotlists.js",
   MarketOverview = TradingviewApiBaseUrl + "embed-widget-market-overview.js",
   MarketQuotes = TradingviewApiBaseUrl + "embed-widget-market-quotes.js",
