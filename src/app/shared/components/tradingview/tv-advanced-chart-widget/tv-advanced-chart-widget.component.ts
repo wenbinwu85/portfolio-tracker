@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from "@angular/core";
-import { DataService } from "../../../services/data.service";
 
 declare const TradingView: any;
 
@@ -37,8 +36,6 @@ export class TvAdvancedChartWidgetComponent implements OnInit {
     popup_height: "800",
     container_id: "tradingview_ecabe",
   };
-
-  constructor(private dataService: DataService) {}
 
   ngOnInit() {
     let params = {};

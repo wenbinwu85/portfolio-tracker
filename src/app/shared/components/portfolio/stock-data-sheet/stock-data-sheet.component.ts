@@ -49,7 +49,8 @@ export class StockDataSheetComponent implements OnInit {
   @Input({ required: true }) symbol: any;
   stock: any;
   position: any;
-  wallmineLink = "https://wallmine.com/";
+  financeChartsLink = "https://financecharts.com/stocks/";
+  financeChartsLinkEtf = "https://financecharts.com/etfs/";
   finvizLink = "https://finviz.com/quote.ashx?t=";
   yahooLink = "https://finance.yahoo.com/quote/";
   seekingAlphaLink = "https://seekingalpha.com/symbol/";
@@ -80,13 +81,6 @@ export class StockDataSheetComponent implements OnInit {
     exchange === "NasdaqGS" ? "Nasdaq" : exchange;
     this.externalLinks = [
       {
-        label: "StockAnalysis",
-        url:
-          this.stock.quoteType === "EQUITY"
-            ? this.stockAnalysisLink + this.stock.symbol
-            : this.stockAnalysisLinkEtf + this.stock.symbol,
-      },
-      {
         label: "Seekingalpha",
         url: this.seekingAlphaLink + this.stock.symbol,
       },
@@ -99,8 +93,18 @@ export class StockDataSheetComponent implements OnInit {
         url: this.finvizLink + this.stock.symbol,
       },
       {
-        label: "Wallmine",
-        url: this.wallmineLink + exchange + "/" + this.stock.symbol,
+        label: "Financecharts",
+        url:
+          this.stock.quoteType === "EQUITY"
+            ? this.financeChartsLink + this.stock.symbol
+            : this.financeChartsLinkEtf + this.stock.symbol,
+      },
+      {
+        label: "StockAnalysis",
+        url:
+          this.stock.quoteType === "EQUITY"
+            ? this.stockAnalysisLink + this.stock.symbol
+            : this.stockAnalysisLinkEtf + this.stock.symbol,
       },
     ];
     this.etfLinks = [
