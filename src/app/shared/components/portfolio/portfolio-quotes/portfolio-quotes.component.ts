@@ -6,7 +6,7 @@ import { MatExpansionModule } from "@angular/material/expansion";
 import { MatIconModule } from "@angular/material/icon";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { Color, NgxChartsModule, ScaleType } from "@swimlane/ngx-charts";
-import { StockPriceColorsEnum } from "../../../model/colors.model";
+import { ChartColorsEnum, StockPriceColorsEnum } from "../../../model/colors.model";
 import { DataService } from "../../../services/data.service";
 import { HelperService } from "../../../services/helper.service";
 import { ContainerCardComponent } from "../../container-card/container-card.component";
@@ -14,7 +14,6 @@ import { TvMarketQuotesWidgetComponent } from "../../tradingview/tv-market-quote
 import { TvMiniChartWidgetComponent } from "../../tradingview/tv-mini-chart-widget/tv-mini-chart-widget.component";
 import { TvSymbolOverviewWidgetComponent } from "../../tradingview/tv-symbol-overview-widget/tv-symbol-overview-widget.component";
 import { TvTickersWidgetComponent } from "../../tradingview/tv-tickers-widget/tv-tickers-widget.component";
-import { MarketStates } from "../../../model/data-enums.model";
 
 @Component({
   selector: "portfolio-quotes",
@@ -45,10 +44,8 @@ export class PortfolioQuotesComponent {
   prePostHourText: any;
   priceChangeChartData: any = [];
   priceRangeChartData: any = [];
-  betaChartData: any = [];
   stockNames: any = [];
-  priceRangeColorScheme = { domain: ["steelblue", "skyblue"] } as Color;
-  betaColorScheme = { domain: ["slategrey"] } as Color;
+  priceRangeColorScheme = { domain: [ChartColorsEnum.Dark, 'skyblue'] } as Color;
   scaleType = ScaleType;
   selectedChart = 1;
   prefix: any;
@@ -85,20 +82,18 @@ export class PortfolioQuotesComponent {
     this.prePostHourIcon = this.prefix.startsWith("pre") ? "sunny" : "bedtime";
     this.prePostHourText = this.prefix.startsWith("pre") ? "Pre Market " : "Post Market ";
 
-    this.dataService.portfolioSymbols.forEach((symbol: any) => {
+    this.dataService.portfolioSymbols.forEach((symbol: string) => {
       const position = this.dataService.getTickerHolding(symbol);
       const stock = this.dataService.getTickerData(symbol);
       this.stockNames.push({
         name: stock.symbol,
         displayName: `${stock.symbol} - ${stock.longName}`,
       });
-
       this.priceChange += stock.regularMarketChange.raw * position.shares;
       this.priceChangeChartData.push({
         name: stock.symbol,
         value: stock.regularMarketChangePercent.raw * 100,
       });
-      this.priceChangeChartData.sort((a: any, b: any) => a.value - b.value);
       this.priceRangeChartData.push({
         name: stock.symbol,
         series: [
@@ -113,37 +108,23 @@ export class PortfolioQuotesComponent {
           },
         ],
       });
-      this.priceRangeChartData.sort(
-        (a: any, b: any) =>
-          a.series[0].value +
-          a.series[1].value -
-          (b.series[0].value + b.series[1].value)
-      );
-
       if (!this.prefix.startsWith("regular")) {
         const key = this.chartConfigs[this.prefix].priceChange;
         if (stock[key]) {
           this.prePostPriceChange += stock[key].raw * position.shares;
         }
       }
-
-      if (stock.quoteType === "EQUITY" && stock.beta.raw) {
-        this.betaChartData.push({
-          name: stock.symbol,
-          value: stock.beta.raw || 0,
-        });
-      }
     });
 
+    this.priceChangeChartData.sort((a: any, b: any) => a.value - b.value);
+    this.priceRangeChartData.sort(
+      (a: any, b: any) => a.series[0].value + a.series[1].value - (b.series[0].value + b.series[1].value)
+    );
     this.stockNames.sort((a: any, b: any) => {
-      const val1 =
-        this.dataService.portfolioData[a.name].regularMarketChangePercent.raw;
-      const val2 =
-        this.dataService.portfolioData[b.name].regularMarketChangePercent.raw;
+      const val1 = this.dataService.getTickerData(a.name).regularMarketChangePercent.raw;
+      const val2 = this.dataService.getTickerData(b.name).regularMarketChangePercent.raw;
       return val1 - val2;
     });
-
-    this.betaChartData.sort((a: any, b: any) => a.value - b.value);
   }
 
   getDayPriceChangeColor() {
@@ -167,12 +148,6 @@ export class PortfolioQuotesComponent {
       ? StockPriceColorsEnum.Gain
       : StockPriceColorsEnum.Lost;
   };
-
-  getBetaColor = (symbol: any) => {
-    const stock = this.dataService.getTickerData(symbol);
-    const beta = stock.beta?.raw || 0;
-    return beta > 1 ? 'chocolate' : 'teal';
-  }
 
   displayChart(chartID: number) {
     this.selectedChart = chartID;

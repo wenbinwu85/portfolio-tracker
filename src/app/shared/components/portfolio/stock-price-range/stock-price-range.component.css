@@ -1,0 +1,18 @@
+.slider {
+  width: 100%;
+  color: slategrey;
+  margin: 0;
+}
+
+.label-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.25rem;
+}
+
+::ng-deep .mat-mdc-slider 
+.mdc-slider__tick-marks 
+.mdc-slider__tick-mark--inactive {
+  background-color: chocolate;
+  height: 0.25rem;
+}

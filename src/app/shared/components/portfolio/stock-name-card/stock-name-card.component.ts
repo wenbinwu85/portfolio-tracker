@@ -1,4 +1,3 @@
-import { MatIconModule } from '@angular/material/icon';
 import {
   CommonModule,
   CurrencyPipe,
@@ -13,12 +12,12 @@ import {
   MatDialog,
   MatDialogModule,
   MatDialogRef,
-  MatDialogTitle
+  MatDialogTitle,
 } from "@angular/material/dialog";
+import { MatDividerModule } from "@angular/material/divider";
+import { MatIconModule } from "@angular/material/icon";
 import { HelperService } from "../../../services/helper.service";
 import { StockDataSheetComponent } from "../stock-data-sheet/stock-data-sheet.component";
-import { StockPriceColorsEnum } from "../../../model/colors.model";
-import { MatDividerModule } from '@angular/material/divider';
 
 @Component({
   selector: "stock-name-card",
@@ -38,8 +37,8 @@ export class StockNameCardComponent {
   @Input({ required: true }) stock!: any;
   currentPrice: any;
   changePercent: any;
-
-  borderLeftStyle = '';
+  borderLeftStyle = "";
+  priceColor = "";
 
   constructor(public dialog: MatDialog, public helperService: HelperService) {}
 
@@ -47,15 +46,8 @@ export class StockNameCardComponent {
     const prefix = this.helperService.getPriceKeyPrefix();
     this.currentPrice = this.stock[prefix + "Price"];
     this.changePercent = this.stock[prefix + "ChangePercent"];
-    this.borderLeftStyle = '0.5rem solid ' + (this.stock.unrealizedGain > 0 ? StockPriceColorsEnum.Gain : StockPriceColorsEnum.Lost);
-  }
-
-  getLogoUrl(stock: any) { 
-    const api_base_url = 'https://img.logo.dev/';
-    const stock_website = stock.website.substring(8);
-    const api_token_param = '?token=pk_GM6P82BASrydQzJSS_Yc8g&size=35&format=png';
-    const logo_url = api_base_url + stock_website + api_token_param;
-    return logo_url;
+    this.priceColor = this.helperService.getStockPriceColor(this.stock.symbol);
+    this.borderLeftStyle = "0.5rem solid " + this.priceColor;
   }
 
   openInfoSheet() {
@@ -66,12 +58,11 @@ export class StockNameCardComponent {
       data: {
         symbol: this.stock.symbol,
         longName: this.stock.longName,
-
       },
     });
 
     dialogRef.afterClosed().subscribe((result) => {
-      console.log(`Dialog result: ${result}`);
+      console.log("Meow!");
     });
   }
 }
@@ -84,8 +75,8 @@ export class StockNameCardComponent {
   imports: [
     MatButtonModule,
     MatDialogModule,
-    MatDividerModule,
     MatDialogTitle,
+    MatDividerModule,
     MatIconModule,
     NgStyle,
     StockDataSheetComponent,

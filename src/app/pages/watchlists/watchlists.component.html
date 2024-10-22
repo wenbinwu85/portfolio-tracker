@@ -1,12 +1,11 @@
-@for (watchlist of watchlists; track watchlist[0]) {
-    <ng-template #watchlistRef>
-        <ticker-buttons [tickers]="watchlist[1]"/>
-    </ng-template>
-    
-    <section class="add-margin">
-        <container-card class="" 
-            [title]="watchlist[0]"
-            [mainContentRef]="watchlistRef"
-        />
-    </section>
-}
+<ng-template #watchlistRef>
+    <stock-watchlist />
+    <ticker-buttons [tickers]="watchlist"/>
+</ng-template>
+
+<section class="add-margin">
+    <container-card class="" 
+        [title]="'My Watchlist'"
+        [mainContentRef]="watchlistRef"
+    />
+</section>

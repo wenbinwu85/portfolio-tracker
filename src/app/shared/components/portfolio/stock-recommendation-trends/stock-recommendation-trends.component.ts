@@ -9,15 +9,13 @@ import { DataService } from '../../../services/data.service';
   templateUrl: './stock-recommendation-trends.component.html',
   styleUrl: './stock-recommendation-trends.component.css'
 })
-export class StockRecommendationTrendsComponent implements OnInit, OnChanges {
+export class StockRecommendationTrendsComponent implements OnInit {
   @Input({ required: true }) symbol: string = 'AAPL';
   @Input() height?: number;
   stockData: any;
   recommendationTrends: any;
   recommendationTrendChartData: any;
-  recommendationTrendChartColorScheme = {
-    domain: ["teal", "seagreen", "gold", "tomato", "chocolate"],
-  } as Color;
+  recommendationTrendChartColorScheme = { domain: ["teal", "seagreen", "gold", "tomato", "chocolate"] } as Color;
   scaleType = ScaleType;
 
   constructor(private dataService: DataService) {}
@@ -26,13 +24,8 @@ export class StockRecommendationTrendsComponent implements OnInit, OnChanges {
     this.updateRecommendationTrends();
   }
 
-  ngOnChanges() { 
-    this.updateRecommendationTrends();
-  }
-
   updateRecommendationTrends() {
-    const portfolioData = this.dataService.portfolioData;
-    this.stockData = Object.values(portfolioData).filter((stock: any) => stock.symbol === this.symbol)[0];
+    this.stockData = this.dataService.getTickerData(this.symbol);
     this.recommendationTrends = this.stockData.recommendationTrend;
     this.recommendationTrendChartData = [];
     this.recommendationTrends.forEach((period: any) => {

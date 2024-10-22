@@ -17,13 +17,13 @@ import { HelperService } from '../../services/helper.service';
   styleUrl: './ticker-buttons.component.css'
 })
 export class TickerButtonsComponent implements OnInit {
+  @Input() dividendPayersOnly?: boolean = false;
   @Input() tickers?: any;
-  @Input() showETF: boolean = true;
-  @Input() dividendPayersOnly: boolean = false;
   @Output() selectedTicker = new EventEmitter<string>();
   sortedStocks: any[] = [];
   sortedEtfs: any[] = [];
   dividendPayers: any[] = [];
+  sortedTickers: any[] = [];
 
   constructor(
     private dataService: DataService,
@@ -32,11 +32,11 @@ export class TickerButtonsComponent implements OnInit {
   
   ngOnInit() { 
     if (!this.tickers) {
-      this.sortedStocks = this.dataService.portfolioStocks
-        .sort((a: any, b: any) => a["52WeekChange"].raw - b["52WeekChange"].raw);
-      this.sortedEtfs = this.dataService.portfolioEtfs
-        .sort((a: any, b: any) => a["ytdReturn"].raw - b["ytdReturn"].raw);
-      this.dividendPayers = this.dataService.portfolioDividendPayers;
+      this.sortedStocks = this.dataService.portfolioStocks.sort((a: any, b: any) => a["52WeekChange"].raw - b["52WeekChange"].raw);
+      this.sortedEtfs = this.dataService.portfolioEtfs.sort((a: any, b: any) => a["ytdReturn"].raw - b["ytdReturn"].raw);
+    }
+    if (this.dividendPayersOnly) { 
+      this.dividendPayers = this.dataService.portfolioDividendPayers.sort((a: any, b: any) => a["52WeekChange"].raw - b["52WeekChange"].raw);
     }
   }
 

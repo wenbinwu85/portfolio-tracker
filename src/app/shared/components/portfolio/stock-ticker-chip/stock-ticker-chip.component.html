@@ -1,11 +1,9 @@
 <mat-chip class="ticker-chip">
-    <span [ngStyle]="{fontSize: largeTicker ? '1.5rem' : '1rem'}"><b>{{ stock.symbol }}</b></span>
-    <span [ngStyle]="
-        {'color': helperService.getStockPriceColor(stock.symbol), fontSize: largeTicker ? '1.5rem' : ''}
-    ">
-        {{ (stock[priceKeyPrefix + 'Price']?.fmt | currency) || (stock.regularMarketPrice.fmt | currency) }}
+    <span [ngStyle]="{fontSize: fontSize }"><b>{{ stock.symbol }}</b></span>
+    <span [ngStyle]=" {'color': priceColor, fontSize: largeTicker ? '1.5rem' : ''}">
+        {{ price | currency }}
     </span>
-    <span [ngStyle]="{'color': helperService.getStockPriceColor(stock.symbol), fontSize: largeTicker ? '1rem': ''}">
-        ({{ stock[priceKeyPrefix + 'ChangePercent']?.fmt || stock.regularMarketChangePercent.fmt }})
+    <span [ngStyle]="{'color': priceColor, fontSize: largeTicker ? '1rem': ''}">
+        ({{ priceChangePercent }})
     </span>
 </mat-chip>

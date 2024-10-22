@@ -2,10 +2,7 @@
     <div class="add-flex">
         <mat-chip-listbox>
             <mat-chip-option selected (click)="displayChart(1)">Price Changes</mat-chip-option>
-            @if (betaChartData.length) {
-                <mat-chip-option (click)="displayChart(2)">Beta</mat-chip-option>
-            }
-            <mat-chip-option (click)="displayChart(3)">VIX</mat-chip-option>
+            <mat-chip-option (click)="displayChart(2)">VIX</mat-chip-option>
         </mat-chip-listbox>
     </div>
 </ng-template>
@@ -90,24 +87,6 @@
         </div>
     }
     @if (selectedChart === 2) {
-        <div class="add-flex">
-            <div class="chart-container">
-                <ngx-charts-bar-vertical
-                    [results]="betaChartData"
-                    [xAxis]="true"
-                    [yAxis]="true"
-                    [showXAxisLabel]="true"
-                    [showYAxisLabel]="true"
-                    [rotateXAxisTicks]="true"
-                    [animations]="true"
-                    [yAxisLabel]="'Beta'"
-                    [roundEdges]="false"
-                    [customColors]="getBetaColor"
-                />
-            </div>
-        </div>
-    }
-    @if (selectedChart === 3) {
         <tv-symbol-overview-widget 
             [company]="'VIX Volatility'" 
             [symbol]="'VANTAGE:VIX'"
@@ -153,5 +132,5 @@
     [titleContentRef]="titleContentRef"
     [subtitleContentRef]="subtitleContentRef"
     [mainContentRef]="ValueChangeRef"
-    [footerContentRef]="(!!expandWidget || selectedChart === 3) ? quotesFooterRef : undefined"
+    [footerContentRef]="(!!expandWidget || selectedChart === 2) ? quotesFooterRef : undefined"
 />

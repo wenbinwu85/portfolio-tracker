@@ -13,22 +13,11 @@ import { DataService } from '../../shared/services/data.service';
   styleUrl: './watchlists.component.css'
 })
 export class WatchlistsComponent implements OnInit {
-  private _watchlists: any = {
-    'Magnificent 7': ['AAPL', 'MSFT', 'AMZN', 'META', 'NVDA', 'TSLA', 'GOOG'],
-    ben: ['DG', 'MU', 'SBUX', 'NKE']
-  }
+  watchlist = [];
 
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    const storedWatchlists = this.dataService.getItem('watchlists');
-    if (storedWatchlists) {
-      this._watchlists = storedWatchlists;
-    }
+    this.watchlist = [...this.watchlist];
   }
-
-  get watchlists() { 
-    return Object.entries(this._watchlists);
-  }
-
 }

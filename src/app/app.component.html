@@ -1,8 +1,5 @@
 <div class="main-container" [class.is-mobile]="mobileQuery.matches">
     <mat-toolbar class="toolbar">
-        <button mat-icon-button (click)="sideNav.toggle()">
-            <mat-icon>{{ sideNav.opened ? 'menu_open' : 'menu' }}</mat-icon>
-        </button>
         <tv-tickers-widget [tape]="true" />
     </mat-toolbar>
 

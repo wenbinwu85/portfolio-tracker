@@ -1,3 +1,4 @@
+import { AsyncPipe } from "@angular/common";
 import { ChangeDetectorRef, Component } from "@angular/core";
 import {
   FormControl,
@@ -15,7 +16,6 @@ import { MatRadioModule } from "@angular/material/radio";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { DataService } from "../../../services/data.service";
 import { ContainerCardComponent } from "../../container-card/container-card.component";
-import { AsyncPipe } from "@angular/common";
 
 @Component({
   selector: "portfolio-editor",
@@ -57,8 +57,8 @@ export class PortfolioEditorComponent {
     this.holdings = this.dataService.portfolioHoldingsArray.filter(
       (holding) => typeof holding === "object"
     );
-    this.symbols = this.holdings.map(holding => holding.symbol);
-    this.holdingsControl.valueChanges.subscribe(selected => {
+    this.symbols = this.holdings.map((holding) => holding.symbol);  // do not use dataService.portfolioSymbols
+    this.holdingsControl.valueChanges.subscribe((selected) => {
       this.selectedHoldings = selected;
       this.cdr.detectChanges();
     });
@@ -70,17 +70,19 @@ export class PortfolioEditorComponent {
       (holding) => holding.symbol.toLowerCase() === this.tickerControl.value?.toLocaleLowerCase()
     );
 
-    if (this.updateOrAdd === "add" && holdingIndex !== -1) { 
+    if (this.updateOrAdd === "add" && holdingIndex !== -1) {
       const existingHolding = this.holdings[holdingIndex];
       const totalShares = existingHolding.shares + this.sharesControl.value;
-      const totalCost = (existingHolding.shares * existingHolding.costAverage) + (this.sharesControl.value! * this.costAverageControl.value!);
+      const totalCost =
+        existingHolding.shares * existingHolding.costAverage +
+        this.sharesControl.value! * this.costAverageControl.value!;
       const newCostAverage = totalCost / totalShares;
       holding = {
         ...this.holdings[holdingIndex],
         symbol: this.tickerControl.value?.toUpperCase(),
         shares: totalShares,
         costAverage: newCostAverage,
-      }
+      };
       this.holdings[holdingIndex] = holding;
     } else {
       holding = {
@@ -94,29 +96,23 @@ export class PortfolioEditorComponent {
         : (this.holdings[holdingIndex] = holding);
     }
 
-    this.tickerControl.setValue('');
+    this.tickerControl.setValue("");
     this.sharesControl.setValue(0);
     this.costAverageControl.setValue(0);
-
-    console.log(this.symbols)
-    console.log(this.holdings)
   }
 
-  deleteHoldings() { 
-    this.holdings = this.holdings.filter(holding => !this.selectedHoldings.includes(holding.symbol));
-
-    console.log(this.symbols)
-    console.log(this.holdings)
+  deleteHoldings() {
+    this.holdings = this.holdings.filter(
+      (holding) => !this.selectedHoldings.includes(holding.symbol)
+    );
   }
 
-  clearSelection() { 
+  clearSelection() {
     this.holdingsControl.setValue([]);
   }
 
   updatePortfolio() {
-    this.symbols = this.holdings.map(holding => holding.symbol);
-    console.log('latest symbols:', this.symbols);
-    console.table(this.holdings);
+    this.symbols = this.holdings.map((holding) => holding.symbol);
     this.dataService.updatePortfolioData(this.symbols, this.holdings);
   }
 }

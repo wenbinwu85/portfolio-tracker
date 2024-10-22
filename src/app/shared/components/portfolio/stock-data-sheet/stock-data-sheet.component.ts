@@ -49,15 +49,6 @@ export class StockDataSheetComponent implements OnInit {
   @Input({ required: true }) symbol: any;
   stock: any;
   position: any;
-  financeChartsLink = "https://financecharts.com/stocks/";
-  financeChartsLinkEtf = "https://financecharts.com/etfs/";
-  finvizLink = "https://finviz.com/quote.ashx?t=";
-  yahooLink = "https://finance.yahoo.com/quote/";
-  seekingAlphaLink = "https://seekingalpha.com/symbol/";
-  etfdbLink = "https://etfdb.com/etf/";
-  etfcomLink = "https://www.etf.com/";
-  stockAnalysisLink = "https://www.stockanalysis.com/stocks/";
-  stockAnalysisLinkEtf = "https://www.stockanalysis.com/etf/";
   externalLinks: any = [];
   etfLinks: any = [];
   below50DayAverage = false;
@@ -75,53 +66,48 @@ export class StockDataSheetComponent implements OnInit {
         ? this.symbol.toUpperCase()
         : this.activatedRoute.snapshot.params["symbol"].toUpperCase();
     });
-    this.stock = this.dataService.portfolioData[this.symbol];
-    this.position = this.dataService.portfolioHoldings[this.symbol];
-    let exchange = this.stock?.exchangeName || "NasdaqGS";
-    exchange === "NasdaqGS" ? "Nasdaq" : exchange;
+    this.stock = this.dataService.getTickerData(this.symbol);
+    this.position = this.dataService.getTickerHolding(this.symbol);
+    this.below50DayAverage = this.stock.fiftyDayAverage > this.stock.previousClose;
+    this.below200DayAverage = this.stock.twoHundredDayAverage > this.stock.previousClose;
     this.externalLinks = [
       {
         label: "Seekingalpha",
-        url: this.seekingAlphaLink + this.stock.symbol,
+        url: "https://seekingalpha.com/symbol/" + this.stock.symbol,
       },
       {
         label: "Yahoo Finance",
-        url: this.yahooLink + this.stock.symbol,
+        url: "https://finance.yahoo.com/quote/" + this.stock.symbol,
       },
       {
         label: "Finviz",
-        url: this.finvizLink + this.stock.symbol,
+        url: "https://finviz.com/quote.ashx?t=" + this.stock.symbol,
       },
       {
         label: "Financecharts",
         url:
           this.stock.quoteType === "EQUITY"
-            ? this.financeChartsLink + this.stock.symbol
-            : this.financeChartsLinkEtf + this.stock.symbol,
+            ? "https://financecharts.com/stocks/" + this.stock.symbol
+            : "https://financecharts.com/etfs/" + this.stock.symbol,
       },
       {
         label: "StockAnalysis",
         url:
           this.stock.quoteType === "EQUITY"
-            ? this.stockAnalysisLink + this.stock.symbol
-            : this.stockAnalysisLinkEtf + this.stock.symbol,
+            ? "https://www.stockanalysis.com/stocks/" + this.stock.symbol
+            : "https://www.stockanalysis.com/etf/" + this.stock.symbol,
       },
     ];
     this.etfLinks = [
       {
         label: "EtfDB",
-        url: this.etfdbLink + this.stock.symbol,
+        url: "https://etfdb.com/etf/" + this.stock.symbol,
       },
       {
         label: "etf.com",
-        url: this.etfcomLink + this.stock.symbol,
+        url: "https://www.etf.com/" + this.stock.symbol,
       },
     ];
-
-    this.below50DayAverage =
-      this.stock.fiftyDayAverage > this.stock.previousClose;
-    this.below200DayAverage =
-      this.stock.twoHundredDayAverage > this.stock.previousClose;
   }
 
   selectChart(chatId: number) {

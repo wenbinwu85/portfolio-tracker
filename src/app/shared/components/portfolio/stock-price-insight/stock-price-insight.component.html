@@ -4,8 +4,6 @@
             <ng-container matColumnDef="symbol">
                 <th mat-header-cell *matHeaderCellDef>Symbol</th>
                 <td mat-cell *matCellDef="let element">
-                    <!-- <span>{{ element.symbol }}</span>
-                    <span [ngStyle]="{color: 'teal'}"> {{ element.regularMarketPrice | currency }}</span> -->
                     <stock-ticker-chip [stock]="stockData" />
                 </td>
             </ng-container>
@@ -96,8 +94,8 @@
     
         @if (stockData) {
             <div class="range-container">
-                <h6>Day Range vs 52 Week Range</h6>
-                <stock-day-price-range 
+                <stock-price-range
+                    title='Day Range vs 52 Week Range'
                     [min]="stockData.fiftyTwoWeekLow.raw" 
                     [max]="stockData.fiftyTwoWeekHigh.raw"
                     [lowThumbValue]="stockData.dayLow.raw"

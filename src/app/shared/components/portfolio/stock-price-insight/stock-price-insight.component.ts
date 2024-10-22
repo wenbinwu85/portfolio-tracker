@@ -9,8 +9,9 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatDividerModule } from "@angular/material/divider";
 import { MatIconModule } from "@angular/material/icon";
 import { MatTableDataSource, MatTableModule } from "@angular/material/table";
+import { StockPriceColorsEnum } from "../../../model/colors.model";
 import { DataService } from "../../../services/data.service";
-import { StockDayPriceRangeComponent } from "../stock-day-price-range/stock-day-price-range.component";
+import { StockPriceRangeComponent } from "../stock-price-range/stock-price-range.component";
 import { StockTickerChipComponent } from "../stock-ticker-chip/stock-ticker-chip.component";
 
 @Component({
@@ -25,7 +26,7 @@ import { StockTickerChipComponent } from "../stock-ticker-chip/stock-ticker-chip
     MatTableModule,
     NgStyle,
     PercentPipe,
-    StockDayPriceRangeComponent,
+    StockPriceRangeComponent,
     StockTickerChipComponent,
   ],
   templateUrl: "./stock-price-insight.component.html",
@@ -52,11 +53,11 @@ export class StockPriceInsightComponent implements OnInit {
     // "tradingCentral",
   ];
 
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService) { };
 
   ngOnInit() {
-    this.technicalInsights = this.dataService.portfolioTechnicalInsights[this.symbol];
-    this.stockData = this.dataService.portfolioData[this.symbol];
+    this.technicalInsights = this.dataService.getTickerTechnicalInsights( this.symbol);
+    this.stockData = this.dataService.getTickerData(this.symbol);
   }
 
   getTableDataSource() {
@@ -65,7 +66,9 @@ export class StockPriceInsightComponent implements OnInit {
     return dataSource;
   }
 
-  getTargetPriceColor(stock: any, key: string) { 
-    return stock.regularMarketPrice?.raw < stock[key].raw ? "teal" : "chocolate"
+  getTargetPriceColor(stock: any, key: string) {
+    return stock.regularMarketPrice?.raw < stock[key].raw
+      ? StockPriceColorsEnum.Gain
+      : StockPriceColorsEnum.Lost;
   }
 }

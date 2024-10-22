@@ -7,10 +7,10 @@ export const dividendTrackerGuard: CanActivateFn = (route, state) => {
   const router = inject(Router);
   const hasDividendIncome = dataService.getItem('portfolioHoldings').dividendIncome > 0;
 
-  if (!hasDividendIncome) {
-    router.navigateByUrl('/portfolio/summary');
-    return false;
-  } else { 
+  if (hasDividendIncome) {
     return true;
+  } else { 
+    router.navigateByUrl('/portfolio/portfolio');
+    return false;
   }
 };

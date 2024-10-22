@@ -1,33 +1,35 @@
-import { Component, Input } from "@angular/core";
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 import { FormControl, FormsModule, ReactiveFormsModule, Validators } from "@angular/forms";
 import { MatButtonModule } from "@angular/material/button";
 import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from "@angular/material/input";
 import { MatListModule } from "@angular/material/list";
 import { MatRadioModule } from "@angular/material/radio";
 
 @Component({
-  selector: 'app-watchlist',
+  selector: 'stock-watchlist',
   standalone: true,
   imports: [
     FormsModule,
-    ReactiveFormsModule,
-    MatListModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatRadioModule
+    MatInputModule,
+    MatListModule,
+    MatRadioModule,
+    ReactiveFormsModule,
   ],
   templateUrl: './watchlist.component.html',
   styleUrl: './watchlist.component.css',
 })
 export class WatchlistComponent {
-  @Input({ required: true }) symbols!: string[];
+  @Input() watchlistName?: string[];
   tickerControl = new FormControl("", [Validators.required]);
+  watchlist: any[] = [];
 
-  addSymbols(watchlistName: string, symbols: string[]) {
-
-  }
-
-  removeSymbols(watchlistName: string, symbols: string[]) {
-
+  addSymbol() {
+    if (!!this.tickerControl.value) {
+      this.watchlist.push(this.tickerControl.value);
+    }
+    console.log(this.watchlist)
   }
 }

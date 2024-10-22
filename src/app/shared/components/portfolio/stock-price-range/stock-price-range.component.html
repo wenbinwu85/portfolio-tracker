@@ -1,0 +1,21 @@
+<span>{{ title }}</span>
+<div
+  [matTooltip]="tooltip"
+  matTooltipPosition="above"
+>
+  <mat-slider 
+    [min]="min * 100" 
+    [max]="max * 100"
+    [showTickMarks]="true"
+    [step]="5"
+    class="slider"
+  >
+    <input [value]="lowThumbValue * 100" matSliderStartThumb>
+    <input [value]="highThumbValue * 100" matSliderEndThumb>
+  </mat-slider>
+  
+  <div class="label-wrapper">
+    <mat-chip>${{ min }}</mat-chip>
+    <mat-chip>${{ max }}</mat-chip>
+  </div>
+</div>

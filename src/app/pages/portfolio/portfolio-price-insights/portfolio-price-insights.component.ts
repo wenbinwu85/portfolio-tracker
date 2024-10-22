@@ -12,13 +12,14 @@ import { Color, NgxChartsModule } from "@swimlane/ngx-charts";
 import { ContainerCardComponent } from "../../../shared/components/container-card/container-card.component";
 import { PortfolioQuotesComponent } from "../../../shared/components/portfolio/portfolio-quotes/portfolio-quotes.component";
 import { TickerButtonsComponent } from "../../../shared/components/ticker-buttons/ticker-buttons.component";
-import { StockDayPriceRangeComponent } from "../../../shared/components/portfolio/stock-day-price-range/stock-day-price-range.component";
+import { StockPriceRangeComponent } from "../../../shared/components/portfolio/stock-price-range/stock-price-range.component";
 import { StockPriceInsightComponent } from "../../../shared/components/portfolio/stock-price-insight/stock-price-insight.component";
 import { TvSymbolInfoWidgetComponent } from "../../../shared/components/tradingview/tv-symbol-info-widget/tv-symbol-info-widget.component";
 import { DataService } from "../../../shared/services/data.service";
 import { PortfolioDividendComponent } from "../portfolio-dividend/portfolio-dividend.component";
 import { PortfolioFinancialsComponent } from "../portfolio-financials/portfolio-financials.component";
 import { PortfolioHoldingsComponent } from "../portfolio-holdings/portfolio-holdings.component";
+import { ChartColorsEnum, StockPriceColorsEnum } from "../../../shared/model/colors.model";
 
 @Component({
   selector: "portfolio-price-insights",
@@ -40,7 +41,7 @@ import { PortfolioHoldingsComponent } from "../portfolio-holdings/portfolio-hold
     PortfolioHoldingsComponent,
     PortfolioQuotesComponent,
     TickerButtonsComponent,
-    StockDayPriceRangeComponent,
+    StockPriceRangeComponent,
     StockPriceInsightComponent,
     TvSymbolInfoWidgetComponent,
   ],
@@ -60,14 +61,16 @@ export class PortfolioPriceInsightsComponent implements OnInit {
   fiftyDayMAChartData: any = [];
   twoHundredDayMAChartData: any = [];
   etfPerformanceChartData: any = [];
+  betaChartData: any = [];
   sp500 = "S&P 500";
   selectedPerformanceChart: number = 1;
   selectedSymbol: any;
   selectedStock: any;
   selectedSymbolColor: any;
-  performanceChartColorScheme = { domain: ["slategrey"] } as Color;
-  fiftyTwoWeekChartColorScheme = { domain: ["slategrey"] } as Color;
-  targetPriceChartColorScheme = { domain: ["slategrey"] } as Color;
+  betaColorScheme = { domain: [ChartColorsEnum.Dark] } as Color;
+  performanceChartColorScheme = { domain: [ChartColorsEnum.Dark] } as Color;
+  fiftyTwoWeekChartColorScheme = { domain: [ChartColorsEnum.Dark] } as Color;
+  targetPriceChartColorScheme = { domain: [ChartColorsEnum.Dark] } as Color;
 
   constructor(
     private dataService: DataService,
@@ -83,7 +86,7 @@ export class PortfolioPriceInsightsComponent implements OnInit {
     this.selectedSymbol =
       this.sortedStocks[0]?.symbol || this.sortedEtfs[0]?.symbol;
     this.selectedStock = this.dataService.getTickerData(this.selectedSymbol);
-    this.selectedSymbolColor = { name: this.selectedSymbol, value: "skyblue" };
+    this.selectedSymbolColor = { name: this.selectedSymbol, value: "chocolate" };
     this.selectedPerformanceChart = this.sortedStocks.length ? 1 : 2;
 
     this.sortedStocks.forEach((stock: any) => {
@@ -124,6 +127,11 @@ export class PortfolioPriceInsightsComponent implements OnInit {
           100,
       });
 
+      this.betaChartData.push({
+        name: stock.symbol,
+        value: stock.beta.raw || 0,
+      });
+
       if (stock.targetMeanPrice.raw) {
         this.meanTargetPriceData.push({
           name: stock.symbol,
@@ -160,6 +168,7 @@ export class PortfolioPriceInsightsComponent implements OnInit {
       value: this.sortedStocks[0]?.SandP52WeekChange.raw * 100,
     });
 
+    this.betaChartData.sort((a: any, b: any) => a.value - b.value);
     this.fiftyDayMAChartData.sort((a: any, b: any) => a.value - b.value);
     this.twoHundredDayMAChartData.sort((a: any, b: any) => a.value - b.value);
     this.fiftyTwoWeekChangeChartData.sort((a: any, b: any) => a.value - b.value);
@@ -202,7 +211,7 @@ export class PortfolioPriceInsightsComponent implements OnInit {
     this.selectedSymbol = null;
     this.cdr.detectChanges();
     this.selectedSymbol = symbol;
-    this.selectedSymbolColor = { name: symbol, value: "skyblue" };
+    this.selectedSymbolColor = { name: symbol, value: "chocolate" };
     this.selectedStock = [this.dataService.getTickerData(symbol)];
     if (this.selectedStock[0].quoteType === "ETF") {
       this.changePerformanceChart(2);

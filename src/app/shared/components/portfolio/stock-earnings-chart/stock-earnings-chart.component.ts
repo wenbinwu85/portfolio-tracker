@@ -1,15 +1,16 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { NgxChartsModule } from "@swimlane/ngx-charts";
-import { StockTickerChipComponent } from "../stock-ticker-chip/stock-ticker-chip.component";
 import { StockRecommendationTrendsComponent } from "../stock-recommendation-trends/stock-recommendation-trends.component";
+import { StockTickerChipComponent } from "../stock-ticker-chip/stock-ticker-chip.component";
+import { ChartColorsEnum } from "../../../model/colors.model";
 
 @Component({
   selector: "stock-earnings-chart",
   standalone: true,
   imports: [
     NgxChartsModule,
+    StockRecommendationTrendsComponent,
     StockTickerChipComponent,
-    StockRecommendationTrendsComponent
   ],
   templateUrl: "./stock-earnings-chart.component.html",
   styleUrl: "./stock-earnings-chart.component.css",
@@ -22,9 +23,7 @@ export class StockEarningsChartComponent implements OnInit {
   currentQuarterEstimate: number = 0;
   earningsDate: string = "";
   view: any = [0, 200];
-  colorScheme: any = {
-    domain: ["skyblue", "slategrey"],
-  };
+  colorScheme: any = { domain: [ChartColorsEnum.Light, ChartColorsEnum.Dark] };
 
   ngOnInit() {
     const earningsData = this.stock.earnings?.earningsChart;
@@ -57,8 +56,7 @@ export class StockEarningsChartComponent implements OnInit {
       });
     });
     estimates.series.push({
-      name:
-        this.currentQuarter + this.currentQuarterYear + " " + this.earningsDate,
+      name: this.currentQuarter + this.currentQuarterYear + " " + this.earningsDate,
       x: this.currentQuarter + this.currentQuarterYear,
       y: this.currentQuarterEstimate,
       r: 50,

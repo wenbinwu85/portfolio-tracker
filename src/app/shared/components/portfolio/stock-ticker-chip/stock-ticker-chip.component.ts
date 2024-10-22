@@ -14,10 +14,18 @@ export class StockTickerChipComponent implements OnInit {
   @Input({ required: true }) stock!: any;
   @Input() largeTicker?: boolean = false;
   priceKeyPrefix: any;
+  priceColor = '';
+  fontSize = '1rem';
+  price = 0;
+  priceChangePercent = 0;
 
   constructor(public helperService: HelperService) {}
 
   ngOnInit() {
     this.priceKeyPrefix = this.helperService.getPriceKeyPrefix();
+    this.priceColor = this.helperService.getStockPriceColor(this.stock.symbol);
+    this.fontSize = this.largeTicker ? '1.5rem' : '1rem';
+    this.price = this.stock[this.priceKeyPrefix + 'Price']?.fmt || this.stock.regularMarketPrice.fmt;
+    this.priceChangePercent = this.stock[this.priceKeyPrefix + 'ChangePercent']?.fmt || this.stock.regularMarketChangePercent.fmt;
   }
 }

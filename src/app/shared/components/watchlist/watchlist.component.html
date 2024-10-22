@@ -6,7 +6,7 @@
             <input matInput type="text" placeholder="Ex. AAPL" [formControl]="tickerControl">
             <mat-hint align="end">Ticker symbol</mat-hint>
         </mat-form-field>
-        <button mat-stroked-button class="save-button">
+        <button mat-stroked-button class="save-button" (click)="addSymbol()">
             <span>Add</span>
         </button>
     </div>
