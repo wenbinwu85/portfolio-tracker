@@ -58,24 +58,31 @@
     </mat-list-item>
   </mat-list>
 
-  <div class="footer-row">
-    <mat-icon>info</mat-icon>
-    <span>Built with:</span>
-    <mat-chip-listbox>  
-      <mat-chip color="primary">
-        <a href="https://angular.dev" target="_blank">Angular</a>
+  <mat-list>
+    <mat-list-item>
+        <div matListItemTitle>Built with:</div>
+        <mat-chip-listbox matListItemLine>
+          <mat-chip color="primary">
+            <a href="https://angular.dev" target="_blank">Angular</a>
+          </mat-chip>
+          <mat-chip color="primary">
+            <a href="https://python.org" target="_blank">Python</a>
+          </mat-chip>
+          <mat-chip color="primary">
+            <a href="https://github.com/dpguthrie/yahooquery" target="_blank">Yahooquery</a>
+          </mat-chip>
+          <mat-chip color="primary">
+            <a href="https://github.com/pallets/quart" target="_blank">Quart</a>
+          </mat-chip>
+        </mat-chip-listbox>
+    </mat-list-item>
+    <mat-list-item>
+      <span matListItemTitle>Backend: </span>
+      <mat-chip matListItemLin color="primary">
+        <a href="https://portfolio-tracker-backend-5ys2.onrender.com/" target="_blank">hosted on render.com</a>
       </mat-chip>
-      <mat-chip color="primary">
-        <a href="https://python.org" target="_blank">Python</a>
-      </mat-chip>
-      <mat-chip color="primary">
-        <a href="https://github.com/dpguthrie/yahooquery" target="_blank">Yahooquery</a>
-      </mat-chip>
-      <mat-chip color="primary">
-        <a href="https://github.com/pallets/quart" target="_blank">Quart</a>
-      </mat-chip>
-    </mat-chip-listbox>
-  </div>
+    </mat-list-item>
+  </mat-list>
 </div>
 <div class="quote">
   <span>
