@@ -92,7 +92,7 @@ export class PortfolioEditorComponent {
         costAverage: this.costAverageControl.value!,
       };
       holdingIndex === -1
-        ? this.holdings.push(holding)
+        ? this.holdings.unshift(holding)
         : (this.holdings[holdingIndex] = holding);
     }
 

@@ -221,18 +221,20 @@ export class DataService {
   public addItemsToLocalStorage() { 
     this.setItem("portfolioSymbols", this.portfolioSymbols);
     this.setItem("portfolioHoldings", this.portfolioHoldings);
-    this.setItem("portfolioTechInsights", this.portfolioTechnicalInsights);
-    this.portfolioDataArray.forEach((tickerData: any) => {
-      this.setItem(tickerData.symbol, tickerData);
-    });
+    this.portfolioSymbols.forEach((symbol: string) => { 
+      const tickerData = this.getTickerData(symbol);
+      const techInsights = this.getTickerTechnicalInsights(symbol);
+      this.setItem(symbol, tickerData);
+      this.setItem(symbol + "TechnicalInsights", techInsights);
+    })
   }
 
   public savePortfolioDataToFirebase() { 
     this.portfolioDataArray.forEach((tickerData: any) => {
       this.firebaseService.setDocument(tickerData.symbol, tickerData);
     });
-    Object.entries(this.portfolioTechnicalInsights).forEach(([symbol, techInsight]) => {
-      this.firebaseService.setDocument(symbol + 'TechnicalInsight', techInsight);
+    Object.entries(this.portfolioTechnicalInsights).forEach(([symbol, techInsights]) => {
+      this.firebaseService.setDocument(symbol + 'TechnicalInsights', techInsights);
     });
   }
 
@@ -240,7 +242,8 @@ export class DataService {
     this.isLoadingData$.next(true);
     const symbols = this.getItem("portfolioSymbols");
     const holdings = this.getItem("portfolioHoldings");
-    const techInsights = this.getItem("portfolioTechInsights");
+    let techInsights: any = {};
+    symbols?.forEach((symbol: string) => techInsights[symbol] = this.getItem(symbol + "TechnicalInsights"));
 
     if (!!symbols && !!holdings && !!techInsights) {
       this.portfolioSymbols = symbols;

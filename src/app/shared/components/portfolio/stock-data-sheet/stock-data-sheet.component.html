@@ -104,7 +104,7 @@
     />
   }
 
-  <mat-divider class="divider"/>
+  <!-- <mat-divider class="divider"/> -->
 
   @if (stock.quoteType === 'EQUITY') {
     <div class="analysis">
@@ -112,6 +112,10 @@
       <stock-recommendation-trends [symbol]="stock.symbol"/>
     </div>
   }
+
+  <!-- <mat-divider class="divider"/> -->
+  
+  <tv-profile-widget [symbol]="stock.symbol"></tv-profile-widget>
 </ng-template>
 
 <ng-template #chartToggleRef>

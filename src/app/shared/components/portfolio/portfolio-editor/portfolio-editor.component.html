@@ -26,29 +26,36 @@
     </div>
 </div>
 
-<mat-divider></mat-divider>
+<!-- <mat-divider /> -->
 
 @if (holdings.length) {
-    <div class="holding-list-header">
-        <mat-label>Holdings ({{ holdings.length }})</mat-label>
-        <div class="holding-list-actions">
-            <button 
-                mat-button 
-                (click)="clearSelection()" 
-                [hidden]="selectedHoldings.length === 0"
-            >
-                clear Selected
-            </button>
-            <button 
-                mat-button 
-                class="delete-button" 
-                (click)="deleteHoldings()" 
-                [hidden]="selectedHoldings.length === 0"
-            >
-                Delete Selected: {{ selectedHoldings.length }}
-            </button>
+    <div class="button-wrapper">
+        <button mat-stroked-button class="update-portfolio-button" (click)="updatePortfolio()">
+            <span>Update Portfolio</span>
+        </button>
+        <mat-divider />
+        <div class="holding-list-header">
+            <mat-label>Holdings ({{ holdings.length }})</mat-label>
+            <div class="holding-list-actions">
+                <button 
+                    mat-button 
+                    (click)="clearSelection()" 
+                    [hidden]="selectedHoldings.length === 0"
+                >
+                    clear Selected
+                </button>
+                <button 
+                    mat-button 
+                    class="delete-button" 
+                    (click)="deleteHoldings()" 
+                    [hidden]="selectedHoldings.length === 0"
+                >
+                    Delete Selected: {{ selectedHoldings.length }}
+                </button>
+            </div>
         </div>
     </div>
+
     <mat-selection-list [multiple]="true" [formControl]="holdingsControl" #holdingsList>
         @for (holding of holdings; track holding.symbol; let idx = $index) {
             <mat-list-option [value]="holding.symbol">
@@ -61,11 +68,6 @@
             </mat-list-option>
         }
     </mat-selection-list>
-    <mat-divider></mat-divider>
-
-    <button mat-stroked-button class="update-portfolio-button" (click)="updatePortfolio()">
-        <span>Update Portfolio</span>
-    </button>
 } @else {
     <mat-label>Empty Portfolio</mat-label>
 }

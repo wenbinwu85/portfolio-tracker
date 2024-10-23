@@ -32,8 +32,7 @@ mat-divider {
 }
 
 .update-portfolio-button {
-    float: right;
-    margin-top: 0.5rem;
+    margin: 1rem 0.5rem 0.5rem 0.5rem;
 }
 
 .control {
@@ -47,4 +46,9 @@ mat-divider {
 
 .cost-average {
     color: teal;
+}
+
+.button-wrapper {
+    display: flex;
+    flex-direction: column;
 }
