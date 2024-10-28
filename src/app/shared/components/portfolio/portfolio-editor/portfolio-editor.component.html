@@ -63,8 +63,11 @@
                     <span class="shares">{{ holding.shares }}</span> shares of <span class="symbol">{{ holding.symbol }} </span>
                 </mat-label>
                 <mat-label>
-                    with cost average of <span class="cost-average">${{ holding.costAverage }}</span> dollars per share.
+                    , with cost average of <span class="cost-average">${{ holding.costAverage }}</span> dollars per share.
                 </mat-label>
+                @if (!holding.marketValue) {
+                    <mat-icon>playlist_add</mat-icon>
+                }
             </mat-list-option>
         }
     </mat-selection-list>

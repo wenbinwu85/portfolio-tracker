@@ -54,9 +54,7 @@ export class PortfolioEditorComponent {
   ) {}
 
   ngOnInit() {
-    this.holdings = this.dataService.portfolioHoldingsArray.filter(
-      (holding) => typeof holding === "object"
-    );
+    this.holdings = [...this.dataService.portfolioHoldingsArray];
     this.symbols = this.holdings.map((holding) => holding.symbol);  // do not use dataService.portfolioSymbols
     this.holdingsControl.valueChanges.subscribe((selected) => {
       this.selectedHoldings = selected;

@@ -30,6 +30,5 @@ export class WatchlistComponent {
     if (!!this.tickerControl.value) {
       this.watchlist.push(this.tickerControl.value);
     }
-    console.log(this.watchlist)
   }
 }

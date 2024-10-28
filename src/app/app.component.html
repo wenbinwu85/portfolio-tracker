@@ -26,6 +26,10 @@
                     }
                 }
                 <mat-divider />
+                <button mat-button color="primary" class="action-button" (click)="refreshData()">
+                    <mat-icon>refresh</mat-icon>
+                    <span>Refresh Data</span>
+                </button>
                 <button mat-button color="warn" class="action-button" (click)="clearData()">
                     <mat-icon>delete_forever</mat-icon>
                     <span>Nuke Data</span>

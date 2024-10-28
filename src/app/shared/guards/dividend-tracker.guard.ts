@@ -5,7 +5,7 @@ import { inject } from '@angular/core';
 export const dividendTrackerGuard: CanActivateFn = (route, state) => {
   const dataService = inject(DataService);
   const router = inject(Router);
-  const hasDividendIncome = dataService.getItem('portfolioHoldings').dividendIncome > 0;
+  const hasDividendIncome = dataService.stores.getItem('localStorage', 'portfolioHoldings').dividendIncome > 0;
 
   if (hasDividendIncome) {
     return true;

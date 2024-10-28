@@ -10,10 +10,10 @@ import {
 import {
   PortfolioQuotesComponent,
 } from '../../shared/components/portfolio/portfolio-quotes/portfolio-quotes.component';
-import { AlpacaApiService } from '../../shared/services/alpaca-api.service';
-import { DataService } from '../../shared/services/data.service';
 import { TvMiniChartWidgetComponent } from '../../shared/components/tradingview/tv-mini-chart-widget/tv-mini-chart-widget.component';
 import { TvSymbolOverviewWidgetComponent } from '../../shared/components/tradingview/tv-symbol-overview-widget/tv-symbol-overview-widget.component';
+import { AlpacaApiService } from '../../shared/services/alpaca-api.service';
+import { DataService } from '../../shared/services/data.service';
 import { FirebaseService } from '../../shared/services/firebase.service';
 
 @Component({
@@ -37,11 +37,7 @@ export class HomepageComponent {
   insiderActivities: any[] = [];
   things$: any;
 
-  constructor(
-    private alpacaApiService: AlpacaApiService,
-    private dataService: DataService,
-    private firebaseService: FirebaseService
-  ) { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
     this.dataService.portfolioDataArray.forEach((stock: any) => {

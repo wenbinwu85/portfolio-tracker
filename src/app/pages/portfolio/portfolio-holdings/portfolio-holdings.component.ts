@@ -407,11 +407,13 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
   }
 
   exportHoldings() {
-    const holdingsArrays: string[] = this.dataService.portfolioHoldingsArray
-      .filter(data => typeof data === 'object')
+    const holdingsArrays = this.dataService.portfolioHoldingsArray
       .map((data: any, index: number, array) => {
-        const holdingString = [data.symbol, data.shares, data.costAverage].join(',')
-        return index + 1 < array.length ? holdingString + '\n' : holdingString;
+        return [data.symbol, data.shares, data.costAverage].join(',');
+      })
+      .sort()
+      .map((data: any, index: number, array) => {
+        return index + 1 < array.length ? data + '\n' : data;
       });
     let link = document.createElement('a');
     link.download = 'my_holdings';

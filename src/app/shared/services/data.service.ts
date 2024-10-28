@@ -1,11 +1,10 @@
-import { DOCUMENT } from "@angular/common";
 import {
   HttpClient,
   HttpErrorResponse,
   HttpHeaders,
   HttpParams,
 } from "@angular/common/http";
-import { Inject, Injectable } from "@angular/core";
+import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
 import {
   BehaviorSubject,
@@ -14,10 +13,10 @@ import {
   Observable,
   of,
   retry,
-  take,
 } from "rxjs";
 import { MarketStates } from "../model/data-enums.model";
 import { FirebaseService } from "./firebase.service";
+import { StorageService } from './storage.service';
 
 @Injectable({
   providedIn: "root",
@@ -30,7 +29,6 @@ export class DataService {
       .set("content-type", "application/json")
       .set("Access-Control-Allow-Origin", "*"),
   };
-  public localStorage: Storage;
   public isLoadingData$ = new BehaviorSubject(false);
   public hasPortfolioData$ = new BehaviorSubject(false);
 
@@ -43,13 +41,13 @@ export class DataService {
   public watchlist = [];
 
   constructor(
-    @Inject(DOCUMENT) private document: Document,
+    private firebaseService: FirebaseService,
     private http: HttpClient,
     private router: Router,
-    private firebaseService: FirebaseService
+    public stores: StorageService,
   ) {
-    this.localStorage = this.document.defaultView!.localStorage;
-    this.generatePortfolioDataFromLocalStorage();
+
+    this.generatePortfolioDataFromStorage();
   }
 
   get hasPortfolioData(): boolean {
@@ -61,7 +59,7 @@ export class DataService {
   }
 
   get portfolioHoldingsArray(): any[] {
-    return Object.values(this.portfolioHoldings);
+    return Object.values(this.portfolioHoldings).filter((holding) => typeof holding === "object");
   }
 
   get portfolioTechnicalInsightsArray(): any[] {
@@ -115,13 +113,13 @@ export class DataService {
       this.portfolioSymbols.length > 0 &&
       this.portfolioSymbols.length === this.portfolioDataArray.length;
     const check2 =
-      this.portfolioHoldingsArray.length === this.portfolioSymbols.length + 8;
+      this.portfolioHoldingsArray.length === this.portfolioSymbols.length;
     const check3 =
       this.portfolioTechnicalInsightsArray.length === this.portfolioSymbols.length;
     const check4 =
       Object.keys(this.portfolioDividendHistory).length === this.portfolioDividendPayers.length;
     console.log("Portfolio data length = number of symbols:", check1);
-    console.log("Holdings length is = number of symbols + 8:", check2);
+    console.log("Holdings length is = number of symbols:", check2);
     console.log("Technical insights length = number of symbols:", check3);
     console.log("Dividend history data length = dividend payers:", check4);
     // console.log(this.portfolioData);
@@ -144,19 +142,6 @@ export class DataService {
       );
       return false;
     }
-  }
-
-  public getItem(item: string) {
-    const data = this.localStorage?.getItem(item);
-    return data ? JSON.parse(data) : null;
-  }
-
-  public setItem(itemName: string, item: any) {
-    this.localStorage?.setItem(itemName, JSON.stringify(item));
-  }
-
-  public removeItem(itemName: string) {
-    this.localStorage?.removeItem(itemName);
   }
 
   public getTickerData(symbol: string) {
@@ -204,7 +189,7 @@ export class DataService {
       .filter((item: any) => !!item.symbol)
       .forEach((holding: any) => {
         holding.portfolioPercent = holding.marketValue / this.portfolioHoldings.marketValue;
-        this.setItem(holding.symbol + "Holding", holding);
+        this.stores.setItem('localStorage', holding.symbol + "Holding", holding);
       });
     this.portfolioHoldings.unrealizedGainPercent =
       this.portfolioHoldings.unrealizedGain /
@@ -215,17 +200,17 @@ export class DataService {
     this.portfolioHoldings.yieldOnCost =
       this.portfolioHoldings.dividendIncome /
       this.portfolioHoldings.totalAmountInvested;
-    this.setItem("portfolioHoldings", this.portfolioHoldings);
+    this.stores.setItem('localStorage', "portfolioHoldings", this.portfolioHoldings);
   }
 
   public addItemsToLocalStorage() { 
-    this.setItem("portfolioSymbols", this.portfolioSymbols);
-    this.setItem("portfolioHoldings", this.portfolioHoldings);
+    this.stores.setItem('localStorage', "portfolioSymbols", this.portfolioSymbols);
+    this.stores.setItem('localStorage', "portfolioHoldings", this.portfolioHoldings);
     this.portfolioSymbols.forEach((symbol: string) => { 
       const tickerData = this.getTickerData(symbol);
       const techInsights = this.getTickerTechnicalInsights(symbol);
-      this.setItem(symbol, tickerData);
-      this.setItem(symbol + "TechnicalInsights", techInsights);
+      this.stores.setItem('sessionStorage', symbol, tickerData);
+      this.stores.setItem('localStorage', symbol + "TechnicalInsights", techInsights);
     })
   }
 
@@ -238,27 +223,31 @@ export class DataService {
     });
   }
 
-  public generatePortfolioDataFromLocalStorage() {
+  public generatePortfolioDataFromStorage() {
     this.isLoadingData$.next(true);
-    const symbols = this.getItem("portfolioSymbols");
-    const holdings = this.getItem("portfolioHoldings");
+    const symbols = this.stores.getItem('localStorage', "portfolioSymbols");
+    const holdings = this.stores.getItem('localStorage', "portfolioHoldings");
     let techInsights: any = {};
-    symbols?.forEach((symbol: string) => techInsights[symbol] = this.getItem(symbol + "TechnicalInsights"));
+    symbols?.forEach((symbol: string) => techInsights[symbol] = this.stores.getItem('localStorage', symbol + "TechnicalInsights"));
 
     if (!!symbols && !!holdings && !!techInsights) {
       this.portfolioSymbols = symbols;
       this.portfolioHoldings = holdings;
       this.portfolioTechnicalInsights = techInsights;
 
-      symbols.forEach((symbol: any) => {
-        this.portfolioData[symbol] = this.getItem(symbol);
-      });
-      this.portfolioDividendPayers.forEach(ticker => { 
-        this.portfolioDividendHistory[ticker.symbol] = this.getItem(
-          ticker.symbol + "DividendHistory"
-        );
-      })
+      if (this.stores.sessionStorage.length) {
+        symbols.forEach((symbol: any) => {
+          this.portfolioData[symbol] = this.stores.getItem('sessionStorage', symbol);
+        });
+      } else {
+        this.updatePortfolioData(this.portfolioSymbols, this.portfolioHoldings);
+      }
     }
+    this.portfolioDividendPayers.forEach(ticker => {
+      this.portfolioDividendHistory[ticker.symbol] = this.stores.getItem('localStorage',
+        ticker.symbol + "DividendHistory"
+      );
+    });
     this.isLoadingData$.next(false);
     this.hasPortfolioData$.next(this.sanityCheck());
   }
@@ -275,7 +264,7 @@ export class DataService {
       };;
     });
 
-    this.setItem("fileContent", fileContent);
+    this.stores.setItem('localStorage', "fileContent", fileContent);
     this.portfolioHoldings.positionsHeld = this.portfolioSymbols.length;
     this.portfolioHoldings.marketValue = 0;
     this.portfolioHoldings.totalAmountInvested = 0;
@@ -310,7 +299,7 @@ export class DataService {
 
     const addedSymbols = symbols.filter((symbol: string) => !this.portfolioSymbols.includes(symbol));
     const deletedSymbols = this.portfolioSymbols.filter((existingSymbol: string) => !symbols.includes(existingSymbol));
-    this.portfolioSymbols = symbols;
+    this.portfolioSymbols = symbols.sort();
     this.portfolioHoldings.positionsHeld = symbols.length;
     this.portfolioHoldings.marketValue = 0;
     this.portfolioHoldings.totalAmountInvested = 0;
@@ -325,9 +314,9 @@ export class DataService {
       delete this.portfolioData[symbol];
       delete this.portfolioTechnicalInsights[symbol];
       delete this.portfolioDividendHistory[symbol];
-      this.removeItem(symbol + "Holding");
-      this.removeItem(symbol);
-      this.removeItem(symbol + "DividendHistory");
+      this.stores.removeItem('localStorage', symbol + "Holding");
+      this.stores.removeItem('localStorage', symbol);
+      this.stores.removeItem('localStorage', symbol + "DividendHistory");
     });
 
     if (!addedSymbols.length) {
@@ -427,7 +416,7 @@ export class DataService {
     this.portfolioDividendPayers.forEach((ticker: any) => {
       this.fetchTickerDividendHistory(ticker.symbol, 10).subscribe((divHis: any) => {
         this.portfolioDividendHistory[ticker.symbol] = divHis;
-        this.setItem(ticker.symbol + "DividendHistory", divHis);
+        this.stores.setItem('localStorage', ticker.symbol + "DividendHistory", divHis);
         // this.firebaseService.setDocument(symbol + "DividendHistory", divHis);
         if (
           Object.keys(this.portfolioDividendHistory).length === this.portfolioDividendPayers.length

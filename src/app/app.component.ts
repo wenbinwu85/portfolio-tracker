@@ -91,9 +91,18 @@ export class AppComponent {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
+  refreshData() { 
+    const symbols = [...this.dataService.portfolioSymbols];
+    const holdings = [...this.dataService.portfolioHoldingsArray];
+    this.dataService.portfolioSymbols = [];
+    this.dataService.portfolioHoldings = {};
+    this.dataService.updatePortfolioData(symbols, holdings);
+  }
+
   clearData() {
+    this.dataService.stores?.clearStore('sessionStorage');
+    this.dataService.stores?.clearStore('localStorage');
     this.router.navigate([""]);
-    this.dataService.localStorage?.clear();
     setTimeout(() => {
       window.location.reload();
     }, 500);

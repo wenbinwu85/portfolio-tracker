@@ -1,4 +1,5 @@
 import { inject, Injectable } from "@angular/core";
+// import { AngularFireAuth } from '@angular/fire/compat/auth';
 import {
   addDoc,
   collection,
@@ -12,12 +13,15 @@ import {
   setDoc,
   updateDoc,
 } from "@angular/fire/firestore";
-import { Observable } from "rxjs";
+import { User } from 'firebase/auth';
+import { Observable, of } from "rxjs";
+
 
 @Injectable({
   providedIn: "root",
 })
 export class FirebaseService {
+  user$: Observable<User | null> = of(null);
   private collectionName = 'ahbenfolio';
   private firestore: Firestore;
   private collectionRef!: CollectionReference;
@@ -25,10 +29,23 @@ export class FirebaseService {
   public documentName?: string;
 
   constructor() {
+    // this.user$ = this.auth.authState as Observable<User | null>;
     this.firestore = inject(Firestore);
     this.setCollectionRef();
     this.setCollectionDataObservable();
   }
+
+  // login(email: string, password: string) {
+  //   return this.auth.signInWithEmailAndPassword(email, password);
+  // }
+
+  // signup(email: string, password: string) {
+  //   return this.auth.createUserWithEmailAndPassword(email, password);
+  // }
+
+  // logout() {
+  //   return this.auth.signOut();
+  // }
 
   private setCollectionRef() { 
     this.collectionRef = collection(this.firestore, this.collectionName)

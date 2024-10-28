@@ -29,7 +29,7 @@ export class StockEarningsChartComponent implements OnInit {
     const earningsData = this.stock.earnings?.earningsChart;
     this.currentQuarter = earningsData.currentQuarterEstimateDate;
     this.currentQuarterYear = earningsData.currentQuarterEstimateYear;
-    this.currentQuarterEstimate = earningsData.currentQuarterEstimate.fmt;
+    this.currentQuarterEstimate = earningsData.currentQuarterEstimate?.fmt;
     this.earningsDate = earningsData.earningsDate[0].fmt;
 
     this.earningsChartData.name = this.stock.symbol;
@@ -55,12 +55,14 @@ export class StockEarningsChartComponent implements OnInit {
         r: 50,
       });
     });
-    estimates.series.push({
-      name: this.currentQuarter + this.currentQuarterYear + " " + this.earningsDate,
-      x: this.currentQuarter + this.currentQuarterYear,
-      y: this.currentQuarterEstimate,
-      r: 50,
-    });
+    if (this.currentQuarterEstimate) { 
+      estimates.series.push({
+        name: this.currentQuarter + this.currentQuarterYear + " " + this.earningsDate,
+        x: this.currentQuarter + this.currentQuarterYear,
+        y: this.currentQuarterEstimate,
+        r: 50,
+      });
+    }
     this.earningsChartData.push(estimates);
     this.earningsChartData.push(actuals);
   }
