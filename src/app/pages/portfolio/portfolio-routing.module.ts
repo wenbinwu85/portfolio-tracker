@@ -25,18 +25,25 @@ const routes: Routes = [
           ),
       },
       {
-        path: "dividend",
+        path: "dividend-tracker",
         canActivate: [dividendTrackerGuard],
         loadComponent: () =>
-          import("./portfolio-dividend/portfolio-dividend.component").then(
-            (c) => c.PortfolioDividendComponent
+          import("./portfolio-dividend-tracker/portfolio-dividend-tracker.component").then(
+            (c) => c.PortfolioDividendTrackerComponent
           ),
       },
       {
-        path: "financials",
+        path: "financial-stats",
         loadComponent: () =>
-          import("./portfolio-financials/portfolio-financials.component").then(
-            (c) => c.PortfolioFinancialsComponent
+          import("./portfolio-financial-stats/portfolio-financial-stats.component").then(
+            (c) => c.PortfolioFinancialStatsComponent
+          ),
+      },
+      {
+        path: "analysis",
+        loadComponent: () =>
+          import("./portfolio-analysis/portfolio-analysis.component").then(
+            (c) => c.PortfolioAnalysisComponent
           ),
       },
     ],

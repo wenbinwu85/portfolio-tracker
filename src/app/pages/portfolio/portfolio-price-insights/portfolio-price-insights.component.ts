@@ -16,8 +16,8 @@ import { StockPriceRangeComponent } from "../../../shared/components/portfolio/s
 import { StockPriceInsightComponent } from "../../../shared/components/portfolio/stock-price-insight/stock-price-insight.component";
 import { TvSymbolInfoWidgetComponent } from "../../../shared/components/tradingview/tv-symbol-info-widget/tv-symbol-info-widget.component";
 import { DataService } from "../../../shared/services/data.service";
-import { PortfolioDividendComponent } from "../portfolio-dividend/portfolio-dividend.component";
-import { PortfolioFinancialsComponent } from "../portfolio-financials/portfolio-financials.component";
+import { PortfolioDividendTrackerComponent } from "../portfolio-dividend-tracker/portfolio-dividend-tracker.component";
+import { PortfolioFinancialStatsComponent } from "../portfolio-financial-stats/portfolio-financial-stats.component";
 import { PortfolioHoldingsComponent } from "../portfolio-holdings/portfolio-holdings.component";
 import { ChartColorsEnum, StockPriceColorsEnum } from "../../../shared/model/colors.model";
 
@@ -36,8 +36,8 @@ import { ChartColorsEnum, StockPriceColorsEnum } from "../../../shared/model/col
     MatSlideToggleModule,
     MatTabsModule,
     NgxChartsModule,
-    PortfolioDividendComponent,
-    PortfolioFinancialsComponent,
+    PortfolioDividendTrackerComponent,
+    PortfolioFinancialStatsComponent,
     PortfolioHoldingsComponent,
     PortfolioQuotesComponent,
     TickerButtonsComponent,

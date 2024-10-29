@@ -41,14 +41,8 @@ export class AppComponent {
     },
     {
       label: "Portfolio",
-      route: "/portfolio",
+      route: "/portfolio/portfolio",
       icon: "ballot",
-      needData: true,
-    },
-    {
-      label: "Analysis",
-      route: "/analysis",
-      icon: "calculate",
       needData: true,
     },
     {
@@ -63,7 +57,7 @@ export class AppComponent {
       icon: "handyman",
     },
     {
-      label: "Live",
+      label: "Live Streams",
       route: "/streams",
       icon: "live_tv",
     },

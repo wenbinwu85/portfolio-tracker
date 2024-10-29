@@ -109,13 +109,15 @@
     <div class="add-flex">
       <div class="chart-container">
         <ngx-charts-pie-chart
+          [view]="[0, 400]"
           [scheme]="'air'"
           [animations]="true"
           [results]="sectorsData"
-          [labels]="true"
           [title]="'Sector Allocations'"
-          [maxLabelLength]="100"
-          (select)="onSelectSector($event)"
+          [legend]="true"
+          [legendTitle]="'Sectors'"
+          [labels]="true"
+          (select)="onSelectSector($event)"          
         />
       </div>
       <div class="chart-container">

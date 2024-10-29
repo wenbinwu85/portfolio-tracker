@@ -240,7 +240,11 @@ export class DataService {
           this.portfolioData[symbol] = this.stores.getItem('sessionStorage', symbol);
         });
       } else {
-        this.updatePortfolioData(this.portfolioSymbols, this.portfolioHoldings);
+        const symbols = [...this.portfolioSymbols];
+        const holdings = [...this.portfolioHoldingsArray];
+        this.portfolioSymbols = [];
+        this.portfolioHoldings = {};
+        this.updatePortfolioData(symbols, holdings);
       }
     }
     this.portfolioDividendPayers.forEach(ticker => {

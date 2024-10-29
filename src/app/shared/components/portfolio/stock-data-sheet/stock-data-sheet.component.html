@@ -89,17 +89,17 @@
       <tv-advanced-chart-widget [symbol]="stock.symbol" />
     }
 
-    <mat-divider class="divider"/>
+    <!-- <mat-divider class="divider"/> -->
 
-    <div>
+    <div class="price-insights">
       <stock-price-insight [symbol]="stock.symbol" />
     </div>
 
-    <mat-divider class="divider"/>
+    <!-- <mat-divider class="divider"/> -->
 
     <tv-financials-widget
       [symbol]="stock.symbol"
-      height="484"
+      height="490"
       displayMode="compact"
     />
   }

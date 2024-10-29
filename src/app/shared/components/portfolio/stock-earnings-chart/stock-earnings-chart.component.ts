@@ -30,7 +30,7 @@ export class StockEarningsChartComponent implements OnInit {
     this.currentQuarter = earningsData.currentQuarterEstimateDate;
     this.currentQuarterYear = earningsData.currentQuarterEstimateYear;
     this.currentQuarterEstimate = earningsData.currentQuarterEstimate?.fmt;
-    this.earningsDate = earningsData.earningsDate[0].fmt;
+    this.earningsDate = earningsData.earningsDate[0]?.fmt;
 
     this.earningsChartData.name = this.stock.symbol;
     const estimates: any = {
