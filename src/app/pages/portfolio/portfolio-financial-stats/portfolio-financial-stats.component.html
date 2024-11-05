@@ -9,7 +9,7 @@
           <td mat-cell *matCellDef="let stock">
             @if (cidx === 0) {
               <div class="table-col-0">
-                <stock-name-card [stock]="stock" />
+                <stock-ticker-card [stock]="stock" />
               </div>
             } @else {
               <span [ngStyle]="{ color: getCellColor(cidx, stock)}">{{ stock[column] }}</span>
@@ -39,7 +39,7 @@
           <td mat-cell *matCellDef="let etf">
             @if (cidx === 0) {
               <div class="table-col-0">
-                <stock-name-card [stock]="etf" />
+                <stock-ticker-card [stock]="etf" />
               </div>
             } @else {
               @if (cidx < 13) {

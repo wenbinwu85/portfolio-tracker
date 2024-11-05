@@ -14,7 +14,7 @@ import {
   MatTableModule,
 } from "@angular/material/table";
 import { ContainerCardComponent } from "../../../shared/components/container-card/container-card.component";
-import { StockNameCardComponent } from "../../../shared/components/portfolio/stock-name-card/stock-name-card.component";
+import { StockTickerCardComponent } from "../../../shared/components/portfolio/stock-ticker-card/stock-ticker-card.component";
 import { DataService } from "../../../shared/services/data.service";
 
 @Component({
@@ -29,7 +29,7 @@ import { DataService } from "../../../shared/services/data.service";
     MatSortModule,
     MatTableModule,
     NgStyle,
-    StockNameCardComponent,
+    StockTickerCardComponent,
   ],
 })
 export class PortfolioFinancialStatsComponent implements OnInit, AfterViewInit {
@@ -55,6 +55,7 @@ export class PortfolioFinancialStatsComponent implements OnInit, AfterViewInit {
     "Return On Equity %",
     "EV / EBITDA",
     "EV / Revenue",
+    "EV / FCF",
   ];
   columnDefs = [
     "symbol",
@@ -74,6 +75,7 @@ export class PortfolioFinancialStatsComponent implements OnInit, AfterViewInit {
     "returnOnEquity",
     "enterpriseToEbitda",
     "enterpriseToRevenue",
+    "enterpriseToFreeCashflow",
   ];
   etfHeaders = [
     "Symbol",
@@ -131,8 +133,8 @@ export class PortfolioFinancialStatsComponent implements OnInit, AfterViewInit {
           revenuePerShare: stock.revenuePerShare.fmt || 0,
           freeCashflowYield: +(stock.freeCashflowYield * 100).toFixed(2) || 0,
           freeCashflowPerShare: +(stock.freeCashflowPerShare.toFixed(2)) || 0,
-          returnOnAssets: +stock.returnOnAssets.fmt?.replace('%', '') || 0,
-          returnOnEquity: +stock.returnOnEquity.fmt?.replace('%', '') || 0,
+          returnOnAssets: (+stock.returnOnAssets.fmt?.replace('%', '') / 100).toFixed(4) || 0,
+          returnOnEquity: (+stock.returnOnEquity.fmt?.replace('%', '') / 100).toFixed(4) || 0,
           enterpriseToEbitda: stock.enterpriseToEbitda.fmt || 0,
           enterpriseToRevenue: stock.enterpriseToRevenue.fmt || 0,
           regularMarketPrice: stock.regularMarketPrice?.raw,

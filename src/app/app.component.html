@@ -1,5 +1,6 @@
 <div class="main-container" [class.is-mobile]="mobileQuery.matches">
     <mat-toolbar class="toolbar">
+
         <tv-tickers-widget [tape]="true" />
     </mat-toolbar>
 
@@ -18,21 +19,34 @@
                 @for (link of navLinks; track $index) {
                     @if (!link.needData || (link?.needData && hasData)) {
                         <a (click)="activeLink = link" [routerLink]="link.route" class="side-nav-link">
-                            <button mat-button color="primary">
+                            <button 
+                                mat-icon-button color="primary"
+                                [matTooltip]="link.tooltip"
+                                matTooltipPosition="right"
+                            >
                                 <mat-icon>{{ link.icon }}</mat-icon>
-                                <span>{{ link.label }}</span>
                             </button>
                         </a>
                     }
                 }
                 <mat-divider />
-                <button mat-button color="primary" class="action-button" (click)="refreshData()">
+                <button mat-icon-button 
+                    color="primary" 
+                    class="action-button" 
+                    (click)="refreshData()"
+                    matTooltip="Refresh Data"
+                    matTooltipPosition="right"
+                >
                     <mat-icon>refresh</mat-icon>
-                    <span>Refresh Data</span>
                 </button>
-                <button mat-button color="warn" class="action-button" (click)="clearData()">
+                <button mat-icon-button 
+                    color="warn" 
+                    class="action-button" 
+                    (click)="clearData()"
+                    matTooltip="Nuke Data"
+                    matTooltipPosition="right"
+                >
                     <mat-icon>delete_forever</mat-icon>
-                    <span>Nuke Data</span>
                 </button>
             </mat-nav-list>
         </mat-sidenav>

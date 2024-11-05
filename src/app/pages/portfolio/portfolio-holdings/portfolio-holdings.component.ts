@@ -33,7 +33,7 @@ import { ContainerCardComponent } from "../../../shared/components/container-car
 import { ExpandedRowComponent } from "../../../shared/components/expanded-row/expanded-row.component";
 import { InfoCardComponent } from "../../../shared/components/info-card/info-card.component";
 import { PortfolioEditorComponent } from "../../../shared/components/portfolio/portfolio-editor/portfolio-editor.component";
-import { StockNameCardComponent } from "../../../shared/components/portfolio/stock-name-card/stock-name-card.component";
+import { StockTickerCardComponent } from "../../../shared/components/portfolio/stock-ticker-card/stock-ticker-card.component";
 import { TvSingleQuoteWidgetComponent } from "../../../shared/components/tradingview/tv-single-quote-widget/tv-single-quote-widget.component";
 import { StockPriceColorsEnum } from "../../../shared/model/colors.model";
 import { DataService } from "../../../shared/services/data.service";
@@ -73,7 +73,7 @@ import { DataService } from "../../../shared/services/data.service";
     NgStyle,
     NgxChartsModule,
     PercentPipe,
-    StockNameCardComponent,
+    StockTickerCardComponent,
     TitleCasePipe,
     TvSingleQuoteWidgetComponent,
     PortfolioEditorComponent,
@@ -105,7 +105,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
   allocationsBarChartColorScheme = { domain: ["slategrey"] } as Color;
   valueBarChartColorScheme = { domain: ["slategrey"] } as Color;
   dividendBarChartColorScheme = { domain: ["slategrey"] } as Color;
-  stackedBarChartColorScheme = { domain: ["slategrey", "skyblue"] } as Color;
+  stackedBarChartColorScheme = { domain: ["slategrey", "silver"] } as Color;
   totalCostChartData: any = [];
   allTotalCostChartData: any = [];
   dataSource = new MatTableDataSource<any>();
@@ -384,7 +384,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
       if (ticker.sector === data.name) {
         this.selectedSectorColors.push({
           name: ticker.name,
-          value: 'skyblue'
+          value: 'silver'
         })
       }
     });

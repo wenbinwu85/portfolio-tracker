@@ -61,6 +61,11 @@ export class PortfolioComponent {
       route: "analysis",
       icon: "calculate",
     });
+    this.navLinks.push({
+      label: "Watchlist",
+      route: "watchlists",
+      icon: "list",
+    });
     this.activeLink = this.navLinks[0];
   }
 }

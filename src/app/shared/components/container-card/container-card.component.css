@@ -1,7 +1,6 @@
 mat-card-header {
     padding-top: 1rem;
     padding-bottom: 0.75rem;
-    background-color: ghostwhite;
     border-radius: 1rem 1rem 0 0;
 }
 
@@ -34,4 +33,8 @@ mat-card-header {
     border-top-color: slategrey;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
+}
+
+.mat-divider {
+    border-top-color: slategrey;
 }

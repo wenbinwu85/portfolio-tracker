@@ -108,19 +108,6 @@
   @if (selectedTab === 'allocations') {
     <div class="add-flex">
       <div class="chart-container">
-        <ngx-charts-pie-chart
-          [view]="[0, 400]"
-          [scheme]="'air'"
-          [animations]="true"
-          [results]="sectorsData"
-          [title]="'Sector Allocations'"
-          [legend]="true"
-          [legendTitle]="'Sectors'"
-          [labels]="true"
-          (select)="onSelectSector($event)"          
-        />
-      </div>
-      <div class="chart-container">
         <ngx-charts-bar-vertical
           [scheme]="allocationsBarChartColorScheme"
           [results]="portfolioPercentData"
@@ -132,6 +119,18 @@
           [yAxisLabel]="'Holding Allocations %'"
           [roundEdges]="false"
           [customColors]="selectedSectorColors"
+        />
+      </div>
+      <div class="chart-container">
+        <ngx-charts-pie-chart
+          [view]="[0, 400]"
+          [scheme]="'air'"
+          [animations]="true"
+          [results]="sectorsData"
+          [title]="'Sector Allocations'"
+          [legend]="true"
+          [legendTitle]="'Sectors'"
+          (select)="onSelectSector($event)"          
         />
       </div>
     </div>
@@ -235,7 +234,7 @@
           @if (cidx === 0) {
             <div class="table-col-0">
               @if (!showTradingviewWidgets) {
-                <stock-name-card [stock]="stock" />
+                <stock-ticker-card [stock]="stock" />
               } @else {
                 <tv-single-quote-widget [symbol]="stock.symbol" class="single-quote-widget" />
               }

@@ -9,10 +9,9 @@ import {
   MatTableModule,
 } from "@angular/material/table";
 import { Color, NgxChartsModule } from "@swimlane/ngx-charts";
-import { EChartsOption } from "echarts";
 import { ContainerCardComponent } from "../../../shared/components/container-card/container-card.component";
 import { InfoCardComponent } from "../../../shared/components/info-card/info-card.component";
-import { StockNameCardComponent } from "../../../shared/components/portfolio/stock-name-card/stock-name-card.component";
+import { StockTickerCardComponent } from "../../../shared/components/portfolio/stock-ticker-card/stock-ticker-card.component";
 import { TickerButtonsComponent } from "../../../shared/components/ticker-buttons/ticker-buttons.component";
 import { DataService } from "../../../shared/services/data.service";
 
@@ -31,7 +30,7 @@ import { DataService } from "../../../shared/services/data.service";
     MatTableModule,
     NgxChartsModule,
     TickerButtonsComponent,
-    StockNameCardComponent,
+    StockTickerCardComponent,
   ],
 })
 export class PortfolioDividendTrackerComponent implements OnInit, AfterViewInit {
@@ -60,15 +59,9 @@ export class PortfolioDividendTrackerComponent implements OnInit, AfterViewInit 
   selectedSymbolLabel = "";
   infoCards: any[] = [];
   dividendLineChartData: any = [];
-  dividendChartColorScheme = { domain: ["steelblue"] } as Color;
+  dividendChartColorScheme = { domain: ["teal"] } as Color;
   currentMonth = new Date().getMonth();
   pieChartData: any = [];
-  echartOptions!: EChartsOption;
-  echartUpdateOptions: any = {
-    yAxis: {},
-    xAxis: { data: [] },
-    series: [{ data: [] }],
-  };
   dataSource = new MatTableDataSource<any>();
   headers = [
     "Symbol",
@@ -228,40 +221,6 @@ export class PortfolioDividendTrackerComponent implements OnInit, AfterViewInit 
   }
 
   updateChart(symbol: string, scroll: boolean = true) {
-    let options: any = {
-      title: {
-        text: "",
-      },
-      legend: {
-        data: ["Dividend $"],
-      },
-      tooltip: {},
-      xAxis: {
-        data: [],
-        splitLine: {
-          show: false,
-        },
-      },
-      yAxis: {},
-      series: [
-        {
-          name: "Dividend $",
-          type: "bar",
-          data: [],
-          emphasis: {
-            focus: "series",
-          },
-          animationDelay: function (idx: any) {
-            return idx * 10;
-          },
-        },
-      ],
-      animationEasing: "elasticOut",
-      animationDelayUpdate: function (idx: any) {
-        return idx * 5;
-      },
-    };
-
     const stock = this.dataSource.data.filter((stock: any) => stock.symbol === symbol)[0];
     let divData: any = {
       name: `${stock.symbol} | ${stock.shortName}`,
@@ -273,11 +232,8 @@ export class PortfolioDividendTrackerComponent implements OnInit, AfterViewInit 
         name: new Date(item[0].split("-").join(" ")),
         value: +item[1],
       });
-      options.xAxis.data.push(item[0].split("-").join(" "));
-      options.series[0].data.push(+item[1]);
     });
 
-    // this.echartOptions = options;
     this.dividendLineChartData = [divData];
     this.selectedSymbol = stock.symbol;
     this.selectedSymbolLabel = `

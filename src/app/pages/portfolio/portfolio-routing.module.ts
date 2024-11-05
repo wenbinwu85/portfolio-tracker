@@ -46,6 +46,13 @@ const routes: Routes = [
             (c) => c.PortfolioAnalysisComponent
           ),
       },
+      {
+        path: "watchlists",
+        loadComponent: () =>
+          import("./portfolio-watchlists/portfolio-watchlists.component").then(
+            (c) => c.PortfolioWatchlistsComponent
+          ),
+      },
     ],
   }
 ];

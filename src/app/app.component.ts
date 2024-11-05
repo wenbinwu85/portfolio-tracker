@@ -6,6 +6,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatListModule } from "@angular/material/list";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatTooltipModule } from "@angular/material/tooltip";
 import { Router, RouterLink, RouterOutlet } from "@angular/router";
 import { AppFooterComponent } from "./shared/components/app-footer/app-footer.component";
 import { AppHeaderComponent } from "./shared/components/app-header/app-header.component";
@@ -24,6 +25,7 @@ import { DataService } from "./shared/services/data.service";
     MatListModule,
     MatSidenavModule,
     MatToolbarModule,
+    MatTooltipModule,
     RouterLink,
     RouterOutlet,
     TvTickersWidgetComponent,
@@ -35,29 +37,23 @@ export class AppComponent {
   title = "Ben's Incredibly Great Financial Assets Report & Tracker";
   navLinks = [
     {
-      label: "Home",
+      tooltip: "Home",
       route: "",
       icon: "home",
     },
     {
-      label: "Portfolio",
+      tooltip: "Portfolio",
       route: "/portfolio/portfolio",
       icon: "ballot",
       needData: true,
     },
     {
-      label: "Watchlists",
-      route: "/watchlists",
-      icon: "list",
-      needData: true,
-    },
-    {
-      label: "Toolbox",
+      tooltip: "Toolbox",
       route: "/toolbox",
       icon: "handyman",
     },
     {
-      label: "Live Streams",
+      tooltip: "Live Streams",
       route: "/streams",
       icon: "live_tv",
     },

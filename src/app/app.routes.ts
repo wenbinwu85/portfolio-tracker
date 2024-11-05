@@ -26,14 +26,6 @@ export const routes: Routes = [
       ),
   },
   {
-    path: "watchlists",
-    canActivate: [mainGuardGuard],
-    loadComponent: () =>
-      import("./pages/watchlists/watchlists.component").then(
-        (c) => c.WatchlistsComponent
-      ),
-  },
-  {
     path: "toolbox",
     loadComponent: () =>
       import("./pages/toolbox/toolbox.component").then(
