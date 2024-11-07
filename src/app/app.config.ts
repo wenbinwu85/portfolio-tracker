@@ -9,22 +9,22 @@ import { routes } from "./app.routes";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDqlzX7-y_fDi5BdF_DvZLQNJfR4iRgDTw",
+  appId: "1:646338031441:web:c1b61d6869db02f8d4ad70",
   authDomain: "big-fart.firebaseapp.com",
+  measurementId: "G-SZHV5PMP62",
+  messagingSenderId: "646338031441",
   projectId: "big-fart",
   storageBucket: "big-fart.appspot.com",
-  messagingSenderId: "646338031441",
-  appId: "1:646338031441:web:c1b61d6869db02f8d4ad70",
-  measurementId: "G-SZHV5PMP62",
 };
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideHttpClient(),
     provideAnimations(),
     provideClientHydration(),
-    provideHttpClient(withFetch()),
-    provideRouter(routes),
     provideFirebaseApp(() => initializeApp(firebaseConfig)),
     provideFirestore(() => getFirestore()),
+    provideHttpClient(),
+    provideHttpClient(withFetch()),
+    provideRouter(routes),
   ],
 };

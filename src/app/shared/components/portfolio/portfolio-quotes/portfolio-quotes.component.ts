@@ -54,13 +54,13 @@ export class PortfolioQuotesComponent {
   chartConfigs = {
     preMarket: {
       text: "Pre Market",
-      toggleText: "Pre Market Chart",
+      toggleText: "Pre Market",
       priceChange: "preMarketChange",
       priceChangePercent: "preMarketChangePercent",
     },
     postMarket: {
       text: "Post Market",
-      toggleText: "Post Market Chart",
+      toggleText: "Post Market",
       priceChange: "postMarketChange",
       priceChangePercent: "postMarketChangePercent",
     },

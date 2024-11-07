@@ -12,7 +12,6 @@
         <div class="subcontent-wrapper">
             @if (!prefix.startsWith('pre')) {
                 <div class="add-flex">
-                    <span>Regular Market </span>
                     <mat-icon>schedule</mat-icon>
                     <span [ngStyle]="{ color: getDayPriceChangeColor() }">
                         {{ priceChange | currency }}
@@ -24,7 +23,6 @@
             }
             @if (!prefix.startsWith('regular')) {
                 <div class="add-flex">
-                    <span>{{ prePostHourText }}</span>
                     <mat-icon>{{ prePostHourIcon }}</mat-icon>
                     <span [ngStyle]="{ color: getPrePostPriceChangeColor() }">
                         {{ prePostPriceChange | currency }}
@@ -57,9 +55,9 @@
                     [xAxis]="true"
                     [yAxis]="true"
                     [showYAxisLabel]="true"
+                    [showXAxisLabel]="true"
                     [rotateXAxisTicks]="true"
                     [animations]="true"
-                    [showDataLabel]="true"
                     [yAxisLabel]="'Price Change %'"
                     [customColors]="getPriceChangeChartColor"
                     [roundEdges]="false"
@@ -79,6 +77,7 @@
                     [xAxis]="true"
                     [yAxis]="true"
                     [showYAxisLabel]="true"
+                    [showXAxisLabel]="true"
                     [rotateXAxisTicks]="true"
                     [animations]="true"
                     [yAxisLabel]="'Market Day Price Range $'"

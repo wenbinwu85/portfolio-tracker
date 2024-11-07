@@ -1,20 +1,12 @@
 import { Component } from '@angular/core';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatTabsModule } from '@angular/material/tabs';
-import {
-  ContainerCardComponent,
-} from '../../shared/components/container-card/container-card.component';
-import {
-  InfoCardComponent,
-} from '../../shared/components/info-card/info-card.component';
-import {
-  PortfolioQuotesComponent,
-} from '../../shared/components/portfolio/portfolio-quotes/portfolio-quotes.component';
+import { ContainerCardComponent } from '../../shared/components/container-card/container-card.component';
+import { InfoCardComponent } from '../../shared/components/info-card/info-card.component';
+import { PortfolioQuotesComponent } from '../../shared/components/portfolio/portfolio-quotes/portfolio-quotes.component';
 import { TvMiniChartWidgetComponent } from '../../shared/components/tradingview/tv-mini-chart-widget/tv-mini-chart-widget.component';
 import { TvSymbolOverviewWidgetComponent } from '../../shared/components/tradingview/tv-symbol-overview-widget/tv-symbol-overview-widget.component';
-import { AlpacaApiService } from '../../shared/services/alpaca-api.service';
 import { DataService } from '../../shared/services/data.service';
-import { FirebaseService } from '../../shared/services/firebase.service';
 
 @Component({
   selector: 'app-homepage',

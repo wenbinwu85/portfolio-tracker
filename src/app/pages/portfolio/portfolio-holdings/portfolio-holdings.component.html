@@ -15,14 +15,14 @@
   />
   <info-card
     [value]="portfolioHoldings?.unrealizedGain"
-    subtitle="Unrealized Gain"
+    subtitle="Unrealized Gain $"
     valueType="currency"
     [color]="portfolioHoldings?.unrealizedGain > 0 ? 'teal' : 'chocolate'"
   />
   <info-card
     [value]="portfolioHoldings?.unrealizedGainPercent"
     valueType="percentage"
-    subtitle="Unrealized Gain Percent"
+    subtitle="Unrealized Gain %"
     [color]="portfolioHoldings?.unrealizedGainPercent > 0 ? 'teal' : 'chocolate'"
   />
 
@@ -30,7 +30,7 @@
     <info-card
       [value]="portfolioHoldings?.dividendIncome"
       valueType="currency"
-      subtitle="Projected Annual Income"
+      subtitle="Annual Income"
     />
     <info-card
       [value]="portfolioHoldings?.yield"
@@ -58,55 +58,71 @@
 </ng-template>
 
 <ng-template #portfolioDetailsRef>
-  <section class="goals-container">
-    <div class="goal-container add-margin">
-      <h6>Dividend Income Target</h6>
-      <mat-slider
-        [min]="0"
-        [max]="passiveIncomeTarget"
-        [step]="120"
-        [showTickMarks]="true"
-        [color]="'primary'"
-      >
-        <input
-          matSliderThumb
-          [value]="portfolioHoldings?.dividendIncome"
-          [matTooltip]="getTooltip('passive')"
-          matTooltipPosition="above"
-        />
-      </mat-slider>
-      <div class="goal-labels">
-        <mat-chip>{{ "0" | currency }}</mat-chip>
-        <mat-chip>{{ passiveIncomeTarget | currency }}</mat-chip>
-      </div>
-    </div>
-    <div class="goal-container add-margin">
-      <h6>Portfolio Value Target</h6>
-      <mat-slider
-        [min]="0"
-        [max]="portfolioValueTarget"
-        [step]="1000"
-        [showTickMarks]="true"
-        [color]="'primary'"
-      >
-        <input
-          matSliderThumb
-          [value]="portfolioHoldings?.marketValue"
-          [matTooltip]="getTooltip('investment')"
-          matTooltipPosition="above"
-        />
-      </mat-slider>
-      <div class="goal-labels">
-        <mat-chip>{{ "0" | currency }}</mat-chip>
-        <mat-chip>{{ portfolioValueTarget | currency }}</mat-chip>
-      </div>
-    </div>
-  </section>
-
-  <mat-divider></mat-divider>
-
   @if (selectedTab === 'allocations') {
+    <section class="goals-container">
+      <div class="goal-container add-margin">
+        <h6>Dividend Income Target</h6>
+        <mat-slider
+          [min]="0"
+          [max]="passiveIncomeTarget"
+          [step]="120"
+          [showTickMarks]="true"
+          [color]="'primary'"
+          disabled
+        >
+          <input
+            matSliderThumb
+            [value]="portfolioHoldings?.dividendIncome"
+            [matTooltip]="getTooltip('passive')"
+            matTooltipPosition="above"
+          />
+        </mat-slider>
+        <div class="goal-labels">
+          <mat-chip>{{ "0" | currency }}</mat-chip>
+          <mat-chip>{{ passiveIncomeTarget | currency }}</mat-chip>
+        </div>
+      </div>
+      <div class="goal-container add-margin">
+        <h6>Portfolio Value Target</h6>
+        <mat-slider
+          [min]="0"
+          [max]="portfolioValueTarget"
+          [step]="1000"
+          [showTickMarks]="true"
+          [color]="'primary'"
+          disabled
+        >
+          <input
+            matSliderThumb
+            [value]="portfolioHoldings?.marketValue"
+            [matTooltip]="getTooltip('investment')"
+            matTooltipPosition="above"
+          />
+        </mat-slider>
+        <div class="goal-labels">
+          <mat-chip>{{ "0" | currency }}</mat-chip>
+          <mat-chip>{{ portfolioValueTarget | currency }}</mat-chip>
+        </div>
+      </div>
+    </section>
+  
+    <mat-divider></mat-divider>
+
     <div class="add-flex">
+      <div class="chart-container">
+        <ngx-charts-pie-chart
+          [view]="[0, 400]"
+          [scheme]="'natural'"
+          [animations]="true"
+          [results]="sectorsData"
+          [title]="'Sector Allocations'"
+          [legend]="true"
+          [legendTitle]="'Sectors'"
+          [doughnut]="true"
+          [arcWidth]="0.3"
+          (select)="onSelectSector($event)"
+        />
+      </div>
       <div class="chart-container">
         <ngx-charts-bar-vertical
           [scheme]="allocationsBarChartColorScheme"
@@ -114,23 +130,10 @@
           [animations]="true"
           [xAxis]="true"
           [yAxis]="true"
-          [showXAxisLabel]="true"
           [showYAxisLabel]="true"
           [yAxisLabel]="'Holding Allocations %'"
           [roundEdges]="false"
           [customColors]="selectedSectorColors"
-        />
-      </div>
-      <div class="chart-container">
-        <ngx-charts-pie-chart
-          [view]="[0, 400]"
-          [scheme]="'air'"
-          [animations]="true"
-          [results]="sectorsData"
-          [title]="'Sector Allocations'"
-          [legend]="true"
-          [legendTitle]="'Sectors'"
-          (select)="onSelectSector($event)"          
         />
       </div>
     </div>
@@ -138,7 +141,7 @@
   @if (selectedTab === 'cost-basis') {
     <div class="add-flex">
       <div class="chart-container">
-        <ngx-charts-pie-grid 
+        <ngx-charts-pie-grid
           [scheme]="'picnic'"
           [animations]="true" 
           [results]="totalCostChartData" 
@@ -156,7 +159,6 @@
           [animations]="true"
           [xAxis]="true"
           [yAxis]="true"
-          [showXAxisLabel]="true"
           [showYAxisLabel]="true"
           [yAxisLabel]="'Cost Basis & Unrealized Gain'"
         />
@@ -167,7 +169,6 @@
           [animations]="true"
           [xAxis]="true"
           [yAxis]="true"
-          [showXAxisLabel]="true"
           [showYAxisLabel]="true"
           [yAxisLabel]="'Unrealized Gain %'"
           [roundEdges]="false"
@@ -185,7 +186,6 @@
           [animations]="true"
           [xAxis]="true"
           [yAxis]="true"
-          [showXAxisLabel]="true"
           [showYAxisLabel]="true"
           [yAxisLabel]="'Dividend Income'"
           [roundEdges]="false"
@@ -199,7 +199,6 @@
           [animations]="true"
           [xAxis]="true"
           [yAxis]="true"
-          [showXAxisLabel]="true"
           [showYAxisLabel]="true"
           [yAxisLabel]="'Yield On Cost %'"
           [roundEdges]="false"

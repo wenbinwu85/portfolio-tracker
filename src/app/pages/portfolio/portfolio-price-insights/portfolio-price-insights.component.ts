@@ -67,10 +67,10 @@ export class PortfolioPriceInsightsComponent implements OnInit {
   selectedSymbol: any;
   selectedStock: any;
   selectedSymbolColor: any;
-  betaColorScheme = { domain: [ChartColorsEnum.Dark] } as Color;
-  performanceChartColorScheme = { domain: [ChartColorsEnum.Dark] } as Color;
-  fiftyTwoWeekChartColorScheme = { domain: [ChartColorsEnum.Dark] } as Color;
-  targetPriceChartColorScheme = { domain: [ChartColorsEnum.Dark] } as Color;
+  betaColorScheme = { domain: ['silver'] } as Color;
+  performanceChartColorScheme = { domain: ['silver'] } as Color;
+  fiftyTwoWeekChartColorScheme = { domain: ['silver'] } as Color;
+  targetPriceChartColorScheme = { domain: ['silver'] } as Color;
 
   constructor(
     private dataService: DataService,
@@ -86,7 +86,7 @@ export class PortfolioPriceInsightsComponent implements OnInit {
     this.selectedSymbol =
       this.sortedStocks[0]?.symbol || this.sortedEtfs[0]?.symbol;
     this.selectedStock = this.dataService.getTickerData(this.selectedSymbol);
-    this.selectedSymbolColor = { name: this.selectedSymbol, value: "chocolate" };
+    this.selectedSymbolColor = { name: this.selectedSymbol, value: ChartColorsEnum.Dark };
     this.selectedPerformanceChart = this.sortedStocks.length ? 1 : 2;
 
     this.sortedStocks.forEach((stock: any) => {
@@ -211,7 +211,7 @@ export class PortfolioPriceInsightsComponent implements OnInit {
     this.selectedSymbol = null;
     this.cdr.detectChanges();
     this.selectedSymbol = symbol;
-    this.selectedSymbolColor = { name: symbol, value: "chocolate" };
+    this.selectedSymbolColor = { name: symbol, value: ChartColorsEnum.Dark };
     this.selectedStock = [this.dataService.getTickerData(symbol)];
     if (this.selectedStock[0].quoteType === "ETF") {
       this.changePerformanceChart(2);

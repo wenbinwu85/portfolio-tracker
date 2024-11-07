@@ -349,7 +349,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
           ? StockPriceColorsEnum.Gain
           : StockPriceColorsEnum.Lost;
       case 11:
-        return stock.rating === "buy" ? "teal" : "black";
+        return stock.rating === "buy" ? StockPriceColorsEnum.Gain : "black";
       default:
         return "black";
     }
@@ -399,7 +399,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
 
   getGainLostColor = (symbol: any) => { 
     const unrealizedGainPercent = this.portfolioHoldings[symbol].unrealizedGainPercent;
-    return unrealizedGainPercent > 0 ? 'teal' : 'chocolate';
+    return unrealizedGainPercent > 0 ? StockPriceColorsEnum.Gain : StockPriceColorsEnum.Gain;
   }
 
   openPortfolioEditor() { 

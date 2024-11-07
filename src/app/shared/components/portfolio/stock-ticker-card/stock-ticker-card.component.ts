@@ -47,7 +47,7 @@ export class StockTickerCardComponent {
     this.currentPrice = this.stock[prefix + "Price"];
     this.changePercent = this.stock[prefix + "ChangePercent"];
     this.priceColor = this.helperService.getStockPriceColor(this.stock.symbol);
-    this.borderLeftStyle = "0.5rem solid " + this.priceColor;
+    this.borderLeftStyle = "0.25rem solid " + this.priceColor;
   }
 
   openInfoSheet() {

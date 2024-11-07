@@ -49,6 +49,10 @@ mat-slider {
   background: none !important;
 }
 
+::ng-deep .chart-legend {
+  margin-top: 2rem;
+}
+
 table {
   margin-top: 0px;
 }
