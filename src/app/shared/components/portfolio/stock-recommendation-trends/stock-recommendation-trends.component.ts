@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Color, NgxChartsModule, ScaleType } from '@swimlane/ngx-charts';
 import { DataService } from '../../../services/data.service';
 
@@ -10,7 +10,7 @@ import { DataService } from '../../../services/data.service';
   styleUrl: './stock-recommendation-trends.component.css'
 })
 export class StockRecommendationTrendsComponent implements OnInit {
-  @Input({ required: true }) symbol: string = 'AAPL';
+  @Input({ required: true }) symbol!: string;
   @Input() height?: number;
   stockData: any;
   recommendationTrends: any;

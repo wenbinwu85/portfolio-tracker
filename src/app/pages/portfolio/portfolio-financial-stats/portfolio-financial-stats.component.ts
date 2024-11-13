@@ -75,7 +75,7 @@ export class PortfolioFinancialStatsComponent implements OnInit, AfterViewInit {
     "returnOnEquity",
     "enterpriseToEbitda",
     "enterpriseToRevenue",
-    "enterpriseToFreeCashflow",
+    "enterpriseValueToFreeCashflow",
   ];
   etfHeaders = [
     "Symbol",

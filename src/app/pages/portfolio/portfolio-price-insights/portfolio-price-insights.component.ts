@@ -67,10 +67,10 @@ export class PortfolioPriceInsightsComponent implements OnInit {
   selectedSymbol: any;
   selectedStock: any;
   selectedSymbolColor: any;
-  betaColorScheme = { domain: ['silver'] } as Color;
-  performanceChartColorScheme = { domain: ['silver'] } as Color;
-  fiftyTwoWeekChartColorScheme = { domain: ['silver'] } as Color;
-  targetPriceChartColorScheme = { domain: ['silver'] } as Color;
+  betaColorScheme = { domain: [ChartColorsEnum.Light] } as Color;
+  performanceChartColorScheme = { domain: [ChartColorsEnum.Light] } as Color;
+  fiftyTwoWeekChartColorScheme = { domain: [ChartColorsEnum.Light] } as Color;
+  targetPriceChartColorScheme = { domain: [ChartColorsEnum.Light] } as Color;
 
   constructor(
     private dataService: DataService,

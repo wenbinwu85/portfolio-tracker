@@ -3,11 +3,12 @@
   [matTooltip]="tooltip"
   matTooltipPosition="above"
 >
-  <mat-slider 
+  <mat-slider
+    disabled
     [min]="min * 100" 
     [max]="max * 100"
     [showTickMarks]="true"
-    [step]="5"
+    [step]="10"
     class="slider"
   >
     <input [value]="lowThumbValue * 100" matSliderStartThumb>

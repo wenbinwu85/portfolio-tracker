@@ -9,8 +9,7 @@
             @for (link of navLinks; track link.route) {
                 <a
                     mat-tab-link
-                    (click)="activeLink = link"
-                    [active]="activeLink == link"
+                    [active]="router.isActive('/portfolio/' + link.route, true)"
                     [routerLink]="link.route"
                 >
                     <mat-icon>{{ link.icon }}</mat-icon>

@@ -1,9 +1,10 @@
 .chart-container {
     display: flex;
+    justify-content: space-evenly;
     height: max-content;
 }
 
 container-card {
     display: block;
-    width: max-content;
+    width: min-content;
 }

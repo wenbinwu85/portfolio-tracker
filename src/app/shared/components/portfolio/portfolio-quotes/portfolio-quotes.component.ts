@@ -45,7 +45,7 @@ export class PortfolioQuotesComponent {
   priceChangeChartData: any = [];
   priceRangeChartData: any = [];
   stockNames: any = [];
-  priceRangeColorScheme = { domain: [ChartColorsEnum.Dark, 'silver'] } as Color;
+  priceRangeColorScheme = { domain: [ChartColorsEnum.Dark, ChartColorsEnum.Light] } as Color;
   scaleType = ScaleType;
   selectedChart = 1;
   prefix: any;

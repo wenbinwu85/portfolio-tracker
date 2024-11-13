@@ -5,5 +5,6 @@ export enum StockPriceColorsEnum {
 
 export enum ChartColorsEnum { 
     Dark = 'slategrey',
-    Light = 'steelblue'
+    Light = 'silver',
+    Highlight = 'gold',
 }

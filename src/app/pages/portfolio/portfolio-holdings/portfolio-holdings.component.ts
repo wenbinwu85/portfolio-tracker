@@ -35,7 +35,7 @@ import { InfoCardComponent } from "../../../shared/components/info-card/info-car
 import { PortfolioEditorComponent } from "../../../shared/components/portfolio/portfolio-editor/portfolio-editor.component";
 import { StockTickerCardComponent } from "../../../shared/components/portfolio/stock-ticker-card/stock-ticker-card.component";
 import { TvSingleQuoteWidgetComponent } from "../../../shared/components/tradingview/tv-single-quote-widget/tv-single-quote-widget.component";
-import { StockPriceColorsEnum } from "../../../shared/model/colors.model";
+import { ChartColorsEnum, StockPriceColorsEnum } from "../../../shared/model/colors.model";
 import { DataService } from "../../../shared/services/data.service";
 
 @Component({
@@ -102,10 +102,10 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
   unrealizedGainData: any[] = [];
   dividendData: any[] = [];
   yocData: any[] = [];
-  allocationsBarChartColorScheme = { domain: ["slategrey"] } as Color;
-  valueBarChartColorScheme = { domain: ["slategrey"] } as Color;
-  dividendBarChartColorScheme = { domain: ["slategrey"] } as Color;
-  stackedBarChartColorScheme = { domain: ["slategrey", "silver"] } as Color;
+  allocationsBarChartColorScheme = { domain: [ChartColorsEnum.Dark] } as Color;
+  valueBarChartColorScheme = { domain: [ChartColorsEnum.Dark] } as Color;
+  dividendBarChartColorScheme = { domain: [ChartColorsEnum.Dark] } as Color;
+  stackedBarChartColorScheme = { domain: [ChartColorsEnum.Dark, ChartColorsEnum.Light] } as Color;
   totalCostChartData: any = [];
   allTotalCostChartData: any = [];
   dataSource = new MatTableDataSource<any>();
@@ -175,6 +175,8 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     this.portfolioValueTarget = this.passiveIncomeTarget / this.portfolioHoldings.yieldOnCost;
     this.passiveIncomeGoalPercentage = this.portfolioHoldings.dividendIncome / this.passiveIncomeTarget;
     this.portfolioValueGoalPercentage = this.portfolioHoldings.marketValue / this.portfolioValueTarget;
+
+    console.log(this.portfolioData['AAPL'])
 
     const market_sector_values: any = {};
     this.portfolioSymbols?.forEach((symbol: any) => {
@@ -384,7 +386,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
       if (ticker.sector === data.name) {
         this.selectedSectorColors.push({
           name: ticker.name,
-          value: 'silver'
+          value: ChartColorsEnum.Light
         })
       }
     });
@@ -399,7 +401,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
 
   getGainLostColor = (symbol: any) => { 
     const unrealizedGainPercent = this.portfolioHoldings[symbol].unrealizedGainPercent;
-    return unrealizedGainPercent > 0 ? StockPriceColorsEnum.Gain : StockPriceColorsEnum.Gain;
+    return unrealizedGainPercent > 0 ? StockPriceColorsEnum.Gain : StockPriceColorsEnum.Lost;
   }
 
   openPortfolioEditor() { 

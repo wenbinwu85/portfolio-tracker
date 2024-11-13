@@ -29,7 +29,7 @@ export class PortfolioComponent {
   activeLink: any;
 
   constructor(
-    private cdr: ChangeDetectorRef,
+    public router: Router,
     private dataService: DataService,
   ) {
     this.navLinks = [
