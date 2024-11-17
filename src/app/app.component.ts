@@ -61,6 +61,8 @@ export class AppComponent {
   activeLink = this.navLinks[0];
   mobileQuery: MediaQueryList;
   hasData: any;
+  showFartPic = false;
+  showTickerTape = false;
   private _mobileQueryListener: () => void;
 
   constructor(
@@ -79,6 +81,14 @@ export class AppComponent {
 
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
+  }
+
+  toggleTickerTape() {
+    this.showTickerTape = !this.showTickerTape;
+  }
+
+  togglePerson() {
+    this.showFartPic = !this.showFartPic;
   }
 
   refreshData() { 

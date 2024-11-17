@@ -53,6 +53,10 @@ mat-nav-list {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    div {
+        cursor: pointer;
+    }
 }
 
 tv-tickers-widget {

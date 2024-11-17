@@ -11,6 +11,7 @@ import { HomepageComponent } from "../../../pages/homepage/homepage.component";
 import { ToolboxComponent } from "../../../pages/toolbox/toolbox.component";
 import { DataService } from "../../services/data.service";
 import { TvTickersWidgetComponent } from "../tradingview/tv-tickers-widget/tv-tickers-widget.component";
+import { MatTooltipModule } from "@angular/material/tooltip";
 
 @Component({
   selector: 'app-header',
@@ -18,13 +19,14 @@ import { TvTickersWidgetComponent } from "../tradingview/tv-tickers-widget/tv-ti
   styleUrls: ['./app-header.component.css'],
   standalone: true,
   imports: [
+    HomepageComponent,
     MatButtonModule,
     MatDividerModule,
     MatIconModule,
     MatProgressBarModule,
     MatTabsModule,
+    MatTooltipModule,
     PortfolioComponent,
-    HomepageComponent,
     RouterLink,
     RouterOutlet,
     TitleCasePipe,

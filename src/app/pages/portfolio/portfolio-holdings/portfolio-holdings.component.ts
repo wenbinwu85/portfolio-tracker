@@ -11,7 +11,7 @@ import {
   PercentPipe,
   TitleCasePipe,
 } from "@angular/common";
-import { AfterViewInit, ChangeDetectorRef, Component, OnInit, ViewChild } from "@angular/core";
+import { AfterViewInit, Component, OnInit, ViewChild } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
 import { MatChipsModule } from "@angular/material/chips";
 import { MatDividerModule } from "@angular/material/divider";
@@ -115,7 +115,6 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     "Average Cost x shares",
     "Total Invested",
     "Market Value",
-    "Portfolio %",
     "Unrealized Gain",
     "Unrealized Gain %",
     "Dividend Income",
@@ -128,7 +127,6 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     "costAverage",
     "totalCost",
     "marketValue",
-    "portfolioPercent",
     "unrealizedGain",
     "unrealizedGainPercent",
     "dividendIncome",
@@ -141,7 +139,6 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     (stock: any) => "",
     (stock: any) => `$${stock.totalCost}`,
     (stock: any) => `$${stock.marketValue.toFixed(2)}`,
-    (stock: any) => `${(stock.portfolioPercent * 100).toFixed(2)}%`,
     (stock: any) => "",
     (stock: any) => `${(stock.unrealizedGainPercent * 100).toFixed(2)}%`,
     (stock: any) => `$${stock.dividendIncome.toFixed(2)}`,
@@ -155,7 +152,6 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     () => "",
     () => `$${this.portfolioHoldings.totalAmountInvested.toFixed(2)}`,
     () => `$${this.portfolioHoldings.marketValue.toFixed(2)}`,
-    () => "",
     () => `$${this.portfolioHoldings.unrealizedGain.toFixed(2)}`,
     () => "",
     () => `$${this.portfolioHoldings.dividendIncome.toFixed(2)}`,
@@ -175,8 +171,6 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     this.portfolioValueTarget = this.passiveIncomeTarget / this.portfolioHoldings.yieldOnCost;
     this.passiveIncomeGoalPercentage = this.portfolioHoldings.dividendIncome / this.passiveIncomeTarget;
     this.portfolioValueGoalPercentage = this.portfolioHoldings.marketValue / this.portfolioValueTarget;
-
-    console.log(this.portfolioData['AAPL'])
 
     const market_sector_values: any = {};
     this.portfolioSymbols?.forEach((symbol: any) => {

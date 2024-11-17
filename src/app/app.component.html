@@ -1,7 +1,9 @@
 <div class="main-container" [class.is-mobile]="mobileQuery.matches">
-    <mat-toolbar class="toolbar">
-        <tv-tickers-widget [tape]="true" />
-    </mat-toolbar>
+    @if (showTickerTape) {
+        <mat-toolbar class="toolbar">
+            <tv-tickers-widget [tape]="true" />
+        </mat-toolbar>
+    }
 
     <mat-sidenav-container 
         class="sidenav-container"
@@ -15,6 +17,13 @@
             fixedTopGap="56"
         >
             <mat-nav-list>
+                <div [matTooltip]="showFartPic ? 'Pooooo!' : 'Heeeeello!'" matTooltipPosition="right" (click)="togglePerson()">
+                    @if (showFartPic) {
+                        <img [src]="'../assets/fart.png'" alt="Oops!" width="40px" height="auto">
+                    } @else {
+                        <img [src]="'../assets/person.png'" alt="Hello!" width="40px" height="auto">
+                    }
+                </div>
                 @for (link of navLinks; track $index) {
                     @if (!link.needData || (link?.needData && hasData)) {
                         <a (click)="activeLink = link" [routerLink]="link.route" class="side-nav-link">
@@ -29,6 +38,15 @@
                     }
                 }
                 <mat-divider />
+                <button mat-icon-button 
+                    color="primary" 
+                    class="action-button" 
+                    (click)="toggleTickerTape()"
+                    matTooltip="Ticker Tape"
+                    matTooltipPosition="right"
+                >
+                    <mat-icon>{{ showTickerTape ? 'toggle_on' : 'toggle_off' }}</mat-icon>
+                </button>
                 <button mat-icon-button 
                     color="primary" 
                     class="action-button" 
