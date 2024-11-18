@@ -55,7 +55,7 @@ export class HomepageComponent {
           });
         this.gradingHistory.push(...gradingHistory)
 
-        const activities = stock.insiderTransactions;
+        const activities = stock.insiderTransactions || [];
         if (activities.length > 0) { 
           this.insiderActivities.push(
             ...activities

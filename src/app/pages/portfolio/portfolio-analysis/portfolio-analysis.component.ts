@@ -1,14 +1,17 @@
 import { CommonModule } from "@angular/common";
-import { Component, OnInit } from "@angular/core";
+import { ChangeDetectorRef, Component, OnInit } from "@angular/core";
 import { MatIconModule } from "@angular/material/icon";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { MatTabsModule } from "@angular/material/tabs";
+import { NgxChartsModule } from "@swimlane/ngx-charts";
 import { ContainerCardComponent } from "../../../shared/components/container-card/container-card.component";
 import { InfoCardComponent } from "../../../shared/components/info-card/info-card.component";
-import { TickerButtonsComponent } from "../../../shared/components/ticker-buttons/ticker-buttons.component";
 import { StockEarningsChartComponent } from "../../../shared/components/portfolio/stock-earnings-chart/stock-earnings-chart.component";
-import { DataService } from "../../../shared/services/data.service";
 import { StockTickerChipComponent } from "../../../shared/components/portfolio/stock-ticker-chip/stock-ticker-chip.component";
+import { TickerButtonsComponent } from "../../../shared/components/ticker-buttons/ticker-buttons.component";
+import { StockPriceColorsEnum } from "../../../shared/model/colors.model";
+import { DataService } from "../../../shared/services/data.service";
+import { StockRecommendationTrendsComponent } from "../../../shared/components/portfolio/stock-recommendation-trends/stock-recommendation-trends.component";
 
 @Component({
   selector: 'app-portfolio-analysis',
@@ -20,7 +23,9 @@ import { StockTickerChipComponent } from "../../../shared/components/portfolio/s
     MatIconModule,
     MatSlideToggleModule,
     MatTabsModule,
+    NgxChartsModule,
     StockEarningsChartComponent,
+    StockRecommendationTrendsComponent,
     StockTickerChipComponent,
     TickerButtonsComponent,
   ],
@@ -28,10 +33,57 @@ import { StockTickerChipComponent } from "../../../shared/components/portfolio/s
   styleUrls: ['./portfolio-analysis.component.css'],
 })
 export class PortfolioAnalysisComponent implements OnInit {
-  stocks: any;
-  constructor(private dataService: DataService) {}
+  insights: any;
+  snapshotChartData: any = {};
+  selectedTicker: any;
+
+  constructor(private dataService: DataService, private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
-    this.stocks = this.dataService.portfolioStocks;
+    this.changeTicker(this.dataService.portfolioSymbols[0]);
+  }
+
+  generateSnapshotChartData(symbol: string) {
+    const snapshotData = this.insights.companySnapshot;
+    const companySnapshot: any = {
+      name: symbol,
+      series: []
+    }
+    const sectorSnapshot: any = {
+      name: snapshotData.sectorInfo,
+      series: []
+    }
+    Object.keys(snapshotData.company).forEach((metric: string) => {
+      const metricName = metric.replace(/([A-Z])/g, ' $1').toUpperCase();
+      companySnapshot.series.push({
+        name: metricName,
+        value: snapshotData.company[metric],
+      });
+
+      sectorSnapshot.series.push({
+        name: metricName,
+        value: snapshotData.sector[metric],
+      });
+    });
+    return [companySnapshot, sectorSnapshot];
+  }
+
+  getOutlookTextColor(outlookDirection: string) {
+    switch (outlookDirection) {
+      case "Bullish":
+        return StockPriceColorsEnum.Gain;
+      case "Bearish":
+        return StockPriceColorsEnum.Lost;
+      default:
+        return "steelblue";
+    }
+  }
+
+  changeTicker(symbol: string) {
+    this.selectedTicker = null;
+    this.cdr.detectChanges();
+    this.selectedTicker = this.dataService.getTickerData(symbol);
+    this.insights = this.dataService.getTickerTechnicalInsights(symbol);
+    this.snapshotChartData = this.generateSnapshotChartData(symbol);
   }
 }

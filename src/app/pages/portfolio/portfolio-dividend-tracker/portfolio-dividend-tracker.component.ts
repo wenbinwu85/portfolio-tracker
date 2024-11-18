@@ -147,9 +147,9 @@ export class PortfolioDividendTrackerComponent implements OnInit, AfterViewInit 
           regularMarketPrice: stock.regularMarketPrice.raw,
           regularMarketChange: stock.regularMarketChange.raw,
           regularMarketChangePercent: stock.regularMarketChangePercent.raw,
-          preMarketPrice: stock.preMarketPrice.raw,
+          preMarketPrice: stock.preMarketPrice?.raw || 0,
           preMarketChangePercent: stock.preMarketChangePercent?.raw || 0,
-          postMarketPrice: stock.postMarketPrice.raw,
+          postMarketPrice: stock.postMarketPrice?.raw || 0,
           postMarketChangePercent: stock.postMarketChangePercent?.raw || 0,
           payoutRatio: stock.payoutRatio?.raw * 100 || 0
         };

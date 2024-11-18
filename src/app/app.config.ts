@@ -14,7 +14,7 @@ const firebaseConfig = {
   measurementId: "G-SZHV5PMP62",
   messagingSenderId: "646338031441",
   projectId: "big-fart",
-  storageBucket: "big-fart.appspot.com",
+  storageBucket: "big-fart.firebasestorage.app",
 };
 
 export const appConfig: ApplicationConfig = {

@@ -102,8 +102,8 @@ export class AppComponent {
   clearData() {
     this.dataService.stores?.clearStore('sessionStorage');
     this.dataService.stores?.clearStore('localStorage');
-    this.router.navigate([""]);
     setTimeout(() => {
+      this.router.navigate(["/main"]);
       window.location.reload();
     }, 500);
   }

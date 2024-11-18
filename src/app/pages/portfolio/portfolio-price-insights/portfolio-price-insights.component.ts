@@ -129,7 +129,7 @@ export class PortfolioPriceInsightsComponent implements OnInit {
 
       this.betaChartData.push({
         name: stock.symbol,
-        value: stock.beta.raw || 0,
+        value: stock.beta?.raw || 0,
       });
 
       if (stock.targetMeanPrice.raw) {

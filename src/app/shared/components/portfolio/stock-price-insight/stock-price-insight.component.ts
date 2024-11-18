@@ -56,7 +56,6 @@ export class StockPriceInsightComponent implements OnInit {
   ngOnInit() {
     this.technicalInsights = this.dataService.getTickerTechnicalInsights( this.symbol);
     this.stockData = this.dataService.getTickerData(this.symbol);
-    console.log(this.technicalInsights)
   }
 
   getTableDataSource() {

@@ -1,10 +1,40 @@
-.chart-container {
+.analysis-charts {
     display: flex;
+    align-items: center;
     justify-content: space-evenly;
-    height: max-content;
 }
 
-container-card {
-    display: block;
-    width: min-content;
+.outlook-container {
+    display: flex;
+    align-items: end;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+}
+
+.outlook {
+    width: auto;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+
+    div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    span:first-of-type {
+        margin-right: 0.5rem;
+        color: slategray;
+    }
+}
+
+.subtitle {
+    margin-top: 0.5rem;
+
+    span {
+        padding-right: 0.5rem;
+    }
+}
+
+.sigDev-date {
+    margin-right: 0.5rem;
 }

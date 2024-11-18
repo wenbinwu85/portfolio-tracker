@@ -1,26 +1,116 @@
-<mat-tab-group mat-align-tabs="center">
-  @if(stocks.length) {
-    <mat-tab label="Earnings Per Share">
-      <div class="chart-container">
-        @for(stock of stocks; track stock.symbol) {
-          <ng-template #earningsChartRef>
-            <stock-earnings-chart [stock]="stock" />
-          </ng-template>
-          
-          <section class="add-margin">
-            <container-card
-                [title]="stock.symbol"
-                [mainContentRef]="earningsChartRef"
-            />
-          </section>
-        }
+@if (selectedTicker) {
+  @let outlook = insights.instrumentInfo.technicalEvents;
+  @let valuation = insights.instrumentInfo.valuation;
+  @let recommendation = insights.recommendation;
+  @let results = snapshotChartData;
+  @let sigDevs = insights.sigDevs;
+
+  <ng-template #earningsChartRef>
+    <div>
+      <ticker-buttons [noEtf]="true" (selectedTicker)="changeTicker($event)"/>
+    </div>
+
+    <div class="analysis-charts">
+      <div class="add-flex">
+        <div class="chart-container">
+          <ngx-charts-polar-chart
+            [results]="results"
+            [view]="[700, 400]"
+            scheme="vivid"
+            [legend]="true"
+            [labelTrim]="false"
+            [xAxis]="true"
+            [yAxis]="true"
+            [animations]="true"
+            [showGridLines]="true"
+            [maxYAxisTickLength]="200"
+            [legendTitle]="''"
+          >
+          </ngx-charts-polar-chart>
+        </div>
       </div>
-    </mat-tab>
-  }
+      <div>
+        <stock-earnings-chart [stock]="selectedTicker" />
+        <stock-recommendation-trends [symbol]="selectedTicker.symbol" />
+      </div>
+    </div>
 
-  <mat-tab label="Analysis B">
-  </mat-tab>
+    <section class="outlook-container add-margin">
+      <div class="outlook">
+        <div>Ticker Outlook</div>
+        <div>
+          <span>Short Term:</span>
+          <span [ngStyle]="{ color: getOutlookTextColor(outlook.shortTermOutlook.direction) }">
+            {{ outlook.shortTermOutlook.stateDescription }}
+          </span>
+        </div>
+        <div>
+          <span>Intermediate Term:</span>
+          <span [ngStyle]="{ color: getOutlookTextColor(outlook.intermediateTermOutlook.direction) }">
+            {{ outlook.intermediateTermOutlook.stateDescription }}
+          </span>
+        </div>
+        <div>
+          <span>Long Term:</span>
+          <span [ngStyle]="{ color: getOutlookTextColor(outlook.longTermOutlook.direction) }">
+            {{ outlook.longTermOutlook.stateDescription }}
+          </span>
+        </div>
+      </div>
+      <div class="outlook">
+        <div>Sector Outlook</div>
+        <div>
+          <span>Short Term:</span>
+          <span [ngStyle]="{ color: getOutlookTextColor(outlook.shortTermOutlook.sectorDirection) }">
+            {{ outlook.shortTermOutlook.sectorScoreDescription }}
+          </span>
+        </div>
+        <div>
+          <span>Intermediate Term:</span>
+          <span [ngStyle]="{ color: getOutlookTextColor(outlook.intermediateTermOutlook.sectorDirection) }">
+            {{ outlook.intermediateTermOutlook.sectorScoreDescription }}
+          </span>
+        </div>
+        <div>
+          <span>Long Term:</span>
+          <span [ngStyle]="{ color: getOutlookTextColor(outlook.longTermOutlook.sectorDirection) }">
+            {{ outlook.longTermOutlook.sectorScoreDescription }}
+          </span>
+        </div>
+      </div>
+    </section>
+  </ng-template>
 
-  <mat-tab label="Analysis C">
-  </mat-tab>
-</mat-tab-group>
+  <ng-template #analysisFooterRef>
+    <div class="add-margin">
+      @for (event of sigDevs; track event.date) {
+        <div>
+          <span class="sigDev-date">{{ event.date | date: 'MM/dd/yyyy' }}</span>
+          <span class="sigDev-headline">{{ event.headline }}</span>
+        </div>
+      }
+    </div>
+  </ng-template>
+
+  <ng-template #analysisSubRef>
+    <div class="subtitle">
+      <span>{{ valuation?.provider }}: </span>
+      <span>{{ valuation?.description }}</span>
+      <span>{{ valuation?.relativeValue }}</span>
+      <span>{{ valuation?.rating }}</span>
+      @if (recommendation) {
+        <span>| </span>
+        <span>{{ recommendation?.provider }}: </span>
+        <span>{{ recommendation?.rating}}</span>
+      }
+    </div>
+  </ng-template>
+
+
+    <container-card 
+      [title]="selectedTicker.symbol" 
+      [mainContentRef]="earningsChartRef"
+      [subtitleContentRef]="analysisSubRef"
+      [footerContentRef]="analysisFooterRef"
+    />
+}
