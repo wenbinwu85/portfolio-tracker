@@ -161,6 +161,8 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     // () => "",
   ];
 
+  sectorLabelFormatter!: Function;
+
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
@@ -313,6 +315,22 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     };
     this.allTotalCostChartData.sort((a: any, b: any) => b.value - a.value);
     this.totalCostChartData = this.allTotalCostChartData;
+
+    this.sectorLabelFormatter = (label: string) => {
+      const marketValue = this.dataService.portfolioHoldings.marketValue;
+      let sectorValue = 0;
+      this.dataSource.data.forEach((stock: any) => {
+        if (stock.quoteType === "EQUITY") {
+          if (stock.sector === label) {
+            sectorValue += stock.marketValue;
+          };
+        } else if (stock.quoteType === label) {
+          sectorValue += stock.marketValue;
+        }
+      });
+      const customLabel = label + ': ' + (sectorValue / marketValue * 100).toFixed(2) + '%';
+      return customLabel;
+    }
   }
 
   ngAfterViewInit() {
@@ -340,12 +358,9 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
   getCellColor(stock: any, index: number) {
     switch (index) {
       case 5:
-      case 6:
         return stock.unrealizedGain > 0
           ? StockPriceColorsEnum.Gain
           : StockPriceColorsEnum.Lost;
-      case 11:
-        return stock.rating === "buy" ? StockPriceColorsEnum.Gain : "black";
       default:
         return "black";
     }
@@ -417,5 +432,17 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     link.href = URL.createObjectURL(blob);
     link.click();
     URL.revokeObjectURL(link.href);
+  }
+
+  labelFormat(label: string) {
+    let marketValue = 0;
+    let sectorValue = 0;
+    this.dataSource.data.forEach((stock: any) => {
+      marketValue += stock.totalCost;
+      if (stock.sector === label) {
+        sectorValue += stock.totalCost;
+      };
+    });
+    return label + ': ' + sectorValue / marketValue * 100 + '%';
   }
 }

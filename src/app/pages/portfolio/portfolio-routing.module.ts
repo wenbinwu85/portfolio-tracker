@@ -25,7 +25,7 @@ const routes: Routes = [
           ),
       },
       {
-        path: "dividend-tracker",
+        path: "dividend",
         canActivate: [dividendTrackerGuard],
         loadComponent: () =>
           import("./portfolio-dividend-tracker/portfolio-dividend-tracker.component").then(
@@ -33,7 +33,7 @@ const routes: Routes = [
           ),
       },
       {
-        path: "financial-stats",
+        path: "financial-metrics",
         loadComponent: () =>
           import("./portfolio-financial-stats/portfolio-financial-stats.component").then(
             (c) => c.PortfolioFinancialStatsComponent

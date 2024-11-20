@@ -24,7 +24,8 @@
             @if (!prefix.startsWith('regular')) {
                 <div class="add-flex">
                     <mat-icon>{{ prePostHourIcon }}</mat-icon>
-                    <span [ngStyle]="{ color: getPrePostPriceChangeColor() }">
+                    <span>{{ prePostHourText }}</span>
+                    <span [ngStyle]="{ color: getPrePostPriceChangeColor(), marginLeft: '0.5rem'}">
                         {{ prePostPriceChange | currency }}
                     </span>
                     <span [ngStyle]="{ color: getPrePostPriceChangeColor() }">
@@ -33,12 +34,12 @@
                 </div>
             }
             @if (prefix.startsWith('pre')) {
-                <mat-slide-toggle (toggleChange)="changeChart()">
+                <mat-slide-toggle (toggleChange)="changeChart()" [checked]="toggleChecked">
                     <span>{{ chartConfigs.preMarket.toggleText }}</span>
                 </mat-slide-toggle>
             }
             @if (prefix.startsWith('post')) {
-                <mat-slide-toggle (toggleChange)="changeChart()">
+                <mat-slide-toggle (toggleChange)="changeChart()" [checked]="toggleChecked">
                     <span>{{ chartConfigs.postMarket.toggleText }}</span>
                 </mat-slide-toggle>
             }

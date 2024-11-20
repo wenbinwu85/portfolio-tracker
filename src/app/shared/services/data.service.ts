@@ -22,8 +22,8 @@ import { StorageService } from './storage.service';
   providedIn: "root",
 })
 export class DataService {
-  // private backendUrl = "http://127.0.0.1:5000";
-  private backendUrl = "https://portfolio-tracker-backend-5ys2.onrender.com";
+  private backendUrl = "http://127.0.0.1:5000";
+  // private backendUrl = "https://portfolio-tracker-backend-5ys2.onrender.com";
   private httpOptions: any = {
     headers: new HttpHeaders()
       .set("content-type", "application/json")
@@ -168,7 +168,7 @@ export class DataService {
       const costAvg = holding.costAverage;
       holding.symbol = symbol;
       holding.totalCost = +(shares * costAvg).toFixed(4);
-      holding.marketValue = data.regularMarketPrice.raw * shares;
+      holding.marketValue = (data.regularMarketPrice?.raw || data.currentPrice.raw) * shares ;
       holding.unrealizedGain = holding.marketValue - holding.totalCost;
       holding.unrealizedGainPercent = holding.unrealizedGain / holding.totalCost;
       holding.dividendIncome = data.dividendRate?.raw * shares || data.dividendRate * shares || 0;

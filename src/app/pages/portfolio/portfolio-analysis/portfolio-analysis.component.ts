@@ -1,5 +1,6 @@
 import { CommonModule } from "@angular/common";
 import { ChangeDetectorRef, Component, OnInit } from "@angular/core";
+import { MatExpansionModule } from "@angular/material/expansion";
 import { MatIconModule } from "@angular/material/icon";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { MatTabsModule } from "@angular/material/tabs";
@@ -7,11 +8,11 @@ import { NgxChartsModule } from "@swimlane/ngx-charts";
 import { ContainerCardComponent } from "../../../shared/components/container-card/container-card.component";
 import { InfoCardComponent } from "../../../shared/components/info-card/info-card.component";
 import { StockEarningsChartComponent } from "../../../shared/components/portfolio/stock-earnings-chart/stock-earnings-chart.component";
+import { StockRecommendationTrendsComponent } from "../../../shared/components/portfolio/stock-recommendation-trends/stock-recommendation-trends.component";
 import { StockTickerChipComponent } from "../../../shared/components/portfolio/stock-ticker-chip/stock-ticker-chip.component";
 import { TickerButtonsComponent } from "../../../shared/components/ticker-buttons/ticker-buttons.component";
 import { StockPriceColorsEnum } from "../../../shared/model/colors.model";
 import { DataService } from "../../../shared/services/data.service";
-import { StockRecommendationTrendsComponent } from "../../../shared/components/portfolio/stock-recommendation-trends/stock-recommendation-trends.component";
 
 @Component({
   selector: 'app-portfolio-analysis',
@@ -28,6 +29,7 @@ import { StockRecommendationTrendsComponent } from "../../../shared/components/p
     StockRecommendationTrendsComponent,
     StockTickerChipComponent,
     TickerButtonsComponent,
+    MatExpansionModule
   ],
   templateUrl: './portfolio-analysis.component.html',
   styleUrls: ['./portfolio-analysis.component.css'],

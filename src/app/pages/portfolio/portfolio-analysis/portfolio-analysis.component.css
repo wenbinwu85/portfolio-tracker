@@ -6,15 +6,14 @@
 
 .outlook-container {
     display: flex;
-    align-items: end;
-    justify-content: space-evenly;
-    margin-top: 2rem;
+    margin: 1rem 0;
+    border: 1px solid gainsboro;
+    padding: 1rem;
 }
 
 .outlook {
     width: auto;
     margin-right: 2rem;
-    margin-bottom: 1rem;
 
     div {
         display: flex;
@@ -24,6 +23,16 @@
     span:first-of-type {
         margin-right: 0.5rem;
         color: slategray;
+    }
+}
+
+.sec-reports {
+    .sec-report-link {
+        margin-top: 0.5rem;
+
+        a {
+            text-decoration: none;
+        }
     }
 }
 

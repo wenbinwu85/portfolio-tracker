@@ -111,14 +111,14 @@
     <div class="add-flex">
       <div class="chart-container">
         <ngx-charts-pie-chart
-          [view]="[0, 400]"
-          [scheme]="'natural'"
+          [scheme]="'vivid'"
           [animations]="true"
           [results]="sectorsData"
           [title]="'Sector Allocations'"
-          [legend]="true"
-          [legendTitle]="'Sectors'"
           [doughnut]="true"
+          [labels]="true"
+          [labelFormatting]="sectorLabelFormatter"
+          [trimLabels]="false"
           [arcWidth]="0.3"
           (select)="onSelectSector($event)"
         />

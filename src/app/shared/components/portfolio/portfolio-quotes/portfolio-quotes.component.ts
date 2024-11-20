@@ -125,6 +125,10 @@ export class PortfolioQuotesComponent {
       const val2 = this.dataService.getTickerData(b.name).regularMarketChangePercent.raw;
       return val1 - val2;
     });
+
+    if (!this.prefix.startsWith("regular")) {
+      this.changeChart();
+    }
   }
 
   getDayPriceChangeColor() {

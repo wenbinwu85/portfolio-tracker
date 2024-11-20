@@ -46,14 +46,14 @@ export class PortfolioComponent {
     ];
     if (dataService.portfolioHoldings.dividendIncome > 0) {
       this.navLinks.push({
-        label: "Dividend Tracker",
-        route: "dividend-tracker",
+        label: "Dividends",
+        route: "dividend",
         icon: "paid",
       });
     }
     this.navLinks.push({
-      label: "Financial Stats",
-      route: "financial-stats",
+      label: "Financial Metrics",
+      route: "financial-metrics",
       icon: "query_stats",
     });
     this.navLinks.push({

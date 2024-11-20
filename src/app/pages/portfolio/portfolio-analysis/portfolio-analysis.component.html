@@ -4,6 +4,7 @@
   @let recommendation = insights.recommendation;
   @let results = snapshotChartData;
   @let sigDevs = insights.sigDevs;
+  @let secReports = insights.secReports;
 
   <ng-template #earningsChartRef>
     <div>
@@ -35,7 +36,7 @@
       </div>
     </div>
 
-    <section class="outlook-container add-margin">
+    <section class="outlook-container">
       <div class="outlook">
         <div>Ticker Outlook</div>
         <div>
@@ -78,18 +79,49 @@
           </span>
         </div>
       </div>
-    </section>
-  </ng-template>
-
-  <ng-template #analysisFooterRef>
-    <div class="add-margin">
-      @for (event of sigDevs; track event.date) {
+      <div class="outlook">
+        <div>Index Outlook</div>
         <div>
-          <span class="sigDev-date">{{ event.date | date: 'MM/dd/yyyy' }}</span>
-          <span class="sigDev-headline">{{ event.headline }}</span>
+          <span>Short Term:</span>
+          <span [ngStyle]="{ color: getOutlookTextColor(outlook.shortTermOutlook.indexDirection) }">
+            {{ outlook.shortTermOutlook.indexScoreDescription }}
+          </span>
         </div>
-      }
-    </div>
+        <div>
+          <span>Intermediate Term:</span>
+          <span [ngStyle]="{ color: getOutlookTextColor(outlook.intermediateTermOutlook.indexDirection) }">
+            {{ outlook.intermediateTermOutlook.indexScoreDescription }}
+          </span>
+        </div>
+        <div>
+          <span>Long Term:</span>
+          <span [ngStyle]="{ color: getOutlookTextColor(outlook.longTermOutlook.indexDirection) }">
+            {{ outlook.longTermOutlook.indexScoreDescription }}
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <mat-expansion-panel [expanded]="false">
+      <mat-expansion-panel-header>
+          <mat-panel-title>
+              <mat-icon>article</mat-icon>
+              <span>SEC Reports</span>
+          </mat-panel-title>
+      </mat-expansion-panel-header>
+          <ng-template matExpansionPanelContent> 
+            <section class="sec-reports">
+              @for (report of secReports; track report.id) {
+                @let reportLink = 'https://finance.yahoo.com/sec-filing/' + selectedTicker.symbol + '/' + report.id;
+                <div class="sec-report-link">
+                  <a [href]="reportLink" target="_blank">
+                    <div>{{ report.filingDate | date: 'MM/dd/yyyy' }} {{ report.title }} {{ report.description }}</div>
+                  </a>
+                </div>
+              }
+            </section>
+          </ng-template>
+  </mat-expansion-panel>
   </ng-template>
 
   <ng-template #analysisSubRef>
@@ -106,11 +138,21 @@
     </div>
   </ng-template>
 
+  <ng-template #analysisFooterRef>
+    <div class="add-margin">
+      @for (event of sigDevs; track event.date) {
+        <div>
+          <span class="sigDev-date">{{ event.date | date: 'MM/dd/yyyy' }}</span>
+          <span class="sigDev-headline">{{ event.headline }}</span>
+        </div>
+      }
+    </div>
+  </ng-template>
 
-    <container-card 
-      [title]="selectedTicker.symbol" 
-      [mainContentRef]="earningsChartRef"
-      [subtitleContentRef]="analysisSubRef"
-      [footerContentRef]="analysisFooterRef"
-    />
+  <container-card 
+    [title]="selectedTicker.symbol" 
+    [mainContentRef]="earningsChartRef"
+    [subtitleContentRef]="analysisSubRef"
+    [footerContentRef]="analysisFooterRef"
+  />
 }
