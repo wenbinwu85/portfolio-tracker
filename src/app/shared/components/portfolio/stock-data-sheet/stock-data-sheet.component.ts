@@ -7,7 +7,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { ActivatedRoute } from "@angular/router";
 import { take } from "rxjs";
-import { DataService } from "../../../services/data.service";
+import { DataService } from "../../../services/dataV2.service";
 import { ContainerCardComponent } from "../../container-card/container-card.component";
 import { InfoCardComponent } from "../../info-card/info-card.component";
 import { TvAdvancedChartWidgetComponent } from "../../tradingview/tv-advanced-chart-widget/tv-advanced-chart-widget.component";
@@ -66,8 +66,8 @@ export class StockDataSheetComponent implements OnInit {
         ? this.symbol.toUpperCase()
         : this.activatedRoute.snapshot.params["symbol"].toUpperCase();
     });
-    this.stock = this.dataService.getTickerData(this.symbol);
-    this.position = this.dataService.getTickerHolding(this.symbol);
+    this.stock = this.dataService.portfolioData.get(this.symbol);
+    this.position = this.dataService.portfolioHoldings.get(this.symbol);
     this.below50DayAverage = this.stock.fiftyDayAverage > this.stock.previousClose;
     this.below200DayAverage = this.stock.twoHundredDayAverage > this.stock.previousClose;
     this.externalLinks = [

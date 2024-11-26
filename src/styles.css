@@ -7,7 +7,6 @@ body {
 
 body {
     margin: 0;
-    font-family: "Fira Code";
 }
 
 mat-divider {
@@ -95,10 +94,7 @@ table {
 }
 
 .mat-mdc-row:hover {
-    background-color: whitesmoke !important;
-    border-bottom: 1px solid steelblue;
-    border-top: 1px solid steelblue;
-    font-weight: bold;
+    background-color: rgba(225, 225, 225, 0.2) !important;
 }
 
 .mat-mdc-standard-chip .mdc-evolution-chip__action--primary::before {

@@ -8,7 +8,7 @@ import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { ContainerCardComponent } from "../../shared/components/container-card/container-card.component";
 import { TvAdvancedChartWidgetComponent } from "../../shared/components/tradingview/tv-advanced-chart-widget/tv-advanced-chart-widget.component";
 import { TvHeatmapWidgetComponent } from "../../shared/components/tradingview/tv-heatmap-widget/tv-heatmap-widget.component";
-import { DataService } from "../../shared/services/data.service";
+import { DataService } from "../../shared/services/dataV2.service";
 import { TvScreenerWidgetComponent } from "../../shared/components/tradingview/tv-screener-widget/tv-screener-widget.component";
 
 @Component({
@@ -30,13 +30,13 @@ import { TvScreenerWidgetComponent } from "../../shared/components/tradingview/t
   styleUrls: ["./toolbox.component.css"],
 })
 export class ToolboxComponent implements OnInit {
-  symbols: string[] = [];
+  symbols: any[] = [];
   heatMapType: any = 'stock';
 
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    this.symbols = this.dataService.portfolioSymbols;
+    this.symbols = Array.from(this.dataService.portfolioSymbols);
   }
 
   selectHeatMap(type: any) { 

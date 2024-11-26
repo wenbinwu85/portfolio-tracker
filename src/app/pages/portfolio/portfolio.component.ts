@@ -1,12 +1,12 @@
 import { CommonModule } from "@angular/common";
-import { ChangeDetectorRef, Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 import { MatDividerModule } from "@angular/material/divider";
 import { MatExpansionModule } from "@angular/material/expansion";
 import { MatIconModule } from "@angular/material/icon";
 import { MatTabsModule } from "@angular/material/tabs";
 import { Router, RouterLink, RouterOutlet } from "@angular/router";
 import { NgxChartsModule } from "@swimlane/ngx-charts";
-import { DataService } from "../../shared/services/data.service";
+import { DataService } from "../../shared/services/dataV2.service";
 
 @Component({
   selector: "portfolio",
@@ -44,7 +44,7 @@ export class PortfolioComponent {
         icon: "price_change",
       },
     ];
-    if (dataService.portfolioHoldings.dividendIncome > 0) {
+    if (dataService.portfolioHoldings.get('dividendIncome') > 0) {
       this.navLinks.push({
         label: "Dividends",
         route: "dividend",

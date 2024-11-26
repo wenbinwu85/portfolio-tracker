@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Color, NgxChartsModule, ScaleType } from '@swimlane/ngx-charts';
-import { DataService } from '../../../services/data.service';
+import { DataService } from '../../../services/dataV2.service';
 
 @Component({
   selector: 'stock-recommendation-trends',
@@ -25,7 +25,7 @@ export class StockRecommendationTrendsComponent implements OnInit {
   }
 
   updateRecommendationTrends() {
-    this.stockData = this.dataService.getTickerData(this.symbol);
+    this.stockData = this.dataService.portfolioData.get(this.symbol);
     this.recommendationTrends = this.stockData.recommendationTrend;
     this.recommendationTrendChartData = [];
     this.recommendationTrends.forEach((period: any) => {

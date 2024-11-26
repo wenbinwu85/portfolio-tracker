@@ -10,7 +10,7 @@ import { MatDividerModule } from "@angular/material/divider";
 import { MatIconModule } from "@angular/material/icon";
 import { MatTableDataSource, MatTableModule } from "@angular/material/table";
 import { StockPriceColorsEnum } from "../../../model/colors.model";
-import { DataService } from "../../../services/data.service";
+import { DataService } from "../../../services/dataV2.service";
 import { StockPriceRangeComponent } from "../stock-price-range/stock-price-range.component";
 import { StockTickerChipComponent } from "../stock-ticker-chip/stock-ticker-chip.component";
 
@@ -35,7 +35,7 @@ import { StockTickerChipComponent } from "../stock-ticker-chip/stock-ticker-chip
 export class StockPriceInsightComponent implements OnInit {
   @Input({ required: true }) symbol!: string;
   technicalInsights!: any;
-  stockData: any;
+  tickerData: any;
 
   tableColumns = [
     "symbol",
@@ -54,13 +54,13 @@ export class StockPriceInsightComponent implements OnInit {
   constructor(private dataService: DataService) { };
 
   ngOnInit() {
-    this.technicalInsights = this.dataService.getTickerTechnicalInsights( this.symbol);
-    this.stockData = this.dataService.getTickerData(this.symbol);
+    this.technicalInsights = this.dataService.portfolioTechnicalInsights.get(this.symbol);
+    this.tickerData = this.dataService.portfolioData.get(this.symbol);
   }
 
   getTableDataSource() {
     let dataSource = new MatTableDataSource<any>();
-    dataSource.data = [this.stockData];
+    dataSource.data = [this.tickerData];
     return dataSource;
   }
 

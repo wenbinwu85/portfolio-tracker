@@ -1,44 +1,44 @@
 <section class="summary-cards-container">
   <info-card
-    [value]="portfolioHoldings?.positionsHeld"
+    [value]="portfolioHoldings?.get('positionsHeld')"
     subtitle="Holdings"
   />
   <info-card
-    [value]="portfolioHoldings?.totalAmountInvested"
+    [value]="portfolioHoldings?.get('amountInvested')"
     valueType="currency"
-    subtitle="Total Investment"
+    subtitle="Amount Invested"
   />
   <info-card
-    [value]="portfolioHoldings?.marketValue"
+    [value]="portfolioHoldings?.get('marketValue')"
     valueType="currency"
     subtitle="Market Value"
   />
   <info-card
-    [value]="portfolioHoldings?.unrealizedGain"
+    [value]="portfolioHoldings?.get('unrealizedGain')"
     subtitle="Unrealized Gain $"
     valueType="currency"
-    [color]="portfolioHoldings?.unrealizedGain > 0 ? 'teal' : 'chocolate'"
+    [color]="portfolioHoldings?.get('unrealizedGain') > 0 ? 'teal' : 'chocolate'"
   />
   <info-card
-    [value]="portfolioHoldings?.unrealizedGainPercent"
+    [value]="portfolioHoldings?.get('unrealizedGainPercent')"
     valueType="percentage"
     subtitle="Unrealized Gain %"
-    [color]="portfolioHoldings?.unrealizedGainPercent > 0 ? 'teal' : 'chocolate'"
+    [color]="portfolioHoldings?.get('unrealizedGainPercent') > 0 ? 'teal' : 'chocolate'"
   />
 
-  @if (portfolioHoldings.dividendIncome > 0) {
+  @if (portfolioHoldings.get('dividendIncome') > 0) {
     <info-card
-      [value]="portfolioHoldings?.dividendIncome"
+      [value]="portfolioHoldings?.get('dividendIncome')"
       valueType="currency"
       subtitle="Annual Income"
     />
     <info-card
-      [value]="portfolioHoldings?.yield"
+      [value]="portfolioHoldings?.get('yield')"
       valueType="percentage"
       subtitle="Portfolio Yield"
     />
     <info-card
-      [value]="portfolioHoldings?.yieldOnCost"
+      [value]="portfolioHoldings?.get('yieldOnCost')"
       valueType="percentage"
       subtitle="Portfolio YOC"
       color="teal"
@@ -72,7 +72,7 @@
         >
           <input
             matSliderThumb
-            [value]="portfolioHoldings?.dividendIncome"
+            [value]="portfolioHoldings?.get('dividendIncome')"
             [matTooltip]="getTooltip('passive')"
             matTooltipPosition="above"
           />
@@ -94,7 +94,7 @@
         >
           <input
             matSliderThumb
-            [value]="portfolioHoldings?.marketValue"
+            [value]="portfolioHoldings?.get('marketValue')"
             [matTooltip]="getTooltip('investment')"
             matTooltipPosition="above"
           />
@@ -119,7 +119,7 @@
           [labels]="true"
           [labelFormatting]="sectorLabelFormatter"
           [trimLabels]="false"
-          [arcWidth]="0.3"
+          [arcWidth]="0.35"
           (select)="onSelectSector($event)"
         />
       </div>
@@ -242,8 +242,8 @@
           } @else if (cidx === 1) {
             <div (click)="expandRow(stock)">
               <div class="cost-average">
-                <span disabled value="costAverage">{{ portfolioHoldings[stock.symbol].costAverage | currency }}</span>
-                <span disabled value="shares"> x {{ portfolioHoldings[stock.symbol].shares }}</span>
+                <span disabled value="costAverage">{{ portfolioHoldings.get(stock.symbol).costAverage | currency }}</span>
+                <span disabled value="shares"> x {{ portfolioHoldings.get(stock.symbol).shares }}</span>
               </div>
             </div>
           } @else if (cidx === 4) {
@@ -253,7 +253,7 @@
           }
         </td>
     
-        <td mat-footer-cell *matFooterCellDef [ngStyle]="{ color: 'black' }">
+        <td mat-footer-cell *matFooterCellDef>
           <span>{{ footerRow[cidx]() }}</span>
         </td>
       </div>

@@ -15,7 +15,7 @@ import { TickerButtonsComponent } from "../../../shared/components/ticker-button
 import { StockPriceRangeComponent } from "../../../shared/components/portfolio/stock-price-range/stock-price-range.component";
 import { StockPriceInsightComponent } from "../../../shared/components/portfolio/stock-price-insight/stock-price-insight.component";
 import { TvSymbolInfoWidgetComponent } from "../../../shared/components/tradingview/tv-symbol-info-widget/tv-symbol-info-widget.component";
-import { DataService } from "../../../shared/services/data.service";
+import { DataService } from "../../../shared/services/dataV2.service";
 import { PortfolioDividendTrackerComponent } from "../portfolio-dividend-tracker/portfolio-dividend-tracker.component";
 import { PortfolioFinancialStatsComponent } from "../portfolio-financial-stats/portfolio-financial-stats.component";
 import { PortfolioHoldingsComponent } from "../portfolio-holdings/portfolio-holdings.component";
@@ -78,14 +78,14 @@ export class PortfolioPriceInsightsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.sortedStocks = this.dataService.portfolioStocks
+    this.sortedStocks = this.dataService.portfolioStockTickers
       .sort((a: any, b: any) => a["52WeekChange"].raw - b["52WeekChange"].raw);
-    this.sortedEtfs = this.dataService.portfolioEtfs
+    this.sortedEtfs = this.dataService.portfolioEtfTickers
       .sort((a: any, b: any) => a["ytdReturn"].raw - b["ytdReturn"].raw);
     this.sp500FiftyTwoWeekChange = this.sortedStocks[0]?.SandP52WeekChange.raw;
     this.selectedSymbol =
       this.sortedStocks[0]?.symbol || this.sortedEtfs[0]?.symbol;
-    this.selectedStock = this.dataService.getTickerData(this.selectedSymbol);
+    this.selectedStock = this.dataService.portfolioData.get(this.selectedSymbol);
     this.selectedSymbolColor = { name: this.selectedSymbol, value: ChartColorsEnum.Dark };
     this.selectedPerformanceChart = this.sortedStocks.length ? 1 : 2;
 
@@ -212,7 +212,7 @@ export class PortfolioPriceInsightsComponent implements OnInit {
     this.cdr.detectChanges();
     this.selectedSymbol = symbol;
     this.selectedSymbolColor = { name: symbol, value: ChartColorsEnum.Dark };
-    this.selectedStock = [this.dataService.getTickerData(symbol)];
+    this.selectedStock = [this.dataService.portfolioData.get(symbol)];
     if (this.selectedStock[0].quoteType === "ETF") {
       this.changePerformanceChart(2);
     } else {

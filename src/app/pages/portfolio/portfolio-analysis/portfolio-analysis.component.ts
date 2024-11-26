@@ -12,7 +12,7 @@ import { StockRecommendationTrendsComponent } from "../../../shared/components/p
 import { StockTickerChipComponent } from "../../../shared/components/portfolio/stock-ticker-chip/stock-ticker-chip.component";
 import { TickerButtonsComponent } from "../../../shared/components/ticker-buttons/ticker-buttons.component";
 import { StockPriceColorsEnum } from "../../../shared/model/colors.model";
-import { DataService } from "../../../shared/services/data.service";
+import { DataService } from "../../../shared/services/dataV2.service";
 
 @Component({
   selector: 'app-portfolio-analysis',
@@ -42,7 +42,7 @@ export class PortfolioAnalysisComponent implements OnInit {
   constructor(private dataService: DataService, private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
-    this.changeTicker(this.dataService.portfolioSymbols[0]);
+    this.changeTicker(this.dataService.portfolioStockTickers[0].symbol);
   }
 
   generateSnapshotChartData(symbol: string) {
@@ -84,8 +84,8 @@ export class PortfolioAnalysisComponent implements OnInit {
   changeTicker(symbol: string) {
     this.selectedTicker = null;
     this.cdr.detectChanges();
-    this.selectedTicker = this.dataService.getTickerData(symbol);
-    this.insights = this.dataService.getTickerTechnicalInsights(symbol);
+    this.selectedTicker = this.dataService.portfolioData.get(symbol);
+    this.insights = this.dataService.portfolioTechnicalInsights.get(symbol);
     this.snapshotChartData = this.generateSnapshotChartData(symbol);
   }
 }

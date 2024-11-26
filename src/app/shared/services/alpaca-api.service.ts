@@ -8,7 +8,7 @@ import {
 import { Injectable } from "@angular/core";
 import { catchError, of, retry } from "rxjs";
 import { Observable } from "rxjs/internal/Observable";
-import { DataService } from "./data.service";
+import { DataService } from "./dataV2.service";
 
 @Injectable({
   providedIn: "root",
@@ -29,7 +29,7 @@ export class AlpacaApiService {
     const symbols = this.dataService.portfolioSymbols;
     const apiUrl = this.apiBaseUrl + '/v2/stocks/bars/latest';
     const params = new HttpParams().appendAll({
-      symbols: symbols.join(','),
+      symbols: Array.from(symbols).join(','),
       feed: 'iex'
     })
     const options = { headers: this.httpHeaders, params };

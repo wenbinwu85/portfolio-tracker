@@ -7,7 +7,7 @@ import { MatInputModule } from "@angular/material/input";
 import { Router } from "@angular/router";
 import { ContainerCardComponent } from "../../../shared/components/container-card/container-card.component";
 import { PortfolioEditorComponent } from "../../../shared/components/portfolio/portfolio-editor/portfolio-editor.component";
-import { DataService } from "../../../shared/services/data.service";
+import { DataService } from "../../../shared/services/dataV2.service";
 
 @Component({
   selector: "app-homepage-landing",

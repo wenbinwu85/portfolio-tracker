@@ -6,7 +6,7 @@ import { InfoCardComponent } from '../../shared/components/info-card/info-card.c
 import { PortfolioQuotesComponent } from '../../shared/components/portfolio/portfolio-quotes/portfolio-quotes.component';
 import { TvMiniChartWidgetComponent } from '../../shared/components/tradingview/tv-mini-chart-widget/tv-mini-chart-widget.component';
 import { TvSymbolOverviewWidgetComponent } from '../../shared/components/tradingview/tv-symbol-overview-widget/tv-symbol-overview-widget.component';
-import { DataService } from '../../shared/services/data.service';
+import { DataService } from '../../shared/services/dataV2.service';
 
 @Component({
   selector: 'app-homepage',
@@ -32,7 +32,7 @@ export class HomepageComponent {
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    this.dataService.portfolioDataArray.forEach((stock: any) => {
+    this.dataService.portfolioData.forEach((stock: any) => {
       const icons = {
         up: 'thumb_up',
         down: 'thumb_down',

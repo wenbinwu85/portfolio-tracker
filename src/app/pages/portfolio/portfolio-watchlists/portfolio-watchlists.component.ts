@@ -3,7 +3,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { ContainerCardComponent } from '../../../shared/components/container-card/container-card.component';
 import { TickerButtonsComponent } from '../../../shared/components/ticker-buttons/ticker-buttons.component';
 import { WatchlistComponent } from '../../../shared/components/watchlist/watchlist.component';
-import { DataService } from '../../../shared/services/data.service';
+import { DataService } from '../../../shared/services/dataV2.service';
 
 @Component({
   selector: 'app-portfolio-watchlists',

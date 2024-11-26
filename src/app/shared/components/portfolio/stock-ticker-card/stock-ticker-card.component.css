@@ -4,19 +4,19 @@
   border-radius: 0;
   background-color: white;
   align-items: center;
-  padding: .5rem;
+  padding: .5rem .5rem 0 .5rem;
   overflow: hidden;
   height: auto;
   transition: height 1s;
   -webkit-transition: height 1s;
-  .expand-section {
+  /* .expand-section {
     width: 0;
     height: 0;
     visibility: hidden;
-  }
+  } */
 }
 
-.container:hover {
+/* .container:hover {
   height: max-content;
   background-color: ghostwhite;
   .expand-section {
@@ -24,7 +24,7 @@
     height: max-content;
     visibility: visible;
   }
-}
+} */
 
 .symbol-container {
   padding-left: 0.5rem;
@@ -34,6 +34,8 @@
 .stock-symbol {
   display: flex;
   align-items: center;
+  margin-bottom: 0;
+  font-size: 1.25rem;
 }
 
 .stock-price,
@@ -48,6 +50,7 @@
 .stock-name {
   float: left;
   color: slategrey;
+  font-size: 0.8rem;
 }
 
 .mat-mdc-card {
@@ -55,10 +58,10 @@
   background-color: none;
 }
 
-.expand-section {
+/* .expand-section {
   margin-left: 0.5rem;
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
   border-left: 1px solid slategrey;
-}
+} */

@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { StockPriceColorsEnum } from "../model/colors.model";
 import { MarketStates } from "../model/data-enums.model";
-import { DataService } from "./data.service";
+import { DataService } from "./dataV2.service";
 
 @Injectable({
   providedIn: "root",
@@ -26,7 +26,7 @@ export class HelperService {
 
   public getStockPriceColor(symbol: string): string { 
     const prefix = this.getPriceKeyPrefix();
-    const tickerData = this.dataService.getTickerData(symbol);
+    const tickerData = this.dataService.portfolioData.get(symbol);
     const priceChangePercent = tickerData[prefix + "ChangePercent"]?.raw;
     return priceChangePercent > 0 ? StockPriceColorsEnum.Gain : StockPriceColorsEnum.Lost;
   }

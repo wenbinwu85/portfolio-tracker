@@ -11,7 +11,7 @@ import { Router, RouterLink, RouterOutlet } from "@angular/router";
 import { AppFooterComponent } from "./shared/components/app-footer/app-footer.component";
 import { AppHeaderComponent } from "./shared/components/app-header/app-header.component";
 import { TvTickersWidgetComponent } from "./shared/components/tradingview/tv-tickers-widget/tv-tickers-widget.component";
-import { DataService } from "./shared/services/data.service";
+import { DataService } from "./shared/services/dataV2.service";
 
 @Component({
   selector: "app-root",
@@ -94,8 +94,8 @@ export class AppComponent {
   refreshData() { 
     const symbols = [...this.dataService.portfolioSymbols];
     const holdings = [...this.dataService.portfolioHoldingsArray];
-    this.dataService.portfolioSymbols = [];
-    this.dataService.portfolioHoldings = {};
+    this.dataService.portfolioSymbols.clear();
+    this.dataService.portfolioHoldings.clear();
     this.dataService.updatePortfolioData(symbols, holdings);
   }
 

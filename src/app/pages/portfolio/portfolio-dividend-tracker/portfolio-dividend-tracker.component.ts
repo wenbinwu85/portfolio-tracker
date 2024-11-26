@@ -13,7 +13,7 @@ import { ContainerCardComponent } from "../../../shared/components/container-car
 import { InfoCardComponent } from "../../../shared/components/info-card/info-card.component";
 import { StockTickerCardComponent } from "../../../shared/components/portfolio/stock-ticker-card/stock-ticker-card.component";
 import { TickerButtonsComponent } from "../../../shared/components/ticker-buttons/ticker-buttons.component";
-import { DataService } from "../../../shared/services/data.service";
+import { DataService } from "../../../shared/services/dataV2.service";
 
 @Component({
   selector: 'portfolio-dividend-tracker',
@@ -59,7 +59,7 @@ export class PortfolioDividendTrackerComponent implements OnInit, AfterViewInit 
   selectedSymbolLabel = "";
   infoCards: any[] = [];
   dividendLineChartData: any = [];
-  dividendChartColorScheme = { domain: ["teal"] } as Color;
+  dividendChartColorScheme = { domain: ["slategray"] } as Color;
   currentMonth = new Date().getMonth();
   pieChartData: any = [];
   dataSource = new MatTableDataSource<any>();
@@ -132,11 +132,11 @@ export class PortfolioDividendTrackerComponent implements OnInit, AfterViewInit 
 
   ngOnInit() {
     this.portfolioHoldings = this.dataService.portfolioHoldings;
-    this.dividendIncome = this.portfolioHoldings.dividendIncome;
-    this.portfolioYieldOnCost = this.portfolioHoldings.yieldOnCost;
+    this.dividendIncome = this.portfolioHoldings.get('dividendIncome');
+    this.portfolioYieldOnCost = this.portfolioHoldings.get('yieldOnCost');
     this.dataSource.data = this.dataService.portfolioDividendPayers
       .map((stock: any) => {
-        const holding = this.portfolioHoldings[stock.symbol];
+        const holding = this.portfolioHoldings.get(stock.symbol);
         this.pieChartData.push({
           name: stock.symbol,
           value: holding.dividendIncome,
@@ -226,7 +226,7 @@ export class PortfolioDividendTrackerComponent implements OnInit, AfterViewInit 
       name: `${stock.symbol} | ${stock.shortName}`,
       series: [],
     };
-    const divHis = this.dataService.getTickerDividendHistory(stock.symbol);
+    const divHis = this.dataService.portfolioDividendHistory.get(stock.symbol);
     Object.entries(divHis).forEach((item: any) => {
       divData.series.push({
         name: new Date(item[0].split("-").join(" ")),

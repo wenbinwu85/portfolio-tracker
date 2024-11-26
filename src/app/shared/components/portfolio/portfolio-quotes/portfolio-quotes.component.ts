@@ -7,7 +7,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { Color, NgxChartsModule, ScaleType } from "@swimlane/ngx-charts";
 import { ChartColorsEnum, StockPriceColorsEnum } from "../../../model/colors.model";
-import { DataService } from "../../../services/data.service";
+import { DataService } from "../../../services/dataV2.service";
 import { HelperService } from "../../../services/helper.service";
 import { ContainerCardComponent } from "../../container-card/container-card.component";
 import { TvMarketQuotesWidgetComponent } from "../../tradingview/tv-market-quotes-widget/tv-market-quotes-widget.component";
@@ -78,13 +78,13 @@ export class PortfolioQuotesComponent {
   ngOnInit() {
     this.marketState = this.dataService.marketState;
     this.prefix = this.helper.getPriceKeyPrefix();
-    this.portfolioMarketValue = this.dataService.portfolioHoldings.marketValue;
+    this.portfolioMarketValue = this.dataService.portfolioHoldings.get('marketValue');
     this.prePostHourIcon = this.prefix.startsWith("pre") ? "sunny" : "bedtime";
     this.prePostHourText = this.prefix.startsWith("pre") ? "Pre Market " : "Post Market ";
 
     this.dataService.portfolioSymbols.forEach((symbol: string) => {
-      const position = this.dataService.getTickerHolding(symbol);
-      const stock = this.dataService.getTickerData(symbol);
+      const position = this.dataService.portfolioHoldings.get(symbol);
+      const stock = this.dataService.portfolioData.get(symbol);
       this.stockNames.push({
         name: stock.symbol,
         displayName: `${stock.symbol} - ${stock.longName}`,
@@ -121,8 +121,8 @@ export class PortfolioQuotesComponent {
       (a: any, b: any) => a.series[0].value + a.series[1].value - (b.series[0].value + b.series[1].value)
     );
     this.stockNames.sort((a: any, b: any) => {
-      const val1 = this.dataService.getTickerData(a.name).regularMarketChangePercent.raw;
-      const val2 = this.dataService.getTickerData(b.name).regularMarketChangePercent.raw;
+      const val1 = this.dataService.portfolioData.get(a.name).regularMarketChangePercent.raw;
+      const val2 = this.dataService.portfolioData.get(b.name).regularMarketChangePercent.raw;
       return val1 - val2;
     });
 
@@ -147,7 +147,7 @@ export class PortfolioQuotesComponent {
     const key = this.toggleChecked
       ? this.chartConfigs[this.prefix]?.priceChangePercent
       : "regularMarketChangePercent";
-    const stock = this.dataService.getTickerData(symbol);
+    const stock = this.dataService.portfolioData.get(symbol);
     return stock[key].raw > 0
       ? StockPriceColorsEnum.Gain
       : StockPriceColorsEnum.Lost;
@@ -165,7 +165,7 @@ export class PortfolioQuotesComponent {
     this.priceChangeChartData = [];
 
     this.dataService.portfolioSymbols?.forEach((symbol: any) => {
-      const stock = this.dataService.getTickerData(symbol);
+      const stock = this.dataService.portfolioData.get(symbol);
       if (stock[prefixKey].raw) {
         this.priceChangeChartData.push({
           name: stock.symbol,

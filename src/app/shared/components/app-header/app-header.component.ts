@@ -9,7 +9,7 @@ import { Router, RouterLink, RouterOutlet } from "@angular/router";
 import { PortfolioComponent } from "../../../pages/portfolio/portfolio.component";
 import { HomepageComponent } from "../../../pages/homepage/homepage.component";
 import { ToolboxComponent } from "../../../pages/toolbox/toolbox.component";
-import { DataService } from "../../services/data.service";
+import { DataService } from "../../services/dataV2.service";
 import { TvTickersWidgetComponent } from "../tradingview/tv-tickers-widget/tv-tickers-widget.component";
 import { MatTooltipModule } from "@angular/material/tooltip";
 
@@ -35,9 +35,9 @@ import { MatTooltipModule } from "@angular/material/tooltip";
   ],
 })
 export class AppHeaderComponent implements OnInit {
-  appLongName = "Ben's Incredibly Great Financial Assets Report & Tracker";
+  appLongName = "Ben's Incredibly Great Financial Asset Report & Tracker";
   appShortName = "BIGFART";
-  appVersion = 'V2.1.5'
+  appVersion = 'V2.1.6'
   appName = this.appShortName;
   showProgressBar = false;
 

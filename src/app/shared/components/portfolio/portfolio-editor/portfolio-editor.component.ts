@@ -14,7 +14,7 @@ import { MatInputModule } from "@angular/material/input";
 import { MatListModule } from "@angular/material/list";
 import { MatRadioModule } from "@angular/material/radio";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
-import { DataService } from "../../../services/data.service";
+import { DataService } from "../../../services/dataV2.service";
 import { ContainerCardComponent } from "../../container-card/container-card.component";
 
 @Component({
@@ -54,8 +54,8 @@ export class PortfolioEditorComponent {
   ) {}
 
   ngOnInit() {
-    this.holdings = [...this.dataService.portfolioHoldingsArray];
-    this.symbols = this.holdings.map((holding) => holding.symbol);  // do not use dataService.portfolioSymbols
+    this.holdings = this.dataService.sanityCheck() ? [...this.dataService.portfolioHoldingsArray] : [];
+    this.symbols = this.holdings.map((holding) => holding?.symbol);  // do not use dataService.portfolioSymbols
     this.holdingsControl.valueChanges.subscribe((selected) => {
       this.selectedHoldings = selected;
       this.cdr.detectChanges();

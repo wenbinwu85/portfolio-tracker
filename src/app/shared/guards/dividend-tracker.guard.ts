@@ -1,5 +1,5 @@
 import { CanActivateFn, Router } from '@angular/router';
-import { DataService } from '../services/data.service';
+import { DataService } from '../services/dataV2.service';
 import { inject } from '@angular/core';
 
 export const dividendTrackerGuard: CanActivateFn = (route, state) => {

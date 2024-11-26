@@ -15,7 +15,7 @@ import {
 } from "@angular/material/table";
 import { ContainerCardComponent } from "../../../shared/components/container-card/container-card.component";
 import { StockTickerCardComponent } from "../../../shared/components/portfolio/stock-ticker-card/stock-ticker-card.component";
-import { DataService } from "../../../shared/services/data.service";
+import { DataService } from "../../../shared/services/dataV2.service";
 
 @Component({
   selector: 'portfolio-financial-stats',
@@ -97,12 +97,12 @@ export class PortfolioFinancialStatsComponent implements OnInit, AfterViewInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    const stocks = this.dataService.portfolioStocks;
-    const etfs = this.dataService.portfolioEtfs;
+    const stocks = this.dataService.portfolioStockTickers;
+    const etfs = this.dataService.portfolioEtfTickers;
 
     this.dataSource.data = stocks
       .map((stock: any) => {
-        const holding = this.dataService.portfolioHoldings[stock.symbol];
+        const holding = this.dataService.portfolioHoldings.get(stock.symbol);
         return {
           ...stock,
           ...holding,
@@ -136,7 +136,7 @@ export class PortfolioFinancialStatsComponent implements OnInit, AfterViewInit {
 
     this.sortedEtfs = etfs
       .map((etf: any) => {
-        const holding = this.dataService.portfolioHoldings[etf.symbol];
+        const holding = this.dataService.portfolioHoldings.get(etf.symbol);
         return {
           ...etf,
           ...holding,

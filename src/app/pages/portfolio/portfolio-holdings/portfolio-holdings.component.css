@@ -95,6 +95,11 @@ td.mat-mdc-footer-cell:first-of-type {
   padding-left: 0px;
 }
 
+.mat-mdc-cell {
+  border-top: none;
+  border-bottom: 1px solid gainsboro;
+}
+
 .mdc-data-table__header-cell,
 .mdc-data-table__cell {
   padding: 0;

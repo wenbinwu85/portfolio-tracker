@@ -36,7 +36,7 @@ import { PortfolioEditorComponent } from "../../../shared/components/portfolio/p
 import { StockTickerCardComponent } from "../../../shared/components/portfolio/stock-ticker-card/stock-ticker-card.component";
 import { TvSingleQuoteWidgetComponent } from "../../../shared/components/tradingview/tv-single-quote-widget/tv-single-quote-widget.component";
 import { ChartColorsEnum, StockPriceColorsEnum } from "../../../shared/model/colors.model";
-import { DataService } from "../../../shared/services/data.service";
+import { DataService } from "../../../shared/services/dataV2.service";
 
 @Component({
   selector: "portfolio-holdings",
@@ -113,7 +113,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
   headers = [
     "Symbol",
     "Average Cost x shares",
-    "Total Invested",
+    "Amount Invested",
     "Market Value",
     "Unrealized Gain",
     "Unrealized Gain %",
@@ -137,7 +137,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
   cells: Function[] = [
     (stock: any) => "",
     (stock: any) => "",
-    (stock: any) => `$${stock.totalCost}`,
+    (stock: any) => `$${stock.amountInvested}`,
     (stock: any) => `$${stock.marketValue.toFixed(2)}`,
     (stock: any) => "",
     (stock: any) => `${(stock.unrealizedGainPercent * 100).toFixed(2)}%`,
@@ -148,14 +148,14 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     // (stock: any) => "",
   ];
   footerRow: Function[] = [
-    () => `Total Holdings: ${this.portfolioHoldings.positionsHeld}`,
+    () => `Total Holdings: ${this.portfolioHoldings.get('positionsHeld')}`,
     () => "",
-    () => `$${this.portfolioHoldings.totalAmountInvested.toFixed(2)}`,
-    () => `$${this.portfolioHoldings.marketValue.toFixed(2)}`,
-    () => `$${this.portfolioHoldings.unrealizedGain.toFixed(2)}`,
+    () => `$${this.portfolioHoldings.get('amountInvested').toFixed(2)}`,
+    () => `$${this.portfolioHoldings.get('marketValue').toFixed(2)}`,
+    () => `$${this.portfolioHoldings.get('unrealizedGain').toFixed(2)}`,
     () => "",
-    () => `$${this.portfolioHoldings.dividendIncome.toFixed(2)}`,
-    () => `${(this.portfolioHoldings.yieldOnCost * 100).toFixed(2)}%`,
+    () => `$${this.portfolioHoldings.get('dividendIncome').toFixed(2)}`,
+    () => `${(this.portfolioHoldings.get('yieldOnCost') * 100).toFixed(2)}%`,
     () => "",
     () => "",
     // () => "",
@@ -165,19 +165,19 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
 
   constructor(private dataService: DataService) { }
 
-  ngOnInit() {
+  ngOnInit() {    
     this.portfolioSymbols = this.dataService.portfolioSymbols;
     this.portfolioData = this.dataService.portfolioData;
     this.portfolioHoldings = this.dataService.portfolioHoldings;
     this.passiveIncomeTarget = 12000;
-    this.portfolioValueTarget = this.passiveIncomeTarget / this.portfolioHoldings.yieldOnCost;
-    this.passiveIncomeGoalPercentage = this.portfolioHoldings.dividendIncome / this.passiveIncomeTarget;
-    this.portfolioValueGoalPercentage = this.portfolioHoldings.marketValue / this.portfolioValueTarget;
+    this.portfolioValueTarget = this.passiveIncomeTarget / this.portfolioHoldings.get('yieldOnCost');
+    this.passiveIncomeGoalPercentage = this.portfolioHoldings.get('dividendIncome') / this.passiveIncomeTarget;
+    this.portfolioValueGoalPercentage = this.portfolioHoldings.get('marketValue') / this.portfolioValueTarget;
 
     const market_sector_values: any = {};
     this.portfolioSymbols?.forEach((symbol: any) => {
-      const position = this.portfolioHoldings[symbol];
-      const stockData = this.portfolioData[symbol];
+      const position = this.portfolioHoldings.get(symbol);
+      const stockData = this.portfolioData.get(symbol);
       const sector = stockData.profile?.sector || "ETF";
       const sectorValue = market_sector_values[sector] || 0;
       market_sector_values[sector] = sectorValue + position.marketValue;
@@ -185,7 +185,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
       this.portfolioPercentData.push({
         name: stockData.symbol,
         value:
-          (position.marketValue / this.portfolioHoldings.marketValue) * 100,
+          (position.marketValue / this.portfolioHoldings.get('marketValue')) * 100,
         sector: sector,
       });
 
@@ -194,7 +194,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
         series: [
           {
             name: "Cost Basis",
-            value: position.totalCost,
+            value: position.amountInvested,
           },
           {
             name: "Unrealized Gain",
@@ -233,41 +233,41 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     this.sectorsData.sort((a: any, b: any) => a.value - b.value);
     this.portfolioPercentData.sort(
       (a: any, b: any) =>
-        this.portfolioHoldings[a.name].marketValue -
-        this.portfolioHoldings[b.name].marketValue
+        this.portfolioHoldings.get(a.name).marketValue -
+        this.portfolioHoldings.get(b.name).marketValue
     );
 
     this.marketValueData.sort(
       (a: any, b: any) =>
-        this.portfolioHoldings[a.name].marketValue -
-        this.portfolioHoldings[b.name].marketValue
+        this.portfolioHoldings.get(a.name).marketValue -
+        this.portfolioHoldings.get(b.name).marketValue
     );
 
     this.unrealizedGainData.sort(
       (a: any, b: any) =>
-        this.portfolioHoldings[a.name].unrealizedGainPercent -
-        this.portfolioHoldings[b.name].unrealizedGainPercent
+        this.portfolioHoldings.get(a.name).unrealizedGainPercent -
+      this.portfolioHoldings.get(b.name).unrealizedGainPercent
     );
 
     this.dividendData.sort(
       (a: any, b: any) =>
-        this.portfolioHoldings[a.name].dividendIncome -
-        this.portfolioHoldings[b.name].dividendIncome
+        this.portfolioHoldings.get(a.name).dividendIncome -
+        this.portfolioHoldings.get(b.name).dividendIncome
     );
 
     this.yocData.sort(
       (a: any, b: any) =>
-        this.portfolioHoldings[a.name].yieldOnCost -
-        this.portfolioHoldings[b.name].yieldOnCost
+        this.portfolioHoldings.get(a.name).yieldOnCost -
+        this.portfolioHoldings.get(b.name).yieldOnCost
     );
 
-    this.dataSource.data = this.dataService.portfolioSymbols.map(
+    this.dataSource.data = Array.from(this.dataService.portfolioSymbols).map(
       (symbol: any) => {
-        const holding = this.portfolioHoldings[symbol];
-        const stock = this.portfolioData[symbol];
+        const holding = this.portfolioHoldings.get(symbol);
+        const stock = this.portfolioData.get(symbol);
         const stockInfo = {
           name: stock.symbol,
-          value: holding.totalCost,
+          value: holding.amountInvested,
           sector: stock.profile?.sector || "ETF",
           shortName: stock.shortName,
           longName: stock.longName,
@@ -317,7 +317,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     this.totalCostChartData = this.allTotalCostChartData;
 
     this.sectorLabelFormatter = (label: string) => {
-      const marketValue = this.dataService.portfolioHoldings.marketValue;
+      const marketValue = this.dataService.portfolioHoldings.get('marketValue');
       let sectorValue = 0;
       this.dataSource.data.forEach((stock: any) => {
         if (stock.quoteType === "EQUITY") {
@@ -409,7 +409,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
   }
 
   getGainLostColor = (symbol: any) => { 
-    const unrealizedGainPercent = this.portfolioHoldings[symbol].unrealizedGainPercent;
+    const unrealizedGainPercent = this.portfolioHoldings.get(symbol).unrealizedGainPercent;
     return unrealizedGainPercent > 0 ? StockPriceColorsEnum.Gain : StockPriceColorsEnum.Lost;
   }
 
@@ -427,7 +427,7 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
         return index + 1 < array.length ? data + '\n' : data;
       });
     let link = document.createElement('a');
-    link.download = 'my_holdings';
+    link.download = 'portfolio_holdings';
     let blob = new Blob(holdingsArrays, { type: 'text/csv' });
     link.href = URL.createObjectURL(blob);
     link.click();
@@ -438,9 +438,9 @@ export class PortfolioHoldingsComponent implements OnInit, AfterViewInit {
     let marketValue = 0;
     let sectorValue = 0;
     this.dataSource.data.forEach((stock: any) => {
-      marketValue += stock.totalCost;
+      marketValue += stock.amountInvested;
       if (stock.sector === label) {
-        sectorValue += stock.totalCost;
+        sectorValue += stock.amountInvested;
       };
     });
     return label + ': ' + sectorValue / marketValue * 100 + '%';

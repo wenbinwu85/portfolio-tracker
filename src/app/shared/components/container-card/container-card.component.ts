@@ -2,7 +2,7 @@ import { CommonModule, TitleCasePipe } from "@angular/common";
 import { Component, Input, OnInit, TemplateRef } from "@angular/core";
 import { MatCardModule } from "@angular/material/card";
 import { MatDivider } from "@angular/material/divider";
-import { DataService } from "../../services/data.service";
+import { DataService } from "../../services/dataV2.service";
 import { StockTickerChipComponent } from "../portfolio/stock-ticker-chip/stock-ticker-chip.component";
 
 @Component({
@@ -30,11 +30,9 @@ export class ContainerCardComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    this.isTitleTicker = this.dataService.portfolioSymbols.includes(
-      this.title?.toUpperCase()
-    );
+    this.isTitleTicker = this.dataService.portfolioSymbols.has(this.title?.toUpperCase());
     if (this.title && this.isTitleTicker) { 
-      this.stock = this.dataService.getTickerData(this.title);
+      this.stock = this.dataService.portfolioData.get(this.title);
     };
   }
 }
